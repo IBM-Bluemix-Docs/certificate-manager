@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017
-lastupdated: "2017-12-11"
+lastupdated: "2017-12-13"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -18,8 +18,6 @@ If you have problems when you are using {{site.data.keyword.cloudcerts_full}}, c
 
 ## Getting help and support
 {: #getting-help-and-support}
-
-<!-- For support, visit the #certmgr-adopters channel in [ibm-cloudplatform.slack.com](https://ibm-cloudplatform.slack.com).-->
 
 You can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 {: shortdesc}

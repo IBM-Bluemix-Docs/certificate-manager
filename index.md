@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-11-07"
+lastupdated: "2017-12-13"
 
 ---
 {:new_window: target="_blank"}
@@ -22,5 +22,4 @@ To get started, create a new {{site.data.keyword.cloudcerts_short}} service inst
 1. In the {{site.data.keyword.Bluemix_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
 2. Give your service instance a name, or use the preset name.
 3. Click **Create**.
-<!-- 4. Once the service instance is created, make sure to give yourself and your users [appropriate permissions](/docs/certificate-manager/about.html#identity-access-management). -->
 4. To import your organization's certificates into {{site.data.keyword.cloudcerts_short}}, click **Import Certificate**.  

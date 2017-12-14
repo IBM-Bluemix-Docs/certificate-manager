@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017
-lastupdated: "2017-12-13"
+lastupdated: "2017-12-14"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -145,7 +145,7 @@ Run the following `curl` command:
   ```
   {: pre}
 
-Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_ with the appropriate values.
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, and _&lt;description&gt;_ with the appropriate values.
 
 ## Listing all of your certificates
 {: #list-certificates}  

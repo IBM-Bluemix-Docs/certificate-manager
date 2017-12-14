@@ -123,3 +123,17 @@ To delete a certificate:
 
 1. Select the check box for the certificate that you want to delete.
 2. Click the **Trash** icon.
+
+## Updating certificates metadata
+{: #updating-certificates-metadata}
+
+You can also update the name and description of a certificate.
+{: shortdesc}
+
+To update a certificate:
+
+1. Select a row to open the details for that certificate.
+2. Update the name or description.
+3. Save your changes.
+
+**Note**: You can perform up to 5 update actions per minute.

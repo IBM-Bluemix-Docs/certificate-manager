@@ -122,6 +122,31 @@ Run the following `curl` command:
 
 Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_,  _&lt;privateKey&gt;_, and _&lt;intermediate&gt;_ with the appropriate values. The _&lt;name&gt;_, _&lt;description&gt;_, and _&lt;intermediate&gt;_ values are optional.
 
+## Updating certificate metadata
+{: #update-certificate-metadata}  
+
+Update a certificate’s optional `name` and/or `description` properties.
+
+**Note**: update operations are limited to 5 actions per minute.  
+{: shortdesc}
+
+
+Run the following `curl` command:
+
+  ```
+  curl -X POST \
+  https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+	"name":"<name>",
+	"description":"<description>"
+  }'
+  ```
+  {: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_ with the appropriate values.
+
 ## Listing all of your certificates
 {: #list-certificates}  
 

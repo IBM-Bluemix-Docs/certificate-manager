@@ -125,9 +125,9 @@ Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;n
 ## Updating certificate metadata
 {: #update-certificate-metadata}  
 
-Update a certificate’s optional `name` and/or `description` properties.
+Update a certificate’s optional `name`, `description`, or both, properties.
 
-**Note**: update operations are limited to 5 actions per minute.  
+**Note**: Update operations are limited to five actions per minute.  
 {: shortdesc}
 
 

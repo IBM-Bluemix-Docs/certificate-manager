@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2017-12-13"
+lastupdated: "2017-12-19"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Getting started with {{site.data.keyword.cloudcerts_short}} Beta
+# Getting started with {{site.data.keyword.cloudcerts_short}} (Beta)
 {: #gettingstarted}
 
 {{site.data.keyword.cloudcerts_full}} helps you to store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.

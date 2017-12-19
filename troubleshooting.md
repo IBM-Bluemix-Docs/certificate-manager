@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017
-lastupdated: "2017-12-13"
+lastupdated: "2017-12-19"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -18,6 +18,8 @@ If you have problems when you are using {{site.data.keyword.cloudcerts_full}}, c
 
 ## Getting help and support
 {: #getting-help-and-support}
+
+
 
 You can get help by searching for information or by asking questions through a forum. You can also open a support ticket.
 {: shortdesc}

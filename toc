@@ -4,7 +4,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="certificate-manager" audience="service" href="/docs/services/certificate-manager/index.html"}
-Certificate Manager Beta
+Certificate Manager (Beta)
 
     {: .navgroup id="learn"}
     index.md

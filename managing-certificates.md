@@ -48,11 +48,11 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Name</td>
-    <td>Optional: The display name. </td>
+    <td>Optional: The meaningful display name. Maximum length 256 characters. </td>
   </tr>
   <tr>
     <td>Description</td>
-    <td>Optional: The descriptive text for the certificate. </td>
+    <td>Optional: The descriptive text for the certificate. Maximum length 1024 characters.</td>
   </tr>
   <tr>
     <td>Domain</td>

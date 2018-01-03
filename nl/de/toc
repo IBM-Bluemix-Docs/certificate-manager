@@ -1,0 +1,26 @@
+<!-- Markdown Navigation -->
+
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="certificate-manager" audience="service" href="/docs/services/certificate-manager/index.html"}
+Certificate Manager (Beta)
+
+    {: .navgroup id="learn"}
+    index.md
+    about.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    managing-certificates.md
+    rest-api.md
+    monitoring-activities.md
+    {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [REST-API: Vereinigte Staaten (Süden)](https://us-south.certificate-manager.bluemix.net/docs)
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    troubleshooting.md
+    {: .navgroup-end}

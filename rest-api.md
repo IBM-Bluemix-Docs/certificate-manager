@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-14"
+  years: 2018
+lastupdated: "2018-01-15"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -46,7 +46,7 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
   </tr>
   <tr>
     <td> <code> certificateId </code> </td>
-    <td> You can find your certificate ID by using one of the following choices: <ul><li> From the GUI, select the certificate from the row in the Certificates table. <li> From the API, [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
+    <td>  You can find your certificate ID by using one of the following choices: <ul><li> From the GUI, select the certificate from the row in the Certificates table. <li> From the API, [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td> 
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
@@ -118,7 +118,10 @@ Run the following `curl` command:
 	}
   }'
   ```
-  {: pre}
+ 
+
+  
+    {: pre}
 
 Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_,  _&lt;privateKey&gt;_, and _&lt;intermediate&gt;_ with the appropriate values. The _&lt;name&gt;_, _&lt;description&gt;_, and _&lt;intermediate&gt;_ values are optional.
 
@@ -133,6 +136,7 @@ Update a certificate’s optional `name`, `description`, or both, properties.
 
 Run the following `curl` command:
 
+
   ```
   curl -X POST \
   https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
@@ -143,7 +147,10 @@ Run the following `curl` command:
 	"description":"<description>"
   }'
   ```
-  {: pre}
+
+
+
+{: pre}
 
 Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, and _&lt;description&gt;_ with the appropriate values.
 
@@ -158,6 +165,8 @@ Run the following `curl` command:
   ```
   curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/
   ```
+  
+  
   {: pre}
 
 Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, and _&lt;instanceId&gt;_ with the appropriate values.

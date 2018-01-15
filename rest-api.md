@@ -46,7 +46,7 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
   </tr>
   <tr>
     <td> <code> certificateId </code> </td>
-    <td> You can find your certificate ID by using one of the following choices: <ul><li> From the GUI, select the certificate from the row in the Certificates table. <li> From the API, [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
+    <td>  You can find your certificate ID by using one of the following choices: <ul><li> From the GUI, select the certificate from the row in the Certificates table. <li> From the API, [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td> 
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>

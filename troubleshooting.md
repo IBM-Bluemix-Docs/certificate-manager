@@ -27,7 +27,7 @@ You can get help by searching for information or by asking questions through a f
 When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full}} development team.
 
 -   If you have technical questions about the service, post your question on [Stack Overflow](http://stackoverflow.com/search?q=certificate-manager+ibm-cloud) and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
--   For questions about the service and getting started instructions, post your question on [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=certificate-manager%20%2B[bluemix]). Include the `certificate-manager` and `ibm-cloud` tags.
+-   For questions about the service and getting started instructions, post your question on [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=certificate-manager&q=ibm-cloud). Include the `certificate-manager` and `ibm-cloud` tags.
 
 For more information about using the forums, see [Getting help](https://console.bluemix.net/docs/support/index.html#getting-help).
 

@@ -18,7 +18,6 @@ Certificate Manager (Beta)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    
     [REST API: US South](https://us-south.certificate-manager.bluemix.net/docs)
     {: .navgroup-end}
 

@@ -76,7 +76,7 @@ You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing on
   </tr>
 </table>
 
-For more information about user roles and permissions, see [User roles](/docs/admin/patterns.html#userroles).
+For more information about user roles and permissions, see [User roles](/docs/iam/users_roles.html#userroles).
 
 ### Assigning user roles
 {: #assigning-user-roles}

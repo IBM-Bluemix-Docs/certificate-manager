@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-01-15"
+lastupdated: "2018-03-08"
 ---
 
 {:new_window: target="_blank"}
@@ -47,7 +47,7 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
   </tr>
   <tr>
     <td> <code>certificateId</code> </td>
-    <td>  You can find your certificate ID by using one of the following choices: <ul><li> In the Manage tab of the service, view the certificate information by selecting it in the Certificates table. <li> Via API: [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td> 
+    <td> The [Cloud Resource Name (CRN)-based certificate ID](/docs/overview/crn.html#format) that is assigned to your certificate after it is imported. You can find your certificate ID by using one of the following choices: <ul><li> In the Manage tab of the service, view the certificate information by selecting it in the Certificates table. <li> Via API: [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
@@ -104,10 +104,9 @@ Import a certificate in Privacy-enhanced Electronic Mail (PEM) format with its p
 
 Run the following `curl` command:
 
-
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/import \
+  https://<cluster-url>/api/v2/<instanceId>/certificates/import \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -120,9 +119,6 @@ Run the following `curl` command:
 	}
   }'
   ```
- 
-
-  
     {: pre}
 
 Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_,  _&lt;privateKey&gt;_, and _&lt;intermediate&gt;_ with the appropriate values. The _&lt;name&gt;_, _&lt;description&gt;_, and _&lt;intermediate&gt;_ values are optional.
@@ -137,10 +133,9 @@ Update a certificate’s optional `name`, `description`, or both, properties.
 
 Run the following `curl` command:
 
-
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
+  https://<cluster-url>/api/v2/certificate/<certificateId> \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -148,8 +143,6 @@ Run the following `curl` command:
 	"description":"<description>"
   }'
   ```
-
-
 
 {: pre}
 
@@ -163,12 +156,10 @@ Retrieve a list of all of your available certificates.
 
 Run the following `curl` command:
 
+  ```
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/<instanceId>/certificates/
+  ```
 
-  ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/
-  ```
-  
-  
   {: pre}
 
 Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, and _&lt;instanceId&gt;_ with the appropriate values.
@@ -181,11 +172,9 @@ Use a retrieved certificate ID to download the certificate data.
 
 Run the following `curl` command:
 
-
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
-
 
 {: pre}
 
@@ -199,12 +188,10 @@ Use a retrieved certificate ID to delete the certificate and its data.
 
 Run the following `curl` command:
 
+  ```
+  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v2/certificate/<certificateId>
+  ```
 
-  ```
-  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
-  ```
- 
- 
   {: pre}
 
 Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ and _&lt;certificateId&gt;_ with the appropriate values.
@@ -246,16 +233,12 @@ Replace _&lt;account-id&gt;_, _&lt;user-id&gt;_, _&lt;instanceId&gt;_ and _&lt;c
 Replace  _&lt;Account-Admin-IAM-token&gt;_ with the account administrator's IAM token.
 Replace _&lt;region&gt;_ with your region, for example, `ng` for US-South.
 
-
-
-**Note**: In the preceeding cURL request, <code>instanceId</code> is not CRN-based, it is GUID-based.  
-For example, in the following <code>instanceId</code> CRN, the instance value is **58866f34-55ca-4477-8c32-fda435f01f97**.
+**Note**: In the preceeding cURL request, <code>instanceId</code> and <code>certificateId</code> are not CRN-based, they are GUID-based.  
+For example, in the following <code>certificateId</code> CRN, the instanceId value is **58866f34-55ca-4477-8c32-fda435f01f97** and the certificateId value is **e20cb664efcbfa2c2f57801230d246a6**.
 
 ```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97::
+crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
 ```
-
-
 
 ### Retrieving the user ID
 {: #retrieve-user-id}

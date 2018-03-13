@@ -51,7 +51,7 @@ You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing on
 ### Platform access roles
 {: #platform-access-roles}
 
-**Note:** using platform access roles is deprecated. Please use service access roles instead, see Table 2 below.
+You can use either platform access roles or service access roles to define the access role for users in your IBM Cloud account.
 
 <table>
 <caption> Table 1. Actions that are mapped to platform access roles</caption>

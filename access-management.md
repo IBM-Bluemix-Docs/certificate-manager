@@ -11,7 +11,7 @@ lastupdated: "2018-03-16"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-## Managing service access roles
+# Managing service access roles
 {: #managing-service-access-roles}
 
 You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing only users with specified access roles to complete certain actions.
@@ -80,6 +80,7 @@ You can use either platform access roles or service access roles to define the a
     <td> Manager </td>
   </tr>
 </table>
+
 
 For more information about user roles and permissions, see [User roles](/docs/iam/users_roles.html#userroles).
 

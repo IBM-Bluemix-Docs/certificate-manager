@@ -11,8 +11,8 @@ lastupdated: "2018-03-08"
 {:pre: .pre}
 {:tip: .tip}
 
-# Managing certificates by using the API
-{: #managing-certificates-api}
+# Managing certificates by using API
+{: #managing-certificates-by-using-api}
 
 The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to import, get, and delete certificates. Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
 {: shortdesc}

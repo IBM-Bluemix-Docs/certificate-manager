@@ -9,13 +9,13 @@ Certificate Manager (Beta)
     {: .navgroup id="learn"}
     index.md
     about.md
-    access-management.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     managing-certificates.md
     rest-api.md
     monitoring-activities.md
+    access-management.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

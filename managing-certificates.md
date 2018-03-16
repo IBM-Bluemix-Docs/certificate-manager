@@ -9,10 +9,10 @@ lastupdated: "2017-12-21"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Managing certificates in the GUI
-{: #managing-certificates-ui}
+# Managing certificates from the dashboard
+{: #managing-certificates-from-the-dashboard}
 
-You can use the {{site.data.keyword.cloudcerts_full}} service GUI to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services. After you import certificates and keys, they're encrypted and stored by the service.
+You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services. After you import certificates and keys, they're encrypted and stored by the service.
 {: shortdesc}
 
 ## Importing a certificate

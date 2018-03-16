@@ -14,8 +14,8 @@ Certificate Manager (Beta)
     {: .navgroup id="howto"}
     managing-certificates.md
     rest-api.md
-    monitoring-activities.md
     access-management.md
+    monitoring-activities.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

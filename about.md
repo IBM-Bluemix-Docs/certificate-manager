@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-08"
+lastupdated: "2018-03-16"
 
 ---
 {:new_window: target="_blank"}
@@ -12,13 +12,8 @@ lastupdated: "2018-03-08"
 {:pre: .pre}
 {:tip: .tip}
 
-# About
+# About IBM Cloud Certificate Manager
 {: #about-certificate-manager}
-
-Find out about {{site.data.keyword.cloudcerts_full}}.
-
-## What is {{site.data.keyword.cloudcerts_short}}
-{: #what-is-certificate-manager}
 
 {{site.data.keyword.cloudcerts_short}} helps you to manage the SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps and services.
 {: shortdesc}

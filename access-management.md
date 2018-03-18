@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-18"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing on
 ### Platform access roles
 {: #platform-access-roles}
 
-You can use either platform access roles or service access roles to define the access role for users in your IBM Cloud account.
+You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting insances in your IBM Cloud account.
 
 <table>
 <caption> Table 1. Actions that are mapped to platform access roles</caption>
@@ -29,26 +29,20 @@ You can use either platform access roles or service access roles to define the a
     <th> Role </th>
   </tr>
   <tr>
-    <td>List certificates</td>
+    <td>View instances of Certificate Manager</td>
     <td> Administrator, Operator, Editor, Viewer </td>
   </tr>
   <tr>
-    <td>Download a certificate and private key </td>
-    <td> Administrator, Operator </td>
-  </tr>
-  <tr>
-    <td>Update certificate metadata</td>
+    <td>Create an instance of Certificate Manager</td>
     <td> Administrator, Editor </td>
   </tr>
   <tr>
-    <td>Upload certificates, private keys, and intermediate certificates </td>
-    <td> Administrator, Editor  </td>
-  </tr>
-  <tr>
-    <td>Delete a certificate and private key </td>
+    <td>Delete an instance of Certificate Manager</td>
     <td> Administrator, Editor </td>
   </tr>
 </table>
+
+Historically platform roles also give access to certain actions on certificates within instances. This definition is obsolete and will be canceled in the near future.
 
 ### Service access roles
 {: #service-acceess-roles}

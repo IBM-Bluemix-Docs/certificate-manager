@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-16"
+lastupdated: "2018-03-17"
 
 ---
 {:new_window: target="_blank"}
@@ -39,7 +39,7 @@ When you import a certificate and the corresponding private key into {{site.data
 ## Integrations
 {: #integrations}
 <table>
-<caption> Table 1. Other IBM Cloud services leveraging Certificate Manager</caption>
+<caption> Table 1. IBM Cloud services leveraging Certificate Manager</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>

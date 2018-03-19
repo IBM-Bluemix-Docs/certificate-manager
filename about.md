@@ -11,7 +11,7 @@ lastupdated: "2018-03-17"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# About IBM Cloud Certificate Manager
+# About Certificate Manager
 {: #about-certificate-manager}
 
 {{site.data.keyword.cloudcerts_short}} helps you to manage the SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps and services.

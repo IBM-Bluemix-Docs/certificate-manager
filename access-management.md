@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-18"
+lastupdated: "2018-04-11"
 
 ---
 {:new_window: target="_blank"}
@@ -93,3 +93,7 @@ If the user is not part of your organization, start by sending an invitation to 
 5. Optional: Select a **Region** or use the default, **All regions**.
 6. Optional: Select a **Service instance** or use the default, **All instances**.
 7. Under **Select roles > Assign platform/service access roles**, select the appropriate access level.
+
+**Example:**
+You should set every user at least Viewer role in order to be able to see service instance/s. If you want the user to be able to create an instance, set him the role Administrator or Editor.   
+You have to set a user at least the Reader role in order to see certificates within the instance.

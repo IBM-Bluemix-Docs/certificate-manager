@@ -46,7 +46,7 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Store your Kubernetes cluster custom domain certificates in Certificate Manager, then deploy them using [Container Service plug-in commands](/docs/containers/cs_cli_reference.html) for the IBM Cloud CLI. [Learn more about this integration](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
+    <td>Store your Kubernetes cluster custom domain certificates in Certificate Manager, then deploy them using [Kubernetes Service plug-in commands](/docs/containers/cs_cli_reference.html) for the IBM Cloud CLI. [Learn more about this integration](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
   </tr>
   <tr>
     <td>IBM Cloud Security Advisor</td>

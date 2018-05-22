@@ -23,7 +23,7 @@ If you have problems when you are using {{site.data.keyword.cloudcerts_full}}, c
 You can get help in the following ways:
 - By searching for information in this documentation site
 - By asking questions through a forum
-- By asking questions at [ibm-cloud-tech.slack.com](https://ibm-cloud-tech.slack.com) in the #certificate-manager channel.
+- By asking questions at [ibm-cloud-tech.slack.com](https://ibm-cloud-tech.slack.com) in the #certificate-manager channel. [Request an invite](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/b6831131-91f4-4292-a877-60ff41988d24/page/Slack%20channel%20(IBM%20Cloud%20Technology)%20sign%20up%20page).
 - You can also open a support ticket.
 
 When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full}} development team.

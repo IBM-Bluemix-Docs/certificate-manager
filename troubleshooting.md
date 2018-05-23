@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-14"
+lastupdated: "2018-05-22"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -23,8 +23,8 @@ If you have problems when you are using {{site.data.keyword.cloudcerts_full}}, c
 You can get help in the following ways:
 - By searching for information in this documentation site
 - By asking questions through a forum
-- By asking questions at [ibm-cloud-tech.slack.com](https://ibm-cloud-tech.slack.com) in the #certificate-manager channel. [Request an invite](https://slack-invite-ibm-cloud-tech.mybluemix.net/).
-- You can also open a support ticket.
+- By asking questions at [ibm-cloud-tech.slack.com](https://ibm-cloud-tech.slack.com) in the #certificate-manager channel ([Request an invite](https://slack-invite-ibm-cloud-tech.mybluemix.net/))
+- By opening a support ticket
 
 When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full}} development team.
 

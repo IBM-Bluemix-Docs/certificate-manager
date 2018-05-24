@@ -26,7 +26,8 @@ You can get help in the following ways:
 - By searching for information in this documentation site
 - By asking questions through a forum
 
-- You can also open a support ticket.
+
+You can also open a support ticket.
 
 When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full}} development team.
 

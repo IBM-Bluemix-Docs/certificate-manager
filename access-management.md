@@ -75,6 +75,7 @@ You can use service access roles to enable users to complete tasks in Certificat
     <td>Delete a certificate and private key </td>
     <td> Manager </td>
   </tr>
+  
 </table>
 
 

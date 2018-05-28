@@ -11,11 +11,12 @@ lastupdated: "2018-03-08"
 {:pre: .pre}
 {:tip: .tip}
 
-# Managing certificates by using API
-{: #managing-certificates-by-using-api}
+# Using the REST API
+{: #using-rest-api}
 
 The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to import, get, and delete certificates. Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
 {: shortdesc}
+
 
 ## Testing APIs
 {: #testing}
@@ -46,10 +47,6 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
     <td> You can obtain your {{site.data.keyword.iamshort}} (IAM) access token by logging in to {{site.data.keyword.Bluemix_notm}} and running the <code>bx iam oauth-tokens</code> command. </td>
   </tr>
   <tr>
-    <td> <code>certificateId</code> </td>
-    <td> The [Cloud Resource Name (CRN)-based certificate ID](/docs/overview/crn.html#format) that is assigned to your certificate after it is imported. You can find your certificate ID by using one of the following choices: <ul><li> In the Manage tab of the service, view the certificate information by selecting it in the Certificates table. <li> Via API: [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
-  </tr>
-  <tr>
     <td> <code> instanceId </code> </td>
     <td> The [Cloud Resource Name (CRN)-based instance ID](/docs/overview/crn.html#format) that is assigned to your service instance after it is created. You can retrieve the instance ID in the following ways:
     <ul>
@@ -60,6 +57,10 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
       <li>Call the {{site.data.keyword.Bluemix_notm}} Resource Controller <code>[GET /resource_instances](https://console.bluemix.net/apidocs/700-resource-controller-api?&language=node#resource-instances-1)</code> REST endpoint, which requires the <code>Authorization</code> header with your account administrator's IAM token.</li>
     </ul>
   </td>
+  </tr>
+  <tr>
+    <td> <code>certificateId</code> </td>
+    <td> The [Cloud Resource Name (CRN)-based certificate ID](/docs/overview/crn.html#format) that is assigned to your certificate after it is imported. You can find your certificate ID by using one of the following choices: <ul><li> In the Manage tab of the service, view the certificate information by selecting it in the Certificates table. <li> Via API: [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
   </tr>
   <tr>
     <td>  <code> account-id </code> </td>
@@ -89,6 +90,7 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
     <td> <code> intermediate (Optional) </code> </td>
     <td> The intermediate certificate data, escaped. </td>
   </tr>
+  
   <tr>
     <td> <code> user-id </code> </td>
     <td>The ID of the user that you want to assign an access policy to. To find the user ID, see [Retrieving the user ID](#retrieve-user-id). </td>
@@ -195,6 +197,7 @@ Run the following `curl` command:
   {: pre}
 
 Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ and _&lt;certificateId&gt;_ with the appropriate values.
+
 
 ## Assigning advanced policies
 {: #assigning-advanced-policies}

@@ -29,8 +29,8 @@ To add a notification channel:
 1. Click **Setting** in the left navigation, then select the **Notifications** tab
 2. Click the **Add Notification Channel** button and provide the following details:
 
-  *. Select the channel type from the provided list
-  *. Enter the channel endpoint (URL) into the text field
+   * Select the channel type from the provided list
+   * Enter the channel endpoint (URL) into the text field
 
 3. Click the **Save** button
 

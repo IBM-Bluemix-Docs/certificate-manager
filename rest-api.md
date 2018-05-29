@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-28"
+lastupdated: "2018-05-29"
 
 ---
 
@@ -18,6 +18,7 @@ lastupdated: "2018-05-28"
 
 The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to import, get, and delete certificates. Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
 {: shortdesc}
+
 
 
 ## Testing APIs
@@ -200,6 +201,107 @@ Run the following `curl` command:
 
 Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ and _&lt;certificateId&gt;_ with the appropriate values.
 
+## Listing all of your notification channels
+{: #list-notification-channels}
+
+Retrieve a list of all of your notification channels.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/instances/<instanceId>/notifications/channels
+  ```
+
+  {: pre}
+
+Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, and _&lt;instanceId&gt;_ with the appropriate values.
+
+## Adding a notification channel
+{: #import-certificate}
+
+Add a notification channel where you will get notifications about expiring certificates.
+{: shortdesc}
+
+
+Run the following `curl` command:
+
+  ```
+  curl -X PUT \
+  https://<cluster-url>/api/v1/instances/<instanceId>/notifications/channels \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+	"type":"<type>",
+	"endpoint":"<endpoint>",
+	"is_active":<is_active>
+  }'
+  ```
+    {: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;type&gt;_, _&lt;endpoint&gt;_,
+ _&lt;is_active&gt;_ with the appropriate values.
+
+## Updating notification channel endpoint
+{: #update-notification-channel}
+
+Update a notification channel endpoint property.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -X POST \
+  https://<cluster-url>/api/v1/instances/<instanceID>/notifications/<channelId> \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+      	"endpoint":"<endpoint>"
+        }'
+  ```
+
+{: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, _&lt;IAM-token&gt;_,  and _&lt;endpoint&gt;_ with the appropriate values.
+
+## Enable / disable notification channels
+{: #enable-disable-notification-channels}
+
+Enable or disable a notification channel - if a channel is disabled no notifications will be sent to the channel.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -X PUT \
+  https://<cluster-url>/api/v1/instances/<instanceID>/notifications/<channelId>/state \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+      	"enabled":true/false
+        }'
+  ```
+
+  {: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
+
+## Deleting notification channel
+{: #delete-notification-channel}
+
+Delete a notification channel.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -X DELETE \
+  https://<cluster-url>/api/v1/instances/<instanceID>/notifications/<channelId> \
+  -H 'authorization: Bearer <IAM-token>'
+  ```
+
+{: pre}
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
 
 ## Assigning advanced policies
 {: #assigning-advanced-policies}

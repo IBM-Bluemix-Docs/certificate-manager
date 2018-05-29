@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-28"
+lastupdated: "2018-05-29"
 
 ---
 {:new_window: target="_blank"}
@@ -25,7 +25,7 @@ To start receiving notifications, you need to configure a Slack channel where no
 ## Adding a channel
 {: #adding-channel}
 
-Once you have a Slack webhook, you can add the Slack webhook to Certificate Manager to start receiving notifications in Slack about expiring certificates. Certificate Manager will encrypt the webhook that you provide so that.
+Once you have a Slack webhook, you can add it to Certificate Manager to start receiving notifications in Slack about expiring certificates. Certificate Manager will encrypt the webhook and store it securely.
 {: shortdesc}
 
 To add a notification channel:
@@ -38,7 +38,7 @@ To add a notification channel:
 
 3. Click the **Save** button
 
-Once you click 'Save,' Certificate Manager will send a confirmation notification to Slack if your channel was configured correctly. Check your Slack channel for this notification.
+Once you click **Save**, Certificate Manager will send a confirmation notification to Slack if your channel was configured correctly. Check your Slack channel for this notification.
 
 After you add a notification channel, the following information is displayed.
 

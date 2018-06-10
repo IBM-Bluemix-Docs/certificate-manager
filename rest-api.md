@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-29"
+lastupdated: "2018-06-10"
 
 ---
 
@@ -15,11 +15,8 @@ lastupdated: "2018-05-29"
 
 # Using the REST API
 {: #using-rest-api}
-
-The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to import, get, and delete certificates. Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
+The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to manage [certificates](#import-certificate) and [notification channels](#list-notification-channels). Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
 {: shortdesc}
-
-
 
 ## Testing APIs
 {: #testing}
@@ -93,7 +90,23 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
     <td> <code> intermediate (Optional) </code> </td>
     <td> The intermediate certificate data, escaped. </td>
   </tr>
-  
+  <tr>
+    <td> <code> channelId </code> </td>
+    <td> The UUID that is assigned to your notification channel after it is created.
+    You can find your notification channel ID by [list all available notification channels](#list-notification-channels).</td>
+  </tr>
+  <tr>
+      <td>  <code> type </code> </td>
+      <td> The notification channel type. Currently only available value is <i>slack</i></td>
+    </tr>
+    <tr>
+      <td> <code> endpoint </code> </td>
+      <td> Notification channel endpoint - where the notifications will be sent to </td>
+    </tr>
+    <tr>
+      <td> <code> is_active </code> </td>
+      <td> The notification channel state - can be <i>true</i> or <i>false</i> </td>
+    </tr>
   <tr>
     <td> <code> user-id </code> </td>
     <td>The ID of the user that you want to assign an access policy to. To find the user ID, see [Retrieving the user ID](#retrieve-user-id). </td>

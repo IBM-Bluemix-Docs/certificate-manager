@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-28"
+lastupdated: "2018-06-10"
 
 ---
 {:new_window: target="_blank"}
@@ -75,7 +75,18 @@ You can use service access roles to enable users to complete tasks in Certificat
     <td>Delete a certificate and private key </td>
     <td> Manager </td>
   </tr>
-  
+      <tr>
+        <td>List all notification channels </td>
+        <td> Manager, Writer, Reader </td>
+      </tr>
+   <tr>
+     <td>Add, update or delete a notification channel </td>
+     <td> Manager </td>
+   </tr>
+     <tr>
+       <td>Test a notification channel </td>
+       <td> Manager, Writer, Reader </td>
+     </tr>
 </table>
 
 

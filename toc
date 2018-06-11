@@ -13,6 +13,7 @@ Certificate Manager (Beta)
 
     {: .navgroup id="howto"}
     managing-certificates.md
+    notifications-dashboard.md
     rest-api.md
     access-management.md
     monitoring-activities.md

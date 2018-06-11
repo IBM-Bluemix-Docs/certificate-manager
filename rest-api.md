@@ -1,7 +1,9 @@
 ---
+
 copyright:
   years: 2017, 2018
-lastupdated: "2018-03-08"
+lastupdated: "2018-06-10"
+
 ---
 
 {:new_window: target="_blank"}
@@ -11,10 +13,9 @@ lastupdated: "2018-03-08"
 {:pre: .pre}
 {:tip: .tip}
 
-# Managing certificates by using API
-{: #managing-certificates-by-using-api}
-
-The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to import, get, and delete certificates. Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
+# Using the REST API
+{: #using-rest-api}
+The {{site.data.keyword.cloudcerts_full}} service provides REST endpoints to manage [certificates](#import-certificate) and [notification channels](#list-notification-channels). Using {{site.data.keyword.iamshort}}, you can also [assign policies for a specific certificate](#assigning-advanced-policies).
 {: shortdesc}
 
 ## Testing APIs
@@ -46,10 +47,6 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
     <td> You can obtain your {{site.data.keyword.iamshort}} (IAM) access token by logging in to {{site.data.keyword.Bluemix_notm}} and running the <code>bx iam oauth-tokens</code> command. </td>
   </tr>
   <tr>
-    <td> <code>certificateId</code> </td>
-    <td> The [Cloud Resource Name (CRN)-based certificate ID](/docs/overview/crn.html#format) that is assigned to your certificate after it is imported. You can find your certificate ID by using one of the following choices: <ul><li> In the Manage tab of the service, view the certificate information by selecting it in the Certificates table. <li> Via API: [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
-  </tr>
-  <tr>
     <td> <code> instanceId </code> </td>
     <td> The [Cloud Resource Name (CRN)-based instance ID](/docs/overview/crn.html#format) that is assigned to your service instance after it is created. You can retrieve the instance ID in the following ways:
     <ul>
@@ -60,6 +57,10 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
       <li>Call the {{site.data.keyword.Bluemix_notm}} Resource Controller <code>[GET /resource_instances](https://console.bluemix.net/apidocs/700-resource-controller-api?&language=node#resource-instances-1)</code> REST endpoint, which requires the <code>Authorization</code> header with your account administrator's IAM token.</li>
     </ul>
   </td>
+  </tr>
+  <tr>
+    <td> <code>certificateId</code> </td>
+    <td> The [Cloud Resource Name (CRN)-based certificate ID](/docs/overview/crn.html#format) that is assigned to your certificate after it is imported. You can find your certificate ID by using one of the following choices: <ul><li> In the Manage tab of the service, view the certificate information by selecting it in the Certificates table. <li> Via API: [list your available certificates](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
   </tr>
   <tr>
     <td>  <code> account-id </code> </td>
@@ -89,6 +90,23 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
     <td> <code> intermediate (Optional) </code> </td>
     <td> The intermediate certificate data, escaped. </td>
   </tr>
+  <tr>
+    <td> <code> channelId </code> </td>
+    <td> The UUID that is assigned to your notification channel after it is created.
+    You can find your notification channel ID by [list all available notification channels](#list-notification-channels).</td>
+  </tr>
+  <tr>
+      <td>  <code> type </code> </td>
+      <td> The notification channel type. Currently only available value is <i>slack</i></td>
+    </tr>
+    <tr>
+      <td> <code> endpoint </code> </td>
+      <td> Notification channel endpoint - where the notifications will be sent to </td>
+    </tr>
+    <tr>
+      <td> <code> is_active </code> </td>
+      <td> The notification channel state - can be <i>true</i> or <i>false</i> </td>
+    </tr>
   <tr>
     <td> <code> user-id </code> </td>
     <td>The ID of the user that you want to assign an access policy to. To find the user ID, see [Retrieving the user ID](#retrieve-user-id). </td>
@@ -195,6 +213,108 @@ Run the following `curl` command:
   {: pre}
 
 Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ and _&lt;certificateId&gt;_ with the appropriate values.
+
+## Listing all of your notification channels
+{: #list-notification-channels}
+
+Retrieve a list of all of your notification channels.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/instances/<instanceId>/notifications/channels
+  ```
+
+  {: pre}
+
+Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, and _&lt;instanceId&gt;_ with the appropriate values.
+
+## Adding a notification channel
+{: #import-certificate}
+
+Add a notification channel where you will get notifications about expiring certificates.
+{: shortdesc}
+
+
+Run the following `curl` command:
+
+  ```
+  curl -X PUT \
+  https://<cluster-url>/api/v1/instances/<instanceId>/notifications/channels \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+	"type":"<type>",
+	"endpoint":"<endpoint>",
+	"is_active":<is_active>
+  }'
+  ```
+    {: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;type&gt;_, _&lt;endpoint&gt;_,
+ _&lt;is_active&gt;_ with the appropriate values.
+
+## Updating notification channel endpoint
+{: #update-notification-channel}
+
+Update a notification channel endpoint property.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -X POST \
+  https://<cluster-url>/api/v1/instances/<instanceID>/notifications/<channelId> \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+      	"endpoint":"<endpoint>"
+        }'
+  ```
+
+{: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, _&lt;IAM-token&gt;_,  and _&lt;endpoint&gt;_ with the appropriate values.
+
+## Enable / disable notification channels
+{: #enable-disable-notification-channels}
+
+Enable or disable a notification channel - if a channel is disabled no notifications will be sent to the channel.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -X PUT \
+  https://<cluster-url>/api/v1/instances/<instanceID>/notifications/<channelId>/state \
+  -H 'authorization: Bearer <IAM-token>' \
+  -H 'content-type: application/json' \
+  -d '{
+      	"enabled":true/false
+        }'
+  ```
+
+  {: pre}
+
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
+
+## Deleting notification channel
+{: #delete-notification-channel}
+
+Delete a notification channel.
+{: shortdesc}
+
+Run the following `curl` command:
+
+  ```
+  curl -X DELETE \
+  https://<cluster-url>/api/v1/instances/<instanceID>/notifications/<channelId> \
+  -H 'authorization: Bearer <IAM-token>'
+  ```
+
+{: pre}
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
 
 ## Assigning advanced policies
 {: #assigning-advanced-policies}

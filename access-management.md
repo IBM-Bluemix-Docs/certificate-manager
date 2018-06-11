@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-04-13"
+lastupdated: "2018-06-10"
 
 ---
 {:new_window: target="_blank"}
@@ -75,6 +75,18 @@ You can use service access roles to enable users to complete tasks in Certificat
     <td>Delete a certificate and private key </td>
     <td> Manager </td>
   </tr>
+      <tr>
+        <td>List all notification channels </td>
+        <td> Manager, Writer, Reader </td>
+      </tr>
+   <tr>
+     <td>Add, update or delete a notification channel </td>
+     <td> Manager </td>
+   </tr>
+     <tr>
+       <td>Test a notification channel </td>
+       <td> Manager, Writer, Reader </td>
+     </tr>
 </table>
 
 
@@ -95,6 +107,6 @@ If the user is not part of your organization, start by sending an invitation to 
 7. Under **Select roles > Assign platform/service access roles**, select the appropriate access level.
 
 **Examples:**
-* Assign at least the Viewer role to every user so that every user can see service instances. 
-* Assign the Administrator or Editor role to a user if you want that user to create instances. 
+* Assign at least the Viewer role to every user so that every user can see service instances.
+* Assign the Administrator or Editor role to a user if you want that user to create instances.
 * Assign at least the Reader role if you want a user to view certificates within an instance.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-05-28"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ You can import SSL certificates that you obtain for your apps and services, stor
 
 You can manage your certificates in the following ways:
 
-* Monitor the expiry dates of your certificates to make sure you that you renew them on time
+* Get notified before your certificates expire to ensure that you renew them on time
 * View the types of certificates across your deployments and ensure that they meet organization policies
 * Find certificates that need replacing when new compliance or security requirements are issued
 * Set controls on who can access and manage your certificates

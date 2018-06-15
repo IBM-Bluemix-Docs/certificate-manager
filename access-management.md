@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-10"
+lastupdated: "2018-06-15"
 
 ---
 {:new_window: target="_blank"}
@@ -17,10 +17,11 @@ lastupdated: "2018-06-10"
 You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing only users with specified access roles to complete certain actions.
 {: shortdesc}
 
+
 ### Platform access roles
 {: #platform-access-roles}
 
-You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your IBM Cloud account.
+You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your {{site.data.keyword.Bluemix_notm}} account.
 
 <table>
 <caption> Table 1. Actions that are mapped to platform access roles</caption>
@@ -29,25 +30,26 @@ You can use platform access roles to enable users to complete tasks on platform 
     <th> Role </th>
   </tr>
   <tr>
-    <td>View instances of Certificate Manager</td>
+    <td>View instances of {{site.data.keyword.cloudcerts_short}}</td>
     <td> Administrator, Operator, Editor, Viewer </td>
   </tr>
   <tr>
-    <td>Create an instance of Certificate Manager</td>
+    <td>Create an instance of {{site.data.keyword.cloudcerts_short}}</td>
     <td> Administrator, Editor </td>
   </tr>
   <tr>
-    <td>Delete an instance of Certificate Manager</td>
+    <td>Delete an instance of {{site.data.keyword.cloudcerts_short}}</td>
     <td> Administrator, Editor </td>
   </tr>
 </table>
 
-Historically platform roles also give access to certain actions on certificates within instances. This definition is obsolete and will be removed in the near future.
+Platform roles also give access to certain actions on certificates within instances. These actions are deprecated.
+
 
 ### Service access roles
 {: #service-acceess-roles}
 
-You can use service access roles to enable users to complete tasks in Certificate Manager instances, such as importing, downloading, editing or deleting certificates.
+You can use service access roles to enable users to complete tasks in {{site.data.keyword.cloudcerts_short}} instances, such as importing, downloading, editing, or deleting certificates.
 
 <table>
 <caption> Table 2. Actions that are mapped to service access roles</caption>
@@ -80,7 +82,7 @@ You can use service access roles to enable users to complete tasks in Certificat
         <td> Manager, Writer, Reader </td>
       </tr>
    <tr>
-     <td>Add, update or delete a notification channel </td>
+     <td>Add, update, or delete a notification channel </td>
      <td> Manager </td>
    </tr>
      <tr>
@@ -91,6 +93,7 @@ You can use service access roles to enable users to complete tasks in Certificat
 
 
 For more information about user roles and permissions, see [User roles](/docs/iam/users_roles.html#userroles).
+
 
 ### Assigning user access roles
 {: #assigning-user--access-roles}

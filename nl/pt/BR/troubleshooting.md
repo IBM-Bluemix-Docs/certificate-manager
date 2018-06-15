@@ -1,7 +1,9 @@
 ---
+
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-24"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -16,22 +18,25 @@ Se você tiver problemas ao usar o {{site.data.keyword.cloudcerts_full}}, consid
 problemas e obtenção de ajuda.
 {: shortdesc}
 
-
 ## Obtendo Ajuda e Suporte
 {: #getting-help-and-support}
 
-É possível obter ajuda procurando informações ou fazendo perguntas por meio de um fórum. Também
+
+
+É possível obter ajuda das seguintes maneiras:
+- Procurando informações neste site de documentação
+- Fazendo perguntas por meio de um fórum
+
+
+Também
 será possível abrir um chamado de suporte.
-{: shortdesc}
 
 Quando você estiver usando os fóruns para fazer uma pergunta, marque a sua pergunta para que ela seja vista pela equipe de desenvolvimento do {{site.data.keyword.cloudcerts_full}}.
 
--   Se você tiver perguntas técnicas sobre o serviço, poste sua pergunta no
-[Stack Overflow](http://stackoverflow.com/search?q=certificate-manager+ibm-bluemix) e marque a sua pergunta com
-`ibm-bluemix` e `ibm-certificate-manager`.  
--   Para perguntas sobre o serviço e instruções de introdução, poste sua pergunta no
+- Se você tem perguntas técnicas sobre o serviço, poste sua pergunta no [Stack Overflow](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) e identifique-a com `ibm-cloud` e `ibm-certificate-manager`.  
+- Para perguntas sobre o serviço e instruções de introdução, poste sua pergunta no
 [dW
-Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=certificate-manager%20%2B[bluemix]). Inclua as tags certificate-manager e bluemix.
+Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Inclua as tags ibm-certificate-manager e ibm-cloud.
 
 Para obter mais informações sobre o uso dos fóruns, consulte
 [Obtendo ajuda](https://console.bluemix.net/docs/support/index.html#getting-help).

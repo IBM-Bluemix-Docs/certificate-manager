@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-03-19"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -10,7 +10,7 @@ lastupdated: "2017-12-13"
 {:pre: .pre}
 {:tip: .tip}
 
-# Actividades de supervisión
+# Supervisión de actividades
 {: #monitoring-activities}
 
 Puede utilizar la integración de {{site.data.keyword.cloudaccesstraillong}} para supervisar actividades en curso, investigar actividades anormales y cumplir con los requisitos de auditoría regulatorios. Todas las solicitudes realizadas en la instancia de {{site.data.keyword.cloudcerts_short}} están registradas en {{site.data.keyword.cloudaccesstrailshort}}.

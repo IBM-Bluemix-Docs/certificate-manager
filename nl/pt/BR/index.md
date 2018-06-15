@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-07"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introdução ao {{site.data.keyword.cloudcerts_short}} Beta
+# Introdução ao {{site.data.keyword.cloudcerts_short}} (Beta)
 {: #gettingstarted}
 
 O {{site.data.keyword.cloudcerts_full}} ajuda você a armazenar e gerenciar certificados SSL para seus aplicativos
@@ -25,3 +25,5 @@ Para iniciar, crie uma nova instância de serviço do {{site.data.keyword.cloudc
 3. Clique em **Criar**.
 4. Para importar certificados de sua organização em {{site.data.keyword.cloudcerts_short}}, clique em
 **Importar certificado**.  
+
+Também é possível [saber mais](about.html) sobre o que você obtém do {{site.data.keyword.cloudcerts_short}} e [fornecer feedback do usuário no developerWorks](troubleshooting.html#getting-help-and-support) para aprimorar o {{site.data.keyword.cloudcerts_short}} conforme ele se desenvolve.

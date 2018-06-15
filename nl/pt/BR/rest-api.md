@@ -1,9 +1,9 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-14"
-
+  years: 2017, 2018
+lastupdated: "2018-03-08"
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,7 +12,7 @@ lastupdated: "2017-12-14"
 {:tip: .tip}
 
 # Gerenciando certificados usando a API
-{: #managing-certificates-api}
+{: #managing-certificates-by-using-api}
 
 O serviço {{site.data.keyword.cloudcerts_full}} fornece terminais REST para importar, obter e excluir certificados. Usando
 o {{site.data.keyword.iamshort}}, também é possível [atribuir políticas para um certificado específico](#assigning-advanced-policies).
@@ -50,8 +50,7 @@ para obter os dados necessários.
   </tr>
   <tr>
     <td> <code> certificateId </code> </td>
-    <td> É possível localizar o ID do certificado usando uma das seguintes opções: <ul><li> Na GUI, selecione o certificado da linha
-na tabela de Certificados. <li> Na API, [liste seus certificados disponíveis](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
+    <td> O [ID de certificado baseado em Cloud Resource Name (CRN)](/docs/overview/crn.html#format) que é designado ao seu certificado após ele ser importado. É possível localizar o ID do certificado usando uma das seguintes opções: <ul><li> Na guia Gerenciar do serviço, visualize as informações do certificado selecionando-o na tabela Certificados. <li> Por API: [liste seus certificados disponíveis](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
@@ -81,7 +80,7 @@ na UI do Swagger. </td>
   </tr>
   <tr>
     <td>  <code> name (Opcional) </code> </td>
-    <td> O nome de exibição para o certificado importado.</td>
+    <td> O nome de exibição para o certificado importado. </td>
   </tr>
   <tr>
     <td> <code> description (Opcional) </code> </td>
@@ -117,7 +116,7 @@ Execute o seguinte comando `curl`:
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/import \
+  https://<cluster-url>/api/v2/<instanceId>/certificates/import \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -130,7 +129,7 @@ Execute o seguinte comando `curl`:
 	}
   }'
   ```
-  {: pre}
+    {: pre}
 
 Substitua _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_,
 _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_,
@@ -145,12 +144,11 @@ Atualize as propriedades opcionais `name`, `description` ou ambas de um certific
 **Nota**: operações de atualização são limitadas a cinco ações por minuto.  
 {: shortdesc}
 
-
 Execute o seguinte comando `curl`:
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
+  https://<cluster-url>/api/v2/certificate/<certificateId> \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -158,7 +156,8 @@ Execute o seguinte comando `curl`:
 	"description":"<description>"
   }'
   ```
-  {: pre}
+
+{: pre}
 
 Substitua _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_,
 _&lt;IAM-token&gt;_, _&lt;name&gt;_ e _&lt;description&gt;_ pelos valores apropriados.
@@ -172,8 +171,9 @@ Recupere uma lista de todos os certificados disponíveis.
 Execute o seguinte comando `curl`:
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/<instanceId>/certificates/
   ```
+
   {: pre}
 
 Substitua _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_ e _&lt;instanceId&gt;_ pelos
@@ -188,12 +188,12 @@ Use um ID do certificado recuperado para fazer download dos dados do certificado
 Execute o seguinte comando `curl`:
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
-  {: pre}
 
-Substitua _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ e
-_&lt;certificateId&gt;_ pelos valores apropriados.
+{: pre}
+
+Substitua _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ e _&lt;certificateId&gt;_ pelos valores apropriados.
 
 ## Excluindo um certificado
 {: #delete-certificate}  
@@ -204,12 +204,12 @@ Use um ID do certificado recuperado para excluir o certificado e seus dados.
 Execute o seguinte comando `curl`:
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
+
   {: pre}
 
-Substitua _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ e
-_&lt;certificateId&gt;_ pelos valores apropriados.
+Substitua _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ e _&lt;certificateId&gt;_ pelos valores apropriados.
 
 ## Designando políticas avançadas
 {: #assigning-advanced-policies}
@@ -218,8 +218,7 @@ _&lt;certificateId&gt;_ pelos valores apropriados.
 querer permitir que os usuários visualizem apenas um subconjunto dos certificados de instância de serviço disponíveis.
 {: shortdesc}
 
-Para designar a política, envie uma solicitação para {{site.data.keyword.iamshort}} executando o seguinte comando `curl`. 
-Repita o comando para cada certificado.
+Para designar a política, envie uma solicitação para {{site.data.keyword.iamshort}} executando o seguinte comando `curl`. Repita o comando para cada certificado.
 
 ```
 curl -X POST \
@@ -249,12 +248,11 @@ Substitua _&lt;account-id&gt;_, _&lt;user-id&gt;_, _&lt;instanceId&gt;_ e _&lt;c
 Substitua _&lt;Account-Admin-IAM-token&gt;_ pelo token IAM do administrador de conta.
 Substitua _&lt;region&gt;_ por sua região, por exemplo, `ng` para o sul dos EUA.
 
-**Nota**: na solicitação cURL precedente, <code>instanceId</code> não é baseado em CRN, é baseado
-em GUID.  
-Por exemplo, no seguinte CRN <code>instanceId</code>, o valor da instância é **58866f34-55ca-4477-8c32-fda435f01f97**.
+**Observação**: na solicitação cURL precedente, <code>instanceId</code> e <code>certificateId</code> não são baseadas em CRN, são baseadas em GUID.  
+Por exemplo, no CRN <code>certificateId</code> a seguir, o valor de instanceId é **58866f34-55ca-4477-8c32-fda435f01f97** e o valor de certificateId é **e20cb664efcbfa2c2f57801230d246a6**.
 
 ```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97::
+crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
 ```
 
 ### Recuperando o ID do usuário
@@ -265,8 +263,7 @@ Recupere o ID do usuário.
 
 Para recuperar o ID do usuário, conclua as etapas a seguir:
 
-1. Peça ao usuário para [fornecer o token IAM](/docs/services/certificate-manager/rest-api.html#prereq-api). 
-A estrutura do token IAM está no formato a seguir: `<value_1>.<value_2>.<value_3>`
+1. Peça ao usuário para [fornecer o token IAM](/docs/services/certificate-manager/rest-api.html#prereq-api). A estrutura do token IAM está no formato a seguir: `<value_1>.<value_2>.<value_3>`
 2. Copie o valor de _&lt;value_2&gt;_ e execute o seguinte comando `echo`:
 
    ```

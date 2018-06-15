@@ -1,23 +1,18 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-24"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:tip: .tip}
 
-# Sobre
-{: #about-cloud-certs}
-
-Descubra {{site.data.keyword.cloudcerts_full}}.
-
-## O que é {{site.data.keyword.cloudcerts_short}}
-{: #what-is-cloud-certs}
+# Sobre o Certificate Manager
+{: #about-certificate-manager}
 
 O {{site.data.keyword.cloudcerts_short}} ajuda você a gerenciar os certificados SSL para seus aplicativos e serviços
 {{site.data.keyword.IBM_notm}} baseados em nuvem.
@@ -33,67 +28,31 @@ uma visualização central dos certificados que você está usando.
 * Localize certificados que precisam de substituição quando novos requisitos de conformidade ou segurança são emitidos
 * Configure controles sobre quem pode acessar e gerenciar seus certificados
 
+## Segurança de chave privada
+{: #private-key-security}
+
+Ao importar um certificado e a chave privada correspondente para {{site.data.keyword.cloudcerts_short}}, o
+serviço usa um algoritmo Advanced Encryption Standard (AES) 256 para criptografar a chave privada. O {{site.data.keyword.cloudcerts_short}} salva essa chave criptografada exclusiva para usar com sua instância de serviço.
+
 ## Disponibilidade
 {: #availability}
 
 O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EUA somente.
 
-## Segurança de chave privada
-{: #private-key-security}
-
-Ao importar um certificado e a chave privada correspondente para {{site.data.keyword.cloudcerts_short}}, o
-serviço usa um algoritmo Advanced Encryption Standard (AES) 256 para criptografar a chave privada. 
-O {{site.data.keyword.cloudcerts_short}} salva essa chave criptografada exclusiva para usar com sua instância de serviço.
-
-## Identidade e gerenciamento de acesso
-{: #identity-access-management}
-
-É possível proteger serviços no {{site.data.keyword.Bluemix_notm}} permitindo que apenas usuários com funções
-especificadas concluam determinadas ações.
-{: shortdesc}
-
+## Integrações
+{: #integrations}
 <table>
-<caption> Tabela 1. Ações que são mapeadas para funções de usuário</caption>
+<caption> Tabela 1. Serviços IBM Cloud que usam o Certificate Manager</caption>
   <tr>
-    <th> Ações </th>
-    <th> Função </th>
+    <th> Service </th>
+    <th> Descrição </th>
   </tr>
   <tr>
-    <td>Listar certificados</td>
-    <td> Administrador, operador, editor, visualizador </td>
+    <td>{{site.data.keyword.containerlong_notm}}</td>
+    <td>Armazene seus certificados de domínio customizado de cluster do Kubernetes no Certificate Manager e, então, implemente-os usando os [comandos de plug-in do Kubernetes Service](/docs/containers/cs_cli_reference.html) para a CLI do IBM Cloud. [Saiba mais sobre essa integração](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
   </tr>
   <tr>
-    <td>Fazer download de um certificado e chave privada </td>
-    <td> Administrador, operador </td>
-  </tr>
-  <tr>
-    <td>Atualizar dados do certificado</td>
-    <td> Administrador, Editor </td>
-  </tr>
-  <tr>
-    <td>Fazer upload dos certificados, chaves privadas e certificados intermediários </td>
-    <td> Administrador, Editor  </td>
-  </tr>
-  <tr>
-    <td>Excluir um certificado e chave privada </td>
-    <td> Administrador, Editor </td>
+    <td>IBM Cloud Security Advisor</td>
+    <td>O Security Advisor centraliza os insights dos serviços IBM Cloud, incluindo a indicação de certificados expirados e prestes a expirar em instâncias do Certificate Manager em sua conta do IBM Cloud. [Saiba mais sobre o Security Advisor](/docs/services/security-advisor/index.html#index)</td>
   </tr>
 </table>
-
-Para obter mais informações sobre funções de usuário e permissões, consulte
-[Funções do usuário](/docs/admin/patterns.html#userroles).
-
-### Designando funções do usuário
-{: #assigning-user-roles}
-
-Para designar uma função de usuário no nível de conta ou de grupo de recursos, conclua as etapas a seguir.
-Se o usuário não faz parte de sua organização, comece enviando um convite para esse usuário.
-
-1. Acesse **Gerenciar > Conta > Usuários**.
-2. No menu **Ações**, selecione **Designar política**.
-3. Clique em **Designar acesso a recursos** ou **Designar acesso dentro de um grupo de recursos**.
-4. Em **Serviços**, selecione **Certificate Manager**.
-5. Opcional: selecione uma **Região** ou use o padrão, **Todas as regiões**.
-6. Opcional: selecione uma **Instância de serviço** ou use o padrão, **Todas as instâncias**.
-7. Em **Selecionar funções > Designar funções de acesso de plataforma**, selecione o nível de
-acesso apropriado.

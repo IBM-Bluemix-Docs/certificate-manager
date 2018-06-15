@@ -1,8 +1,9 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-14"
+  years: 2017, 2018
+lastupdated: "2018-03-08"
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -10,8 +11,8 @@ lastupdated: "2017-12-14"
 {:pre: .pre}
 {:tip: .tip}
 
-# Gestion des certificats à l'aide de l'API
-{: #managing-certificates-api}
+# Gestion des certificats via l'API
+{: #managing-certificates-by-using-api}
 
 Le service {{site.data.keyword.cloudcerts_full}} fournit des noeuds finaux REST permettant d'importer, d'obtenir et de supprimer des certificats. Avec {{site.data.keyword.iamshort}}, vous pouvez également [affecter des règles pour un certificat donné](#assigning-advanced-policies).
 {: shortdesc}
@@ -19,7 +20,7 @@ Le service {{site.data.keyword.cloudcerts_full}} fournit des noeuds finaux REST 
 ## Test d'API
 {: #testing}
 
-Vous pouvez tester des noeuds finaux REST en utilisant Swagger ou en exécutant des demandes cURL en ligne de commande.   
+Vous pouvez tester des noeuds finaux REST en utilisant Swagger ou en exécutant des demandes cURL en ligne de commande.  
 Swagger est disponible uniquement dans la région {{site.data.keyword.Bluemix_notm}} du Sud des Etats-Unis.
 {: shortdesc}
 
@@ -29,9 +30,9 @@ Swagger est disponible uniquement dans la région {{site.data.keyword.Bluemix_no
 Vous devez effectuer les tâches suivantes avant de pouvoir utiliser {{site.data.keyword.cloudcerts_full}} :
 {: shortdesc}
 
-* Installez l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/bluemix_cli/get_started.html#getting-started) pour obtenir les données requises. 
+* Installez l'[interface de ligne de commande {{site.data.keyword.Bluemix_notm}}](/docs/cli/reference/bluemix_cli/get_started.html#getting-started) pour obtenir les données requises.
 
-* Lorsque vous gérez l'API {{site.data.keyword.cloudcerts_short}}, vous pouvez utiliser les variables suivantes dans vos appels. 
+* Lorsque vous gérez l'API {{site.data.keyword.cloudcerts_short}}, vous pouvez utiliser les variables suivantes dans vos appels.
 
 
 <table>
@@ -46,7 +47,7 @@ Vous devez effectuer les tâches suivantes avant de pouvoir utiliser {{site.data
   </tr>
   <tr>
     <td> <code> certificateId </code> </td>
-    <td> Pour obtenir votre ID de certificat, utilisez l'une des options suivantes : <ul><li> A partir de l'interface graphique, sélectionnez le certificat sur la ligne correspondante dans le tableau des certificats. <li> A partir de l'API, [répertoriez les certificats disponibles](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
+    <td> [ID certificat CRN (Cloud Resource Name)](/docs/overview/crn.html#format) affecté à votre certificat une fois celui-ci importé. Pour obtenir votre ID de certificat, utilisez l'une des options suivantes : <ul><li> Dans l'onglet de gestion du service, affichez les informations du certificat en sélectionnant celui-ci dans le tableau Certificats.<li> Via l'API : [répertoriez les certificats dont vous disposez](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
@@ -54,9 +55,9 @@ Vous devez effectuer les tâches suivantes avant de pouvoir utiliser {{site.data
     <ul>
       <li>Sur la page Gérer du service.</li>
       <li>Exécutez la commande <code>bx resource service-instance</code> en remplaçant <i>&lt;Instance_Name&gt;</i> par le nom de votre instance de service.
-<pre>bx resource service-instance &lt;Instance_Name&gt; --id</pre>
+      <pre>bx resource service-instance &lt;Instance_Name&gt; --id</pre>
       </li>
-      <li>Appelez le noeud final REST <code>[GET /resource_instances](https://console.bluemix.net/apidocs/700-resource-controller-api?&language=node#resource-instances-1)</code> de {{site.data.keyword.Bluemix_notm}} Resource Controller, qui requiert l'en-tête <code>Authorization</code> avec le jeton IAM de votre administrateur de compte. </li>
+      <li>Appelez le noeud final REST <code>[GET /resource_instances](https://console.bluemix.net/apidocs/700-resource-controller-api?&language=node#resource-instances-1)</code> de {{site.data.keyword.Bluemix_notm}} Resource Controller, qui requiert l'en-tête <code>Authorization</code> avec le jeton IAM de votre administrateur de compte.</li>
     </ul>
   </td>
   </tr>
@@ -105,7 +106,7 @@ Exécutez la commande `curl` suivante :
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/import \
+  https://<cluster-url>/api/v2/<instanceId>/certificates/import \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -118,24 +119,23 @@ Exécutez la commande `curl` suivante :
 	}
   }'
   ```
-  {: pre}
+    {: pre}
 
-Remplacez _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_, _&lt;privateKey&gt;_ et _&lt;intermediate&gt;_ par les valeurs appropriées. Les valeurs _&lt;name&gt;_, _&lt;description&gt;_ et _&lt;intermediate&gt;_ sont facultatives. 
+Remplacez _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_, _&lt;privateKey&gt;_ et _&lt;intermediate&gt;_ par les valeurs appropriées. Les valeurs _&lt;name&gt;_, _&lt;description&gt;_ et _&lt;intermediate&gt;_ sont facultatives.
 
 ## Mise à jour des métadonnées de certificat
 {: #update-certificate-metadata}  
 
-Mettez à jour la propriété `name` et/ou la propriété `description` facultatives d'un certificat. 
+Mettez à jour la propriété `name` et/ou la propriété `description` facultatives d'un certificat.
 
 **Remarque** : les opérations de mise à jour sont limitées à cinq actions par minute.  
 {: shortdesc}
 
-
-Exécurez la commande `curl` suivante :
+Exécutez la commande `curl` suivante :
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
+  https://<cluster-url>/api/v2/certificate/<certificateId> \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -143,9 +143,10 @@ Exécurez la commande `curl` suivante :
 	"description":"<description>"
   }'
   ```
-  {: pre}
 
-Remplacez _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_ et_&lt;description&gt;_ par les valeurs appropriées. 
+{: pre}
+
+Remplacez _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_ et_&lt;description&gt;_ par les valeurs appropriées.
 
 ## Affichage de tous vos certificats
 {: #list-certificates}  
@@ -153,14 +154,15 @@ Remplacez _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, 
 Extrayez une liste de tous les certificats disponibles.
 {: shortdesc}
 
-Exécurez la commande `curl` suivante :
+Exécutez la commande `curl` suivante :
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/<instanceId>/certificates/
   ```
+
   {: pre}
 
-Remplacez _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_ et _&lt;instanceId&gt;_ par les valeurs appropriées. 
+Remplacez _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_ et _&lt;instanceId&gt;_ par les valeurs appropriées.
 
 ## Téléchargement d'un certificat
 {: #get-certificate}  
@@ -168,12 +170,13 @@ Remplacez _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_ et _&lt;instanceId&gt;_ par
 Utilisez un ID de certificat extrait pour télécharger les données de certificat.
 {: shortdesc}
 
-Exécurez la commande `curl` suivante :
+Exécutez la commande `curl` suivante :
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
-  {: pre}
+
+{: pre}
 
 Remplacez _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ et _&lt;certificateId&gt;_ par les valeurs appropriées.
 
@@ -183,11 +186,12 @@ Remplacez _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ et _&
 Utilisez un ID de certificat extrait pour supprimer le certificat et ses données.
 {: shortdesc}
 
-Exécurez la commande `curl` suivante :
+Exécutez la commande `curl` suivante :
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
+
   {: pre}
 
 Remplacez _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ et _&lt;certificateId&gt;_ par les valeurs appropriées.
@@ -227,13 +231,13 @@ curl -X POST \
 
 Remplacez _&lt;account-id&gt;_, _&lt;user-id&gt;_, _&lt;instanceId&gt;_ et _&lt;certificateId&gt;_ par les valeurs appropriées.
 Remplacez _&lt;Account-Admin-IAM-token&gt;_ par le jeton IAM de l'administrateur de compte.
-Remplacez _&lt;region&gt;_ par votre région, par exemple, `ng` pour le Sud des Etats-Unis. 
+Remplacez _&lt;region&gt;_ par votre région, par exemple, `ng` pour le Sud des Etats-Unis.
 
-**Remarque** : dans la demande cURL précédente, <code>instanceId</code> n'est pas basée sur le nom de ressource de cloud mais l'identificateur global unique.   
-Par exemple, dans le nom de ressource de cloud <code>instanceId</code> suivant, la valeur d'instance est **58866f34-55ca-4477-8c32-fda435f01f97** :
+**Remarque** : dans la demande cURL précédente, <code>instanceId</code> et <code>certificateId</code> ne sont pas basés sur le nom de ressource de cloud mais sur l'identificateur global unique.  
+Par exemple, dans le nom de ressource de cloud <code>certificateId</code> suivant, la valeur pour instanceId est **58866f34-55ca-4477-8c32-fda435f01f97** et celle pour certificateId **e20cb664efcbfa2c2f57801230d246a6**.
 
 ```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97::
+crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
 ```
 
 ### Extraction de l'ID utilisateur

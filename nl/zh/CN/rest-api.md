@@ -1,8 +1,9 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-14"
+  years: 2017, 2018
+lastupdated: "2018-03-08"
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -11,7 +12,7 @@ lastupdated: "2017-12-14"
 {:tip: .tip}
 
 # 使用 API 管理证书
-{: #managing-certificates-api}
+{: #managing-certificates-by-using-api}
 
 {{site.data.keyword.cloudcerts_full}} 服务提供 REST 端点以导入、获取和删除证书。使用 {{site.data.keyword.iamshort}}，您还可以[为特定证书分配策略](#assigning-advanced-policies)。
 {: shortdesc}
@@ -46,7 +47,7 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
   </tr>
   <tr>
     <td> <code> certificateId </code> </td>
-    <td> 您可以使用以下其中一个选项来查找证书标识：<ul><li> 通过 GUI，从证书表的行中选择证书。<li> 通过 API，[列示可用证书](/docs/services/certificate-manager/rest-api.html#list-certificates)。</ul> </td>
+    <td> [基于云资源名称 (CRN) 的证书标识](/docs/overview/crn.html#format)，导入后分配给证书。您可以使用以下其中一个选项来查找证书标识：<ul><li> 在服务的“管理”选项卡中，通过在“证书”表中进行选择查看证书信息。<li> 通过 API：[列示可用证书](/docs/services/certificate-manager/rest-api.html#list-certificates)。</ul> </td>
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
@@ -105,7 +106,7 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/import \
+  https://<cluster-url>/api/v2/<instanceId>/certificates/import \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -118,7 +119,7 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 	}
   }'
   ```
-  {: pre}
+    {: pre}
 
 将 _&lt;cluster-url&gt;_、_&lt;instanceId&gt;_、_&lt;IAM-token&gt;_、_&lt;name&gt;_、_&lt;description&gt;_、_&lt;certificate&gt;_、_&lt;privateKey&gt;_ 和 _&lt;intermediate&gt;_ 替换为相应的值。_&lt;name&gt;_、_&lt;description&gt;_ 和 _&lt;intermediate&gt;_ 值是可选的。
 
@@ -130,12 +131,11 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 **注**：更新操作限制为每分钟五个操作。  
 {: shortdesc}
 
-
 运行以下 `curl` 命令：
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
+  https://<cluster-url>/api/v2/certificate/<certificateId> \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -143,7 +143,8 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 	"description":"<description>"
   }'
   ```
-  {: pre}
+
+{: pre}
 
 将 _&lt;cluster-url&gt;_、_&lt;instanceId&gt;_、_&lt;certificateId&gt;_、_&lt;IAM-token&gt;_、_&lt;name&gt;_ 和 _&lt;description&gt;_ 替换为相应的值。
 
@@ -156,8 +157,9 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 运行以下 `curl` 命令：
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/<instanceId>/certificates/
   ```
+
   {: pre}
 
 将 _&lt;IAM-token&gt;_、_&lt;cluster-url&gt;_ 和 _&lt;instanceId&gt;_ 替换为相应的值。
@@ -171,9 +173,10 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 运行以下 `curl` 命令：
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
-  {: pre}
+
+{: pre}
 
 将 _&lt;IAM-token&gt;_、_&lt;cluster-url&gt;_、_&lt;instanceId&gt;_ 和 _&lt;certificateId&gt;_ 替换为相应的值。
 
@@ -186,8 +189,9 @@ Swagger 仅在美国南部 {{site.data.keyword.Bluemix_notm}} 区域提供。
 运行以下 `curl` 命令：
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
+
   {: pre}
 
 将 _&lt;IAM-token&gt;_、_&lt;cluster-url&gt;_、_&lt;instanceId&gt;_ 和 _&lt;certificateId&gt;_ 替换为相应的值。
@@ -228,11 +232,11 @@ curl -X POST \
 将 _&lt;account-id&gt;_、_&lt;user-id&gt;_、_&lt;instanceId&gt;_ 和 _&lt;certificateId&gt;_ 替换为相应的值。
 将 _&lt;Account-Admin-IAM-token&gt;_ 替换为帐户管理员的 IAM 令牌。将 _&lt;region&gt;_ 替换为您的区域，例如美国南部为 `ng`。
 
-**注**：在之前的 cURL 请求中，<code>instanceId</code> 不是基于 CRN，而是基于 GUID。  
-例如，在以下 <code>instanceId</code> CRN 中，实例值为 **58866f34-55ca-4477-8c32-fda435f01f97**。
+**注**：在之前的 cURL 请求中，<code>instanceId</code> 和 <code>certificateId</code> 不是基于 CRN，而是基于 GUID。  
+例如，在以下 <code>certificateId</code> CRN 中，instanceId 值为 **58866f34-55ca-4477-8c32-fda435f01f97** 且 certificateId 值为 **e20cb664efcbfa2c2f57801230d246a6**。
 
 ```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97::
+crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
 ```
 
 ### 检索用户标识

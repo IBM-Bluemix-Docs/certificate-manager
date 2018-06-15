@@ -4,7 +4,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="certificate-manager" audience="service" href="/docs/services/certificate-manager/index.html"}
-Certificate Manager Beta
+Certificate Manager (Beta)
 
     {: .navgroup id="learn"}
     index.md
@@ -14,11 +14,13 @@ Certificate Manager Beta
     {: .navgroup id="howto"}
     managing-certificates.md
     rest-api.md
+    access-management.md
     monitoring-activities.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [REST API：美国南部](https://us-south.certificate-manager.bluemix.net/docs)
+    rellinks.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

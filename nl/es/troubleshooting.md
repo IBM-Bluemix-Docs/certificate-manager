@@ -1,7 +1,9 @@
 ---
+
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-24"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -15,17 +17,23 @@ lastupdated: "2017-12-13"
 Si le surgen problemas al utilizar {{site.data.keyword.cloudcerts_full}}, tenga en cuenta estas técnicas para la resolución de problemas y la obtención de ayuda.
 {: shortdesc}
 
-
 ## Obtención de ayuda y soporte
 {: #getting-help-and-support}
 
-Obtendrá ayuda en la información que encuentre o planteando preguntas en el foro. También puede abrir una incidencia de soporte.
-{: shortdesc}
+
+
+Puede obtener ayuda de las formas siguientes:
+- Buscando la información en este sitio de documentación
+- Realizando preguntas en un foro
+
+
+También puede abrir una incidencia de soporte.
+
 
 Cuando utilice los foros para formular una pregunta, etiquete la pregunta de manera que la vea el equipo de desarrollo de {{site.data.keyword.cloudcerts_full}}.
 
--   Si tiene preguntas técnicas sobre el servicio, publique su pregunta en [Stack Overflow](http://stackoverflow.com/search?q=certificate-manager+ibm-bluemix) y etiquete la pregunta con `ibm-bluemix` e `ibm-certificate-manager`.  
--   Para preguntas referidas al servicio e instrucciones de cómo empezar, publique su pregunta en [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&redirect=search%2Fsearch&sort=relevance&q=certificate-manager%20%2B[bluemix]). Incluya las etiquetas `certificate-manager` y `bluemix`.
+- Si tiene preguntas técnicas sobre el servicio, publique su pregunta en [Stack Overflow](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) y etiquete la pregunta con `ibm-cloud` e `ibm-certificate-manager`.  
+- Para preguntas referidas al servicio e instrucciones de cómo empezar, publique su pregunta en [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Incluya las etiquetas `ibm-certificate-manager` e `ibm-cloud`.
 
 Para obtener más información sobre cómo utilizar los foros, consulte [Obtención de ayuda](https://console.bluemix.net/docs/support/index.html#getting-help).
 

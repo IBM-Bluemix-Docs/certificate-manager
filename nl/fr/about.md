@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-24"
 
 ---
 {:new_window: target="_blank"}
@@ -10,84 +10,46 @@ lastupdated: "2017-12-13"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:tip: .tip}
 
-# À propos de
-{: #about-cloud-certs}
-
-Découvrez {{site.data.keyword.cloudcerts_full}}.
-
-## Présentation de {{site.data.keyword.cloudcerts_short}}
-{: #what-is-cloud-certs}
+# A propos de Certificate Manager
+{: #about-certificate-manager}
 
 {{site.data.keyword.cloudcerts_short}} vous permet de gérer les certificats SSL pour vos applications et vos services cloud {{site.data.keyword.IBM_notm}}.
 {: shortdesc}
 
-Vous pouvez importer des certificats SSL que vous obtenez pour vos applications et vos services, les stocker en toute sécurité et centraliser l'affichage des certificats que vous utilisez. 
+Vous pouvez importer des certificats SSL que vous obtenez pour vos applications et vos services, les stocker en toute sécurité et centraliser l'affichage des certificats que vous utilisez.
 
 Vous pouvez gérer vos certificats en procédant comme suit :
 
-* Surveillez les dates d'expiration de vos certificats afin de les renouveler à temps. 
+* Surveillez les dates d'expiration de vos certificats afin de les renouveler à temps.
 * Affichez les types de certificats sur vos déploiements et assurez-vous qu'ils répondent aux règles de l'organisation.
 * Recherchez les certificats que vous devez remplacer lorsque de nouvelles exigences de conformité ou de sécurité sont émises.
 * Définissez les contrôles qui déterminent qui peut accéder à et gérer vos certificats.
-
-## Disponibilité
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} est disponible uniquement dans la région du Sud des Etats-Unis. 
 
 ## Sécurité de clé privée
 {: #private-key-security}
 
 Lorsque vous importez un certificat et la clé privée correspondante dans {{site.data.keyword.cloudcerts_short}}, le service utilise un algorithme AES (Advanced Encryption Standard) 256 pour chiffrer la clé privée. {{site.data.keyword.cloudcerts_short}} sauvegarde cette clé chiffrée unique à utiliser avec votre instance de service.
 
-## Identity and Access Management
-{: #identity-access-management}
+## Disponibilité
+{: #availability}
 
-Vous pouvez sécuriser des services dans {{site.data.keyword.Bluemix_notm}} en autorisant uniquement les utilisateurs dotés de rôles spécifiés à exécuter certaines actions.
-{: shortdesc}
+{{site.data.keyword.cloudcerts_short}} est disponible uniquement dans la région du Sud des Etats-Unis.
 
+## Intégrations
+{: #integrations}
 <table>
-<caption> Tableau 1. Actions mappées aux rôles utilisateur</caption>
+<caption> Tableau 1. Services IBM Cloud optimisant Certificate Manager</caption>
   <tr>
-    <th> Action </th>
-    <th> Rôle </th>
+    <th> Service </th>
+    <th> Description </th>
   </tr>
   <tr>
-    <td>Répertorier des certificats</td>
-    <td> Administrateur, Opérateur, Editeur, Afficheur </td>
+    <td>{{site.data.keyword.containerlong_notm}}</td>
+    <td>Stockez vos certificats de domaine personnalisé de cluster Kubernetes dans Certificate Manager, puis déployez-les à l'aide de [commandes du plug-in Kubernetes Service](/docs/containers/cs_cli_reference.html) pour l'interface CLI IBM Cloud. [En savoir plus sur cette intégration](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
   </tr>
   <tr>
-    <td>Télécharger un certificat et une clé privée </td>
-    <td> Administrateur, Opérateur </td>
-  </tr>
-  <tr>
-    <td>Mettre à jour des données de certificat </td>
-    <td> Administrateur, Editeur </td>
-  </tr>
-  <tr>
-    <td>Télécharger des certificats, des clés privées et des certificats intermédiaires </td>
-    <td> Administrateur, Editeur  </td>
-  </tr>
-  <tr>
-    <td>Supprimer un certificat et une clé privée </td>
-    <td> Administrateur, Editeur </td>
+    <td>IBM Cloud Security Advisor</td>
+    <td>Security Advisor centralise les analyses des services IBM Cloud, notamment l'indication des certificats arrivés ou sur le point d'arriver à expiration dans des instances de Certificate Manager dans votre compte IBM Cloud. [En savoir plus sur Security Advisor](/docs/services/security-advisor/index.html#index)</td>
   </tr>
 </table>
-
-Pour plus d'informations sur les rôles et les droits utilisateur, voir [Rôles utilisateur](/docs/admin/patterns.html#userroles).
-
-### Affectation de rôles utilisateur
-{: #assigning-user-roles}
-
-Pour affecter un rôle utilisateur au niveau compte ou au niveau groupe de ressources, procédez comme indiqué ci-après.
-Si l'utilisateur ne fait pas partie de votre organisation, commencez par envoyer une invitation à cet utilisateur. 
-
-1. Accédez à **Gérer > Compte > Utilisateur**.
-2. Dans le menu **Actions**, sélectionnez **Affecter une règle**.
-3. Cliquez sur **Affecter l'accès aux ressources** ou **Affecter l'accès au sein d'un groupe de ressources**.
-4. Sous **Services**, sélectionnez **Gestionnaire de certificat**.
-5. Facultatif : sélectionnez une **région** ou utilisez la valeur par défaut, **Toutes les régions**.
-6. Facultatif : sélectionnez une **instance de service** ou utilisez la valeur par défaut, **Toutes les instances**.
-7. Sous **Sélectionner les rôles > Affecter des rôles d'accès à une plateforme**, sélectionnez le niveau d'accès approprié.

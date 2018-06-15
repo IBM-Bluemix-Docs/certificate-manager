@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2017-12-21"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -9,10 +9,10 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 在 GUI 中管理憑證
-{: #managing-certificates-ui}
+# 從儀表板管理憑證
+{: #managing-certificates-from-the-dashboard}
 
-您可以使用 {{site.data.keyword.cloudcerts_full}} 服務 GUI，來管理您從協力廠商發證者取得以與 {{site.data.keyword.IBM_notm}} 雲端型應用程式或服務搭配使用的憑證。在您匯入憑證及金鑰之後，服務就會對其進行加密及儲存。
+您可以使用 {{site.data.keyword.cloudcerts_full}} 服務儀表板，來管理您從協力廠商發證者取得以與 {{site.data.keyword.IBM_notm}} 雲端型應用程式或服務搭配使用的憑證。在您匯入憑證及金鑰之後，服務就會對其進行加密及儲存。
 {: shortdesc}
 
 ## 匯入憑證
@@ -48,11 +48,11 @@ lastupdated: "2017-12-13"
   </tr>
   <tr>
     <td>名稱</td>
-    <td>選用項目：顯示名稱。</td>
+    <td>選用項目：有意義的顯示名稱。長度上限為 256 個字元。</td>
   </tr>
   <tr>
     <td>說明</td>
-    <td>選用項目：憑證的說明文字。</td>
+    <td>選用項目：憑證的說明文字。長度上限為 1024 個字元。</td>
   </tr>
   <tr>
     <td>網域</td>

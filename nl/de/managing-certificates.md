@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2017-12-21"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -9,10 +9,10 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Zertifikate in der Benutzerschnittstelle verwalten
-{: #managing-certificates-ui}
+# Zertifikate über das Dashboard verwalten
+{: #managing-certificates-from-the-dashboard}
 
-Sie können die Benutzerschnittstelle des {{site.data.keyword.cloudcerts_full}}-Service verwenden, um Zertifikate zu verwalten, die Sie von unabhängigen Ausstellern erhalten, um Ihre {{site.data.keyword.IBM_notm}} Cloud-basierten Apps oder Services verwenden zu können. Wenn Sie die Zertifikate und Schlüssel importiert haben, werden sie von dem Service verschlüsselt und gespeichert.
+Sie können das Dashboard des {{site.data.keyword.cloudcerts_full}}-Service verwenden, um Zertifikate zu verwalten, die Sie von unabhängigen Ausstellern erhalten, um Ihre {{site.data.keyword.IBM_notm}} Cloud-basierten Apps oder Services verwenden zu können. Wenn Sie die Zertifikate und Schlüssel importiert haben, werden sie von dem Service verschlüsselt und gespeichert.
 {: shortdesc}
 
 ## Zertifikat importieren
@@ -41,18 +41,18 @@ Um ein Zertifikat zu importieren, klicken Sie auf **Zertifikat importieren** und
 Wenn Sie ein Zertifikat importiert haben, werden die folgenden Informationen in der Tabelle 'Zertifikate' angezeigt. Wenn Sie weitere Zertifikatsinformationen anzeigen wollen, können Sie das Zertifikat in der Tabellenzeile auswählen.
 
 <table>
-<caption> Tabelle 1. Informationen über das importierte Zertifikat</caption>
+<caption> Tabelle 1. Informationen über das importierte Zertifikat </caption>
   <tr>
-    <th> Komponente</th>
-    <th> Beschreibung</th>
+    <th> Komponente </th>
+    <th> Beschreibung </th>
   </tr>
   <tr>
     <td>Name</td>
-    <td>Optional: Der Anzeigename. </td>
+    <td>Optional: Aussagekräftiger Anzeigename. Maximal zulässige Länge: 256 Zeichen. </td>
   </tr>
   <tr>
     <td>Beschreibung</td>
-    <td>Optional: Der beschreibende Text für das Zertifikat. </td>
+    <td>Optional: Beschreibender Text für das Zertifikat. Maximal zulässige Länge: 1024 Zeichen. </td>
   </tr>
   <tr>
     <td>Domäne</td>

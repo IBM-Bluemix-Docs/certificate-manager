@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2017-12-21"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -9,10 +9,10 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Gestione dei certificati nella GUI
-{: #managing-certificates-ui}
+# Gestione dei certificati dal dashboard
+{: #managing-certificates-from-the-dashboard}
 
-Puoi utilizzare la GUI del servizio {{site.data.keyword.cloudcerts_full}} per gestire i certificati che ottieni da emittenti di terze parti da utilizzare con i tuoi servizi e applicazioni basati sul cloud {{site.data.keyword.IBM_notm}}. Dopo aver importato i certificati e le chiavi, vengono codificati e archiviati nel servizio.
+Puoi utilizzare il dashboard del servizio {{site.data.keyword.cloudcerts_full}} per gestire i certificati che ottieni da emittenti di terze parti da utilizzare con i tuoi servizi e applicazioni basati sul cloud {{site.data.keyword.IBM_notm}}. Dopo aver importato i certificati e le chiavi, vengono codificati e archiviati nel servizio.
 {: shortdesc}
 
 ## Importazione di un certificato
@@ -31,10 +31,10 @@ Per importare un certificato, fai clic su **Importa certificato** e fornisci i s
 
 1. Facoltativo: immetti un nome di visualizzazione
 2. Fai clic su **Sfoglia**, seleziona il file del certificato nel formato PEM.
-3. Fai clic su **Sfoglia**, seleziona la chiave privata del certificato nel formato PEM. 
+3. Fai clic su **Sfoglia**, seleziona la chiave privata del certificato nel formato PEM.
 4. Se applicabile, fornisci il file del certificato intermedio nel formato PEM.
 5. Facoltativo: immetti una descrizione.
-6. Fai clic su **Importa**.   
+6. Fai clic su **Importa**.  
 
 **Nota**: per rinnovare un certificato importato, ottieni un nuovo certificato dalla tua autorità di certificazione (CA) e importalo in {{site.data.keyword.cloudcerts_short}}. Dopo la distribuzione del nuovo certificato, puoi eliminare quello vecchio.
 
@@ -47,12 +47,12 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
     <th> Descrizione </th>
   </tr>
   <tr>
-    <td>Nome </td>
-    <td>Facoltativo: il nome di visualizzazione. </td>
+    <td>Nome</td>
+    <td>Facoltativo: un nome di visualizzazione significativo. Lunghezza massima 256 caratteri. </td>
   </tr>
   <tr>
-    <td>Descrizione </td>
-    <td>Facoltativo: il testo descrittivo del certificato. </td>
+    <td>Descrizione</td>
+    <td>Facoltativo: il testo descrittivo del certificato. Lunghezza massima 1024 caratteri. </td>
   </tr>
   <tr>
     <td>Dominio</td>
@@ -60,7 +60,7 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
   <tr>
     <td>Emittente</td>
-    <td>La CA che ha emesso il certificato. </td>
+    <td>La CA che ha emesso il certificato.</td>
   </tr>
   <tr>
     <td>Algoritmo</td>
@@ -83,7 +83,7 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
     <td>La data in cui il certificato diventa valido. </td>
   </tr>
   <tr>
-    <td>Scade il </td>
+    <td>Scade il</td>
     <td>La data da cui il certificato non è più valido. </td>
   </tr>
   <tr>

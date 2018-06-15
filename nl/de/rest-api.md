@@ -1,8 +1,9 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-14"
+  years: 2017, 2018
+lastupdated: "2018-03-08"
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -11,7 +12,7 @@ lastupdated: "2017-12-14"
 {:tip: .tip}
 
 # Zertifikate mithilfe der API verwalten
-{: #managing-certificates-api}
+{: #managing-certificates-by-using-api}
 
 Der {{site.data.keyword.cloudcerts_full}}-Service bietet REST-Endpunkte zum Importieren, Abrufen und Löschen von Zertifikaten. Unter Verwendung von {{site.data.keyword.iamshort}} können Sie auch [Richtlinien für ein bestimmtes Zertifikat zuweisen](#assigning-advanced-policies).
 {: shortdesc}
@@ -41,17 +42,17 @@ Sie müssen die folgenden Tasks ausführen, bevor Sie {{site.data.keyword.cloudc
     <th> Erläuterung </th>
   </tr>
   <tr>
-    <td> <code> IAM-token </code> </td>
+    <td> <code>IAM-token</code> </td>
     <td> Sie können Ihr IAM-Zugriffstoken ({{site.data.keyword.iamshort}}) anfordern, indem Sie sich bei {{site.data.keyword.Bluemix_notm}} anmelden und den Befehl <code>bx iam oauth-tokens</code> ausführen. </td>
   </tr>
   <tr>
-    <td> <code> zertifikat-ID </code> </td>
-    <td> Sie können Ihre Zertifikat-ID auf einem der folgenden Wege ermitteln: <ul><li> Über die Benutzerschnittstelle: Wählen Sie das Zertifikat in der Zeile in der Zertifikatstabelle aus. <li> Über die API: [Listen Sie die verfügbaren Zertifikate auf](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
+    <td> <code>certificateId</code> </td>
+    <td> Die [CRN-basierte Zertifikats-ID ](/docs/overview/crn.html#format) (CRN = Cloud Resource Name), die dem Zertifikat nach dem Importieren zugewiesen wird. Sie können Ihre Zertifikat-ID mit einer der folgenden Methoden ermitteln: <ul><li> Zeigen Sie auf der Verwaltungsregisterkarte des Service die Zertifikatsinformationen an, indem Sie sie in der Zertifikatstabelle auswählen. <li> Über die API: [Listen Sie die verfügbaren Zertifikate auf](/docs/services/certificate-manager/rest-api.html#list-certificates).</ul> </td>
   </tr>
   <tr>
-    <td> <code> instanz-ID </code> </td>
+    <td> <code>instanceId</code> </td>
     <td> Die [CRN-basierte Instanz-ID](/docs/overview/crn.html#format) (CRN = Cloudressourcenname), die Ihrer Serviceinstanz nach ihrer Erstellung zugewiesen wurde. Sie können die Instanz-ID auf folgende Art und Weise abrufen:
-<ul>
+    <ul>
       <li>Auf der Seite 'Verwalten' des Service.</li>
       <li>Ausführung des Befehls <code>bx resource service-instance</code>, wobei <i>&lt;instanzname&gt;</i> durch den Namen Ihrer Serviceinstanz zu ersetzen ist.
       <pre>bx resource service-instance &lt;instanzname&gt; --id</pre>
@@ -61,35 +62,35 @@ Sie müssen die folgenden Tasks ausführen, bevor Sie {{site.data.keyword.cloudc
   </td>
   </tr>
   <tr>
-    <td>  <code> konto-ID </code> </td>
+    <td>  <code>account-id</code> </td>
     <td> Die Konto-ID des Benutzers, der das {{site.data.keyword.Bluemix_notm}}-Konto verwaltet. Sie können Ihre Konto-ID ermitteln, indem Sie den Befehl <code>bx info</code> ausführen. </td>
   </tr>
   <tr>
-    <td>  <code> cluster-URL </code> </td>
+    <td>  <code>cluster-url</code> </td>
     <td> Die URL des Service in der {{site.data.keyword.Bluemix_notm}}-Region, in der er erstellt wurde. Sie finden die URL auf der Swagger-Benutzerschnittstelle. </td>
   </tr>
   <tr>
-    <td>  <code> name (optional) </code> </td>
+    <td>  <code>name (optional)</code> </td>
     <td> Der Anzeigename für das importierte Zertifikat. </td>
   </tr>
   <tr>
-    <td> <code> beschreibung (optional) </code> </td>
+    <td> <code>description (Optional)</code> </td>
     <td> Die Beschreibung für das importierte Zertifikat. </td>
   </tr>
   <tr>
-    <td> <code> zertifikat </code> </td>
+    <td> <code>certificate</code> </td>
     <td> Die Zertifikatsdaten (mit Escapezeichen). </td>
   </tr>
   <tr>
-    <td> <code> privater_schlüssel </code> </td>
+    <td> <code>privateKey</code> </td>
     <td> Die Daten des privaten Schlüssels (mit Escapezeichen). </td>
   </tr>
   <tr>
-    <td> <code> zwischenzertifikat (optional) </code> </td>
+    <td> <code>intermediate (optional)</code> </td>
     <td> Die Zwischenzertifikatsdaten (mit Escapezeichen). </td>
   </tr>
   <tr>
-    <td> <code> benutzer-ID </code> </td>
+    <td> <code>user-id</code> </td>
     <td>Die ID des Benutzers, dem sie eine Zugriffsrichtlinie zuweisen wollen. Informationen zum Ermitteln der Benutzer-ID finden Sie unter [Benutzer-ID abrufen](#retrieve-user-id). </td>
   </tr>
 </table>
@@ -105,47 +106,47 @@ Führen Sie den folgenden Befehl `curl` aus:
 
   ```
   curl -X POST \
-  https://<cluster-URL>/api/v1/<instanz-ID>/certificates/import \
+  https://<cluster-url>/api/v2/<instanceId>/certificates/import \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
 	"name":"<name>",
-	"description":"<beschreibung>",
+	"description":"<description>",
 	"data":{
-		"content": "<zertifikat>",
-		"priv_key": "<privater_schlüssel>",
-		"intermediate": "<zwischenzertifikat>"
+		"content": "<certificate>",
+		"priv_key": "<privateKey>",
+		"intermediate": "<intermediate>"
 	}
   }'
   ```
-  {: pre}
+    {: pre}
 
-Ersetzen Sie _&lt;cluster-URL&gt;_, _&lt;instanz-ID&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;beschreibung&gt;_, _&lt;zertifikat&gt;_, _&lt;privater_schlüssel&gt;_ und _&lt;zwischenzertifikat&gt;_ durch die entsprechenden Werte. Die Werte _&lt;name&gt;_, _&lt;beschreibung&gt;_ und _&lt;zwischenzertifikat&gt;_ sind optional.
+Ersetzen Sie _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, _&lt;description&gt;_, _&lt;certificate&gt;_, _&lt;privateKey&gt;_ und _&lt;intermediate&gt;_ durch die entsprechenden Werte. Die Werte _&lt;name&gt;_, _&lt;description&gt;_ und _&lt;intermediate&gt;_ sind optional.
 
 ## Zertifikatsmetadaten aktualisieren
 {: #update-certificate-metadata}  
 
-Aktualisieren Sie die optionale Eigenschaft `name` oder `beschreibung` (oder beide) für ein Zertifikat.
+Aktualisieren Sie die optionale Eigenschaft `name` oder `description` (oder beide) für ein Zertifikat.
 
 **Hinweis**: Aktualisierungsoperationen sind auf fünf Aktionen pro Minute begrenzt.  
 {: shortdesc}
-
 
 Führen Sie den folgenden Befehl `curl` aus:
 
   ```
   curl -X POST \
-  https://<cluster-URL>/api/v1/<instanz-ID>/certificates/<zertifikat-ID> \
+  https://<cluster-url>/api/v2/certificate/<certificateId> \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
 	"name":"<name>",
-	"description":"<beschreibung>"
+	"description":"<description>"
   }'
   ```
-  {: pre}
 
-Ersetzen Sie _&lt;cluster-URL&gt;_, _&lt;instanz-ID&gt;_, _&lt;zertifikat-ID&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_ und _&lt;beschreibung&gt;_ durch die entsprechenden Wert.
+{: pre}
+
+Ersetzen Sie _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_ und _&lt;description&gt;_ durch die entsprechenden Werte.
 
 ## Alle eigenen Zertifikate auflisten
 {: #list-certificates}  
@@ -156,11 +157,12 @@ Rufen Sie eine Liste aller Zertifikate ab, die Ihnen zur Verfügung stehen.
 Führen Sie den folgenden Befehl `curl` aus:
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-URL>/api/v1/<instanz-ID>/certificates/
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/<instanceId>/certificates/
   ```
+
   {: pre}
 
-Ersetzen Sie _&lt;IAM-token&gt;_, _&lt;cluster-URL&gt;_ und _&lt;instanz-ID&gt;_ durch die entsprechenden Werte.
+Ersetzebn Sie _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_ und _&lt;instanceId&gt;_ durch die entsprechenden Werte.
 
 ## Zertifikat herunterladen
 {: #get-certificate}  
@@ -171,11 +173,12 @@ Verwenden Sie eine abgerufene Zertifikat-ID, um die Zertifikatsdaten herunterzul
 Führen Sie den folgenden Befehl `curl` aus:
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-URL>/api/v1/<instanz-ID>/certificates/<zertifikat-ID>
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
-  {: pre}
 
-Ersetzen Sie _&lt;IAM-token&gt;_, _&lt;cluster-URL&gt;_, _&lt;instanz-ID&gt;_ und _&lt;zertifikat-ID&gt;_ durch die entsprechenden Werte.
+{: pre}
+
+Ersetzen Sie _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ und _&lt;certificateId&gt;_ durch die entsprechenden Werte.
 
 ## Zertifikat löschen
 {: #delete-certificate}  
@@ -186,11 +189,12 @@ Verwenden Sie eine abgerufene Zertifikat-ID, um das Zertifikat und seine Daten z
 Führen Sie den folgenden Befehl `curl` aus:
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-URL>/api/v1/<instanz-ID>/certificates/<zertifikat-ID>
+  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
+
   {: pre}
 
-Ersetzen Sie _&lt;IAM-token&gt;_, _&lt;cluster-URL&gt;_, _&lt;instanz-ID&gt;_ und _&lt;zertifikat-ID&gt;_ durch die entsprechenden Werte.
+Ersetzen Sie _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_ und _&lt;certificateId&gt;_ durch die entsprechenden Werte.
 
 ## Erweiterte Richtlinien zuweisen
 {: #assigning-advanced-policies}
@@ -202,9 +206,9 @@ Um die Richtlinie zuzuweisen, senden Sie eine Anforderung an {{site.data.keyword
 
 ```
 curl -X POST \
-    https://iampap.<region>.bluemix.net/acms/v1/scopes/a%2<konto-ID>/users/<benutzer-ID>/policies \
+    https://iampap.<region>.bluemix.net/acms/v1/scopes/a%2<account-id>/users/<user-id>/policies \
     -H 'accept: application/json' \
-    -H 'authorization: Bearer <konto-admin-IAM-token>' \
+    -H 'authorization: Bearer <Account-Admin-IAM-token>' \
     -H 'cache-control: no-cache' \
     -H 'content-type: application/json' \
     -d '{
@@ -216,24 +220,24 @@ curl -X POST \
     "resources": [
         {
             "serviceName”: "cloudcerts",
-            "serviceInstance": "<instanz-ID>",
+            "serviceInstance": "<instanceId>",
             "resourceType": "certificate",
-            "resource": "<zertifikat-ID>"
+            "resource": "<certificateId>"
         }
     ]
 }'
 ```
 {: pre}
 
-Ersetzen Sie _&lt;konto-ID&gt;_, _&lt;benutzer-ID&gt;_, _&lt;instanz-ID&gt;_ und _&lt;zertifikat-ID&gt;_ durch die entsprechenden Werte.
-Ersetzen Sie _&lt;konto-admin-IAM-token&gt;_ durch das IAM-Token des Kontoadministrators.
+Ersetzen Sie _&lt;account-id&gt;_, _&lt;user-id&gt;_, _&lt;instanceId&gt;_ und _&lt;certificateId&gt;_ durch die entsprechenden Werte.
+Ersetzen Sie _&lt;Account-Admin-IAM-token&gt;_ durch das IAM-Token des Kontoadministrators.
 Ersetzen Sie _&lt;region&gt;_ durch Ihre Region (z. B. `ng` für Vereinigte Staaten (Süden)).
 
-**Hinweis**: In der vorangegangenen cURL-Anforderung ist <code>instanz-ID</code> nicht CRN-basiert, sie ist GUID-basiert.  
-Beispiel: Im folgenden <code>instanz-ID</code>-CRN ist **58866f34-55ca-4477-8c32-fda435f01f97** der Instanzwert.
+**Hinweis**: In der vorhergehenden cURL-Anforderung sind <code>instanceId</code> und <code>certificateId</code> nicht CRN-basiert, sondern GUID-basiert.  
+Beispiel: Im folgenden <code>certificateId</code>-CRN lautet der Wert für 'instanceId' **58866f34-55ca-4477-8c32-fda435f01f97** und der Wert für 'certificateId' **e20cb664efcbfa2c2f57801230d246a6**.
 
 ```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97::
+crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
 ```
 
 ### Benutzer-ID abrufen

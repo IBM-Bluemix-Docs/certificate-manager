@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-03-19"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -10,7 +10,7 @@ lastupdated: "2017-12-13"
 {:pre: .pre}
 {:tip: .tip}
 
-# Monitoraggio delle attività
+# Monitoraggio delle attività 
 {: #monitoring-activities}
 
 Puoi utilizzare l'integrazione {{site.data.keyword.cloudaccesstraillong}} per monitorare le attività in entrata, esaminare le attività anomale e rispettare i requisiti di controllo normativi. Tutte le richieste effettuate alla tua istanza di {{site.data.keyword.cloudcerts_short}} sono registrate in {{site.data.keyword.cloudaccesstrailshort}}.

@@ -1,8 +1,9 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-14"
+  years: 2017, 2018
+lastupdated: "2018-03-08"
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -11,7 +12,7 @@ lastupdated: "2017-12-14"
 {:tip: .tip}
 
 # 使用 API 管理憑證
-{: #managing-certificates-api}
+{: #managing-certificates-by-using-api}
 
 {{site.data.keyword.cloudcerts_full}} 服務提供 REST 端點來匯入、取得及刪除憑證。使用 {{site.data.keyword.iamshort}}，您也可以[指派特定憑證的原則](#assigning-advanced-policies)。
 {: shortdesc}
@@ -46,7 +47,7 @@ lastupdated: "2017-12-14"
   </tr>
   <tr>
     <td> <code> certificateId </code> </td>
-    <td> 您可以使用下列其中一個選項，來找到憑證 ID：<ul><li> 在 GUI 中，從「憑證」表格的列中選取憑證。<li> 從 API，[列出您可用的憑證](/docs/services/certificate-manager/rest-api.html#list-certificates)。</ul> </td>
+    <td> 在匯入後指派給憑證的[雲端資源名稱 (CRN) 型憑證 ID](/docs/overview/crn.html#format)。您可以使用下列其中一個選項，來找到憑證 ID：<ul><li> 在服務的「管理」標籤中，選取「憑證」表格中的憑證來檢視憑證資訊。<li> 透過 API：[列出您可用的憑證](/docs/services/certificate-manager/rest-api.html#list-certificates)。</ul> </td>
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
@@ -105,7 +106,7 @@ lastupdated: "2017-12-14"
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/import \
+  https://<cluster-url>/api/v2/<instanceId>/certificates/import \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -118,7 +119,7 @@ lastupdated: "2017-12-14"
 	}
   }'
   ```
-  {: pre}
+    {: pre}
 
 將 _&lt;cluster-url&gt;_、_&lt;instanceId&gt;_、_&lt;IAM-token&gt;_、_&lt;name&gt;_、_&lt;description&gt;_、_&lt;certificate&gt;_、_&lt;privateKey&gt;_ 及 _&lt;intermediate&gt;_ 取代為適當值。_&lt;name&gt;_、_&lt;description&gt;_ 及 _&lt;intermediate&gt;_ 是選用值。
 
@@ -130,12 +131,11 @@ lastupdated: "2017-12-14"
 **附註**：更新作業每分鐘只能執行五個動作。  
 {: shortdesc}
 
-
 執行下列 `curl` 指令：
 
   ```
   curl -X POST \
-  https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId> \
+  https://<cluster-url>/api/v2/certificate/<certificateId> \
   -H 'authorization: Bearer <IAM-token>' \
   -H 'content-type: application/json' \
   -d '{
@@ -143,7 +143,8 @@ lastupdated: "2017-12-14"
 	"description":"<description>"
   }'
   ```
-  {: pre}
+
+{: pre}
 
 將 _&lt;cluster-url&gt;_、_&lt;instanceId&gt;_、_&lt;certificateId&gt;_、_&lt;IAM-token&gt;_、_&lt;name&gt;_ 及 _&lt;description&gt;_ 取代為適當值。
 
@@ -156,8 +157,9 @@ lastupdated: "2017-12-14"
 執行下列 `curl` 指令：
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/<instanceId>/certificates/
   ```
+
   {: pre}
 
 將 _&lt;IAM-token&gt;_、_&lt;cluster-url&gt;_ 及 _&lt;instanceId&gt;_ 取代為適當值。
@@ -171,9 +173,10 @@ lastupdated: "2017-12-14"
 執行下列 `curl` 指令：
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
-  {: pre}
+
+{: pre}
 
 將 _&lt;IAM-token&gt;_、_&lt;cluster-url&gt;_、_&lt;instanceId&gt;_ 及 _&lt;certificateId&gt;_ 取代為適當值。
 
@@ -186,8 +189,9 @@ lastupdated: "2017-12-14"
 執行下列 `curl` 指令：
 
   ```
-  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v1/<instanceId>/certificates/<certificateId>
+  curl -H "Authorization: Bearer <IAM-token>" -X DELETE https://<cluster-url>/api/v2/certificate/<certificateId>
   ```
+
   {: pre}
 
 將 _&lt;IAM-token&gt;_、_&lt;cluster-url&gt;_、_&lt;instanceId&gt;_ 及 _&lt;certificateId&gt;_ 取代為適當值。
@@ -229,11 +233,11 @@ curl -X POST \
 將 _&lt;Account-Admin-IAM-token&gt;_ 取代為帳戶管理者的 IAM 記號。
 將 _&lt;region&gt;_ 取代為您的地區（例如，`ng` 表示美國南部）。
 
-**附註**：在前面的 cURL 要求中，<code>instanceId</code> 不是 CRN 型，而是 GUID 型。  
-例如，在下列 <code>instanceId</code> CRN 中，實例值是 **58866f34-55ca-4477-8c32-fda435f01f97**。
+**附註**：在前面的 cURL 要求中，<code>instanceId</code> 及 <code>certificateId</code> 不是以 CRN 為基礎，而是以 GUID 為基礎。  
+例如，在下列 <code>certificateId</code> CRN 中，instanceId 值是 **58866f34-55ca-4477-8c32-fda435f01f97**，而 certificateId 值是 **e20cb664efcbfa2c2f57801230d246a6**。
 
 ```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97::
+crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
 ```
 
 ### 擷取使用者 ID

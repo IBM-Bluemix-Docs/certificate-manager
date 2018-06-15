@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2017-12-21"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -9,10 +9,10 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 在 GUI 中管理证书
-{: #managing-certificates-ui}
+# 从仪表板管理证书
+{: #managing-certificates-from-the-dashboard}
 
-您可以使用 {{site.data.keyword.cloudcerts_full}} 服务 GUI 来管理您从第三方签发者获取的证书，以使用基于 {{site.data.keyword.IBM_notm}} 云的应用程序或服务。在导入证书和密钥后，该服务即会对它们进行加密和存储。
+您可以使用 {{site.data.keyword.cloudcerts_full}} 服务仪表板来管理从第三方签发者获取的证书，以使用基于 {{site.data.keyword.IBM_notm}} 云的应用程序或服务。在导入证书和密钥后，该服务即会对它们进行加密和存储。
 {: shortdesc}
 
 ## 导入证书
@@ -48,11 +48,11 @@ lastupdated: "2017-12-13"
   </tr>
   <tr>
     <td>名称</td>
-    <td>可选：显示名称。</td>
+    <td>可选：有意义的显示名称。最长字段为 256 个字符。</td>
   </tr>
   <tr>
     <td>描述</td>
-    <td>可选：证书的描述性文本。</td>
+    <td>可选：证书的描述性文本。最长字段为 1024 个字符。</td>
   </tr>
   <tr>
     <td>域</td>

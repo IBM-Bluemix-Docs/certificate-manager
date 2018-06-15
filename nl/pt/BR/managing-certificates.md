@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2017-12-21"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -9,12 +9,10 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Gerenciando certificados na GUI
-{: #managing-certificates-ui}
+# Gerenciando certificados no painel
+{: #managing-certificates-from-the-dashboard}
 
-É possível usar a GUI do serviço {{site.data.keyword.cloudcerts_full}} para gerenciar certificados que você
-obtém de terceiros emissores para usar com seus aplicativos ou serviços {{site.data.keyword.IBM_notm}} baseados em
-nuvem. Depois de importar certificados e chaves, eles serão criptografados pelo serviço.
+É possível usar o painel de serviços do {{site.data.keyword.cloudcerts_full}} para gerenciar certificados que você obtém de emissores terceirizados para usar com os seus apps ou serviços baseados em nuvem do {{site.data.keyword.IBM_notm}}. Depois de importar certificados e chaves, eles serão criptografados pelo serviço.
 {: shortdesc}
 
 ## Importando um certificado
@@ -42,7 +40,7 @@ Para importar um certificado, clique em **Importar certificado** e forneça os s
 certificação (CA) e importe o novo certificado no {{site.data.keyword.cloudcerts_short}}. Depois que o novo certificado
 for implementado, será possível excluir o antigo.
 
-Depois de importar um certificado, as seguintes informações serão exibidas na tabela de Certificado. Para visualizar mais
+Depois de importar um certificado, as seguintes informações serão exibidas na tabela de Certificados. Para visualizar mais
 informações de certificado, é possível selecionar o certificado na linha da tabela.
 
 <table>
@@ -53,11 +51,11 @@ informações de certificado, é possível selecionar o certificado na linha da 
   </tr>
   <tr>
     <td>Nome</td>
-    <td>Opcional: o nome de exibição. </td>
+    <td>Opcional: um nome de exibição significativo. O comprimento máximo é de 256 caracteres. </td>
   </tr>
   <tr>
     <td>Descrição</td>
-    <td>Opcional: o texto descritivo para o certificado. </td>
+    <td>Opcional: texto descritivo para o certificado. O comprimento máximo é de 1.024 caracteres.</td>
   </tr>
   <tr>
     <td>Domínio</td>
@@ -76,8 +74,7 @@ informações de certificado, é possível selecionar o certificado na linha da 
     <td>O tipo de chave e o tamanho que são usados pelo algoritmo. </td>
   </tr>
   <tr>
-    <td>Expira em
-</td>
+    <td>Expira em </td>
     <td>O número de dias restantes antes de o certificado não ser mais válido. </td>
   </tr>
   <tr>
@@ -143,7 +140,7 @@ Também é possível atualizar o nome e a descrição de um certificado.
 Para atualizar um certificado:
 
 1. Selecione uma linha para abrir os detalhes para esse certificado.
-2. Atualize o nome ou descrição.
+2. Atualize o nome ou a descrição.
 3. Salve as suas mudanças.
 
 **Nota**: é possível executar até 5 ações de atualização por minuto.

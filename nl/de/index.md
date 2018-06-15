@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-07"
 
 ---
 {:new_window: target="_blank"}
@@ -23,3 +23,5 @@ Erstellen Sie zunächst eine neue {{site.data.keyword.cloudcerts_short}}-Service
 2. Geben Sie Ihrer Serviceinstanz einen Namen oder verwenden Sie den voreingestellten Namen.
 3. Klicken Sie auf **Erstellen**.
 4. Um die Zertifikate Ihrer Organisation in {{site.data.keyword.cloudcerts_short}} zu importieren, klicken Sie auf **Zertifikat importieren**.  
+
+Sie können [weitere Informationen](about.html) zu den Vorteilen von {{site.data.keyword.cloudcerts_short}} abrufen und [Benutzerfeedback in developerWorks zur Verfügung stellen](troubleshooting.html#getting-help-and-support), um zur Entwicklung und Verbesserung von {{site.data.keyword.cloudcerts_short}} beizutragen.

@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2017-12-21"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -9,10 +9,10 @@ lastupdated: "2017-12-13"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Gestión de certificados en la GUI
-{: #managing-certificates-ui}
+# Gestión de certificados desde el panel de control
+{: #managing-certificates-from-the-dashboard}
 
-Puede utilizar la GUI de servicio de {{site.data.keyword.cloudcerts_full}} para gestionar certificados que obtenga de emisores externos para utilizarlos con las apps o servicios basados en la nube de {{site.data.keyword.IBM_notm}}. Tras importar los certificados y las claves, el servicio los cifrará y los almacenará.
+Puede utilizar el panel de control del servicio {{site.data.keyword.cloudcerts_full}} para gestionar certificados que obtenga de emisores externos para utilizarlos con las apps o servicios basados en la nube de {{site.data.keyword.IBM_notm}}. Tras importar los certificados y las claves, el servicio los cifrará y los almacenará.
 {: shortdesc}
 
 ## Importación de un certificado
@@ -48,11 +48,11 @@ Tras importar un certificado, se mostrará la información siguiente en la tabla
   </tr>
   <tr>
     <td>Nombre</td>
-    <td>Opcional: El nombre de visualización.</td>
+    <td>Opcional: Un nombre de visualización identificativo. Longitud máxima de 256 caracteres.</td>
   </tr>
   <tr>
     <td>Descripción</td>
-    <td>Opcional: El texto descriptivo para el certificado. </td>
+    <td>Opcional: El texto descriptivo para el certificado. Longitud máxima de 1024 caracteres.</td>
   </tr>
   <tr>
     <td>Dominio</td>

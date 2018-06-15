@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-03-19"
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -10,7 +10,7 @@ lastupdated: "2017-12-13"
 {:pre: .pre}
 {:tip: .tip}
 
-# Monitorando atividades
+# Atividades de Monitoramento
 {: #monitoring-activities}
 
 É possível usar a integração do {{site.data.keyword.cloudaccesstraillong}} para monitorar atividades em

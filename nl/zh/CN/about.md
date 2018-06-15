@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017
-lastupdated: "2017-12-13"
+  years: 2017, 2018
+lastupdated: "2018-05-24"
 
 ---
 {:new_window: target="_blank"}
@@ -10,15 +10,9 @@ lastupdated: "2017-12-13"
 {:screen: .screen}
 {:codeblock: .codeblock}
 {:pre: .pre}
-{:tip: .tip}
 
-# 关于
-{: #about-cloud-certs}
-
-了解 {{site.data.keyword.cloudcerts_full}}。
-
-## 什么是 {{site.data.keyword.cloudcerts_short}}
-{: #what-is-cloud-certs}
+# 关于 Certificate Manager
+{: #about-certificate-manager}
 
 {{site.data.keyword.cloudcerts_short}} 可帮助您管理基于 {{site.data.keyword.IBM_notm}} 云的应用程序和服务的 SSL 证书。
 {: shortdesc}
@@ -32,61 +26,30 @@ lastupdated: "2017-12-13"
 * 发出新合规性或安全性需求时，查找需要替换的证书
 * 控制谁可以访问和管理证书
 
-## 可用性
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} 仅在美国南部区域提供。
-
 ## 专用密钥安全性
 {: #private-key-security}
 
 当您将证书及相应专用密钥导入到 {{site.data.keyword.cloudcerts_short}} 时，该服务将使用高级加密标准 (AES) 256 算法来加密专用密钥。{{site.data.keyword.cloudcerts_short}} 会保存此唯一加密密钥以使用服务实例。
 
-## 身份与访问管理
-{: #identity-access-management}
+## 可用性
+{: #availability}
 
-您可以通过仅允许具有指定角色的用户完成特定操作，在 {{site.data.keyword.Bluemix_notm}} 中保护服务。
-{: shortdesc}
+{{site.data.keyword.cloudcerts_short}} 仅在美国南部区域提供。
 
+## 集成
+{: #integrations}
 <table>
-<caption> 表 1. 映射到用户角色的操作</caption>
+<caption> 表 1. 利用 Certificate Manager 的 IBM Cloud 服务</caption>
   <tr>
-    <th> 操作 </th>
-    <th> 角色 </th>
+    <th> 服务</th>
+    <th> 描述</th>
   </tr>
   <tr>
-    <td>列示证书 </td>
-    <td> 管理员、操作员、编辑者、查看者 </td>
+    <td>{{site.data.keyword.containerlong_notm}}</td>
+    <td>在 Certificate Manager 中存储 Kubernetes 集群定制域证书，然后使用 IBM Cloud CLI 的 [Kubernetes 服务插件命令](/docs/containers/cs_cli_reference.html)进行部署。[了解有关此集成的更多信息](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)。</td>
   </tr>
   <tr>
-    <td>下载证书和专用密钥 </td>
-    <td> 管理员、操作员 </td>
-  </tr>
-  <tr>
-    <td>更新证书数据 </td>
-    <td> 管理员、编辑者 </td>
-  </tr>
-  <tr>
-    <td>上传证书、专用密钥和中间证书 </td>
-    <td> 管理员、编辑者 </td>
-  </tr>
-  <tr>
-    <td>删除证书和专用密钥 </td>
-    <td> 管理员、编辑者 </td>
+    <td>IBM Cloud 安全顾问程序</td>
+    <td>安全顾问程序集中 IBM Cloud 服务的洞察，包括 IBM Cloud 帐户中 Certificate Manager 实例内已到期和即将到期的证书的指示。[了解有关安全顾问程序的更多信息](/docs/services/security-advisor/index.html#index)</td>
   </tr>
 </table>
-
-有关用户角色和许可权的更多信息，请参阅[用户角色](/docs/admin/patterns.html#userroles)。
-
-### 分配用户角色
-{: #assigning-user-roles}
-
-要在帐户级别或资源组级别分配用户角色，请完成以下步骤。如果用户不属于组织，请从向该用户发送邀请开始。
-
-1. 转至**管理 > 帐户 > 用户**。
-2. 从**操作**菜单中，选择**分配策略**。
-3. 单击**分配资源的访问权**或**在资源组中分配访问权**。
-4. 在**服务**下，选择 **Certificate Manager**。
-5. 可选：选择**区域**或使用缺省值**所有区域**。
-6. 可选：选择**服务实例**或使用缺省值**所有实例**。
-7. 在**选择角色 > 分配平台访问角色**下，选择相应的访问级别。

@@ -103,7 +103,7 @@ You can update the endpoint of your channel.
 
 
 ## Deleting a channel
-{: #updating-channel}
+{: #deleting-channel}
 
 You can delete any of the channels.
 {: shortdesc}

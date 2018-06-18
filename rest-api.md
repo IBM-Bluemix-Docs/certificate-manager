@@ -164,7 +164,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;cluster-url&gt; _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, and _&lt;description&gt;_ with the appropriate values.
+Replace _&lt;cluster-url&gt;_, _&lt;certificateId&gt;_, _&lt;IAM-token&gt;_, _&lt;name&gt;_, and _&lt;description&gt;_ with the appropriate values.
 
 
 ## Listing all of your certificates
@@ -196,7 +196,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;, and _&lt;certificateId&gt;_ with the appropriate values.
+Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, and _&lt;certificateId&gt;_ with the appropriate values.
 
 
 ## Deleting a certificate
@@ -212,7 +212,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;, and _&lt;certificateId&gt;_ with the appropriate values.
+Replace _&lt;IAM-token&gt;_, _&lt;cluster-url&gt;_, and _&lt;certificateId&gt;_ with the appropriate values.
 
 
 ## Listing all of your notification channels

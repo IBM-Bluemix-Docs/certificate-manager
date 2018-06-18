@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-16"
+lastupdated: "2018-06-18"
 
 ---
 
@@ -275,7 +275,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;cluster-url&gt;, _&lt;instanceId&gt;, _&lt;channelId&gt;_, _&lt;IAM-token&gt;_, and _&lt;endpoint&gt;_ with the appropriate values.
+Replace _&lt;cluster-url&gt;, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, _&lt;IAM-token&gt;_, and _&lt;endpoint&gt;_ with the appropriate values.
 
 
 ## Enable or disable notification channels
@@ -297,7 +297,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;cluster-url&gt;, _&lt;instanceId&gt;, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
+Replace _&lt;cluster-url&gt;, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
 
 
 ## Deleting a notification channel
@@ -315,7 +315,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;cluster-url&gt;, _&lt;instanceId&gt;, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
+Replace _&lt;cluster-url&gt;, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
 
 
 ## Assigning advanced policies

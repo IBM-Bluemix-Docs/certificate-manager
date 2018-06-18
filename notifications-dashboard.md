@@ -85,7 +85,7 @@ To test a notification channel, click the **Test Connection** button for the req
 ## Disabling a channel
 {: #disabling-channel}
 
-You can disable a channel to stop sending notifications to that channel.
+To stop sending notifications to a channel, you can disable the channel.
 {: shortdesc}
 
 To disable the channel, click the toggle in the relevant channel row. You can also enable a channel again by clicking the toggle.

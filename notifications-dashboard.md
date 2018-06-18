@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-06-18"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,7 @@ lastupdated: "2018-06-15"
 
 Certificates are typically valid only for a set period of time. When deployed certificates expire, outages can occur. Therefore it is important to renew certificates on time, and deploy the renewed certificates in place of the old ones.
 
-{{site.data.keyword.cloudcerts_full}} sends you Slack notifications when the certificates you upload to {{site.data.keyword.cloudcerts_short_notm}} are about to expire. You are notified 90 days, 60 days, 30 days 10 days, and one day before certificates expire, and after a certificate expires.
+{{site.data.keyword.cloudcerts_full}} sends you Slack notifications when the certificates you upload to {{site.data.keyword.cloudcerts_short_notm}} are about to expire. You are notified 90 days, 60 days, 30 days, 10 days, and one day before certificates expire, and after a certificate expires.
 
 To start receiving notifications, you must configure a Slack channel to which notifications can be posted. Therefore, you must create a Slack channel, and a webhook for that channel, by following the [Slack documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://api.slack.com/incoming-webhooks).
 {: shortdesc}

@@ -44,15 +44,15 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
   </tr>
   <tr>
     <td> <code> IAM-token </code> </td>
-    <td> You can obtain your {{site.data.keyword.iamshort}} (IAM) access token by logging in to {{site.data.keyword.Bluemix_notm}} and running the <code>bx iam oauth-tokens</code> command. </td>
+    <td> You can obtain your {{site.data.keyword.iamshort}} (IAM) access token by logging in to {{site.data.keyword.Bluemix_notm}} and running the <code>ic iam oauth-tokens</code> command. </td>
   </tr>
   <tr>
     <td> <code> instanceId </code> </td>
     <td> The [Cloud Resource Name (CRN)-based instance ID](/docs/overview/crn.html#format) that is assigned to your service instance after it is created. You can retrieve the instance ID in the following ways:
     <ul>
       <li>In the <strong>Manage</strong> page of the service.</li>
-      <li>Run the <code>bx resource service-instance</code> command, replacing <i>&lt;Instance_Name&gt;</i> with the name of your service instance.
-      <pre>bx resource service-instance &lt;Instance_Name&gt; --id</pre>
+      <li>Run the <code>ic resource service-instance</code> command, replacing <i>&lt;Instance_Name&gt;</i> with the name of your service instance.
+      <pre>ic resource service-instance &lt;Instance_Name&gt; --id</pre>
       </li>
       <li>Call the {{site.data.keyword.Bluemix_notm}} Resource Controller <code>[GET /resource_instances](https://console.bluemix.net/apidocs/700-resource-controller-api?&language=node#resource-instances-1)</code> REST endpoint, which requires the <code>Authorization</code> header with your account administrator's IAM token.</li>
     </ul>
@@ -64,7 +64,7 @@ You must complete the following tasks before you can use {{site.data.keyword.clo
   </tr>
   <tr>
     <td>  <code> account-id </code> </td>
-    <td> The account ID of the user that manages the {{site.data.keyword.Bluemix_notm}} account. You can find your account ID by running the <code>bx info</code> command. </td>
+    <td> The account ID of the user that manages the {{site.data.keyword.Bluemix_notm}} account. You can find your account ID by running the <code>ic info</code> command. </td>
   </tr>
   <tr>
     <td>  <code> cluster-url </code> </td>

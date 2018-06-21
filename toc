@@ -16,7 +16,6 @@ Certificate Manager (Beta)
     notifications-dashboard.md
     rest-api.md
     access-management.md
-    monitoring-activities.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

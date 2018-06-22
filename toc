@@ -16,11 +16,11 @@ Certificate Manager (Beta)
     notifications-dashboard.md
     rest-api.md
     access-management.md
-    monitoring-activities.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
     [REST API: US South](https://us-south.certificate-manager.bluemix.net/docs)
+    at_events.md
     rellinks.md
     {: .navgroup-end}
 

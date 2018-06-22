@@ -20,7 +20,7 @@ Certificate Manager (Beta)
 
     {: .navgroup id="reference"}
     [REST API: US South](https://us-south.certificate-manager.bluemix.net/docs)
-    
+    at_events.md
     rellinks.md
     {: .navgroup-end}
 

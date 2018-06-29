@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-06-29"
 
 ---
 
@@ -252,7 +252,7 @@ Run the following `curl` command:
   ```
   {: codeblock}
 
-Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;type&gt;_, _&lt;endpoint&gt;_, and 
+Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;IAM-token&gt;_, _&lt;type&gt;_, _&lt;endpoint&gt;_, and
  _&lt;is_active&gt;_ with the appropriate values.
 
 
@@ -316,94 +316,3 @@ Run the following `curl` command:
   {: codeblock}
 
 Replace _&lt;cluster-url&gt;_, _&lt;instanceId&gt;_, _&lt;channelId&gt;_, and _&lt;IAM-token&gt;_ with the appropriate values.
-
-
-## Assigning advanced policies
-{: #assigning-advanced-policies}
-
-You can choose to allow certain users to perform certain actions on specific certificates. You might want to allow users to view only a subset of the available service instance certificates.
-{: shortdesc}
-
-To assign the policy, send a request to {{site.data.keyword.iamshort}} by running the following `curl` command. Repeat the command for each certificate.
-
-```
-curl -X POST \
-    https://iampap.<region>.bluemix.net/acms/v1/scopes/a%2<account-id>/users/<user-id>/policies \
-    -H 'accept: application/json' \
-    -H 'authorization: Bearer <Account-Admin-IAM-token>' \
-    -H 'cache-control: no-cache' \
-    -H 'content-type: application/json' \
-    -d '{
-        "roles": [
-        {
-            "id": "crn:v1:bluemix:public:iam::::role:Viewer"
-        }
-    ],
-    "resources": [
-        {
-            "serviceName”: "cloudcerts",
-            "serviceInstance": "<instanceId>",
-            "resourceType": "certificate",
-            "resource": "<certificateId>"
-        }
-    ]
-}'
-```
-{: codeblock}
-
-Replace _&lt;account-id&gt;_, _&lt;user-id&gt;_, _&lt;instanceId&gt;_, and _&lt;certificateId&gt;_ with the appropriate values.
-Replace  _&lt;Account-Admin-IAM-token&gt;_ with the account administrator's IAM token.
-Replace _&lt;region&gt;_ with your region, for example, `ng` for US-South.
-
-**Note**: In the preceeding cURL request, `instanceId` and `certificateId` are not CRN-based, they are GUID-based.  
-For example, in the following `certificateId` CRN, the `instanceId` value is **58866f34-55ca-4477-8c32-fda435f01f97** and the `certificateId` value is **e20cb664efcbfa2c2f57801230d246a6**.
-
-```
-crn:v1:staging:public:cloudcerts:us-south:a/d0c8a917589e40076a61e56b23056d16:58866f34-55ca-4477-8c32-fda435f01f97:certificate:e20cb664efcbfa2c2f57801230d246a6
-```
-{: screen}
-
-
-### Retrieving the user ID
-{: #retrieve-user-id}
-
-Retrieve the user ID.
-{: shortdesc}
-
-To retrieve the user ID, complete the following steps:
-
-1. Ask the user to [provide the IAM token](/docs/services/certificate-manager/rest-api.html#prereq-api). The IAM token structure is in the following format: `<value_1>.<value_2>.<value_3>`
-2. Copy the value of _&lt;value_2&gt;_ and run the following `echo` command:
-
-   ```
-   echo -n "<value_2>" | base64 --decode
-   ```
-   {: codeblock}
-
-   The result is a JSON object similar to the following output:
-
-   ```
-   {
-        "iam_id":"...",
-        "id":"...",
-        "realmid":"...",
-        "identifier":"...",
-        "given_name":"...",
-        "family_name":"...",
-        "name":"...",
-        "email":"...",
-        "sub":"...",
-        "account":{
-            "bss":"..."},
-            "iat":...,
-            "exp":...,
-            "iss":"...",
-            "grant_type":"...",
-            "scope":"...",
-            "client_id":"..."
-        }
-   }
-   ```
-   {: screen}
-
-3. Copy the value of the `id` property.

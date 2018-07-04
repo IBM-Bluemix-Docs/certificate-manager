@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-04"
 
 ---
 {:new_window: target="_blank"}
@@ -98,18 +98,32 @@ For more information about user roles and permissions, see [User roles](/docs/ia
 ### Assigning user access roles
 {: #assigning-user--access-roles}
 
-To assign an access role on the account-level or resource group-level, complete the following steps.
+You can configure access policies for a Certificate Manager instance (and thereby for all the certificates in that instance), or you can set policies for individual certificates (resources) within an instance.    
+To assign an access role at the account-level, complete the steps below.
 If the user is not part of your organization, start by sending an invitation to that user.
 
 1. Go to **Manage > Account > Users**.
-2. From the **Actions** menu, select **Assign policy**.
-3. Click **Assign access to resources** or **Assign access within a resource group**.
+2. Click on a user and then click on the **Assign access** button, or Select a user in the table, and from the **Actions** menu, select **Assign access**.
+3. Click **Assign access to resources**.
 4. Under **Services**, select **Certificate Manager**.
-5. Optional: Select a **Region** or use the default, **All regions**.
-6. Optional: Select a **Service instance** or use the default, **All instances**.
-7. Under **Select roles > Assign platform/service access roles**, select the appropriate access level.
+5. Select a **Service instance** or use the default, **All instances**.
+6. Optional: If you want to configure a policy for an individual certificate, in the **Resource Type** field, type the word _‘certificate’_ and in the **Resource ID** field, type the Certificate ID which is the last part of the Certificate CRN. Find instructions to get this ID below.
+7. Under **Select roles > Assign platform access roles**, select the appropriate access level.
+8. Under **Select roles > Assign service access roles**, select the appropriate access level.
+9. Click **Assign** to assign the policy.
 
 **Examples:**
 * Assign at least the Viewer role to every user so that every user can see service instances.
-* Assign the Administrator or Editor role to a user if you want that user to create instances.
+* Assign the Administrator or Editor role to a user if you want that user to create/delete instances.
 * Assign at least the Reader role if you want a user to view certificates within an instance.
+
+**Getting the Certificate ID used for configuring a certificate level access policy:** 
+1. Go to your Certificate Manager instance
+2. Select the certificate 
+3. Find the certificate crn in the certificate details
+4. Copy the last part of the crn (e.g e20cb664efcbfa2c2f57801230d246a6)
+This is the certificate ID
+
+
+
+

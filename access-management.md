@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-15"
+lastupdated: "2018-07-05"
 
 ---
 {:new_window: target="_blank"}
@@ -18,7 +18,7 @@ You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing on
 {: shortdesc}
 
 
-### Platform access roles
+## Platform access roles
 {: #platform-access-roles}
 
 You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your {{site.data.keyword.Bluemix_notm}} account.
@@ -46,8 +46,8 @@ You can use platform access roles to enable users to complete tasks on platform 
 Platform roles also give access to certain actions on certificates within instances. These actions are deprecated.
 
 
-### Service access roles
-{: #service-acceess-roles}
+## Service access roles
+{: #service-access-roles}
 
 You can use service access roles to enable users to complete tasks in {{site.data.keyword.cloudcerts_short}} instances, such as importing, downloading, editing, or deleting certificates.
 
@@ -95,21 +95,32 @@ You can use service access roles to enable users to complete tasks in {{site.dat
 For more information about user roles and permissions, see [User roles](/docs/iam/users_roles.html#userroles).
 
 
-### Assigning user access roles
-{: #assigning-user--access-roles}
+## Configuring access policies for users
+{: #configuring-access-policies}
 
-To assign an access role on the account-level or resource group-level, complete the following steps.
-If the user is not part of your organization, start by sending an invitation to that user.
+You can configure access policies for users to grant access to a {{site.data.keyword.cloudcerts_short}} instance, or to a subset of certificates that are stored in the instance. 
+{: shortdesc}
 
-1. Go to **Manage > Account > Users**.
-2. From the **Actions** menu, select **Assign policy**.
-3. Click **Assign access to resources** or **Assign access within a resource group**.
-4. Under **Services**, select **Certificate Manager**.
-5. Optional: Select a **Region** or use the default, **All regions**.
-6. Optional: Select a **Service instance** or use the default, **All instances**.
-7. Under **Select roles > Assign platform/service access roles**, select the appropriate access level.
+1.  Navigate to **Manage** > **Account** > **Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
+2.  Click the name of the user that you want to assign an access policy. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam/iamuserinv.html#iamuserinv). 
+3.  Click **Assign access**. 
+4.  Click **Assign access to resources**. 
+5.  From the **Services** drop-down menu, select **Certificate Manager**. 
+6.  From the **Service instance** drop-down menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value **All instances**. 
+7.  Optional: Configure access to a specific certificate. 
+    1. [Retrieve your certificate ID](#get-certificate-id). 
+    2. Enter `certificate` in the **Resource Type** field. 
+    3. Enter the certificate ID in the **Resource ID** field. 
+8.  Assign a [platform access role](#platform-access-roles) to the user. 
+9.  Assign a [service access role](#service-access-roles) to the user. 
+10. Click **Assign** to assign the access policy to the user. 
 
-**Examples:**
-* Assign at least the Viewer role to every user so that every user can see service instances.
-* Assign the Administrator or Editor role to a user if you want that user to create instances.
-* Assign at least the Reader role if you want a user to view certificates within an instance.
+### Retrieving the ID of a certificate
+{: #get-certificate-id}
+
+1. From the {{site.data.keyword.Bluemix_notm}} dashboard, select your {{site.data.keyword.cloudcerts_short}} instance. 
+2. From the navigation on the service details page, select **Manage**. 
+3. Select a certificate. 
+4. In the certificate details, find the certificate CRN. 
+5. Copy the certificate ID. The CRN contains different values that are all separated by a colon (`:`). The certificate ID is the last value in your CRN. 
+

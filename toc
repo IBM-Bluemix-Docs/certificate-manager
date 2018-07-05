@@ -14,12 +14,11 @@ Certificate Manager (Beta)
     {: .navgroup id="howto"}
     managing-certificates.md
     notifications-dashboard.md
-    rest-api.md
     access-management.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [REST API: US South](https://us-south.certificate-manager.bluemix.net/docs)
+    [API documentation](https://console.bluemix.net/apidocs/cloudcerts)
     at_events.md
     rellinks.md
     {: .navgroup-end}

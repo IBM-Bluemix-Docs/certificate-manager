@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-08"
+lastupdated: "2018-07-20"
 
 ---
 {:new_window: target="_blank"}
@@ -98,15 +98,15 @@ For more information about user roles and permissions, see [User roles](/docs/ia
 ## Configuring access policies for users
 {: #configuring-access-policies}
 
-You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance (and thereby for all the certificates in that instance), or you can set policies for individual certificates (resources) within an instance.
+You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance (and therefore for all the certificates in that instance), or you can set policies for individual certificates (resources) within an instance.
 {: shortdesc}
 
-1.  Navigate to **Manage** > **Account** > **Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
-2.  Click the name of the user that you want to assign an access policy. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam/iamuserinv.html#iamuserinv).
+1.  Navigate to **Manage > Account > Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
+2.  Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam/iamuserinv.html#iamuserinv).
 3.  Click **Assign access**.
 4.  Click **Assign access to resources**.
 5.  From the **Services** drop-down menu, select **Certificate Manager**.
-6.  From the **Service instance** drop-down menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value **All instances**.
+6.  From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
 7.  Optional: Configure access to a specific certificate.
     1. [Retrieve your certificate ID](#get-certificate-id).
     2. Enter `certificate` in the **Resource Type** field.
@@ -115,7 +115,7 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 9.  Assign a [service access role](#service-access-roles) to the user.
 10. Click **Assign** to assign the access policy to the user.
 
-**Examples:**
+**Examples of role allocation:**
 * Assign at least the Viewer role to every user so that every user can see service instances.
 * Assign the Administrator or Editor role to a user if you want that user to create/delete instances.
 * Assign at least the Reader role if you want a user to view certificates within an instance.
@@ -127,4 +127,4 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 2. From the navigation on the service details page, select **Manage**.
 3. Select a certificate.
 4. In the certificate details, find the certificate CRN.
-5. Copy the certificate ID. The CRN contains different values that are all separated by a colon (`:`). The certificate ID is the last value in your CRN (e.g e20cb664efcbfa2c2f57801230d246a6)).
+5. Copy the certificate ID. The CRN contains different values that are all separated by a colon (`:`). The certificate ID is the last value in your CRN; for example: `e20cb664efcbfa2c2f57801230d246a6)`

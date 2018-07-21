@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-07-21"
 
 ---
 {:new_window: target="_blank"}
@@ -31,10 +31,11 @@ You can manage your certificates in the following ways:
 
 When you import a certificate and the corresponding private key into {{site.data.keyword.cloudcerts_short}}, the service uses an Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key. {{site.data.keyword.cloudcerts_short}} saves this unique encrypted key to use with your service instance.
 
-## Availability
+## Regions availability
 {: #availability}
 
 {{site.data.keyword.cloudcerts_short}} is available in the US-South region only.
+
 
 ## Integrations
 {: #integrations}
@@ -53,7 +54,7 @@ When you import a certificate and the corresponding private key into {{site.data
     <td>Security Advisor centralizes the insights of IBM Cloud services, including indication of expired and about-to-expire certificates in instances of Certificate Manager in your IBM Cloud account. [Learn more about Security Advisor](/docs/services/security-advisor/index.html#index)</td>
   </tr><tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix}}. [Learn more about {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+    <td>Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix}}. [Learn more about {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
     <p>To get the list of actions that generate an event, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-21"
+lastupdated: "2018-07-22"
 
 ---
 {:new_window: target="_blank"}
@@ -31,12 +31,6 @@ You can manage your certificates in the following ways:
 
 When you import a certificate and the corresponding private key into {{site.data.keyword.cloudcerts_short}}, the service uses an Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key. {{site.data.keyword.cloudcerts_short}} saves this unique encrypted key to use with your service instance.
 
-## Regions availability
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} is available in the US-South region only.
-
-
 ## Integrations
 {: #integrations}
 <table>
@@ -58,3 +52,9 @@ When you import a certificate and the corresponding private key into {{site.data
     <p>To get the list of actions that generate an event, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>
+
+## Regions availability
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} is available in the US-South region only.
+

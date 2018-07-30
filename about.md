@@ -26,7 +26,7 @@ You can manage your certificates in the following ways:
 * Find certificates that need replacing when new compliance or security requirements are issued
 * Set controls on who can access and manage your certificates
 
-![High-level service architecture diagram](high-level-architecture.png)
+![High-level service architecture diagram](images/high-level-architecture.png)
 <caption> Diagram 1. High-level service architecture.</caption>
 
 ## Private key security

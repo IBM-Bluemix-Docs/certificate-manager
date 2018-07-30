@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-22"
+lastupdated: "2018-07-30"
 
 ---
 {:new_window: target="_blank"}
@@ -25,6 +25,9 @@ You can manage your certificates in the following ways:
 * View the types of certificates across your deployments and ensure that they meet organization policies
 * Find certificates that need replacing when new compliance or security requirements are issued
 * Set controls on who can access and manage your certificates
+
+![High-level service architecture diagram](high-level-architecture.png)
+<caption> Diagram 1. High-level service architecture.</caption>
 
 ## Private key security
 {: #private-key-security}

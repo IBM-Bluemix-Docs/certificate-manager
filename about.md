@@ -37,7 +37,7 @@ When you import a certificate and the corresponding private key into {{site.data
 ## Integrations
 {: #integrations}
 <table>
-<caption> Table 1. IBM Cloud services that use Certificate Manager</caption>
+<caption> Table. IBM Cloud services that use Certificate Manager</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>

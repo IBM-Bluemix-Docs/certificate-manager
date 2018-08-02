@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-30"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -27,7 +27,7 @@ You can manage your certificates in the following ways:
 * Set controls on who can access and manage your certificates
 
 ![High-level service architecture diagram](images/high-level-architecture.png)
-<caption> Figure. High-level service architecture.</caption>
+<caption>High-level service architecture.</caption>
 
 ## Private key security
 {: #private-key-security}
@@ -37,7 +37,7 @@ When you import a certificate and the corresponding private key into {{site.data
 ## Integrations
 {: #integrations}
 <table>
-<caption> Table. IBM Cloud services that use Certificate Manager</caption>
+<caption>IBM Cloud services that use Certificate Manager</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>
@@ -56,7 +56,7 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
 </table>
 
-## Regions availability
+## Regions
 {: #availability}
 
 {{site.data.keyword.cloudcerts_short}} is available in the US-South region only.

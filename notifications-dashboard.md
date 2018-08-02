@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-01"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -49,9 +49,9 @@ You might want to use callback URL to post notification to the tools that you us
 The following sample code shows how you can create a GitHub issue for expiring certificates when a notification is sent. You can run this code in {{site.data.keyword.openwhisk}}, or use the code in a different environment.   
 {: shortdesc}
 
-To run this code in {{site.data.keyword.openwhisk}}:
+To run this code in {{site.data.keyword.openwhisk_short}}:
 
-1. Create an action in [{{site.data.keyword.openwhisk_short}}](/docs/openwhisk/index.html#getting-started).
+1. Create an action in [Cloud Functions](/docs/openwhisk/index.html#getting-started).
 2. Use the following code to automatically create a GitHub issue:
 
 ```

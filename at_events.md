@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-02"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 # {{site.data.keyword.cloudaccesstrailshort}} events  
 {: #at_events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix}}. 
+Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.Bluemix_notm}}. For more information, see [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). For example, when you import a certificate, an {{site.data.keyword.cloudaccesstrailshort}} event is generated.
@@ -31,14 +31,6 @@ The following table lists the API methods that generate an event when they are c
   <tr>
     <th>Action</th>
 	  <th>Description</th>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>Provision a {{site.data.keyword.cloudcerts_short}} instance.</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>Delete a {{site.data.keyword.cloudcerts_short}} instance.</td>
   </tr>
   <tr>
     <td>cloudcerts.certificate.import</td>
@@ -72,12 +64,39 @@ The following table lists the API methods that generate an event when they are c
     <td>cloudcerts.certificate.update</td>
 	  <td>Update a certificate, for example, change the description of a certificate.</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>List notifications channels.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>Create a notifications channel.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>Disable or enable a notifications channel.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>Update a notifications channel's endpoint.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>Delete a notifications channel.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>Test a notifications channel.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>A notification was sent to a notifications channel endpoint.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>The public key was requested.</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## Where to look for the events
 {: #ui}
@@ -86,11 +105,7 @@ The following table lists the API methods that generate an event when they are c
 
 {{site.data.keyword.cloudaccesstrailshort}} events are automatically forwarded to the {{site.data.keyword.cloudaccesstrailshort}} service in the same region where the {{site.data.keyword.cloudcerts_short}} service is provisioned.
 
-
 ## Additional information
 {: #info}
 
 The field *requestData_str* includes the human readable name of the certificate.
-
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -15,23 +15,23 @@ lastupdated: "2018-07-05"
 # Configuring notifications for expiring certificates
 {: #configuring-notifications-for-expiring-certificates}
 
-Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send notifications for certificates that are about to expire so that you can renew your certificates on time. 
+Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send notifications for certificates that are about to expire so that you can renew your certificates on time.
 {: shortdesc}
 
 **When do I get notified?** </br>
-Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_full}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates starting on the first day after your certificate expired. 
+Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_full}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates starting on the first day after your certificate expired.
 
-You must renew your certificate, upload this certificate to {{site.data.keyword.cloudcerts_full}}, and delete the expired certificate to stop notification from continuing to be sent. 
+You must renew your certificate, upload this certificate to {{site.data.keyword.cloudcerts_full}}, and delete the expired certificate to stop notification from continuing to be sent.
 
 **What are my options to configure notifications?** </br>
-You can send notifications to Slack by using a Slack webhook or use any callback URL that you like. 
+You can send notifications to Slack by using a Slack webhook or use any callback URL that you like.
 
 ## Setting up a Slack webhook
 {: #setup-callback}
 
-1. Sign up for [Slack](https://slack.com/) and set up your workspace. 
-2. Create a Slack channel where you want to post your notifications to. 
-3. [Set up a webhook](https://api.slack.com/incoming-webhooks) for the Slack channel. 
+1. Sign up for [Slack](https://slack.com/) and set up your workspace.
+2. Create a Slack channel where you want to post your notifications to.
+3. [Set up a webhook](https://api.slack.com/incoming-webhooks) for the Slack channel.
 
 ## Setting up a callback URL
 {: #callback}
@@ -39,20 +39,20 @@ You can send notifications to Slack by using a Slack webhook or use any callback
 You might want to use callback URL to post notification to the tools that you use daily to trigger the renewal process for your team. For example, you can send notifications to report to pager duty, automatically open up an issue in Github, or trigger renewal scripts.  
 {: shortdesc}
 
-**Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}: 
+**Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 * The endpoint must use the HTTPS protocol.
 * The endpoint must not require HTTP headers. This requirement includes authorization headers.
 
-### Using a callback URL to automatically open a GitHub issue 
+### Using a callback URL to automatically open a GitHub issue
 {: #sample}
 
-The following sample code shows how you can create a GitHub issue for expiring certificates when an {{site.data.keyword.cloudcerts_short}} notification is sent. You can run this code in {{site.data.keyword.openwhisk}}, or use the code in a different environment.   
+The following sample code shows how you can create a GitHub issue for expiring certificates when a notification is sent. You can run this code in {{site.data.keyword.openwhisk}}, or use the code in a different environment.   
 {: shortdesc}
 
-To run this code in {{site.data.keyword.openwhisk}}:
+To run this code in {{site.data.keyword.openwhisk_short}}:
 
-1. Create an [action in {{site.data.keyword.openwhisk}}](/docs/openwhisk/index.html#getting-started).
-2. Use the following code to automatically create a GitHub issue: 
+1. Create an action in [Cloud Functions](/docs/openwhisk/index.html#getting-started).
+2. Use the following code to automatically create a GitHub issue:
 
 ```
 
@@ -145,7 +145,7 @@ To run this code in {{site.data.keyword.openwhisk}}:
 
 ```
 {: codeblock}
-    
+
 For other REST API commands see the [API documentation](https://console.bluemix.net/apidocs/cloudcerts)
 {: tip}
 
@@ -158,14 +158,14 @@ After you create a Slack webhook or a callback URL, you add it to {{site.data.ke
 
 To add a notification channel:
 
-1. In the navigation on the service details page, click **Settings**. 
+1. In the navigation on the service details page, click **Settings**.
 2. Open the **Notifications** tab.
-3. Click **Add Notification Channel**. 
-4. Choose the type of notification channel that you want to use. 
+3. Click **Add Notification Channel**.
+4. Choose the type of notification channel that you want to use.
 5. Enter the webhook or callback URL where you want to send notifications to.
-6. Click **Save**. A summary of your configuration is displayed. 
+6. Click **Save**. A summary of your configuration is displayed.
 
-   Example output: 
+   Example output:
    <table>
    <caption> Information about the notification channel </caption>
    <thead>
@@ -195,10 +195,10 @@ To add a notification channel:
     </tr>
     </tbody>
     </table>
-   
-    When you save a Slack webhook, {{site.data.keyword.cloudcerts_short}} automatically sends a confirmation notification to the Slack channel that you configured. Check your Slack channel to verify that you received this notification. 
+
+    When you save a Slack webhook, {{site.data.keyword.cloudcerts_short}} automatically sends a confirmation notification to the Slack channel that you configured. Check your Slack channel to verify that you received this notification.
     {: tip}
-7. Optional: Repeat these steps to add more notification channels. 
+7. Optional: Repeat these steps to add more notification channels.
 
 ## Testing a notification channel
 {: #testing-channel}
@@ -206,31 +206,31 @@ To add a notification channel:
 You can test a notification channel to ensure that your notification channel is configured correctly.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](#adding-channel). 
+Before you begin, [configure a notification channel](#adding-channel).
 
-To test a notification channel: 
+To test a notification channel:
 
-1. In the navigation on the service details page, click **Settings**. 
+1. In the navigation on the service details page, click **Settings**.
 2. Find your notification channel and click **Test Connection**.
-3. Verify that you received a notification in the channel that you configured. 
+3. Verify that you received a notification in the channel that you configured.
 
 
 ## Updating a notification channel
 {: updating-channel}
 
-You can update your notification channel configuration, disable or enable notifications, or delete notification channels from {{site.data.keyword.cloudcerts_short}}. 
+You can update your notification channel configuration, disable or enable notifications, or delete notification channels from {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](#adding-channel). 
+Before you begin, [configure a notification channel](#adding-channel).
 
-1. In the navigation on the service details page, click **Settings**. 
-2. Select the **Notifications** tab. 
-3. Choose from the following options. 
-   - To disable or enable notifications for a channel, set the switch to **Disable** or **Enable**. 
+1. In the navigation on the service details page, click **Settings**.
+2. Select the **Notifications** tab.
+3. Choose from the following options.
+   - To disable or enable notifications for a channel, set the switch to **Disable** or **Enable**.
    - To update settings for a channel, select **Edit** from the actions menu.
-   - To delete a notification channel, select **Delete** from the actions menu. 
-   
-   
+   - To delete a notification channel, select **Delete** from the actions menu.
+
+
 ## Verifying the HTTP payload for a callback URL
 {: #verify-callback}
 

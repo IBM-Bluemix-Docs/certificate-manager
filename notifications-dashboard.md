@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-06"
 
 ---
 {:new_window: target="_blank"}
@@ -42,6 +42,35 @@ You might want to use callback URL to post notification to the tools that you us
 **Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 * The endpoint must use the HTTPS protocol.
 * The endpoint must not require HTTP headers. This requirement includes authorization headers.
+
+
+### Notification format
+{: #notification_format}
+
+The notification that is sent to your callback URL is a JSON document that is in the following format:
+
+```
+{ "data":"<JWT FORMAT STRING>" }
+```
+{: screen}
+
+After you decode and verify the payload, the content is a JSON string.
+
+```
+{
+    "instance_crn": "<INSTANCE_CRN>",
+    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
+    "expiry_date": <EXPIRY_DAY_TIMESTAMP>
+    "expiring_certificates":[
+          {
+             "cert_crn":"<CERTIFICATE_CRN>",
+             "domains":"<CERTIFICATE_DOMAIN>"
+          },
+          ...
+}
+```
+{: screen}
+
 
 ### Using a callback URL to automatically open a GitHub issue
 {: #sample}

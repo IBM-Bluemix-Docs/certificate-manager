@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-22"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -20,3 +20,4 @@ lastupdated: "2018-02-22"
 
 * <a href="https://www.ibm.com/blogs/bluemix/2017/12/introducing-ibm-cloud-certificate-manager-manage-ssltls-certificates-apps/" target="_blank">{{site.data.keyword.cloudcerts_short}} の紹介 – アプリの SSL/TLS 証明書の管理 <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/" target="_blank">{{site.data.keyword.containerlong_notm}} で {{site.data.keyword.cloudcerts_short}} を使用した、カスタム・ドメイン TLS 証明書のデプロイ <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>
+* <a href="https://www.ibm.com/blogs/bluemix/2018/06/certificate-manager-now-sends-notifications-certificates-expire/" target="_blank">{{site.data.keyword.cloudcerts_short}} は有効期限が切れる前に通知を送信するようになりました <img src="../../icons/launch-glyph.svg" alt="外部リンク・アイコン"></a>

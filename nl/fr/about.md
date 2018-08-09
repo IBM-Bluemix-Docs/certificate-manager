@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,8 +21,8 @@ Vous pouvez importer des certificats SSL que vous obtenez pour vos applications 
 
 Vous pouvez gérer vos certificats en procédant comme suit :
 
-* Surveillez les dates d'expiration de vos certificats afin de les renouveler à temps.
-* Affichez les types de certificats sur vos déploiements et assurez-vous qu'ils répondent aux règles de l'organisation.
+* Soyez averti avant l'expiration de vos certificats pour être sûr de pouvoir les renouveler à temps.
+* Affichez les types de certificats sur vos déploiements et assurez-vous qu'ils répondent aux politiques de l'organisation.
 * Recherchez les certificats que vous devez remplacer lorsque de nouvelles exigences de conformité ou de sécurité sont émises.
 * Définissez les contrôles qui déterminent qui peut accéder à et gérer vos certificats.
 
@@ -39,7 +39,7 @@ Lorsque vous importez un certificat et la clé privée correspondante dans {{sit
 ## Intégrations
 {: #integrations}
 <table>
-<caption> Tableau 1. Services IBM Cloud optimisant Certificate Manager</caption>
+<caption> Tableau 1. Services IBM Cloud utilisant Certificate Manager</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>
@@ -51,5 +51,9 @@ Lorsque vous importez un certificat et la clé privée correspondante dans {{sit
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>Security Advisor centralise les analyses des services IBM Cloud, notamment l'indication des certificats arrivés ou sur le point d'arriver à expiration dans des instances de Certificate Manager dans votre compte IBM Cloud. [En savoir plus sur Security Advisor](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>Utilisez le service {{site.data.keyword.cloudaccesstrailfull}} pour suivre comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long}} dans {{site.data.keyword.Bluemix}}. [En savoir plus sur {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+    <p>Pour obtenir une liste des actions qui génère un événement, voir [Evénements {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>

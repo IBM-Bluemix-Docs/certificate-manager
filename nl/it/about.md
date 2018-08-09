@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ Puoi importare i certificati SSL che ottieni per i tuoi servizi e applicazioni, 
 
 Puoi gestire i tuoi certificati nei seguenti modi:
 
-* Monitora le date di scadenza dei tuoi certificati per assicurarti di rinnovarli in tempo
+* Ricevi una notifica prima della scadenza dei certificati per assicurarti di rinnovarli in tempo
 * Visualizza i tipi di certificati nelle tue distribuzioni e assicurati che soddisfino le politiche dell'organizzazione
 * Trova i certificati che devono essere sostituiti quando vengono emessi nuovi requisiti di sicurezza o conformità
 * Configura i controlli su chi può accedere e gestire i tuoi certificati
@@ -51,5 +51,9 @@ Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyw
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>Security Advisor centralizza le informazioni approfondite dei servizi IBM Cloud, inclusa l'indicazione dei certificati scaduti o quasi scaduti nelle istanze del Gestore certificato nel tuo account IBM Cloud. [Ulteriori informazioni su Security Advisor](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tracciare il modo in cui gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.cloudcerts_long}} in {{site.data.keyword.Bluemix}}. [Ulteriori informazioni su {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+    <p>Per ottenere l'elenco delle azioni che generano un evento, vedi [Eventi di {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>

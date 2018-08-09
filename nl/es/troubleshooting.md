@@ -29,7 +29,6 @@ Puede obtener ayuda de las formas siguientes:
 
 También puede abrir una incidencia de soporte.
 
-
 Cuando utilice los foros para formular una pregunta, etiquete la pregunta de manera que la vea el equipo de desarrollo de {{site.data.keyword.cloudcerts_full}}.
 
 - Si tiene preguntas técnicas sobre el servicio, publique su pregunta en [Stack Overflow](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) y etiquete la pregunta con `ibm-cloud` e `ibm-certificate-manager`.  

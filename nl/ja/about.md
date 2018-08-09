@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ lastupdated: "2018-05-24"
 
 証明書は、以下の方法で管理できます。
 
-* 証明書の更新が予定どおりに行われるように、証明書の有効期限日付をモニターする
+* 証明書の有効期限が切れる前に通知を受け取り、期限前に更新するようにする
 * 複数のデプロイメントにわたって証明書のタイプを表示し、それらが組織のポリシーに一致していることを確認する
 * 新しいコンプライアンス要件またはセキュリティー要件が出されたときに置き換える必要がある証明書を見つける
 * 証明書のアクセスおよび管理を行えるユーザーについて制御を設定する
@@ -39,17 +39,21 @@ lastupdated: "2018-05-24"
 ## 統合
 {: #integrations}
 <table>
-<caption> 表 1. Certificate Manager を活用する IBM Cloud サービス</caption>
+<caption> 表 1. Certificate Manager を使用する IBM Cloud サービス</caption>
   <tr>
-    <th> サービス</th>
+    <th> サービス </th>
     <th> 説明 </th>
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Kubernetes クラスターのカスタム・ドメイン証明書を Certificate Manager に保管し、それを IBM Cloud CLI の [Kubernetes サービス・プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。[この統合の詳細はこちら](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)</td>
+    <td>Kubernetes クラスターのカスタム・ドメイン証明書を Certificate Manager に保管し、それを IBM Cloud CLI の [Kubernetes サービス・プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。 [この統合の詳細はこちら](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)</td>
   </tr>
   <tr>
     <td>IBM Cloud セキュリティー・アドバイザー</td>
-    <td>セキュリティー・アドバイザーは、IBM Cloud アカウントの Certificate Manager のインスタンスで、期限切れか期限切れ間近の証明書を表示するなど、IBM Cloud サービスによる洞察を一元化します。[セキュリティー・アドバイザーの詳細はこちら](/docs/services/security-advisor/index.html#index)</td>
+    <td>セキュリティー・アドバイザーは、IBM Cloud アカウントの Certificate Manager のインスタンスで、期限切れか期限切れ間近の証明書を表示するなど、IBM Cloud サービスによる洞察を一元化します。 [セキュリティー・アドバイザーの詳細はこちら](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。[{{site.data.keyword.cloudaccesstrailshort}} の詳細はこちら](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)
+    <p>イベントを生成するアクションのリストを取得するには、[{{site.data.keyword.cloudaccesstrailshort}} イベント](/docs/services/certificate-manager/at_events.html#at_events)を参照してください。</p></td>
   </tr>
 </table>

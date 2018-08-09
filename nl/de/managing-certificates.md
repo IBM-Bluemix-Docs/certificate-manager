@@ -1,7 +1,9 @@
 ---
+
 copyright:
   years: 2017, 2018
-lastupdated: "2017-12-21"
+lastupdated: "2018-05-28"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -52,7 +54,7 @@ Wenn Sie ein Zertifikat importiert haben, werden die folgenden Informationen in 
   </tr>
   <tr>
     <td>Beschreibung</td>
-    <td>Optional: Beschreibender Text für das Zertifikat. Maximal zulässige Länge: 1024 Zeichen. </td>
+    <td>Optional: Beschreibender Text für das Zertifikat. Maximal zulässige Länge: 1024 Zeichen.</td>
   </tr>
   <tr>
     <td>Domäne</td>

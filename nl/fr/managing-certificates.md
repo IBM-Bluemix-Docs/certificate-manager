@@ -1,7 +1,9 @@
 ---
+
 copyright:
   years: 2017, 2018
-lastupdated: "2017-12-21"
+lastupdated: "2018-05-28"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -52,7 +54,7 @@ Une fois que vous avez importé un certificat, les informations ci-après sont a
   </tr>
   <tr>
     <td>Description</td>
-    <td>Facultatif : texte descriptif relatif au certificat. Longueur maximale de 1024 caractères. </td>
+    <td>Facultatif : texte descriptif relatif au certificat. Longueur maximale de 1024 caractères.</td>
   </tr>
   <tr>
     <td>Domaine</td>

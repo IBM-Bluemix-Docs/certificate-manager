@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ Puede importar certificados SSL que obtenga para las apps y los servicios, almac
 
 Puede gestionar los certificados de las formas siguientes:
 
-* Supervisar las fechas de caducidad de los certificados para asegurarse de que los renueva a tiempo
+* Recibir notificaciones de caducidad de certificados para poder renovarlos a tiempo
 * Ver los tipos de certificados en los despliegues y asegurarse de que cumplan las políticas de organización
 * Buscar certificados que necesiten sustitución cuando se emitan nuevos requisitos de conformidad o de seguridad
 * Establecer controles sobre quién puede acceder y gestionar sus certificados
@@ -51,5 +51,9 @@ Al importar un certificado y la correspondiente clave privada en {{site.data.key
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>Security Advisor centraliza la información de valor de los servicios de IBM Cloud, incluida la indicación de certificados caducados o a punto de caducar en instancias de Certificate Manager de su cuenta de IBM Cloud. [Más información sobre Security Advisor](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>El servicio {{site.data.keyword.cloudaccesstrailfull}} permite rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long}} en {{site.data.keyword.Bluemix}}. [Aprenda más sobre {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+    <p>Consulte [Sucesos de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events) para obtener una lista de las acciones que generan un suceso.</p></td>
   </tr>
 </table>

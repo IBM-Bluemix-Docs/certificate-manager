@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -23,7 +23,7 @@ uma visualização central dos certificados que você está usando.
 
 É possível gerenciar seus certificados das maneiras a seguir:
 
-* Monitore as datas de expiração dos seus certificados para garantir que você os renove a tempo
+* Receba uma notificação antes que seus certificados expirem para assegurar que você os renove a tempo
 * Visualize os tipos de certificados em suas implementações e garanta que eles atendam às políticas da organização
 * Localize certificados que precisam de substituição quando novos requisitos de conformidade ou segurança são emitidos
 * Configure controles sobre quem pode acessar e gerenciar seus certificados
@@ -42,7 +42,7 @@ O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EU
 ## Integrações
 {: #integrations}
 <table>
-<caption> Tabela 1. Serviços IBM Cloud que usam o Certificate Manager</caption>
+<caption> Tabela 1. Serviços do IBM Cloud que usam o Gerenciador de certificados</caption>
   <tr>
     <th> Service </th>
     <th> Descrição </th>
@@ -54,5 +54,11 @@ O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EU
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>O Security Advisor centraliza os insights dos serviços IBM Cloud, incluindo a indicação de certificados expirados e prestes a expirar em instâncias do Certificate Manager em sua conta do IBM Cloud. [Saiba mais sobre o Security Advisor](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e os aplicativos interagem
+com o serviço {{site.data.keyword.cloudcerts_long}} no {{site.data.keyword.Bluemix}}. [ Saiba mais sobre o  {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+    <p>Para obter a lista de ações que geram um evento, consulte
+Eventos do [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>

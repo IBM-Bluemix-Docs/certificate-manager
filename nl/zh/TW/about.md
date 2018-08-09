@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ lastupdated: "2018-05-24"
 
 您可以使用下列方式管理憑證：
 
-* 監視憑證的到期日，確定及時進行更新
+* 在憑證到期之前收到通知，以確保您準時更新
 * 檢視部署中的憑證類型，並確定它們符合組織原則
 * 尋找在發出新相符性或安全需求時需要取代的憑證
 * 設定您可存取及管理憑證的控制項
@@ -39,7 +39,7 @@ lastupdated: "2018-05-24"
 ## 整合
 {: #integrations}
 <table>
-<caption> 表 1. 利用 Certificate Manager 的 IBM Cloud 服務</caption>
+<caption> 表 1. 使用 Certificate Manager 的 IBM Cloud 服務</caption>
   <tr>
     <th> 服務</th>
     <th> 說明</th>
@@ -51,5 +51,9 @@ lastupdated: "2018-05-24"
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>Security Advisor 將 IBM Cloud 服務的見解集中化，包括指出您 IBM Cloud 帳戶中，Certificate Manager 實例裡已過期和即將過期的憑證。[進一步瞭解 Security Advisor](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>使用 {{site.data.keyword.cloudaccesstrailfull}} 服務可追蹤使用者及應用程式與 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.cloudcerts_long}} 服務互動的情形。[進一步瞭解 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
+    <p>若要取得產生事件的動作清單，請參閱 [{{site.data.keyword.cloudaccesstrailshort}} 事件](/docs/services/certificate-manager/at_events.html#at_events)。</p></td>
   </tr>
 </table>

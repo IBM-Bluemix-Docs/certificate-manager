@@ -1,7 +1,9 @@
 ---
+
 copyright:
   years: 2017, 2018
-lastupdated: "2017-12-21"
+lastupdated: "2018-05-28"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -41,14 +43,14 @@ Para importar un certificado, pulse **Importar certificado** y proporcione los d
 Tras importar un certificado, se mostrará la información siguiente en la tabla Certificados. Para ver más información del certificado, puede seleccionar el certificado en la fila de tabla.
 
 <table>
-<caption> Tabla 1. Información sobre el certificado importado</caption>
+<caption> Tabla 1. Información sobre el certificado importado </caption>
   <tr>
     <th> Componente </th>
     <th> Descripción </th>
   </tr>
   <tr>
     <td>Nombre</td>
-    <td>Opcional: Un nombre de visualización identificativo. Longitud máxima de 256 caracteres.</td>
+    <td>Opcional: Un nombre de visualización identificativo. Longitud máxima de 256 caracteres. </td>
   </tr>
   <tr>
     <td>Descripción</td>

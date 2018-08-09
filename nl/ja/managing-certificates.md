@@ -1,7 +1,9 @@
 ---
+
 copyright:
   years: 2017, 2018
-lastupdated: "2017-12-21"
+lastupdated: "2018-05-28"
+
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -12,7 +14,7 @@ lastupdated: "2017-12-21"
 # ダッシュボードからの証明書の管理
 {: #managing-certificates-from-the-dashboard}
 
-{{site.data.keyword.cloudcerts_full}} サービス・ダッシュボードを使用して、サード・パーティー発行者から入手して {{site.data.keyword.IBM_notm}} Cloud ベースのアプリまたはサービスで使用する証明書を管理できます。証明書と鍵は、インポート後にサービスによって暗号化されて保管されます。
+{{site.data.keyword.cloudcerts_full}} サービス・ダッシュボードを使用して、サード・パーティー発行者から入手して {{site.data.keyword.IBM_notm}} Cloud ベースのアプリまたはサービスで使用する証明書を管理できます。 証明書と鍵は、インポート後にサービスによって暗号化されて保管されます。
 {: shortdesc}
 
 ## 証明書のインポート
@@ -48,11 +50,11 @@ lastupdated: "2017-12-21"
   </tr>
   <tr>
     <td>名前</td>
-    <td>オプション: 分かりやすい表示名。最大長は 256 文字です。</td>
+    <td>オプション: 分かりやすい表示名。 最大長は 256 文字です。 </td>
   </tr>
   <tr>
     <td>説明</td>
-    <td>オプション: 証明書の説明テキスト。最大長は 1024 文字です。</td>
+    <td>オプション: 証明書の説明テキスト。 最大長は 1024 文字です。</td>
   </tr>
   <tr>
     <td>ドメイン</td>

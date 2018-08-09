@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ lastupdated: "2018-05-24"
 
 您可以通过以下方式来管理您的证书：
 
-* 监视证书的到期日期，以确保准时更新证书
+* 在证书到期之前收到通知，以确保您可按时更新
 * 跨部署查看证书的类型并确保它们满足组织策略
 * 发出新合规性或安全性需求时，查找需要替换的证书
 * 控制谁可以访问和管理证书
@@ -39,7 +39,7 @@ lastupdated: "2018-05-24"
 ## 集成
 {: #integrations}
 <table>
-<caption> 表 1. 利用 Certificate Manager 的 IBM Cloud 服务</caption>
+<caption> 表 1. 使用 Certificate Manager 的 IBM Cloud 服务</caption>
   <tr>
     <th> 服务</th>
     <th> 描述</th>
@@ -51,5 +51,9 @@ lastupdated: "2018-05-24"
   <tr>
     <td>IBM Cloud 安全顾问程序</td>
     <td>安全顾问程序集中 IBM Cloud 服务的洞察，包括 IBM Cloud 帐户中 Certificate Manager 实例内已到期和即将到期的证书的指示。[了解有关安全顾问程序的更多信息](/docs/services/security-advisor/index.html#index)</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix}} 中的 {{site.data.keyword.cloudcerts_long}} 服务进行交互。[了解有关 {{site.data.keyword.cloudaccesstrailshort}} 的更多信息](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
+    <p>要获取用于生成事件的操作的列表，请参阅 [{{site.data.keyword.cloudaccesstrailshort}} 事件](/docs/services/certificate-manager/at_events.html#at_events)。</p></td>
   </tr>
 </table>

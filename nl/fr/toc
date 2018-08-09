@@ -9,17 +9,18 @@ Certificate Manager (bêta)
     {: .navgroup id="learn"}
     index.md
     about.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     managing-certificates.md
-    rest-api.md
+    notifications-dashboard.md
     access-management.md
-    monitoring-activities.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API REST : Sud des Etats-Unis](https://us-south.certificate-manager.bluemix.net/docs)
+    [Documentation d'API](https://console.bluemix.net/apidocs/cloudcerts)
+    at_events.md
     rellinks.md
     {: .navgroup-end}
 

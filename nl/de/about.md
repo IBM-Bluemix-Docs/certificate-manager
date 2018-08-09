@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ Sie können SSL-Zertifikate, die Sie von Ihren Apps und Services empfangen, impo
 
 Sie können Ihre Zertifikate auf folgende Art und Weise verwalten:
 
-* Ablaufdaten Ihrer Zertifikate überwachen, um sicherzustellen, dass Sie sie rechtzeitig verlängern
+* Benachrichtigung vor dem Ablauf von Zertifikaten erhalten und so eine rechtzeitige Verlängerung sicherstellen
 * Zertifikatstypen über verschiedene Bereitstellungen hinweg anzeigen und die Einhaltung der Richtlinien der Organisation sicherstellen
 * Zertifikate suchen, die ersetzt werden müssen, wenn neue Konformitäts- und Sicherheitsanforderungen in Kraft treten
 * Mechanismen einrichten, die steuern, wer auf Ihre Zertifikate zugreifen und wer sie verwalten kann
@@ -51,5 +51,9 @@ Wenn Sie ein Zertifikat und den entsprechenden privaten Schlüssel in {{site.dat
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>Security Advisor fasst die Informationen der IBM Cloud-Services, einschließlich der Meldungen zu abgelaufenen oder demnächst ablaufenden Zertifikaten in Certificate Manager-Instanzen, in Ihrem IBM Cloud-Konto zusammen. [Weitere Informationen zu Security Advisor finden Sie hier](/docs/services/security-advisor/index.html#index).</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktionen von Benutzern und Anwendungen mit dem {{site.data.keyword.cloudcerts_long}}-Service in {{site.data.keyword.Bluemix}} verfolgen. [Weitere Informationen zu {{site.data.keyword.cloudaccesstrailshort}} finden Sie hier](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+    <p>Eine Liste der Aktionen, die ein Ereignis generieren, finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>

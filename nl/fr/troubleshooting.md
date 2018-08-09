@@ -33,7 +33,7 @@ Lorsque vous posez une question sur un forum, marquez votre question à l'aide d
 étiquette pour qu'elle soit vue par l'équipe de développement d'{{site.data.keyword.cloudcerts_full}}.
 
 - Si vous avez des questions d'ordre technique sur le service, publiez-les sur[Stack Overflow](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) en y ajoutant les balises `ibm-cloud` et `ibm-certificate-manager`.  
-- Pour toute question concernant le service et pour obtenir des instructions permettant de commencer, publiez vos demandes sur [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Ajoutez les balises `ibm-certificate-manager` et `ibm-cloud`. 
+- Pour toute question concernant le service et pour obtenir des instructions permettant de commencer, publiez vos demandes sur [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Ajoutez les balises `ibm-certificate-manager` et `ibm-cloud`.
 
 Pour plus d'informations sur l'utilisation des forums, voir [Comment obtenir de l'aide](https://console.bluemix.net/docs/support/index.html#getting-help).
 

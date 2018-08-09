@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-02-22"
+lastupdated: "2018-07-05"
 
 ---
 
@@ -20,3 +20,4 @@ lastupdated: "2018-02-22"
 
 * <a href="https://www.ibm.com/blogs/bluemix/2017/12/introducing-ibm-cloud-certificate-manager-manage-ssltls-certificates-apps/" target="_blank">Introdução ao {{site.data.keyword.cloudcerts_short}} – Gerenciar certificados SSL/TLS para seus apps <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/" target="_blank">Usar o {{site.data.keyword.cloudcerts_short}} com o {{site.data.keyword.containerlong_notm}} para implementar certificados TLS de domínio customizado <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>
+* Agora, o <a href="https://www.ibm.com/blogs/bluemix/2018/06/certificate-manager-now-sends-notifications-certificates-expire/" target="_blank">{{site.data.keyword.cloudcerts_short}} envia as notificações antes da expiração de seus certificados <img src="../../icons/launch-glyph.svg" alt="Ícone de link externo"></a>

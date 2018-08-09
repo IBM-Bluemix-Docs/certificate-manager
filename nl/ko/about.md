@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-06-21"
 
 ---
 {:new_window: target="_blank"}
@@ -21,7 +21,7 @@ lastupdated: "2018-05-24"
 
 다음과 같은 방법으로 인증서를 관리할 수 있습니다.
 
-* 인증서의 만기 날짜를 모니터하여 제시간에 인증서를 갱신하는지 확인합니다.
+* 제시간에 인증서를 갱신하는지 확인하도록 인증서가 만료되기 전에 알림을 받습니다.
 * 배치에서 인증서의 유형을 보고 인증서가 조직 정책을 충족하는지 확인합니다.
 * 새로운 준수 또는 보안 요구사항이 발행될 때 대체해야 하는 인증서를 찾습니다.
 * 인증서에 액세스하고 인증서를 관리할 수 있는 사용자에 대한 제어를 설정합니다.
@@ -39,7 +39,7 @@ lastupdated: "2018-05-24"
 ## 통합
 {: #integrations}
 <table>
-<caption> 표 1. Certificate Manager를 활용하는 IBM Cloud 서비스</caption>
+<caption> 표 1. Certificate Manager를 사용하는 IBM Cloud 서비스</caption>
   <tr>
     <th> 서비스 </th>
     <th> 설명 </th>
@@ -51,5 +51,9 @@ lastupdated: "2018-05-24"
   <tr>
     <td>IBM Cloud Security Advisor</td>
     <td>Security Advisor는 IBM Cloud 계정의 Certificate Manager 인스턴스에 만료되거나 만료 예정인 인증서 표시를 포함한 IBM Cloud 서비스의 인사이트를 중앙에서 관리합니다. [Security Advisor에 대해 자세히 보십시오](/docs/services/security-advisor/index.html#index).</td>
+  </tr><tr>
+    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
+    <td>{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 {{site.data.keyword.Bluemix}}에서 사용자 및 애플리케이션이 {{site.data.keyword.cloudcerts_long}} 서비스와 상호 작용하는 방식을 추적하십시오. [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)에 대해 자세히 알아보십시오.
+    <p>이벤트를 생성하는 조치의 목록을 가져오려면 [{{site.data.keyword.cloudaccesstrailshort}} 이벤트](/docs/services/certificate-manager/at_events.html#at_events)를 참조하십시오.</p></td>
   </tr>
 </table>

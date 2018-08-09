@@ -1,4 +1,14 @@
-# 面對客戶的憑證管理員文件的原始檔
+---
+
+copyright:
+  years: 2018
+lastupdated: "2018-07-19"
+
+---
+
+
+# 面對客戶的 Certificate Manager 文件的原始檔
+
 
 面對客戶的文件：https://console.bluemix.net/docs/services/certificate-manager/index.html
 

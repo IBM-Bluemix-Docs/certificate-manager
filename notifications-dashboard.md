@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-06"
+lastupdated: "2018-08-15"
 
 ---
 {:new_window: target="_blank"}
@@ -80,7 +80,7 @@ The following sample code shows how you can create a GitHub issue for expiring c
 
 To run this code in {{site.data.keyword.openwhisk_short}}:
 
-1. Create an action in [Cloud Functions](/docs/openwhisk/index.html#getting-started).
+1. Create an action in [Cloud Functions](/docs/openwhisk/index.html#index).
 2. Use the following code to automatically create a GitHub issue:
 
 ```

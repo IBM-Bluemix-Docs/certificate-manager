@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -37,7 +37,7 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Import a certificate that is issued by a third-party certificate authority.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificates.list</td>
 	  <td>Download a certificate.</td>
   </tr>
   <tr>
@@ -45,7 +45,7 @@ The following table lists the API methods that generate an event when they are c
 	  <td>List certificates.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.read</td>
+    <td>cloudcerts.certificates-metadata.list</td>
 	  <td>List certificates metadata. Show details of a certificate.</td>
   </tr>
   <tr>
@@ -65,11 +65,11 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Update a certificate, for example, change the description of a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels.list</td>
+    <td>cloudcerts.notifications-channels.list</td>
 	  <td>List notifications channels.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.create</td>
+    <td>cloudcerts.notifications-channel.create</td>
 	  <td>Create a notifications channel.</td>
   </tr>
   <tr>
@@ -77,15 +77,15 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Disable or enable a notifications channel.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.update</td>
+    <td>cloudcerts.notifications-channel.update</td>
 	  <td>Update a notifications channel's endpoint.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.delete</td>
+    <td>cloudcerts.notifications-channel.delete</td>
 	  <td>Delete a notifications channel.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.test</td>
+    <td>cloudcerts.notifications-channel.test</td>
 	  <td>Test a notifications channel.</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ The following table lists the API methods that generate an event when they are c
 	  <td>A notification was sent to a notifications channel endpoint.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels-publickey.read</td>
+    <td>cloudcerts.notifications.publickey</td>
 	  <td>The public key was requested.</td>
   </tr>
 </table>

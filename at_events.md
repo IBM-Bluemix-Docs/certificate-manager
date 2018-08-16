@@ -37,11 +37,11 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Import a certificate that is issued by a third-party certificate authority.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificate.read</td>
 	  <td>Download a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.read</td>
+    <td>cloudcerts.certificates.list</td>
 	  <td>List certificates.</td>
   </tr>
   <tr>

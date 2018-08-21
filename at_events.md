@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-20"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -61,8 +61,8 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Delete a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>Update a certificate, for example, change the description of a certificate.</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>Update certificate metadata, for example, change the description of a certificate.</td>
   </tr>
   <tr>
     <td>cloudcerts.notification-channels.list</td>

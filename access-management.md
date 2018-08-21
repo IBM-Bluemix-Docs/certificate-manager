@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ You can use platform access roles to enable users to complete tasks on platform 
     <td> Administrator, Editor </td>
   </tr>
 </table>
-
-Platform roles also give access to certain actions on certificates within instances. These actions are deprecated.
 
 
 ## Service access roles

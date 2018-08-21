@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # About Certificate Manager
 {: #about-certificate-manager}
@@ -58,6 +63,5 @@ When you import a certificate and the corresponding private key into {{site.data
 
 ## Regions
 {: #availability}
-
-{{site.data.keyword.cloudcerts_short}} is available in the US-South region only.
+{{site.data.keyword.cloudcerts_short}} is available in the US-South and United Kingdom regions.
 

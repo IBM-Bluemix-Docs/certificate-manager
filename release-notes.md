@@ -20,19 +20,7 @@ lastupdated: "2018-08-23"
 
 The following new features and changes to the service are available.
 
-<!hidden>
-### September 1st, 2018
-{: 1September2018}
 
-- **IBM Cloud Certificate Manager is now a GA service!**  
-  Starting today the Certificate Manager service is Generally Available in IBM Cloud.
-
-### xxxx, 2018
-{: xxxx}
-
-- **Certificate name is now mandatory**  
-  Previously a certificate's name was optional during certificate import. It is now a mandatory value to supply.
-</hidden>
 
 ### August 22nd, 2018
 {: 22August2018}

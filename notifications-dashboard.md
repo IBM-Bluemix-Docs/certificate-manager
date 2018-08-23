@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-08-23"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ You can send notifications to Slack by using a Slack webhook or use any callback
 ## Setting up a callback URL
 {: #callback}
 
-You might want to use callback URL to post notification to the tools that you use daily to trigger the renewal process for your team. For example, you can send notifications to report to pager duty, automatically open up an issue in Github, or trigger renewal scripts.  
+You might want to use callback URL to post notification to the tools that you use daily to trigger the renewal process for your team. For example, you can send notifications to report to PagerDuty, automatically open up an issue in GitHub, or trigger renewal scripts.  
 {: shortdesc}
 
 **Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:

@@ -1,7 +1,7 @@
 
 ---
 copyright:
-  years: 2018,
+  years: 2018
 lastupdated: "2018-08-23"
 
 ---
@@ -18,33 +18,33 @@ lastupdated: "2018-08-23"
 # Release notes
 {: #release-notes}
 
-The following new features and changes to the service are available.
+The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
 
 
-### August 22nd, 2018
+## 22 August 2018
 {: 22August2018}
 
-- **Live in London**  
-  IBM Cloud Certificate Manager is now available in the United Kingdom region!
+- **Live in the United Kingdom**  
+  {{site.data.keyword.cloudcerts_long}} Beta is available in the United Kingdom region (UK South).
 
-### August 15th, 2018
+## 15 August 2018
 {: 15August2018}
 
-- **Deprecated v1 APIs now removed**  
-  v1 APIs are no longer available. If you haven't yet - please update. [Review the API documentation](https://console.bluemix.net/apidocs/).
+- **Remove deprecated v1 APIs**  
+  Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. [Review the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/).
 
 - **Platform roles replaced with Service roles**  
-  Control access to Certificate Manager instances using Service roles. Learn more about access management](access-management.html).
+  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](access-management.html).
 
-### July 12th, 2018
+## 12 July 2018
 {: 12July2018}
 
 - **Callback notifications**  
-  Introducing Callback support for notifications, so you could be either notified or act upon expiring certificates, such as opening GitHub issues. [Learn more about notifications](notifications-dashboard.html).
+  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](notifications-dashboard.html).
 
-### June 12th, 2018
+## 12 June 2018
 {: 12June2018}
 
 - **Slack notifications**  
-  Introducing Slack notifications so you'll never miss an expiring certificate. [Learn more about notifications](notifications-dashboard.html).
+  Added Slack notifications so that you'll never miss an expiring certificate. [Learn more about notifications](notifications-dashboard.html).

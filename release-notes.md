@@ -34,6 +34,9 @@ The following new features and changes to the service are available.
 - **Deprecated v1 APIs now removed**  
   v1 APIs are no longer available. If you haven't yet - please update. [Review the API documentation](https://console.bluemix.net/apidocs/).
 
+- **Platform roles replaced with Service roles**  
+  Control access to Certificate Manager instances using Service roles. Learn more about access management](access-management.html).
+
 ### July 12th, 2018
 {: 12July2018}
 

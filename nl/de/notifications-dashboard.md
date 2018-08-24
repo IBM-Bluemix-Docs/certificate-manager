@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-08-15"
 
 ---
 {:new_window: target="_blank"}
@@ -19,19 +19,19 @@ Zertifikate sind normalerweise nur für einen bestimmten Zeitraum gültig. Wenn 
 {: shortdesc}
 
 **Wann werde ich benachrichtigt?** </br>
-Abhängig vom Ablaufdatum des Zertifikats, das Sie in {{site.data.keyword.cloudcerts_full}} hochgeladen haben, werden Sie 90, 60, 30 und 10 Tage sowie 1 Tag vor dem Ablaufen des Zertifikats benachrichtigt. Darüber hinaus erhalten Sie tägliche Benachrichtigungen zu abgelaufenen Zertifikaten, beginnend mit dem ersten Tag nach dem Ablaufen des Zertifikats. 
+Abhängig vom Ablaufdatum des Zertifikats, das Sie in {{site.data.keyword.cloudcerts_full}} hochgeladen haben, werden Sie 90, 60, 30 und 10 Tage sowie 1 Tag vor dem Ablaufen des Zertifikats benachrichtigt. Darüber hinaus erhalten Sie tägliche Benachrichtigungen zu abgelaufenen Zertifikaten, beginnend mit dem ersten Tag nach dem Ablaufen des Zertifikats.
 
-Sie müssen das Zertifikat verlängern, dieses Zertifikat in {{site.data.keyword.cloudcerts_full}} hochladen und das abgelaufene Zertifikat löschen, damit keine weiteren Benachrichtigungen gesendet werden. 
+Sie müssen das Zertifikat verlängern, dieses Zertifikat in {{site.data.keyword.cloudcerts_full}} hochladen und das abgelaufene Zertifikat löschen, damit keine weiteren Benachrichtigungen gesendet werden.
 
 **Welche Optionen zur Konfiguration der Benachrichtigungen stehen zur Verfügung?** </br>
-Sie können Benachrichtigung an Slack senden, indem Sie einen Slack-Webhook verwenden, oder Sie können eine beliebige Callback-URL verwenden. 
+Sie können Benachrichtigung an Slack senden, indem Sie einen Slack-Webhook verwenden, oder Sie können eine beliebige Callback-URL verwenden.
 
 ## Slack-Webhook einrichten
 {: #setup-callback}
 
-1. Melden Sie sich bei [Slack](https://slack.com/) an und richten Sie einen Arbeitsbereich ein. 
-2. Erstellen Sie einen Slack-Kanal, an den Ihre Benachrichtigungen gesendet werden sollen. 
-3. Richten Sie einen [Webhook](https://api.slack.com/incoming-webhooks) für den Slack-Kanal ein. 
+1. Melden Sie sich bei [Slack](https://slack.com/) an und richten Sie einen Arbeitsbereich ein.
+2. Erstellen Sie einen Slack-Kanal, an den Ihre Benachrichtigungen gesendet werden sollen.
+3. Richten Sie einen [Webhook](https://api.slack.com/incoming-webhooks) für den Slack-Kanal ein.
 
 ## Callback-URL einrichten
 {: #callback}
@@ -39,20 +39,49 @@ Sie können Benachrichtigung an Slack senden, indem Sie einen Slack-Webhook verw
 Sie können eine Callback-URL verwenden, um Benachrichtigungen an täglich genutzte Tools zu senden und so den Verlängerungsprozess für das Team auszulösen. So können Sie zum Beispiel Benachrichtigungen senden, um Berichte für PagerDuty zu erstellen, automatisch eine Problemmeldung in GitHub zu öffnen oder Verlängerungsscripts auszulösen.  
 {: shortdesc}
 
-**Wichtig:** Der Endpunkt der Callback-URL muss die folgenden Anforderungen erfüllen, damit er in {{site.data.keyword.cloudcerts_short}} verwendet werden kann: 
+**Wichtig:** Der Endpunkt der Callback-URL muss die folgenden Anforderungen erfüllen, damit er in {{site.data.keyword.cloudcerts_short}} verwendet werden kann:
 * Der Endpunkt muss das HTTPS-Protokoll verwenden.
 * Für den Endpunkt dürfen keine HTTP-Header erforderlich sein. Diese Anforderung schließt Berechtigungsheader ein.
 
-### Callback-URL verwenden, um automatisch eine GitHub-Problemmeldung zu öffnen 
+
+### Benachrichtigungsformat
+{: #notification_format}
+
+Bei der Benachrichtigung, die an Ihre Callback-URL gesendet wird, handelt es sich um ein JSON-Dokument im folgenden Format:
+
+```
+{ "data":"<JWT FORMAT STRING>" }
+```
+{: screen}
+
+Nach dem Decodieren und Verifizieren der Nutzdaten ist der Inhalt eine JSON-Zeichenfolge.
+
+```
+{
+    "instance_crn": "<INSTANCE_CRN>",
+    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
+    "expiry_date": <EXPIRY_DAY_TIMESTAMP>
+    "expiring_certificates":[
+          {
+             "cert_crn":"<CERTIFICATE_CRN>",
+             "domains":"<CERTIFICATE_DOMAIN>"
+          },
+          ...
+}
+```
+{: screen}
+
+
+### Callback-URL verwenden, um automatisch eine GitHub-Problemmeldung zu öffnen
 {: #sample}
 
-Der folgende Beispielcode veranschaulicht, wie eine GitHub-Problemmeldung für ablaufende Zertifikate beim Senden einer {{site.data.keyword.cloudcerts_short}}-Benachrichtigung erstellt wird. Sie können diesen Code in {{site.data.keyword.openwhisk}} ausführen oder in einer anderen Umgebung verwenden.   
+Der folgende Beispielcode veranschaulicht, wie eine GitHub-Problemmeldung für ablaufende Zertifikate beim Senden einer Benachrichtigung erstellt wird. Sie können diesen Code in {{site.data.keyword.openwhisk}} ausführen oder in einer anderen Umgebung verwenden.   
 {: shortdesc}
 
-Gehen Sie wie folgt vor, um diesen Code in {{site.data.keyword.openwhisk}} auszuführen:
+Gehen Sie wie folgt vor, um diesen Code in {{site.data.keyword.openwhisk_short}} auszuführen:
 
-1. Erstellen Sie eine [Aktion in {{site.data.keyword.openwhisk}}](/docs/openwhisk/index.html#getting-started).
-2. Verwenden Sie den folgenden Code, um automatisch eine GitHub-Problemmeldung zu erstellen: 
+1. Erstellen Sie eine Aktion in [Cloud Functions](/docs/openwhisk/index.html#index).
+2. Verwenden Sie den folgenden Code, um automatisch eine GitHub-Problemmeldung zu erstellen:
 
 ```
 
@@ -145,7 +174,7 @@ Gehen Sie wie folgt vor, um diesen Code in {{site.data.keyword.openwhisk}} auszu
 
 ```
 {: codeblock}
-    
+
 Informationen zu anderen REST-API-Befehlen finden Sie in der [API-Dokumentation](https://console.bluemix.net/apidocs/cloudcerts).
 {: tip}
 
@@ -158,14 +187,14 @@ Nach dem Erstellen eines Slack-Webhooks oder einer Callback-URL fügen Sie diese
 
 Gehen Sie wie folgt vor, um einen Benachrichtigungskanal hinzuzufügen:
 
-1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**. 
+1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**.
 2. Öffnen Sie die Registerkarte **Benachrichtigungen**.
-3. Klicken Sie auf **Benachrichtigungskanal hinzufügen**. 
-4. Wählen Sie den Benachrichtigungskanaltyp aus, der verwendet werden soll. 
+3. Klicken Sie auf **Benachrichtigungskanal hinzufügen**.
+4. Wählen Sie den Benachrichtigungskanaltyp aus, der verwendet werden soll.
 5. Geben Sie den Webhook oder die Callback-URL ein, an den bzw. die Benachrichtigungen gesendet werden sollen.
-6. Klicken Sie auf **Speichern**. Eine Zusammenfassung Ihrer Konfiguration wird angezeigt. 
+6. Klicken Sie auf **Speichern**. Eine Zusammenfassung Ihrer Konfiguration wird angezeigt.
 
-   Beispielausgabe: 
+   Beispielausgabe:
    <table>
    <caption> Informationen zum Benachrichtigungskanal </caption>
    <thead>
@@ -195,10 +224,10 @@ Gehen Sie wie folgt vor, um einen Benachrichtigungskanal hinzuzufügen:
     </tr>
     </tbody>
     </table>
-   
+
     Wenn Sie einen Slack-Webhook speichern, sendet {{site.data.keyword.cloudcerts_short}} automatisch eine Bestätigungsbenachrichtigung an den konfigurierten Slack-Kanal. Überprüfen Sie den Slack-Kanal, um sicherzustellen, dass Sie diese Benachrichtigung erhalten haben.
     {: tip}
-7. Optional: Wiederholen Sie diese Schritte, um weitere Benachrichtigungskanäle hinzuzufügen. 
+7. Optional: Wiederholen Sie diese Schritte, um weitere Benachrichtigungskanäle hinzuzufügen.
 
 ## Benachrichtigungskanal testen
 {: #testing-channel}
@@ -206,13 +235,13 @@ Gehen Sie wie folgt vor, um einen Benachrichtigungskanal hinzuzufügen:
 Sie können einen Benachrichtigungskanal testen, um sicherzustellen, dass er korrekt konfiguriert ist.
 {: shortdesc}
 
-Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](#adding-channel). 
+Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](#adding-channel).
 
-Gehen Sie wie folgt vor, um einen Benachrichtigungskanal zu testen: 
+Gehen Sie wie folgt vor, um einen Benachrichtigungskanal zu testen:
 
-1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**. 
+1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**.
 2. Suchen Sie Ihren Benachrichtigungskanal und klicken Sie auf **Verbindung testen**.
-3. Vergewissern Sie sich, dass Sie im konfigurierten Kanal eine Benachrichtigung erhalten haben. 
+3. Vergewissern Sie sich, dass Sie im konfigurierten Kanal eine Benachrichtigung erhalten haben.
 
 
 ## Benachrichtigungskanal aktualisieren
@@ -221,16 +250,16 @@ Gehen Sie wie folgt vor, um einen Benachrichtigungskanal zu testen:
 Sie können die Benachrichtigungskanalkonfiguration aktualisieren, Benachrichtigungen aktivieren oder inaktivieren oder Benachrichtigungskanäle aus {{site.data.keyword.cloudcerts_short}} löschen.
 {: shortdesc}
 
-Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](#adding-channel). 
+Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](#adding-channel).
 
-1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**. 
-2. Wählen Sie die Registerkarte **Benachrichtigungen** aus. 
-3. Wählen Sie eine der folgenden Optionen aus. 
-   - Zum Inaktivieren oder Aktivieren von Benachrichtigungen für einen Kanal legen Sie **Inaktivieren** oder **Aktivieren** fest. 
+1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**.
+2. Wählen Sie die Registerkarte **Benachrichtigungen** aus.
+3. Wählen Sie eine der folgenden Optionen aus.
+   - Zum Inaktivieren oder Aktivieren von Benachrichtigungen für einen Kanal legen Sie **Inaktivieren** oder **Aktivieren** fest.
    - Zum Aktualisieren der Einstellungen für einen Kanal wählen Sie **Bearbeiten** im Aktionsmenü aus.
-   - Zum Löschen eines Benachrichtigungskanals wählen Sie **Löschen** im Aktionsmenü aus. 
-   
-   
+   - Zum Löschen eines Benachrichtigungskanals wählen Sie **Löschen** im Aktionsmenü aus.
+
+
 ## HTTP-Nutzdaten für eine Callback-URL verifizieren
 {: #verify-callback}
 

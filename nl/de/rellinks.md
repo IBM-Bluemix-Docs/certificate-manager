@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -21,3 +21,4 @@ lastupdated: "2018-07-05"
 * <a href="https://www.ibm.com/blogs/bluemix/2017/12/introducing-ibm-cloud-certificate-manager-manage-ssltls-certificates-apps/" target="_blank">{{site.data.keyword.cloudcerts_short}} - Einführung – SSL/TLS-Zertifikate für Apps verwalten <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/" target="_blank">{{site.data.keyword.cloudcerts_short}} mit {{site.data.keyword.containerlong_notm}} verwenden, um TLS-Zertifikate für angepasste Domänen bereitzustellen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/06/certificate-manager-now-sends-notifications-certificates-expire/" target="_blank">{{site.data.keyword.cloudcerts_short}} sendet nun Benachrichtigungen vor dem Ablaufen von Zertifikaten <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>
+* <a href="https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/" target="_blank">Verwendung von {{site.data.keyword.cloudcerts_short}} mit Callback-URLs zur Vermeidung von Ausfällen <img src="../../icons/launch-glyph.svg" alt="Symbol für externen Link"></a>

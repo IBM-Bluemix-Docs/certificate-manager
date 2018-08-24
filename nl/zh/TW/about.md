@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ lastupdated: "2018-06-21"
 * 尋找在發出新相符性或安全需求時需要取代的憑證
 * 設定您可存取及管理憑證的控制項
 
+![高階服務架構圖](images/high-level-architecture.png)
+<caption>高階服務架構。</caption>
+
 ## 私密金鑰安全
 {: #private-key-security}
 
 當您將憑證及對應私密金鑰匯入至 {{site.data.keyword.cloudcerts_short}} 時，服務會使用「進階加密標準 (AES) 256」演算法來加密私密金鑰。{{site.data.keyword.cloudcerts_short}} 會儲存這個唯一加密金鑰，以與服務實例搭配使用。
 
-## 可用性
-{: #availability}
-
-只有在美國南部地區才能使用 {{site.data.keyword.cloudcerts_short}}。
-
 ## 整合
 {: #integrations}
 <table>
-<caption> 表 1. 使用 Certificate Manager 的 IBM Cloud 服務</caption>
+<caption>使用 Certificate Manager 的 IBM Cloud 服務</caption>
   <tr>
     <th> 服務</th>
     <th> 說明</th>
@@ -57,3 +55,9 @@ lastupdated: "2018-06-21"
     <p>若要取得產生事件的動作清單，請參閱 [{{site.data.keyword.cloudaccesstrailshort}} 事件](/docs/services/certificate-manager/at_events.html#at_events)。</p></td>
   </tr>
 </table>
+
+## 地區
+{: #availability}
+
+只有在美國南部地區才能使用 {{site.data.keyword.cloudcerts_short}}。
+

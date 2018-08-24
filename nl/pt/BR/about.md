@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -28,21 +28,19 @@ uma visualização central dos certificados que você está usando.
 * Localize certificados que precisam de substituição quando novos requisitos de conformidade ou segurança são emitidos
 * Configure controles sobre quem pode acessar e gerenciar seus certificados
 
+![Diagrama de arquitetura de serviço de alto nível](images/high-level-architecture.png)
+<caption>Arquitetura de serviço de alto nível.</caption>
+
 ## Segurança de chave privada
 {: #private-key-security}
 
 Ao importar um certificado e a chave privada correspondente para {{site.data.keyword.cloudcerts_short}}, o
 serviço usa um algoritmo Advanced Encryption Standard (AES) 256 para criptografar a chave privada. O {{site.data.keyword.cloudcerts_short}} salva essa chave criptografada exclusiva para usar com sua instância de serviço.
 
-## Disponibilidade
-{: #availability}
-
-O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EUA somente.
-
 ## Integrações
 {: #integrations}
 <table>
-<caption> Tabela 1. Serviços do IBM Cloud que usam o Gerenciador de certificados</caption>
+<caption>Serviços IBM Cloud que usam o Certificate Manager</caption>
   <tr>
     <th> Service </th>
     <th> Descrição </th>
@@ -57,8 +55,14 @@ O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EU
   </tr><tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
     <td>Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e os aplicativos interagem
-com o serviço {{site.data.keyword.cloudcerts_long}} no {{site.data.keyword.Bluemix}}. [ Saiba mais sobre o  {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+com o serviço {{site.data.keyword.cloudcerts_long}} no {{site.data.keyword.Bluemix}}. [ Saiba mais sobre o  {{site.data.keyword.cloudaccesstrailshort}} ](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
     <p>Para obter a lista de ações que geram um evento, consulte
 Eventos do [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>
+
+## Regiões
+{: #availability}
+
+O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EUA somente.
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ lastupdated: "2018-06-21"
 * 새로운 준수 또는 보안 요구사항이 발행될 때 대체해야 하는 인증서를 찾습니다.
 * 인증서에 액세스하고 인증서를 관리할 수 있는 사용자에 대한 제어를 설정합니다.
 
+![상위 레벨 서비스 아키텍처 다이어그램](images/high-level-architecture.png)
+<caption>상위 레벨 서비스 아키텍처.</caption>
+
 ## 개인 키 보안
 {: #private-key-security}
 
 인증서와 해당 개인 키를 {{site.data.keyword.cloudcerts_short}}로 가져올 때 서비스에서 고급 암호화 표준(AES) 256 알고리즘을 사용하여 개인 키를 암호화합니다. {{site.data.keyword.cloudcerts_short}}가 서비스 인스턴스에 사용하도록 이 암호화된 고유 키를 저장합니다.
 
-## 가용성
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}}는 미국 남부 지역에서만 사용할 수 있습니다.
-
 ## 통합
 {: #integrations}
 <table>
-<caption> 표 1. Certificate Manager를 사용하는 IBM Cloud 서비스</caption>
+<caption>Certificate Manager를 사용하는 IBM Cloud 서비스</caption>
   <tr>
     <th> 서비스 </th>
     <th> 설명 </th>
@@ -57,3 +55,9 @@ lastupdated: "2018-06-21"
     <p>이벤트를 생성하는 조치의 목록을 가져오려면 [{{site.data.keyword.cloudaccesstrailshort}} 이벤트](/docs/services/certificate-manager/at_events.html#at_events)를 참조하십시오.</p></td>
   </tr>
 </table>
+
+## 지역
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}}는 미국 남부 지역에서만 사용할 수 있습니다.
+

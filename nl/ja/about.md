@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,34 +26,38 @@ lastupdated: "2018-06-21"
 * 新しいコンプライアンス要件またはセキュリティー要件が出されたときに置き換える必要がある証明書を見つける
 * 証明書のアクセスおよび管理を行えるユーザーについて制御を設定する
 
+![上位サービス・アーキテクチャー・ダイアグラム](images/high-level-architecture.png)
+<caption>上位サービス・アーキテクチャー。</caption>
+
 ## 秘密鍵のセキュリティー
 {: #private-key-security}
 
 証明書と、対応する秘密鍵を {{site.data.keyword.cloudcerts_short}} にインポートすると、サービスは Advanced Encryption Standard (AES) 256 アルゴリズムを使用して秘密鍵を暗号化します。 {{site.data.keyword.cloudcerts_short}} は、サービス・インスタンスで使用するために、この暗号化された固有鍵を保存します。
 
-## 可用性
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} は、米国南部地域でのみ使用可能です。
-
 ## 統合
 {: #integrations}
 <table>
-<caption> 表 1. Certificate Manager を使用する IBM Cloud サービス</caption>
+<caption>Certificate Manager を使用する IBM Cloud サービス</caption>
   <tr>
     <th> サービス </th>
     <th> 説明 </th>
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Kubernetes クラスターのカスタム・ドメイン証明書を Certificate Manager に保管し、それを IBM Cloud CLI の [Kubernetes サービス・プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。 [この統合の詳細はこちら](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)</td>
+    <td>Kubernetes クラスターのカスタム・ドメイン証明書を Certificate Manager に保管し、それを IBM Cloud CLI の [Kubernetes Service プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。 [この統合の詳細はこちら](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)</td>
   </tr>
   <tr>
     <td>IBM Cloud セキュリティー・アドバイザー</td>
     <td>セキュリティー・アドバイザーは、IBM Cloud アカウントの Certificate Manager のインスタンスで、期限切れか期限切れ間近の証明書を表示するなど、IBM Cloud サービスによる洞察を一元化します。 [セキュリティー・アドバイザーの詳細はこちら](/docs/services/security-advisor/index.html#index)</td>
   </tr><tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。[{{site.data.keyword.cloudaccesstrailshort}} の詳細はこちら](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)
+    <td>ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) についての詳細。
     <p>イベントを生成するアクションのリストを取得するには、[{{site.data.keyword.cloudaccesstrailshort}} イベント](/docs/services/certificate-manager/at_events.html#at_events)を参照してください。</p></td>
   </tr>
 </table>
+
+## 地域
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} は、米国南部地域でのみ使用可能です。
+

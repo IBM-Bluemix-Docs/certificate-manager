@@ -24,4 +24,4 @@ lastupdated: "2018-05-07"
 3. **작성**을 클릭하십시오.
 4. 조직의 인증서를 {{site.data.keyword.cloudcerts_short}}로 가져오려면 **인증서 가져오기**를 클릭하십시오.  
 
-또한 {{site.data.keyword.cloudcerts_short}}에서 얻은 내용을 [자세히 보고](about.html), 개발 시 [developerWorks에 사용자 피드백을 제공](troubleshooting.html#getting-help-and-support)하여 {{site.data.keyword.cloudcerts_short}}를 개선할 수 있습니다.
+또한 {{site.data.keyword.cloudcerts_short}}에서 얻은 내용에 대해 [자세히 보기](about.html)를 참조하고 [developerWorks에서 사용자 피드백을 제공하여](troubleshooting.html#getting-help-and-support) {{site.data.keyword.cloudcerts_short}}가 개발됨에 따라 이를 향상시킬 수 있습니다.

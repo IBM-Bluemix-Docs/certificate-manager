@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ Vous pouvez gérer vos certificats en procédant comme suit :
 * Recherchez les certificats que vous devez remplacer lorsque de nouvelles exigences de conformité ou de sécurité sont émises.
 * Définissez les contrôles qui déterminent qui peut accéder à et gérer vos certificats.
 
+![Diagramme d'architecture de haut niveau du service](images/high-level-architecture.png)
+<caption>Architecture de haut niveau du service.</caption>
+
 ## Sécurité de clé privée
 {: #private-key-security}
 
 Lorsque vous importez un certificat et la clé privée correspondante dans {{site.data.keyword.cloudcerts_short}}, le service utilise un algorithme AES (Advanced Encryption Standard) 256 pour chiffrer la clé privée. {{site.data.keyword.cloudcerts_short}} sauvegarde cette clé chiffrée unique à utiliser avec votre instance de service.
 
-## Disponibilité
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} est disponible uniquement dans la région du Sud des Etats-Unis.
-
 ## Intégrations
 {: #integrations}
 <table>
-<caption> Tableau 1. Services IBM Cloud utilisant Certificate Manager</caption>
+<caption>Services IBM Cloud utilisant Certificate Manager</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>
@@ -57,3 +55,9 @@ Lorsque vous importez un certificat et la clé privée correspondante dans {{sit
     <p>Pour obtenir une liste des actions qui génère un événement, voir [Evénements {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>
+
+## Régions
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} est disponible uniquement dans la région du Sud des Etats-Unis.
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -31,14 +31,6 @@ lastupdated: "2018-06-22"
   <tr>
     <th>操作 </th>
 	  <th>描述</th>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>供应 {{site.data.keyword.cloudcerts_short}} 实例。</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>删除 {{site.data.keyword.cloudcerts_short}} 实例。</td>
   </tr>
   <tr>
     <td>cloudcerts.certificate.import</td>
@@ -72,12 +64,39 @@ lastupdated: "2018-06-22"
     <td>cloudcerts.certificate.update</td>
 	  <td>更新证书，例如更改证书的描述。</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>列出通知通道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>创建通知通道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>禁用或启用通知通道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>更新通知通道的端点。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>删除通知通道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>测试通知通道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>已将通知发送到通知通道端点。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>已请求公用密钥。</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## 在何处查找事件
 {: #ui}
@@ -86,11 +105,7 @@ lastupdated: "2018-06-22"
 
 {{site.data.keyword.cloudaccesstrailshort}} 事件会自动转发到供应 {{site.data.keyword.cloudcerts_short}} 服务的区域中的 {{site.data.keyword.cloudaccesstrailshort}} 服务。
 
-
 ## 其他信息
 {: #info}
 
 *requestData_str* 字段包含证书的可读名称。
-
-
-

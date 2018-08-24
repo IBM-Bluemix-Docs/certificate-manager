@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ Puede gestionar los certificados de las formas siguientes:
 * Buscar certificados que necesiten sustitución cuando se emitan nuevos requisitos de conformidad o de seguridad
 * Establecer controles sobre quién puede acceder y gestionar sus certificados
 
+![Diagrama de arquitectura de servicio de alto nivel](images/high-level-architecture.png)
+<caption>Arquitectura de servicio de alto nivel.</caption>
+
 ## Seguridad de clave privada
 {: #private-key-security}
 
 Al importar un certificado y la correspondiente clave privada en {{site.data.keyword.cloudcerts_short}}, el servicio utilizará un algoritmo Advanced Encryption Standard (AES) 256 para cifrar la clave privada. {{site.data.keyword.cloudcerts_short}} guarda esta clave cifrada exclusiva para utilizarla con la instancia de servicio.
 
-## Disponibilidad
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} solo está disponible en la región EE.UU. Sur.
-
 ## Integraciones
 {: #integrations}
 <table>
-<caption> Tabla 1. Servicios de IBM Cloud que utilizan Certificate Manager</caption>
+<caption>Servicios de IBM Cloud que utilizan Certificate Manager</caption>
   <tr>
     <th> Servicio </th>
     <th> Descripción </th>
@@ -53,7 +51,13 @@ Al importar un certificado y la correspondiente clave privada en {{site.data.key
     <td>Security Advisor centraliza la información de valor de los servicios de IBM Cloud, incluida la indicación de certificados caducados o a punto de caducar en instancias de Certificate Manager de su cuenta de IBM Cloud. [Más información sobre Security Advisor](/docs/services/security-advisor/index.html#index)</td>
   </tr><tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>El servicio {{site.data.keyword.cloudaccesstrailfull}} permite rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long}} en {{site.data.keyword.Bluemix}}. [Aprenda más sobre {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). 
+    <td>El servicio {{site.data.keyword.cloudaccesstrailfull}} permite rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long}} en {{site.data.keyword.Bluemix}}. [Aprenda más sobre {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
     <p>Consulte [Sucesos de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events) para obtener una lista de las acciones que generan un suceso.</p></td>
   </tr>
 </table>
+
+## Regiones
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} solo está disponible en la región EE.UU. Sur.
+

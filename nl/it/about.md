@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ Puoi gestire i tuoi certificati nei seguenti modi:
 * Trova i certificati che devono essere sostituiti quando vengono emessi nuovi requisiti di sicurezza o conformità
 * Configura i controlli su chi può accedere e gestire i tuoi certificati
 
+![Diagramma dell'architettura del servizio di alto livello](images/high-level-architecture.png)
+<caption>Architettura del servizio di alto livello </caption>
+
 ## Sicurezza chiave privata
 {: #private-key-security}
 
-Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyword.cloudcerts_short}}, il servizio utilizza un algoritmo Advanced Encryption Standard (AES) 256 per codificare la chiave privata. {{site.data.keyword.cloudcerts_short}} salva questa chiave codificata univoca da utilizzare con la tua istanza del servizio.
-
-## Disponibilità
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} è disponibile solo nella regione Stati Uniti Sud.
+Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyword.cloudcerts_short}}, il servizio utilizza un algoritmo AES (Advanced Encryption Standard) 256 per codificare la chiave privata. {{site.data.keyword.cloudcerts_short}} salva questa chiave codificata univoca da utilizzare con la tua istanza del servizio.
 
 ## Integrazioni
 {: #integrations}
 <table>
-<caption> Tabella 1. Servizi IBM Cloud che utilizzano il Gestore certificato</caption>
+<caption>Servizi IBM Cloud che utilizzano Gestore certificato</caption>
   <tr>
     <th> Servizio </th>
     <th> Descrizione </th>
@@ -57,3 +55,9 @@ Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyw
     <p>Per ottenere l'elenco delle azioni che generano un evento, vedi [Eventi di {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>
+
+## Regioni
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} è disponibile solo nella regione Stati Uniti Sud.
+

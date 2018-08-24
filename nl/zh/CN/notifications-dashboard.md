@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-08-15"
 
 ---
 {:new_window: target="_blank"}
@@ -19,19 +19,19 @@ lastupdated: "2018-07-05"
 {: shortdesc}
 
 **何时会收到通知？** </br>
-根据上传到 {{site.data.keyword.cloudcerts_full}} 的证书的到期日期，您会在证书到期前 90 天、60 天、30 天、10 天、1 天收到通知。此外，从证书到期后的第一天开始，您还会每天收到有关到期证书的通知。 
+根据上传到 {{site.data.keyword.cloudcerts_full}} 的证书的到期日期，您会在证书到期前 90 天、60 天、30 天、10 天、1 天收到通知。此外，从证书到期后的第一天开始，您还会每天收到有关到期证书的通知。
 
-您必须更新证书，将此证书上传到 {{site.data.keyword.cloudcerts_full}}，并删除到期的证书后，才会停止继续发送通知。 
+您必须更新证书，将此证书上传到 {{site.data.keyword.cloudcerts_full}}，并删除到期的证书后，才会停止继续发送通知。
 
 **有哪些通知配置选项？**</br>
-您可以使用 Slack Webhook 或使用您喜欢的任何回调 URL 向 Slack 发送通知。 
+您可以使用 Slack Webhook 或使用您喜欢的任何回调 URL 向 Slack 发送通知。
 
 ## 设置 Slack Webhook
 {: #setup-callback}
 
-1. 注册 [Slack](https://slack.com/) 并设置工作空间。 
-2. 创建要向其发布通知的 Slack 通道。 
-3. [设置 Webhook](https://api.slack.com/incoming-webhooks) 以用于 Slack 通道。 
+1. 注册 [Slack](https://slack.com/) 并设置工作空间。
+2. 创建要向其发布通知的 Slack 通道。
+3. [设置 Webhook](https://api.slack.com/incoming-webhooks) 以用于 Slack 通道。
 
 ## 设置回调 URL
 {: #callback}
@@ -39,20 +39,49 @@ lastupdated: "2018-07-05"
 您可能希望使用回调 URL 将通知发布到每天使用的工具，以触发团队的更新过程。例如，您可以发送通知以向负责的寻呼机进行报告，自动在 Github 中创建问题，或触发更新脚本。  
 {: shortdesc}
 
-**重要信息：**回调 URL 端点必须满足以下需求才能用于 {{site.data.keyword.cloudcerts_short}}： 
+**重要信息：**回调 URL 端点必须满足以下需求才能用于 {{site.data.keyword.cloudcerts_short}}：
 * 端点必须使用 HTTPS 协议。
 * 端点不能需要 HTTP 头。此需求包括 Authorization 头。
 
-### 使用回调 URL 自动创建 GitHub 问题 
+
+### 通知格式
+{: #notification_format}
+
+发送到回调 URL 的通知是以下格式的 JSON 文档：
+
+```
+{ "data":"<JWT FORMAT STRING>" }
+```
+{: screen}
+
+在解码和验证有效内容后，内容为 JSON 字符串。
+
+```
+{
+    "instance_crn": "<INSTANCE_CRN>",
+    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
+    "expiry_date": <EXPIRY_DAY_TIMESTAMP>
+    "expiring_certificates":[
+          {
+             "cert_crn":"<CERTIFICATE_CRN>",
+             "domains":"<CERTIFICATE_DOMAIN>"
+          },
+          ...
+}
+```
+{: screen}
+
+
+### 使用回调 URL 自动创建 GitHub 问题
 {: #sample}
 
-以下样本代码显示了在发送 {{site.data.keyword.cloudcerts_short}} 通知时，如何为证书到期创建 GitHub 问题。您可以在 {{site.data.keyword.openwhisk}} 中运行此代码，也可以在其他环境中使用此代码。   
+以下样本代码显示了在发送通知时，如何为到期证书创建 GitHub 问题。您可以在 {{site.data.keyword.openwhisk}} 中运行此代码，也可以在其他环境中使用此代码。   
 {: shortdesc}
 
-要在 {{site.data.keyword.openwhisk}} 中运行此代码，请执行以下操作：
+要在 {{site.data.keyword.openwhisk_short}} 中运行此代码，请执行以下操作：
 
-1. [在 {{site.data.keyword.openwhisk}} 中创建操作](/docs/openwhisk/index.html#getting-started)。
-2. 使用以下代码来自动创建 GitHub 问题： 
+1. 在 [Cloud Functions](/docs/openwhisk/index.html#index) 中创建操作。
+2. 使用以下代码来自动创建 GitHub 问题：
 
 ```
 
@@ -145,7 +174,7 @@ lastupdated: "2018-07-05"
 
 ```
 {: codeblock}
-    
+
 有关其他 REST API 命令，请参阅 [API 文档](https://console.bluemix.net/apidocs/cloudcerts)
 {: tip}
 
@@ -158,14 +187,14 @@ lastupdated: "2018-07-05"
 
 要添加通知通道，请执行以下操作：
 
-1. 在“服务详细信息”页面上的导航中，单击**设置**。 
+1. 在“服务详细信息”页面上的导航中，单击**设置**。
 2. 打开**通知**选项卡。
-3. 单击**添加通知通道**。 
-4. 选择要使用的通知通道类型。 
+3. 单击**添加通知通道**。
+4. 选择要使用的通知通道类型。
 5. 输入要向其发送通知的 Webhook 或回调 URL。
-6. 单击**保存**。 这将显示配置摘要。 
+6. 单击**保存**。 这将显示配置摘要。
 
-   示例输出： 
+   示例输出：
    <table>
    <caption> 关于通知通道的信息</caption>
    <thead>
@@ -195,10 +224,10 @@ lastupdated: "2018-07-05"
     </tr>
     </tbody>
     </table>
-   
+
     保存 Slack Webhook 时，{{site.data.keyword.cloudcerts_short}} 会自动向已配置的 Slack 通道发送确认通知。请检查 Slack 通道以验证是否收到此通知。
     {: tip}
-7. 可选：重复这些步骤以添加更多通知通道。 
+7. 可选：重复这些步骤以添加更多通知通道。
 
 ## 测试通知通道
 {: #testing-channel}
@@ -206,13 +235,13 @@ lastupdated: "2018-07-05"
 您可以测试通知通道，以确保正确配置通知通道。
 {: shortdesc}
 
-开始之前，请[配置通知通道](#adding-channel)。 
+开始之前，请[配置通知通道](#adding-channel)。
 
-要测试通知通道，请执行以下操作： 
+要测试通知通道，请执行以下操作：
 
-1. 在“服务详细信息”页面上的导航中，单击**设置**。 
+1. 在“服务详细信息”页面上的导航中，单击**设置**。
 2. 找到您的通知通道，然后单击**测试连接**。
-3. 验证是否在已配置的通道中收到通知。 
+3. 验证是否在已配置的通道中收到通知。
 
 
 ## 更新通知通道
@@ -221,16 +250,16 @@ lastupdated: "2018-07-05"
 您可以更新通知通道配置，禁用或启用通知，或从 {{site.data.keyword.cloudcerts_short}} 中删除通知通道。
 {: shortdesc}
 
-开始之前，请[配置通知通道](#adding-channel)。 
+开始之前，请[配置通知通道](#adding-channel)。
 
-1. 在“服务详细信息”页面上的导航中，单击**设置**。 
-2. 选择**通知**选项卡。 
-3. 从下列选项中进行选择。 
-   - 要禁用或启用通道通知，请将相应开关设置为**禁用**或**启用**。 
+1. 在“服务详细信息”页面上的导航中，单击**设置**。
+2. 选择**通知**选项卡。
+3. 从下列选项中进行选择。
+   - 要禁用或启用通道通知，请将相应开关设置为**禁用**或**启用**。
    - 要更新通道的设置，请从操作菜单中选择**编辑**。
-   - 要删除通知通道，请从操作菜单中选择**删除**。 
-   
-   
+   - 要删除通知通道，请从操作菜单中选择**删除**。
+
+
 ## 验证回调 URL 的 HTTP 有效内容
 {: #verify-callback}
 

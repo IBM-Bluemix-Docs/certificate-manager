@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ lastupdated: "2018-06-21"
 * 发出新合规性或安全性需求时，查找需要替换的证书
 * 控制谁可以访问和管理证书
 
+![高级服务体系结构图](images/high-level-architecture.png)
+<caption>高级服务体系结构。</caption>
+
 ## 专用密钥安全性
 {: #private-key-security}
 
 当您将证书及相应专用密钥导入到 {{site.data.keyword.cloudcerts_short}} 时，该服务将使用高级加密标准 (AES) 256 算法来加密专用密钥。{{site.data.keyword.cloudcerts_short}} 会保存此唯一加密密钥以使用服务实例。
 
-## 可用性
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} 仅在美国南部区域提供。
-
 ## 集成
 {: #integrations}
 <table>
-<caption> 表 1. 使用 Certificate Manager 的 IBM Cloud 服务</caption>
+<caption>使用 Certificate Manager 的 IBM Cloud 服务</caption>
   <tr>
     <th> 服务</th>
     <th> 描述</th>
@@ -57,3 +55,9 @@ lastupdated: "2018-06-21"
     <p>要获取用于生成事件的操作的列表，请参阅 [{{site.data.keyword.cloudaccesstrailshort}} 事件](/docs/services/certificate-manager/at_events.html#at_events)。</p></td>
   </tr>
 </table>
+
+## 区域
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} 仅在美国南部区域提供。
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -19,7 +19,7 @@ lastupdated: "2018-06-22"
 # Sucesos de {{site.data.keyword.cloudaccesstrailshort}}  
 {: #at_events}
 
-El servicio {{site.data.keyword.cloudaccesstrailfull}} permite rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long}} en {{site.data.keyword.Bluemix}}. 
+El servicio {{site.data.keyword.cloudaccesstrailfull}} permite rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long}} en {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
 El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} graba las actividades iniciadas por los usuarios que cambian el estado de un servicio en {{site.data.keyword.Bluemix_notm}}. Para obtener más información, consulte [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). Por ejemplo, cuando se importa un certificado, se genera un suceso de {{site.data.keyword.cloudaccesstrailshort}}.
@@ -31,14 +31,6 @@ En la tabla siguiente se muestran los métodos de API que generan un suceso cuan
   <tr>
     <th>Acción</th>
 	  <th>Descripción</th>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>Aprovisionar a una instancia de {{site.data.keyword.cloudcerts_short}}.</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>Suprimir una instancia de {{site.data.keyword.cloudcerts_short}}.</td>
   </tr>
   <tr>
     <td>cloudcerts.certificate.import</td>
@@ -72,12 +64,39 @@ En la tabla siguiente se muestran los métodos de API que generan un suceso cuan
     <td>cloudcerts.certificate.update</td>
 	  <td>Actualizar un certificado, por ejemplo, al cambiar su descripción.</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>Listar canales de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>Crear un canal de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>Habilitar o inhabilitar un canal de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>Actualizar el punto final de un canal de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>Suprimir un canal de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>Comprobar un canal de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>Se ha enviado una notificación al punto final de un canal de notificaciones.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>Se ha solicitado la clave pública.</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## Dónde buscar los sucesos
 {: #ui}
@@ -86,11 +105,7 @@ Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} están disponibles en
 
 Los sucesos de {{site.data.keyword.cloudaccesstrailshort}} se reenvían de forma automática al servicio {{site.data.keyword.cloudaccesstrailshort}} en la misma región que la utilizada para aprovisionar el servicio {{site.data.keyword.cloudcerts_short}}.
 
-
 ## Información adicional
 {: #info}
 
 El campo *requestData_str* incluye el nombre en lenguaje natural del certificado.
-
-
-

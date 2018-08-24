@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -36,14 +36,6 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 	  <th>Descrição</th>
   </tr>
   <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>Provisão de uma instância do  {{site.data.keyword.cloudcerts_short}} .</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>Exclua uma instância do  {{site.data.keyword.cloudcerts_short}} .</td>
-  </tr>
-  <tr>
     <td>cloudcerts.certificate.import</td>
 	  <td>Importe um certificado que seja emitido por uma autoridade de certificado de empresa terceirizada.</td>
   </tr>
@@ -75,12 +67,39 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
     <td>cloudcerts.certificate.update</td>
 	  <td>Atualizar um certificado, por exemplo, mudar a sua descrição.</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>Listar canais de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>Criar um canal de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>Desativar ou ativar um canal de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>Atualizar o terminal de um canal de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>Excluir um canal de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>Testar um canal de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>Uma notificação foi enviada para o terminal de um canal de notificações.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>A chave pública foi solicitada.</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## Onde procurar os eventos
 {: #ui}
@@ -93,11 +112,7 @@ Os eventos do {{site.data.keyword.cloudaccesstrailshort}} são encaminhados auto
 {{site.data.keyword.cloudaccesstrailshort}} na mesma região em que o serviço {{site.data.keyword.cloudcerts_short}}
 é fornecido.
 
-
 ## Informações Adicionais
 {: #info}
 
 O campo *requestData_str* inclui o nome legível do certificado.
-
-
-

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -19,9 +19,10 @@ lastupdated: "2018-06-22"
 # {{site.data.keyword.cloudaccesstrailshort}} イベント  
 {: #at_events}
 
-ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。{:shortdesc}
+ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。
+{:shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。詳しくは、[{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)を参照してください。例えば、証明書をインポートすると、{{site.data.keyword.cloudaccesstrailshort}} イベントが生成されます。
+{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)を参照してください。 例えば、証明書をインポートすると、{{site.data.keyword.cloudaccesstrailshort}} イベントが生成されます。
 
 次の表に、呼び出されたときにイベントを生成する API メソッドのリストを示します。
 
@@ -30,14 +31,6 @@ lastupdated: "2018-06-22"
   <tr>
     <th>アクション</th>
 	  <th>説明</th>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>{{site.data.keyword.cloudcerts_short}} インスタンスをプロビジョンします。</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>{{site.data.keyword.cloudcerts_short}} インスタンスを削除します。</td>
   </tr>
   <tr>
     <td>cloudcerts.certificate.import</td>
@@ -53,7 +46,7 @@ lastupdated: "2018-06-22"
   </tr>
   <tr>
     <td>cloudcerts.certificates-metadata.list</td>
-	  <td>証明書メタデータをリストします。証明書の詳細を表示します。</td>
+	  <td>証明書メタデータをリストします。 証明書の詳細を表示します。</td>
   </tr>
   <tr>
     <td>cloudcerts.certificates.search</td>
@@ -71,12 +64,39 @@ lastupdated: "2018-06-22"
     <td>cloudcerts.certificate.update</td>
 	  <td>証明書を更新します。例えば、証明書の説明を変更します。</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>リスト通知チャネル</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>通知チャネルを作成します。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>通知チャネルを無効または有効にします。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>通知チャネルのエンドポイントを更新します。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>通知チャネルを削除します。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>通知チャネルをテストします。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>通知は通知チャネルのエンドポイントに送信されました。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>公開鍵が要求されました。</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## イベントの検索先
 {: #ui}
@@ -85,11 +105,7 @@ lastupdated: "2018-06-22"
 
 {{site.data.keyword.cloudaccesstrailshort}} イベントは、{{site.data.keyword.cloudcerts_short}} サービスがプロビジョンされている同じ地域内の {{site.data.keyword.cloudaccesstrailshort}} サービスに自動的に転送されます。
 
-
 ## 追加情報
 {: #info}
 
 「*requestData_str*」フィールドには、証明書の、人が判読できる名前が含まれます。
-
-
-

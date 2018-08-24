@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -24,21 +24,13 @@ lastupdated: "2018-06-22"
 
 {{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스의 상태를 변경하는 사용자 시작 활동을 레코드합니다. 추가 정보는 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)의 내용을 참조하십시오. 예를 들어, 인증서를 가져오면 {{site.data.keyword.cloudaccesstrailshort}} 이벤트가 생성됩니다.
 
-다음 표에는 API 메소드가 호출될 때 이벤트를 생성하는 API 메소드가 나열되어 있습니다. 
+다음 표에는 API 메소드가 호출될 때 이벤트를 생성하는 API 메소드가 나열되어 있습니다.
 
 <table>
   <caption>이벤트를 생성하는 조치</caption>
   <tr>
     <th>조치</th>
 	  <th>설명</th>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>{{site.data.keyword.cloudcerts_short}} 인스턴스를 프로비저닝합니다.</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>{{site.data.keyword.cloudcerts_short}} 인스턴스를 삭제합니다.</td>
   </tr>
   <tr>
     <td>cloudcerts.certificate.import</td>
@@ -72,12 +64,39 @@ lastupdated: "2018-06-22"
     <td>cloudcerts.certificate.update</td>
 	  <td>인증서를 업데이트합니다(예: 인증서의 설명 변경).</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>알림 채널을 나열합니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>알림 채널을 작성합니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>알림 채널을 사용하지 않거나 사용합니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>알림 채널의 엔드포인트를 업데이트합니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>알림 채널을 삭제합니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>알림 채널을 테스트합니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>알림 채널 엔드포인트에 알림이 전송되었습니다.</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>공개 키가 요청되었습니다.</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## 이벤트를 찾을 수 있는 위치
 {: #ui}
@@ -86,11 +105,7 @@ lastupdated: "2018-06-22"
 
 {{site.data.keyword.cloudaccesstrailshort}} 이벤트는 {{site.data.keyword.cloudcerts_short}} 서비스가 프로비저닝되는 동일한 지역에서 자동으로 {{site.data.keyword.cloudaccesstrailshort}} 서비스로 전달됩니다.
 
-
 ## 추가 정보
 {: #info}
 
-*requestData_str* 필드에는 사용자가 읽을 수 있는 인증서의 이름이 포함되어 있습니다. 
-
-
-
+*requestData_str* 필드에는 사용자가 읽을 수 있는 인증서의 이름이 포함되어 있습니다.

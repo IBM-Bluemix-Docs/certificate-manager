@@ -78,11 +78,11 @@ Mithilfe von Servicezugriffsrollen können Sie es Benutzern ermöglichen, Aufgab
     <td> Manager </td>
   </tr>
       <tr>
-        <td>Alle Benachrichtigungskanäle auflisten</td>
+        <td>Alle Benachrichtigungskanäle auflisten </td>
         <td> Manager, Schreibberechtigter, Leseberechtigter </td>
       </tr>
    <tr>
-     <td>Benachrichtigungskanal hinzufügen, aktualisieren oder löschen</td>
+     <td>Benachrichtigungskanal hinzufügen, aktualisieren oder löschen </td>
      <td> Manager </td>
    </tr>
      <tr>

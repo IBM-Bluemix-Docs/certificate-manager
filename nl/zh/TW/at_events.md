@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-08-16"
 
 ---
 
@@ -31,14 +31,6 @@ lastupdated: "2018-06-22"
   <tr>
     <th>動作</th>
 	  <th>說明</th>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.create</td>
-	  <td>佈建 {{site.data.keyword.cloudcerts_short}} 實例。</td>
-  </tr>
-  <tr>
-    <td>cloudcerts.instance.delete</td>
-	  <td>刪除 {{site.data.keyword.cloudcerts_short}} 實例。</td>
   </tr>
   <tr>
     <td>cloudcerts.certificate.import</td>
@@ -72,12 +64,39 @@ lastupdated: "2018-06-22"
     <td>cloudcerts.certificate.update</td>
 	  <td>更新憑證，例如，變更憑證的說明。</td>
   </tr>
+  <tr>
+    <td>cloudcerts.notifications-channels.list</td>
+	  <td>列出通知頻道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.create</td>
+	  <td>建立通知頻道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.state</td>
+	  <td>停用或啟用通知頻道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.update</td>
+	  <td>更新通知頻道的端點。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.delete</td>
+	  <td>刪除通知頻道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications-channel.test</td>
+	  <td>測試通知頻道。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notification.sent</td>
+	  <td>已傳送通知到通知頻道端點。</td>
+  </tr>
+  <tr>
+    <td>cloudcerts.notifications.publickey</td>
+	  <td>已要求公開金鑰。</td>
+  </tr>
 </table>
-
-
- 	
- 
-
 
 ## 尋找事件的位置
 {: #ui}
@@ -86,11 +105,7 @@ lastupdated: "2018-06-22"
 
 {{site.data.keyword.cloudaccesstrailshort}} 事件會自動轉遞給佈建 {{site.data.keyword.cloudcerts_short}} 服務之相同地區的 {{site.data.keyword.cloudaccesstrailshort}} 服務。
 
-
 ## 相關資訊
 {: #info}
 
 *requestData_str* 欄位包含人類可讀的憑證名稱。
-
-
-

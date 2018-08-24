@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-02"
 
 ---
 {:new_window: target="_blank"}
@@ -26,20 +26,18 @@ Sie können Ihre Zertifikate auf folgende Art und Weise verwalten:
 * Zertifikate suchen, die ersetzt werden müssen, wenn neue Konformitäts- und Sicherheitsanforderungen in Kraft treten
 * Mechanismen einrichten, die steuern, wer auf Ihre Zertifikate zugreifen und wer sie verwalten kann
 
+![Diagramm der allgemeinen Servicearchitektur](images/high-level-architecture.png)
+<caption>Allgemeine Servicearchitektur</caption>
+
 ## Schutz privater Schlüssel
 {: #private-key-security}
 
 Wenn Sie ein Zertifikat und den entsprechenden privaten Schlüssel in {{site.data.keyword.cloudcerts_short}} importieren, verwendet der Service einen AES 256-Algorithmus zum Verschlüsseln des privaten Schlüssels (AES = Advanced Encryption Standard). {{site.data.keyword.cloudcerts_short}} speichert diesen eindeutigen verschlüsselten Schlüssel zur Verwendung mit Ihrer Serviceinstanz.
 
-## Verfügbarkeit
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} steht nur in er Region 'Vereinigte Staaten (Süden)' zur Verfügung.
-
 ## Integrationen
 {: #integrations}
 <table>
-<caption> Tabelle 1. IBM Cloud-Services, die Certificate Manager nutzen</caption>
+<caption>IBM Cloud-Services, die Certificate Manager nutzen</caption>
   <tr>
     <th> Service </th>
     <th> Beschreibung </th>
@@ -57,3 +55,9 @@ Wenn Sie ein Zertifikat und den entsprechenden privaten Schlüssel in {{site.dat
     <p>Eine Liste der Aktionen, die ein Ereignis generieren, finden Sie in [{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
 </table>
+
+## Regionen
+{: #availability}
+
+{{site.data.keyword.cloudcerts_short}} steht nur in er Region 'Vereinigte Staaten (Süden)' zur Verfügung.
+

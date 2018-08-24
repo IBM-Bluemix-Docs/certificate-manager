@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-05"
+lastupdated: "2018-08-15"
 
 ---
 {:new_window: target="_blank"}
@@ -19,19 +19,19 @@ Les certificats ne sont généralement valides que pour une durée définie. Qua
 {: shortdesc}
 
 **Quand suis-je notifié ?** </br>
-Selon la date d'expiration du certificat que vous avez téléchargé dans {{site.data.keyword.cloudcerts_full}}, vous êtes notifié 90, 60, 30, 10 jours ou 1 jour avant l'expiration du certificat. En plus, vous recevez des notifications quotidiennes relatives aux certificats expirés, à partir du premier jour après l'expiration de votre certificat. 
+Selon la date d'expiration du certificat que vous avez téléchargé dans {{site.data.keyword.cloudcerts_full}}, vous êtes notifié 90, 60, 30, 10 jours ou 1 jour avant l'expiration du certificat. En plus, vous recevez des notifications quotidiennes relatives aux certificats expirés, à partir du premier jour après l'expiration de votre certificat.
 
-Vous devez renouveler votre certificat, télécharger ce certificat dans {{site.data.keyword.cloudcerts_full}} et supprimer le certificat expiré pour arrêter l'envoi des notifications. 
+Vous devez renouveler votre certificat, télécharger ce certificat dans {{site.data.keyword.cloudcerts_full}} et supprimer le certificat expiré pour arrêter l'envoi des notifications.
 
 **Quelles sont les options dont je dispose pour configurer les notifications ?** </br>
-Vous pouvez envoyer des notifications à Slack en utilisant un webhook Slack ou vous servir de l'URL de rappel de votre choix. 
+Vous pouvez envoyer des notifications à Slack en utilisant un webhook Slack ou vous servir de l'URL de rappel de votre choix.
 
 ## Configuration d'un webhook Slack
 {: #setup-callback}
 
-1. Inscrivez-vous à [Slack](https://slack.com/) et configurez votre espace de travail. 
-2. Créez un canal Slack pour y poster vos notifications. 
-3. [Configurez un webhook](https://api.slack.com/incoming-webhooks) pour le canal Slack. 
+1. Inscrivez-vous à [Slack](https://slack.com/) et configurez votre espace de travail.
+2. Créez un canal Slack pour y poster vos notifications.
+3. [Configurez un webhook](https://api.slack.com/incoming-webhooks) pour le canal Slack.
 
 ## Configuration d'une URL de rappel
 {: #callback}
@@ -39,20 +39,49 @@ Vous pouvez envoyer des notifications à Slack en utilisant un webhook Slack ou 
 Vous pouvez utiliser une URL de rappel pour poster une notification aux outils que vous utilisez quotidiennement afin de déclencher le processus de renouvellement pour votre équipe. Ainsi, vous pouvez envoyer des notifications pour effectuer un rapport à Pager Duty, ouvrir automatiquement un problème dans Github ou déclencher des scripts de renouvellement.  
 {: shortdesc}
 
-**Important :** votre noeud final d'URL de rappel doit répondre aux exigences suivantes pour être utilisé avec {{site.data.keyword.cloudcerts_short}} : 
+**Important :** votre noeud final d'URL de rappel doit répondre aux exigences suivantes pour être utilisé avec {{site.data.keyword.cloudcerts_short}} :
 * Le noeud final doit utiliser le protocole HTTPS.
 * Le noeud final ne doit pas requérir d'en-tête HTTP. Cette condition inclut les en-têtes d'autorisation.
 
-### Utilisation d'une URL de rappel pour ouvrir automatiquement un problème GitHub 
+
+### Format de la notification
+{: #notification_format}
+
+La notification envoyée à votre URL de rappel est un document JSON au format suivant :
+
+```
+{ "data":"<Chaîne au format JWT>" }
+```
+{: screen}
+
+Après avoir décodé et vérifié le contenu, celui-ci est une chaîne JSON.
+
+```
+{
+    "instance_crn": "<nom_ressource_cloud_instance>",
+    "certificate_manager_url":"<URL_tableau_de_bord_instance>",
+    "expiry_date": <Horodatage_date_expiration>
+    "expiring_certificates":[
+          {
+             "cert_crn":"<nom_ressource_cloud_certificat>",
+             "domains":"<domaine_certificat>"
+          },
+          ...
+}
+```
+{: screen}
+
+
+### Utilisation d'une URL de rappel pour ouvrir automatiquement un problème GitHub
 {: #sample}
 
-Le code exemple suivant montre comment vous pouvez créer un problème GitHub pour des certificats sur le point d'expirer quand une notification {{site.data.keyword.cloudcerts_short}} est envoyée. Vous pouvez exécuter ce code dans {{site.data.keyword.openwhisk}}, ou utiliser le code dans un environnement différent.   
+L'exemple de code suivant illustre comment vous pouvez créer un problème GitHub quand une notification est envoyée pour des certificats arrivant à expiration. Vous pouvez exécuter ce code dans {{site.data.keyword.openwhisk}}, ou utiliser le code dans un environnement différent.   
 {: shortdesc}
 
-Pour exécuter ce code dans {{site.data.keyword.openwhisk}} :
+Pour exécuter ce code dans {{site.data.keyword.openwhisk_short}} :
 
-1. Créez une [action dans {{site.data.keyword.openwhisk}}](/docs/openwhisk/index.html#getting-started).
-2. Utilisez le code suivant pour créer automatiquement un problème GitHub : 
+1. Créez une action dans [Cloud Functions](/docs/openwhisk/index.html#index).
+2. Utilisez le code suivant pour créer automatiquement un problème GitHub :
 
 ```
 
@@ -145,7 +174,7 @@ Pour exécuter ce code dans {{site.data.keyword.openwhisk}} :
 
 ```
 {: codeblock}
-    
+
 Pour les autres commandes d'API REST, voir la [documentation d'API](https://console.bluemix.net/apidocs/cloudcerts)
 {: tip}
 
@@ -158,14 +187,14 @@ Après avoir créé un webhook Slack ou une URL de rappel, vous pouvez l'ajouter
 
 Pour ajouter un canal de notification :
 
-1. Dans la navigation de la page Détails du service, cliquez sur **Paramètres**. 
+1. Dans la navigation de la page Détails du service, cliquez sur **Paramètres**.
 2. Ouvrez l'onglet **Notifications**.
-3. Cliquez sur **Ajouter une entrée de notification**. 
-4. Choisissez le type de canal de notification que vous voulez utiliser. 
+3. Cliquez sur **Ajouter une entrée de notification**.
+4. Choisissez le type de canal de notification que vous voulez utiliser.
 5. Entrez le webhook ou l'URL de rappel spécifiant l'endroit où vous voulez envoyer les notifications.
-6. Cliquez sur **Sauvegarder**. Un récapitulatif de votre configuration s'affiche. 
+6. Cliquez sur **Sauvegarder**. Un récapitulatif de votre configuration s'affiche.
 
-   Exemple de sortie : 
+   Exemple de sortie :
    <table>
    <caption> Informations relatives au canal de notification </caption>
    <thead>
@@ -195,9 +224,10 @@ Pour ajouter un canal de notification :
     </tr>
     </tbody>
     </table>
-   
-    Quand vous sauvegardez un webhook Slack, {{site.data.keyword.cloudcerts_short}} envoie automatiquement une notification de confirmation au canal Slack que vous avez configuré. Contrôlez votre canal Slack pour vérifier que vous avez reçu cette notification.{: tip}
-7. Facultatif : répétez cette procédure pour ajouter d'autres canaux de notification. 
+
+    Quand vous sauvegardez un webhook Slack, {{site.data.keyword.cloudcerts_short}} envoie automatiquement une notification de confirmation au canal Slack que vous avez configuré. Contrôlez votre canal Slack pour vérifier que vous avez reçu cette notification.
+    {: tip}
+7. Facultatif : répétez cette procédure pour ajouter d'autres canaux de notification.
 
 ## Test d'un canal de notification
 {: #testing-channel}
@@ -205,13 +235,13 @@ Pour ajouter un canal de notification :
 Vous pouvez tester un canal de notification pour vous assurer qu'il est configuré correctement.
 {: shortdesc}
 
-Avant de commencer, [configurez un canal de notification](#adding-channel). 
+Avant de commencer, [configurez un canal de notification](#adding-channel).
 
-Pour tester un canal de notification : 
+Pour tester un canal de notification :
 
-1. Dans la navigation de la page Détails du service, cliquez sur **Paramètres**. 
+1. Dans la navigation de la page Détails du service, cliquez sur **Paramètres**.
 2. Trouvez votre canal de notification puis cliquez sur **Tester la connexion**.
-3. Vérifiez que vous avez reçu une notification dans le canal que vous avez configuré. 
+3. Vérifiez que vous avez reçu une notification dans le canal que vous avez configuré.
 
 
 ## Mise à jour d'un canal de notification
@@ -220,16 +250,16 @@ Pour tester un canal de notification :
 Vous pouvez mettre à jour la configuration de votre canal de notification, activer ou désactiver les notifications ou supprimer des canaux de notification de {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Avant de commencer, [configurez un canal de notification](#adding-channel). 
+Avant de commencer, [configurez un canal de notification](#adding-channel).
 
-1. Dans la navigation de la page Détails du service, cliquez sur **Paramètres**. 
-2. Sélectionnez l'onglet **Notifications**. 
-3. Choisissez l'une des options suivantes. 
-   - Pour désactiver ou activer des notifications pour un canal, paramétrez le commutateur à **Désactiver** ou **Activer**. 
+1. Dans la navigation de la page Détails du service, cliquez sur **Paramètres**.
+2. Sélectionnez l'onglet **Notifications**.
+3. Choisissez l'une des options suivantes.
+   - Pour désactiver ou activer des notifications pour un canal, paramétrez le commutateur à **Désactiver** ou **Activer**.
    - Pour mettre à jour les paramètres pour un canal, sélectionnez **Editer** dans le menu d'actions.
-   - Pour supprimer un canal de notification, sélectionnez **Supprimer** dans le menu d'actions. 
-   
-   
+   - Pour supprimer un canal de notification, sélectionnez **Supprimer** dans le menu d'actions.
+
+
 ## Vérification du contenu HTTP pour une URL de rappel
 {: #verify-callback}
 

@@ -19,7 +19,7 @@ Certificate Manager (Beta)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API documentation](https://console.bluemix.net/apidocs/cloudcerts)
+    [API documentation](https://console.bluemix.net/apidocs/certificate-manager)
     at_events.md
     rellinks.md
     {: .navgroup-end}

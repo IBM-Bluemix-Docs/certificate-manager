@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-08-23"
+lastupdated: "2018-09-02"
 
 ---
 
@@ -21,6 +21,12 @@ lastupdated: "2018-08-23"
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
 
+
+## 2 September 2018
+{: 2September2018}
+
+- **{{site.data.keyword.cloudcerts_long_notm}} is generally available**  
+  The {{site.data.keyword.cloudcerts_short}} service is generally available (GA) in {{site.data.keyword.cloud_notm}}.
 
 ## 22 August 2018
 {: 22August2018}

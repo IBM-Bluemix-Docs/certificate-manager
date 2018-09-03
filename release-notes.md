@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-02"
+lastupdated: "2018-09-03"
 
 ---
 
@@ -54,3 +54,9 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 
 - **Slack notifications**  
   Added Slack notifications so that you'll never miss an expiring certificate. [Learn more about notifications](notifications-dashboard.html).
+
+## 19 December 2017
+{: 19December2017}
+
+- **{{site.data.keyword.cloudcerts_long_notm}} is available as a beta service**  
+  The {{site.data.keyword.cloudcerts_short}} service is available as a beta service in {{site.data.keyword.cloud_notm}}.

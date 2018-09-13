@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-12"
 
 ---
 {:new_window: target="_blank"}
@@ -29,8 +29,9 @@ Before you begin:
 * Convert the files into Privacy-enhanced Electronic Mail (PEM) format.
 * Keep the private key unencrypted to ensure that it can be imported.
 
-To import a certificate, click **Import Certificate** and provide the following details: 
-1. Optional: Enter a display name.
+To import a certificate, click **Import Certificate** and provide the following details:
+
+1. Enter a display name.
 2. Click **Browse**, select the certificate file in PEM format.
 3. Click **Browse**, select the certificate's private key in PEM format.
 4. If applicable, provide the intermediate certificate file in PEM format.
@@ -49,8 +50,7 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Name</td>
-    <td>Optional: A meaningful display name. Maximum length 256 characters. </td>
-    
+    <td>A meaningful display name. Maximum length 256 characters. </td>
   </tr>
   <tr>
     <td>Description</td>

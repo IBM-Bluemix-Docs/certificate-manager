@@ -27,7 +27,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
   It is mandatory to supply a value for the certificate's name when you import a certificate.
 
 - **Aggregated Slack notifications**  
-  Notifications in Slack now appear Aggregated by expiration date.
+  Notifications in Slack ara grouped by expiration date.
 
 ## 2 September 2018
 {: 2September2018}

@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -20,7 +20,11 @@ lastupdated: "2018-09-12"
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 12 September 2018
+{: 12September2018}
 
+- **Certificate name is mandatory**  
+  It is mandatory to supply a value for the certificate's name when you import a certificate.
 
 ## 2 September 2018
 {: 2September2018}

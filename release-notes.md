@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-09-14"
 
 ---
 
@@ -25,7 +25,9 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 
 - **Certificate name is mandatory**  
   It is mandatory to supply a value for the certificate's name when you import a certificate.  
-  Additionally, the **Import a certificate** and **Update a certificate's metadata** v2 APIs are deprecated and will be removed on 1 November 2018. You must upgrade to the v3 APIs. For more information, see [API Documentation](https://console.bluemix.net/apidocs/certificate-manager).
+
+- **Deprecated APIs**  
+  The **Import a certificate** and **Update a certificate's metadata** v2 APIs are deprecated and will be removed on 1 November 2018. You must upgrade to the v3 APIs. For more information, [Review the API Documentation](https://console.bluemix.net/apidocs/certificate-manager).
 
 - **Grouped Slack notifications**  
   Notifications in Slack are grouped by expiration date.

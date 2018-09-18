@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Slack Web フックを使用して Slack に通知を送信するか、任意の
 ## コールバック URL のセットアップ
 {: #callback}
 
-チームの更新プロセスのきっかけにするために、コールバック URL を使用して、毎日使用するツールに通知されるようにすることができます。 例えば、レポートする通知を PagerDuty に送信したり、Github で自動的に問題を開いたり、更新スクリプトをトリガーしたりできます。  
+チームの更新プロセスのきっかけにするために、コールバック URL を使用して、毎日使用するツールに通知されるようにすることができます。 例えば、レポートする通知を PagerDuty に送信したり、GitHub で自動的に問題を開いたり、更新スクリプトをトリガーしたりできます。  
 {: shortdesc}
 
 **重要:** コールバック URL エンドポイントは、{{site.data.keyword.cloudcerts_short}} で使用するために以下の要件を満たす必要があります。
@@ -75,7 +75,7 @@ Slack Web フックを使用して Slack に通知を送信するか、任意の
 ### コールバック URL を使用して GitHub の問題を自動的に開く
 {: #sample}
 
-次のサンプル・コードは、通知が送信されたときに証明書の有効期限が切れる GitHub の問題を作成する方法を示しています。このコードは、{{site.data.keyword.openwhisk}} で実行することも、別の環境でコードを使用することもできます。   
+次のサンプル・コードは、通知が送信されたときに証明書の有効期限が切れる GitHub の問題を作成する方法を示しています。 このコードは、{{site.data.keyword.openwhisk}} で実行することも、別の環境でコードを使用することもできます。   
 {: shortdesc}
 
 このコードを {{site.data.keyword.openwhisk_short}} で実行するには、次のようにします。
@@ -175,7 +175,7 @@ Slack Web フックを使用して Slack に通知を送信するか、任意の
 ```
 {: codeblock}
 
-その他の REST API コマンドについては、[API 資料](https://console.bluemix.net/apidocs/cloudcerts)を参照してください。
+その他の REST API コマンドについては、[API 資料](https://console.bluemix.net/apidocs/certificate-manager)を参照してください。
 {: tip}
 
 

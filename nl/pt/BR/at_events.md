@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -40,15 +40,15 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 	  <td>Importe um certificado que seja emitido por uma autoridade de certificado de empresa terceirizada.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>Faça download de um certificado.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>Listar certificados.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>Listar metadados de certificados. Mostrar detalhes de um certificado.</td>
   </tr>
   <tr>
@@ -64,31 +64,31 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 	  <td>Excluir um certificado.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>Atualizar um certificado, por exemplo, mudar a sua descrição.</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>Atualizar metadados de certificado, por exemplo, mudar a descrição de um certificado.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>Listar canais de notificações.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>Criar um canal de notificações.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>Desativar ou ativar um canal de notificações.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>Atualizar o terminal de um canal de notificações.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>Excluir um canal de notificações.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>Testar um canal de notificações.</td>
   </tr>
   <tr>
@@ -96,7 +96,7 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 	  <td>Uma notificação foi enviada para o terminal de um canal de notificações.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>A chave pública foi solicitada.</td>
   </tr>
 </table>

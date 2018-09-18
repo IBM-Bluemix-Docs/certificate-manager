@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # Sobre o Certificate Manager
 {: #about-certificate-manager}
@@ -63,6 +68,6 @@ Eventos do [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certific
 
 ## Regiões
 {: #availability}
-
-O {{site.data.keyword.cloudcerts_short}} está disponível na região sul dos EUA somente.
+O {{site.data.keyword.cloudcerts_short}} está disponível nas regiões Sul dos Estados Unidos
+e do Reino Unido.
 

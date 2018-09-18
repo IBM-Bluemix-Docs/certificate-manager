@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ lastupdated: "2018-07-20"
     <td> 管理者、編輯者</td>
   </tr>
 </table>
-
-平台角色也提供對實例內之憑證的特定動作存取權。這些動作已淘汰。
 
 
 ## 服務存取角色

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Slack 웹훅을 사용하여 Slack에 알림을 전송하거나 원하는 콜백
 ## 콜백 URL 설정
 {: #callback}
 
-팀을 위해 갱신 프로세스를 트리거하는 데 매일 사용하는 도구에 대한 알림을 게시하도록 콜백 URL을 사용하려고 할 수 있습니다. 예를 들어, pager duty에 보고서에 대한 알림을 전송하거나, Github에서 문제를 자동으로 열거나, 갱신 스크립트를 트리거할 수 있습니다.  
+팀을 위해 갱신 프로세스를 트리거하는 데 매일 사용하는 도구에 대한 알림을 게시하도록 콜백 URL을 사용하려고 할 수 있습니다. 예를 들어, PagerDuty에 보고서에 대한 알림을 전송하거나, GitHub에서 문제를 자동으로 열거나, 갱신 스크립트를 트리거할 수 있습니다.  
 {: shortdesc}
 
 **중요:** 콜백 URL 엔드포인트는 {{site.data.keyword.cloudcerts_short}}와 함께 사용될 다음 요구사항을 충족해야 합니다.
@@ -175,7 +175,7 @@ Slack 웹훅을 사용하여 Slack에 알림을 전송하거나 원하는 콜백
 ```
 {: codeblock}
 
-기타 REST API 명령은 [API 문서](https://console.bluemix.net/apidocs/cloudcerts)를 참조하십시오.
+기타 REST API 명령은 [API 문서](https://console.bluemix.net/apidocs/certificate-manager)를 참조하십시오.
 {: tip}
 
 

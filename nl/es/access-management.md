@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ Puede utilizar roles de acceso a la plataforma para permitir a los usuarios real
     <td> Administrador, Editor </td>
   </tr>
 </table>
-
-Los roles de plataforma también proporcionan acceso a determinadas acciones sobre los certificados dentro de las instancias. Estas acciones están en desuso.
 
 
 ## Roles de acceso al servicio

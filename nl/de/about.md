@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # Informationen zu Certificate Manager
 {: #about-certificate-manager}
@@ -58,6 +63,5 @@ Wenn Sie ein Zertifikat und den entsprechenden privaten Schlüssel in {{site.dat
 
 ## Regionen
 {: #availability}
-
-{{site.data.keyword.cloudcerts_short}} steht nur in er Region 'Vereinigte Staaten (Süden)' zur Verfügung.
+{{site.data.keyword.cloudcerts_short}} steht nur in den Regionen 'USA (Süden)' und 'Vereinigtes Königreich' zur Verfügung.
 

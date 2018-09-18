@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -175,7 +175,7 @@ lastupdated: "2018-08-15"
 ```
 {: codeblock}
 
-如需其他 REST API 指令，請參閱 [API 文件](https://console.bluemix.net/apidocs/cloudcerts)
+如需其他 REST API 指令，請參閱 [API 文件](https://console.bluemix.net/apidocs/certificate-manager)
 {: tip}
 
 

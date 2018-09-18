@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ La seguente tabella elenca i metodi API che generano un evento quando vengono ri
 	  <td>Importa un certificato emesso da un'autorità di certificazione di terze parti.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>Scarica un certificato.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>Elenca i certificati.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>Elenca i metadati dei certificati. Mostra i dettagli di un certificato.</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ La seguente tabella elenca i metodi API che generano un evento quando vengono ri
 	  <td>Elimina un certificato.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>Aggiorna un certificato, ad esempio, modifica la descrizione di un certificato.</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>Aggiorna i metadati del certificato, ad esempio, modifica la descrizione di un certificato.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>Elenca i canali di notifiche.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>Crea un canale di notifiche.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>Disabilita o abilita un canale di notifiche.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>Aggiorna l'endpoint di un canale di notifiche.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>Elimina un canale di notifiche.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>Verifica un canale di notifiche.</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ La seguente tabella elenca i metodi API che generano un evento quando vengono ri
 	  <td>Una notifica è stata inviata a un endpoint di canale di notifiche.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>La chiave pubblica è stata richiesta.</td>
   </tr>
 </table>

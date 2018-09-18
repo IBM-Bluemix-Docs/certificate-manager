@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-07"
+lastupdated: "2018-09-02"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2018-05-07"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Einführung in {{site.data.keyword.cloudcerts_short}} (Beta)
+# {{site.data.keyword.cloudcerts_short}} - Einführung
 {: #gettingstarted}
 
 {{site.data.keyword.cloudcerts_full}} unterstützt Sie beim Speichern und Verwalten von SSL-Zertifikaten für Ihre {{site.data.keyword.IBM_notm}} Cloud-basierten Apps.
@@ -24,4 +24,4 @@ Erstellen Sie zunächst eine neue {{site.data.keyword.cloudcerts_short}}-Service
 3. Klicken Sie auf **Erstellen**.
 4. Um die Zertifikate Ihrer Organisation in {{site.data.keyword.cloudcerts_short}} zu importieren, klicken Sie auf **Zertifikat importieren**.  
 
-Sie können [weitere Informationen](about.html) zu den Vorteilen von {{site.data.keyword.cloudcerts_short}} abrufen und [Benutzerfeedback in developerWorks zur Verfügung stellen](troubleshooting.html#getting-help-and-support), um zur Entwicklung und Verbesserung von {{site.data.keyword.cloudcerts_short}} beizutragen.
+Sie können [weitere Informationen](about.html) zu den Vorteilen von {{site.data.keyword.cloudcerts_short}} abrufen und [Benutzerfeedback in developerWorks zur Verfügung stellen](troubleshooting.html#getting-help-and-support), um zur Entwicklung und Verbesserung von {{site.data.keyword.cloudcerts_short}} beizutragen. Informationen zu Änderungen im Service finden Sie in den [Releaseinformationen](release-notes.html).

@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # Informazioni sul Gestore certificato
 {: #about-certificate-manager}
@@ -27,7 +32,7 @@ Puoi gestire i tuoi certificati nei seguenti modi:
 * Configura i controlli su chi può accedere e gestire i tuoi certificati
 
 ![Diagramma dell'architettura del servizio di alto livello](images/high-level-architecture.png)
-<caption>Architettura del servizio di alto livello </caption>
+<caption>Architettura del servizio di alto livello</caption>
 
 ## Sicurezza chiave privata
 {: #private-key-security}
@@ -58,6 +63,5 @@ Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyw
 
 ## Regioni
 {: #availability}
-
-{{site.data.keyword.cloudcerts_short}} è disponibile solo nella regione Stati Uniti Sud.
+{{site.data.keyword.cloudcerts_short}} è disponibile nelle regioni Stati Uniti Sud e Regno Unito.
 

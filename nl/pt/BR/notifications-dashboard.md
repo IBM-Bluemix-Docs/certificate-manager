@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -38,8 +38,7 @@ Deve-se renovar o seu certificado, fazer upload dele para o {{site.data.keyword.
 ## Configurando uma URL de retorno de chamada
 {: #callback}
 
-Talvez você queria usar a URL de retorno de chamada para postar a notificação para as ferramentas usadas diariamente para acionar o processo de renovação para a sua equipe. Por exemplo, é possível enviar notificações para relatórios da tarefa de
-pager, abrir automaticamente um problema no Github ou acionar scripts de renovação.  
+Talvez você queria usar a URL de retorno de chamada para postar a notificação para as ferramentas usadas diariamente para acionar o processo de renovação para a sua equipe. Por exemplo, é possível enviar notificações para relatar ao PagerDuty, abrir automaticamente um problema no GitHub ou acionar scripts de renovação.  
 {: shortdesc}
 
 **Importante:** o terminal da sua URL de retorno de chamada deve atender aos seguintes requisitos para
@@ -179,7 +178,7 @@ Para executar esse código no  {{site.data.keyword.openwhisk_short}}:
 ```
 {: codeblock}
 
-Para outros comandos da API de REST, consulte a documentação da API do [](https://console.bluemix.net/apidocs/cloudcerts)
+Para outros comandos de API de REST, consulte a [documentação da API](https://console.bluemix.net/apidocs/certificate-manager)
 {: tip}
 
 

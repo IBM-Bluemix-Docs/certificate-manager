@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Puoi inviare notifiche a Slack usando un webhook Slack o utilizzare qualsiasi UR
 ## Configurazione di un URL di callback
 {: #callback}
 
-Potresti voler utilizzare l'URL di callback per inviare notifiche agli strumenti che utilizzi quotidianamente per attivare il processo di rinnovo per il tuo team. Ad esempio, puoi inviare notifiche per le segnalazioni a pagerduty, aprire automaticamente un problema in Github o attivare gli script di rinnovo.  
+Potresti voler utilizzare l'URL di callback per inviare notifiche agli strumenti che utilizzi quotidianamente per attivare il processo di rinnovo per il tuo team. Ad esempio, puoi inviare notifiche per le segnalazioni a PagerDuty, aprire automaticamente un problema in GitHub o attivare gli script di rinnovo.  
 {: shortdesc}
 
 **Importante:** l'endpoint del tuo URL di callback deve soddisfare i seguenti requisiti per poter essere utilizzato con {{site.data.keyword.cloudcerts_short}}:
@@ -175,7 +175,7 @@ Per eseguire questo codice in {{site.data.keyword.openwhisk_short}}:
 ```
 {: codeblock}
 
-Per altri comandi API REST, vedi la [documentazione API](https://console.bluemix.net/apidocs/cloudcerts)
+Per altri comandi API REST, vedi la [documentazione API](https://console.bluemix.net/apidocs/certificate-manager)
 {: tip}
 
 

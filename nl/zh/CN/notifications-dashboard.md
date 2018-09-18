@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ lastupdated: "2018-08-15"
 ## 设置回调 URL
 {: #callback}
 
-您可能希望使用回调 URL 将通知发布到每天使用的工具，以触发团队的更新过程。例如，您可以发送通知以向负责的寻呼机进行报告，自动在 Github 中创建问题，或触发更新脚本。  
+您可能希望使用回调 URL 将通知发布到每天使用的工具，以触发团队的更新过程。例如，您可以发送通知向 PagerDuty 报告，在 GitHub 中自动创建问题，也可以触发更新脚本。  
 {: shortdesc}
 
 **重要信息：**回调 URL 端点必须满足以下需求才能用于 {{site.data.keyword.cloudcerts_short}}：
@@ -175,7 +175,7 @@ lastupdated: "2018-08-15"
 ```
 {: codeblock}
 
-有关其他 REST API 命令，请参阅 [API 文档](https://console.bluemix.net/apidocs/cloudcerts)
+有关其他 REST API 命令，请参阅 [API 文档](https://console.bluemix.net/apidocs/certificate-manager)
 {: tip}
 
 

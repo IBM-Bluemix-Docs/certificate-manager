@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ Puoi utilizzare i ruoli di accesso alla piattaforma per consentire agli utenti d
     <td> Amministratore, editor </td>
   </tr>
 </table>
-
-I ruoli della piattaforma forniscono inoltre l'accesso a determinate azioni sui certificati all'interno delle istanze. Queste azioni sono obsolete.
 
 
 ## Ruoli di accesso al servizio

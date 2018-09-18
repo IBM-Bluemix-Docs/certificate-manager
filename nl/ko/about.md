@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # Certificate Manager 정보
 {: #about-certificate-manager}
@@ -58,6 +63,5 @@ lastupdated: "2018-08-02"
 
 ## 지역
 {: #availability}
-
-{{site.data.keyword.cloudcerts_short}}는 미국 남부 지역에서만 사용할 수 있습니다.
+{{site.data.keyword.cloudcerts_short}}는 미국 남부 및 영국 지역에서 사용 가능합니다.
 

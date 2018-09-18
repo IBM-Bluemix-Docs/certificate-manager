@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-07"
+lastupdated: "2018-09-02"
 
 ---
 {:new_window: target="_blank"}
@@ -11,7 +11,7 @@ lastupdated: "2018-05-07"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# 開始使用 {{site.data.keyword.cloudcerts_short}}（測試版）
+# 開始使用 {{site.data.keyword.cloudcerts_short}}
 {: #gettingstarted}
 
 {{site.data.keyword.cloudcerts_full}} 可協助您儲存及管理 {{site.data.keyword.IBM_notm}} 雲端型應用程式的 SSL 憑證。
@@ -24,4 +24,4 @@ lastupdated: "2018-05-07"
 3. 按一下**建立**。
 4. 若要將您組織的憑證匯入至 {{site.data.keyword.cloudcerts_short}}，請按一下**匯入憑證**。  
 
-您也可以[進一步瞭解](about.html)您從 {{site.data.keyword.cloudcerts_short}} 獲得的東西，並[在 developerWorks 提供使用者意見](troubleshooting.html#getting-help-and-support)以加強 {{site.data.keyword.cloudcerts_short}} 的開發。
+您也可以[進一步瞭解](about.html)您從 {{site.data.keyword.cloudcerts_short}} 獲得的東西，並[在 developerWorks 提供使用者意見](troubleshooting.html#getting-help-and-support)以加強 {{site.data.keyword.cloudcerts_short}} 的開發。要找出服務裡變更的內容，請參閱[版本注意事項](release-notes.html)。

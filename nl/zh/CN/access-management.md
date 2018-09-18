@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ lastupdated: "2018-07-20"
     <td> 管理员、编辑者 </td>
   </tr>
 </table>
-
-平台角色还会授予对实例中证书的特定操作的访问权。这些操作已不推荐使用。
 
 
 ## 服务访问角色

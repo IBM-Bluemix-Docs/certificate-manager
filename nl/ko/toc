@@ -4,7 +4,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="certificate-manager" audience="service" arm="3663406" href="/docs/services/certificate-manager/index.html"}
-Certificate Manager(베타)
+Certificate Manager
 
     {: .navgroup id="learn"}
     index.md
@@ -19,11 +19,12 @@ Certificate Manager(베타)
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API 문서](https://console.bluemix.net/apidocs/cloudcerts)
+    [API 문서](https://console.bluemix.net/apidocs/certificate-manager)
     at_events.md
     rellinks.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}
     troubleshooting.md
+    release-notes.md
     {: .navgroup-end}

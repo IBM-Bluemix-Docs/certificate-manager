@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ Vous pouvez utiliser des rôles d'accès à la plateforme pour permettre aux uti
     <td> Administrateur, Editeur </td>
   </tr>
 </table>
-
-Les rôles de plateforme donnent également accès à certaines actions sur les certificats au sein des instances. Ces actions sont obsolètes.
 
 
 ## Rôles d'accès au service

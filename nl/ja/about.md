@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # Certificate Manager 製品情報
 {: #about-certificate-manager}
@@ -58,6 +63,5 @@ lastupdated: "2018-08-02"
 
 ## 地域
 {: #availability}
-
-{{site.data.keyword.cloudcerts_short}} は、米国南部地域でのみ使用可能です。
+{{site.data.keyword.cloudcerts_short}} は、米国南部地域および英国地域でのみ使用可能です。
 

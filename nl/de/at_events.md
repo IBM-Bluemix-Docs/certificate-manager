@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 	  <td>Von einer unabhängige Zertifizierungsstelle ausgestelltes Zertifikat importieren.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>Zertifikat herunterladen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>Zertifikate auflisten.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>Metadaten für Zertifikate auflisten. Details zu einem Zertifikat anzeigen.</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 	  <td>Zertifikat löschen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>Zertifikat aktualisieren, z. B. Beschreibung eines Zertifikats ändern.</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>Zertifikatsmetadaten aktualisieren, z. B. Beschreibung eines Zertifikats ändern.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>Benachrichtigungskanäle auflisten.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>Benachrichtigungskanal erstellen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>Benachrichtigungskanal inaktivieren oder aktivieren.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>Endpunkt für einen Benachrichtigungskanal aktualisieren.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>Benachrichtigungskanal löschen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>Benachrichtigungskanal testen.</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 	  <td>Benachrichtigung wurde an den Endpunkt eines Benachrichtigungskanals gesendet.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>Öffentlicher Schlüssel wurde angefordert.</td>
   </tr>
 </table>

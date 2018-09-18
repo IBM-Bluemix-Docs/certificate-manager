@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ Le tableau suivant répertorie les méthodes d'API générant un événement lor
 	  <td>Importe un certificat qui est émis par une autorité de certification tiers.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>Télécharge un certificat.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>Répertorie les certificats.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>Répertorie les métadonnées de certificat. Affiche les détails d'un certificat.</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ Le tableau suivant répertorie les méthodes d'API générant un événement lor
 	  <td>Supprime un certificat.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>Met à jour un certificat (en changeant, par exemple, sa description).</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>Met à jour des métadonnées de certificat (en changeant, par exemple, la description d'un certificate).</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>Liste les canaux de notifications.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>Crée un canal de notification.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>Désactive ou active un canal de notification.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>Met à jour le noeud final d'un canal de notification.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>Supprime un canal de notification.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>Teste un canal de notification.</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ Le tableau suivant répertorie les méthodes d'API générant un événement lor
 	  <td>Une notification a été envoyée au noeud final d'un canal de notification.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>La clé publique a été demandée.</td>
   </tr>
 </table>

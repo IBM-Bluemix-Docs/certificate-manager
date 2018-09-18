@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -43,8 +43,6 @@ como a criação ou a exclusão de instâncias em sua conta do {{site.data.keywo
     <td> Administrador, Editor </td>
   </tr>
 </table>
-
-As funções de plataforma também fornecem acesso a determinadas ações nos certificados dentro das instâncias. Essas ações foram descontinuadas.
 
 
 ## Funções de acesso de serviço

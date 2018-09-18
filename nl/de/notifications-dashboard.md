@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -175,7 +175,7 @@ Gehen Sie wie folgt vor, um diesen Code in {{site.data.keyword.openwhisk_short}}
 ```
 {: codeblock}
 
-Informationen zu anderen REST-API-Befehlen finden Sie in der [API-Dokumentation](https://console.bluemix.net/apidocs/cloudcerts).
+Informationen zu anderen REST-API-Befehlen finden Sie in der [API-Dokumentation](https://console.bluemix.net/apidocs/certificate-manager).
 {: tip}
 
 

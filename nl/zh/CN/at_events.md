@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ lastupdated: "2018-08-16"
 	  <td>导入由第三方认证中心签发的证书。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>下载证书。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>列出证书。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>列出证书元数据。显示证书的详细信息。</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ lastupdated: "2018-08-16"
 	  <td>删除证书。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>更新证书，例如更改证书的描述。</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>更新证书元数据，例如更改证书的描述。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>列出通知通道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>创建通知通道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>禁用或启用通知通道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>更新通知通道的端点。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>删除通知通道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>测试通知通道。</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ lastupdated: "2018-08-16"
 	  <td>已将通知发送到通知通道端点。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>已请求公用密钥。</td>
   </tr>
 </table>

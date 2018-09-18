@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ lastupdated: "2018-08-16"
 	  <td>サード・パーティーの認証局によって発行された証明書をインポートします。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>証明書をダウンロードします。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>証明書をリストします。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>証明書メタデータをリストします。 証明書の詳細を表示します。</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ lastupdated: "2018-08-16"
 	  <td>証明書を削除します。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>証明書を更新します。例えば、証明書の説明を変更します。</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>証明書メタデータを更新します。例えば、証明書の説明を変更します。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>リスト通知チャネル</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>通知チャネルを作成します。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>通知チャネルを無効または有効にします。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>通知チャネルのエンドポイントを更新します。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>通知チャネルを削除します。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>通知チャネルをテストします。</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ lastupdated: "2018-08-16"
 	  <td>通知は通知チャネルのエンドポイントに送信されました。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>公開鍵が要求されました。</td>
   </tr>
 </table>

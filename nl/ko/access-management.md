@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ lastupdated: "2018-07-20"
     <td> 관리자, 편집자 </td>
   </tr>
 </table>
-
-플랫폼 역할은 인스턴스 내 인증서에 대한 특정 조치에 액세스를 제공합니다. 이 조치는 더 이상 사용되지 않습니다.
 
 
 ## 서비스 액세스 역할

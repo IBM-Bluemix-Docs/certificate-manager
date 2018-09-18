@@ -2,14 +2,19 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-02"
+lastupdated: "2018-08-21"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
+
 
 # 關於 Certificate Manager
 {: #about-certificate-manager}
@@ -58,6 +63,5 @@ lastupdated: "2018-08-02"
 
 ## 地區
 {: #availability}
-
-只有在美國南部地區才能使用 {{site.data.keyword.cloudcerts_short}}。
+{{site.data.keyword.cloudcerts_short}} 提供於美國南部及英國地區。
 

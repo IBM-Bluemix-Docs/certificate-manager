@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ lastupdated: "2018-08-16"
 	  <td>匯入由第三方憑證管理中心發出的憑證。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>下載憑證。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>列出憑證。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>列出憑證 meta 資料。顯示憑證的詳細資料。</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ lastupdated: "2018-08-16"
 	  <td>刪除憑證。</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>更新憑證，例如，變更憑證的說明。</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>更新憑證 meta 資料，例如，變更憑證的說明。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>列出通知頻道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>建立通知頻道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>停用或啟用通知頻道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>更新通知頻道的端點。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>刪除通知頻道。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>測試通知頻道。</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ lastupdated: "2018-08-16"
 	  <td>已傳送通知到通知頻道端點。</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>已要求公開金鑰。</td>
   </tr>
 </table>

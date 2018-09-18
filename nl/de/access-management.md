@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-21"
 
 ---
 {:new_window: target="_blank"}
@@ -42,8 +42,6 @@ Mithilfe von Plattformzugriffsrollen können Sie es Benutzern ermöglichen, Aufg
     <td> Administrator, Bearbeiter </td>
   </tr>
 </table>
-
-Darüber hinaus ermöglichen Plattformrollen den Zugriff auf bestimmte Aktionen für Zertifikate innerhalb von Instanzen. Diese Aktionen werden nicht mehr verwendet.
 
 
 ## Zugriffsrollen für den Service

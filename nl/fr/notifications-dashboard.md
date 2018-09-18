@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-15"
+lastupdated: "2018-09-05"
 
 ---
 {:new_window: target="_blank"}
@@ -36,7 +36,7 @@ Vous pouvez envoyer des notifications à Slack en utilisant un webhook Slack ou 
 ## Configuration d'une URL de rappel
 {: #callback}
 
-Vous pouvez utiliser une URL de rappel pour poster une notification aux outils que vous utilisez quotidiennement afin de déclencher le processus de renouvellement pour votre équipe. Ainsi, vous pouvez envoyer des notifications pour effectuer un rapport à Pager Duty, ouvrir automatiquement un problème dans Github ou déclencher des scripts de renouvellement.  
+Vous pouvez utiliser une URL de rappel pour poster une notification aux outils que vous utilisez quotidiennement afin de déclencher le processus de renouvellement pour votre équipe. Ainsi, vous pouvez envoyer des notifications pour effectuer un rapport à PagerDuty, ouvrir automatiquement un problème dans GitHub ou déclencher des scripts de renouvellement.  
 {: shortdesc}
 
 **Important :** votre noeud final d'URL de rappel doit répondre aux exigences suivantes pour être utilisé avec {{site.data.keyword.cloudcerts_short}} :
@@ -175,7 +175,7 @@ Pour exécuter ce code dans {{site.data.keyword.openwhisk_short}} :
 ```
 {: codeblock}
 
-Pour les autres commandes d'API REST, voir la [documentation d'API](https://console.bluemix.net/apidocs/cloudcerts)
+Pour les autres commandes d'API REST, voir la [documentation d'API](https://console.bluemix.net/apidocs/certificate-manager)
 {: tip}
 
 

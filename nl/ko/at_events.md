@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-16"
+lastupdated: "2018-08-21"
 
 ---
 
@@ -37,15 +37,15 @@ lastupdated: "2018-08-16"
 	  <td>써드파티 인증 기관에서 발급된 인증서를 가져옵니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.read</td>
+    <td>cloudcerts.certificate.download</td>
 	  <td>인증서를 다운로드합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.list</td>
+    <td>cloudcerts.certificates.read</td>
 	  <td>인증서를 나열합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.list</td>
+    <td>cloudcerts.certificates-metadata.read</td>
 	  <td>인증서 메타데이터를 나열합니다. 인증서의 세부사항을 표시합니다.</td>
   </tr>
   <tr>
@@ -61,31 +61,31 @@ lastupdated: "2018-08-16"
 	  <td>인증서를 삭제합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.update</td>
-	  <td>인증서를 업데이트합니다(예: 인증서의 설명 변경).</td>
+    <td>cloudcerts.certificate-metadata.update</td>
+	  <td>인증서 메타데이터를 업데이트합니다(예: 인증서의 설명 변경).</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channels.list</td>
+    <td>cloudcerts.notification-channels.list</td>
 	  <td>알림 채널을 나열합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.create</td>
+    <td>cloudcerts.notification-channel.create</td>
 	  <td>알림 채널을 작성합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.state</td>
+    <td>cloudcerts.notification-channel.state</td>
 	  <td>알림 채널을 사용하지 않거나 사용합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.update</td>
+    <td>cloudcerts.notification-channel.update</td>
 	  <td>알림 채널의 엔드포인트를 업데이트합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.delete</td>
+    <td>cloudcerts.notification-channel.delete</td>
 	  <td>알림 채널을 삭제합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications-channel.test</td>
+    <td>cloudcerts.notification-channel.test</td>
 	  <td>알림 채널을 테스트합니다.</td>
   </tr>
   <tr>
@@ -93,7 +93,7 @@ lastupdated: "2018-08-16"
 	  <td>알림 채널 엔드포인트에 알림이 전송되었습니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notifications.publickey</td>
+    <td>cloudcerts.notification-channels-publickey.read</td>
 	  <td>공개 키가 요청되었습니다.</td>
   </tr>
 </table>

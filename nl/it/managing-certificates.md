@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-12"
 
 ---
 {:new_window: target="_blank"}
@@ -29,8 +29,9 @@ Prima di iniziare:
 * Converti i file nel formato Privacy-enhanced Electronic Mail (PEM).
 * Lascia la chiave privata non codificata per assicurarti che possa essere importata.
 
-Per importare un certificato, fai clic su **Importa certificato** e fornisci i seguenti dettagli: 
-1. Facoltativo: immetti un nome di visualizzazione
+Per importare un certificato, fai clic su **Importa certificato** e fornisci i seguenti dettagli:
+
+1. Immetti un nome di visualizzazione
 2. Fai clic su **Sfoglia**, seleziona il file del certificato nel formato PEM.
 3. Fai clic su **Sfoglia**, seleziona la chiave privata del certificato nel formato PEM.
 4. Se applicabile, fornisci il file del certificato intermedio nel formato PEM.
@@ -49,8 +50,7 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
   <tr>
     <td>Nome</td>
-    <td>Facoltativo: un nome di visualizzazione significativo. Lunghezza massima 256 caratteri. </td>
-    
+    <td>Un nome di visualizzazione significativo. Lunghezza massima 256 caratteri. </td>
   </tr>
   <tr>
     <td>Descrizione</td>

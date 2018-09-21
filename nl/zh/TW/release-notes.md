@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-03"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -20,7 +20,15 @@ lastupdated: "2018-09-03"
 
 {{site.data.keyword.cloudcerts_long}} 服務的下列特性及變更已可使用。
 
+## 2018 年 9 月 12 日
+{: 12September2018}
 
+- **憑證名稱是必要的**  
+  在您匯入憑證時，必須提供值給憑證名稱。  
+  此外，**Import a certificate** 和 **Update a certificate's metadata** v2 API 已淘汰，將在 2018 年 11 月 1 日移除。您必須升級至 v3 API。如需相關資訊，請參閱 [API 文件](https://console.bluemix.net/apidocs/certificate-manager)。
+
+- **分組的 Slack 通知**  
+  Slack 中的通知會依到期日分組。
 
 ## 2018 年 9 月 2 日
 {: 2September2018}

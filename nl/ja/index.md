@@ -24,4 +24,4 @@ lastupdated: "2018-09-02"
 3. **「作成」**をクリックします。
 4. 組織の証明書を {{site.data.keyword.cloudcerts_short}} にインポートするには、**「証明書のインポート (Import Certificate)」**をクリックします。  
 
-{{site.data.keyword.cloudcerts_short}} から得られるものの[詳細](about.html)を確認し、開発段階にある {{site.data.keyword.cloudcerts_short}} を強化するために、[ でユーザーのフィードバックを提供する](troubleshooting.html#getting-help-and-support)こともできます。サービスで変更された内容を確認するには、[リリース・ノート](release-notes.html)を参照してください。
+{{site.data.keyword.cloudcerts_short}} から得られるものの[詳細](about.html)を確認し、開発段階にある {{site.data.keyword.cloudcerts_short}} を強化するために、[ でユーザーのフィードバックを提供する](troubleshooting.html#getting-help-and-support)こともできます。 サービスで変更された内容を確認するには、[リリース・ノート](release-notes.html)を参照してください。

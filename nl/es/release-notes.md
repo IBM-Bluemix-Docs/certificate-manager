@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-03"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -20,7 +20,15 @@ lastupdated: "2018-09-03"
 
 Están disponibles las siguientes características y cambios del servicio {{site.data.keyword.cloudcerts_long}}.
 
+## 12 de septiembre de 2018
+{: 12September2018}
 
+- **El nombre de certificado es obligatorio**  
+  Al importar un certificado, es obligatorio proporcionar un valor para el nombre del vertificado.  
+  Además, las API v2 **Importar un certificado** y **Actualizar los metadatos de un certificado** han quedado en desuso y se eliminarán el 1 de noviembre de 2018. Debe actualizar a la v3 de las API. Para obtener más información, consulte [Documentación de la API](https://console.bluemix.net/apidocs/certificate-manager).
+
+- **Notificaciones de Slack agrupadas**  
+  Las notificaciones en Slack están agrupadas por fecha de caducidad.
 
 ## 2 de septiembre de 2018
 {: 2September2018}

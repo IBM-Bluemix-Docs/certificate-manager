@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-12"
 
 ---
 {:new_window: target="_blank"}
@@ -29,8 +29,9 @@ Führen Sie zunächst folgende Schritte aus:
 * Konvertieren Sie die Dateien in das PEM-Format (PEM = Privacy-enhanced Electronic Mail).
 * Lassen Sie den privaten Schlüssel unverschlüsselt, um sicherzustellen, dass er importiert werden kann.
 
-Um ein Zertifikat zu importieren, klicken Sie auf **Zertifikat importieren** und machen Sie folgende Angaben: 
-1. Optional: Geben Sie einen Anzeigename ein.
+Um ein Zertifikat zu importieren, klicken Sie auf **Zertifikat importieren** und machen Sie folgende Angaben:
+
+1. Geben Sie einen Anzeigenamen ein. 
 2. Klicken Sie auf **Durchsuchen** und wählen Sie die Zertifikatsdatei im PEM-Format aus.
 3. Klicken Sie auf **Durchsuchen** und wählen Sie den privaten Schlüssel des Zertifikats im PEM-Format aus.
 4. Falls zutreffend: Geben Sie die Zwischenzertifikatsdatei im PEM-Format an.
@@ -49,8 +50,7 @@ Wenn Sie ein Zertifikat importiert haben, werden die folgenden Informationen in 
   </tr>
   <tr>
     <td>Name</td>
-    <td>Optional: Aussagekräftiger Anzeigename. Maximal zulässige Länge: 256 Zeichen. </td>
-    
+    <td>Ein aussagekräftiger Anzeigename. Maximal zulässige Länge: 256 Zeichen. </td>
   </tr>
   <tr>
     <td>Beschreibung</td>

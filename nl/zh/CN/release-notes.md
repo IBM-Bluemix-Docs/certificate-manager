@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-03"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -20,7 +20,15 @@ lastupdated: "2018-09-03"
 
 提供 {{site.data.keyword.cloudcerts_long}} 服务的下列功能和更改。
 
+## 2018 年 9 月 12 日
+{: 12September2018}
 
+- **证书名称是必需的**  
+  导入证书时，必须提供证书的名称值。  
+  此外，不推荐使用**导入证书**和**更新证书元数据** V2 API，将于 2018 年 11 月 1 日移除。必须升级至 V3 API。有关更多信息，请参阅 [API 文档](https://console.bluemix.net/apidocs/certificate-manager)。
+
+- **分组 Slack 通知**  
+ Slack 中的通知按到期日期分组。
 
 ## 2018 年 9 月 2 日
 {: 2September2018}

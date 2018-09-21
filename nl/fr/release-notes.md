@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-03"
+lastupdated: "2018-09-13"
 
 ---
 
@@ -20,7 +20,15 @@ lastupdated: "2018-09-03"
 
 Les fonctions et modifications suivantes sont disponibles pour le service {{site.data.keyword.cloudcerts_long}}.
 
+## 12 septembre 2018
+{: 12September2018}
 
+- **Un nom de certificat est obligatoire**  
+  Il est obligatoire de fournir une valeur pour nom du certificat lorsque vous importez un certificat.  
+  En outre, les API **Importer un certificat** et **Mettre à jour les métadonnées du certificat** version 2 sont obsolètes et seront supprimées le 1er novembre 2018. Vous devez les mettre à niveau vers les API version 3. Pour plus d'informations, voir la [documentation sur les API](https://console.bluemix.net/apidocs/certificate-manager).
+
+- **Notifications Slack regroupées**  
+  Dans Slack, les notifications sont regroupées par date d'expiration.
 
 ## 2 septembre 2018
 {: 2September2018}

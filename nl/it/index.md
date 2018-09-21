@@ -11,7 +11,7 @@ lastupdated: "2018-09-02"
 {:codeblock: .codeblock}
 {:pre: .pre}
 
-# Introduzione a {{site.data.keyword.cloudcerts_short}} 
+# Introduzione a {{site.data.keyword.cloudcerts_short}}
 {: #gettingstarted}
 
 {{site.data.keyword.cloudcerts_full}} ti aiuta ad archiviare e gestire i certificati SSL per le tue applicazioni basate sul cloud {{site.data.keyword.IBM_notm}}.

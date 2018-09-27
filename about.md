@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-27"
 
 ---
 
@@ -16,10 +16,10 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 
-# About Certificate Manager
+# About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_short}} helps you to manage the SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps and services.
+{{site.data.keyword.cloudcerts_long}} helps you to manage the SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps and services.
 {: shortdesc}
 
 You can import SSL certificates that you obtain for your apps and services, store them securely, and get a central view of the certificates that you are using.
@@ -41,27 +41,32 @@ When you import a certificate and the corresponding private key into {{site.data
 
 ## Integrations
 {: #integrations}
+
 <table>
-<caption>IBM Cloud services that use Certificate Manager</caption>
+<caption>{{site.data.keyword.cloud_notm}} services that use {{site.data.keyword.cloudcerts_short}}</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Store your Kubernetes cluster custom domain certificates in Certificate Manager, then deploy them using [Kubernetes Service plug-in commands](/docs/containers/cs_cli_reference.html) for the IBM Cloud CLI. [Learn more about this integration](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
+    <td>Store your Kubernetes cluster custom domain certificates in {{site.data.keyword.cloudcerts_short}}, then deploy them using [Kubernetes Service plug-in commands](/docs/containers/cs_cli_reference.html) for the {{site.data.keyword.cloud_notm}} CLI. [Learn more about this integration ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
   </tr>
   <tr>
-    <td>IBM Cloud Security Advisor</td>
-    <td>Security Advisor centralizes the insights of IBM Cloud services, including indication of expired and about-to-expire certificates in instances of Certificate Manager in your IBM Cloud account. [Learn more about Security Advisor](/docs/services/security-advisor/index.html#index)</td>
-  </tr><tr>
+    <td>{{site.data.keyword.security-advisor_full_notm}}</td>
+    <td>{{site.data.keyword.security-advisor_short}} centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor/index.html#index)</td>
+  </tr>
+  <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix}}. [Learn more about {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+    <td>Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.cloud_notm}}. [Learn more about {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
     <p>To get the list of actions that generate an event, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
   </tr>
+  
 </table>
 
 ## Regions
 {: #availability}
+
 {{site.data.keyword.cloudcerts_short}} is available in the US-South and United Kingdom regions.
+
 

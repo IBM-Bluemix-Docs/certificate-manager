@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-27"
 
 ---
 {:new_window: target="_blank"}
@@ -42,7 +42,7 @@ You might want to use callback URL to post notification to the tools that you us
 **Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 * The endpoint must use the HTTPS protocol.
 * The endpoint must not require HTTP headers. This requirement includes authorization headers.
-
+* The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
 
 ### Notification format
 {: #notification_format}
@@ -64,13 +64,13 @@ After you decode and verify the payload, the content is a JSON string.
     "expiring_certificates":[
           {
              "cert_crn":"<CERTIFICATE_CRN>",
+             "name":"<CERTIFICATE_NAME>",
              "domains":"<CERTIFICATE_DOMAIN>"
           },
           ...
 }
 ```
 {: screen}
-
 
 ### Using a callback URL to automatically open a GitHub issue
 {: #sample}

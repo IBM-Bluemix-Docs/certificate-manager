@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-27"
 
 ---
 {:new_window: target="_blank"}
@@ -125,4 +125,4 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 2. From the navigation on the service details page, select **Manage**.
 3. Select a certificate.
 4. In the certificate details, find the certificate CRN.
-5. Copy the certificate ID. The CRN contains different values that are all separated by a colon (`:`). The certificate ID is the last value in your CRN; for example: `e20cb664efcbfa2c2f57801230d246a6)`
+5. Copy the certificate ID. The CRN contains different values that are all separated by a colon (`:`). The certificate ID is the last value in your CRN; for example: `e20cb664efcbfa2c2f57801230d246a6`

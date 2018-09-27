@@ -25,6 +25,7 @@ Certificate Manager
     {: .navgroup-end}
 
     {: .navgroup id="help"}
+    faq.md
     troubleshooting.md
     release-notes.md
     {: .navgroup-end}

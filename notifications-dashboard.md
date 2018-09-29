@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-27"
+lastupdated: "2018-09-29"
 
 ---
 {:new_window: target="_blank"}
@@ -71,113 +71,6 @@ After you decode and verify the payload, the content is a JSON string.
 }
 ```
 {: screen}
-
-### Using a callback URL to automatically open a GitHub issue
-{: #sample}
-
-The following sample code shows how you can create a GitHub issue for expiring certificates when a notification is sent. You can run this code in {{site.data.keyword.openwhisk}}, or use the code in a different environment.   
-{: shortdesc}
-
-To run this code in {{site.data.keyword.openwhisk_short}}:
-
-1. Create an action in [Cloud Functions](/docs/openwhisk/index.html#index).
-2. Use the following code to automatically create a GitHub issue:
-
-```
-
-    const {promisify} = require('bluebird');
-    const request = promisify(require('request'));
-    const jwtVerify = promisify(require('jsonwebtoken').verify);
-    const jwtDecode = require('jsonwebtoken').decode;
-
-    const personal_github_token = "<PERSONAL_GITHUB_TOKEN>";
-
-    /**
-     * Returns the expiration data as short date string
-     * @param time
-     * @returns {string}
-    */
-    function calcDays(time) {
-        const date = new Date(time);
-        return date.toDateString();
-    }
-
-    /**
-     * Creates the issue body string
-     * @param data
-     * @returns {string}
-     */
-    function createBody(data) {
-        return `The following certificates will expire at ${calcDays(data.expiry_date)}:
-     ${data.expiring_certificates.reduce((accumulator, currentValue) => {
-            return accumulator + `
-    > Domain(s): ${currentValue.domains}
-    CRN: ${currentValue.cert_crn}
-    `;
-        }, "")}`
-    }
-
-    /**
-     * Gets the notification body and creates a Github issue
-     * @param params
-     * @returns {Promise}
-     */
-    async function githubIssueCreator(params) {
-        // Decode message to get information
-        const data = jwtDecode(params.data);
-        try {
-            // Create request options to get the public key for verification
-            const keysOptions = {
-                method: 'GET',
-                url: `https://<CERTIFICATE_MANAGER_CLUSTER_BASE_URL>/api/v1/instances/${encodeURIComponent(data.instance_crn)}/notifications/publicKey`
-            };
-
-            // Send request to get the public key
-            const keysResponse = await request(keysOptions);
-
-            // Verify the data using the acquired public key
-            await jwtVerify(params.data, JSON.parse(keysResponse.body).publicKey);
-
-            // Create request options to send a new issue to Github
-            // Based on Github API - https://developer.github.com/v3/issues/#create-an-issue
-            const gitOptions = {
-                method: 'POST',
-                url: 'https://api.github.com/repos/<REPO_OWNER>/<REPO_NAME>/issues',
-                headers:
-                    {
-                        'cache-control': 'no-cache',
-                        'content-type': 'application/json',
-                        authorization: 'Token 55fbe9a7e6776c9425a528783cc9755b5a0f2bb5'
-                    },
-                json:
-                    {
-                        title: "Certificates about to expire",
-                        body: createBody(data),
-                        labels: ['certificates']
-                    }
-            };
-            // Send request to Github
-            await request(gitOptions);
-        } catch (err) {
-            console.log(err);
-            return Promise.reject({
-                statusCode: 500,
-                headers: {'Content-Type': 'application/json'},
-                body: {message: 'Error processing your request'},
-            });
-        }
-
-    }
-
-
-    exports.main = githubIssueCreator;
-
-```
-{: codeblock}
-
-For other REST API commands see the [API documentation](https://console.bluemix.net/apidocs/certificate-manager)
-{: tip}
-
 
 ## Configuring a notification channel
 {: #adding-channel}
@@ -273,3 +166,8 @@ To download the public key:
 1. From the navigation on the service details page, click **Settings**.
 2. Open the **Notifications** tab.
 3. Click the **Download Key** button. The key is downloaded as a PEM file.
+
+## Examples
+{: #examples}
+
+* <a href="https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/" target="_blank">[Using a callback URL to automatically open a GitHub issue <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -33,67 +33,67 @@ The following table lists the API methods that generate an event when they are c
 	  <th>Description</th>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.import</td>
+    <td>`cloudcerts.certificate.import`</td>
 	  <td>Import a certificate that is issued by a third-party certificate authority.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.download</td>
+    <td>`cloudcerts.certificate.download`</td>
 	  <td>Download a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.read</td>
+    <td>`cloudcerts.certificates.read`</td>
 	  <td>List certificates.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.read</td>
+    <td>`cloudcerts.certificates-metadata.read`</td>
 	  <td>List certificates metadata. Show details of a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.search</td>
+    <td>`cloudcerts.certificates.search`</td>
 	  <td>Search certificates.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.search</td>
+    <td>`cloudcerts.certificates-metadata.search`</td>
 	  <td>Search certificates metadata.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.delete</td>
+    <td>`cloudcerts.certificate.delete`</td>
 	  <td>Delete a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate-metadata.update</td>
+    <td>`cloudcerts.certificate-metadata.update`</td>
 	  <td>Update certificate metadata, for example, change the description of a certificate.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels.list</td>
+    <td>`cloudcerts.notification-channels.list`</td>
 	  <td>List notifications channels.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.create</td>
+    <td>`cloudcerts.notification-channel.create`</td>
 	  <td>Create a notifications channel.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.state</td>
+    <td>`cloudcerts.notification-channel.state`</td>
 	  <td>Disable or enable a notifications channel.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.update</td>
+    <td>`cloudcerts.notification-channel.update`</td>
 	  <td>Update a notifications channel's endpoint.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.delete</td>
+    <td>`cloudcerts.notification-channel.delete`</td>
 	  <td>Delete a notifications channel.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.test</td>
+    <td>`cloudcerts.notification-channel.test`</td>
 	  <td>Test a notifications channel.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification.sent</td>
+    <td>`cloudcerts.notification.sent`</td>
 	  <td>A notification was sent to a notifications channel endpoint.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels-publickey.read</td>
+    <td>`cloudcerts.notification-channels-publickey.read`</td>
 	  <td>The public key was requested.</td>
   </tr>
 </table>

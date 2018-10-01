@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-29"
+lastupdated: "2018-10-01"
 
 ---
 {:new_window: target="_blank"}
@@ -19,9 +19,9 @@ Certificates are typically valid only for a set amount of time. When a certifica
 {: shortdesc}
 
 **When do I get notified?** </br>
-Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_full}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates starting on the first day after your certificate expired.
+Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_full_notm}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates starting on the first day after your certificate expired.
 
-You must renew your certificate, upload this certificate to {{site.data.keyword.cloudcerts_full}}, and delete the expired certificate to stop notification from continuing to be sent.
+You must renew your certificate, upload this certificate to {{site.data.keyword.cloudcerts_full_notm}}, and delete the expired certificate to stop notification from continuing to be sent.
 
 **What are my options to configure notifications?** </br>
 You can send notifications to Slack by using a Slack webhook or use any callback URL that you like.
@@ -89,7 +89,7 @@ To add a notification channel:
 
    Example output:
    <table>
-   <caption> Information about the notification channel </caption>
+   <caption>Table 1. Information about the notification channel </caption>
    <thead>
     <th> Component </th>
     <th> Description </th>
@@ -170,4 +170,4 @@ To download the public key:
 ## Examples
 {: #examples}
 
-* <a href="https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/" target="_blank">[Using a callback URL to automatically open a GitHub issue <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* [Using a callback URL to automatically open a GitHub issue ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)

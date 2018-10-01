@@ -19,7 +19,7 @@ lastupdated: "2018-10-01"
 {: #faq}
 
 Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
-{:shortdesc}
+{: shortdesc}
 
 ## What type of certificates can I store in {{site.data.keyword.cloudcerts_short}}?
 {: #supported-certificate-types}

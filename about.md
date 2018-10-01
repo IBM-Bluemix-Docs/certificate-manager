@@ -32,7 +32,7 @@ You can manage your certificates in the following ways:
 * Set controls on who can access and manage your certificates
 
 ![High-level service architecture diagram](images/high-level-architecture.png)
-<caption>High-level service architecture.</caption>
+<caption>Figure 1. High-level service architecture.</caption>
 
 ## Private key security
 {: #private-key-security}

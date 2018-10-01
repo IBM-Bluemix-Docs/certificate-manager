@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-09-21"
+lastupdated: "2018-10-01"
 
 ---
 
@@ -15,8 +15,11 @@ lastupdated: "2018-09-21"
 {:tip: .tip}
 {:download: .download}
 
-# Frequently asked questions
+# Frequently asked questions (FAQs)
 {: #faq}
+
+Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
+{: shortdesc}
 
 ## What type of certificates can I store in {{site.data.keyword.cloudcerts_short}}?
 {: #supported-certificate-types}

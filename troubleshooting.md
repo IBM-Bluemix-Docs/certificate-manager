@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-10-01"
 
 ---
 {:new_window: target="_blank"}
@@ -29,7 +29,7 @@ You can get help in the following ways:
 
 You can also open a support ticket.
 
-When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full}} development team.
+When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full_notm}} development team.
 
 - If you have technical questions about the service, post your question on [Stack Overflow](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
 - For questions about the service and getting started instructions, post your question on [dW Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Include the `ibm-certificate-manager` and `ibm-cloud` tags.

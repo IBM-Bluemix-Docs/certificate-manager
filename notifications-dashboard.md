@@ -170,4 +170,4 @@ To download the public key:
 ## Examples
 {: #examples}
 
-* [Using a callback URL to automatically open a GitHub issue ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)

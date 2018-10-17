@@ -2,15 +2,17 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-01"
+lastupdated: "2018-10-17"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
 {:tip: .tip}
+{:download: .download}
 
 # Configuring notifications for expiring certificates
 {: #configuring-notifications-for-expiring-certificates}
@@ -170,4 +172,5 @@ To download the public key:
 ## Examples
 {: #examples}
 
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/) Learn how to create GitHub issues for expiring certificate notifications.
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/) Learn how to create PagerDuty incidents issues for expiring certificate notifications.

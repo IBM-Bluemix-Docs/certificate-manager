@@ -2,14 +2,17 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-10-29"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
 
 # Managing certificates from the dashboard
 {: #managing-certificates-from-the-dashboard}
@@ -32,15 +35,13 @@ Before you begin:
 To import a certificate, click **Import Certificate** and provide the following details:
 
 1. Enter a display name.
-2. Click **Browse**, select the certificate file in PEM format.
-3. Click **Browse**, select the certificate's private key in PEM format.
+2. Select the certificate file in PEM format by clicking **Browse**.
+3. Select the certificate's private key in PEM format by clicking **Browse**.
 4. If applicable, provide the intermediate certificate file in PEM format.
-5. Optional: Enter a description.
-6. Click **Import**.  
+5. (Optional) Enter a description.
+6. Click **Import**.
 
-**Note**: To renew an imported certificate, obtain a new certificate from your certificate authority (CA) and import the new certificate into {{site.data.keyword.cloudcerts_short}}. After the new certificate is deployed, you can delete your old one.
-
-After you import a certificate, the following information is displayed in the Certificates table. To view more certificate information, you can select the certificate in the table row.
+After you import a certificate, the following information is displayed in the Certificates table. To view more information about the certificate, you can expand the certificate's row in the Certificates table.
 
 <table>
 <caption> Table 1. Information about the imported certificate </caption>
@@ -50,11 +51,11 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Name</td>
-    <td>A meaningful display name. Maximum length 256 characters. </td>
+    <td>A meaningful display name. The maximum length is 256 characters. </td>
   </tr>
   <tr>
     <td>Description</td>
-    <td>Optional: Descriptive text for the certificate. Maximum length 1024 characters.</td>
+    <td>(Optional) Descriptive text for the certificate. The maximum length is 1,024 characters.</td>
   </tr>
   <tr>
     <td>Domain</td>
@@ -62,7 +63,7 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Issuer</td>
-    <td>The CA that issued the certificate.</td>
+    <td>The Certificate Authority (CA) that issued the certificate.</td>
   </tr>
   <tr>
     <td>Algorithm</td>
@@ -93,6 +94,29 @@ After you import a certificate, the following information is displayed in the Ce
     <td>The generated ID given to the certificate upon import. </td>
   </tr>
 </table>
+
+## Reimporting a certificate
+{: #reimport-certificate}
+
+If your certificate is about to expire, you can update the certificate by importing a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup that can be downloaded if required.
+{: shortdesc}
+
+To reimport a certificate:
+
+1. Select the row for the certificate.
+2. Click **Reimport Certificate**.
+3. Select the new certificate file in PEM format by clicking **Browse**.
+4. (Optional) Select the new certificate's private key in PEM format by clicking **Browse**.
+5. (Optional) Provide a new intermediate certificate file in PEM format by clicking **Browse**.
+6. Click **Reimport** and then **Done**.
+
+To download the previous version of a certificate:
+
+1. Expand the row for the certificate.
+2. Click the **Previous version** link.
+
+You can reimport only five certificates per minute.
+{: tip}
 
 ## Searching certificates
 {: #searching-certificates}
@@ -138,4 +162,5 @@ To update a certificate:
 2. Update the name or description.
 3. Save your changes.
 
-**Note**: You can perform up to 5 update actions per minute.
+You can perform up to 5 update actions per minute.
+{: tip}

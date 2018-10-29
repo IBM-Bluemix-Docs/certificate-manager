@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-09-17"
+lastupdated: "2018-10-29"
 
 ---
 
@@ -19,6 +19,15 @@ lastupdated: "2018-09-17"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 28 October 2018
+{: 28October2018}
+
+- **Reimport**    
+  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+
+- **Announcements banner**  
+  Service announcements, such as API deprecations and other news, are displayed in the **Manage** tab.
 
 ## 12 September 2018
 {: 12September2018}

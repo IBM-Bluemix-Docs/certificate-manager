@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
 {:new_window: target="_blank"}
@@ -55,7 +55,7 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Description</td>
-    <td>(Optional) Descriptive text for the certificate. The maximum length is 1,024 characters.</td>
+    <td>(Optional) Descriptive text for the certificate. The maximum length is 1024 characters.</td>
   </tr>
   <tr>
     <td>Domain</td>

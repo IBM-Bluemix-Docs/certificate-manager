@@ -2,14 +2,18 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-10-30"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
 
 # Troubleshooting
 {: #troubleshooting}
@@ -34,6 +38,6 @@ When you are using the forums to ask a question, tag your question so that it is
 - If you have technical questions about the service, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
 - For questions about the service and getting started instructions, post your question on [dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Include the `ibm-certificate-manager` and `ibm-cloud` tags.
 
-For more information about how to use the forums, see [Getting help](/docs/support/index.html#getting-help).
+For more information about how to use the forums, see [How do I get the support I need?](/docs/get-support/howtogetsupport.html#getting-customer-support).
 
-For information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [Contacting support](/docs/support/index.html#contacting-support).
+For information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [How the customer support process works](/docs/get-support/getstarttssup.html#typesofsupport).

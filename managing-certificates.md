@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-30"
+lastupdated: "2018-10-31"
 
 ---
 {:new_window: target="_blank"}
@@ -162,5 +162,5 @@ To update a certificate:
 2. Update the name or description.
 3. Save your changes.
 
-You can perform up to 5 update actions per minute.
+You can perform up to five update actions per minute.
 {: tip}

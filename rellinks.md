@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-15"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-10-15"
 
 # Related links
 
-You can use the following related links to learn more about and interact with {{site.data.keyword.cloudcerts_short}}.
+You can use the following related links to learn more about and interact with {{site.data.keyword.cloudcerts_long}}.
 {:shortdesc}
 
 ## Blogs

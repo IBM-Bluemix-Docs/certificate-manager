@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-30"
+lastupdated: "2018-10-31"
 
 ---
 
@@ -40,4 +40,4 @@ When you are using the forums to ask a question, tag your question so that it is
 
 For more information about how to use the forums, see [How do I get the support I need?](/docs/get-support/howtogetsupport.html#getting-customer-support).
 
-For information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [How the customer support process works](/docs/get-support/getstarttssup.html#typesofsupport).
+For information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [How the customer support process works](/docs/get-support/getstarttssup.html).

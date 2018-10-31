@@ -103,7 +103,7 @@ If your certificate is about to expire, you can update the certificate by import
 
 To reimport a certificate:
 
-1. Select the row for the certificate.
+1. Expand the row for the certificate.
 2. Click **Reimport Certificate**.
 3. Select the new certificate file in PEM format by clicking **Browse**.
 4. (Optional) Select the new certificate's private key in PEM format by clicking **Browse**.

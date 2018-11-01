@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-01"
 
 ---
 
@@ -54,9 +54,9 @@ Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
 Callback and Slack notifications only are supported.
 
 ## Can I version control my certificates?
-{: #certificate-versioning}
+{: #certificate-versioning} 
 
-You can update a certificate by reimporting a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+You cannot re-import or change the version a certificate. Instead, you can import another copy of the certificate, with a renewed expiration date.
 
 ## Can I make specific certificates visible only to specific users?
 {: #access-policies}

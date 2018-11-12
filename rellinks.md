@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-12"
 
 ---
 
@@ -11,6 +11,7 @@ lastupdated: "2018-10-31"
 
 
 # Related links
+{: links}
 
 You can use the following related links to learn more about and interact with {{site.data.keyword.cloudcerts_long}}.
 {:shortdesc}
@@ -24,3 +25,13 @@ You can use the following related links to learn more about and interact with {{
 * <a href="https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/" target="_blank">How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 1 <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/09/ibm-cloud-certificate-manager-is-now-ga/" target="_blank">{{site.data.keyword.cloudcerts_short}} is Now GA <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/" target="_blank">How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 2 <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+
+## Tutorials
+{: #tutorials}
+
+{{site.data.keyword.IBM_notm}} tutorials that feature {{site.data.keyword.cloudcerts_long_notm}}.  
+{: #shortdesc}
+
+* <a href="https://console.bluemix.net/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Apply end to end security to a cloud application <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* <a href="https://console.bluemix.net/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Deploy serverless apps across multiple locations <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -94,6 +94,29 @@ After you import a certificate, the following information is displayed in the Ce
     <td>The generated ID given to the certificate upon import. </td>
   </tr>
 </table>
+
+## Reimporting a certificate
+{: #reimport-certificate}
+
+If your certificate is about to expire, you can update the certificate by importing a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup that can be downloaded if required.
+{: shortdesc}
+
+To reimport a certificate:
+
+1. Expand the row for the certificate.
+2. Click **Reimport Certificate**.
+3. Select the new certificate file in PEM format by clicking **Browse**.
+4. (Optional) Select the new certificate's private key in PEM format by clicking **Browse**.
+5. (Optional) Provide a new intermediate certificate file in PEM format by clicking **Browse**.
+6. Click **Reimport** and then **Done**.
+
+To download the previous version of a certificate:
+
+1. Expand the row for the certificate.
+2. Click the **Previous version** link.
+
+You can reimport only five certificates per minute.
+{: tip}
 
 ## Searching certificates
 {: #searching-certificates}

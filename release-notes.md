@@ -2,7 +2,7 @@
 ---
 copyright:
   years: 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -19,6 +19,18 @@ lastupdated: "2018-10-31"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 14 November 2018
+{: 14November2018}
+
+- **Reimport**    
+  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+
+## 28 October 2018
+{: 28October2018}
+
+- **1000 certificates per instance**    
+  You can import up to 1000 certificates per instance.
 
 ## 28 October 2018
 {: 28October2018}

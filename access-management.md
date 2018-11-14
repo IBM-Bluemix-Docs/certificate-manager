@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-27"
+lastupdated: "2018-11-14"
 
 ---
 {:new_window: target="_blank"}
@@ -68,8 +68,8 @@ You can use service access roles to enable users to complete tasks in {{site.dat
     <td> Manager, Writer </td>
   </tr>
   <tr>
-    <td>Upload certificates, private keys, and intermediate certificates </td>
-    <td> Manager  </td>
+    <td>Import or reimport certificates, private keys, and intermediate certificates </td>
+    <td> Manager </td>
   </tr>
   <tr>
     <td>Delete a certificate and private key </td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-31"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -34,7 +34,11 @@ The following table lists the API methods that generate an event when they are c
   </tr>
   <tr>
     <td>`cloudcerts.certificate.import`</td>
-	  <td>Import a certificate that is issued by a third-party certificate authority.</td>
+	  <td>Import a certificate.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Reimport a certificate.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>

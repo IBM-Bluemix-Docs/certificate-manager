@@ -25,8 +25,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: 14November2018}
 
 - **Reimport**    
-  
-- You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
   
 - **1000 certificates per instance**    
   You can import up to 1000 certificates per instance.

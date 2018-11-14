@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-10-29"
+lastupdated: "2018-11-14"
 
 ---
 
@@ -73,3 +73,8 @@ When you import a certificate and the corresponding private key into {{site.data
 {{site.data.keyword.cloudcerts_short}} is available in the US-South and United Kingdom regions.
 
 
+
+## Limits
+{: #limits}
+
+You can upload a maximum of 1000 certificates per instance.

@@ -23,7 +23,7 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 ## Importing a certificate
 {: #importing-a-certificate}
 
-To help you to manage your certificates, you can upload them.
+Import your certificates so that you can manage them.
 {: shortdesc}
 
 Before you begin:

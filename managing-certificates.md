@@ -115,7 +115,7 @@ To download the previous version of a certificate:
 1. Expand the row for the certificate.
 2. Click the **Previous version** link.
 
-You can reimport only five certificates per minute.
+Reimporting certificates is limited to five actions per minute.
 {: tip}
 
 ## Searching certificates

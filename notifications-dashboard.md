@@ -65,8 +65,9 @@ After you decode and verify the payload, the content is a JSON string.
 {
     "instance_crn": "<INSTANCE_CRN>",
     "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>
-    "expiring_certificates":[
+    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
+    "event_type": "<EVENT_TYPE>",
+    "certificates":[
           {
              "cert_crn":"<CERTIFICATE_CRN>",
              "name":"<CERTIFICATE_NAME>",

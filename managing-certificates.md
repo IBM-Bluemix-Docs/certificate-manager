@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
@@ -17,7 +17,7 @@ lastupdated: "2018-11-14"
 # Managing certificates from the dashboard
 {: #managing-certificates-from-the-dashboard}
 
-You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services. After you import certificates and keys, they're encrypted and stored by the service.
+You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services. After you import the certificates and keys, they're encrypted and stored by the service.
 {: shortdesc}
 
 ## Importing a certificate
@@ -26,7 +26,7 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 Import your certificates so that you can manage them.
 {: shortdesc}
 
-Before you begin:
+**Before you begin**
 
 * Create a valid, unexpired certificate with a matching private key.
 * Convert the files into Privacy-enhanced Electronic Mail (PEM) format.
@@ -63,7 +63,7 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Issuer</td>
-    <td>The Certificate Authority (CA) that issued the certificate.</td>
+    <td>The certificate authority (CA) that issued the certificate.</td>
   </tr>
   <tr>
     <td>Algorithm</td>
@@ -101,7 +101,7 @@ After you import a certificate, the following information is displayed in the Ce
 If your certificate is about to expire, you can update the certificate by importing a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup that can be downloaded if required.
 {: shortdesc}
 
-To reimport a certificate:
+To reimport a certificate, complete the following steps:
 
 1. Expand the row for the certificate.
 2. Click **Reimport Certificate**.
@@ -110,7 +110,7 @@ To reimport a certificate:
 5. (Optional) Provide a new intermediate certificate file in PEM format by clicking **Browse**.
 6. Click **Reimport** and then **Done**.
 
-To download the previous version of a certificate:
+To download the previous version of a certificate, complete the following steps:
 
 1. Expand the row for the certificate.
 2. Click the **Previous version** link.
@@ -120,12 +120,12 @@ Reimporting certificates is limited to five actions per minute.
 
 ## Searching certificates
 {: #searching-certificates}
- 
+
 If you manage many certificates, you can use the search bar to locate the required certificate.
 {: shortdesc}
- 
--   To search for certificate name, certificate domain, or certificate issuer, type your search term into the Search bar and press Enter.
--   To view all of your certificates, click the **X** icon in the Search bar.
+
+* To search for certificate name, certificate domain, or certificate issuer, type your search term into the Search bar and press Enter.
+* To view all of your certificates, click the **X** icon in the Search bar.
 
 ## Downloading certificates
 {: #downloading-certificates}
@@ -133,11 +133,10 @@ If you manage many certificates, you can use the search bar to locate the requir
 When you are ready to deploy your certificate to your app or service, you can download the certificate and the associated private key.
 {: shortdesc}
 
-To download a certificate:
+To download a certificate, complete the following steps:
 
 1. Select the check box for the certificate that you want to download.
 2. Click **Download Certificate**. Depending on what you imported into the service, you receive a compressed file that contains PEM files for the certificate, an associated private key, and an associated intermediate certificate.
-
 
 ## Deleting certificates
 {: #deleting-certificates}
@@ -145,7 +144,7 @@ To download a certificate:
 If you want to stop tracking a certificate, you can delete it.
 {: shortdesc}  
 
-To delete a certificate:
+To delete a certificate, complete the following steps:
 
 1. Select the check box for the certificate that you want to delete.
 2. Click the **Trash** icon.
@@ -156,7 +155,7 @@ To delete a certificate:
 You can also update the name and description of a certificate.
 {: shortdesc}
 
-To update a certificate:
+To update a certificate, complete the following steps:
 
 1. Select a row to open the details for that certificate.
 2. Update the name or description.

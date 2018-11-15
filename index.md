@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-02"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
@@ -17,11 +17,11 @@ lastupdated: "2018-09-02"
 {{site.data.keyword.cloudcerts_full}} helps you to store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.
 {: shortdesc}
 
-To get started, create a new {{site.data.keyword.cloudcerts_short}} service instance:
+To get started, create a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps:
 
 1. In the {{site.data.keyword.Bluemix_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
 2. Give your service instance a name, or use the preset name.
 3. Click **Create**.
 4. To import your organization's certificates into {{site.data.keyword.cloudcerts_short}}, click **Import Certificate**.  
 
-You can also [learn more](about.html) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in developerWorks](troubleshooting.html#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's changed in the service, see [Release notes](release-notes.html).
+You can also [learn more](about.html) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](troubleshooting.html#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's changed in the service, see [Release notes](release-notes.html).

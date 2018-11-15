@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,6 @@ lastupdated: "2018-11-14"
 
 You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing only users with specified access roles to complete certain actions.
 {: shortdesc}
-
 
 ## Platform access roles
 {: #platform-access-roles}
@@ -42,7 +41,6 @@ You can use platform access roles to enable users to complete tasks on platform 
     <td> Administrator, Editor </td>
   </tr>
 </table>
-
 
 ## Service access roles
 {: #service-access-roles}
@@ -89,9 +87,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
      </tr>
 </table>
 
-
 For more information about user roles and permissions, see [User roles](/docs/iam/users_roles.html#userroles).
-
 
 ## Configuring access policies for users
 {: #configuring-access-policies}
@@ -99,27 +95,32 @@ For more information about user roles and permissions, see [User roles](/docs/ia
 You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance (and therefore for all the certificates in that instance), or you can set policies for individual certificates (resources) within an instance.
 {: shortdesc}
 
-1.  Navigate to **Manage > Account > Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
-2.  Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam/iamuserinv.html#iamuserinv).
-3.  Click **Assign access**.
-4.  Click **Assign access to resources**.
-5.  From the **Services** drop-down menu, select **Certificate Manager**.
-6.  From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
-7.  Optional: Configure access to a specific certificate.
+To configure access policies, complete the following steps:
+
+1. Navigate to **Manage > Account > Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
+2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam/iamuserinv.html#iamuserinv).
+3. Click **Assign access**.
+4. Click **Assign access to resources**.
+5. From the **Services** menu, select **Certificate Manager**.
+6. From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
+7. Optional: Configure access to a specific certificate.
     1. [Retrieve your certificate ID](#get-certificate-id).
     2. Enter `certificate` in the **Resource Type** field.
     3. Enter the certificate ID in the **Resource ID** field.
-8.  Assign a [platform access role](#platform-access-roles) to the user.
-9.  Assign a [service access role](#service-access-roles) to the user.
+8. Assign a [platform access role](#platform-access-roles) to the user.
+9. Assign a [service access role](#service-access-roles) to the user.
 10. Click **Assign** to assign the access policy to the user.
 
-**Examples of role allocation:**
+**Examples of role allocation**
+
 * Assign at least the Viewer role to every user so that every user can see service instances.
-* Assign the Administrator or Editor role to a user if you want that user to create/delete instances.
+* Assign the Administrator or Editor role to a user if you want that user to create and delete instances.
 * Assign at least the Reader role if you want a user to view certificates within an instance.
 
 ### Retrieving the ID of a certificate
 {: #get-certificate-id}
+
+To retrieve the ID of a certificate, complete the following steps:
 
 1. From the {{site.data.keyword.Bluemix_notm}} dashboard, select your {{site.data.keyword.cloudcerts_short}} instance.
 2. From the navigation on the service details page, select **Manage**.

@@ -2,10 +2,9 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -57,7 +56,7 @@ Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
 {: #email-notifications}
 {: faq}
 
-Callback and Slack notifications only are supported.
+Only Callback and Slack notifications are supported.
 
 ## Can I version control my certificates?
 {: #certificate-versioning}

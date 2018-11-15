@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -14,7 +14,6 @@ lastupdated: "2018-11-14"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
-
 
 # {{site.data.keyword.cloudaccesstrailshort}} events  
 {: #at_events}

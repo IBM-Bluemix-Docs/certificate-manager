@@ -126,7 +126,7 @@ To add a notification channel, complete the following steps:
 
     When you save a Slack webhook, {{site.data.keyword.cloudcerts_short}} automatically sends a confirmation notification to the Slack channel that you configured. Check your Slack channel to verify that you received this notification.
     {: tip}
-7. Optional: Repeat these steps to add more notification channels.
+7. (Optional) Repeat these steps to add more notification channels.
 
 ## Testing a notification channel
 {: #testing-channel}

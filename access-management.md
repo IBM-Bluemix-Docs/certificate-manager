@@ -103,7 +103,7 @@ To configure access policies, complete the following steps:
 4. Click **Assign access to resources**.
 5. From the **Services** menu, select **Certificate Manager**.
 6. From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
-7. Optional: Configure access to a specific certificate.
+7. (Optional) Configure access to a specific certificate.
     1. [Retrieve your certificate ID](#get-certificate-id).
     2. Enter `certificate` in the **Resource Type** field.
     3. Enter the certificate ID in the **Resource ID** field.

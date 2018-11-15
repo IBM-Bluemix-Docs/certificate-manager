@@ -154,7 +154,7 @@ To update your notification channel, complete the following steps:
 
 1. In the navigation on the service details page, click **Settings**.
 2. Select the **Notifications** tab.
-3. Choose from the following options.
+3. Choose from the following options:
    * To disable or enable notifications for a channel, set the switch to **Disable** or **Enable**.
    * To update settings for a channel, select **Edit** from the actions menu.
    * To delete a notification channel, select **Delete** from the actions menu.

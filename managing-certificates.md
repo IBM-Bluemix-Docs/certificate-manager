@@ -101,6 +101,9 @@ After you import a certificate, the following information is displayed in the Ce
 If your certificate is about to expire, you can update the certificate by importing a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup that can be downloaded if required.
 {: shortdesc}
 
+### Reimporting your certificate
+{: #reimporting-certificate}
+
 To reimport a certificate, complete the following steps:
 
 1. Expand the row for the certificate.
@@ -109,6 +112,9 @@ To reimport a certificate, complete the following steps:
 4. (Optional) Select the new certificate's private key in PEM format by clicking **Browse**.
 5. (Optional) Provide a new intermediate certificate file in PEM format by clicking **Browse**.
 6. Click **Reimport** and then **Done**.
+
+### Downloading a previous version of your certificate
+{: #downloading-certificate}
 
 To download the previous version of a certificate, complete the following steps:
 

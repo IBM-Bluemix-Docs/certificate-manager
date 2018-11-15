@@ -26,7 +26,7 @@ The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiat
 The following table lists the API methods that generate an event when they are called:
 
 <table>
-  <caption>Actions that generate events</caption>
+  <caption>Table 1. Actions that generate events</caption>
   <tr>
     <th>Action</th>
 	  <th>Description</th>

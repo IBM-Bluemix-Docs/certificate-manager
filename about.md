@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -14,8 +14,6 @@ lastupdated: "2018-11-14"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
-
-
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
@@ -67,10 +65,10 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
 </table>
 
-## Regions
+## Locations
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} is available in the US-South and United Kingdom regions.
+{{site.data.keyword.cloudcerts_short}} is available in the Dallas and London locations.
 
 
 

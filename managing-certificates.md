@@ -113,6 +113,9 @@ To reimport a certificate, complete the following steps:
 5. (Optional) Provide a new intermediate certificate file in PEM format by clicking **Browse**.
 6. Click **Reimport** and then **Done**.
 
+Reimporting certificates is limited to five actions per minute.
+{: tip}
+
 ### Downloading a previous version of your certificate
 {: #downloading-certificate}
 
@@ -120,9 +123,6 @@ To download the previous version of a certificate, complete the following steps:
 
 1. Expand the row for the certificate.
 2. Click the **Previous version** link.
-
-Reimporting certificates is limited to five actions per minute.
-{: tip}
 
 ## Searching certificates
 {: #searching-certificates}

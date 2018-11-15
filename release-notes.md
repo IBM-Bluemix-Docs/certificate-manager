@@ -56,8 +56,8 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 22 August 2018
 {: 22August2018}
 
-- **Live in the United Kingdom**  
-  {{site.data.keyword.cloudcerts_long_notm}} Beta is available in the United Kingdom region (UK South).
+- **Live in London**  
+  {{site.data.keyword.cloudcerts_long_notm}} Beta is available in the London location.
 
 ## 15 August 2018
 {: 15August2018}

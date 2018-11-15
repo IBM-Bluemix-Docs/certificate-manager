@@ -14,8 +14,6 @@ lastupdated: "2018-11-15"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
-
-
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 

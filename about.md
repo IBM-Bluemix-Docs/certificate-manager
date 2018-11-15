@@ -67,7 +67,7 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
 </table>
 
-## Regions
+## Locations
 {: #availability}
 
 {{site.data.keyword.cloudcerts_short}} is available in the Dallas and London locations.

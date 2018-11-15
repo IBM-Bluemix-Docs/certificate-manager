@@ -41,7 +41,7 @@ When you import a certificate and the corresponding private key into {{site.data
 {: #integrations}
 
 <table>
-<caption>{{site.data.keyword.cloud_notm}} services that use {{site.data.keyword.cloudcerts_short}}</caption>
+<caption>Table 1. {{site.data.keyword.cloud_notm}} services that use {{site.data.keyword.cloudcerts_short}}</caption>
   <tr>
     <th> Service </th>
     <th> Description </th>

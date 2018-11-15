@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -56,8 +56,8 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 22 August 2018
 {: 22August2018}
 
-- **Live in the United Kingdom**  
-  {{site.data.keyword.cloudcerts_long_notm}} Beta is available in the United Kingdom region (UK South).
+- **Live in London**  
+  {{site.data.keyword.cloudcerts_long_notm}} Beta is available in the London location.
 
 ## 15 August 2018
 {: 15August2018}
@@ -78,7 +78,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: 12June2018}
 
 - **Slack notifications**  
-  Added Slack notifications so that you'll never miss an expiring certificate. [Learn more about notifications](notifications-dashboard.html).
+  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](notifications-dashboard.html).
 
 ## 8 January 2018
 {: 8January2018}

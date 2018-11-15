@@ -2,10 +2,9 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-11-14"
+lastupdated: "2018-11-15"
 
 ---
-
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
@@ -39,14 +38,16 @@ Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
 {: #import-cert-private-key}
 {: faq}
 
-1. The private key is encrypted. Make sure you decrypt the private key before you upload it.
+Depending on whether your private key is encrypted, choose one of the following options:
+
+* The private key is encrypted. Make sure you decrypt the private key before you upload it.
 
    ```
    openssl rsa -in [file1.key] -out [file2.key]
    ```
    {: pre}
 
-2. The private key is not encrypted. Make sure the certificate and the private key match by comparing the results of the following command, where `<certificate-file>` is the name of your certificate file and `<key-file>` is the name of your private key file:
+* The private key is not encrypted. Make sure the certificate and the private key match by comparing the results of the following command, where `<certificate-file>` is the name of your certificate file and `<key-file>` is the name of your private key file:
 
    ```
    openssl x509 -modulus -noout -in <certificate-file>.pem | openssl md5; openssl rsa -modulus -noout -in <key-file>.key | openssl md5
@@ -57,7 +58,7 @@ Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
 {: #email-notifications}
 {: faq}
 
-Callback and Slack notifications only are supported.
+Only Callback and Slack notifications are supported.
 
 ## Can I version control my certificates?
 {: #certificate-versioning}

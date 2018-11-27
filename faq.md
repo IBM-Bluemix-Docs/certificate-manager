@@ -72,4 +72,3 @@ You can update a certificate by reimporting a new version of the certificate tha
 
 Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](access-management.html).
 
-[test link](http://abcs)

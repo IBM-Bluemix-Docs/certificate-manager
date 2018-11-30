@@ -2,14 +2,17 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
 
 # Gestion des certificats depuis le tableau de bord
 {: #managing-certificates-from-the-dashboard}
@@ -20,10 +23,10 @@ Vous pouvez utiliser le tableau de bord du service {{site.data.keyword.cloudcert
 ## Importation d'un certificat
 {: #importing-a-certificate}
 
-Pour vous aider à gérer vos certificats, vous pouvez les télécharger.
+Importez vos certificats afin de pouvoir les gérer.
 {: shortdesc}
 
-Avant de commencer :
+**Avant de commencer**
 
 * Créez un certificat valide non arrivé à expiration avec une clé privée correspondante.
 * Convertissez les fichiers au format PEM (Privacy-enhanced Electronic Mail).
@@ -32,15 +35,13 @@ Avant de commencer :
 Pour importer un certificat, cliquez sur **Importer le certificat** et indiquez les détails suivants :
 
 1. Entrez un nom d'affichage.
-2. Cliquez sur **Parcourir** et sélectionnez le fichier certificat au format PEM.
-3. Cliquez sur **Parcourir** et sélectionnez la clé privée du certificat au format PEM.
+2. Sélectionnez le fichier certificat au format PEM en cliquant sur **Parcourir**.
+3. Sélectionnez la clé privée du certificat au format PEM en cliquant sur **Parcourir**.
 4. Si applicable, indiquez le fichier certificat intermédiaire au format PEM.
-5. Facultatif : entrez une description.
-6. Cliquez sur **Importer**.  
+5. (Facultatif) Entrez une description.
+6. Cliquez sur **Importer**.
 
-**Remarque** : pour renouveler un certificat importé, procurez-vous un nouveau certificat auprès de votre autorité de certification et importez le nouveau certificat dans {{site.data.keyword.cloudcerts_short}}. Une fois le nouveau certificat déployé, vous pouvez supprimer l'ancien.
-
-Une fois que vous avez importé un certificat, les informations ci-après sont affichées dans le tableau Certificats. Pour visualiser d'autres informations sur le certificat, vous pouvez sélectionner le certificat dans la ligne de tableau.
+Une fois que vous avez importé un certificat, les informations ci-après sont affichées dans le tableau Certificats. Pour afficher d'autres informations sur le certificat, vous pouvez développer la ligne correspondant à celui-ci dans le tableau Certificats. 
 
 <table>
 <caption> Tableau 1. Informations sur le certificat importé </caption>
@@ -50,11 +51,11 @@ Une fois que vous avez importé un certificat, les informations ci-après sont a
   </tr>
   <tr>
     <td>Nom</td>
-    <td>Nom d'affichage descriptif. Longueur maximale de 256 caractères. </td>
+    <td>Nom d'affichage descriptif. La longueur maximale est de 256 caractères. </td>
   </tr>
   <tr>
     <td>Description</td>
-    <td>Facultatif : texte descriptif relatif au certificat. Longueur maximale de 1024 caractères.</td>
+    <td>(Facultatif) Texte descriptif relatif au certificat. La longueur maximale est de 1024 caractères.</td>
   </tr>
   <tr>
     <td>Domaine</td>
@@ -94,14 +95,43 @@ Une fois que vous avez importé un certificat, les informations ci-après sont a
   </tr>
 </table>
 
+## Réimportation d'un certificat
+{: #reimport-certificate}
+
+Si votre certificat est sur le point d'expirer, vous pouvez le mettre à jour en important une nouvelle version avec le même domaine que le certificat existant, mais avec une nouvelle date d'expiration. Lorsqu'un certificat est réimporté, la version existante de celui-ci est conservée en tant que sauvegarde qui peut être téléchargée en cas de besoin.
+{: shortdesc}
+
+### Réimportation de votre certificat
+{: #reimporting-certificate}
+
+Pour réimporter un certificat, procédez comme suit :
+
+1. Développez la ligne correspondant au certificat. 
+2. Cliquez sur **Réimporter le certificat**.
+3. Sélectionnez le nouveau fichier certificat au format PEM en cliquant sur **Parcourir**.
+4. (Facultatif) Sélectionnez la clé privée du nouveau certificat au format PEM en cliquant sur **Parcourir**.
+5. (Facultatif) Indiquez un nouveau fichier certificat intermédiaire au format PEM en cliquant sur **Parcourir**.
+6. Cliquez sur **Réimporter**, puis sur **Terminé**.
+
+Les opérations de réimportation de certificats sont limitées à cinq actions par minute.
+{: tip}
+
+### Téléchargement d'une version précédente de votre certificat
+{: #downloading-certificate}
+
+Pour télécharger la version précédente d'un certificat, procédez comme suit :
+
+1. Développez la ligne correspondant au certificat. 
+2. Cliquez sur le lien **Version précédente**. 
+
 ## Recherche de certificats
 {: #searching-certificates}
- 
+
 Si vous gérez un grand nombre de certificats, vous pouvez utiliser la barre de recherche pour localiser le certificat requis.
 {: shortdesc}
- 
--   Pour rechercher un nom de certificat, un domaine de certificat ou un émetteur de certificat, tapez le terme recherché dans la barre de recherche et appuyez sur Entrée.
--   Pour afficher tous vos certificats, cliquez sur l'icône **X** dans la barre de recherche.
+
+* Pour rechercher un nom de certificat, un domaine de certificat ou un émetteur de certificat, tapez le terme recherché dans la barre de recherche et appuyez sur Entrée.
+* Pour afficher tous vos certificats, cliquez sur l'icône **X** dans la barre de recherche.
 
 ## Téléchargement de certificats
 {: #downloading-certificates}
@@ -109,11 +139,10 @@ Si vous gérez un grand nombre de certificats, vous pouvez utiliser la barre de 
 Lorsque vous êtes prêt à déployer votre certificat sur votre application ou service, vous pouvez le télécharger, ainsi que la clé privée qui lui est associée.
 {: shortdesc}
 
-Pour télécharger un certificat :
+Pour télécharger un certificat, procédez comme suit :
 
 1. Cochez la case correspondant au certificat que vous souhaitez télécharger.
 2. Cliquez sur **Télécharger le certificat**. Selon ce que vous avez importé dans le service, vous recevez un fichier compressé contenant des fichiers PEM pour le certificat, une clé privée associée et un certificat intermédiaire associé.
-
 
 ## Suppression de certificats
 {: #deleting-certificates}
@@ -138,4 +167,5 @@ Pour mettre à jour un certificat, procédez comme suit :
 2. Mettez à jour le nom ou la description.
 3. Sauvegardez vos modifications.
 
-**Remarque** : vous pouvez effectuer jusqu'à 5 actions de mise à jour par minute.
+Vous pouvez effectuer jusqu'à cinq actions de mise à jour par minute.
+{: tip}

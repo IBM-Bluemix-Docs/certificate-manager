@@ -2,14 +2,18 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-05-24"
+lastupdated: "2018-11-15"
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
 
 # Resolução de problemas
 {: #troubleshooting}
@@ -24,21 +28,18 @@ problemas e obtenção de ajuda.
 
 
 É possível obter ajuda das seguintes maneiras:
+
 - Procurando informações neste site de documentação
 - Fazendo perguntas por meio de um fórum
-
 
 Também
 será possível abrir um chamado de suporte.
 
-Quando você estiver usando os fóruns para fazer uma pergunta, marque a sua pergunta para que ela seja vista pela equipe de desenvolvimento do {{site.data.keyword.cloudcerts_full}}.
+Quando você estiver usando os fóruns para fazer uma pergunta, marque a sua pergunta para que ela seja vista pela equipe de desenvolvimento do {{site.data.keyword.cloudcerts_full_notm}}.
 
-- Se você tem perguntas técnicas sobre o serviço, poste sua pergunta no [Stack Overflow](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) e identifique-a com `ibm-cloud` e `ibm-certificate-manager`.  
-- Para perguntas sobre o serviço e instruções de introdução, poste sua pergunta no
-[dW
-Answers](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Inclua as tags ibm-certificate-manager e ibm-cloud.
+- Se você tiver perguntas técnicas sobre o serviço, poste a sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) e identifique-a com `ibm-cloud` e `ibm-certificate-manager`.  
+- Para perguntas sobre o serviço e instruções de introdução, poste a sua pergunta no [dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Inclua as tags `ibm-certificate-manager` e `ibm-cloud`.
 
-Para obter mais informações sobre o uso dos fóruns, consulte
-[Obtendo ajuda](https://console.bluemix.net/docs/support/index.html#getting-help).
+Para obter mais informações sobre como usar os fóruns, consulte [Como obtenho o suporte necessário?](/docs/get-support/howtogetsupport.html#getting-customer-support)
 
-Para obter informações sobre como abrir um chamado de suporte do {{site.data.keyword.IBM_notm}} ou sobre níveis de suporte e severidades de chamado, veja [Entrando em contato com o suporte](https://console.bluemix.net/docs/support/index.html#contacting-support).
+Para obter mais informações sobre como abrir um chamado de suporte da {{site.data.keyword.IBM_notm}} ou sobre os níveis de suporte e as severidades do chamado, consulte [Como funciona o processo de suporte ao cliente](/docs/get-support/getstarttssup.html).

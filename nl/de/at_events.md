@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -15,85 +15,88 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-
 # {{site.data.keyword.cloudaccesstrailshort}}-Ereignisse  
 {: #at_events}
 
-Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktionen von Benutzern und Anwendungen mit dem {{site.data.keyword.cloudcerts_long}}-Service in {{site.data.keyword.Bluemix}} verfolgen.
+Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktionen von Benutzern und Anwendungen mit dem {{site.data.keyword.cloudcerts_long_notm}}-Service in {{site.data.keyword.Bluemix_notm}} verfolgen.
 {:shortdesc}
 
 Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). Beispiel: Beim Importieren eines Zertifikats wird ein {{site.data.keyword.cloudaccesstrailshort}}-Ereignis generiert.
 
-In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein Ereignis generiert wird:
+In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein Ereignis generiert wird.
 
 <table>
-  <caption>Aktionen, die Ereignisse generieren</caption>
+  <caption>Tabelle 1. Aktionen, die Ereignisse generieren</caption>
   <tr>
     <th>Aktion</th>
 	  <th>Beschreibung</th>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.import</td>
-	  <td>Von einer unabhängige Zertifizierungsstelle ausgestelltes Zertifikat importieren.</td>
+    <td>`cloudcerts.certificate.import`</td>
+	  <td>Zertifikat importieren.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.download</td>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Zertifikat erneut importieren.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate.download`</td>
 	  <td>Zertifikat herunterladen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.read</td>
+    <td>`cloudcerts.certificates.read`</td>
 	  <td>Zertifikate auflisten.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.read</td>
+    <td>`cloudcerts.certificates-metadata.read`</td>
 	  <td>Metadaten für Zertifikate auflisten. Details zu einem Zertifikat anzeigen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.search</td>
+    <td>`cloudcerts.certificates.search`</td>
 	  <td>Zertifikate durchsuchen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.search</td>
+    <td>`cloudcerts.certificates-metadata.search`</td>
 	  <td>Metadaten für Zertifikate durchsuchen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.delete</td>
+    <td>`cloudcerts.certificate.delete`</td>
 	  <td>Zertifikat löschen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate-metadata.update</td>
+    <td>`cloudcerts.certificate-metadata.update`</td>
 	  <td>Zertifikatsmetadaten aktualisieren, z. B. Beschreibung eines Zertifikats ändern.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels.list</td>
+    <td>`cloudcerts.notification-channels.list`</td>
 	  <td>Benachrichtigungskanäle auflisten.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.create</td>
+    <td>`cloudcerts.notification-channel.create`</td>
 	  <td>Benachrichtigungskanal erstellen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.state</td>
+    <td>`cloudcerts.notification-channel.state`</td>
 	  <td>Benachrichtigungskanal inaktivieren oder aktivieren.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.update</td>
+    <td>`cloudcerts.notification-channel.update`</td>
 	  <td>Endpunkt für einen Benachrichtigungskanal aktualisieren.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.delete</td>
+    <td>`cloudcerts.notification-channel.delete`</td>
 	  <td>Benachrichtigungskanal löschen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.test</td>
+    <td>`cloudcerts.notification-channel.test`</td>
 	  <td>Benachrichtigungskanal testen.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification.sent</td>
+    <td>`cloudcerts.notification.sent`</td>
 	  <td>Benachrichtigung wurde an den Endpunkt eines Benachrichtigungskanals gesendet.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels-publickey.read</td>
+    <td>`cloudcerts.notification-channels-publickey.read`</td>
 	  <td>Öffentlicher Schlüssel wurde angefordert.</td>
   </tr>
 </table>
@@ -101,9 +104,9 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 ## Position der Ereignisse
 {: #ui}
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse befinden sich in der {{site.data.keyword.cloudaccesstrailshort}}-**Kontodomäne** in der {{site.data.keyword.Bluemix_notm}}-Region, in der die Ereignisse generiert werden.
+{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse befinden sich in der {{site.data.keyword.cloudaccesstrailshort}}-**Kontodomäne** an dem {{site.data.keyword.Bluemix_notm}}-Standort, an dem die Ereignisse generiert werden.
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse werden automatisch an den {{site.data.keyword.cloudaccesstrailshort}}-Service in derselben Region weitergeleitet, in der der {{site.data.keyword.cloudcerts_short}}-Service bereitgestellt wird.
+{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse werden automatisch an den {{site.data.keyword.cloudaccesstrailshort}}-Service am selben Standort weitergeleitet, an dem der {{site.data.keyword.cloudcerts_short}}-Service bereitgestellt wird.
 
 ## Zusätzliche Informationen
 {: #info}

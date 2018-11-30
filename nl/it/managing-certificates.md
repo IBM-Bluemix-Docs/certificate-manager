@@ -2,28 +2,31 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-12"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:download: .download}
 
 # Gestione dei certificati dal dashboard
 {: #managing-certificates-from-the-dashboard}
 
-Puoi utilizzare il dashboard del servizio {{site.data.keyword.cloudcerts_full}} per gestire i certificati che ottieni da emittenti di terze parti da utilizzare con i tuoi servizi e applicazioni basati sul cloud {{site.data.keyword.IBM_notm}}. Dopo aver importato i certificati e le chiavi, vengono codificati e archiviati nel servizio.
+Puoi utilizzare il dashboard del servizio {{site.data.keyword.cloudcerts_full}} per gestire i certificati che ottieni da emittenti di terze parti da utilizzare con i tuoi servizi e applicazioni basati sul cloud {{site.data.keyword.IBM_notm}}. Dopo che ne hai eseguito l'importazione, i certificati e le chiavi vengono crittografati e memorizzati dal servizio.
 {: shortdesc}
 
 ## Importazione di un certificato
 {: #importing-a-certificate}
 
-Per aiutarti a gestire i tuoi certificati, puoi caricarli.
+Importa i tuoi certificati in modo da poterli gestire.
 {: shortdesc}
 
-Prima di iniziare:
+**Prima di iniziare**
 
 * Crea un certificato non scaduto e valido con un chiave privata corrispondente.
 * Converti i file nel formato Privacy-enhanced Electronic Mail (PEM).
@@ -32,15 +35,13 @@ Prima di iniziare:
 Per importare un certificato, fai clic su **Importa certificato** e fornisci i seguenti dettagli:
 
 1. Immetti un nome di visualizzazione
-2. Fai clic su **Sfoglia**, seleziona il file del certificato nel formato PEM.
-3. Fai clic su **Sfoglia**, seleziona la chiave privata del certificato nel formato PEM.
+2. Seleziona il file del certificato in formato PEM facendo clic su **Browse**.
+3. Seleziona la chiave privata del certificato in formato PEM facendo clic su **Browse**.
 4. Se applicabile, fornisci il file del certificato intermedio nel formato PEM.
-5. Facoltativo: immetti una descrizione.
-6. Fai clic su **Importa**.  
+5. (Facoltativo) Immetti una descrizione.
+6. Fai clic su **Importa**.
 
-**Nota**: per rinnovare un certificato importato, ottieni un nuovo certificato dalla tua autorità di certificazione (CA) e importalo in {{site.data.keyword.cloudcerts_short}}. Dopo la distribuzione del nuovo certificato, puoi eliminare quello vecchio.
-
-Dopo aver importato un certificato, vengono visualizzate le seguenti informazioni nella tabella Certificati. Per visualizzare ulteriori informazioni sul certificato, puoi selezionare il certificato nella riga della tabella.
+Dopo aver importato un certificato, vengono visualizzate le seguenti informazioni nella tabella Certificati. Per visualizzare ulteriori informazioni sul certificato, puoi espandere la riga del certificato nella tabella Certificati.
 
 <table>
 <caption> Tabella 1. Informazioni sul certificato importato </caption>
@@ -50,11 +51,11 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
   <tr>
     <td>Nome</td>
-    <td>Un nome di visualizzazione significativo. Lunghezza massima 256 caratteri. </td>
+    <td>Un nome di visualizzazione significativo. La lunghezza massima è di 256 caratteri. </td>
   </tr>
   <tr>
     <td>Descrizione</td>
-    <td>Facoltativo: il testo descrittivo del certificato. Lunghezza massima 1024 caratteri.</td>
+    <td>(Facoltativo) Testo descrittivo per il certificato. La lunghezza massima è di 1024 caratteri.</td>
   </tr>
   <tr>
     <td>Dominio</td>
@@ -62,11 +63,11 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
   <tr>
     <td>Emittente</td>
-    <td>La CA che ha emesso il certificato.</td>
+    <td>L'Autorità di certificazione (o CA, Certificate Authority) che ha emesso il certificato.</td>
   </tr>
   <tr>
     <td>Algoritmo</td>
-    <td>Il tipo di codifica da cui il certificato viene creato. </td>
+    <td>Il tipo di crittografia da cui il certificato viene creato. </td>
   </tr>
   <tr>
     <td>Algoritmo chiave</td>
@@ -94,14 +95,43 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
 </table>
 
+## Reimportazione di un certificato
+{: #reimport-certificate}
+
+Se il tuo certificato sta per scadere, puoi aggiornare il certificato importando una nuova versione del certificato che ha lo stesso dominio del certificato esistente ma che ha una nuova data di scadenza. Quando un certificato viene reimportato, la versione esistente del certificato viene conservata come un backup che può essere scaricato, se necessario.
+{: shortdesc}
+
+### Reimportazione del tuo certificato
+{: #reimporting-certificate}
+
+Per reimportare un certificato, completa la seguente procedura:
+
+1. Espandi la riga per il certificato.
+2. Fai clic su **Reimport certificate**.
+3. Seleziona il nuovo file di certificato in formato PEM facendo clic su **Browse**.
+4. (Facoltativo) Seleziona la chiave privata del nuovo certificato in formato PEM facendo clic su **Browse**.
+5. (Facoltativo) Fornisci un nuovo file di certificato intermedio in formato PEM facendo clic su **Browse**.
+6. Fai clic su **Reimport** e quindi su **Done**.
+
+La reimportazione dei certificati è limitata a cinque azioni al minuto.
+{: tip}
+
+### Download di una versione precedente del tuo certificato
+{: #downloading-certificate}
+
+Per scaricare la versione precedente di un certificato, completa la seguente procedura:
+
+1. Espandi la riga per il certificato.
+2. Fai clic sul link **Previous version**.
+
 ## Ricerca dei certificati
 {: #searching-certificates}
- 
+
 Se gestisci molti certificati, puoi utilizzare la barra di ricerca per individuare il certificato necessario.
 {: shortdesc}
- 
--   Per eseguire la ricerca per il nome, il dominio o l'emittente del certificato, immetti il tuo termine di ricerca nella barra di ricerca e premi Invio.
--   Per visualizzare tutti i tuoi certificati, fai clic sull'icona **X** nella barra di ricerca.
+
+* Per eseguire la ricerca per il nome, il dominio o l'emittente del certificato, immetti il tuo termine di ricerca nella barra di ricerca e premi Invio.
+* Per visualizzare tutti i tuoi certificati, fai clic sull'icona **X** nella barra di ricerca.
 
 ## Scaricamento dei certificati
 {: #downloading-certificates}
@@ -109,11 +139,10 @@ Se gestisci molti certificati, puoi utilizzare la barra di ricerca per individua
 Quando sei pronto per distribuire il tuo certificato al tuo servizio o applicazione, puoi scaricare il certificato e la chiave privata associata.
 {: shortdesc}
 
-Per scaricare un certificato:
+Per scaricare un certificato, completa la seguente procedura:
 
 1. Seleziona la casella di spunta del certificato che desideri scaricare.
 2. Fai clic su **Scarica certificato**. A seconda di cosa hai importato nel servizio, ricevi un file compresso che contiene il file PEM del certificato, una chiave associata e un certificato intermedio associato.
-
 
 ## Eliminazione dei certificati
 {: #deleting-certificates}
@@ -121,7 +150,7 @@ Per scaricare un certificato:
 Se desideri smettere di tracciare un certificato, puoi eliminarlo.
 {: shortdesc}  
 
-Per eliminare un certificato:
+Per eliminare un certificato, completa la seguente procedura:
 
 1. Seleziona la casella di spunta del certificato che desideri eliminare.
 2. Fai clic sull'icona **Cestino**.
@@ -132,10 +161,11 @@ Per eliminare un certificato:
 Puoi anche aggiornare il nome e la descrizione di un certificato.
 {: shortdesc}
 
-Per aggiornare un certificato:
+Per aggiornare un certificato, completa la seguente procedura:
 
 1. Seleziona una riga per aprire i dettagli di quel certificato.
 2. Aggiorna il nome o la descrizione.
 3. Salva le tue modifiche.
 
-**Nota**: puoi eseguire fino a 5 azioni di aggiornamento al minuto.
+Puoi eseguire fino a cinque azioni di aggiornamento al minuto.
+{: tip}

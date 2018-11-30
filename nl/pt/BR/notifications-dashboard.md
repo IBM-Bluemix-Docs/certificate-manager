@@ -2,15 +2,17 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
 {:tip: .tip}
+{:download: .download}
 
 # Configurando Notificações para Expirar Certificados
 {: #configuring-notifications-for-expiring-certificates}
@@ -19,17 +21,18 @@ Geralmente, os certificados são válidos apenas por um período de tempo config
 expira, o seu aplicativo pode passar por um tempo de inatividade. Para evitar o tempo de inatividade, é possível configurar o {{site.data.keyword.cloudcerts_full}} para enviar notificações sobre os certificados que estão prestes a expirar para que seja possível renová-los a tempo.
 {: shortdesc}
 
-**Quando eu sou notificado?** </br>
-Dependendo da data de expiração do certificado que você transferiu por upload para o {{site.data.keyword.cloudcerts_full}}, você será notificado 90, 60, 30, 10 e 1 dia antes da expiração. Além disso, você receberá notificações diárias sobre
-certificados expirados a partir do primeiro dia após a expiração.
+**Quando eu sou notificado?**  
+Dependendo da data de expiração do certificado que você transferiu por upload para o {{site.data.keyword.cloudcerts_full_notm}}, você será notificado 90, 60, 30, 10 e 1 dia antes da expiração. Além disso, você recebe notificações diárias sobre os certificados expirados. As notificações diárias se iniciam no primeiro dia após a expiração do certificado.
 
-Deve-se renovar o seu certificado, fazer upload dele para o {{site.data.keyword.cloudcerts_full}} e excluir o certificado expirado para interromper o envio da notificação.
+Deve-se renovar o seu certificado, fazer upload dele para o {{site.data.keyword.cloudcerts_full_notm}} e excluir o certificado expirado para interromper o envio da notificação.
 
-**Quais são as minhas opções para configurar as notificações?** </br>
+**Quais são as minhas opções para configurar as notificações?**  
 É possível enviar notificações para o Slack usando um webhook do Slack ou usar qualquer URL de retorno de chamada que você desejar.
 
 ## Configurando um webhook do Slack
 {: #setup-callback}
+
+Para configurar um webhook do Slack, conclua as etapas a seguir:
 
 1. Inscreva-se no [Slack](https://slack.com/) e configure a sua área de trabalho.
 2. Crie um canal Slack no qual deseja postar as suas notificações.
@@ -43,9 +46,10 @@ Talvez você queria usar a URL de retorno de chamada para postar a notificação
 
 **Importante:** o terminal da sua URL de retorno de chamada deve atender aos seguintes requisitos para
 ser usado com o {{site.data.keyword.cloudcerts_short}}:
+
 * O terminal deve usar o protocolo HTTPS.
 * O terminal não deve requerer cabeçalhos de HTTP. Este requisito inclui cabeçalhos de autorização.
-
+* O terminal deve retornar um código de status `200 OK` para indicar uma entrega de notificação bem-sucedida.
 
 ### Formato da notificação
 {: #notification_format}
@@ -63,124 +67,18 @@ Após decodificar e verificar a carga útil, o conteúdo será uma sequência JS
 {
     "instance_crn": "<INSTANCE_CRN>",
     "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>
-    "expiring_certificates":[
+    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
+    "event_type": "<EVENT_TYPE>",
+    "certificates":[
           {
              "cert_crn":"<CERTIFICATE_CRN>",
+             "name":"<CERTIFICATE_NAME>",
              "domains":"<CERTIFICATE_DOMAIN>"
           },
           ...
 }
 ```
 {: screen}
-
-
-### Usando uma URL de retorno de chamada para abrir automaticamente um problema do GitHub
-{: #sample}
-
-O código de amostra a seguir mostra como é possível criar um problema GitHub para certificados em expiração quando uma notificação é enviada. É possível executar esse código no {{site.data.keyword.openwhisk}} ou usar o código em um ambiente diferente.   
-{: shortdesc}
-
-Para executar esse código no  {{site.data.keyword.openwhisk_short}}:
-
-1. Crie uma ação no [Cloud Functions](/docs/openwhisk/index.html#index).
-2. Use o código a seguir para criar automaticamente um problema GitHub:
-
-```
-
-    const {promisify} = require('bluebird');
-    const request = promisify(require('request'));
-    const jwtVerify = promisify(require('jsonwebtoken').verify);
-    const jwtDecode = require('jsonwebtoken').decode;
-
-    const personal_github_token = "< PERSONAL_GITHUB_TOKEN>";
-
-    /**
-     * Returns the expiration data as short date string
-     * @param time
-     * @returns {string}
-    */
-    function calcDays(time) {
-        const date = new Date(time);
-        return date.toDateString();
-    }
-
-    /**
-     * Creates the issue body string
-     * @param data
-     * @returns {string}
-     */
-    function createBody(data) {
-        return `The following certificates will expire at ${calcDays(data.expiry_date)}:
-     ${data.expiring_certificates.reduce((accumulator, currentValue) => {
-            return accumulator + `
-    > Domain(s): ${currentValue.domains}
-    CRN: ${currentValue.cert_crn}
-    `;
-        }, "")}`
-    }
-
-    /**
-     * Gets the notification body and creates a Github issue
-     * @param params
-     * @returns {Promise}
-     */
-    async function githubIssueCreator(params) {
-        // Decode message to get information
-        const data = jwtDecode(params.data);
-        try {
-            // Create request options to get the public key for verification
-            const keysOptions = {
-                method: 'GET',
-                url: `https://<CERTIFICATE_MANAGER_CLUSTER_BASE_URL>/api/v1/instances/${encodeURIComponent(data.instance_crn)}/notifications/publicKey`
-            };
-
-            // Send request to get the public key
-            const keysResponse = await request(keysOptions);
-
-            // Verify the data using the acquired public key
-            await jwtVerify(params.data, JSON.parse(keysResponse.body).publicKey);
-
-            // Create request options to send a new issue to Github
-            // Based on Github API - https://developer.github.com/v3/issues/#create-an-issue
-            const gitOptions = {
-                method: 'POST',
-                url: 'https://api.github.com/repos/<REPO_OWNER>/<REPO_NAME>/issues',
-                headers:
-                    {
-                        'cache-control': 'no-cache',
-                        'content-type': 'application/json',
-                        authorization: 'Token 55fbe9a7e6776c9425a528783cc9755b5a0f2bb5'
-                    },
-                json:
-                    {
-                        title: "Certificates about to expire",
-                        body: createBody(data),
-                        labels: ['certificates']
-                    }
-            };
-            // Send request to Github
-            await request(gitOptions);
-        } catch (err) {
-            console.log(err);
-            return Promise.reject({
-                statusCode: 500,
-                headers: {'Content-Type': 'application/json'},
-                body: {message: 'Error processing your request'},
-            });
-        }
-
-    }
-
-
-    exports.main = githubIssueCreator;
-
-```
-{: codeblock}
-
-Para outros comandos de API de REST, consulte a [documentação da API](https://console.bluemix.net/apidocs/certificate-manager)
-{: tip}
-
 
 ## Configurando um canal de notificação
 {: #adding-channel}
@@ -189,7 +87,7 @@ Após criar um webhook do Slack ou uma URL de retorno de chamada, inclua no {{si
 terminal e armazena-o com segurança.
 {: shortdesc}
 
-Para incluir um canal de notificação:
+Para incluir um canal de notificação, conclua as etapas a seguir:
 
 1. Na navegação da página de detalhes do serviço, clique em **Configurações**.
 2. Abra a guia  ** Notificações ** .
@@ -198,9 +96,10 @@ Para incluir um canal de notificação:
 5. Insira o webhook ou a URL de retorno de chamada para a qual você deseja enviar as notificações.
 6. Clique em  ** Salvar **. Um resumo da sua configuração é exibido.
 
-   Saída de exemplo:
+   **Exemplo de saída**
+
    <table>
-   <caption> Informações sobre o canal de notificação </caption>
+   <caption>Tabela 1. Informações sobre o canal de notificação </caption>
    <thead>
     <th> Componente </th>
     <th> Descrição </th>
@@ -233,7 +132,7 @@ Para incluir um canal de notificação:
 de confirmação para o canal Slack que você configurou. Consulte o seu canal Slack para verificar se você recebeu essa
 notificação.
     {: tip}
-7. Opcional: repita essas etapas para incluir mais canais de notificação.
+7. (Opcional) Repita essas etapas para incluir mais canais de notificação.
 
 ## Testando um canal de notificação
 {: #testing-channel}
@@ -243,12 +142,11 @@ notificação.
 
 Antes de iniciar, [configure um canal de notificação](#adding-channel).
 
-Para testar um canal de notificação:
+Para testar um canal de notificação, conclua as etapas a seguir:
 
 1. Na navegação da página de detalhes do serviço, clique em **Configurações**.
 2. Localize o seu canal de notificação e clique em **Conexão de teste**.
 3. Verifique se você recebeu uma notificação no canal configurado.
-
 
 ## Atualizando um canal de notificação
 {: updating-channel}
@@ -259,14 +157,15 @@ notificação do {{site.data.keyword.cloudcerts_short}}.
 
 Antes de iniciar, [configure um canal de notificação](#adding-channel).
 
+Para atualizar seu canal de notificação, conclua as etapas a seguir:
+
 1. Na navegação da página de detalhes do serviço, clique em **Configurações**.
 2. Selecione a guia  ** Notificações ** .
-3. Escolha entre as opções a seguir.
-   - Para desativar ou ativar as notificações para um canal, configure o comutador para **Desativar**
+3. Escolha a partir das opções a seguir:
+   * Para desativar ou ativar as notificações para um canal, configure o comutador para **Desativar**
 ou **Ativar**.
-   - Para atualizar as configurações de um canal, selecione **Editar** no menu Ações.
-   - Para excluir um canal de notificação, selecione **Excluir** no menu Ações.
-
+   * Para atualizar as configurações de um canal, selecione **Editar** no menu Ações.
+   * Para excluir um canal de notificação, selecione **Excluir** no menu Ações.
 
 ## Verificando a carga útil de HTTP para uma URL de retorno de chamada
 {: #verify-callback}
@@ -279,8 +178,16 @@ Para cada instância do {{site.data.keyword.cloudcerts_short}}, são geradas uma
 não são compartilhadas entre as outras instâncias do {{site.data.keyword.cloudcerts_short}}. A chave privada é usada para
 assinar a carga útil de HTTP, e é possível usar a chave pública para verificar se a carga útil é gerada pelo {{site.data.keyword.cloudcerts_short}} e não é alterada por um terceiro.
 
-Para fazer download da chave pública:
+Para fazer download da chave pública, conclua as etapas a seguir:
 
 1. Na navegação da página de detalhes do serviço, clique em **Configurações**.
 2. Abra a guia  ** Notificações ** .
 3. Clique no botão  ** Fazer download da chave ** . A chave é transferida por download como um arquivo PEM.
+
+## Exemplos
+{: #examples}
+
+* [Como usar o gerenciador de certificados para evitar interrupções usando as URLs de retorno de chamada - Parte 1 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)  
+   Saiba como criar emissões do GitHub para notificações sobre um certificado que está expirando.
+* [Como usar o gerenciador de certificados para evitar interrupções usando as URLs de retorno de chamada - Parte 2 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/)  
+   Saiba como criar emissões de incidentes do PagerDuty para notificações sobre um certificado que está expirando.

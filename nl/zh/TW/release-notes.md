@@ -1,8 +1,8 @@
-
 ---
+
 copyright:
   years: 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -20,12 +20,29 @@ lastupdated: "2018-09-13"
 
 {{site.data.keyword.cloudcerts_long}} 服務的下列特性及變更已可使用。
 
+## 2018 年 11 月 14 日
+{: 14November2018}
+
+- **重新匯入**  
+  您可以藉由重新匯入新版本來更新憑證，此新版本具有與現有憑證相同的網域，但具有新的到期日。重新匯入憑證時，憑證的現有版本會保留作為備份，請參閱[重新匯入憑證](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate)。
+
+- **每個實例 1000 個憑證**  
+  每個實例可以匯入最多 1000 個憑證。
+
+## 2018 年 10 月 28 日
+{: 28October2018}
+
+- **公告橫幅**  
+  服務公告，例如 API 淘汰及其他新聞，會顯示在**管理**標籤。
+
 ## 2018 年 9 月 12 日
 {: 12September2018}
 
 - **憑證名稱是必要的**  
   在您匯入憑證時，必須提供值給憑證名稱。  
-  此外，**Import a certificate** 和 **Update a certificate's metadata** v2 API 已淘汰，將在 2018 年 11 月 1 日移除。您必須升級至 v3 API。如需相關資訊，請參閱 [API 文件](https://console.bluemix.net/apidocs/certificate-manager)。
+
+- **已淘汰的 API**  
+  **Import a certificate** 和 **Update a certificate's metadata** v2 API 已淘汰，將在 2018 年 12 月 1 日移除。您必須升級至 v3 API。如需相關資訊，[請參閱 API 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/apidocs/certificate-manager)。
 
 - **分組的 Slack 通知**  
   Slack 中的通知會依到期日分組。
@@ -39,14 +56,14 @@ lastupdated: "2018-09-13"
 ## 2018 年 8 月 22 日
 {: 22August2018}
 
-- **在英國推出**  
-  {{site.data.keyword.cloudcerts_long_notm}} 測試版現在已在英國地區（英國南部）提供。
+- **在倫敦推出**  
+  {{site.data.keyword.cloudcerts_long_notm}} 測試版提供於倫敦位置。
 
 ## 2018 年 8 月 15 日
 {: 15August2018}
 
 - **移除已淘汰的 v1 API**  
-  第 1 版的 API 已不再可用。如果您尚未更新 API，必須儘快完成。[請檢閱 API 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/apidocs/)。
+  第 1 版的 API 已不再可用。如果您尚未更新 API，必須儘快完成。如需相關資訊，[請參閱 API 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/apidocs/)。
 
 - **平台角色取代為服務角色**  
   您可以使用服務角色控制對 {{site.data.keyword.cloudcerts_short}} 實例的存取。[進一步瞭解存取管理](access-management.html)。
@@ -62,6 +79,12 @@ lastupdated: "2018-09-13"
 
 - **Slack 通知**  
   已新增 Slack 通知，讓您不錯過任何一個到期的憑證。[進一步瞭解通知](notifications-dashboard.html)。
+
+## 2018 年 1 月 8 日
+{: 8January2018}
+
+- **已淘汰的 API**  
+  第 1 版 API 已淘汰，將在 2018 年 9 月 8 日移除。您必須升級至 v2 API。如需相關資訊，[請參閱 API 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://console.bluemix.net/apidocs/certificate-manager)。
 
 ## 2017 年 12 月 19 日
 {: 19December2017}

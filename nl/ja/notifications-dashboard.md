@@ -2,15 +2,17 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
 {:tip: .tip}
+{:download: .download}
 
 # 証明書の有効期限に関する通知の構成
 {: #configuring-notifications-for-expiring-certificates}
@@ -18,16 +20,18 @@ lastupdated: "2018-09-05"
 証明書は通常、一定の時間だけ有効です。 使用する証明書の有効期限が切れると、アプリのダウン時間が発生することがあります。 ダウン時間を回避するために、期限切れになりそうな証明書に関する通知を送信するように {{site.data.keyword.cloudcerts_full}} を構成して、期限前に証明書を更新できるようにします。
 {: shortdesc}
 
-**いつ通知されますか。** </br>
-{{site.data.keyword.cloudcerts_full}} にアップロードした証明書の有効期限に応じて、証明書の有効期限が切れる 90 日前、60 日前、30 日前、10 日前、1 日前に、通知を受け取ります。 さらに、証明書の有効期限が切れた日から毎日、期限切れの証明書に関する通知を受け取ります。
+**いつ通知されますか?**  
+{{site.data.keyword.cloudcerts_full_notm}} にアップロードした証明書の有効期限に応じて、証明書の有効期限が切れる 90 日前、60 日前、30 日前、10 日前、1 日前に、通知を受け取ります。 さらに、期限切れの証明書に関する通知を毎日受け取ります。毎日の通知は、証明書の有効期限が切れた次の日から始まります。
 
-証明書を更新し、この証明書を {{site.data.keyword.cloudcerts_full}} にアップロードし、期限切れの証明書を削除して、通知の送信が継続されないようにする必要があります。
+証明書を更新し、この証明書を {{site.data.keyword.cloudcerts_full_notm}} にアップロードし、期限切れの証明書を削除して、通知の送信が継続されないようにする必要があります。
 
-**通知の構成に使用できるオプションは何ですか。** </br>
+**通知の構成に使用できるオプションは何ですか?**  
 Slack Web フックを使用して Slack に通知を送信するか、任意のコールバック URL を使用できます。
 
 ## Slack Web フックのセットアップ
 {: #setup-callback}
+
+Slack Web フックをセットアップするには、以下のステップを実行します。
 
 1. [Slack](https://slack.com/) に登録し、ワークスペースをセットアップします。
 2. 通知の送信先の Slack チャネルを作成します。
@@ -40,9 +44,10 @@ Slack Web フックを使用して Slack に通知を送信するか、任意の
 {: shortdesc}
 
 **重要:** コールバック URL エンドポイントは、{{site.data.keyword.cloudcerts_short}} で使用するために以下の要件を満たす必要があります。
+
 * エンドポイントは HTTPS プロトコルを使用する必要がある。
 * エンドポイントは HTTP ヘッダーを必要としない。 この要件には許可ヘッダーが含まれます。
-
+* エンドポイントは、通知配信が正常に終了したことを示す `200 OK` 状況コードを返す必要があります。
 
 ### 通知形式
 {: #notification_format}
@@ -60,10 +65,12 @@ Slack Web フックを使用して Slack に通知を送信するか、任意の
 {
     "instance_crn": "<INSTANCE_CRN>",
     "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>
-    "expiring_certificates":[
+    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
+    "event_type": "<EVENT_TYPE>",
+    "certificates":[
           {
              "cert_crn":"<CERTIFICATE_CRN>",
+             "name":"<CERTIFICATE_NAME>",
              "domains":"<CERTIFICATE_DOMAIN>"
           },
           ...
@@ -71,121 +78,13 @@ Slack Web フックを使用して Slack に通知を送信するか、任意の
 ```
 {: screen}
 
-
-### コールバック URL を使用して GitHub の問題を自動的に開く
-{: #sample}
-
-次のサンプル・コードは、通知が送信されたときに証明書の有効期限が切れる GitHub の問題を作成する方法を示しています。 このコードは、{{site.data.keyword.openwhisk}} で実行することも、別の環境でコードを使用することもできます。   
-{: shortdesc}
-
-このコードを {{site.data.keyword.openwhisk_short}} で実行するには、次のようにします。
-
-1. [Cloud Functions](/docs/openwhisk/index.html#index) でアクションを作成します。
-2. 次のコードを使用して、GitHub の問題を自動的に作成します。
-
-```
-
-    const {promisify} = require('bluebird');
-    const request = promisify(require('request'));
-    const jwtVerify = promisify(require('jsonwebtoken').verify);
-    const jwtDecode = require('jsonwebtoken').decode;
-
-    const personal_github_token = "<PERSONAL_GITHUB_TOKEN>";
-
-    /**
-     * Returns the expiration data as short date string
-     * @param time
-     * @returns {string}
-    */
-    function calcDays(time) {
-        const date = new Date(time);
-        return date.toDateString();
-    }
-
-    /**
-     * Creates the issue body string
-     * @param data
-     * @returns {string}
-     */
-    function createBody(data) {
-        return `The following certificates will expire at ${calcDays(data.expiry_date)}:
-     ${data.expiring_certificates.reduce((accumulator, currentValue) => {
-            return accumulator + `
-    > Domain(s): ${currentValue.domains}
-    CRN: ${currentValue.cert_crn}
-    `;
-        }, "")}`
-    }
-
-    /**
-     * Gets the notification body and creates a Github issue
-     * @param params
-     * @returns {Promise}
-     */
-    async function githubIssueCreator(params) {
-        // Decode message to get information
-        const data = jwtDecode(params.data);
-        try {
-            // Create request options to get the public key for verification
-            const keysOptions = {
-                method: 'GET',
-                url: `https://<CERTIFICATE_MANAGER_CLUSTER_BASE_URL>/api/v1/instances/${encodeURIComponent(data.instance_crn)}/notifications/publicKey`
-            };
-
-            // Send request to get the public key
-            const keysResponse = await request(keysOptions);
-
-            // Verify the data using the acquired public key
-            await jwtVerify(params.data, JSON.parse(keysResponse.body).publicKey);
-
-            // Create request options to send a new issue to Github
-            // Based on Github API - https://developer.github.com/v3/issues/#create-an-issue
-            const gitOptions = {
-                method: 'POST',
-                url: 'https://api.github.com/repos/<REPO_OWNER>/<REPO_NAME>/issues',
-                headers:
-                    {
-                        'cache-control': 'no-cache',
-                        'content-type': 'application/json',
-                        authorization: 'Token 55fbe9a7e6776c9425a528783cc9755b5a0f2bb5'
-                    },
-                json:
-                    {
-                        title: "Certificates about to expire",
-                        body: createBody(data),
-                        labels: ['certificates']
-                    }
-            };
-            // Send request to Github
-            await request(gitOptions);
-        } catch (err) {
-            console.log(err);
-            return Promise.reject({
-                statusCode: 500,
-                headers: {'Content-Type': 'application/json'},
-                body: {message: 'Error processing your request'},
-            });
-        }
-
-    }
-
-
-    exports.main = githubIssueCreator;
-
-```
-{: codeblock}
-
-その他の REST API コマンドについては、[API 資料](https://console.bluemix.net/apidocs/certificate-manager)を参照してください。
-{: tip}
-
-
 ## 通知チャネルの構成
 {: #adding-channel}
 
 Slack Web フックまたはコールバック URL を作成した後、それを {{site.data.keyword.cloudcerts_short}} に追加して証明書の有効期限についての通知の受信を開始します。 {{site.data.keyword.cloudcerts_short}} は、エンドポイントを暗号化し、安全に保管します。
 {: shortdesc}
 
-通知チャネルを追加するには、次のようにします。
+通知チャネルを追加するには、以下のステップを実行します。
 
 1. 「サービスの詳細」ページのナビゲーションで、**「設定」**をクリックします。
 2. **「通知」**タブを開きます。
@@ -194,9 +93,10 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 5. 通知の送信先の Web フックまたはコールバック URL を入力します。
 6. **「保存」**をクリックします。 構成の要約が表示されます。
 
-   出力例:
+   **出力例**
+
    <table>
-   <caption> 通知チャネルに関する情報 </caption>
+   <caption>表 1. 通知チャネルに関する情報</caption>
    <thead>
     <th> コンポーネント </th>
     <th> 説明 </th>
@@ -227,7 +127,7 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 
     Slack Web フックを保存すると、{{site.data.keyword.cloudcerts_short}} によって、構成した Slack チャネルに確認通知が自動的に送信されます。 Slack チャネルをチェックして、この通知を受け取ったことを確認します。
     {: tip}
-7. オプション: この手順を繰り返して、通知チャネルを追加します。
+7. (オプション) このステップを繰り返して、通知チャネルを追加します。
 
 ## 通知チャネルのテスト
 {: #testing-channel}
@@ -237,12 +137,11 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 
 始める前に、[通知チャネルを構成します](#adding-channel)。
 
-通知チャネルをテストするには、次のようにします。
+通知チャネルをテストするには、以下のステップを実行します。
 
 1. 「サービスの詳細」ページのナビゲーションで、**「設定」**をクリックします。
 2. 通知チャネルを見つけて、**「テスト接続」**をクリックします。
 3. 構成したチャネルで通知を受信したことを確認します。
-
 
 ## 通知チャネルの更新
 {: updating-channel}
@@ -252,13 +151,14 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 
 始める前に、[通知チャネルを構成します](#adding-channel)。
 
+通知チャネルを更新するには、以下のステップを実行します。
+
 1. 「サービスの詳細」ページのナビゲーションで、**「設定」**をクリックします。
 2. **「通知」**タブを選択します。
 3. 以下のオプションから選択します。
-   - チャネルの通知を無効または有効にするには、スイッチを**「無効化」**または**「有効化」**に設定します。
-   - チャネルの設定を更新するには、「アクション」メニューから**「編集」**を選択します。
-   - 通知チャネルを削除するには、「アクション」メニューから**「削除」**を選択します。
-
+   * チャネルの通知を無効または有効にするには、スイッチを**「無効化」**または**「有効化」**に設定します。
+   * チャネルの設定を更新するには、「アクション」メニューから**「編集」**を選択します。
+   * 通知チャネルを削除するには、「アクション」メニューから**「削除」**を選択します。
 
 ## コールバック URL の HTTP ペイロードの検証
 {: #verify-callback}
@@ -268,8 +168,16 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 
 すべての {{site.data.keyword.cloudcerts_short}} インスタンスに対して、他の {{site.data.keyword.cloudcerts_short}} インスタンス間で共有されていない秘密鍵と公開鍵が生成されます。 秘密鍵は HTTP ペイロードに署名するために使用されます。公開鍵を使用して、ペイロードが {{site.data.keyword.cloudcerts_short}} によって生成され、サード・パーティーによって変更されていないことを確認できます。
 
-公開鍵をダウンロードするには、次のようにします。
+公開鍵をダウンロードするには、以下のステップを実行します。
 
 1. 「サービスの詳細」ページのナビゲーションから、**「設定」**をクリックします。
 2. **「通知」**タブを開きます。
 3. **「鍵のダウンロード」**ボタンをクリックします。 鍵は PEM ファイルとしてダウンロードされます。
+
+## 例
+{: #examples}
+
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)  
+   期限切れが近い証明書に関する通知のための GitHub 問題を作成する方法を説明します。
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/)  
+   期限切れが近い証明書に関する通知のための PagerDuty インシデント問題を作成する方法を説明します。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-07-22"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -18,5 +18,8 @@ lastupdated: "2018-07-22"
 # Alta disponibilità e ripristino di emergenza
 {: #ha-dr}
 
-* Il servizio {{site.data.keyword.cloudcerts_short}} è un servizio regionale altamente disponibile. In ciascuna regione supportata, il servizio esiste in più zone di disponibilità senza un singolo punto di errore.
-* I dati memorizzati nel database di {{site.data.keyword.cloudcerts_short}} vengono sottoposti quotidianamente a backup. Se è necessario un ripristino di una regione, i dati sono disponibili per il ripristino.
+Alta disponibilità e ripristino di emergenza per {{site.data.keyword.cloudcerts_long}}.
+{: shortdesc}
+
+* Il servizio {{site.data.keyword.cloudcerts_short}} è un servizio regionale altamente disponibile. In ogni località supportata, il servizio esiste in più zone di disponibilità senza un singolo punto di errore.
+* I dati memorizzati nel database di {{site.data.keyword.cloudcerts_short}} vengono sottoposti quotidianamente a backup. Se è necessario un ripristino di una località, i dati sono disponibili per il ripristino.

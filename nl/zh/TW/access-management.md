@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,6 @@ lastupdated: "2018-08-21"
 
 您可以保護 {{site.data.keyword.Bluemix_notm}} 內的服務，方法是只容許具有指定存取角色的使用者來完成特定動作。
 {: shortdesc}
-
 
 ## 平台存取角色
 {: #platform-access-roles}
@@ -43,7 +42,6 @@ lastupdated: "2018-08-21"
   </tr>
 </table>
 
-
 ## 服務存取角色
 {: #service-access-roles}
 
@@ -68,7 +66,7 @@ lastupdated: "2018-08-21"
     <td> 管理員、撰寫者</td>
   </tr>
   <tr>
-    <td>上傳憑證、私密金鑰及中繼憑證</td>
+    <td>匯入或重新匯入憑證、私密金鑰及中繼憑證</td>
     <td> 管理員</td>
   </tr>
   <tr>
@@ -89,9 +87,7 @@ lastupdated: "2018-08-21"
      </tr>
 </table>
 
-
 如需使用者角色及許可權的相關資訊，請參閱[使用者角色](/docs/iam/users_roles.html#userroles)。
-
 
 ## 配置使用者的存取原則
 {: #configuring-access-policies}
@@ -99,30 +95,35 @@ lastupdated: "2018-08-21"
 您可以配置 {{site.data.keyword.cloudcerts_short}} 實例（以及該實例中所有憑證）的存取原則，也可以為實例內的個別憑證（資源）設定原則。
 {: shortdesc}
 
-1.  導覽至**管理 > 帳戶 > 使用者**。會顯示能存取您 {{site.data.keyword.Bluemix_notm}} 帳戶的使用者清單。
-2.  按一下要獲指派存取原則的使用者名稱。如果未顯示使用者，請按一下**邀請使用者**，以[將使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶](/docs/iam/iamuserinv.html#iamuserinv)。
-3.  按一下**指派存取權**。
-4.  按一下**指派對資源的存取權**。
-5.  從**服務**下拉功能表，選取 **Certificate Manager**。
-6.  從**服務實例**功能表，選取 {{site.data.keyword.cloudcerts_short}} 實例，或使用預設值`所有實例`。
-7.  選用項目：配置對特定憑證的存取權。
+若要配置存取原則，請完成下列步驟：
+
+1. 導覽至**管理 > 帳戶 > 使用者**。會顯示能存取您 {{site.data.keyword.Bluemix_notm}} 帳戶的使用者清單。
+2. 按一下要獲指派存取原則的使用者名稱。如果未顯示使用者，請按一下**邀請使用者**，以[將使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶](/docs/iam/iamuserinv.html#iamuserinv)。
+3. 按一下**指派存取權**。
+4. 按一下**指派對資源的存取權**。
+5. 從**服務**功能表，選取 **Certificate Manager**。
+6. 從**服務實例**功能表，選取 {{site.data.keyword.cloudcerts_short}} 實例，或使用預設值`所有實例`。
+7. （選用）配置對特定憑證的存取權：
     1. [擷取憑證 ID](#get-certificate-id)。
     2. 在**資源類型**欄位中，輸入 `certificate`。
     3. 在**資源 ID** 欄位中，輸入憑證 ID。
-8.  指派[平台存取角色](#platform-access-roles)給使用者。
-9.  指派[服務存取角色](#service-access-roles)給使用者。
+8. 指派[平台存取角色](#platform-access-roles)給使用者。
+9. 指派[服務存取角色](#service-access-roles)給使用者。
 10. 按一下**指派**，以將存取原則指派給使用者。
 
-**角色配置的範例：**
+**角色配置的範例**
+
 * 至少指派「檢視者」角色給每個使用者，以便每個使用者能看到服務實例。
-* 如果您要讓使用者建立/刪除實例，請指派「管理者」或「編輯者」角色給該名使用者。
+* 如果您要讓使用者建立及刪除實例，請指派「管理者」或「編輯者」角色給該名使用者。
 * 如果您要讓使用者在實例內檢視憑證，請至少指派「讀者」角色。
 
 ### 擷取憑證的 ID
 {: #get-certificate-id}
 
+若要擷取憑證的 ID，請完成下列步驟：
+
 1. 從 {{site.data.keyword.Bluemix_notm}} 儀表板，選取 {{site.data.keyword.cloudcerts_short}} 實例。
 2. 從服務詳細資料頁面上的導覽，選取**管理**。
 3. 選取憑證。
 4. 在憑證詳細資料中，找到憑證 CRN。
-5. 複製憑證 ID。CRN 包含不同的值，全都以冒號 (`:`) 區隔。憑證 ID 是 CRN 中的最後一個值，例如 `e20cb664efcbfa2c2f57801230d246a6)`
+5. 複製憑證 ID。CRN 包含不同的值，全都以冒號 (`:`) 區隔。憑證 ID 是 CRN 中的最後一個值，例如 `e20cb664efcbfa2c2f57801230d246a6`

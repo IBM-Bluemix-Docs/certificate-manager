@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-07-22"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -18,5 +18,8 @@ lastupdated: "2018-07-22"
 # Hochverfügbarkeit und Disaster-Recovery
 {: #ha-dr}
 
-* Beim {{site.data.keyword.cloudcerts_short}}-Service handelt es sich um einen hoch verfügbaren regionalen Service. In jeder unterstützten Region ist der Service in mehreren Verfügbarkeitszonen vorhanden, sodass kein Single Point of Failure (SPoF) existiert.
-* In der {{site.data.keyword.cloudcerts_short}}-Datenbank gespeicherte Daten werden täglich gesichert. Wenn eine Wiederherstellung einer Region erforderlich ist, stehen die Daten für die Wiederherstellung zur Verfügung.
+Hochverfügbarkeit und Disaster-Recovery für {{site.data.keyword.cloudcerts_long}}.
+{: shortdesc}
+
+* Beim {{site.data.keyword.cloudcerts_short}}-Service handelt es sich um einen hoch verfügbaren regionalen Service. An jedem unterstützten Standort ist der Service in mehreren Verfügbarkeitszonen vorhanden, sodass kein Single Point of Failure (SPoF) existiert.
+* In der {{site.data.keyword.cloudcerts_short}}-Datenbank gespeicherte Daten werden täglich gesichert. Wenn eine Wiederherstellung eines Standorts erforderlich ist, stehen die Daten für die Wiederherstellung zur Verfügung.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,6 @@ lastupdated: "2018-08-21"
 
 지정된 액세스 역할이 있는 사용자만 특정 조치를 완료할 수 있도록 하여 {{site.data.keyword.Bluemix_notm}} 내에서 서비스의 보안을 설정할 수 있습니다.
 {: shortdesc}
-
 
 ## 플랫폼 액세스 역할
 {: #platform-access-roles}
@@ -43,7 +42,6 @@ lastupdated: "2018-08-21"
   </tr>
 </table>
 
-
 ## 서비스 액세스 역할
 {: #service-access-roles}
 
@@ -68,8 +66,8 @@ lastupdated: "2018-08-21"
     <td> 관리자, 작성자 </td>
   </tr>
   <tr>
-    <td>인증서, 개인 키 및 중간 인증서 업로드 </td>
-    <td> 관리자  </td>
+    <td>인증서, 개인 키 및 중간 인증서 가져오기 또는 다시 가져오기</td>
+    <td> 관리자 </td>
   </tr>
   <tr>
     <td>인증서 및 개인 키 삭제 </td>
@@ -89,9 +87,7 @@ lastupdated: "2018-08-21"
      </tr>
 </table>
 
-
 사용자 역할 및 권한에 대한 자세한 정보는 [사용자 역할](/docs/iam/users_roles.html#userroles)을 참조하십시오.
-
 
 ## 사용자에 대한 액세스 정책 구성
 {: #configuring-access-policies}
@@ -99,27 +95,32 @@ lastupdated: "2018-08-21"
 {{site.data.keyword.cloudcerts_short}} 인스턴스에 대한 액세스 정책을 구성할 수 있거나(즉, 해당 인스턴스의 모든 인증서용) 인스턴스 내의 개별 인증서(리소스)에 대한 정책을 설정할 수 있습니다.
 {: shortdesc}
 
-1.  **관리 > 계정 > 사용자**로 이동하십시오. {{site.data.keyword.Bluemix_notm}} 계정에 대한 액세스 권한이 있는 사용자의 목록이 표시됩니다.
-2.  액세스 정책을 지정할 사용자의 이름을 클릭하십시오. 사용자가 표시되지 않으면 **사용자 초대**를 클릭하여 [사용자를 {{site.data.keyword.Bluemix_notm}} 계정에 추가](/docs/iam/iamuserinv.html#iamuserinv)를 수행하십시오.
-3.  **액세스 지정**을 클릭하십시오.
-4.  **리소스에 액세스 지정**을 클릭하십시오.
-5.  **서비스** 드롭 다운 메뉴에서 **인증서 관리자**를 선택하십시오.
-6.  **서비스 인스턴스** 메뉴에서 {{site.data.keyword.cloudcerts_short}} 인스턴스를 선택하거나 기본값 `All instances`를 사용하십시오.
-7.  선택사항: 특정 인증서에 대한 액세스 권한을 구성하십시오.
+액세스 정책을 구성하려면 다음 단계를 완료하십시오.
+
+1. **관리 > 계정 > 사용자**로 이동하십시오. {{site.data.keyword.Bluemix_notm}} 계정에 대한 액세스 권한이 있는 사용자의 목록이 표시됩니다.
+2. 액세스 정책을 지정할 사용자의 이름을 클릭하십시오. 사용자가 표시되지 않으면 **사용자 초대**를 클릭하여 [사용자를 {{site.data.keyword.Bluemix_notm}} 계정에 추가](/docs/iam/iamuserinv.html#iamuserinv)를 수행하십시오.
+3. **액세스 지정**을 클릭하십시오.
+4. **리소스에 액세스 지정**을 클릭하십시오.
+5. **서비스** 메뉴에서 **인증서 관리자**를 선택하십시오. 
+6. **서비스 인스턴스** 메뉴에서 {{site.data.keyword.cloudcerts_short}} 인스턴스를 선택하거나 기본값 `All instances`를 사용하십시오.
+7. (선택사항) 특정 인증서에 대한 액세스를 구성하십시오. 
     1. [인증서 ID를 검색](#get-certificate-id)하십시오.
     2. **리소스 유형** 필드에 `certificate`를 입력하십시오.
     3. **리소스 ID** 필드에 인증서 ID를 입력하십시오.
-8.  [플랫폼 액세스 역할](#platform-access-roles)을 사용자에게 지정하십시오.
-9.  [서비스 액세스 역할](#service-access-roles)을 사용자에게 지정하십시오.
+8. [플랫폼 액세스 역할](#platform-access-roles)을 사용자에게 지정하십시오.
+9. [서비스 액세스 역할](#service-access-roles)을 사용자에게 지정하십시오.
 10. **지정**을 클릭하여 액세스 정책을 사용자에게 지정하십시오.
 
-**역할 할당의 예:**
+**역할 할당의 예**
+
 * 모든 사용자가 서비스 인스턴스를 볼 수 있도록 모든 사용자에게 최소한 뷰어 역할을 지정하십시오.
-* 사용자가 인스턴스를 작성/삭제하도록 하려면 사용자에게 관리자 또는 편집자 역할을 지정하십시오.
+* 사용자가 인스턴스를 작성하고 삭제하도록 하려면 사용자에게 관리자 또는 편집자 역할을 지정하십시오.
 * 사용자가 인스턴스 내 인증서를 보도록 하려면 최소한 독자 역할을 지정하십시오.
 
 ### 인증서 ID 검색
 {: #get-certificate-id}
+
+인증서의 ID를 검색하려면 다음 단계를 완료하십시오.
 
 1. {{site.data.keyword.Bluemix_notm}} 대시보드에서 {{site.data.keyword.cloudcerts_short}} 인스턴스를 선택하십시오.
 2. 서비스 세부사항 페이지의 탐색에서 **관리**를 선택하십시오.

@@ -1,8 +1,8 @@
-
 ---
+
 copyright:
   years: 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -20,12 +20,30 @@ lastupdated: "2018-09-13"
 
 Les fonctions et modifications suivantes sont disponibles pour le service {{site.data.keyword.cloudcerts_long}}.
 
+## 14 novembre 2018
+{: 14November2018}
+
+- **Réimporter**  
+Vous pouvez mettre à jour un certificat en important une nouvelle version avec le même domaine que le certificat existant, mais avec une nouvelle date d'expiration. Lorsqu'un certificat est réimporté, la version existante de celui-ci est conservée en tant que sauvegarde. Voir [Réimportation d'un certificat](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+
+
+- **1 000 certificats par instance**  
+  Vous pouvez importer jusqu'à 1 000 certificats par instance.
+
+## 28 octobre 2018
+{: 28October2018}
+
+- **Bannière des annonces**  
+Les annonces de service, telles que les obsolescences d'API et d'autres nouvelles, sont affichées dans l'onglet **Gérer**. 
+
 ## 12 septembre 2018
 {: 12September2018}
 
 - **Un nom de certificat est obligatoire**  
   Il est obligatoire de fournir une valeur pour nom du certificat lorsque vous importez un certificat.  
-  En outre, les API **Importer un certificat** et **Mettre à jour les métadonnées du certificat** version 2 sont obsolètes et seront supprimées le 1er novembre 2018. Vous devez les mettre à niveau vers les API version 3. Pour plus d'informations, voir la [documentation sur les API](https://console.bluemix.net/apidocs/certificate-manager).
+
+- **API obsolètes**  
+  Les API **Importer un certificat** et **Mettre à jour les métadonnées du certificat** version 2 sont obsolètes et seront supprimées le 1er décembre 2018. Vous devez les mettre à niveau vers les API version 3. Pour plus d'informations, [voir la documentation API![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/apidocs/certificate-manager).
 
 - **Notifications Slack regroupées**  
   Dans Slack, les notifications sont regroupées par date d'expiration.
@@ -39,14 +57,14 @@ Les fonctions et modifications suivantes sont disponibles pour le service {{site
 ## 22 août 2018
 {: 22August2018}
 
-- **Opérationnel au Royaume-Uni**  
-  {{site.data.keyword.cloudcerts_long_notm}} version bêta est disponible dans le sud du Royaume-Uni.
+- **Opérationnel à Londres**  
+  {{site.data.keyword.cloudcerts_long_notm}} Beta est disponible à Londres. 
 
 ## 15 août 2018
 {: 15August2018}
 
 - **Suppression des API version 1 obsolètes**  
-  Les API version 1 ne sont plus disponibles. Si vous n'avez pas encore mis à jour votre API, vous devez le faire dès que possible. [Revoyez la documentation relative aux API ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/apidocs/).
+  Les API version 1 ne sont plus disponibles. Si vous n'avez pas encore mis à jour votre API, vous devez le faire dès que possible. Pour plus d'informations, [voir la documentation API![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/apidocs/).
 
 - **Rôles de plateforme remplacés par des rôles de service**  
   Vous pouvez contrôler l'accès aux instances {{site.data.keyword.cloudcerts_short}} à l'aide de rôles de service. [En savoir plus sur la gestion des accès](access-management.html).
@@ -61,7 +79,13 @@ Les fonctions et modifications suivantes sont disponibles pour le service {{site
 {: 12June2018}
 
 - **Notifications Slack**  
-  Ajout de notifications Slack de sorte que vous êtes averti lorsqu'un certificat qui arrive à expiration. [En savoir plus sur les notifications](notifications-dashboard.html).
+  Ajout de notifications Slack de sorte qui vous préviennent lorsqu'un certificat qui arrive à expiration. [En savoir plus sur les notifications](notifications-dashboard.html).
+
+## 8 janvier 2018
+{: 8January2018}
+
+- **API obsolètes**  
+  Les API version 1 sont obsolètes et seront retirées le 8 septembre 2018. Vous devez les mettre à niveau vers les API version 2. Pour plus d'informations, [voir la documentation API![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://console.bluemix.net/apidocs/certificate-manager).
 
 ## 19 décembre 2017
 {: 19December2017}

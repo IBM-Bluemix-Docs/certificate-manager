@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -14,12 +14,10 @@ lastupdated: "2018-08-21"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
-
-
-# Certificate Manager 製品情報
+# {{site.data.keyword.cloudcerts_short}} の概要
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_short}} は、{{site.data.keyword.IBM_notm}} Cloud ベースのアプリおよびサービス用の SSL 証明書の管理を支援します。
+{{site.data.keyword.cloudcerts_long}} は、{{site.data.keyword.IBM_notm}} Cloud ベースのアプリおよびサービス用の SSL 証明書の管理を支援します。
 {: shortdesc}
 
 アプリおよびサービス用に取得する SSL 証明書をインポートし、それらを安全に保管し、使用している証明書を集中して表示することができます。
@@ -32,7 +30,7 @@ lastupdated: "2018-08-21"
 * 証明書のアクセスおよび管理を行えるユーザーについて制御を設定する
 
 ![上位サービス・アーキテクチャー・ダイアグラム](images/high-level-architecture.png)
-<caption>上位サービス・アーキテクチャー。</caption>
+<caption>図 1. 上位サービス・アーキテクチャー。</caption>
 
 ## 秘密鍵のセキュリティー
 {: #private-key-security}
@@ -41,27 +39,40 @@ lastupdated: "2018-08-21"
 
 ## 統合
 {: #integrations}
+
 <table>
-<caption>Certificate Manager を使用する IBM Cloud サービス</caption>
+<caption>表 1. {{site.data.keyword.cloudcerts_short}} を使用する{{site.data.keyword.cloud_notm}} サービス</caption>
   <tr>
     <th> サービス </th>
     <th> 説明 </th>
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Kubernetes クラスターのカスタム・ドメイン証明書を Certificate Manager に保管し、それを IBM Cloud CLI の [Kubernetes Service プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。 [この統合の詳細はこちら](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)</td>
+    <td>Kubernetes クラスターのカスタム・ドメイン証明書を {{site.data.keyword.cloudcerts_short}} に保管し、それを {{site.data.keyword.cloud_notm}} CLI の [Kubernetes サービス・プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。[この統合の詳細はこちら ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)を参照してください。</td>
   </tr>
   <tr>
-    <td>IBM Cloud セキュリティー・アドバイザー</td>
-    <td>セキュリティー・アドバイザーは、IBM Cloud アカウントの Certificate Manager のインスタンスで、期限切れか期限切れ間近の証明書を表示するなど、IBM Cloud サービスによる洞察を一元化します。 [セキュリティー・アドバイザーの詳細はこちら](/docs/services/security-advisor/index.html#index)</td>
-  </tr><tr>
+    <td>{{site.data.keyword.security-advisor_full_notm}}</td>
+    <td>{{site.data.keyword.security-advisor_short}} は、{{site.data.keyword.cloud_notm}} サービスに関する情報を一元化します。これには、{{site.data.keyword.cloud_notm}} アカウント内の {{site.data.keyword.cloudcerts_short}} のインスタンスで期限切れになった証明書と有効期限が近づいた証明書についての情報が含まれます。[{{site.data.keyword.security-advisor_short}} の詳細はこちら](/docs/services/security-advisor/index.html#index)を参照してください。</td>
+  </tr>
+  <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) についての詳細。
+    <td>ユーザーおよびアプリケーションが {{site.data.keyword.cloud_notm}} 内の {{site.data.keyword.cloudcerts_long_notm}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull_notm}} サービスを使用してトラッキングします。 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) についての詳細。
     <p>イベントを生成するアクションのリストを取得するには、[{{site.data.keyword.cloudaccesstrailshort}} イベント](/docs/services/certificate-manager/at_events.html#at_events)を参照してください。</p></td>
+  </tr>
+  <tr>
+    <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
+    <td>カスタム・ドメイン証明書を {{site.data.keyword.cloudcerts_short}} サービスに保管し、証明書 CRN を使用して {{site.data.keyword.apiconnect_short}} のカスタム・ドメインにバインドします。[{{site.data.keyword.apiconnect_short}} の詳細はこちら](/docs/api-management/index.html#index)を参照してください。</p></td>
   </tr>
 </table>
 
-## 地域
+## ロケーション
 {: #availability}
-{{site.data.keyword.cloudcerts_short}} は、米国南部地域および英国地域でのみ使用可能です。
 
+{{site.data.keyword.cloudcerts_short}} は、ダラスとロンドンのロケーションで使用可能です。
+
+
+
+## 制限
+{: #limits}
+
+1 インスタンスにつき最大 1000 の証明書をアップロードできます。

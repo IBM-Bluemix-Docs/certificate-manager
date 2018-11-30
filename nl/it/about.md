@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -14,12 +14,10 @@ lastupdated: "2018-08-21"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:download: .download}
-
-
-# Informazioni sul Gestore certificato
+# Informazioni su {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_short}} ti aiuta a gestire i certificati SSL per i tuoi servizi e applicazioni basati sul cloud {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.cloudcerts_long}} ti aiuta a gestire i certificati SSL per i tuoi servizi e applicazioni basati sul cloud {{site.data.keyword.IBM_notm}}.
 {: shortdesc}
 
 Puoi importare i certificati SSL che ottieni per i tuoi servizi e applicazioni, archiviarli in modo sicuro e ottenere una vista centrale dei certificati che stai utilizzando.
@@ -32,7 +30,7 @@ Puoi gestire i tuoi certificati nei seguenti modi:
 * Configura i controlli su chi può accedere e gestire i tuoi certificati
 
 ![Diagramma dell'architettura del servizio di alto livello](images/high-level-architecture.png)
-<caption>Architettura del servizio di alto livello</caption>
+<caption>Figura 1. Architettura del servizio di alto livello </caption>
 
 ## Sicurezza chiave privata
 {: #private-key-security}
@@ -41,27 +39,40 @@ Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyw
 
 ## Integrazioni
 {: #integrations}
+
 <table>
-<caption>Servizi IBM Cloud che utilizzano Gestore certificato</caption>
+<caption>Tabella 1. I servizi {{site.data.keyword.cloud_notm}} che utilizzano il {{site.data.keyword.cloudcerts_short}}</caption>
   <tr>
     <th> Servizio </th>
     <th> Descrizione </th>
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Archivia i tuoi certificati del dominio personalizzato del cluster Kubernetes nel Gestore certificato, poi distribuiscili utilizzando i [comandi del plugin del servizio Kubernetes](/docs/containers/cs_cli_reference.html) della CLI IBM Cloud. [Ulteriori informazioni su questa integrazione](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
+    <td>Archivia i tuoi certificati del dominio personalizzato del cluster Kubernetes nel {{site.data.keyword.cloudcerts_short}}, poi distribuiscili utilizzando i [comandi del plugin del servizio Kubernetes](/docs/containers/cs_cli_reference.html) della CLI {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su questa integrazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
   </tr>
   <tr>
-    <td>IBM Cloud Security Advisor</td>
-    <td>Security Advisor centralizza le informazioni approfondite dei servizi IBM Cloud, inclusa l'indicazione dei certificati scaduti o quasi scaduti nelle istanze del Gestore certificato nel tuo account IBM Cloud. [Ulteriori informazioni su Security Advisor](/docs/services/security-advisor/index.html#index)</td>
-  </tr><tr>
+    <td>{{site.data.keyword.security-advisor_full_notm}}</td>
+    <td>{{site.data.keyword.security-advisor_short}} centralizza le informazioni sui servizi {{site.data.keyword.cloud_notm}}. Le informazioni includono l'indicazione dei certificati scaduti e dei certificati che stanno per scadere in istanze del {{site.data.keyword.cloudcerts_short}} nel tuo account {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor/index.html#index).</td>
+  </tr>
+  <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull}} per tracciare il modo in cui gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.cloudcerts_long}} in {{site.data.keyword.Bluemix}}. [Ulteriori informazioni su {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
+    <td>Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} per tracciare il modo in cui gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.cloudcerts_long_notm}} in {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
     <p>Per ottenere l'elenco delle azioni che generano un evento, vedi [Eventi di {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
+  </tr>
+  <tr>
+    <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
+    <td>Archivia i tuoi certificati del dominio personalizzati nel servizio {{site.data.keyword.cloudcerts_short}}, quindi utilizza i CRN del certificato per eseguire il bind a domini personalizzati in {{site.data.keyword.apiconnect_short}}. [Ulteriori informazioni su {{site.data.keyword.apiconnect_short}}](/docs/api-management/index.html#index).</p></td>
   </tr>
 </table>
 
-## Regioni
+## Località
 {: #availability}
-{{site.data.keyword.cloudcerts_short}} è disponibile nelle regioni Stati Uniti Sud e Regno Unito.
 
+Il {{site.data.keyword.cloudcerts_short}} è disponibile nelle località di Dallas e Londra.
+
+
+
+## Limiti
+{: #limits}
+
+Puoi caricare un massimo di 1000 certificati per istanza.

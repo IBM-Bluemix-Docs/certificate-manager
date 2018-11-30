@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-15"
 
 ---
 {:new_window: target="_blank"}
@@ -16,7 +16,6 @@ lastupdated: "2018-08-21"
 
 Vous pouvez sécuriser des services dans {{site.data.keyword.Bluemix_notm}} en autorisant uniquement les utilisateurs dotés de rôles d'accès spécifiés à exécuter certaines actions.
 {: shortdesc}
-
 
 ## Rôles d'accès à la plateforme
 {: #platform-access-roles}
@@ -43,7 +42,6 @@ Vous pouvez utiliser des rôles d'accès à la plateforme pour permettre aux uti
   </tr>
 </table>
 
-
 ## Rôles d'accès au service
 {: #service-access-roles}
 
@@ -68,8 +66,8 @@ Vous pouvez utiliser des rôles d'accès au service afin de permettre aux utilis
     <td> Gestionnaire, Rédacteur </td>
   </tr>
   <tr>
-    <td>Télécharger des certificats, des clés privées et des certificats intermédiaires </td>
-    <td> Gestionnaire  </td>
+    <td>Importer ou réimporter des certificats, des clés privées et des certificats intermédiaires </td>
+    <td> Gestionnaire </td>
   </tr>
   <tr>
     <td>Supprimer un certificat et une clé privée </td>
@@ -89,9 +87,7 @@ Vous pouvez utiliser des rôles d'accès au service afin de permettre aux utilis
      </tr>
 </table>
 
-
 Pour plus d'informations sur les rôles et les droits utilisateur, voir [Rôles utilisateur](/docs/iam/users_roles.html#userroles).
-
 
 ## Configuration des politiques d'accès pour les utilisateurs
 {: #configuring-access-policies}
@@ -99,21 +95,24 @@ Pour plus d'informations sur les rôles et les droits utilisateur, voir [Rôles 
 Vous pouvez configurer des politiques d'accès pour une instance {{site.data.keyword.cloudcerts_short}} (et, de ce fait, pour tous les certificats de cette instance), ou vous pouvez définir des politiques pour les certificats individuels (ressources) dans une instance.
 {: shortdesc}
 
-1.  Accédez à **Gérer > Compte > Utilisateurs**. Une liste des utilisateurs ayant un accès à votre compte {{site.data.keyword.Bluemix_notm}} s'affiche.
-2.  Cliquez sur le nom de l'utilisateur auquel vous voulez affecter une politique d'accès. Si l'utilisateur n'apparaît pas, cliquez sur **Inviter des utilisateurs** pour [ajouter l'utilisateur à votre compte {{site.data.keyword.Bluemix_notm}}](/docs/iam/iamuserinv.html#iamuserinv).
-3.  Cliquez sur **Affecter un accès**.
-4.  Cliquez **Affecter l'accès aux ressources**.
-5.  Dans le menu déroulant **Services**, sélectionnez **Certificate Manager**.
-6.  Dans le menu **Instance de service**, sélectionnez une instance {{site.data.keyword.cloudcerts_short}}, ou utilisez la valeur par défaut `Toutes les instances`.
-7.  Facultatif : configurez un accès à un certificat spécifique.
+Pour configurer des politiques d'accès, procédez comme suit :
+
+1. Accédez à **Gérer > Compte > Utilisateurs**. Une liste des utilisateurs ayant un accès à votre compte {{site.data.keyword.Bluemix_notm}} s'affiche.
+2. Cliquez sur le nom de l'utilisateur auquel vous voulez affecter une politique d'accès. Si l'utilisateur n'apparaît pas, cliquez sur **Inviter des utilisateurs** pour [ajouter l'utilisateur à votre compte {{site.data.keyword.Bluemix_notm}}](/docs/iam/iamuserinv.html#iamuserinv).
+3. Cliquez sur **Affecter un accès**.
+4. Cliquez **Affecter l'accès aux ressources**.
+5. Dans le menu **Services**, sélectionnez **Certificate Manager**.
+6. Dans le menu **Instance de service**, sélectionnez une instance {{site.data.keyword.cloudcerts_short}}, ou utilisez la valeur par défaut `Toutes les instances`.
+7. (Facultatif) Configurez un accès à un certificat spécifique :
     1. [Extrayez votre ID certificat](#get-certificate-id).
     2. Entrez `certificate` dans la zone **Type de ressource**.
     3. Entrez l'ID certificat dans la zone **ID de ressource**.
-8.  Affectez un [rôle d'accès à une plateforme](#platform-access-roles) à l'utilisateur.
-9.  Affectez un [rôle d'accès à un service](#service-access-roles) à l'utilisateur.
+8. Affectez un [rôle d'accès à une plateforme](#platform-access-roles) à l'utilisateur.
+9. Affectez un [rôle d'accès à un service](#service-access-roles) à l'utilisateur.
 10. Cliquez sur **Affecter** pour affecter la politique d'accès à l'utilisateur.
 
-**Exemples d'affectation de rôles :**
+**Exemples d'affectation de rôles**
+
 * Affectez au moins le rôle Visualiseur à chaque utilisateur pour qu'il puisse voir les instances de service.
 * Affectez le rôle Administrateur ou Editeur à un utilisateur si vous voulez que cet utilisateur crée/supprime des instances.
 * Affectez au moins le rôle Lecteur si vous souhaitez qu'un utilisateur puisse afficher les certificats au sein d'une instance.
@@ -121,8 +120,10 @@ Vous pouvez configurer des politiques d'accès pour une instance {{site.data.key
 ### Extraction de l'ID d'un certificat
 {: #get-certificate-id}
 
+Pour récupérer l'ID d'un certificat, procédez comme suit :
+
 1. Depuis le tableau de bord {{site.data.keyword.Bluemix_notm}}, sélectionnez votre instance {{site.data.keyword.cloudcerts_short}}.
 2. Dans la navigation de la page Détails du service, sélectionnez **Gérer**.
 3. Sélectionnez un certificat.
 4. Dans les détails du certificat, trouvez le certificat CRN (Cloud Resource Name).
-5. Copiez l'ID de certificat. Le certificat CRN contient différentes valeurs qui sont séparées par le signe deux points (`:`). L'ID de certificat est la dernière valeur de votre certificat CRN, `e20cb664efcbfa2c2f57801230d246a6)`, par exemple.
+5. Copiez l'ID de certificat. Le certificat CRN contient différentes valeurs qui sont séparées par le signe deux points (`:`). L'ID de certificat est la dernière valeur de votre certificat CRN, par exemple `e20cb664efcbfa2c2f57801230d246a6`

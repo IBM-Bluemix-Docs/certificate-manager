@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-11-16"
 
 ---
 
@@ -15,11 +15,10 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-
 # {{site.data.keyword.cloudaccesstrailshort}} 이벤트  
 {: #at_events}
 
-{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 {{site.data.keyword.Bluemix}}에서 사용자 및 애플리케이션이 {{site.data.keyword.cloudcerts_long}} 서비스와 상호 작용하는 방식을 추적하십시오.
+{{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용자 및 애플리케이션이 {{site.data.keyword.cloudcerts_long_notm}} 서비스와 상호 작용하는 방식을 추적하십시오.
 {:shortdesc}
 
 {{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스의 상태를 변경하는 사용자 시작 활동을 레코드합니다. 추가 정보는 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)의 내용을 참조하십시오. 예를 들어, 인증서를 가져오면 {{site.data.keyword.cloudaccesstrailshort}} 이벤트가 생성됩니다.
@@ -27,73 +26,77 @@ lastupdated: "2018-08-21"
 다음 표에는 API 메소드가 호출될 때 이벤트를 생성하는 API 메소드가 나열되어 있습니다.
 
 <table>
-  <caption>이벤트를 생성하는 조치</caption>
+  <caption>표 1. 이벤트를 생성하는 조치</caption>
   <tr>
     <th>조치</th>
 	  <th>설명</th>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.import</td>
-	  <td>써드파티 인증 기관에서 발급된 인증서를 가져옵니다.</td>
+    <td>`cloudcerts.certificate.import`</td>
+	  <td>인증서를 가져옵니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.download</td>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>인증서를 다시 가져옵니다.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate.download`</td>
 	  <td>인증서를 다운로드합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.read</td>
+    <td>`cloudcerts.certificates.read`</td>
 	  <td>인증서를 나열합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.read</td>
+    <td>`cloudcerts.certificates-metadata.read`</td>
 	  <td>인증서 메타데이터를 나열합니다. 인증서의 세부사항을 표시합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates.search</td>
+    <td>`cloudcerts.certificates.search`</td>
 	  <td>인증서를 검색합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificates-metadata.search</td>
+    <td>`cloudcerts.certificates-metadata.search`</td>
 	  <td>인증서 메타데이터를 검색합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate.delete</td>
+    <td>`cloudcerts.certificate.delete`</td>
 	  <td>인증서를 삭제합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.certificate-metadata.update</td>
+    <td>`cloudcerts.certificate-metadata.update`</td>
 	  <td>인증서 메타데이터를 업데이트합니다(예: 인증서의 설명 변경).</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels.list</td>
+    <td>`cloudcerts.notification-channels.list`</td>
 	  <td>알림 채널을 나열합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.create</td>
+    <td>`cloudcerts.notification-channel.create`</td>
 	  <td>알림 채널을 작성합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.state</td>
+    <td>`cloudcerts.notification-channel.state`</td>
 	  <td>알림 채널을 사용하지 않거나 사용합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.update</td>
+    <td>`cloudcerts.notification-channel.update`</td>
 	  <td>알림 채널의 엔드포인트를 업데이트합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.delete</td>
+    <td>`cloudcerts.notification-channel.delete`</td>
 	  <td>알림 채널을 삭제합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channel.test</td>
+    <td>`cloudcerts.notification-channel.test`</td>
 	  <td>알림 채널을 테스트합니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification.sent</td>
+    <td>`cloudcerts.notification.sent`</td>
 	  <td>알림 채널 엔드포인트에 알림이 전송되었습니다.</td>
   </tr>
   <tr>
-    <td>cloudcerts.notification-channels-publickey.read</td>
+    <td>`cloudcerts.notification-channels-publickey.read`</td>
 	  <td>공개 키가 요청되었습니다.</td>
   </tr>
 </table>
@@ -101,9 +104,9 @@ lastupdated: "2018-08-21"
 ## 이벤트를 찾을 수 있는 위치
 {: #ui}
 
-{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 이벤트가 생성되는 {{site.data.keyword.Bluemix_notm}} 지역에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에서 사용할 수 있습니다.
+{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 이벤트가 생성되는 {{site.data.keyword.Bluemix_notm}} 위치에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에서 사용할 수 있습니다.
 
-{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 {{site.data.keyword.cloudcerts_short}} 서비스가 프로비저닝되는 동일한 지역에서 자동으로 {{site.data.keyword.cloudaccesstrailshort}} 서비스로 전달됩니다.
+{{site.data.keyword.cloudaccesstrailshort}} 이벤트는 {{site.data.keyword.cloudcerts_short}} 서비스가 프로비저닝되는 동일한 위치에서 자동으로 {{site.data.keyword.cloudaccesstrailshort}} 서비스에 전달됩니다.
 
 ## 추가 정보
 {: #info}

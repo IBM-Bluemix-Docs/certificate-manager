@@ -1,8 +1,8 @@
-
 ---
+
 copyright:
   years: 2018
-lastupdated: "2018-09-13"
+lastupdated: "2018-11-15"
 
 ---
 
@@ -20,12 +20,29 @@ lastupdated: "2018-09-13"
 
 提供 {{site.data.keyword.cloudcerts_long}} 服务的下列功能和更改。
 
+## 2018 年 11 月 14 日
+{: 14November2018}
+
+- **重新导入**  
+  您可以重新导入与现有证书具有相同域但到期日期为新日期的新版本来更新证书。重新导入证书时，会保留现有版本的证书作为备份，请参阅[重新导入证书](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate)。
+
+- **每个实例 1000 个证书**  
+  每个实例最多可导入 1000 个证书。
+
+## 2018 年 10 月 28 日
+{: 28October2018}
+
+- **公告条幅**  
+  服务公告（例如不推荐的 API 和其他新闻）会显示在**管理**选项卡上。
+
 ## 2018 年 9 月 12 日
 {: 12September2018}
 
 - **证书名称是必需的**  
   导入证书时，必须提供证书的名称值。  
-  此外，不推荐使用**导入证书**和**更新证书元数据** V2 API，将于 2018 年 11 月 1 日移除。必须升级至 V3 API。有关更多信息，请参阅 [API 文档](https://console.bluemix.net/apidocs/certificate-manager)。
+
+- **不推荐的 API**  
+  不推荐使用**导入证书**和**更新证书元数据** V2 API，将于 2018 年 12 月 1 日将它们移除。必须升级到 V3 API。有关更多信息，请参阅 [API 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/apidocs/certificate-manager)。
 
 - **分组 Slack 通知**  
  Slack 中的通知按到期日期分组。
@@ -39,14 +56,14 @@ lastupdated: "2018-09-13"
 ## 2018 年 8 月 22 日
 {: 22August2018}
 
-- **位于英国**  
-  {{site.data.keyword.cloudcerts_long_notm}} Beta 在英国区域（英国南部）提供。
+- **位于伦敦**  
+  将在位置“伦敦”提供 {{site.data.keyword.cloudcerts_long_notm}} Beta。
 
 ## 2018 年 8 月 15 日
 {: 15August2018}
 
 - **除去不推荐的 V1 API**  
-  V1 API 不再可用。如果您尚未更新 API，那么必须尽快更新。[查看 API 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/apidocs/).
+  V1 API 不再可用。如果您尚未更新 API，那么必须尽快更新。有关更多信息，请参阅 [API 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/apidocs/)。
 
 - **平台角色替换为服务角色**  
   您可以使用服务角色来控制对 {{site.data.keyword.cloudcerts_short}} 实例的访问。[了解有关访问管理的更多信息](access-management.html)。
@@ -61,7 +78,13 @@ lastupdated: "2018-09-13"
 {: 12June2018}
 
 - **Slack 通知**  
-  已添加 Slack 通知，这样您就不会错过证书快到期的通知了。[了解有关通知的更多信息](notifications-dashboard.html)。
+  已添加 Slack 通知，这样您就不会错过证书到期通知了。[了解有关通知的更多信息](notifications-dashboard.html)。
+
+## 2018 年 1 月 8 日
+{: 8January2018}
+
+- **不推荐的 API**  
+  不推荐使用 V1 API，将于 2018 年 9 月 8 日将它们移除。必须升级到 V2 API。有关更多信息，请参阅 [API 文档 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://console.bluemix.net/apidocs/certificate-manager)。
 
 ## 2017 年 12 月 19 日
 {: 19December2017}

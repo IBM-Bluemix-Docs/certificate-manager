@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -31,5 +31,5 @@ You can use the following related links to learn more about and interact with {{
 {{site.data.keyword.IBM_notm}} tutorials that feature {{site.data.keyword.cloudcerts_long_notm}}.  
 {: #shortdesc}
 
-* <a href="https://console.bluemix.net/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Apply end to end security to a cloud application <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-* <a href="https://console.bluemix.net/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Deploy serverless apps across multiple locations <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* <a href="https://cloud.ibm.com/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Apply end to end security to a cloud application <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* <a href="https://cloud.ibm.com/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Deploy serverless apps across multiple locations <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>

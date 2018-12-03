@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-03"
 
 ---
 
@@ -42,7 +42,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
   It is mandatory to supply a value for the certificate's name when you import a certificate.  
 
 - **Deprecated APIs**  
-  The **Import a certificate** and **Update a certificate's metadata** v2 APIs are deprecated and will be removed on 1 December 2018. You must upgrade to v3 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/certificate-manager).
+  The **Import a certificate** and **Update a certificate's metadata** v2 APIs are deprecated and will be removed on 1 December 2018. You must upgrade to v3 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 - **Grouped Slack notifications**  
   Notifications in Slack are grouped by expiration date.
@@ -63,7 +63,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: 15August2018}
 
 - **Remove deprecated v1 APIs**  
-  Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/).
+  Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/).
 
 - **Platform roles replaced with Service roles**  
   You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](access-management.html).
@@ -84,7 +84,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: 8January2018}
 
 - **Deprecated APIs**  
-  Version 1 APIs are deprecated and will be removed on 8 September 2018. You must upgrade to v2 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://console.bluemix.net/apidocs/certificate-manager).
+  Version 1 APIs are deprecated and will be removed on 8 September 2018. You must upgrade to v2 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 ## 19 December 2017
 {: 19December2017}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-11-15"
+lastupdated: "2018-11-27"
 
 ---
 
@@ -71,3 +71,4 @@ You can update a certificate by reimporting a new version of the certificate tha
 {: faq}
 
 Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](access-management.html).
+

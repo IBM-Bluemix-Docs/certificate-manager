@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-04"
 
 ---
 {:new_window: target="_blank"}
@@ -12,6 +12,7 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Managing certificates from the dashboard
@@ -114,7 +115,7 @@ To reimport a certificate, complete the following steps:
 6. Click **Reimport** and then **Done**.
 
 Reimporting certificates is limited to five actions per minute.
-{: tip}
+{: note}
 
 ### Downloading a previous version of your certificate
 {: #downloading-certificate}
@@ -168,4 +169,4 @@ To update a certificate, complete the following steps:
 3. Save your changes.
 
 You can perform up to five update actions per minute.
-{: tip}
+{: note}

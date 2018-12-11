@@ -18,7 +18,9 @@ lastupdated: "2018-12-11"
 # Configuring notifications
 {: #configuring-notifications}
 
-Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send you notifications about certificates that are about to expire, so that you will be reminded to renew them on time. You will also get alerted when a renewed version of your cerificate is reimported to {{site.data.keyword.cloudcerts_short}} in place of the expiring one so that you remember to also deploy it to SSL/TLS termination points. This notification about reimported certificates will be sent only to channels from [channel version 2](#channel-versions).
+Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send you notifications about certificates that are about to expire, so that you will be reminded to renew them on time.
+
+You will also get alerted when a renewed version of your cerificate is reimported to {{site.data.keyword.cloudcerts_short}} in place of the expiring one so that you remember to also deploy it to SSL/TLS termination points. This notification about reimported certificates will be sent only to channels from [channel version 2](#channel-versions).
 {: shortdesc}
 
 **When do I get notified?**  
@@ -44,11 +46,10 @@ To set up a Slack webhook, complete the following steps:
 To trigger the renewal process for your team, you can use a callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty, automatically open up an issue in GitHub, or trigger renewal scripts.  
 {: shortdesc}
 
-Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
+**Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 * The endpoint must use the HTTPS protocol.
 * The endpoint must not require HTTP headers. This requirement includes authorization headers.
 * The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
-{: important}
 
 ### Notification format
 {: #notification_format}
@@ -58,6 +59,8 @@ The notification that is sent to your callback URL is a JSON document signed wit
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
+{: screen}
+
 After you decode and verify the payload, the content is a JSON string [according to the channel version](#channel-versions).
 
 ## Configuring a notification channel

@@ -170,7 +170,7 @@ If you have existing notification channels (Slack or Callback URL), to start get
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 
-For Channels Versions check [API documentation](https://cloud.ibm.com/apidocs/certificate-manager#channel-versions).
+For Channels Versions, see the [API documentation](https://cloud.ibm.com/apidocs/certificate-manager#channel-versions).
 
 ## Examples
 {: #examples}

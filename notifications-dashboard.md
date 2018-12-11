@@ -160,16 +160,15 @@ To download the public key, complete the following steps:
 3. Click the **Download Key** button. The key is downloaded as a PEM file.
 
 ## Channel Versions
-
 {: #channel-versions}
 
 As Certificate Manager evolves, we might modify the format of the notifications payload structure from time to time. To ensure backwards compatibility, the payload sent to your existing channels won’t change.   
 
 If you have existing notification channels (Slack or Callback URL), to start getting the new version of the payload:
-1. make sure your channel can accept the new payload
-2. create a new notification channel (new channels are always created in the current version)
-3. test that the new channel works correctly
-4. delete the old channel
+1. Make sure your channel can accept the new payload.
+2. Create a new notification channel (new channels are always created in the current version).
+3. Test that the new channel works correctly.
+4. Delete the old channel.
 
 For Channels Versions check [API documentation](https://cloud.ibm.com/apidocs/certificate-manager#channel-versions)
 

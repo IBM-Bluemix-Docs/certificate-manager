@@ -54,7 +54,7 @@ To trigger the renewal process for your team, you can use a callback URL to post
 ### Notification format
 {: #notification_format}
 
-The notification that is sent to your callback URL is a JSON document signed with your instance asymmetric key in the format below.
+The notification that is sent to your callback URL is a JSON document signed with your instance asymmetric key in the following format.
 
 ```
 { "data":"<JWT FORMAT STRING>" }

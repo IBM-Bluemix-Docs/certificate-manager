@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-15"
+lastupdated: "2018-12-11"
 
 ---
 {:new_window: target="_blank"}
@@ -12,18 +12,19 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:important: .important}
 {:download: .download}
 
-# Configuring notifications for expiring certificates
-{: #configuring-notifications-for-expiring-certificates}
+# Configuring notifications
+{: #configuring-notifications}
 
-Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send notifications for certificates that are about to expire so that you can renew your certificates on time.
+Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send you notifications about certificates that are about to expire, so that you will be reminded to renew them on time. You will also get alerted when a renewed version of your cerificate is reimported to {{site.data.keyword.cloudcerts_short}} in place of the expiring one so that you remember to also deploy it to SSL/TLS termination points. This notification about reimported certificates will be sent only to channels from [channel version 2](#channel-versions).
 {: shortdesc}
 
 **When do I get notified?**  
 Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_full_notm}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
 
-You must renew your certificate, upload this certificate to {{site.data.keyword.cloudcerts_full_notm}}, and delete the expired certificate to stop notification from continuing to be sent.
+You must renew your certificate and reimport this certificate in place of your old one to {{site.data.keyword.cloudcerts_full_notm}} to stop notifications from being sent. When you reimport your certificate, you receive a notification that your certificate was reimported, to remind you to redeploy it.
 
 **What are my options to configure notifications?**  
 You can send notifications to Slack by using a Slack webhook or use any callback URL that you like.
@@ -40,48 +41,29 @@ To set up a Slack webhook, complete the following steps:
 ## Setting up a callback URL
 {: #callback}
 
-You might want to use callback URL to post notification to the tools that you use daily to trigger the renewal process for your team. For example, you can send notifications to report to PagerDuty, automatically open up an issue in GitHub, or trigger renewal scripts.  
+To trigger the renewal process for your team, you can use a callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty, automatically open up an issue in GitHub, or trigger renewal scripts.  
 {: shortdesc}
 
-**Important:** Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
-
+Your callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 * The endpoint must use the HTTPS protocol.
 * The endpoint must not require HTTP headers. This requirement includes authorization headers.
 * The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
+{: important}
 
 ### Notification format
 {: #notification_format}
 
-The notification that is sent to your callback URL is a JSON document that is in the following format:
+The notification that is sent to your callback URL is a JSON document signed with your instance asymmetric key in the format below.
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
-{: screen}
-
-After you decode and verify the payload, the content is a JSON string.
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+After you decode and verify the payload, the content is a JSON string [according to the channel version](#channel-versions).
 
 ## Configuring a notification channel
 {: #adding-channel}
 
-After you create a Slack webhook or a callback URL, you add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates. {{site.data.keyword.cloudcerts_short}} encrypts the endpoint and stores it securely.
+After you create a Slack webhook or a callback URL, you add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, and reimported certificates. {{site.data.keyword.cloudcerts_short}} encrypts the endpoint and stores it securely.
 {: shortdesc}
 
 To add a notification channel, complete the following steps:
@@ -144,7 +126,7 @@ To test a notification channel, complete the following steps:
 3. Verify that you received a notification in the channel that you configured.
 
 ## Updating a notification channel
-{: updating-channel}
+{: #updating-channel}
 
 You can update your notification channel configuration, disable or enable notifications, or delete notification channels from {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
@@ -173,6 +155,20 @@ To download the public key, complete the following steps:
 1. From the navigation on the service details page, click **Settings**.
 2. Open the **Notifications** tab.
 3. Click the **Download Key** button. The key is downloaded as a PEM file.
+
+## Channel Versions
+
+{: #channel-versions}
+
+As Certificate Manager evolves, we might modify the format of the notifications payload structure from time to time. To ensure backwards compatibility, the payload sent to your existing channels won’t change.   
+
+If you have existing notification channels (Slack or Callback URL), to start getting the new version of the payload:
+1. make sure your channel can accept the new payload
+2. create a new notification channel (new channels are always created in the current version)
+3. test that the new channel works correctly
+4. delete the old channel
+
+For Channels Versions check [API documentation](https://cloud.ibm.com/apidocs/certificate-manager#channel-versions)
 
 ## Examples
 {: #examples}

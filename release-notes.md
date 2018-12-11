@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-03"
+lastupdated: "2018-12-11"
 
 ---
 
@@ -19,6 +19,15 @@ lastupdated: "2018-12-03"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 5 December 2018
+{: 5December2018}
+- **Reimport Notification**    
+When you reimport a renewed certificate in place of an expiring one, you can get a notification that the certificate was reimported. This will remind you and your team to deploy the renewed certificate to SSL/TLS termination points.    
+This notification is available only for newly created notification channels.
+
+- **{site.data.keyword.cloudcerts_short} is available in Frankfurt.**     
+This region is compliant with the EU requirements.
 
 ## 14 November 2018
 {: 14November2018}

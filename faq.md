@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-11-27"
+lastupdated: "2018-12-14"
 
 ---
 
@@ -22,11 +22,23 @@ lastupdated: "2018-11-27"
 Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
 {: shortdesc}
 
-## What type of certificates can I store in {{site.data.keyword.cloudcerts_short}}?
+## What format do my certificates need to be in?
 {: #supported-certificate-types}
 {: faq}
 
 {{site.data.keyword.cloudcerts_short}} supports PEM formatted certificates only.
+
+## What type of public key algorithms are supported?
+{: #supported-pk-algorithms}
+{: faq}
+
+Certificate Manager supports certificates with public keys generated using the following public key algorithms:
+
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA)
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Elliptic Curve with Diffie-Hellman key agreement protocol (ECDH)
+
 
 ## Can I upload password-protected private keys?
 {: #password-protected-private-keys}

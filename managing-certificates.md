@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-04"
+lastupdated: "2018-12-14"
 
 ---
 {:new_window: target="_blank"}
@@ -39,7 +39,7 @@ To import a certificate, click **Import Certificate** and provide the following 
 2. Select the certificate file in PEM format by clicking **Browse**.
 3. Select the certificate's private key in PEM format by clicking **Browse**.
 4. If applicable, provide the intermediate certificate file in PEM format.
-5. (Optional) Enter a description.
+5. Optional: Enter a description.
 6. Click **Import**.
 
 After you import a certificate, the following information is displayed in the Certificates table. To view more information about the certificate, you can expand the certificate's row in the Certificates table.
@@ -68,33 +68,35 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Algorithm</td>
-    <td>The encryption type by which the certificate is created. </td>
+    <td>The encryption key type by which the certificate is created. Options include: <code>RSA</code>, <code>DSA</code>, <code>ECDSA</code>, <code>ECDH</code></td>
   </tr>
   <tr>
     <td>Key algorithm</td>
     <td>The key type and size that is used by the algorithm. </td>
   </tr>
   <tr>
-    <td>Expires in </td>
+    <td>Expires in</td>
     <td>The number of remaining days before the certificate is no longer valid. </td>
   </tr>
   <tr>
     <td>Date issued</td>
-    <td>The date when the certificate was issued. </td>
+    <td>The date when the certificate was issued.</td>
   </tr>
   <tr>
     <td>Valid from</td>
-    <td>The date on which the certificate became valid. </td>
+    <td>The date on which the certificate became valid.</td>
   </tr>
   <tr>
     <td>Expires on</td>
-    <td>The date on which the certificate is no longer valid. </td>
+    <td>The date on which the certificate is no longer valid.</td>
   </tr>
   <tr>
     <td>Certificate ID</td>
-    <td>The generated ID given to the certificate upon import. </td>
+    <td>The generated ID given to the certificate upon import.</td>
   </tr>
 </table>
+
+</br>
 
 ## Reimporting a certificate
 {: #reimport-certificate}

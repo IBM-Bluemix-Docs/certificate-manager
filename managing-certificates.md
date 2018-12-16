@@ -27,9 +27,21 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 Import your certificates so that you can manage them.
 {: shortdesc}
 
+## Supported certificate formats and public key algorithms
+{: supported-formats-and-algorithms}
+
+### Certificate formats
+* PEM
+
+### Public key algorithms
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA)
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Elliptic Curve with Diffie-Hellman key agreement protocol (ECDH)
+
 **Before you begin**
 
-* Create a valid, unexpired certificate with a matching private key.
+* Create a valid, unexpired certificate with a matching private key (key is optional).
 * Convert the files into Privacy-enhanced Electronic Mail (PEM) format.
 * Keep the private key unencrypted to ensure that it can be imported.
 
@@ -37,7 +49,7 @@ To import a certificate, click **Import Certificate** and provide the following 
 
 1. Enter a display name.
 2. Select the certificate file in PEM format by clicking **Browse**.
-3. Select the certificate's private key in PEM format by clicking **Browse**.
+3. Optional: Select the certificate's private key in PEM format by clicking **Browse**.
 4. If applicable, provide the intermediate certificate file in PEM format.
 5. Optional: Enter a description.
 6. Click **Import**.

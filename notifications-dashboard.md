@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-16"
 
 ---
 {:new_window: target="_blank"}
@@ -54,7 +54,7 @@ To trigger the renewal process for your team, you can use a callback URL to post
 ### Notification format
 {: #notification_format}
 
-The notification that is sent to your callback URL is a JSON document signed with your instance asymmetric key in the following format.
+The notification that is sent to your callback URL is a JSON document signed with your instance asymmetric key in the format below.
 
 ```
 { "data":"<JWT FORMAT STRING>" }
@@ -170,7 +170,7 @@ If you have existing notification channels (Slack or Callback URL), to start get
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 
-For Channels Versions, see the [API documentation](https://cloud.ibm.com/apidocs/certificate-manager#channel-versions).
+For Channels Versions check [API documentation](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions).
 
 ## Examples
 {: #examples}

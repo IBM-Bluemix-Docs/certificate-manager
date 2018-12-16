@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-11"
+lastupdated: "2018-12-16"
 
 ---
 
@@ -19,6 +19,11 @@ lastupdated: "2018-12-11"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 9 December 2018
+{: 9December2018}
+- **Additional certificate formats**    
+{{site.data.keyword.cloudcerts_short}} supports the following certificate formats: RSA, DSA, ECDSA, ECDH.
 
 ## 5 December 2018
 {: 5December2018}

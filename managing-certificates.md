@@ -68,11 +68,11 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Algorithm</td>
-    <td>The encryption key type by which the certificate is created. Options include: <code>RSA</code>, <code>DSA</code>, <code>ECDSA</code>, <code>ECDH</code></td>
+    <td>The certificate signature algorithm.</td>
   </tr>
   <tr>
     <td>Key algorithm</td>
-    <td>The key type and size that is used by the algorithm. </td>
+    <td>The public key algorithm</td>
   </tr>
   <tr>
     <td>Expires in</td>

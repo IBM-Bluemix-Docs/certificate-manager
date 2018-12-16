@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-05"
+lastupdated: "2018-12-16"
 
 ---
 
@@ -31,6 +31,16 @@ You can manage your certificates in the following ways:
 
 ![High-level service architecture diagram](images/high-level-architecture.png)
 <caption>Figure 1. High-level service architecture.</caption>
+
+## Supported public key algorithms
+{: #supported-public-key-algorithms}
+
+{{site.data.keyword.cloudcerts_short}} supports certificates with public keys generated using the following public key algorithms:
+
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA)
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Elliptic Curve with Diffie-Hellman key agreement protocol (ECDH)
 
 ## Private key security
 {: #private-key-security}

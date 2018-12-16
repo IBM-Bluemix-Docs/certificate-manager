@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018,
-lastupdated: "2018-12-14"
+lastupdated: "2018-12-16"
 
 ---
 
@@ -32,7 +32,7 @@ Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
 {: #supported-pk-algorithms}
 {: faq}
 
-Certificate Manager supports certificates with public keys generated using the following public key algorithms:
+{{site.data.keyword.cloudcerts_short}} supports certificates with public keys generated using the following public key algorithms:
 
 * Rivest-Shamir-Adleman (RSA)
 * Digital Signature Algorithm (DSA)
@@ -83,4 +83,3 @@ You can update a certificate by reimporting a new version of the certificate tha
 {: faq}
 
 Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](access-management.html).
-

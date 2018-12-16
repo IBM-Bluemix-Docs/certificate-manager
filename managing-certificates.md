@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-12-14"
+lastupdated: "2018-12-16"
 
 ---
 {:new_window: target="_blank"}
@@ -68,27 +68,23 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Algorithm</td>
-    <td>The encryption key type by which the certificate is created. Options include: <code>RSA</code>, <code>DSA</code>, <code>ECDSA</code>, <code>ECDH</code></td>
+    <td>The certificate signature algorithm.</td>
   </tr>
   <tr>
     <td>Key algorithm</td>
-    <td>The key type and size that is used by the algorithm. </td>
+    <td>The public key algorithm</td>
   </tr>
   <tr>
     <td>Expires in</td>
     <td>The number of remaining days before the certificate is no longer valid. </td>
   </tr>
   <tr>
-    <td>Date issued</td>
-    <td>The date when the certificate was issued.</td>
-  </tr>
-  <tr>
     <td>Valid from</td>
-    <td>The date on which the certificate became valid.</td>
+    <td>The date on which the certificate became valid (in UTC timezone). </td>
   </tr>
   <tr>
     <td>Expires on</td>
-    <td>The date on which the certificate is no longer valid.</td>
+    <td>The date on which the certificate is no longer valid (in UTC timezone). </td>
   </tr>
   <tr>
     <td>Certificate ID</td>

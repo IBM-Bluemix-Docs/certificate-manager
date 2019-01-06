@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-12-16"
+lastupdated: "2019-01-06"
 
 ---
 
@@ -19,6 +19,11 @@ lastupdated: "2018-12-16"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 6 January 2019
+{: 6January2019}
+- **Deprecated APIs**  
+  The **List certificates** and **Search certificates repository** v2 APIs are deprecated and will be removed at a future date. You must upgrade to v3 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 ## 9 December 2018
 {: 9December2018}

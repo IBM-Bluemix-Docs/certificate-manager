@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2019-01-06"
+lastupdated: "2019-01-13"
 
 ---
 
@@ -19,6 +19,11 @@ lastupdated: "2019-01-06"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 13 January 2019
+{: 13January2019}
+- **Callback payload version 3**  
+  [See the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 ## 6 January 2019
 {: 6January2019}
@@ -37,6 +42,11 @@ When you reimport a renewed certificate in place of an expiring one, you can get
 
 - **{{site.data.keyword.cloudcerts_short}} is available in Frankfurt.**     
 The service is compliant with the EU requirements.
+
+## 2 December 2018
+{: 2December2018}
+- **Callback and Slack payload version 2**  
+  [See the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 ## 14 November 2018
 {: 14November2018}

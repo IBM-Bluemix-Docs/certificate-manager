@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-01-22"
 
 ---
 {:new_window: target="_blank"}
@@ -62,7 +62,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
     <td> Manager, Writer </td>
   </tr>
   <tr>
-    <td>Update certificate data</td>
+    <td>Update certificate's metadata</td>
     <td> Manager, Writer </td>
   </tr>
   <tr>

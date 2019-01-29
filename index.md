@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-01-29"
 
 ---
 {:new_window: target="_blank"}
@@ -24,4 +24,4 @@ To get started, create a new {{site.data.keyword.cloudcerts_short}} service inst
 3. Click **Create**.
 4. To import your organization's certificates into {{site.data.keyword.cloudcerts_short}}, click **Import Certificate**.  
 
-You can also [learn more](about.html) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](troubleshooting.html#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's changed in the service, see [Release notes](release-notes.html).
+You can also [learn more](/docs/services/certificate-manager/about.html) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](troubleshooting.html#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's changed in the service, see [Release notes](/docs/services/certificate-manager/release-notes.html).

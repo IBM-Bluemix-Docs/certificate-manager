@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2019-01-13"
+lastupdated: "2019-01-29"
 
 ---
 
@@ -100,13 +100,13 @@ The service is compliant with the EU requirements.
 {: 12July2018}
 
 - **Callback notifications**  
-  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](notifications-dashboard.html).
+  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager/notifications-dashboard.html).
 
 ## 12 June 2018
 {: 12June2018}
 
 - **Slack notifications**  
-  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](notifications-dashboard.html).
+  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/services/certificate-manager/notifications-dashboard.html).
 
 ## 8 January 2018
 {: 8January2018}

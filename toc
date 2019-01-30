@@ -16,11 +16,9 @@ Certificate Manager
     managing-certificates.md
     notifications-dashboard.md
     access-management.md
-    
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    
     
     [API documentation](https://cloud.ibm.com/apidocs/certificate-manager)
     at_events.md

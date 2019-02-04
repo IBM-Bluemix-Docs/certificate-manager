@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-01-22"
+lastupdated: "2019-02-04"
 
 ---
 {:new_window: target="_blank"}
@@ -104,11 +104,11 @@ To configure access policies, complete the following steps:
 5. From the **Services** menu, select **Certificate Manager**.
 6. From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
 7. (Optional) Configure access to a specific certificate:
-    1. [Retrieve your certificate ID](#get-certificate-id).
+    1. [Retrieve your certificate ID](/docs/services/certificate-manager/access-management.html#get-certificate-id).
     2. Enter `certificate` in the **Resource Type** field.
     3. Enter the certificate ID in the **Resource ID** field.
-8. Assign a [platform access role](#platform-access-roles) to the user.
-9. Assign a [service access role](#service-access-roles) to the user.
+8. Assign a [platform access role](/docs/services/certificate-manager/access-management.html#platform-access-roles) to the user.
+9. Assign a [service access role](/docs/services/certificate-manager/access-management.html#service-access-roles) to the user.
 10. Click **Assign** to assign the access policy to the user.
 
 **Examples of role allocation**

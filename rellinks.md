@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-03"
+  years: 2017, 2019
+lastupdated: "2019-02-04"
 
 ---
 
@@ -10,7 +10,7 @@ lastupdated: "2018-12-03"
 {:shortdesc: .shortdesc}
 
 # Related links
-{: links}
+{: #links}
 
 You can use the following related links to learn more about and interact with {{site.data.keyword.cloudcerts_long}}.
 {:shortdesc}

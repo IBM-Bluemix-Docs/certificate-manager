@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2019-01-29"
+lastupdated: "2019-02-14"
 
 ---
 
@@ -94,7 +94,7 @@ The service is compliant with the EU requirements.
   Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/).
 
 - **Platform roles replaced with Service roles**  
-  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](access-management.html).
+  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/services/certificate-manager/access-management.html).
 
 ## 12 July 2018
 {: 12July2018}

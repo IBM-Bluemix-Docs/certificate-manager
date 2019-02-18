@@ -58,7 +58,7 @@ The service is compliant with the EU requirements.
 {: 14November2018}
 
 - **Reimport**  
-  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 - **1000 certificates per instance**  
   You can import up to 1000 certificates per instance.
@@ -106,13 +106,13 @@ The service is compliant with the EU requirements.
 {: 12July2018}
 
 - **Callback notifications**  
-  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager/notifications-dashboard.html).
+  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications).
 
 ## 12 June 2018
 {: 12June2018}
 
 - **Slack notifications**  
-  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/services/certificate-manager/notifications-dashboard.html).
+  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications).
 
 ## 8 January 2018
 {: 8January2018}

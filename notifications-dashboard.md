@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-16"
+  years: 2017, 2019
+lastupdated: "2019-02-04"
 
 ---
 {:new_window: target="_blank"}
@@ -20,7 +20,7 @@ lastupdated: "2018-12-16"
 
 Certificates are typically valid only for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime, you can configure {{site.data.keyword.cloudcerts_full}} to send you notifications about certificates that are about to expire, so that you will be reminded to renew them on time.
 
-You will also get alerted when a renewed version of your cerificate is reimported to {{site.data.keyword.cloudcerts_short}} in place of the expiring one so that you remember to also deploy it to SSL/TLS termination points. This notification about reimported certificates will be sent only to channels from [channel version 2](#channel-versions).
+You will also get alerted when a renewed version of your cerificate is reimported to {{site.data.keyword.cloudcerts_short}} in place of the expiring one so that you remember to also deploy it to SSL/TLS termination points. This notification about reimported certificates will be sent only to channels from [channel version 2](/docs/services/certificate-manager/notifications-dashboard.html#channel-versions).
 {: shortdesc}
 
 **When do I get notified?**  
@@ -61,7 +61,7 @@ The notification that is sent to your callback URL is a JSON document signed wit
 ```
 {: screen}
 
-After you decode and verify the payload, the content is a JSON string [according to the channel version](#channel-versions).
+After you decode and verify the payload, the content is a JSON string [according to the channel version](/docs/services/certificate-manager/notifications-dashboard.html#channel-versions).
 
 ## Configuring a notification channel
 {: #adding-channel}
@@ -120,7 +120,7 @@ To add a notification channel, complete the following steps:
 You can test a notification channel to ensure that your notification channel is configured correctly.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](#adding-channel).
+Before you begin, [configure a notification channel](/docs/services/certificate-manager/notifications-dashboard.html#adding-channel).
 
 To test a notification channel, complete the following steps:
 
@@ -134,7 +134,7 @@ To test a notification channel, complete the following steps:
 You can update your notification channel configuration, disable or enable notifications, or delete notification channels from {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](#adding-channel).
+Before you begin, [configure a notification channel](/docs/services/certificate-manager/notifications-dashboard.html#adding-channel).
 
 To update your notification channel, complete the following steps:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2019-01-29"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -19,6 +19,12 @@ lastupdated: "2019-01-29"
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 18 February 2019
+{: 18February2018}
+
+- **Live in Tokyo**  
+  {{site.data.keyword.cloudcerts_long_notm}} is available in the Tokyo location.
 
 ## 13 January 2019
 {: 13January2019}
@@ -40,7 +46,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 - **Reimport Notification**    
 When you reimport a renewed certificate in place of an expiring one, you can get a notification that the certificate was reimported. This will remind you and your team to deploy the renewed certificate to SSL/TLS termination points. This notification is available only for newly created notification channels.
 
-- **{{site.data.keyword.cloudcerts_short}} is available in Frankfurt.**     
+- **{{site.data.keyword.cloudcerts_short}} is available in the Frankfurt location.**     
 The service is compliant with the EU requirements.
 
 ## 2 December 2018
@@ -94,7 +100,7 @@ The service is compliant with the EU requirements.
   Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/).
 
 - **Platform roles replaced with Service roles**  
-  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](access-management.html).
+  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/services/certificate-manager/access-management.html).
 
 ## 12 July 2018
 {: 12July2018}

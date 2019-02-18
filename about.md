@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-01-08"
+lastupdated: "2019-02-18"
 
 ---
 
@@ -68,7 +68,7 @@ When you import a certificate and the corresponding private key into {{site.data
 ## Locations
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London and Frankfurt locations.
+{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt and Tokyo locations.
 
 
 

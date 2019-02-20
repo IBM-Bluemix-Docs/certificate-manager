@@ -3,7 +3,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="certificate-manager" audience="service" arm="3663406" href="/docs/services/certificate-manager/index.html" path="services/certificate-manager"}
+{: .toc subcollection="certificate-manager" audience="service" arm="3663406" href="/docs/services/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted" path="services/certificate-manager"}
 Certificate Manager
 
     {: .navgroup id="learn"}

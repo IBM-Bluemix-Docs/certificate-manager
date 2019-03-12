@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-12"
 
 keywords: certificates, SSL, 
 
@@ -107,19 +107,19 @@ The service is compliant with the EU requirements.
   Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/).
 
 - **Platform roles replaced with Service roles**  
-  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/services/certificate-manager/access-management.html).
+  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
 
 ## 12 July 2018
 {: 12July2018}
 
 - **Callback notifications**  
-  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications).
+  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#callback).
 
 ## 12 June 2018
 {: 12June2018}
 
 - **Slack notifications**  
-  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications).
+  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 ## 8 January 2018
 {: 8January2018}

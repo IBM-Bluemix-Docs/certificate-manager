@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-12-16"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -13,6 +18,8 @@ lastupdated: "2018-12-16"
 {:codeblock: .codeblock}
 {:tip: .tip}
 {:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Managing certificates from the dashboard

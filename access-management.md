@@ -2,14 +2,25 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-02-04"
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Managing service access roles
 {: #managing-service-access-roles}
@@ -87,7 +98,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
      </tr>
 </table>
 
-For more information about user roles and permissions, see [User roles](/docs/iam/users_roles.html#userroles).
+For more information about user roles and permissions, see [User roles](/docs/iam?topic=iam-userroles#userroles).
 
 ## Configuring access policies for users
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 To configure access policies, complete the following steps:
 
 1. Navigate to **Manage > Account > Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
-2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam/iamuserinv.html#iamuserinv).
+2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Click **Assign access**.
 4. Click **Assign access to resources**.
 5. From the **Services** menu, select **Certificate Manager**.
 6. From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
 7. (Optional) Configure access to a specific certificate:
-    1. [Retrieve your certificate ID](/docs/services/certificate-manager/access-management.html#get-certificate-id).
+    1. [Retrieve your certificate ID](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
     2. Enter `certificate` in the **Resource Type** field.
     3. Enter the certificate ID in the **Resource ID** field.
-8. Assign a [platform access role](/docs/services/certificate-manager/access-management.html#platform-access-roles) to the user.
-9. Assign a [service access role](/docs/services/certificate-manager/access-management.html#service-access-roles) to the user.
+8. Assign a [platform access role](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) to the user.
+9. Assign a [service access role](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) to the user.
 10. Click **Assign** to assign the access policy to the user.
 
 **Examples of role allocation**

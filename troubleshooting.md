@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,13 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # Troubleshooting
 {: #troubleshooting}
@@ -33,11 +43,9 @@ You can get help in the following ways:
 
 You can also open a support ticket.
 
-When you are using the forums to ask a question, tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full_notm}} development team.
+When you are using the forums to ask a question, be sure to tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full_notm}} development team.
 
 - If you have technical questions about the service, post your question on [Stack Overflow ![External link icon](../../icons/launch-glyph.svg "External link icon")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
 - For questions about the service and getting started instructions, post your question on [dW Answers ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Include the `ibm-certificate-manager` and `ibm-cloud` tags.
 
-For more information about how to use the forums, see [How do I get the support I need?](/docs/get-support/howtogetsupport.html#getting-customer-support)
-
-For more information about opening an {{site.data.keyword.IBM_notm}} support ticket, or about support levels and ticket severities, see [How the customer support process works](/docs/get-support/getstarttssup.html).
+For more information about opening a support ticket or support levels and ticket severities, see [How do I get the support I need?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)

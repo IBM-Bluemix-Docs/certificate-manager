@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # {{site.data.keyword.cloudaccesstrailshort}} events  
@@ -21,7 +28,7 @@ lastupdated: "2018-11-16"
 Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long_notm}} service in the {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.Bluemix_notm}}. For more information, see [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). For example, when you import a certificate, an {{site.data.keyword.cloudaccesstrailshort}} event is generated.
+The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.Bluemix_notm}}. For more information, see [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started). For example, when you import a certificate, an {{site.data.keyword.cloudaccesstrailshort}} event is generated.
 
 The following table lists the API methods that generate an event when they are called.
 

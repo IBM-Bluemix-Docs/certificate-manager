@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-13"
 
 keywords: certificates, SSL, 
 
@@ -65,7 +65,7 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>You can use [the {{site.data.keyword.cloudaccesstrailfull_notm}} service](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla) to track how users and applications interact with the {{site.data.keyword.cloudcerts_long_notm}} service in the {{site.data.keyword.cloud_notm}}. [Learn more about {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla).
+    <td>You can use [the {{site.data.keyword.cloudaccesstrailfull_notm}} service](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started) to track how users and applications interact with the {{site.data.keyword.cloudcerts_long_notm}} service in the {{site.data.keyword.cloud_notm}}. [Learn more about {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
     <p>To get the list of actions that generate an event, see [{{site.data.keyword.cloudaccesstrailshort}} events](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
   </tr>
   <tr>

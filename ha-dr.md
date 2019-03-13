@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-03-13"
 
 keywords: certificates, SSL, 
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # High availability and disaster recovery
 {: #ha-dr}
 
-High avalability and disaster recovery for {{site.data.keyword.cloudcerts_long}}.
+High availability and disaster recovery for {{site.data.keyword.cloudcerts_long}}.
 {: shortdesc}
 
 * The {{site.data.keyword.cloudcerts_short}} service is a highly available, regional, service. In each supported location, the service exists in multiple availability zones with no single point of failure.

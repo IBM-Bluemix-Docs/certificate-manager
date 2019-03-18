@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-03-18"
 
 keywords: certificates, SSL, 
 
@@ -23,7 +23,7 @@ subcollection: certificate-manager
 {:download: .download}
 
 # Getting started with {{site.data.keyword.cloudcerts_short}}
-{: #gettingstarted}
+{: #getting-started}
 
 {{site.data.keyword.cloudcerts_full}} helps you to store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.
 {: shortdesc}

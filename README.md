@@ -2,12 +2,12 @@
 
 copyright:
   years: 2019
-lastupdated: "2019-03-28"
+lastupdated: "2019-03-31"
 
 ---
 
 
-# IBM Cloud Certicate Manager
+# IBM Cloud Certificate Manager
 
 Welcome to the docs repo for Certificate Manager! Feedback and updates are always welcome.
 

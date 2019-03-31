@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-17"
+lastupdated: "2019-03-31"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -21,7 +21,6 @@ subcollection: certificate-manager
 {:important: .important}
 {:deprecated: .deprecated}
 {:download: .download}
-
 
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
@@ -74,7 +73,7 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
 </table>
 
-## Locations
+## Locations availability
 {: #availability}
 
 {{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt and Tokyo locations.
@@ -85,3 +84,16 @@ When you import a certificate and the corresponding private key into {{site.data
 {: #limits}
 
 You can upload a maximum of 1000 certificates per instance.
+
+## Compliance and standards
+{: #compliance-and-standards}
+
+### HIPAA
+{{site.data.keyword.cloudcerts_short}} meets the required IBM controls that are commensurate with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) Security and Privacy Rule requirements.
+
+### International Organization for Standardization (ISO)
+
+* {{site.data.keyword.IBM_notm}} Services (PaaS and SaaS) certificate - ISO 27001
+
+### General Data Protection Regulation (GDPR)
+The GDPR seeks to create a harmonized data protection law framework across the EU and aims to give citizens back the control of their personal data, whilst imposing strict rules on those hosting and ‘processing’ this data, anywhere in the world. The Regulation also introduces rules relating to the free movement of personal data within and outside the EU. For more information, see the [IBM privacy statement](https://www.ibm.com/privacy/).

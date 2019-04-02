@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Evénements {{site.data.keyword.cloudaccesstrailshort}}  
@@ -21,9 +28,9 @@ lastupdated: "2018-11-16"
 Utilisez le service {{site.data.keyword.cloudaccesstrailfull}} pour suivre comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long_notm}} dans {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre des activités initiées par l'utilisateur qui change l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). Ainsi, quand vous importez un certificat, un événement {{site.data.keyword.cloudaccesstrailshort}} est généré.
+Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre des activités initiées par l'utilisateur qui change l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started). Ainsi, quand vous importez un certificat, un événement {{site.data.keyword.cloudaccesstrailshort}} est généré.
 
-Le tableau suivant répertorie les méthodes d'API qui génèrent un événement lorsqu'elles sont appelées. 
+Le tableau suivant répertorie les méthodes d'API qui génèrent un événement lorsqu'elles sont appelées.
 
 <table>
   <caption>Tableau 1. Actions qui génèrent des événements</caption>
@@ -33,11 +40,11 @@ Le tableau suivant répertorie les méthodes d'API qui génèrent un événement
   </tr>
   <tr>
     <td>`cloudcerts.certificate.import`</td>
-	  <td>Importe un certificat. </td>
+	  <td>Importe un certificat.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Réimporte un certificat. </td>
+	  <td>Réimporte un certificat.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>

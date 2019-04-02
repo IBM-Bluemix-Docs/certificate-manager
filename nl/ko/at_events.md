@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # {{site.data.keyword.cloudaccesstrailshort}} 이벤트  
@@ -21,7 +28,7 @@ lastupdated: "2018-11-16"
 {{site.data.keyword.cloudaccesstrailfull}} 서비스를 사용하여 {{site.data.keyword.Bluemix_notm}}에서 사용자 및 애플리케이션이 {{site.data.keyword.cloudcerts_long_notm}} 서비스와 상호 작용하는 방식을 추적하십시오.
 {:shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스의 상태를 변경하는 사용자 시작 활동을 레코드합니다. 추가 정보는 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)의 내용을 참조하십시오. 예를 들어, 인증서를 가져오면 {{site.data.keyword.cloudaccesstrailshort}} 이벤트가 생성됩니다.
+{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스는 {{site.data.keyword.Bluemix_notm}}에서 서비스의 상태를 변경하는 사용자 시작 활동을 레코드합니다. 추가 정보는 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)의 내용을 참조하십시오. 예를 들어, 인증서를 가져오면 {{site.data.keyword.cloudaccesstrailshort}} 이벤트가 생성됩니다.
 
 다음 표에는 API 메소드가 호출될 때 이벤트를 생성하는 API 메소드가 나열되어 있습니다.
 
@@ -101,7 +108,7 @@ lastupdated: "2018-11-16"
   </tr>
 </table>
 
-## 이벤트를 찾을 수 있는 위치
+## 이벤트 확인 위치
 {: #ui}
 
 {{site.data.keyword.cloudaccesstrailshort}} 이벤트는 이벤트가 생성되는 {{site.data.keyword.Bluemix_notm}} 위치에서 사용 가능한 {{site.data.keyword.cloudaccesstrailshort}} **계정 도메인**에서 사용할 수 있습니다.

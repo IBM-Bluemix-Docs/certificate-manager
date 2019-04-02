@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018,
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:faq: data-hd-content-type='faq'}
 
@@ -22,11 +29,23 @@ lastupdated: "2018-11-15"
 Perguntas mais frequentes sobre o {{site.data.keyword.cloudcerts_long}}.
 {: shortdesc}
 
-## Que tipo de certificados posso armazenar no {{site.data.keyword.cloudcerts_short}}?
+## Meus certificados devem estar em qual formato?
 {: #supported-certificate-types}
 {: faq}
 
 O {{site.data.keyword.cloudcerts_short}} suporta somente certificados formatados em PEM.
+
+## Quais tipos de algoritmos de chave pública são suportados?
+{: #supported-pk-algorithms}
+{: faq}
+
+O {{site.data.keyword.cloudcerts_short}} suporta certificados com chaves públicas geradas usando os seguintes algoritmos de chave pública:
+
+* Rivest-Shamir-Adleman (RSA)
+* Algoritmo de Assinatura Digital (DSA)
+* Algoritmo de Assinatura Digital de Curva Elíptica (ECDSA)
+* Protocolo de acordo de chave de Curva Elíptica com Diffie-Hellman (ECDH)
+
 
 ## Posso transferir por upload as chaves privadas protegidas por senha?
 {: #password-protected-private-keys}
@@ -64,10 +83,10 @@ Apenas as notificações de retorno de chamada e do Slack são suportadas.
 {: #certificate-versioning}
 {: faq}
 
-É possível atualizar um certificado reimportando uma nova versão dele que tenha o mesmo domínio que o certificado existente, mas com uma nova data de validade. Quando um certificado é reimportado, a versão existente dele é retida como um backup. Consulte [Reimportando um certificado](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+É possível atualizar um certificado reimportando uma nova versão dele que tenha o mesmo domínio que o certificado existente, mas com uma nova data de validade. Quando um certificado é reimportado, a versão existente dele é retida como um backup. Consulte [Reimportando um certificado](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 ## Posso fazer com que certificados específicos fiquem visíveis apenas para usuários específicos?
 {: #access-policies}
 {: faq}
 
-Os certificados podem ser protegidos usando as políticas de acesso do IAM para obter o controle de acesso granular. Consulte [Gerenciando as funções de acesso de serviço](access-management.html).
+Os certificados podem ser protegidos usando as políticas de acesso do IAM para obter o controle de acesso granular. Consulte [Gerenciando as funções de acesso de serviço](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).

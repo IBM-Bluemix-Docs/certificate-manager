@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Eventos do {{site.data.keyword.cloudaccesstrailshort}}  
@@ -23,7 +30,7 @@ o serviço {{site.data.keyword.cloudcerts_long_notm}} no {{site.data.keyword.Blu
 {:shortdesc}
 
 O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra as atividades iniciadas pelo usuário que mudam
-o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte  [ {{site.data.keyword.cloudaccesstrailfull_notm}} ](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla). Por
+o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started). Por
 exemplo, ao importar um certificado, um evento do {{site.data.keyword.cloudaccesstrailshort}} é gerado.
 
 A tabela a seguir lista os métodos de API que geram um evento quando eles são chamados.

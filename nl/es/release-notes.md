@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Notas del release
@@ -20,11 +27,45 @@ lastupdated: "2018-11-15"
 
 Están disponibles las siguientes características y cambios del servicio {{site.data.keyword.cloudcerts_long}}.
 
+## 18 de febrero de 2019
+{: 18February2018}
+
+- **Entrada en funcionamiento en Tokio**  
+  {{site.data.keyword.cloudcerts_long_notm}} está disponible en la ubicación Tokio.
+
+## 13 de enero de 2019
+{: 13January2019}
+- **Carga útil de devolución de llamada versión 3**  
+  [Consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/certificate-manager).
+
+## 6 de enero de 2019
+{: 6January2019}
+- **API en desuso**  
+  Las API **Listar certificados** y **Buscar repositorio de certificados** v2 han quedado en desuso y se eliminarán en una fecha futura. Debe actualizar a la v3 de las API. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/certificate-manager).
+
+## 9 de diciembre de 2018
+{: 9December2018}
+- **Formatos de certificado adicionales**    
+{{site.data.keyword.cloudcerts_short}} da soporte a los siguientes formatos de certificado: RSA, DSA, ECDSA, ECDH.
+
+## 5 de diciembre de 2018
+{: 5December2018}
+- **Notificación de reimportación**    
+Al reimportar un certificado renovado en lugar de uno que caduca, puede recibir una notificación de que se ha reimportado el certificado. Esto le recordará, y también al equipo, que despliegue el certificado renovado en los puntos de terminación SSL/TLS. Esta notificación solo está disponible para los nuevos canales de notificación que se creen.
+
+- **{{site.data.keyword.cloudcerts_short}} está disponible en la ubicación Frankfurt.**     
+El servicio cumple con los requisitos de la UE.
+
+## 2 de diciembre de 2018
+{: 2December2018}
+- **Carga útil de devolución de llamada y Slack versión 2**  
+  [Consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/certificate-manager).
+
 ## 14 de noviembre de 2018
 {: 14November2018}
 
 - **Reimportar**  
-  Puede actualizar un certificado volviendo a importar una nueva versión que tenga el mismo dominio que el certificado existente, pero una nueva fecha de caducidad. Cuando se vuelve a importar un certificado, la versión existente del certificado se conserva como copia de seguridad; consulte el apartado sobre [Reimportación de un certificado](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+  Puede actualizar un certificado volviendo a importar una nueva versión que tenga el mismo dominio que el certificado existente, pero una nueva fecha de caducidad. Cuando se vuelve a importar un certificado, la versión existente del certificado se conserva como copia de seguridad; consulte el apartado sobre [Reimportación de un certificado](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 - **1000 certificados por instancia**  
   Puede importar un máximo de 1000 certificados por instancia.
@@ -39,10 +80,10 @@ Están disponibles las siguientes características y cambios del servicio {{site
 {: 12September2018}
 
 - **El nombre de certificado es obligatorio**  
-  Al importar un certificado, es obligatorio proporcionar un valor para el nombre del vertificado.  
+  Al importar un certificado, es obligatorio proporcionar un valor para el nombre del certificado.  
 
 - **API en desuso**  
-  Las API de la v2 **Importar un certificado** y **Actualizar los metadatos de un certificado** han quedado en desuso y se eliminarán el 1 de diciembre de 2018. Debe actualizar a la v3 de las API. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/apidocs/certificate-manager).
+  Las API de la v2 **Importar un certificado** y **Actualizar los metadatos de un certificado** han quedado en desuso y se eliminarán el 1 de diciembre de 2018. Debe actualizar a la v3 de las API. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 - **Notificaciones de Slack agrupadas**  
   Las notificaciones en Slack están agrupadas por fecha de caducidad.
@@ -63,28 +104,28 @@ Están disponibles las siguientes características y cambios del servicio {{site
 {: 15August2018}
 
 - **Eliminación de API v1 obsoletas**  
-  Las API de la versión 1 ya no están disponibles. Si todavía no ha actualizado su API, debe hacerlo lo antes posible. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/apidocs/).
+  Las API de la versión 1 ya no están disponibles. Si todavía no ha actualizado su API, debe hacerlo lo antes posible. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/).
 
 - **Los roles de plataforma se sustituyen por los roles de servicio**  
-  Puede controlar el acceso a las instancias de {{site.data.keyword.cloudcerts_short}} utilizando roles de servicio. [Más información sobre la gestión de accesos](access-management.html).
+  Puede controlar el acceso a las instancias de {{site.data.keyword.cloudcerts_short}} utilizando roles de servicio. [Más información sobre la gestión de accesos](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
 
 ## 12 de julio de 2018
 {: 12July2018}
 
 - **Notificaciones de devolución de llamada**  
-  Se ha añadido soporte a la devolución de llamada para las notificaciones. Puede elegir enviar las notificaciones a Slack o utilizar cualquier URL de devolución de llamada para enviar notificaciones. Por ejemplo, puede enviar notificaciones a PagerDuty, abrir de forma automática un problema en GitHub o para desencadenar scripts de renovación. [Más información sobre las notificaciones](notifications-dashboard.html).
+  Se ha añadido soporte a la devolución de llamada para las notificaciones. Puede elegir enviar las notificaciones a Slack o utilizar cualquier URL de devolución de llamada para enviar notificaciones. Por ejemplo, puede enviar notificaciones a PagerDuty, abrir de forma automática un problema en GitHub o para desencadenar scripts de renovación. [Más información sobre las notificaciones](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#callback).
 
 ## 12 de junio de 2018
 {: 12June2018}
 
 - **Notificaciones de Slack**  
-  Se han añadido notificaciones de Slack para que nunca se pierda ningún certificado a punto de caducar. [Más información sobre las notificaciones](notifications-dashboard.html).
+  Se han añadido notificaciones de Slack para que nunca se pierda ningún certificado a punto de caducar. [Más información sobre las notificaciones](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 ## 8 de enero de 2018
 {: 8January2018}
 
 - **API en desuso**  
-  Las API de la versión 1 han quedado en desuso y se eliminarán el 8 de septiembre de 2018. Debe actualizar a la v2 de las API. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://console.bluemix.net/apidocs/certificate-manager).
+  Las API de la versión 1 han quedado en desuso y se eliminarán el 8 de septiembre de 2018. Debe actualizar a la v2 de las API. Para obtener más información, [consulte la documentación de las API ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://cloud.ibm.com/apidocs/certificate-manager).
 
 ## 19 de diciembre de 2017
 {: 19December2017}

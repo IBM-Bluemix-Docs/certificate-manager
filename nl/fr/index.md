@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Initiation à {{site.data.keyword.cloudcerts_short}}
 {: #gettingstarted}
@@ -24,4 +35,4 @@ Pour commencer, créez une nouvelle instance de service {{site.data.keyword.clou
 3. Cliquez sur **Créer**.
 4. Pour importer les certificats de votre organisation dans {{site.data.keyword.cloudcerts_short}}, cliquez sur **Importer le certificat**.  
 
-Vous pouvez également [en apprendre plus](about.html) sur {{site.data.keyword.cloudcerts_short}} et [fournir des commentaires dans {{site.data.keyword.IBM_notm}} Developer](troubleshooting.html#getting-help-and-support) afin d'améliorer {{site.data.keyword.cloudcerts_short}} au fur et à mesure de son développement. Pour savoir quelles modifications oint été apportées au service, voir les [Notes sur l'édition](release-notes.html).
+Vous pouvez également [en apprendre plus](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) sur {{site.data.keyword.cloudcerts_short}} et [fournir des commentaires dans {{site.data.keyword.IBM_notm}} Developer](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) afin d'améliorer {{site.data.keyword.cloudcerts_short}} au fur et à mesure de son développement. Pour savoir quelles modifications oint été apportées au service, voir les [Notes sur l'édition](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes).

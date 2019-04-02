@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,13 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # Traitement des incidents
 {: #troubleshooting}
@@ -33,12 +43,10 @@ Pour obtenir de l'aide, vous pouvez :
 
 Vous pouvez également ouvrir un ticket de demande de service.
 
-Lorsque vous posez une question sur un forum, marquez votre question à l'aide d'une
+Lorsque vous posez une question sur un forum, prenez soin de marquer votre question à l'aide d'une
 étiquette pour qu'elle soit vue par l'équipe de développement d'{{site.data.keyword.cloudcerts_full_notm}}.
 
 - Si vous avez des questions d'ordre technique sur le service, publiez-les sur [Stack Overflow ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) en y ajoutant les balises `ibm-cloud` et `ibm-certificate-manager`.  
 - Si vous avez des questions sur le service et pour obtenir des instructions permettant de commencer, publiez-les sur [dW Answers ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Ajoutez les balises `ibm-certificate-manager` et `ibm-cloud`.
 
-Pour savoir comment utiliser les forums, voir [Comment puis-je obtenir l'aide dont j'ai besoin ?](/docs/get-support/howtogetsupport.html#getting-customer-support)
-
-Pour obtenir des informations sur l'ouverture d'un ticket de demande de service {{site.data.keyword.IBM_notm}} ou sur les niveaux de support et les gravités de ticket, voir [De quelle façon le processus de support technique fonctionne-t-il ?](/docs/get-support/getstarttssup.html).
+Pour savoir comment ouvrir un ticket de demande de service ou pour plus d'informations sur les niveaux de demande de service et les niveaux de gravité des tickets de demande de service, voir [Comment puis-je obtenir l'aide dont j'ai besoin ?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)

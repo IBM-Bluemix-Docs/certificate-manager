@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,12 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+
+
 # Acerca de {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
@@ -48,27 +57,27 @@ Al importar un certificado y la correspondiente clave privada en {{site.data.key
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Almacene sus certificados de dominio personalizado de clúster de Kubernetes en {{site.data.keyword.cloudcerts_short}} y luego despliéguelos mediante [mandatos de plugin del servicio Kubernetes](/docs/containers/cs_cli_reference.html) para la CLI de {{site.data.keyword.cloud_notm}}. [Obtenga más información sobre esta integración ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
+    <td>Puede desplegar de forma fácil y segura certificados TLS de dominio personalizado desde {{site.data.keyword.cloudcerts_short}} al clúster de Kubernetes. Los administradores del clúster pueden utilizar los [mandatos de plugin del servicio Kubernetes](/docs/containers?topic=containers-cs_cli_reference) para actualizar los certificados TLS como secretos de Kubernetes con un nuevo certificado sin causar tiempo de inactividad. Para empezar, consulte las [anotaciones de Ingress en la documentación](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>{{site.data.keyword.security-advisor_short}} centraliza la información sobre los servicios de {{site.data.keyword.cloud_notm}}. La información incluye la indicación de certificados caducados y certificados que están a punto de caducar en instancias de {{site.data.keyword.cloudcerts_short}} de su cuenta de {{site.data.keyword.cloud_notm}}. [Aprenda más sobre {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor/index.html#index).</td>
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index) centraliza la información sobre los servicios de {{site.data.keyword.cloud_notm}}. La información incluye la indicación de certificados caducados y certificados que están a punto de caducar en instancias de {{site.data.keyword.cloudcerts_short}} de su cuenta de {{site.data.keyword.cloud_notm}}. [Más información sobre {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index#index).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>El servicio {{site.data.keyword.cloudaccesstrailfull_notm}} permite rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long_notm}} en {{site.data.keyword.cloud_notm}}. [Aprenda más sobre {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
-    <p>Consulte [Sucesos de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events) para obtener una lista de las acciones que generan un suceso.</p></td>
+    <td>Puede utilizar [el servicio {{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started) para rastrear la forma en la que usuarios y aplicaciones interactúan con el servicio {{site.data.keyword.cloudcerts_long_notm}} en {{site.data.keyword.cloud_notm}}. [Más información sobre {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
+    <p>Consulte [Sucesos de {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events) para obtener una lista de las acciones que generan un suceso.</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>Almacene sus certificados de dominio personalizado en el servicio {{site.data.keyword.cloudcerts_short}} y luego utilice los CRN de certificado para enlazar con dominios personalizados en {{site.data.keyword.apiconnect_short}}. [Aprenda más sobre {{site.data.keyword.apiconnect_short}}](/docs/api-management/index.html#index).</p></td>
+    <td>Almacene sus certificados de dominio personalizado en el servicio {{site.data.keyword.cloudcerts_short}} y luego utilice los CRN de certificado para enlazar con dominios personalizados en {{site.data.keyword.apiconnect_short}}. [Más información sobre {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index).</p></td>
   </tr>
 </table>
 
 ## Ubicaciones
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} está disponible en las ubicaciones Dallas y Londres.
+{{site.data.keyword.cloudcerts_short}} está disponible en las ubicaciones de Dallas, Londres, Frankfurt y Tokio.
 
 
 

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018,
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,12 +17,15 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Alta disponibilidade e recuperação de desastre
 {: #ha-dr}
 
-Alta disponibilidade e recuperação de desastre para o {{site.data.keyword.cloudcerts_long}}.
+Alta disponibilidade e recuperação de desastres para o {{site.data.keyword.cloudcerts_long}}.
 {: shortdesc}
 
 * O {{site.data.keyword.cloudcerts_short}} é um serviço regional altamente disponível. Em cada localização suportada, o serviço existe em múltiplas zonas de disponibilidade sem nenhum ponto único de falha.

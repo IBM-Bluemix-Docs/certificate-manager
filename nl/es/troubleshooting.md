@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,13 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # Resolución de problemas
 {: #troubleshooting}
@@ -33,11 +43,9 @@ Puede obtener ayuda de las formas siguientes:
 
 También puede abrir una incidencia de soporte.
 
-Cuando utilice los foros para formular una pregunta, etiquete la pregunta de manera que la vea el equipo de desarrollo de {{site.data.keyword.cloudcerts_full_notm}}.
+Cuando utilice los foros para formular una pregunta, asegúrese de etiquetar la pregunta de manera que la vea el equipo de desarrollo de {{site.data.keyword.cloudcerts_full_notm}}.
 
 - Si tiene preguntas técnicas sobre el servicio, publique su pregunta en [Stack Overflow ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) y etiquete su pregunta con `ibm-cloud` y con `ibm-certificate-manager`.  
 - Para formular preguntas sobre el servicio y obtener instrucciones de iniciación, publique su pregunta en [dW Answers ![Icono de enlace externo](../../icons/launch-glyph.svg "Icono de enlace externo")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Incluya las etiquetas `ibm-certificate-manager` e `ibm-cloud`.
 
-Para obtener más información sobre cómo utilizar estos foros, consulte [¿Cómo puedo obtener el soporte que necesito?](/docs/get-support/howtogetsupport.html#getting-customer-support)
-
-Para obtener más información sobre cómo abrir una incidencia de soporte de {{site.data.keyword.IBM_notm}}, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [Funcionamiento del proceso del servicio de atención al cliente](/docs/get-support/getstarttssup.html).
+Para obtener información sobre cómo abrir una incidencia de soporte, o sobre los niveles de soporte y la gravedad de las incidencias, consulte [¿Cómo puedo obtener el soporte que necesito?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)

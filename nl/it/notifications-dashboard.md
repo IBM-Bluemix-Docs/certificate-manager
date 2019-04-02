@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,18 +17,23 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
-# Configurazione delle notifiche per i certificati in scadenza
-{: #configuring-notifications-for-expiring-certificates}
+# Configurazione delle notifiche
+{: #configuring-notifications}
 
-I certificati sono generalmente validi solo per un determinato periodo di tempo. Quando un certificato che utilizzi scade, potresti riscontrare tempi di inattività per la tua applicazione. Per evitare tempi di inattività, puoi configurare {{site.data.keyword.cloudcerts_full}} per inviare notifiche per i certificati che stanno per scadere in modo da poterli rinnovare in tempo.
+I certificati sono generalmente validi solo per un determinato periodo di tempo. Quando un certificato che utilizzi scade, potresti riscontrare tempi di inattività per la tua applicazione. Per evitare tempi di inattività, puoi configurare {{site.data.keyword.cloudcerts_full}} per farti inviare le notifiche per i certificati che stanno per scadere in modo da essere avvertito in tempo per rinnovarli. 
+
+Verrai avvertito anche quando una versione rinnovata del tuo certificato viene reimportata in {{site.data.keyword.cloudcerts_short}} al posto di quella scaduta in modo da ricordarti anche di distribuirla nei punti di terminazione SSL/TLS. Questa notifica dei certificati reimportati verrà inviata solo ai canali della [versione 2 del canale](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 {: shortdesc}
 
 **Quando ricevo la notifica?**  
 A seconda della data di scadenza del certificato che hai caricato in {{site.data.keyword.cloudcerts_full_notm}}, riceverai una notifica 90, 60, 30, 10 e 1 giorno prima della scadenza del certificato. Inoltre, ricevi notifiche giornaliere sui certificati scaduti. Le notifiche giornaliere iniziano il primo giorno dopo che il tuo certificato è scaduto.
 
-Devi rinnovare il certificato, caricare questo certificato in {{site.data.keyword.cloudcerts_full_notm}} ed eliminare il certificato scaduto per impedire che la notifica continui ad essere inviata.
+Devi rinnovare il tuo certificato e reimportare questo certificato al posto di quello vecchio in {{site.data.keyword.cloudcerts_full_notm}} per arrestare l'invio delle notifiche. Quando reimporti il tuo certificato, ricevi una notifica indicante che il tuo certificato è stato importato per ricordarti di distribuirlo. 
 
 **Quali sono le mie opzioni per configurare le notifiche?**  
 Puoi inviare notifiche a Slack usando un webhook Slack o utilizzare qualsiasi URL di callback che preferisci.
@@ -40,11 +50,10 @@ Per configurare un webhook Slack, completa la seguente procedura:
 ## Configurazione di un URL di callback
 {: #callback}
 
-Potresti voler utilizzare l'URL di callback per inviare notifiche agli strumenti che utilizzi quotidianamente per attivare il processo di rinnovo per il tuo team. Ad esempio, puoi inviare notifiche per le segnalazioni a PagerDuty, aprire automaticamente un problema in GitHub o attivare gli script di rinnovo.  
+Per attivare il processo di rinnovo per il tuo team, puoi utilizzare un URL di callback per inviare notifiche agli strumenti che utilizzi. Ad esempio, puoi inviare notifiche per le segnalazioni a PagerDuty, aprire automaticamente un problema in GitHub o attivare gli script di rinnovo.  
 {: shortdesc}
 
 **Importante:** l'endpoint del tuo URL di callback deve soddisfare i seguenti requisiti per poter essere utilizzato con {{site.data.keyword.cloudcerts_short}}:
-
 * L'endpoint deve utilizzare il protocollo HTTPS.
 * L'endpoint non deve richiedere intestazioni HTTP. Questo requisito include le intestazioni di autorizzazione.
 * L'endpoint deve restituire un codice di stato `200 OK` per indicare un corretto recapito della notifica.
@@ -52,36 +61,19 @@ Potresti voler utilizzare l'URL di callback per inviare notifiche agli strumenti
 ### Formato della notifica
 {: #notification_format}
 
-La notifica inviata al tuo URL di callback è un documento JSON nel seguente formato:
+La notifica che viene inviata al tuo URL di callback è un documento JSON firmato con la tua chiave asimmetrica dell'istanza nel formato riportato di seguito. 
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
 {: screen}
 
-Dopo che hai decodificato e verificato il payload, il contenuto è una stringa JSON.
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+Dopo che hai decodificato e verificato il payload, il contenuto è una stringa JSON [che si basa sulla versione del canale](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
 ## Configurazione di un canale di notifica
 {: #adding-channel}
 
-Dopo aver creato un webhook Slack o un URL di callback, lo aggiungi a {{site.data.keyword.cloudcerts_short}} per iniziare a ricevere notifiche sui certificati in scadenza. {{site.data.keyword.cloudcerts_short}} crittografa l'endpoint e lo memorizza in modo sicuro.
+Dopo aver creato un webhook Slack o un URL di callback, lo aggiungi a {{site.data.keyword.cloudcerts_short}} per iniziare a ricevere notifiche sui certificati in scadenza e su quelli reimportati. {{site.data.keyword.cloudcerts_short}} crittografa l'endpoint e lo memorizza in modo sicuro.
 {: shortdesc}
 
 Per aggiungere un canale di notifica, completa la seguente procedura:
@@ -96,7 +88,7 @@ Per aggiungere un canale di notifica, completa la seguente procedura:
    **Output di esempio**
 
    <table>
-   <caption>Tabella 1. Informazioni sul canale di notifica</caption>
+   <caption>Tabella 1. Informazioni sul canale di notifica </caption>
    <thead>
     <th> Componente </th>
     <th> Descrizione </th>
@@ -135,7 +127,7 @@ Per aggiungere un canale di notifica, completa la seguente procedura:
 Puoi verificare un canale di notifica per assicurarti che il tuo canale di notifica sia configurato correttamente.
 {: shortdesc}
 
-Prima di iniziare, [configura un canale di notifica](#adding-channel).
+Prima di iniziare, [configura un canale di notifica](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 Per verificare un canale di notifica, completa la seguente procedura:
 
@@ -144,12 +136,12 @@ Per verificare un canale di notifica, completa la seguente procedura:
 3. Verifica di aver ricevuto una notifica nel canale che hai configurato.
 
 ## Aggiornamento di un canale di notifica
-{: updating-channel}
+{: #updating-channel}
 
 Puoi aggiornare la configurazione del tuo canale di notifica, disabilitare o abilitare le notifiche o eliminare i canali di notifica da {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Prima di iniziare, [configura un canale di notifica](#adding-channel).
+Prima di iniziare, [configura un canale di notifica](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 Per aggiornare il tuo canale di notifica, completa la seguente procedura:
 
@@ -173,6 +165,19 @@ Per scaricare la chiave pubblica, completa la seguente procedura:
 1. Dalla navigazione nella pagina dei dettagli del servizio, fai clic su **Impostazioni**.
 2. Apri la scheda **Notifiche**.
 3. Fai clic sul pulsante **Scarica chiave**. La chiave viene scaricata come file PEM.
+
+## Versioni del canale
+{: #channel-versions}
+
+Man mano che Certificate Manager si evolve, potremmo modificare il formato della struttura del payload delle notifiche di volta in volta. Per garantire la compatibilità con le versioni precedenti, il payload inviato ai canali esistenti non cambierà.    
+
+Se hai canali di notifica esistenti (Slack o URL di callback), per iniziare a utilizzare la nuova versione del payload:
+1. Per l'URL di callback, assicurati che la tua implementazione possa accettare il nuovo payload.
+2. Crea un nuovo canale di notifica (i nuovi canali vengono sempre creati con la versione del canale più recente).
+3. Verifica che il nuovo canale funzioni correttamente. 
+4. Elimina il vecchio canale. 
+
+Per le versioni dei canali, controlla la [documentazione API](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions).
 
 ## Esempi
 {: #examples}

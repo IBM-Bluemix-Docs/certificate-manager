@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,13 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # Fehlerbehebung
 {: #troubleshooting}
@@ -33,11 +43,9 @@ Hilfe können Sie auf die folgende Art und Weise erhalten:
 
 Sie haben außerdem die Möglichkeit, ein Support-Ticket zu öffnen.
 
-Wenn Sie zum Stellen von Fragen die Foren verwenden, müssen Sie Ihre Frage mit einem Tag versehen, damit das {{site.data.keyword.cloudcerts_full_notm}}-Entwicklerteam auf sie aufmerksam wird.
+Wenn Sie zum Stellen von Fragen die Foren verwenden, müssen Sie eine Frage mit einem Tag versehen, damit das {{site.data.keyword.cloudcerts_full_notm}}-Entwicklerteam auf sie aufmerksam wird.
 
 - Wenn Sie technische Fragen zum Service haben, veröffentlichen Sie Ihre Frage auf [Stack Overflow ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) und versehen Sie sie mit den Tags `ibm-cloud` und `ibm-certificate-manager`.  
 - Verwenden Sie für Fragen zum Service und zu ersten Schritten das Forum [dW Answers ![Symbol für externen Link](../../icons/launch-glyph.svg "Symbol für externen Link")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Geben Sie die Tags `ibm-certificate-manager` und `ibm-cloud` an.
 
-Weitere Informationen zur Verwendung der Foren finden Sie in [Benötigte Unterstützung anfordern](/docs/get-support/howtogetsupport.html#getting-customer-support).
-
-Weitere Informationen zum Öffnen eines {{site.data.keyword.IBM_notm}} Support-Tickets oder zu Support-Levels und Prioritätsstufen von Tickets finden Sie in [Ablauf des Kundenunterstützungsprozesses](/docs/get-support/getstarttssup.html).
+Weitere Informationen zum Öffnen eines Support-Tickets oder zu Support-Levels und Wertigkeiten von Tickets finden Sie in [Benötigte Unterstützung anfordern](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support).

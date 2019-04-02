@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # {{site.data.keyword.cloudcerts_short}} 시작하기
 {: #gettingstarted}
@@ -22,6 +33,6 @@ lastupdated: "2018-11-15"
 1. {{site.data.keyword.Bluemix_notm}} 카탈로그에서 **{{site.data.keyword.cloudcerts_short}}**를 선택하십시오.
 2. 서비스 인스턴스에 이름을 제공하거나 사전 설정된 이름을 사용하십시오.
 3. **작성**을 클릭하십시오.
-4. 조직의 인증서를 {{site.data.keyword.cloudcerts_short}}로 가져오려면 **인증서 가져오기**를 클릭하십시오.  
+4. 조직의 인증서를 {{site.data.keyword.cloudcerts_short}}에 가져오려면 **인증서 가져오기**를 클릭하십시오.  
 
-또한 {{site.data.keyword.cloudcerts_short}}에서 얻은 내용에 대해 [자세히 보기](about.html)를 참조하고 [{{site.data.keyword.IBM_notm}} Developer에 사용자 피드백을 제공하여](troubleshooting.html#getting-help-and-support) {{site.data.keyword.cloudcerts_short}}가 개발됨에 따라 이를 향상시킬 수 있습니다. 서비스 변경사항에 대해 알아보려면 [릴리스 정보](release-notes.html)를 참조하십시오.
+또한 {{site.data.keyword.cloudcerts_short}}에서 얻은 내용에 대해 [자세히 보기](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager)를 참조하고 [{{site.data.keyword.IBM_notm}} Developer에 사용자 피드백을 제공하여](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) {{site.data.keyword.cloudcerts_short}}가 개발됨에 따라 이를 향상시킬 수 있습니다. 서비스 변경사항에 대해 알아보려면 [릴리스 정보](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes)를 참조하십시오.

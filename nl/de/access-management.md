@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Zugriffsrollen für den Service verwalten
 {: #managing-service-access-roles}
@@ -62,7 +73,7 @@ Mithilfe von Servicezugriffsrollen können Sie es Benutzern ermöglichen, Aufgab
     <td> Manager, Schreibberechtigter </td>
   </tr>
   <tr>
-    <td>Zertifikatsdaten aktualisieren</td>
+    <td>Metadaten des Zertifikats aktualisieren</td>
     <td> Manager, Schreibberechtigter </td>
   </tr>
   <tr>
@@ -87,7 +98,7 @@ Mithilfe von Servicezugriffsrollen können Sie es Benutzern ermöglichen, Aufgab
      </tr>
 </table>
 
-Weitere Informationen zu Benutzerrollen und Berechtigungen finden Sie unter [Benutzerrollen](/docs/iam/users_roles.html#userroles).
+Weitere Informationen zu Benutzerrollen und Berechtigungen finden Sie unter [Benutzerrollen](/docs/iam?topic=iam-userroles#userroles).
 
 ## Zugriffsrichtlinien für Benutzer konfigurieren
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ Sie können Zugriffsrichtlinien für eine {{site.data.keyword.cloudcerts_short}}
 Führen Sie die folgenden Schritte aus, um Zugriffsrichtlinien zu konfigurieren:
 
 1. Navigieren Sie zu **Verwalten > Konto > Benutzer**. Eine Liste der Benutzer, die über Zugriff auf Ihr {{site.data.keyword.Bluemix_notm}}-Konto verfügen, wird angezeigt.
-2. Klicken Sie auf den Namen des Benutzers, dem Sie eine Zugriffsrichtlinie zuweisen möchten. Wenn der Benutzer nicht angezeigt wird, klicken Sie auf **Benutzer einladen**, um [den Benutzer zu Ihrem {{site.data.keyword.Bluemix_notm}}-Konto hinzuzufügen](/docs/iam/iamuserinv.html#iamuserinv).
+2. Klicken Sie auf den Namen des Benutzers, dem Sie eine Zugriffsrichtlinie zuweisen möchten. Wenn der Benutzer nicht angezeigt wird, klicken Sie auf **Benutzer einladen**, um [den Benutzer zu Ihrem {{site.data.keyword.Bluemix_notm}}-Konto hinzuzufügen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Klicken Sie auf **Zugriff zuweisen**.
 4. Klicken Sie auf **Zugriff auf Ressourcen zuweisen**.
 5. Wählen Sie im Menü **Services** die Option **Zertifikatmanager** aus.
 6. Wählen Sie im Menü **Serviceinstanz** eine {{site.data.keyword.cloudcerts_short}}-Instanz aus oder verwenden Sie den Standardwert `Alle Instanzen`.
 7. (Optional) Konfigurieren Sie den Zugriff auf ein bestimmtes Zertifikat:
-    1. [Rufen Sie die Zertifikats-ID ab](#get-certificate-id).
+    1. [Rufen Sie die Zertifikats-ID ab](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
     2. Geben Sie `certificate` im Feld **Ressourcentyp** ein.
     3. Geben Sie die Zertifikats-ID im Feld **Ressourcen-ID** ein.
-8. Weisen Sie dem Benutzer eine [Plattformzugriffsrolle](#platform-access-roles) zu.
-9. Weisen Sie dem Benutzer eine [Servicezugriffsrolle](#service-access-roles) zu.
+8. Weisen Sie dem Benutzer eine [Plattformzugriffsrolle](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) zu.
+9. Weisen Sie dem Benutzer eine [Servicezugriffsrolle](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) zu.
 10. Klicken Sie auf **Zuweisen**, um dem Benutzer die Zugriffsrichtlinie zuzuweisen.
 
 **Beispiele für die Rollenzuordnung**

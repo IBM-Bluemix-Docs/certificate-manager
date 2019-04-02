@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,18 +17,23 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
-# 만료되는 인증서를 위한 알림 구성
-{: #configuring-notifications-for-expiring-certificates}
+# 알림 구성
+{: #configuring-notifications}
 
-인증서는 일반적으로 지정된 시간 동안에만 유효합니다. 사용하는 인증서가 만료되면 앱이 작동 중단될 수 있습니다. 작동 중단이 발생하지 않기 위해, 만료될 예정인 인증서에 대한 일림을 전송하도록 {{site.data.keyword.cloudcerts_full}}를 구성하여 제시간에 인증서를 갱신할 수 있습니다.
+인증서는 일반적으로 지정된 시간 동안에만 유효합니다. 사용하는 인증서가 만료되면 앱이 작동 중단될 수 있습니다. 작동 중단이 발생하지 않도록 {{site.data.keyword.cloudcerts_full}}를 구성하여 만료될 예정인 인증서에 대한 알림을 전송하면 제시간에 갱신하도록 안내를 받을 수 있습니다.
+
+만료되는 인증서 대신 인증서의 갱신된 버전을 {{site.data.keyword.cloudcerts_short}}로 다시 가져오면 SSL/TLS 종단점에 이 인증서를 배치하는 것을 잊지 않도록 경보 메시지가 표시됩니다. 다시 가져온 인증서에 대한 이 알림은 [채널 버전 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions)의 채널에만 전송됩니다.
 {: shortdesc}
 
 **알림을 받는 시기**  
-{{site.data.keyword.cloudcerts_full_notm}}에 업로드한 인증서의 만기 날짜에 따라 인증서가 만료되기 90일, 60일, 30일, 10일 및 1일 전에 알림을 받습니다. 또한 만료된 인증서에 대해 매일 알림을 받습니다. 매일 제공되는 알림은 인증서가 만료된 후 첫 날에 시작됩니다. 
+{{site.data.keyword.cloudcerts_full_notm}}에 업로드한 인증서의 만기 날짜에 따라 인증서가 만료되기 90일, 60일, 30일, 10일 및 1일 전에 알림을 받습니다. 또한 만료된 인증서에 대해 매일 알림을 받습니다. 매일 제공되는 알림은 인증서가 만료된 후 첫 날에 시작됩니다.
 
-알림을 더 이상 받지 않으려면 인증서를 갱신하고, 이 인증서를 {{site.data.keyword.cloudcerts_full_notm}}에 업로드하고, 만료된 인증서를 삭제해야 합니다.
+인증서를 갱신하고 이전 인증서 대신 이 인증서를 {{site.data.keyword.cloudcerts_full_notm}}로 다시 가져와야 알림 전송이 중지됩니다. 인증서를 다시 가져오면 인증서를 다시 가져왔고 이를 다시 배치해야 함을 상기시키는 알림을 받습니다.
 
 **알림을 구성하기 위한 내 옵션**  
 Slack 웹훅을 사용하여 Slack에 알림을 전송하거나 원하는 콜백 URL을 사용할 수 있습니다.
@@ -40,48 +50,30 @@ Slack 웹훅을 설정하려면 다음 단계를 완료하십시오.
 ## 콜백 URL 설정
 {: #callback}
 
-팀을 위해 갱신 프로세스를 트리거하는 데 매일 사용하는 도구에 대한 알림을 게시하도록 콜백 URL을 사용하려고 할 수 있습니다. 예를 들어, PagerDuty에 보고서에 대한 알림을 전송하거나, GitHub에서 문제를 자동으로 열거나, 갱신 스크립트를 트리거할 수 있습니다.  
+팀을 위해 갱신 프로세스를 트리거하려면 콜백 URL을 사용하여 사용하는 도구에 대한 알림을 게시할 수 있습니다. 예를 들어, PagerDuty에 보고서에 대한 알림을 전송하거나, GitHub에서 문제를 자동으로 열거나, 갱신 스크립트를 트리거할 수 있습니다.  
 {: shortdesc}
 
 **중요:** 콜백 URL 엔드포인트는 {{site.data.keyword.cloudcerts_short}}와 함께 사용될 다음 요구사항을 충족해야 합니다.
-
 * 엔드포인트는 HTTPS 프로토콜을 사용해야 합니다.
 * 엔드포인트는 HTTP 헤더를 요구하면 안 됩니다. 이 요구사항에는 권한 헤더가 포함되어 있습니다.
-* 엔드포인트에서는 성공적으로 알림이 전달되었음을 나타내기 위해 `200 OK` 상태 코드를 리턴해야 합니다. 
+* 엔드포인트에서는 성공적으로 알림이 전달되었음을 나타내기 위해 `200 OK` 상태 코드를 리턴해야 합니다.
 
 ### 알림 형식
 {: #notification_format}
 
-콜백 URL에 전송된 알림은 다음 형식으로 된 JSON 문서입니다.
+콜백 URL로 전송되는 알림은 다음 형식으로 인스턴스 비대칭 키를 사용하여 서명된 JSON 문서입니다.
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
 {: screen}
 
-페이로드를 디코딩 및 확인하고 나면 컨텐츠는 JSON 문자열입니다.
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+페이로드를 디코딩 및 확인하고 나면 컨텐츠는 [채널 버전에 따른](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) JSON 문자열입니다.
 
 ## 알림 채널 구성
 {: #adding-channel}
 
-Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_short}}에 이를 추가하여 만료되는 인증서에 대한 알림을 받기 시작합니다. {{site.data.keyword.cloudcerts_short}}는 엔드포인트를 암호화하고 안전하게 보관합니다.
+Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_short}}에 이를 추가하여 만료되는 인증서와 다시 가져온 인증서에 대한 알림을 받기 시작합니다. {{site.data.keyword.cloudcerts_short}}는 엔드포인트를 암호화하고 안전하게 보관합니다.
 {: shortdesc}
 
 알림 채널을 추가하려면 다음 단계를 완료하십시오.
@@ -135,7 +127,7 @@ Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_s
 알림 채널이 올바르게 구성되었는지 확인하도록 알림 채널을 테스트할 수 있습니다.
 {: shortdesc}
 
-시작하기 전에 [알림 채널을 구성](#adding-channel)하십시오.
+시작하기 전에 [알림 채널을 구성](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel)하십시오.
 
 알림 채널을 테스트하려면 다음 단계를 완료하십시오.
 
@@ -144,12 +136,12 @@ Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_s
 3. 구성한 채널에서 알림을 받았는지 확인하십시오.
 
 ## 알림 채널 업데이트
-{: updating-channel}
+{: #updating-channel}
 
 알림 채널 구성을 업데이트하거나, 알림을 사용 또는 사용 안함으로 설정하거나, {{site.data.keyword.cloudcerts_short}}에서 알림 채널을 삭제할 수 있습니다.
 {: shortdesc}
 
-시작하기 전에 [알림 채널을 구성](#adding-channel)하십시오.
+시작하기 전에 [알림 채널을 구성](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel)하십시오.
 
 알림 채널을 업데이트하려면 다음 단계를 완료하십시오.
 
@@ -174,10 +166,23 @@ Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_s
 2. **알림** 탭을 여십시오.
 3. **다운로드 키** 단추를 클릭하십시오. 키는 PEM 파일로 다운로드됩니다.
 
+## 채널 버전
+{: #channel-versions}
+
+Certificate Manager가 향상됨에 따라 수시로 알림 페이로드 구조의 형식을 수정할 수 있습니다. 역호환성을 보장하기 위해 기존 채널로 전송되는 페이로드는 변경되지 않습니다.   
+
+기존 알림 채널(Slack 또는 콜백 URL)이 있는 경우 새로운 버전의 페이로드를 가져오려면 다음을 수행하십시오.
+1. 콜백 URL의 경우 구현 시 새 페이로드를 허용할 수 있는지 확인하십시오.
+2. 새 알림 채널을 작성합니다(새 채널은 항상 최신 채널 버전으로 작성됨).
+3. 새 채널이 올바르게 작동하는지 테스트하십시오.
+4. 이전 채널을 삭제하십시오.
+
+채널 버전은 [API 문서](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions)를 참조하십시오.
+
 ## 예제
 {: #examples}
 
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)  
-   인증서 만료 알림을 위해 GitHub 문제를 작성하는 방법에 대해 알아봅니다. 
+   인증서 만료 알림을 위해 GitHub 문제를 작성하는 방법에 대해 알아봅니다.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/)  
-   인증서 만료 알림을 위해 PagerDuty 인시던트 문제를 작성하는 방법에 대해 알아봅니다. 
+   인증서 만료 알림을 위해 PagerDuty 인시던트 문제를 작성하는 방법에 대해 알아봅니다.

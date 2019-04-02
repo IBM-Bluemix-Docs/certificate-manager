@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Gestione dei ruoli di accesso al servizio
 {: #managing-service-access-roles}
@@ -62,11 +73,11 @@ Puoi utilizzare i ruoli di accesso al servizio per consentire agli utenti di com
     <td> Gestore, scrittore </td>
   </tr>
   <tr>
-    <td>Aggiorna i dati del certificato</td>
+    <td>Aggiorna i metadati del certificato</td>
     <td> Gestore, scrittore </td>
   </tr>
   <tr>
-    <td>Importa o reimporta certificati, chiavi private e certificati intermedi.</td>
+    <td>Importa o reimporta certificati, chiavi private e certificati intermedi. </td>
     <td> Gestore </td>
   </tr>
   <tr>
@@ -87,7 +98,7 @@ Puoi utilizzare i ruoli di accesso al servizio per consentire agli utenti di com
      </tr>
 </table>
 
-Per ulteriori informazioni sui ruoli e le autorizzazioni utente, consulta [Ruoli utente](/docs/iam/users_roles.html#userroles).
+Per ulteriori informazioni sui ruoli e le autorizzazioni utente, consulta [Ruoli utente](/docs/iam?topic=iam-userroles#userroles).
 
 ## Configurazione delle politiche di accesso per gli utenti
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ Puoi configurare le politiche di accesso per un'istanza di {{site.data.keyword.c
 Per configurare le politiche di accesso, completa la seguente procedura:
 
 1. Passa a **Gestisci > Account > Utenti**. Viene visualizzato un elenco di utenti con accesso al tuo account {{site.data.keyword.Bluemix_notm}}.
-2. Fai clic sul nome dell'utente a cui desideri assegnare una politica di accesso. Se l'utente non è visualizzato, fai clic su **Invita utenti** per [aggiungere l'utente al tuo account {{site.data.keyword.Bluemix_notm}}](/docs/iam/iamuserinv.html#iamuserinv).
+2. Fai clic sul nome dell'utente a cui desideri assegnare una politica di accesso. Se l'utente non è visualizzato, fai clic su **Invita utenti** per [aggiungere l'utente al tuo account {{site.data.keyword.Bluemix_notm}}](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Fai clic su **Assegna accesso**.
 4. Fai clic su **Assegna l'accesso alle risorse**.
 5. Dal menu **Servizi**, seleziona **Gestore certificato**.
 6. Dal menu **Istanza del servizio**, seleziona un'istanza di {{site.data.keyword.cloudcerts_short}} o utilizza il valore predefinito `Tutte le istanze`.
 7. (Facoltativo) Configura l'accesso a uno specifico certificato:
-    1. [Richiama l'ID del tuo certificato](#get-certificate-id).
+    1. [Richiama l'ID del tuo certificato](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
     2. Immetti `certificate` nel campo **Tipo di risorsa**.
     3. Immetti l'ID del certificato nel campo **ID risorsa**.
-8. Assegna all'utente un [ruolo di accesso alla piattaforma](#platform-access-roles).
-9. Assegna all'utente un [ruolo di accesso al servizio](#service-access-roles).
+8. Assegna all'utente un [ruolo di accesso alla piattaforma](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles).
+9. Assegna all'utente un [ruolo di accesso al servizio](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles).
 10. Fai clic su **Assegna** per assegnare la politica di accesso all'utente.
 
 **Esempi di assegnazione del ruolo**

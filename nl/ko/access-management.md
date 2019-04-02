@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # 서비스 액세스 역할 관리
 {: #managing-service-access-roles}
@@ -62,11 +73,11 @@ lastupdated: "2018-11-15"
     <td> 관리자, 작성자 </td>
   </tr>
   <tr>
-    <td>인증서 데이터 업데이트</td>
+    <td>인증서 메타데이터 업데이트</td>
     <td> 관리자, 작성자 </td>
   </tr>
   <tr>
-    <td>인증서, 개인 키 및 중간 인증서 가져오기 또는 다시 가져오기</td>
+    <td>인증서, 개인 키 및 중간 인증서 가져오기 또는 다시 가져오기 </td>
     <td> 관리자 </td>
   </tr>
   <tr>
@@ -87,7 +98,7 @@ lastupdated: "2018-11-15"
      </tr>
 </table>
 
-사용자 역할 및 권한에 대한 자세한 정보는 [사용자 역할](/docs/iam/users_roles.html#userroles)을 참조하십시오.
+사용자 역할 및 권한에 대한 자세한 정보는 [사용자 역할](/docs/iam?topic=iam-userroles#userroles)을 참조하십시오.
 
 ## 사용자에 대한 액세스 정책 구성
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ lastupdated: "2018-11-15"
 액세스 정책을 구성하려면 다음 단계를 완료하십시오.
 
 1. **관리 > 계정 > 사용자**로 이동하십시오. {{site.data.keyword.Bluemix_notm}} 계정에 대한 액세스 권한이 있는 사용자의 목록이 표시됩니다.
-2. 액세스 정책을 지정할 사용자의 이름을 클릭하십시오. 사용자가 표시되지 않으면 **사용자 초대**를 클릭하여 [사용자를 {{site.data.keyword.Bluemix_notm}} 계정에 추가](/docs/iam/iamuserinv.html#iamuserinv)를 수행하십시오.
+2. 액세스 정책을 지정할 사용자의 이름을 클릭하십시오. 사용자가 표시되지 않으면 **사용자 초대**를 클릭하여 [사용자를 {{site.data.keyword.Bluemix_notm}} 계정에 추가](/docs/iam?topic=iam-iamuserinv#iamuserinv)를 수행하십시오.
 3. **액세스 지정**을 클릭하십시오.
 4. **리소스에 액세스 지정**을 클릭하십시오.
-5. **서비스** 메뉴에서 **인증서 관리자**를 선택하십시오. 
+5. **서비스** 메뉴에서 **인증서 관리자**를 선택하십시오.
 6. **서비스 인스턴스** 메뉴에서 {{site.data.keyword.cloudcerts_short}} 인스턴스를 선택하거나 기본값 `All instances`를 사용하십시오.
-7. (선택사항) 특정 인증서에 대한 액세스를 구성하십시오. 
-    1. [인증서 ID를 검색](#get-certificate-id)하십시오.
+7. (선택사항) 특정 인증서에 대한 액세스를 구성하십시오.
+    1. [인증서 ID를 검색](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id)하십시오.
     2. **리소스 유형** 필드에 `certificate`를 입력하십시오.
     3. **리소스 ID** 필드에 인증서 ID를 입력하십시오.
-8. [플랫폼 액세스 역할](#platform-access-roles)을 사용자에게 지정하십시오.
-9. [서비스 액세스 역할](#service-access-roles)을 사용자에게 지정하십시오.
+8. [플랫폼 액세스 역할](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles)을 사용자에게 지정하십시오.
+9. [서비스 액세스 역할](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles)을 사용자에게 지정하십시오.
 10. **지정**을 클릭하여 액세스 정책을 사용자에게 지정하십시오.
 
 **역할 할당의 예**

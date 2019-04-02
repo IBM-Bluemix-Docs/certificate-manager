@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Gestión de roles de acceso al servicio
 {: #managing-service-access-roles}
@@ -62,7 +73,7 @@ Puede utilizar roles de acceso al servicio para permitir a los usuarios realizar
     <td> Gestor, escritor </td>
   </tr>
   <tr>
-    <td>Actualizar datos de certificado</td>
+    <td>Actualizar los metadatos de un certificado</td>
     <td> Gestor, escritor </td>
   </tr>
   <tr>
@@ -74,20 +85,20 @@ Puede utilizar roles de acceso al servicio para permitir a los usuarios realizar
     <td> Gestor </td>
   </tr>
       <tr>
-        <td>Listar todos los canales de notificaciones </td>
+        <td>Listar todos los canales de notificación </td>
         <td> Gestor, escritor, lector </td>
       </tr>
    <tr>
-     <td>Añadir, actualizar o suprimir un canal de notificaciones </td>
+     <td>Añadir, actualizar o suprimir un canal de notificación </td>
      <td> Gestor </td>
    </tr>
      <tr>
-       <td>Probar un canal de notificaciones </td>
+       <td>Probar un canal de notificación </td>
        <td> Gestor, escritor, lector </td>
      </tr>
 </table>
 
-Para obtener más información sobre los roles y los permisos de usuario, consulte [Roles de usuario](/docs/iam/users_roles.html#userroles).
+Para obtener más información sobre los roles y los permisos de usuario, consulte [Roles de usuario](/docs/iam?topic=iam-userroles#userroles).
 
 ## Configuración de políticas de acceso para los usuarios
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ Es posible configurar políticas de acceso para una instancia de {{site.data.key
 Para configurar políticas de acceso, siga los pasos siguientes:
 
 1. Navegue a **Gestionar > Cuenta > Usuarios**. Se muestra una lista de usuarios con acceso a su cuenta de {{site.data.keyword.Bluemix_notm}}.
-2. Pulse el nombre del usuario al que desea asignar una política de acceso. Si no se muestra el usuario, pulse **Invitar usuarios** para [añadir el usuario a su cuenta de {{site.data.keyword.Bluemix_notm}}](/docs/iam/iamuserinv.html#iamuserinv).
+2. Pulse el nombre del usuario al que desea asignar una política de acceso. Si no se muestra el usuario, pulse **Invitar usuarios** para [añadir el usuario a su cuenta de {{site.data.keyword.Bluemix_notm}}](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Pulse **Asignar acceso**.
 4. Pulse **Asignar acceso a recursos**.
 5. Desde el menú **Servicios**, seleccione **Certificate Manager**.
 6. Desde el menú **Instancia de servicio**, seleccione una instancia de {{site.data.keyword.cloudcerts_short}}, o utilice el valor predeterminado de `Todas las instancias`.
 7. (Opcional) Configure el acceso a un certificado específico:
-    1. [Recupere su ID de certificado](#get-certificate-id).
+    1. [Recupere su ID de certificado](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
     2. Especifique el `certificado` en el campo **Tipo de recurso**.
     3. Especifique el ID de certificado en el campo **ID de recurso**.
-8. Asigne un [rol de acceso de plataforma](#platform-access-roles) al usuario.
-9. Asigne un [rol de acceso de servicio](#service-access-roles) al usuario.
+8. Asigne un [rol de acceso de plataforma](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) al usuario.
+9. Asigne un [rol de acceso al servicio](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) al usuario.
 10. Pulse **Asignar** para asignar la política de acceso al usuario.
 
 **Ejemplos de asignación de roles**

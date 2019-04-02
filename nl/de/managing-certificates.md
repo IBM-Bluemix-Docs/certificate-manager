@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Zertifikate über das Dashboard verwalten
@@ -26,9 +34,21 @@ Sie können das Dashboard des {{site.data.keyword.cloudcerts_full}}-Service verw
 Importieren Sie die Zertifikate, damit Sie diese verwalten können.
 {: shortdesc}
 
+## Unterstützte Zertifikatsformate und Algorithmen mit öffentlichem Schlüssel
+{: supported-formats-and-algorithms}
+
+### Zertifikatsformate
+* PEM
+
+### Algorithmen mit öffentlichem Schlüssel
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA), Algorithmus für digitale Signaturen
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Elliptic Curve with Diffie-Hellman Key Agreement Protocol (ECDH)
+
 **Vorbereitungen**
 
-* Erstellen Sie ein gültiges, nicht abgelaufenes Zertifikat mit einem passenden privaten Schlüssel.
+* Erstellen Sie ein gültiges, nicht abgelaufenes Zertifikat mit einem passenden privaten Schlüssel (Schlüssel ist optional).
 * Konvertieren Sie die Dateien in das PEM-Format (PEM = Privacy-enhanced Electronic Mail).
 * Lassen Sie den privaten Schlüssel unverschlüsselt, um sicherzustellen, dass er importiert werden kann.
 
@@ -36,9 +56,9 @@ Um ein Zertifikat zu importieren, klicken Sie auf **Zertifikat importieren** und
 
 1. Geben Sie einen Anzeigenamen ein.
 2. Wählen Sie die Zertifikatsdatei im PEM-Format aus, indem Sie auf **Durchsuchen** klicken.
-3. Wählen Sie den privaten Schlüssel des Zertifikats im PEM-Format aus, indem Sie auf **Durchsuchen** klicken.
+3. Optional: Wählen Sie den privaten Schlüssel des Zertifikats im PEM-Format aus, indem Sie auf **Durchsuchen** klicken.
 4. Falls zutreffend: Geben Sie die Zwischenzertifikatsdatei im PEM-Format an.
-5. (Optional) Geben Sie eine Beschreibung ein.
+5. Optional: Geben Sie eine Beschreibung ein.
 6. Klicken Sie auf **Importieren**.
 
 Wenn Sie ein Zertifikat importiert haben, werden die folgenden Informationen in der Tabelle 'Zertifikate' angezeigt. Weitere Informationen zum Zertifikat können Sie aufrufen, indem Sie die Zeile des betreffenden Zertifikats in der Zertifikatstabelle erweitern.
@@ -59,7 +79,7 @@ Wenn Sie ein Zertifikat importiert haben, werden die folgenden Informationen in 
   </tr>
   <tr>
     <td>Domäne</td>
-    <td>Die Domäne(n), für die das Zertifikat gültig ist. </td>
+    <td>Die Domäne(n), für die das Zertifikat gültig ist/sind. </td>
   </tr>
   <tr>
     <td>Aussteller</td>
@@ -67,33 +87,31 @@ Wenn Sie ein Zertifikat importiert haben, werden die folgenden Informationen in 
   </tr>
   <tr>
     <td>Algorithmus</td>
-    <td>Der Verschlüsselungstyp, mit dem das Zertifikat erstellt wird. </td>
+    <td>Der Zertifikatssignaturalgorithmus.</td>
   </tr>
   <tr>
     <td>Schlüsselalgorithmus</td>
-    <td>Der Typ und die Größe des Schlüssels, der von dem Algorithmus verwendet wird. </td>
+    <td>Der Algorithmus mit öffentlichem Schlüssel.</td>
   </tr>
   <tr>
-    <td>Ablauf nach </td>
+    <td>Ablauf nach</td>
     <td>Die Anzahl der verbleibenden Tage, bevor das Zertifikat seine Gültigkeit verliert. </td>
   </tr>
   <tr>
-    <td>Ausgestellt am</td>
-    <td>Das Datum, an dem das Zertifikat ausgestellt wurde. </td>
-  </tr>
-  <tr>
     <td>Gültig ab</td>
-    <td>Das Datum, an dem das Zertifikat gültig wurde. </td>
+    <td>Das Datum, an dem das Zertifikat gültig wurde (in UTC-Zeit). </td>
   </tr>
   <tr>
     <td>Läuft ab am</td>
-    <td>Das Datum, ab dem das Zertifikat nicht mehr gültig ist. </td>
+    <td>Das Datum, ab dem das Zertifikat nicht mehr gültig ist (in UTC-Zeit). </td>
   </tr>
   <tr>
     <td>Zertifikat-ID</td>
-    <td>Die generierte ID, die dem Zertifikat beim Import zugeordnet wird. </td>
+    <td>Die generierte ID, die dem Zertifikat beim Import zugeordnet wird.</td>
   </tr>
 </table>
+
+</br>
 
 ## Zertifikat erneut importieren
 {: #reimport-certificate}
@@ -107,14 +125,14 @@ Wenn das Zertifikat demnächst abläuft, können Sie es aktualisieren, indem Sie
 Führen Sie die folgenden Schritte aus, um ein Zertifikat erneut zu importieren:
 
 1. Erweitern Sie die Zeile für das Zertifikat.
-2. Klicken Sie auf **Zertifikat erneut importieren**. 
+2. Klicken Sie auf **Zertifikat erneut importieren**.
 3. Wählen Sie die neue Zertifikatsdatei im PEM-Format aus, indem Sie auf **Durchsuchen** klicken.
 4. (Optional) Wählen Sie den privaten Schlüssel des neuen Zertifikats im PEM-Format aus, indem Sie auf **Durchsuchen** klicken.
 5. (Optional) Geben Sie eine neue Zwischenzertifikatsdatei im PEM-Format an, indem Sie auf **Durchsuchen** klicken.
 6. Klicken Sie auf **Erneut importieren** und dann auf **Fertig**.
 
 Das erneute Importieren von Zertifikaten ist auf fünf Aktionen pro Minute begrenzt.
-{: tip}
+{: note}
 
 ### Vorhergehende Version des Zertifikats herunterladen
 {: #downloading-certificate}
@@ -168,4 +186,4 @@ Führen Sie die folgenden Schritte aus, um ein Zertifikat zu aktualisieren:
 3. Speichern Sie Ihre Änderungen.
 
 Sie können bis zu fünf Aktualisierungsaktionen pro Minute ausführen.
-{: tip}
+{: note}

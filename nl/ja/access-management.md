@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # サービス・アクセス役割の管理
 {: #managing-service-access-roles}
@@ -62,11 +73,11 @@ lastupdated: "2018-11-15"
     <td> 管理者、ライター </td>
   </tr>
   <tr>
-    <td>証明書データの更新</td>
+    <td>証明書のメタデータの更新</td>
     <td> 管理者、ライター </td>
   </tr>
   <tr>
-    <td>証明書、秘密鍵、および中間証明書のインポートまたは再インポート</td>
+    <td>証明書、秘密鍵、および中間証明書のインポートまたは再インポート </td>
     <td> 管理者 </td>
   </tr>
   <tr>
@@ -87,7 +98,7 @@ lastupdated: "2018-11-15"
      </tr>
 </table>
 
-ユーザーの役割と許可について詳しくは、『[ユーザーの役割](/docs/iam/users_roles.html#userroles)』を参照してください。
+ユーザーの役割と許可について詳しくは、『[ユーザーの役割](/docs/iam?topic=iam-userroles#userroles)』を参照してください。
 
 ## ユーザーのアクセス・ポリシーの構成
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ lastupdated: "2018-11-15"
 アクセス・ポリシーを構成するには、以下のステップを実行します。
 
 1. **「管理」>「アカウント」>「ユーザー」**に移動します。 {{site.data.keyword.Bluemix_notm}} アカウントにアクセスできるユーザーのリストが表示されます。
-2. アクセス・ポリシーを割り当てる対象のユーザーの名前をクリックします。 ユーザーが表示されていない場合は、**「ユーザーの招待」**をクリックして、[{{site.data.keyword.Bluemix_notm}} アカウントにユーザーを追加します](/docs/iam/iamuserinv.html#iamuserinv)。
+2. アクセス・ポリシーを割り当てる対象のユーザーの名前をクリックします。 ユーザーが表示されていない場合は、**「ユーザーの招待」**をクリックして、[{{site.data.keyword.Bluemix_notm}} アカウントにユーザーを追加します](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 3. **「アクセス権限の割り当て」**をクリックします。
 4. **「リソースへのアクセス権限の割り当て」**をクリックします。
 5. **「サービス」**メニューから、**「Certificate Manager」**を選択します。
 6. **「サービス・インスタンス」**メニューから、{{site.data.keyword.cloudcerts_short}} インスタンスを選択するか、デフォルト値の`「すべてのインスタンス」`を使用します。
 7. (オプション) 特定の証明書へのアクセスを構成します。
-    1. [証明書 ID を取得します](#get-certificate-id)。
+    1. [証明書 ID を取得します](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id)。
     2. **「リソース・タイプ」**フィールドに「`certificate`」と入力します。
     3. **「リソース ID」**フィールドに証明書 ID を入力します。
-8. ユーザーに[プラットフォーム・アクセス役割](#platform-access-roles)を割り当てます。
-9. ユーザーに[サービス・アクセス役割](#service-access-roles)を割り当てます。
+8. ユーザーに[プラットフォーム・アクセス役割](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles)を割り当てます。
+9. ユーザーに[サービス・アクセス役割](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles)を割り当てます。
 10. **「割り当て」**をクリックして、ユーザーにアクセス・ポリシーを割り当てます。
 
 **役割の割り振りの例**

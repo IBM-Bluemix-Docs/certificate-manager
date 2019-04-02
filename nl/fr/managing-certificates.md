@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Gestion des certificats depuis le tableau de bord
@@ -26,9 +34,21 @@ Vous pouvez utiliser le tableau de bord du service {{site.data.keyword.cloudcert
 Importez vos certificats afin de pouvoir les gérer.
 {: shortdesc}
 
+## Formats de certificat et algorithmes de clé publique pris en charge
+{: supported-formats-and-algorithms}
+
+### Formats de certificat
+* PEM
+
+### Algorithmes de clé publique
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA)
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Protocole d'accord de clé Elliptic Curve with Diffie-Hellman
+
 **Avant de commencer**
 
-* Créez un certificat valide non arrivé à expiration avec une clé privée correspondante.
+* Créez un certificat valide non arrivé à expiration avec une clé privée correspondante (la clé est facultative).
 * Convertissez les fichiers au format PEM (Privacy-enhanced Electronic Mail).
 * Gardez la clé privée non chiffrée pour vous assurer qu'il peut être importé.
 
@@ -36,12 +56,12 @@ Pour importer un certificat, cliquez sur **Importer le certificat** et indiquez 
 
 1. Entrez un nom d'affichage.
 2. Sélectionnez le fichier certificat au format PEM en cliquant sur **Parcourir**.
-3. Sélectionnez la clé privée du certificat au format PEM en cliquant sur **Parcourir**.
+3. Facultatif : sélectionnez la clé privée du nouveau certificat au format PEM en cliquant sur **Parcourir**.
 4. Si applicable, indiquez le fichier certificat intermédiaire au format PEM.
-5. (Facultatif) Entrez une description.
+5. Facultatif : entrez une description.
 6. Cliquez sur **Importer**.
 
-Une fois que vous avez importé un certificat, les informations ci-après sont affichées dans le tableau Certificats. Pour afficher d'autres informations sur le certificat, vous pouvez développer la ligne correspondant à celui-ci dans le tableau Certificats. 
+Une fois que vous avez importé un certificat, les informations ci-après sont affichées dans le tableau Certificats. Pour afficher d'autres informations sur le certificat, vous pouvez développer la ligne correspondant à celui-ci dans le tableau Certificats.
 
 <table>
 <caption> Tableau 1. Informations sur le certificat importé </caption>
@@ -67,33 +87,31 @@ Une fois que vous avez importé un certificat, les informations ci-après sont a
   </tr>
   <tr>
     <td>Algorithme</td>
-    <td>Type de chiffrement par lequel le certificat est créé. </td>
+    <td>Algorithme de signature de certificat</td>
   </tr>
   <tr>
     <td>Algorithme de clé</td>
-    <td>Type et taille de clé utilisés par l'algorithme. </td>
+    <td>Algorithme de clé publique</td>
   </tr>
   <tr>
-    <td>Expire dans </td>
+    <td>Expire dans</td>
     <td>Nombre jours avant l'expiration du certificat. </td>
   </tr>
   <tr>
-    <td>Date de publication</td>
-    <td>Date à laquelle le certificat a été émis. </td>
-  </tr>
-  <tr>
     <td>Valide à partir du</td>
-    <td>Date à laquelle le certificat est devenu valide. </td>
+    <td>Date à laquelle le certificat est devenu valide (fuseau horaire UTC). </td>
   </tr>
   <tr>
     <td>Expire le</td>
-    <td>Date à laquelle le certificat n'est plus valide. </td>
+    <td>Date à laquelle le certificat n'est plus valide (fuseau horaire UTC). </td>
   </tr>
   <tr>
     <td>ID certificat</td>
-    <td>ID généré pour le certificat lors de l'importation. </td>
+    <td>ID généré pour le certificat lors de l'importation.</td>
   </tr>
 </table>
+
+</br>
 
 ## Réimportation d'un certificat
 {: #reimport-certificate}
@@ -106,7 +124,7 @@ Si votre certificat est sur le point d'expirer, vous pouvez le mettre à jour en
 
 Pour réimporter un certificat, procédez comme suit :
 
-1. Développez la ligne correspondant au certificat. 
+1. Développez la ligne correspondant au certificat.
 2. Cliquez sur **Réimporter le certificat**.
 3. Sélectionnez le nouveau fichier certificat au format PEM en cliquant sur **Parcourir**.
 4. (Facultatif) Sélectionnez la clé privée du nouveau certificat au format PEM en cliquant sur **Parcourir**.
@@ -114,15 +132,15 @@ Pour réimporter un certificat, procédez comme suit :
 6. Cliquez sur **Réimporter**, puis sur **Terminé**.
 
 Les opérations de réimportation de certificats sont limitées à cinq actions par minute.
-{: tip}
+{: note}
 
 ### Téléchargement d'une version précédente de votre certificat
 {: #downloading-certificate}
 
 Pour télécharger la version précédente d'un certificat, procédez comme suit :
 
-1. Développez la ligne correspondant au certificat. 
-2. Cliquez sur le lien **Version précédente**. 
+1. Développez la ligne correspondant au certificat.
+2. Cliquez sur le lien **Version précédente**.
 
 ## Recherche de certificats
 {: #searching-certificates}
@@ -168,4 +186,4 @@ Pour mettre à jour un certificat, procédez comme suit :
 3. Sauvegardez vos modifications.
 
 Vous pouvez effectuer jusqu'à cinq actions de mise à jour par minute.
-{: tip}
+{: note}

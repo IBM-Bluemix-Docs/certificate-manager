@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,12 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+
+
 # 關於 {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
@@ -48,21 +57,21 @@ lastupdated: "2018-11-15"
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>將您的 Kubernetes 叢集自訂網域憑證儲存在 {{site.data.keyword.cloudcerts_short}} 中，然後使用 {{site.data.keyword.cloud_notm}} CLI 的 [Kubernetes 服務外掛程式指令](/docs/containers/cs_cli_reference.html)部署它們。[進一步瞭解此整合 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)。</td>
+    <td>您可以輕鬆又安全地將 {{site.data.keyword.cloudcerts_short}} 的自訂網域 TLS 憑證部署至您的 Kubernetes 叢集。叢集管理者可以使用 [Kubernetes 服務外掛程式指令](/docs/containers?topic=containers-cs_cli_reference)以新憑證將 TLS 憑證更新為 Kubernetes 密碼，而不會造成運作中斷。若要開始使用，請查閱[文件中的 Ingress 註釋](/docs/containers?topic=containers-ingress_annotation#https-auth)。</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>{{site.data.keyword.security-advisor_short}} 會集中 {{site.data.keyword.cloud_notm}} 服務的相關資訊。資訊會指出在您的 {{site.data.keyword.cloud_notm}} 帳戶中，{{site.data.keyword.cloudcerts_short}} 實例的已過期憑證和即將過期憑證。[進一步瞭解 {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor/index.html#index)。
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index) 會集中 {{site.data.keyword.cloud_notm}} 服務的相關資訊。資訊會指出在您的 {{site.data.keyword.cloud_notm}} 帳戶中，{{site.data.keyword.cloudcerts_short}} 實例的已過期憑證和即將過期憑證。[進一步瞭解 {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index#index)。
     </td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>使用 {{site.data.keyword.cloudaccesstrailfull_notm}} 服務可追蹤使用者及應用程式與 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.cloudcerts_long_notm}} 服務互動的情形。[進一步瞭解 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。
-    <p>若要取得產生事件的動作清單，請參閱 [{{site.data.keyword.cloudaccesstrailshort}} 事件](/docs/services/certificate-manager/at_events.html#at_events)。</p></td>
+    <td>您可以使用 [{{site.data.keyword.cloudaccesstrailfull_notm}} 服務](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)以追蹤使用者及應用程式與 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.cloudcerts_long_notm}} 服務互動的情形。[進一步瞭解 {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)。
+    <p>若要取得產生事件的動作清單，請參閱 [{{site.data.keyword.cloudaccesstrailshort}} 事件](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events)。</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>請將您的自訂網域憑證儲存在 {{site.data.keyword.cloudcerts_short}} 服務，然後使用憑證 CRN 在 {{site.data.keyword.apiconnect_short}} 中與自訂網域連結。[進一步瞭解 {{site.data.keyword.apiconnect_short}}](/docs/api-management/index.html#index)。
+    <td>請將您的自訂網域憑證儲存在 {{site.data.keyword.cloudcerts_short}} 服務，然後使用憑證 CRN 在 {{site.data.keyword.apiconnect_short}} 中與自訂網域連結。[進一步瞭解 {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index)。
     </p></td>
   </tr>
 </table>
@@ -70,7 +79,7 @@ lastupdated: "2018-11-15"
 ## 位置
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} 提供於達拉斯及倫敦位置。
+{{site.data.keyword.cloudcerts_short}} 提供於達拉斯、倫敦、法蘭克福及東京等位置。
 
 
 

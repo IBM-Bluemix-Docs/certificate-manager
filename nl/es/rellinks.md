@@ -1,16 +1,29 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Enlaces relacionados
-{: links}
+{: #links}
 
 Puede utilizar los siguientes enlaces relacionados para obtener más información e interactuar con {{site.data.keyword.cloudcerts_long}}.
 {:shortdesc}
@@ -31,5 +44,5 @@ Puede utilizar los siguientes enlaces relacionados para obtener más informació
 Guías de aprendizaje de {{site.data.keyword.IBM_notm}} en las que se describe {{site.data.keyword.cloudcerts_long_notm}}.  
 {: #shortdesc}
 
-* <a href="https://console.bluemix.net/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Aplicación de seguridad de extremo a extremo a una aplicación de nube <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
-* <a href="https://console.bluemix.net/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Despliegue de apps sin servidor entre varias ubicaciones <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
+* <a href="https://cloud.ibm.com/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Aplicación de seguridad de extremo a extremo a una aplicación de nube <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>
+* <a href="https://cloud.ibm.com/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Despliegue de apps sin servidor entre varias ubicaciones <img src="../../icons/launch-glyph.svg" alt="Icono de enlace externo"></a>

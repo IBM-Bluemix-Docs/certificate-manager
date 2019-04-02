@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,12 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+
+
 # {{site.data.keyword.cloudcerts_short}} 정보
 {: #about-certificate-manager}
 
@@ -30,7 +39,7 @@ lastupdated: "2018-11-15"
 * 인증서에 액세스하고 인증서를 관리할 수 있는 사용자에 대한 제어를 설정합니다.
 
 ![상위 레벨 서비스 아키텍처 다이어그램](images/high-level-architecture.png)
-<caption>그림 1. 상위 레벨 서비스 아키텍처. </caption>
+<caption>그림 1. 상위 레벨 서비스 아키텍처.</caption>
 
 ## 개인 키 보안
 {: #private-key-security}
@@ -48,31 +57,31 @@ lastupdated: "2018-11-15"
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>{{site.data.keyword.cloudcerts_short}}에서 Kubernetes 클러스터 사용자 정의 도메인 인증서를 저장한 다음 {{site.data.keyword.cloud_notm}} CLI에 대한 [Kubernetes Service 플러그인 명령](/docs/containers/cs_cli_reference.html)을 사용하여 배치하십시오. [이 통합에 대해 자세히 보기 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
+    <td>사용자 정의 도메인 TLS 인증서를 {{site.data.keyword.cloudcerts_short}}에서 Kubernetes 클러스터로 쉽고 안전하게 배치할 수 있습니다. 클러스터 관리자는 작동 중지 시간을 발생시키지 않고 [Kubernetes Service 플러그인 명령](/docs/containers?topic=containers-cs_cli_reference)을 사용하여 TLS 인증서를 Kubernetes 시크릿으로서 새 인증서로 업데이트할 수 있습니다. 시작하려면 [문서의 Ingress 어노테이션](/docs/containers?topic=containers-ingress_annotation#https-auth)을 참조하십시오.</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>{{site.data.keyword.security-advisor_short}}는 {{site.data.keyword.cloud_notm}} 서비스에 대한 정보를 중앙에서 관리합니다. 정보에는 {{site.data.keyword.cloud_notm}} 계정의 {{site.data.keyword.cloudcerts_short}} 인스턴스에 있는 만료된 인증서 및 만료 예정인 인증서의 표시가 포함됩니다. [{{site.data.keyword.security-advisor_short}}에 대해 자세히 알아보십시오](/docs/services/security-advisor/index.html#index).</td>
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index)는 {{site.data.keyword.cloud_notm}} 서비스에 대한 정보를 중앙에서 관리합니다. 정보에는 {{site.data.keyword.cloud_notm}} 계정의 {{site.data.keyword.cloudcerts_short}} 인스턴스에 있는 만료된 인증서 및 만료 예정인 인증서의 표시가 포함됩니다. [{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index#index)에 대해 자세히 알아봅니다.</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>{{site.data.keyword.cloudaccesstrailfull_notm}} 서비스를 사용하여 {{site.data.keyword.cloud_notm}}에서 사용자 및 애플리케이션이 {{site.data.keyword.cloudcerts_long_notm}} 서비스와 상호 작용하는 방식을 추적하십시오. [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)에 대해 자세히 알아보십시오.
-    <p>이벤트를 생성하는 조치의 목록을 가져오려면 [{{site.data.keyword.cloudaccesstrailshort}} 이벤트](/docs/services/certificate-manager/at_events.html#at_events)를 참조하십시오.</p></td>
+    <td>[ {{site.data.keyword.cloudaccesstrailfull_notm}} 서비스](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)를 사용하여 사용자 및 애플리케이션이 {{site.data.keyword.cloudcerts_long_notm}} 서비스와 {{site.data.keyword.cloud_notm}}에서 상호작용하는 방식을 추적하십시오. [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)에 대해 자세히 알아봅니다.
+    <p>이벤트를 생성하는 조치의 목록을 가져오려면 [{{site.data.keyword.cloudaccesstrailshort}} 이벤트](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events)를 참조하십시오.</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>사용자 정의 도메인 인증서를 {{site.data.keyword.cloudcerts_short}} 서비스에 저장한 후, 인증서 CRN을 사용하여 {{site.data.keyword.apiconnect_short}}의 사용자 정의 도메인과 바인딩하십시오. [{{site.data.keyword.apiconnect_short}}에 대해 자세히 알아보십시오](/docs/api-management/index.html#index).</p></td>
+    <td>사용자 정의 도메인 인증서를 {{site.data.keyword.cloudcerts_short}} 서비스에 저장한 후, 인증서 CRN을 사용하여 {{site.data.keyword.apiconnect_short}}의 사용자 정의 도메인과 바인딩하십시오. [{{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index)에 대해 자세히 알아봅니다. </p></td>
   </tr>
 </table>
 
 ## 위치
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}}는 댈러스 및 런던에서 사용할 수 있습니다.
+{{site.data.keyword.cloudcerts_short}}는 댈러스, 런던, 프랑크푸르트 및 도쿄 위치에서 사용 가능합니다.
 
 
 
 ## 한계
 {: #limits}
 
-인스턴스당 최대 1000개의 인증서를 업로드할 수 있습니다. 
+인스턴스당 최대 1000개의 인증서를 업로드할 수 있습니다.

@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,19 +17,24 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
-# Configurando Notificações para Expirar Certificados
-{: #configuring-notifications-for-expiring-certificates}
+# Configurar notificações
+{: #configuring-notifications}
 
 Geralmente, os certificados são válidos apenas por um período de tempo configurado. Quando um certificado que você usa
-expira, o seu aplicativo pode passar por um tempo de inatividade. Para evitar o tempo de inatividade, é possível configurar o {{site.data.keyword.cloudcerts_full}} para enviar notificações sobre os certificados que estão prestes a expirar para que seja possível renová-los a tempo.
+expira, o seu aplicativo pode passar por um tempo de inatividade. Para evitar tempo de inatividade, é possível configurar o {{site.data.keyword.cloudcerts_full}} para enviar notificações sobre certificados prestes a expirar, com o objetivo de lembrar você de renová-los a tempo.
+
+Você também será alertado quando uma versão renovada do seu certificado for reimportada para o {{site.data.keyword.cloudcerts_short}} no lugar da versão expirada, para que você se lembre de também implementá-la em pontos de terminação SSL/TLS. Essa notificação sobre certificados reimportados será enviada somente para canais da [versão 2 de canal](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 {: shortdesc}
 
 **Quando eu sou notificado?**  
 Dependendo da data de expiração do certificado que você transferiu por upload para o {{site.data.keyword.cloudcerts_full_notm}}, você será notificado 90, 60, 30, 10 e 1 dia antes da expiração. Além disso, você recebe notificações diárias sobre os certificados expirados. As notificações diárias se iniciam no primeiro dia após a expiração do certificado.
 
-Deve-se renovar o seu certificado, fazer upload dele para o {{site.data.keyword.cloudcerts_full_notm}} e excluir o certificado expirado para interromper o envio da notificação.
+Deve-se renovar e reimportar esse certificado no lugar do anterior para que o {{site.data.keyword.cloudcerts_full_notm}} pare de impedir que as notificações sejam enviadas. Ao reimportar seu certificado, você receberá uma notificação de que ele foi reimportado e de que deve ser reimplementado.
 
 **Quais são as minhas opções para configurar as notificações?**  
 É possível enviar notificações para o Slack usando um webhook do Slack ou usar qualquer URL de retorno de chamada que você desejar.
@@ -41,12 +51,11 @@ Para configurar um webhook do Slack, conclua as etapas a seguir:
 ## Configurando uma URL de retorno de chamada
 {: #callback}
 
-Talvez você queria usar a URL de retorno de chamada para postar a notificação para as ferramentas usadas diariamente para acionar o processo de renovação para a sua equipe. Por exemplo, é possível enviar notificações para relatar ao PagerDuty, abrir automaticamente um problema no GitHub ou acionar scripts de renovação.  
+Para acionar o processo de renovação para sua equipe, é possível usar uma URL de retorno de chamada para postar notificações nas ferramentas que você usa. Por exemplo, é possível enviar notificações para relatar ao PagerDuty, abrir automaticamente um problema no GitHub ou acionar scripts de renovação.  
 {: shortdesc}
 
 **Importante:** o terminal da sua URL de retorno de chamada deve atender aos seguintes requisitos para
 ser usado com o {{site.data.keyword.cloudcerts_short}}:
-
 * O terminal deve usar o protocolo HTTPS.
 * O terminal não deve requerer cabeçalhos de HTTP. Este requisito inclui cabeçalhos de autorização.
 * O terminal deve retornar um código de status `200 OK` para indicar uma entrega de notificação bem-sucedida.
@@ -54,36 +63,19 @@ ser usado com o {{site.data.keyword.cloudcerts_short}}:
 ### Formato da notificação
 {: #notification_format}
 
-A notificação que é enviada para a URL de retorno de chamada é um documento JSON que está no formato a seguir:
+A notificação enviada para sua URL de retorno de chamada é um documento JSON assinado com sua chave assimétrica de instância no formato abaixo.
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
 {: screen}
 
-Após decodificar e verificar a carga útil, o conteúdo será uma sequência JSON.
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+Após a decodificação e verificação da carga útil, o conteúdo será uma sequência JSON, [de acordo com a versão do canal](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
 ## Configurando um canal de notificação
 {: #adding-channel}
 
-Após criar um webhook do Slack ou uma URL de retorno de chamada, inclua no {{site.data.keyword.cloudcerts_short}} para começar a receber notificações sobre a expiração de certificados. O {{site.data.keyword.cloudcerts_short}} criptografa o
+Após a criação de um webhook do Slack ou de uma URL de retorno de chamada, inclua-o no {{site.data.keyword.cloudcerts_short}} para começar a receber notificações sobre certificados expirados e reimportados. O {{site.data.keyword.cloudcerts_short}} criptografa o
 terminal e armazena-o com segurança.
 {: shortdesc}
 
@@ -140,7 +132,7 @@ notificação.
 É possível testar um canal de notificação para assegurar que o seu canal de notificação esteja configurado corretamente.
 {: shortdesc}
 
-Antes de iniciar, [configure um canal de notificação](#adding-channel).
+Antes de iniciar, [configure um canal de notificação](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 Para testar um canal de notificação, conclua as etapas a seguir:
 
@@ -149,13 +141,13 @@ Para testar um canal de notificação, conclua as etapas a seguir:
 3. Verifique se você recebeu uma notificação no canal configurado.
 
 ## Atualizando um canal de notificação
-{: updating-channel}
+{: #updating-channel}
 
 É possível atualizar a configuração do seu canal de notificação, desativar ou ativar as notificações ou excluir os canais de
 notificação do {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Antes de iniciar, [configure um canal de notificação](#adding-channel).
+Antes de iniciar, [configure um canal de notificação](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 Para atualizar seu canal de notificação, conclua as etapas a seguir:
 
@@ -183,6 +175,19 @@ Para fazer download da chave pública, conclua as etapas a seguir:
 1. Na navegação da página de detalhes do serviço, clique em **Configurações**.
 2. Abra a guia  ** Notificações ** .
 3. Clique no botão  ** Fazer download da chave ** . A chave é transferida por download como um arquivo PEM.
+
+## Versões de Canal
+{: #channel-versions}
+
+Conforme o Certificate Manager evolui, podemos modificar o formato da estrutura de carga útil de notificações de tempos em tempos. Para garantir a compatibilidade com versões anteriores, a carga útil enviada aos seus canais existentes não mudará.   
+
+Se tiver canais de notificação existentes (Slack ou URL de Retorno de Chamada), para obter a nova versão da carga útil:
+1. Para a URL de Retorno de Chamada, verifique se sua implementação pode aceitar a nova carga útil.
+2. Crie um novo canal de notificação (novos canais são sempre criados com a versão mais recente do canal).
+3. Teste se o novo canal funciona corretamente.
+4. Exclua o canal antigo.
+
+Para Versões de Canais, consulte [Documentação da API](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions).
 
 ## Exemplos
 {: #examples}

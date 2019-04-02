@@ -1,15 +1,32 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-10-29"
+  years: 2019
+lastupdated: "2019-03-13"
 
 ---
 
+# IBM Cloud Certicate Manager
 
-# File di origine per la documentazione del gestore del certificato rivolta al cliente
+Benvenuti nel repository della documentazione di Certificate Manager! Feedback e aggiornamenti sono sempre ben accetti. 
 
 
-Documentazione rivolta al cliente: https://console.bluemix.net/docs/services/certificate-manager/index.html
+
+Per suggerire le modifiche:
+
+1. Crea una biforcazione di questo repository ed esegui gli aggiornamenti nella tua biforcazione. 
+2. Quando sei pronto per la revisione, effettua una PR nel ramo master ed esegui una segnalazione tramite tag a Shawna Guilianelli (`smguilia`) o Idan Idar (`iadar`) per la revisione.
+3. Shawna e Idan esamineranno i tuoi suggerimenti con il team di sviluppo di Certificate Manager e apporteranno le modifiche necessarie. 
+4. Shawna o Idan integreranno il contenuto suggerito nel repository.
+
+Documentazione rivolta al cliente: https://cloud.ibm.com/docs/services/certificate-manager?topic=certificate-manager-gettingstarted#gettingstarted
+
+
+
+
+
+
+
+
 
 

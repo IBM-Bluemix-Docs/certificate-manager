@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # Gerenciando funções de acesso de serviço
 {: #managing-service-access-roles}
@@ -64,7 +75,7 @@ como a criação ou a exclusão de instâncias em sua conta do {{site.data.keywo
     <td> Gerenciador, gravador </td>
   </tr>
   <tr>
-    <td>Atualizar dados do certificado</td>
+    <td>Atualizar os metadados do certificado</td>
     <td> Gerenciador, gravador </td>
   </tr>
   <tr>
@@ -90,7 +101,7 @@ como a criação ou a exclusão de instâncias em sua conta do {{site.data.keywo
 </table>
 
 Para obter mais informações sobre funções de usuário e permissões, consulte
-[Funções do usuário](/docs/iam/users_roles.html#userroles).
+[Funções do usuário](/docs/iam?topic=iam-userroles#userroles).
 
 ## Configurando políticas de acesso para usuários
 {: #configuring-access-policies}
@@ -103,17 +114,17 @@ instância.
 Para configurar as políticas de acesso, conclua as etapas a seguir:
 
 1. Navegue para  ** Gerenciar > Conta > Usuários **. Uma lista dos usuários com acesso à sua conta do {{site.data.keyword.Bluemix_notm}} é mostrada.
-2. Clique no nome do usuário ao qual você deseja designar uma política de acesso. Se o usuário não for mostrado, clique em **Convidar usuários** para [incluir o usuário em sua conta do {{site.data.keyword.Bluemix_notm}}](/docs/iam/iamuserinv.html#iamuserinv).
+2. Clique no nome do usuário ao qual você deseja designar uma política de acesso. Se o usuário não for mostrado, clique em **Convidar usuários** para [incluir o usuário em sua conta do {{site.data.keyword.Bluemix_notm}}](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Clique em  ** Designar acesso **.
 4. Clique em  ** Designar acesso a recursos **.
 5. No menu **Serviços**, selecione **Gerenciador de certificados**.
 6. No menu **Instância de serviço**, selecione uma instância do {{site.data.keyword.cloudcerts_short}} ou use o valor padrão `Todas as instâncias`.
 7. (Opcional) Configure o acesso a um certificado específico:
-    1. [ Recupere seu ID do certificado ](#get-certificate-id).
+    1. [ Recupere seu ID do certificado ](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
     2. Insira `certificado` no campo **Tipo de recurso**.
     3. Insira o ID do certificado no campo **ID do recurso**.
-8. Designe uma [função de acesso de plataforma](#platform-access-roles) para o usuário.
-9. Designe uma [função de acesso de serviço](#service-access-roles) para o usuário.
+8. Designe uma [função de acesso de plataforma](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) para o usuário.
+9. Designe uma [função de acesso de serviço](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) para o usuário.
 10. Clique em **Designar** para designar a política de acesso para o usuário.
 
 **Exemplos de alocação de função**

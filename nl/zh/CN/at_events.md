@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # {{site.data.keyword.cloudaccesstrailshort}} 事件  
@@ -21,7 +28,7 @@ lastupdated: "2018-11-16"
 使用 {{site.data.keyword.cloudaccesstrailfull}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.cloudcerts_long_notm}} 服务进行交互。
 {:shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服务会记录更改 {{site.data.keyword.Bluemix_notm}} 中服务状态的由用户启动的活动。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla)。例如，导入证书时，会生成 {{site.data.keyword.cloudaccesstrailshort}} 事件。
+{{site.data.keyword.cloudaccesstrailfull_notm}} 服务会记录更改 {{site.data.keyword.Bluemix_notm}} 中服务状态的由用户启动的活动。有关更多信息，请参阅 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)。例如，导入证书时，会生成 {{site.data.keyword.cloudaccesstrailshort}} 事件。
 
 下表列出了在调用时会生成事件的 API 方法。
 

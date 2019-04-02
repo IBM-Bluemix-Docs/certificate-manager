@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # 管理服务访问角色
 {: #managing-service-access-roles}
@@ -55,39 +66,39 @@ lastupdated: "2018-11-15"
   </tr>
   <tr>
     <td>列示证书 </td>
-    <td> 管理员、作者和读者</td>
+    <td> 管理者、写入者和读取者</td>
   </tr>
   <tr>
     <td>下载证书和专用密钥 </td>
-    <td> 管理员和作者</td>
+    <td> 管理者和写入者</td>
   </tr>
   <tr>
-    <td>更新证书数据 </td>
-    <td> 管理员和作者</td>
+    <td>更新证书的元数据</td>
+    <td> 管理者和写入者</td>
   </tr>
   <tr>
     <td>导入或重新导入证书、专用密钥和中间证书</td>
-    <td> 管理员</td>
+    <td> 管理者</td>
   </tr>
   <tr>
     <td>删除证书和专用密钥 </td>
-    <td> 管理员</td>
+    <td> 管理者</td>
   </tr>
       <tr>
         <td>列出所有通知通道</td>
-        <td> 管理员、作者和读者</td>
+        <td> 管理者、写入者和读取者</td>
       </tr>
    <tr>
      <td>添加、更新或删除通知通道</td>
-     <td> 管理员</td>
+     <td> 管理者</td>
    </tr>
      <tr>
        <td>测试通知通道</td>
-       <td> 管理员、作者和读者</td>
+       <td> 管理者、写入者和读取者</td>
      </tr>
 </table>
 
-有关用户角色和许可权的更多信息，请参阅[用户角色](/docs/iam/users_roles.html#userroles)。
+有关用户角色和许可权的更多信息，请参阅[用户角色](/docs/iam?topic=iam-userroles#userroles)。
 
 ## 配置用户的访问策略
 {: #configuring-access-policies}
@@ -98,24 +109,24 @@ lastupdated: "2018-11-15"
 要配置访问策略，请完成以下步骤：
 
 1. 导航至**管理 > 帐户 > 用户**。这将显示有权访问 {{site.data.keyword.Bluemix_notm}} 帐户的用户的列表。
-2. 单击要向其分配访问策略的用户的名称。如果未显示用户，请单击**邀请用户**以[将用户添加到 {{site.data.keyword.Bluemix_notm}} 帐户](/docs/iam/iamuserinv.html#iamuserinv)。
+2. 单击要向其分配访问策略的用户的名称。如果未显示用户，请单击**邀请用户**以[将用户添加到 {{site.data.keyword.Bluemix_notm}} 帐户](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 3. 单击**分配访问权**。
 4. 单击**分配对资源的访问权**。
 5. 从**服务**菜单中，选择 **Certificate Manager**。
 6. 从**服务实例**菜单中，选择 {{site.data.keyword.cloudcerts_short}} 实例，或者使用缺省值`所有实例`。
 7. （可选）配置对特定证书的访问权：
-    1. [检索证书标识](#get-certificate-id)。
+    1. [检索证书标识](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id)。
     2. 在**资源类型**字段中，输入`证书`。
     3. 在**资源标识**字段中，输入证书标识。
-8. 向用户分配[平台访问角色](#platform-access-roles)。
-9. 向用户分配[服务访问角色](#service-access-roles)。
+8. 向用户分配[平台访问角色](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles)。
+9. 向用户分配[服务访问角色](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles)。
 10. 单击**分配**以便为用户分配访问策略。
 
 **角色分配的示例**
 
 * 至少将查看者角色分配给每个用户，从而使每个用户都可查看服务实例。
 * 如果想要用户创建和删除实例，那么将管理员或编辑者角色分配给该用户。
-* 如果想要用户查看实例中的证书，那么至少分配读者角色。
+* 如果想要用户查看实例中的证书，那么至少分配读取者角色。
 
 ### 检索证书标识
 {: #get-certificate-id}

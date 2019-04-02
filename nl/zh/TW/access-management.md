@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # 管理服務存取角色
 {: #managing-service-access-roles}
@@ -62,7 +73,7 @@ lastupdated: "2018-11-15"
     <td> 管理員、撰寫者</td>
   </tr>
   <tr>
-    <td>更新憑證資料</td>
+    <td>更新憑證的 meta 資料</td>
     <td> 管理員、撰寫者</td>
   </tr>
   <tr>
@@ -87,7 +98,7 @@ lastupdated: "2018-11-15"
      </tr>
 </table>
 
-如需使用者角色及許可權的相關資訊，請參閱[使用者角色](/docs/iam/users_roles.html#userroles)。
+如需使用者角色及許可權的相關資訊，請參閱[使用者角色](/docs/iam?topic=iam-userroles#userroles)。
 
 ## 配置使用者的存取原則
 {: #configuring-access-policies}
@@ -98,17 +109,17 @@ lastupdated: "2018-11-15"
 若要配置存取原則，請完成下列步驟：
 
 1. 導覽至**管理 > 帳戶 > 使用者**。會顯示能存取您 {{site.data.keyword.Bluemix_notm}} 帳戶的使用者清單。
-2. 按一下要獲指派存取原則的使用者名稱。如果未顯示使用者，請按一下**邀請使用者**，以[將使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶](/docs/iam/iamuserinv.html#iamuserinv)。
+2. 按一下要獲指派存取原則的使用者名稱。如果未顯示使用者，請按一下**邀請使用者**，以[將使用者新增至 {{site.data.keyword.Bluemix_notm}} 帳戶](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 3. 按一下**指派存取權**。
 4. 按一下**指派對資源的存取權**。
 5. 從**服務**功能表，選取 **Certificate Manager**。
 6. 從**服務實例**功能表，選取 {{site.data.keyword.cloudcerts_short}} 實例，或使用預設值`所有實例`。
 7. （選用）配置對特定憑證的存取權：
-    1. [擷取憑證 ID](#get-certificate-id)。
+    1. [擷取憑證 ID](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id)。
     2. 在**資源類型**欄位中，輸入 `certificate`。
     3. 在**資源 ID** 欄位中，輸入憑證 ID。
-8. 指派[平台存取角色](#platform-access-roles)給使用者。
-9. 指派[服務存取角色](#service-access-roles)給使用者。
+8. 指派[平台存取角色](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles)給使用者。
+9. 指派[服務存取角色](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles)給使用者。
 10. 按一下**指派**，以將存取原則指派給使用者。
 
 **角色配置的範例**

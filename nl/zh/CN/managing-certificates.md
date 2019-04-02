@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # 从仪表板管理证书
@@ -26,9 +34,21 @@ lastupdated: "2018-11-15"
 导入证书以便对它们进行管理。
 {: shortdesc}
 
+## 支持的证书格式和公用密钥算法
+{: supported-formats-and-algorithms}
+
+### 证书格式
+* PEM
+
+### 公用密钥算法
+* Rivest-Shamir-Adleman (RSA)
+* 数字签名算法 (DSA)
+* 椭圆曲线数字签名算法 (ECDSA)
+* 使用 Diffie-Hellman 的椭圆曲线密钥协商协议 (ECDH)
+
 **开始之前**
 
-* 使用匹配的专用密钥，创建有效的未到期证书。
+* 使用匹配的专用密钥（密钥为可选），创建有效的未到期证书。
 * 将文件转换为隐私加强电子邮件 (PEM) 格式。
 * 使专用密钥保持未加密状态以确保可以导入该密钥。
 
@@ -36,9 +56,9 @@ lastupdated: "2018-11-15"
 
 1. 输入显示名称。
 2. 单击**浏览**，选择 PEM 格式的证书文件。
-3. 单击**浏览**，选择 PEM 格式的证书专用密钥。
+3. 可选：单击**浏览**，选择 PEM 格式的证书专用密钥。
 4. 如果适用的话，以 PEM 格式提供中间证书文件。
-5. （可选）输入描述。
+5. 可选：输入描述。
 6. 单击**导入**。
 
 导入证书后，以下信息会显示在证书表中。要查看有关证书的更多信息，可以在“证书”表中展开证书所在的行。
@@ -67,33 +87,31 @@ lastupdated: "2018-11-15"
   </tr>
   <tr>
     <td>算法</td>
-    <td>创建证书所使用的加密类型。</td>
+    <td>证书签名算法。</td>
   </tr>
   <tr>
     <td>密钥算法</td>
-    <td>算法所使用的密钥类型和大小。</td>
+    <td>公用密钥算法</td>
   </tr>
   <tr>
     <td>离到期日还有 </td>
     <td>证书到期的剩余天数。</td>
   </tr>
   <tr>
-    <td>签发日期</td>
-    <td>签发证书的日期。</td>
-  </tr>
-  <tr>
     <td>有效开始日期</td>
-    <td>证书开始有效的日期。</td>
+    <td>证书开始有效的日期（采用 UTC 时区）。</td>
   </tr>
   <tr>
     <td>到期日期</td>
-    <td>证书不再有效的日期。</td>
+    <td>证书不再有效的日期（采用 UTC 时区）。</td>
   </tr>
   <tr>
     <td>证书标识</td>
     <td>导入时为证书提供的生成标识。</td>
   </tr>
 </table>
+
+</br>
 
 ## 重新导入证书
 {: #reimport-certificate}
@@ -114,7 +132,7 @@ lastupdated: "2018-11-15"
 6. 单击**重新导入**，然后单击**完成**。
 
 重新导入证书限制为每分钟五个操作。
-{: tip}
+{: note}
 
 ### 下载先前版本的证书
 {: #downloading-certificate}
@@ -168,4 +186,4 @@ lastupdated: "2018-11-15"
 3. 保存更改。
 
 每分钟最多可执行五个更新操作。
-{: tip}
+{: note}

@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # 從儀表板管理憑證
@@ -26,9 +34,21 @@ lastupdated: "2018-11-15"
 匯入憑證以便可以進行管理。
 {: shortdesc}
 
+## 支援的憑證格式及公開金鑰演算法
+{: supported-formats-and-algorithms}
+
+### 憑證格式
+* PEM
+
+### 公開金鑰演算法
+* Rivest-Shamir-Adleman (RSA)
+* 數位簽章演算法 (DSA)
+* 橢圓曲線數位簽章演算法 (ECDSA)
+* 橢圓曲線及 Diffie-Hellman 金鑰協定通訊協定 (ECDH)
+
 **開始之前**
 
-* 使用相符的私密金鑰，建立有效且未到期的憑證。
+* 建立有效、使用相符私密金鑰（金鑰為選用的）的未到期憑證。
 * 將檔案轉換成「隱私權加強電子郵件 (PEM)」格式。
 * 將私密金鑰保持未加密，確保可以將它匯入。
 
@@ -36,9 +56,9 @@ lastupdated: "2018-11-15"
 
 1. 輸入顯示名稱。
 2. 按一下**瀏覽**來選取 PEM 格式的憑證檔案。
-3. 按一下**瀏覽**來選取 PEM 格式的憑證私密金鑰。
+3. 選用項目：按一下**瀏覽**來選取 PEM 格式的憑證私密金鑰。
 4. 適用時，提供 PEM 格式的中繼憑證檔。
-5. （選用）輸入說明。
+5. 選用項目：輸入說明。
 6. 按一下**匯入**。
 
 在您匯入憑證之後，會在「憑證」表格中顯示下列資訊。若要檢視憑證的相關資訊，您可以在「憑證」表格中展開憑證的列。
@@ -67,33 +87,31 @@ lastupdated: "2018-11-15"
   </tr>
   <tr>
     <td>演算法</td>
-    <td>用來建立憑證的加密類型。</td>
+    <td>憑證簽章演算法。</td>
   </tr>
   <tr>
     <td>金鑰演算法</td>
-    <td>演算法所使用的金鑰類型及大小。</td>
+    <td>公開金鑰演算法</td>
   </tr>
   <tr>
     <td>到期於</td>
     <td>憑證不再有效之前的剩餘天數。</td>
   </tr>
   <tr>
-    <td>發出日期</td>
-    <td>發出憑證的日期。</td>
-  </tr>
-  <tr>
     <td>有效起始時間</td>
-    <td>憑證變成有效的日期。</td>
+    <td>憑證生效的日期（UTC 時區）。</td>
   </tr>
   <tr>
     <td>到期日期</td>
-    <td>憑證不再有效的日期。</td>
+    <td>憑證不再有效的日期（UTC 時區）。</td>
   </tr>
   <tr>
     <td>憑證 ID</td>
     <td>匯入時提供給憑證的已產生 ID。</td>
   </tr>
 </table>
+
+</br>
 
 ## 重新匯入憑證
 {: #reimport-certificate}
@@ -114,7 +132,7 @@ lastupdated: "2018-11-15"
 6. 按一下**重新匯入**，然後按一下**完成**。
 
 重新匯入憑證限制為每分鐘只能執行五個動作。
-{: tip}
+{: note}
 
 ### 下載舊版的憑證
 {: #downloading-certificate}
@@ -168,4 +186,4 @@ lastupdated: "2018-11-15"
 3. 儲存變更。
 
 您每分鐘最多可以執行五個更新動作。
-{: tip}
+{: note}

@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,21 +17,26 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
-# Benachrichtigungen für ablaufende Zertifikate konfigurieren
-{: #configuring-notifications-for-expiring-certificates}
+# Benachrichtigungen konfigurieren
+{: #configuring-notifications}
 
-Zertifikate sind normalerweise nur für einen bestimmten Zeitraum gültig. Wenn ein von Ihnen verwendetes Zertifikat abläuft, kommt es möglicherweise zu Ausfallzeiten für Ihre App. Sie können Ausfallzeiten vermeiden, indem Sie {{site.data.keyword.cloudcerts_full}} so konfigurieren, dass Benachrichtigungen für Zertifikate gesendet werden, deren Gültigkeitszeitraum demnächst abläuft, sodass Sie die Zertifikate rechtzeitig verlängern können.
+Zertifikate sind normalerweise nur für einen bestimmten Zeitraum gültig. Wenn ein von Ihnen verwendetes Zertifikat abläuft, kommt es möglicherweise zu Ausfallzeiten für Ihre App. Sie können Ausfallzeiten vermeiden, indem Sie {{site.data.keyword.cloudcerts_full}} so konfigurieren, dass Benachrichtigungen für Zertifikate an Sie gesendet werden, deren Gültigkeitszeitraum demnächst abläuft, sodass Sie die Zertifikate rechtzeitig verlängern können.
+
+Sie werden außerdem benachrichtigt, wenn eine verlängerte Version Ihres Zertifikats für das ablaufende erneut in {{site.data.keyword.cloudcerts_short}} importiert wird, damit Sie wissen, dass es auch für die SSL/TLS-Abschlusspunkte bereitgestellt werden muss. Diese Benachrichtigung zu erneut importierten Zertifikaten wird an Kanäle ausschließlich über [Kanal Version 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) gesendet.
 {: shortdesc}
 
 **Wann werde ich benachrichtigt?**  
 Abhängig vom Ablaufdatum des Zertifikats, das Sie in {{site.data.keyword.cloudcerts_full_notm}} hochgeladen haben, werden Sie 90, 60, 30 und 10 Tage sowie 1 Tag vor dem Ablaufen des Zertifikats benachrichtigt. Darüber hinaus erhalten Sie tägliche Benachrichtigungen zu abgelaufenen Zertifikaten. Die täglichen Benachrichtigungen beginnen am ersten Tag nach dem Ablaufen des Zertifikats.
 
-Sie müssen das Zertifikat verlängern, dieses Zertifikat in {{site.data.keyword.cloudcerts_full_notm}} hochladen und das abgelaufene Zertifikat löschen, damit keine weiteren Benachrichtigungen gesendet werden.
+Sie müssen Ihr Zertifikat verlängern und dieses Zertifikat für das alte erneut in {{site.data.keyword.cloudcerts_full_notm}} importieren, damit keine Benachrichtigungen mehr gesendet werden. Wenn Sie Ihr Zertifikat erneut importieren, erhalten Sie eine Benachrichtigung darüber, dass Ihr Zertifikat erneut importiert wurde, damit Sie es wieder bereitstellen können.
 
 **Welche Optionen zur Konfiguration der Benachrichtigungen stehen zur Verfügung?**  
-Sie können Benachrichtigung an Slack senden, indem Sie einen Slack-Webhook verwenden, oder Sie können eine beliebige Callback-URL verwenden.
+Sie können Benachrichtigungen an Slack senden, indem Sie einen Slack-Webhook verwenden, oder Sie können eine beliebige Callback-URL verwenden.
 
 ## Slack-Webhook einrichten
 {: #setup-callback}
@@ -40,11 +50,10 @@ Führen Sie die folgenden Schritte aus, um einen Slack-Webhook einzurichten:
 ## Callback-URL einrichten
 {: #callback}
 
-Sie können eine Callback-URL verwenden, um Benachrichtigungen an täglich genutzte Tools zu senden und so den Verlängerungsprozess für das Team auszulösen. So können Sie zum Beispiel Benachrichtigungen senden, um Berichte für PagerDuty zu erstellen, automatisch eine Problemmeldung in GitHub zu öffnen oder Verlängerungsscripts auszulösen.  
+Um den Verlängerungsprozess für das Team auszulösen, können Sie eine Callback-URL verwenden, um Benachrichtigungen an die von Ihnen genutzten Tools zu senden. So können Sie zum Beispiel Benachrichtigungen senden, um Berichte für PagerDuty zu erstellen, automatisch eine Problemmeldung in GitHub zu öffnen oder Verlängerungsscripts auszulösen.  
 {: shortdesc}
 
 **Wichtig:** Der Endpunkt der Callback-URL muss die folgenden Anforderungen erfüllen, damit er in {{site.data.keyword.cloudcerts_short}} verwendet werden kann:
-
 * Der Endpunkt muss das HTTPS-Protokoll verwenden.
 * Für den Endpunkt dürfen keine HTTP-Header erforderlich sein. Diese Anforderung schließt Berechtigungsheader ein.
 * Der Endpunkt muss den Statuscode `200 OK` zurückgeben, der eine erfolgreiche Benachrichtigungszustellung angibt.
@@ -52,36 +61,19 @@ Sie können eine Callback-URL verwenden, um Benachrichtigungen an täglich genut
 ### Benachrichtigungsformat
 {: #notification_format}
 
-Bei der Benachrichtigung, die an Ihre Callback-URL gesendet wird, handelt es sich um ein JSON-Dokument im folgenden Format:
+Bei der Benachrichtigung, die an Ihre Callback-URL gesendet wird, handelt es sich um ein JSON-Dokument im folgenden Format, das mit Ihrem asymmetrischen Instanzschlüssel signiert wurde:
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
 {: screen}
 
-Nach dem Decodieren und Verifizieren der Nutzdaten ist der Inhalt eine JSON-Zeichenfolge.
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+Nach dem Decodieren und Verifizieren der Nutzdaten ist der Inhalt eine JSON-Zeichenfolge nach den [Gesetzmäßigkeiten der Kanalversion](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
 ## Benachrichtigungskanal konfigurieren
 {: #adding-channel}
 
-Nach dem Erstellen eines Slack-Webhooks oder einer Callback-URL fügen Sie diesen bzw. diese zu {{site.data.keyword.cloudcerts_short}} hinzu, damit Sie Benachrichtigungen zu ablaufenden Zertifikaten erhalten. {{site.data.keyword.cloudcerts_short}} verschlüsselt den Endpunkt und speichert ihn sicher.
+Nach dem Erstellen eines Slack-Webhooks oder einer Callback-URL fügen Sie diesen bzw. diese zu {{site.data.keyword.cloudcerts_short}} hinzu, damit Sie Benachrichtigungen zu ablaufenden und erneut importierten Zertifikaten erhalten. {{site.data.keyword.cloudcerts_short}} verschlüsselt den Endpunkt und speichert ihn sicher.
 {: shortdesc}
 
 Führen Sie die folgenden Schritte aus, um einen Benachrichtigungskanal hinzuzufügen:
@@ -96,7 +88,7 @@ Führen Sie die folgenden Schritte aus, um einen Benachrichtigungskanal hinzuzuf
    **Beispielausgabe**
 
    <table>
-   <caption>Tabelle 1. Informationen zum Benachrichtigungskanal</caption>
+   <caption>Tabelle 1. Informationen zum Benachrichtigungskanal </caption>
    <thead>
     <th> Komponente </th>
     <th> Beschreibung </th>
@@ -135,7 +127,7 @@ Führen Sie die folgenden Schritte aus, um einen Benachrichtigungskanal hinzuzuf
 Sie können einen Benachrichtigungskanal testen, um sicherzustellen, dass er korrekt konfiguriert ist.
 {: shortdesc}
 
-Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](#adding-channel).
+Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 Führen Sie die folgenden Schritte aus, um einen Benachrichtigungskanal zu testen:
 
@@ -144,12 +136,12 @@ Führen Sie die folgenden Schritte aus, um einen Benachrichtigungskanal zu teste
 3. Vergewissern Sie sich, dass Sie im konfigurierten Kanal eine Benachrichtigung erhalten haben.
 
 ## Benachrichtigungskanal aktualisieren
-{: updating-channel}
+{: #updating-channel}
 
 Sie können die Benachrichtigungskanalkonfiguration aktualisieren, Benachrichtigungen aktivieren oder inaktivieren oder Benachrichtigungskanäle aus {{site.data.keyword.cloudcerts_short}} löschen.
 {: shortdesc}
 
-Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](#adding-channel).
+Zuerst müssen Sie [einen Benachrichtigungskanal konfigurieren](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 Führen Sie die folgenden Schritte aus, um den Benachrichtigungskanal zu aktualisieren:
 
@@ -173,6 +165,19 @@ Führen Sie die folgenden Schritte aus, um den öffentlichen Schlüssel herunter
 1. Klicken Sie im Navigationsbereich der Servicedetailseite auf **Einstellungen**.
 2. Öffnen Sie die Registerkarte **Benachrichtigungen**.
 3. Klicken Sie auf die Schaltfläche **Schlüssel herunterladen**. Der Schlüssel wird als PEM-Datei heruntergeladen.
+
+## Kanalversionen
+{: #channel-versions}
+
+Certificate Manager wird immer weiterentwickelt und so wird das Format der Nutzdatenstruktur für Benachrichtigungen möglicherweise von Zeit zu Zeit geändert. Für die Abwärtskompatibilität werden die an Ihre vorhandenen Kanäle gesendeten Nutzdaten nicht geändert.   
+
+Gehen Sie wie folgt vor, wenn Sie über bereits vorhandene Benachrichtigungskanäle (Slack oder Callback-URL) verfügen und die neue Version der Nutzdaten abrufen möchten:
+1. Stellen Sie bei der Callback-URL sicher, dass Ihre Implementierung die neuen Nutzdaten akzeptieren kann.
+2. Erstellen Sie einen neuen Benachrichtigungskanal (neue Kanäle werden immer mit der aktuellen Kanalversion erstellt).
+3. Testen Sie, ob der neue Kanal ordnungsgemäß funktioniert.
+4. Löschen Sie den alten Kanal.
+
+Informationen zu den Kanalversionen finden Sie in der [API-Dokumentation](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions).
 
 ## Beispiele
 {: #examples}

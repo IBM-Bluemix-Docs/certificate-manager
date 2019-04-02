@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,12 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+
+
 # {{site.data.keyword.cloudcerts_short}} の概要
 {: #about-certificate-manager}
 
@@ -48,27 +57,28 @@ lastupdated: "2018-11-15"
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Kubernetes クラスターのカスタム・ドメイン証明書を {{site.data.keyword.cloudcerts_short}} に保管し、それを {{site.data.keyword.cloud_notm}} CLI の [Kubernetes サービス・プラグイン・コマンド](/docs/containers/cs_cli_reference.html)を使用してデプロイします。[この統合の詳細はこちら ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/)を参照してください。</td>
+    <td>カスタム・ドメイン TLS 証明書を {{site.data.keyword.cloudcerts_short}} から Kubernetes クラスターに簡単かつ安全にデプロイできます。クラスター管理者は [Kubernetes サービス・プラグイン・コマンド](/docs/containers?topic=containers-cs_cli_reference)を使用して、ダウン時間を発生させることなく TLS 証明書を Kubernetes secret として新しい証明書で更新することができます。開始するには、
+[ドキュメンテーションの入口コメント](/docs/containers?topic=containers-ingress_annotation#https-auth)をチェックアウトします。</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>{{site.data.keyword.security-advisor_short}} は、{{site.data.keyword.cloud_notm}} サービスに関する情報を一元化します。これには、{{site.data.keyword.cloud_notm}} アカウント内の {{site.data.keyword.cloudcerts_short}} のインスタンスで期限切れになった証明書と有効期限が近づいた証明書についての情報が含まれます。[{{site.data.keyword.security-advisor_short}} の詳細はこちら](/docs/services/security-advisor/index.html#index)を参照してください。</td>
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index) は、{{site.data.keyword.cloud_notm}} サービスに関する情報を一元化します。 これには、{{site.data.keyword.cloud_notm}} アカウント内の {{site.data.keyword.cloudcerts_short}} のインスタンスで期限切れになった証明書と有効期限が近づいた証明書についての情報が含まれます。 [{{site.data.keyword.security-advisor_short}}の詳細はこちら](/docs/services/security-advisor?topic=security-advisor-index#index)を参照してください。</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>ユーザーおよびアプリケーションが {{site.data.keyword.cloud_notm}} 内の {{site.data.keyword.cloudcerts_long_notm}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull_notm}} サービスを使用してトラッキングします。 [{{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla) についての詳細。
-    <p>イベントを生成するアクションのリストを取得するには、[{{site.data.keyword.cloudaccesstrailshort}} イベント](/docs/services/certificate-manager/at_events.html#at_events)を参照してください。</p></td>
+    <td>[{{site.data.keyword.cloudaccesstrailfull_notm}} サービス](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)を使用して、{{site.data.keyword.cloud_notm}} でユーザーとアプリケーションが {{site.data.keyword.cloudcerts_long_notm}} サービスと対話する方法を追跡できます。[{{site.data.keyword.cloudaccesstrailshort}}の詳細はこちら](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)を参照してください。
+    <p>イベントを生成するアクションのリストを取得するには、[{{site.data.keyword.cloudaccesstrailshort}} イベント](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events)を参照してください。</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>カスタム・ドメイン証明書を {{site.data.keyword.cloudcerts_short}} サービスに保管し、証明書 CRN を使用して {{site.data.keyword.apiconnect_short}} のカスタム・ドメインにバインドします。[{{site.data.keyword.apiconnect_short}} の詳細はこちら](/docs/api-management/index.html#index)を参照してください。</p></td>
+    <td>カスタム・ドメイン証明書を {{site.data.keyword.cloudcerts_short}} サービスに保管し、証明書 CRN を使用して {{site.data.keyword.apiconnect_short}} のカスタム・ドメインにバインドします。 [{{site.data.keyword.apiconnect_short}} の詳細はこちら](/docs/services/apiconnect?topic=apiconnect-index)を参照してください。</p></td>
   </tr>
 </table>
 
 ## ロケーション
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} は、ダラスとロンドンのロケーションで使用可能です。
+{{site.data.keyword.cloudcerts_short}} は、ダラス、ロンドン、フランクフルト、東京のロケーションで使用可能です。
 
 
 

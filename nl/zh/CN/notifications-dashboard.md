@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,17 +17,22 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
-# 配置证书到期通知
-{: #configuring-notifications-for-expiring-certificates}
+# 配置通知
+{: #configuring-notifications}
 
-证书通常仅在设置的时间内有效。使用的证书到期时，可能会遇到应用程序停机时间。为了避免产生停机时间，可以配置 {{site.data.keyword.cloudcerts_full}} 以发送有关即将到期的证书的通知，以便您可以按时更新证书。
+证书通常仅在设置的时间内有效。使用的证书到期时，可能会遇到应用程序停机时间。为避免产生停机时间，您可以配置 {{site.data.keyword.cloudcerts_full}} 以发送有关证书即将到期的通知，以便提醒您按时更新证书。
+
+在将更新版本的证书重新导入到 {{site.data.keyword.cloudcerts_short}} 以代替即将到期的证书时，您也将收到提醒，以便您记住也将其部署到 SSL/TLS 终止点。有关重新导入的证书的此通知仅将发送到 [通道 V2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) 中的通道。
 {: shortdesc}
 
 **何时会收到通知？**   根据上传到 {{site.data.keyword.cloudcerts_full_notm}} 的证书的到期日期，您会在证书到期前 90 天、60 天、30 天、10 天、1 天收到通知。此外，从证书到期的第一天开始，您每天还会收到有关证书到期的通知。
 
-您必须更新证书，将此证书上传到 {{site.data.keyword.cloudcerts_full_notm}}，并删除到期的证书后，才会停止继续发送通知。
+您必须更新证书并将用于替换旧证书的此证书重新导入到 {{site.data.keyword.cloudcerts_full_notm}}，以停止发送通知。在重新导入证书时，您将收到重新导入证书的通知以提醒您重新部署证书。
 
 **有哪些通知配置选项？**  您可以使用 Slack Webhook 或使用您喜欢的任何回调 URL 向 Slack 发送通知。
 
@@ -38,11 +48,10 @@ lastupdated: "2018-11-15"
 ## 设置回调 URL
 {: #callback}
 
-您可能希望使用回调 URL 将通知发布到每天使用的工具，以触发团队的更新过程。例如，您可以发送通知向 PagerDuty 报告，在 GitHub 中自动创建问题，也可以触发更新脚本。  
+要触发团队的更新过程，您可以使用回调 URL 以将通知发布到使用的工具。例如，您可以发送通知向 PagerDuty 报告，在 GitHub 中自动创建问题，也可以触发更新脚本。  
 {: shortdesc}
 
 **重要信息：**回调 URL 端点必须满足以下需求才能用于 {{site.data.keyword.cloudcerts_short}}：
-
 * 端点必须使用 HTTPS 协议。
 * 端点不能需要 HTTP 头。此需求包括 Authorization 头。
 * 端点必须返回 `200 OK` 状态码来指示已成功传递通知。
@@ -50,36 +59,19 @@ lastupdated: "2018-11-15"
 ### 通知格式
 {: #notification_format}
 
-发送到回调 URL 的通知是以下格式的 JSON 文档：
+发送到回调 URL 的通知是使用以下格式的实例非对称密钥签名的 JSON 文档。
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
 {: screen}
 
-在解码和验证有效内容后，内容为 JSON 字符串。
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+在解码和验证有效内容后，内容为[根据通道版本的](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) JSON 字符串。
 
 ## 配置通知通道
 {: #adding-channel}
 
-创建 Slack Webhook 或回调 URL 后，将其添加到 {{site.data.keyword.cloudcerts_short}} 以开始接收有关证书到期的通知。{{site.data.keyword.cloudcerts_short}} 会加密端点并对其进行安全存储。
+创建 Slack Webhook 或回调 URL 后，将其添加到 {{site.data.keyword.cloudcerts_short}} 以开始接收有关证书到期和已重新导入证书的通知。{{site.data.keyword.cloudcerts_short}} 会加密端点并对其进行安全存储。
 {: shortdesc}
 
 要添加通知通道，请完成以下步骤：
@@ -133,7 +125,7 @@ lastupdated: "2018-11-15"
 您可以测试通知通道，以确保正确配置通知通道。
 {: shortdesc}
 
-开始之前，请[配置通知通道](#adding-channel)。
+开始之前，请[配置通知通道](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel)。
 
 要测试通知通道，请完成以下步骤：
 
@@ -142,12 +134,12 @@ lastupdated: "2018-11-15"
 3. 验证是否在已配置的通道中收到通知。
 
 ## 更新通知通道
-{: updating-channel}
+{: #updating-channel}
 
 您可以更新通知通道配置，禁用或启用通知，或从 {{site.data.keyword.cloudcerts_short}} 中删除通知通道。
 {: shortdesc}
 
-开始之前，请[配置通知通道](#adding-channel)。
+开始之前，请[配置通知通道](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel)。
 
 要更新通知通道，请完成以下步骤：
 
@@ -171,6 +163,19 @@ lastupdated: "2018-11-15"
 1. 在“服务详细信息”页面上的导航中，单击**设置**。
 2. 打开**通知**选项卡。
 3. 单击**下载密钥**按钮。密钥将下载为 PEM 文件。
+
+## 通道版本
+{: #channel-versions}
+
+随着 Certificate Manager 的发展，我们可能会不时修改通知有效内容结构的格式。为确保向后兼容性，发送到现有通道的有效内容将不会进行更改。   
+
+如果已有现有通知通道（Slack 或回调 URL），那么要开始获取新版本的有效内容：
+1. 对于回调 URL，确保实施可接受新的有效内容。
+2. 创建新通知通道（新通道始终使用最新通道版本进行创建）。
+3. 测试新通道是否正常运行。
+4. 删除旧通道。
+
+有关通道版本，请检查 [API 文档](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions)。
 
 ## 示例
 {: #examples}

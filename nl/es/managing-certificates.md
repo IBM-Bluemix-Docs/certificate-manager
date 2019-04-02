@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Gestión de certificados desde el panel de control
@@ -26,9 +34,21 @@ Puede utilizar el panel de control del servicio {{site.data.keyword.cloudcerts_f
 Importe sus certificados para poderlos gestionar.
 {: shortdesc}
 
+## Formatos de certificado y algoritmos de claves públicas soportados
+{: supported-formats-and-algorithms}
+
+### Formatos de certificado
+* PEM
+
+### Algoritmos de claves públicas
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA)
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Protocolo de establecimiento de claves Elliptic Curve Diffie-Hellman (ECDH)
+
 **Antes de empezar**
 
-* Cree un certificado válido no caducado con una clave privada coincidente.
+* Cree un certificado válido no caducado con una clave privada coincidente (la clave es opcional).
 * Convierta los archivos a formato PEM (Privacy-enhanced Electronic Mail).
 * Mantenga la clave privada no cifrada para asegurarse de que se pueda importar.
 
@@ -36,9 +56,9 @@ Para importar un certificado, pulse **Importar certificado** y proporcione los d
 
 1. Especifique un nombre de visualización.
 2. Para seleccionar el archivo de certificado en formato PEM, pulse **Examinar**.
-3. Para seleccionar la clave privada del certificado en formato PEM, pulse **Examinar**.
+3. Opcional: Para seleccionar la clave privada del certificado en formato PEM, pulse **Examinar**.
 4. Si es aplicable, proporcione el archivo de certificado intermedio en formato PEM.
-5. (Opcional) Especifique una descripción.
+5. Opcional: Escriba una descripción.
 6. Pulse **Importar**.
 
 Tras importar un certificado, se mostrará la información siguiente en la tabla Certificados. Para ver más información sobre el certificado, puede ampliar la fila del certificado en la tabla Certificados.
@@ -67,33 +87,31 @@ Tras importar un certificado, se mostrará la información siguiente en la tabla
   </tr>
   <tr>
     <td>Algoritmo</td>
-    <td>El tipo de cifrado por el que se ha creado el certificado. </td>
+    <td>El algoritmo de firma de certificado.</td>
   </tr>
   <tr>
     <td>Algoritmo de clave</td>
-    <td>El tipo y el tamaño de la clave que utiliza el algoritmo. </td>
-  </tr>
-  <tr>
-    <td>Caduca en </td>
-    <td>El número de días restantes antes de que el certificado no sea válido. </td>
-  </tr>
-  <tr>
-    <td>Fecha de emisión</td>
-    <td>La fecha en la que se ha emitido el certificado. </td>
-  </tr>
-  <tr>
-    <td>Válido a partir de</td>
-    <td>La fecha en la que el certificado pasará a ser válido. </td>
+    <td>El algoritmo de clave pública</td>
   </tr>
   <tr>
     <td>Caduca en</td>
-    <td>La fecha en la que el certificado ya no será válido. </td>
+    <td>El número de días restantes antes de que el certificado no sea válido. </td>
+  </tr>
+  <tr>
+    <td>Válido a partir de</td>
+    <td>La fecha en la que el certificado pasará a ser válido (en huso horario UTC). </td>
+  </tr>
+  <tr>
+    <td>Caduca en</td>
+    <td>La fecha en la que el certificado ya no será válido (en huso horario UTC). </td>
   </tr>
   <tr>
     <td>ID de certificado</td>
-    <td>El ID generado que se da al certificado al importar. </td>
+    <td>El ID generado que se da al certificado al importar.</td>
   </tr>
 </table>
+
+</br>
 
 ## Reimportación de un certificado
 {: #reimport-certificate}
@@ -114,7 +132,7 @@ Para volver a importar un certificado, siga los pasos siguientes:
 6. Pulse **Volver a importar** y luego **Terminado**.
 
 La reimportación de certificados está limitada a cinco acciones por minuto.
-{: tip}
+{: note}
 
 ### Descarga de una versión anterior de un certificado
 {: #downloading-certificate}
@@ -168,4 +186,4 @@ Para actualizar un certificado, siga los pasos siguientes:
 3. Guarde los cambios.
 
 Puede realizar un máximo de cinco acciones de actualización por minuto.
-{: tip}
+{: note}

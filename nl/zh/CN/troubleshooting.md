@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,13 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # 故障诊断
 {: #troubleshooting}
@@ -34,11 +44,9 @@ lastupdated: "2018-11-15"
 您还可以开具支持凭单。
 
 
-当您使用论坛来问问题时，请对您的问题进行标记，以便 {{site.data.keyword.cloudcerts_full_notm}} 开发团队进行查看。
+当您使用论坛来提问时，请确保对您的问题进行标记，以便 {{site.data.keyword.cloudcerts_full_notm}} 开发团队可以看到您的问题。
 
 - 有关服务的技术问题，请在 [Stack Overflow ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) 上发布问题，并使用 `ibm-cloud` 和 `ibm-certificate-manager` 来标记问题。  
 - 有关服务和入门指示信息的问题，请在 [dW Answers ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud) 上发布问题。请加上 `ibm-certificate-manager` 和 `ibm-cloud` 标记。
 
-有关如何使用论坛的更多信息，请参阅[如何获取所需的支持？](/docs/get-support/howtogetsupport.html#getting-customer-support)
-
-有关开具 {{site.data.keyword.IBM_notm}} 支持凭单或有关支持级别和凭单严重性的更多信息，请参阅[客户支持过程的运作方式](/docs/get-support/getstarttssup.html)。
+有关开具支持凭单或支持级别和凭单严重性的更多信息，请参阅[如何获取所需的支持？](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)

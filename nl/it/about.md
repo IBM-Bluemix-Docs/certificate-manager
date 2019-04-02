@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,12 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+
+
 # Informazioni su {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
@@ -26,11 +35,11 @@ Puoi gestire i tuoi certificati nei seguenti modi:
 
 * Ricevi una notifica prima della scadenza dei certificati per assicurarti di rinnovarli in tempo
 * Visualizza i tipi di certificati nelle tue distribuzioni e assicurati che soddisfino le politiche dell'organizzazione
-* Trova i certificati che devono essere sostituiti quando vengono emessi nuovi requisiti di sicurezza o conformità
+* Trova i certificati che devono devono essere sostituiti quando vengono emessi nuovi requisiti di sicurezza o conformità
 * Configura i controlli su chi può accedere e gestire i tuoi certificati
 
 ![Diagramma dell'architettura del servizio di alto livello](images/high-level-architecture.png)
-<caption>Figura 1. Architettura del servizio di alto livello </caption>
+<caption>Figura 1. Architettura del servizio di alto livello</caption>
 
 ## Sicurezza chiave privata
 {: #private-key-security}
@@ -48,27 +57,27 @@ Quando importi un certificato e la rispettiva chiave privata in {{site.data.keyw
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Archivia i tuoi certificati del dominio personalizzato del cluster Kubernetes nel {{site.data.keyword.cloudcerts_short}}, poi distribuiscili utilizzando i [comandi del plugin del servizio Kubernetes](/docs/containers/cs_cli_reference.html) della CLI {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su questa integrazione ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/01/use-ibm-cloud-certificate-manager-ibm-cloud-container-service-deploy-custom-domain-tls-certificates/).</td>
+    <td>Puoi distribuire in modo facile e sicuro i certificati TLS del dominio personalizzati da {{site.data.keyword.cloudcerts_short}} nel tuo cluster Kubernetes. Gli amministratori del cluster possono utilizzare i [comandi del plug-in del servizio IBM Cloud Kubernetes](/docs/containers?topic=containers-cs_cli_reference) per aggiornare i certificati TLS come segreti Kubernetes con un nuovo certificato senza provocare tempi di inattività. Per iniziare, consulta le [annotazioni Ingress nella documentazione](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>{{site.data.keyword.security-advisor_short}} centralizza le informazioni sui servizi {{site.data.keyword.cloud_notm}}. Le informazioni includono l'indicazione dei certificati scaduti e dei certificati che stanno per scadere in istanze del {{site.data.keyword.cloudcerts_short}} nel tuo account {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor/index.html#index).</td>
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index) centralizza le informazioni sui servizi {{site.data.keyword.cloud_notm}}. Le informazioni includono l'indicazione dei certificati scaduti e dei certificati che stanno per scadere in istanze del {{site.data.keyword.cloudcerts_short}} nel tuo account {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index#index).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>Utilizza il servizio {{site.data.keyword.cloudaccesstrailfull_notm}} per tracciare il modo in cui gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.cloudcerts_long_notm}} in {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker/index.html#getting-started-with-cla).
-    <p>Per ottenere l'elenco delle azioni che generano un evento, vedi [Eventi di {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager/at_events.html#at_events).</p></td>
+    <td>Puoi utilizzare [il servizio {{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started) per tracciare il modo in cui gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.cloudcerts_long_notm}} in {{site.data.keyword.cloud_notm}}. [Ulteriori informazioni su {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
+    <p>Per ottenere l'elenco delle azioni che generano un evento, vedi [Eventi di {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>Archivia i tuoi certificati del dominio personalizzati nel servizio {{site.data.keyword.cloudcerts_short}}, quindi utilizza i CRN del certificato per eseguire il bind a domini personalizzati in {{site.data.keyword.apiconnect_short}}. [Ulteriori informazioni su {{site.data.keyword.apiconnect_short}}](/docs/api-management/index.html#index).</p></td>
+    <td>Archivia i tuoi certificati del dominio personalizzati nel servizio {{site.data.keyword.cloudcerts_short}}, quindi utilizza i CRN del certificato per eseguire il bind a domini personalizzati in {{site.data.keyword.apiconnect_short}}. [Ulteriori informazioni su {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index).</p></td>
   </tr>
 </table>
 
 ## Località
 {: #availability}
 
-Il {{site.data.keyword.cloudcerts_short}} è disponibile nelle località di Dallas e Londra.
+{{site.data.keyword.cloudcerts_short}} è disponibile nelle località di Dallas, Londra, Francoforte e Tokyo. 
 
 
 

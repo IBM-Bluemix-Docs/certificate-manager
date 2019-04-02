@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Gestione dei certificati dal dashboard
@@ -26,9 +34,21 @@ Puoi utilizzare il dashboard del servizio {{site.data.keyword.cloudcerts_full}} 
 Importa i tuoi certificati in modo da poterli gestire.
 {: shortdesc}
 
+## Formati dei certificati e algoritmi chiave pubblica supportati
+{: supported-formats-and-algorithms}
+
+### Formati dei certificati
+* PEM
+
+### Algoritmi chiave pubblica
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA)
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Elliptic Curve with Diffie-Hellman key agreement protocol (ECDH)
+
 **Prima di iniziare**
 
-* Crea un certificato non scaduto e valido con un chiave privata corrispondente.
+* Crea un certificato non scaduto e valido con una chiave privata corrispondente (la chiave è facoltativa).
 * Converti i file nel formato Privacy-enhanced Electronic Mail (PEM).
 * Lascia la chiave privata non codificata per assicurarti che possa essere importata.
 
@@ -36,9 +56,9 @@ Per importare un certificato, fai clic su **Importa certificato** e fornisci i s
 
 1. Immetti un nome di visualizzazione
 2. Seleziona il file del certificato in formato PEM facendo clic su **Browse**.
-3. Seleziona la chiave privata del certificato in formato PEM facendo clic su **Browse**.
+3. Facoltativo: seleziona la chiave privata del certificato nel formato PEM facendo clic su **Browse**.
 4. Se applicabile, fornisci il file del certificato intermedio nel formato PEM.
-5. (Facoltativo) Immetti una descrizione.
+5. Facoltativo: immetti una descrizione.
 6. Fai clic su **Importa**.
 
 Dopo aver importato un certificato, vengono visualizzate le seguenti informazioni nella tabella Certificati. Per visualizzare ulteriori informazioni sul certificato, puoi espandere la riga del certificato nella tabella Certificati.
@@ -67,33 +87,31 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
   <tr>
     <td>Algoritmo</td>
-    <td>Il tipo di crittografia da cui il certificato viene creato. </td>
+    <td>L'algoritmo della firma del certificato</td>
   </tr>
   <tr>
     <td>Algoritmo chiave</td>
-    <td>La dimensione e il tipo di chiave utilizzati dall'algoritmo. </td>
+    <td>L'algoritmo chiave pubblica</td>
   </tr>
   <tr>
-    <td>Scade in </td>
+    <td>Scade in</td>
     <td>Il numero di giorni rimanenti prima che il certificato non sia più valido. </td>
   </tr>
   <tr>
-    <td>Data di emissione</td>
-    <td>La data in cui è stato emesso il certificato. </td>
-  </tr>
-  <tr>
     <td>Valido da</td>
-    <td>La data in cui il certificato diventa valido. </td>
+    <td>La data in cui il certificato diventa valido (nel fuso orario UTC). </td>
   </tr>
   <tr>
     <td>Scade il</td>
-    <td>La data da cui il certificato non è più valido. </td>
+    <td>La data da cui il certificato non è più valido (nel fuso orario UTC). </td>
   </tr>
   <tr>
     <td>ID certificato</td>
-    <td>L'ID generato fornito al certificato all'importazione. </td>
+    <td>L'ID generato fornito al certificato all'importazione.</td>
   </tr>
 </table>
+
+</br>
 
 ## Reimportazione di un certificato
 {: #reimport-certificate}
@@ -114,7 +132,7 @@ Per reimportare un certificato, completa la seguente procedura:
 6. Fai clic su **Reimport** e quindi su **Done**.
 
 La reimportazione dei certificati è limitata a cinque azioni al minuto.
-{: tip}
+{: note}
 
 ### Download di una versione precedente del tuo certificato
 {: #downloading-certificate}
@@ -168,4 +186,4 @@ Per aggiornare un certificato, completa la seguente procedura:
 3. Salva le tue modifiche.
 
 Puoi eseguire fino a cinque azioni di aggiornamento al minuto.
-{: tip}
+{: note}

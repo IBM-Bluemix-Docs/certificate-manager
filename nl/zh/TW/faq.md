@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018,
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:faq: data-hd-content-type='faq'}
 
@@ -22,11 +29,23 @@ lastupdated: "2018-11-15"
 關於 {{site.data.keyword.cloudcerts_long}} 的常見問題。
 {: shortdesc}
 
-## 我可以在 {{site.data.keyword.cloudcerts_short}} 中儲存什麼類型的憑證？
+## 我的憑證需要使用何種格式？
 {: #supported-certificate-types}
 {: faq}
 
 {{site.data.keyword.cloudcerts_short}} 只支援 PEM 格式化憑證。
+
+## 支援哪些類型的公開金鑰演算法？
+{: #supported-pk-algorithms}
+{: faq}
+
+{{site.data.keyword.cloudcerts_short}} 支援的憑證，公開金鑰需使用下列公開金鑰演算法產生：
+
+* Rivest-Shamir-Adleman (RSA)
+* 數位簽章演算法 (DSA)
+* 橢圓曲線數位簽章演算法 (ECDSA)
+* 橢圓曲線及 Diffie-Hellman 金鑰協定通訊協定 (ECDH)
+
 
 ## 可以上傳受密碼保護的私密金鑰嗎？
 {: #password-protected-private-keys}
@@ -64,10 +83,10 @@ lastupdated: "2018-11-15"
 {: #certificate-versioning}
 {: faq}
 
-您可以藉由重新匯入新版憑證來更新憑證，此新版憑證具有與現有憑證相同的網域，但具有新的到期日。重新匯入憑證時，憑證的現有版本會保留作為備份，請參閱[重新匯入憑證](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate)。
+您可以藉由重新匯入新版憑證來更新憑證，此新版憑證具有與現有憑證相同的網域，但具有新的到期日。重新匯入憑證時，憑證的現有版本會保留作為備份，請參閱[重新匯入憑證](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate)。
 
 ## 可以只讓特定使用者看到特定憑證嗎？
 {: #access-policies}
 {: faq}
 
-可以使用 IAM 存取原則來保護憑證，以達到精細的存取控制。請參閱[管理服務存取角色](access-management.html)。
+可以使用 IAM 存取原則來保護憑證，以達到精細的存取控制。請參閱[管理服務存取角色](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles)。

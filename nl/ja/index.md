@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # {{site.data.keyword.cloudcerts_short}} の開始
 {: #gettingstarted}
@@ -24,4 +35,4 @@ lastupdated: "2018-11-15"
 3. **「作成」**をクリックします。
 4. 組織の証明書を {{site.data.keyword.cloudcerts_short}} にインポートするには、**「証明書のインポート (Import Certificate)」**をクリックします。  
 
-{{site.data.keyword.cloudcerts_short}} によって可能な内容についての[詳細](about.html)を確認すること、さらに、開発段階にある {{site.data.keyword.cloudcerts_short}} を強化するために、[{{site.data.keyword.IBM_notm}} Developer でユーザー・フィードバックを提供する](troubleshooting.html#getting-help-and-support)こともできます。サービスで変更された内容を確認するには、[リリース・ノート](release-notes.html)を参照してください。
+{{site.data.keyword.cloudcerts_short}} によって可能な内容についての[詳細](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager)を確認すること、さらに、開発段階にある {{site.data.keyword.cloudcerts_short}} を強化するために、[{{site.data.keyword.IBM_notm}} Developer でユーザー・フィードバックを提供する](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support)こともできます。サービスで変更された内容を確認するには、[リリース・ノート](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes)を参照してください。

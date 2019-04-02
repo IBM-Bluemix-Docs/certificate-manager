@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018,
-lastupdated: "2018-11-16"
+  years: 2017, 2019
+lastupdated: "2019-03-13"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-16"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # 高可用性と災害復旧
@@ -22,4 +29,4 @@ lastupdated: "2018-11-16"
 {: shortdesc}
 
 * {{site.data.keyword.cloudcerts_short}} サービスは、高可用性の地域のサービスです。 サポートされている各ロケーションでは、単一障害点のない複数のアベイラビリティー・ゾーンにサービスが存在します。
-* {{site.data.keyword.cloudcerts_short}} データベースに保管されているデータは、毎日バックアップされます。ロケーションの復旧が必要な場合は、データをリストアすることができます。
+* {{site.data.keyword.cloudcerts_short}} データベースに保管されているデータは、毎日バックアップされます。 ロケーションの復旧が必要な場合は、データをリストアすることができます。

@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,18 +17,23 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
-# 証明書の有効期限に関する通知の構成
-{: #configuring-notifications-for-expiring-certificates}
+# 通知の構成
+{: #configuring-notifications}
 
-証明書は通常、一定の時間だけ有効です。 使用する証明書の有効期限が切れると、アプリのダウン時間が発生することがあります。 ダウン時間を回避するために、期限切れになりそうな証明書に関する通知を送信するように {{site.data.keyword.cloudcerts_full}} を構成して、期限前に証明書を更新できるようにします。
+証明書は通常、一定の時間だけ有効です。 使用する証明書の有効期限が切れると、アプリのダウン時間が発生することがあります。 ダウン時間を回避するために、期限切れになりそうな証明書に関する通知を送信するように {{site.data.keyword.cloudcerts_full}} を構成して、期限前に証明書を更新するよう思い出させるようにします。
+
+期限切れになる証明書の代わりに、更新されたバージョンの証明書が {{site.data.keyword.cloudcerts_short}} に再インポートされる際にもアラートが出るので、その証明書を SSL/TLS 終端点にデプロイすることを思い出すこともできます。再インポートされた証明書に関するこの通知は、[チャネル・バージョン 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) からチャネルにのみ送信されます。
 {: shortdesc}
 
 **いつ通知されますか?**  
-{{site.data.keyword.cloudcerts_full_notm}} にアップロードした証明書の有効期限に応じて、証明書の有効期限が切れる 90 日前、60 日前、30 日前、10 日前、1 日前に、通知を受け取ります。 さらに、期限切れの証明書に関する通知を毎日受け取ります。毎日の通知は、証明書の有効期限が切れた次の日から始まります。
+{{site.data.keyword.cloudcerts_full_notm}} にアップロードした証明書の有効期限に応じて、証明書の有効期限が切れる 90 日前、60 日前、30 日前、10 日前、1 日前に、通知を受け取ります。 さらに、期限切れの証明書に関する通知を毎日受け取ります。 毎日の通知は、証明書の有効期限が切れた次の日から始まります。
 
-証明書を更新し、この証明書を {{site.data.keyword.cloudcerts_full_notm}} にアップロードし、期限切れの証明書を削除して、通知の送信が継続されないようにする必要があります。
+証明書を更新し、古い証明書の代わりにこの証明書を  {{site.data.keyword.cloudcerts_full_notm}} に再インポートして、通知が送信されないようにします。証明書を再インポートすると、証明書が再インポートされたことの通知が送信され、再デプロイするように思い出させてくれます。
 
 **通知の構成に使用できるオプションは何ですか?**  
 Slack Web フックを使用して Slack に通知を送信するか、任意のコールバック URL を使用できます。
@@ -40,11 +50,10 @@ Slack Web フックをセットアップするには、以下のステップを�
 ## コールバック URL のセットアップ
 {: #callback}
 
-チームの更新プロセスのきっかけにするために、コールバック URL を使用して、毎日使用するツールに通知されるようにすることができます。 例えば、レポートする通知を PagerDuty に送信したり、GitHub で自動的に問題を開いたり、更新スクリプトをトリガーしたりできます。  
+チームの更新プロセスのきっかけにするために、コールバック URL を使用して、使用するツールに通知されるようにすることができます。例えば、レポートする通知を PagerDuty に送信したり、GitHub で自動的に問題を開いたり、更新スクリプトをトリガーしたりできます。  
 {: shortdesc}
 
 **重要:** コールバック URL エンドポイントは、{{site.data.keyword.cloudcerts_short}} で使用するために以下の要件を満たす必要があります。
-
 * エンドポイントは HTTPS プロトコルを使用する必要がある。
 * エンドポイントは HTTP ヘッダーを必要としない。 この要件には許可ヘッダーが含まれます。
 * エンドポイントは、通知配信が正常に終了したことを示す `200 OK` 状況コードを返す必要があります。
@@ -52,36 +61,19 @@ Slack Web フックをセットアップするには、以下のステップを�
 ### 通知形式
 {: #notification_format}
 
-コールバック URL に送信される通知は、以下の形式の JSON 文書 です。
+コールバック URL に送信される通知は、インスタンス非対称鍵で署名された以下の形式の JSON 文書 です。
 
 ```
 { "data":"<JWT FORMAT STRING>" }
 ```
 {: screen}
 
-ペイロードをデコードして確認した後のコンテンツは JSON 文字列です。
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-}
-```
-{: screen}
+ペイロードをデコードして確認した後のコンテンツは、[チャネル・バージョンによる](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) JSON 文字列です。
 
 ## 通知チャネルの構成
 {: #adding-channel}
 
-Slack Web フックまたはコールバック URL を作成した後、それを {{site.data.keyword.cloudcerts_short}} に追加して証明書の有効期限についての通知の受信を開始します。 {{site.data.keyword.cloudcerts_short}} は、エンドポイントを暗号化し、安全に保管します。
+Slack Web フックまたはコールバック URL を作成した後、それを {{site.data.keyword.cloudcerts_short}} に追加して有効期限が切れる証明書と再インポートされた証明書についての通知の受信を開始します。{{site.data.keyword.cloudcerts_short}} は、エンドポイントを暗号化し、安全に保管します。
 {: shortdesc}
 
 通知チャネルを追加するには、以下のステップを実行します。
@@ -96,7 +88,7 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
    **出力例**
 
    <table>
-   <caption>表 1. 通知チャネルに関する情報</caption>
+   <caption>表 1. 通知チャネルに関する情報 </caption>
    <thead>
     <th> コンポーネント </th>
     <th> 説明 </th>
@@ -135,7 +127,7 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 通知チャネルをテストして、通知チャネルが正しく構成されていることを確認できます。
 {: shortdesc}
 
-始める前に、[通知チャネルを構成します](#adding-channel)。
+始める前に、[通知チャネルを構成します](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel)。
 
 通知チャネルをテストするには、以下のステップを実行します。
 
@@ -144,12 +136,12 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 3. 構成したチャネルで通知を受信したことを確認します。
 
 ## 通知チャネルの更新
-{: updating-channel}
+{: #updating-channel}
 
 通知チャネルの構成の更新、通知の無効化または有効化、または {{site.data.keyword.cloudcerts_short}} からの通知チャネルの削除を行うことができます。
 {: shortdesc}
 
-始める前に、[通知チャネルを構成します](#adding-channel)。
+始める前に、[通知チャネルを構成します](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel)。
 
 通知チャネルを更新するには、以下のステップを実行します。
 
@@ -173,6 +165,20 @@ Slack Web フックまたはコールバック URL を作成した後、それ�
 1. 「サービスの詳細」ページのナビゲーションから、**「設定」**をクリックします。
 2. **「通知」**タブを開きます。
 3. **「鍵のダウンロード」**ボタンをクリックします。 鍵は PEM ファイルとしてダウンロードされます。
+
+## チャネル・バージョン
+{: #channel-versions}
+
+証明書マネージャーが更新されるのに応じて、通知ペイロード構造の形式を時々変更することがあります。
+後方互換性を保証するために、既存のチャネルに送信されるペイロードは変更されません。   
+
+既存の通知チャネルがある場合は (Slack またはコールバック URL)、新しいバージョンのペイロードの取得を開始するには、以下のようにします。
+1. コールバック URL の場合、実装環境が新しいペイロードを受け入れることができることを確認します。
+2. 新しい通知チャネルを作成します (新しいチャネルは常に最新チャネル・バージョンを使用して作成されます)。
+3. 新しいチャネルが正しく動作することをテストします。
+4. 古いチャネルを削除します。
+
+チャネル・バージョンの場合は、[API 資料](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions)を確認してください。
 
 ## 例
 {: #examples}

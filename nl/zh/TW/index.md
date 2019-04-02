@@ -1,15 +1,26 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
-{:codeblock: .codeblock}
 {:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # 開始使用 {{site.data.keyword.cloudcerts_short}}
 {: #gettingstarted}
@@ -24,4 +35,4 @@ lastupdated: "2018-11-15"
 3. 按一下**建立**。
 4. 若要將您組織的憑證匯入至 {{site.data.keyword.cloudcerts_short}}，請按一下**匯入憑證**。  
 
-您也可以[進一步瞭解](about.html)您從 {{site.data.keyword.cloudcerts_short}} 獲得的東西，並[在 {{site.data.keyword.IBM_notm}} Developer 提供使用者意見](troubleshooting.html#getting-help-and-support)以加強 {{site.data.keyword.cloudcerts_short}} 的開發。要找出服務裡變更的內容，請參閱[版本注意事項](release-notes.html)。
+您也可以[進一步瞭解](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager)您從 {{site.data.keyword.cloudcerts_short}} 獲得的東西，並[在 {{site.data.keyword.IBM_notm}} Developer 提供使用者意見](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support)以加強 {{site.data.keyword.cloudcerts_short}} 的開發。要找出服務裡變更的內容，請參閱[版本注意事項](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes)。

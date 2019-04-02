@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018,
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:faq: data-hd-content-type='faq'}
 
@@ -22,11 +29,23 @@ lastupdated: "2018-11-15"
 Häufig gestellte Fragen zu {{site.data.keyword.cloudcerts_long}}.
 {: shortdesc}
 
-## Welche Zertifikatstypen können in {{site.data.keyword.cloudcerts_short}} gespeichert werden?
+## Welches Format müssen die Zertifikate aufweisen?
 {: #supported-certificate-types}
 {: faq}
 
 {{site.data.keyword.cloudcerts_short}} unterstützt ausschließlich Zertifikate im PEM-Format.
+
+## Welcher Typ von Algorithmus mit öffentlichem Schlüssel wird unterstützt?
+{: #supported-pk-algorithms}
+{: faq}
+
+{{site.data.keyword.cloudcerts_short}} unterstützt Zertifikate mit öffentlichen Schlüsseln, die mithilfe der folgenden Algorithmen mit öffentlichem Schlüssel generiert werden:
+
+* Rivest-Shamir-Adleman (RSA)
+* Digital Signature Algorithm (DSA), Algorithmus für digitale Signaturen
+* Elliptic Curve Digital Signature Algorithm (ECDSA)
+* Elliptic Curve with Diffie-Hellman Key Agreement Protocol (ECDH)
+
 
 ## Können kennwortgeschützte private Schlüssel hochgeladen werden?
 {: #password-protected-private-keys}
@@ -64,10 +83,10 @@ Nur Callback- und Slack-Benachrichtigungen werden unterstützt.
 {: #certificate-versioning}
 {: faq}
 
-Sie können ein Zertifikat aktualisieren, indem Sie eine neue Version des Zertifikats mit derselben Domäne wie das vorhandene Zertifikat, jedoch einem neuen Ablaufdatum, importieren. Beim erneuten Importieren eines Zertifikats wird die vorhandene Version des Zertifikats als Sicherungskopie beibehalten. Weitere Informationen finden Sie in [Zertifikat erneut importieren](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate).
+Sie können ein Zertifikat aktualisieren, indem Sie eine neue Version des Zertifikats mit derselben Domäne wie das vorhandene Zertifikat, jedoch einem neuen Ablaufdatum, importieren. Beim erneuten Importieren eines Zertifikats wird die vorhandene Version des Zertifikats als Sicherungskopie beibehalten. Weitere Informationen finden Sie in [Zertifikat erneut importieren](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 ## Kann ich dafür sorgen, dass bestimmte Zertifikate nur für bestimmte Benutzer sichtbar sind?
 {: #access-policies}
 {: faq}
 
-Zertifikate können durch IAM-Zugriffsrichtlinien geschützt werden, um eine differenzierte Zugriffssteuerung zu ermöglichen. Informationen hierzu finden Sie in [Servicezugriffsrollen verwalten](access-management.html).
+Zertifikate können durch IAM-Zugriffsrichtlinien geschützt werden, um eine differenzierte Zugriffssteuerung zu ermöglichen. Informationen hierzu finden Sie in [Servicezugriffsrollen verwalten](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).

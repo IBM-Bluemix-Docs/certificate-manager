@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2018,
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 {:faq: data-hd-content-type='faq'}
 
@@ -22,11 +29,23 @@ lastupdated: "2018-11-15"
 有关 {{site.data.keyword.cloudcerts_long}} 的常见问题。
 {: shortdesc}
 
-## 我可以在 {{site.data.keyword.cloudcerts_short}} 中存储何种类型的证书？
+## 我的证书需要采用什么格式？
 {: #supported-certificate-types}
 {: faq}
 
 {{site.data.keyword.cloudcerts_short}} 仅支持 PEM 格式的证书。
+
+## 支持何种类型的公用密钥算法？
+{: #supported-pk-algorithms}
+{: faq}
+
+{{site.data.keyword.cloudcerts_short}} 支持包含使用以下公用密钥算法生成的公用密钥的证书：
+
+* Rivest-Shamir-Adleman (RSA)
+* 数字签名算法 (DSA)
+* 椭圆曲线数字签名算法 (ECDSA)
+* 使用 Diffie-Hellman 的椭圆曲线密钥协商协议 (ECDH)
+
 
 ## 我可以上传受密码保护的专用密钥吗？
 {: #password-protected-private-keys}
@@ -64,10 +83,10 @@ lastupdated: "2018-11-15"
 {: #certificate-versioning}
 {: faq}
 
-您可以重新导入与现有证书具有相同域但到期日期为新日期的新证书版本来更新证书。重新导入证书时，会保留现有版本的证书作为备份，请参阅[重新导入证书](/docs/services/certificate-manager/managing-certificates.html#reimport-certificate)。
+您可以重新导入与现有证书具有相同域但到期日期为新日期的新证书版本来更新证书。重新导入证书时，会保留现有版本的证书作为备份，请参阅[重新导入证书](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate)。
 
 ## 我是否可以将特定证书设置为仅对特定用户可见？
 {: #access-policies}
 {: faq}
 
-您可以使用 IAM 访问策略来保护证书，从而实现精细访问控制，请参阅[管理服务访问角色](access-management.html)。
+您可以使用 IAM 访问策略来保护证书，从而实现精细访问控制，请参阅[管理服务访问角色](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles)。

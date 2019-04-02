@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-12"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
@@ -13,7 +17,13 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
+{:tsSymptoms: .tsSymptoms}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
 
 # Risoluzione dei problemi
 {: #troubleshooting}
@@ -33,11 +43,9 @@ Puoi ottenere aiuto nei seguenti modi:
 
 Puoi anche aprire un ticket di supporto.
 
-Quando utilizzi il forum per fare una domanda, contrassegna con una tag la tua domanda in modo che sia visualizzabile dai team di sviluppo {{site.data.keyword.cloudcerts_full_notm}}.
+Quando utilizzi il forum per fare una domanda, assicurati di contrassegnare con una tag la tua domanda in modo che possa essere vista dal team di sviluppo {{site.data.keyword.cloudcerts_full_notm}}.
 
 - Se hai domande tecniche sul servizio, inserisci la tua domanda in [Stack Overflow ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) e contrassegnala con le tag `ibm-cloud` e `ibm-certificate-manager`.  
 - Per domande sul servizio e sulle istruzioni introduttive, inserisci la tua domanda in [dW Answers ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Includi le tag `ibm-certificate-manager` e `ibm-cloud`.
 
-Per ulteriori informazioni su come utilizzare i forum, vedi [Come posso ottenere il supporto di cui ho bisogno? ](/docs/get-support/howtogetsupport.html#getting-customer-support)
-
-Per ulteriori informazioni sull'apertura di un ticket {{site.data.keyword.IBM_notm}} o sui livelli di supporto e sulle gravità dei ticket, vedi [Come funziona il processo del supporto clienti](/docs/get-support/getstarttssup.html).
+Per ulteriori informazioni sull'apertura di un ticket di supporto o sui livelli di supporto e sulle gravità dei ticket, vedi [Come posso ottenere il supporto di cui ho bisogno?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)

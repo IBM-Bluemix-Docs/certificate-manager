@@ -1,10 +1,15 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
+
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
@@ -12,6 +17,9 @@ lastupdated: "2018-11-15"
 {:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
 {:download: .download}
 
 # Gerenciando certificados no painel
@@ -26,9 +34,21 @@ lastupdated: "2018-11-15"
 Importe os certificados para que seja possível gerenciá-los.
 {: shortdesc}
 
+## Algoritmos de chave pública e formatos de certificado suportados
+{: supported-formats-and-algorithms}
+
+### Formatos de certificado
+* PEM
+
+### Algoritmos de chave pública
+* Rivest-Shamir-Adleman (RSA)
+* Algoritmo de Assinatura Digital (DSA)
+* Algoritmo de Assinatura Digital de Curva Elíptica (ECDSA)
+* Protocolo de acordo de chave de Curva Elíptica com Diffie-Hellman (ECDH)
+
 **Antes de iniciar**
 
-* Crie um certificado válido em vigor com uma chave privada correspondente.
+* Crie um certificado válido e não expirado com uma chave privada correspondente (a chave é opcional).
 * Converta os arquivos em formato Privacy-enhanced Electronic Mail (PEM).
 * Mantenha a chave privada descriptografada para assegurar que ela possa ser importada.
 
@@ -36,9 +56,9 @@ Para importar um certificado, clique em **Importar certificado** e forneça os s
 
 1. Insira um nome de exibição.
 2. Selecione o arquivo de certificado no formato PEM clicando em **Procurar**.
-3. Selecione a chave privada do certificado no formato PEM clicando em **Procurar**.
+3. Opcional: selecione a chave privada do certificado em formato PEM clicando em **Procurar**.
 4. Se aplicável, forneça o arquivo de certificado intermediário no formato PEM.
-5. (Opcional) Insira uma descrição. 
+5. Opcional: insira uma descrição.
 6. Clique em **Importar**.
 
 Depois de importar um certificado, as seguintes informações serão exibidas na tabela de Certificados. Para visualizar mais informações sobre o certificado, é possível expandir a linha do certificado na tabela Certificados.
@@ -67,33 +87,31 @@ Depois de importar um certificado, as seguintes informações serão exibidas na
   </tr>
   <tr>
     <td>Algoritmo</td>
-    <td>O tipo de criptografia pelo qual o certificado é criado. </td>
+    <td>O algoritmo de assinatura do certificado.</td>
   </tr>
   <tr>
     <td>Algoritmo de chave</td>
-    <td>O tipo de chave e o tamanho que são usados pelo algoritmo. </td>
-  </tr>
-  <tr>
-    <td>Expira em </td>
-    <td>O número de dias restantes antes de o certificado não ser mais válido. </td>
-  </tr>
-  <tr>
-    <td>Data de emissão</td>
-    <td>A data na qual o certificado foi emitido. </td>
-  </tr>
-  <tr>
-    <td>Válido de</td>
-    <td>A data na qual o certificado tornou-se válido. </td>
+    <td>O algoritmo de chave pública</td>
   </tr>
   <tr>
     <td>Expira em</td>
-    <td>A data em que o certificado não é mais válido. </td>
+    <td>O número de dias restantes antes de o certificado não ser mais válido. </td>
+  </tr>
+  <tr>
+    <td>Válido de</td>
+    <td>A data na qual o certificado se tornou válido (em fuso horário UTC). </td>
+  </tr>
+  <tr>
+    <td>Expira em</td>
+    <td>A data na qual o certificado não será mais válido (em fuso horário UTC). </td>
   </tr>
   <tr>
     <td>ID do certificado</td>
-    <td>O ID gerado fornecido para o certificado na importação. </td>
+    <td>O ID gerado fornecido para o certificado na importação.</td>
   </tr>
 </table>
+
+</br>
 
 ## Reimportando um certificado
 {: #reimport-certificate}
@@ -114,7 +132,7 @@ Para reimportar um certificado, conclua as etapas a seguir:
 6. Clique em **Reimportar** e, em seguida, em **Pronto**.
 
 A reimportação de certificados é limitada a cinco ações por minuto.
-{: tip}
+{: note}
 
 ### Fazendo download de uma versão anterior do certificado
 {: #downloading-certificate}
@@ -172,4 +190,4 @@ Para atualizar um certificado, conclua as etapas a seguir:
 3. Salve as suas mudanças.
 
 É possível executar até cinco ações de atualização por minuto.
-{: tip}
+{: note}

@@ -1,16 +1,29 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-15"
+  years: 2017, 2019
+lastupdated: "2019-03-07"
+
+keywords: certificates, SSL, 
+
+subcollection: certificate-manager
 
 ---
 
 {:new_window: target="_blank"}
 {:shortdesc: .shortdesc}
+{:screen: .screen}
+{:pre: .pre}
+{:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:tip: .tip}
+{:note: .note}
+{:important: .important}
+{:deprecated: .deprecated}
+{:download: .download}
 
 # 相關鏈結
-{: links}
+{: #links}
 
 您可以使用下列相關鏈結來進一步瞭解 {{site.data.keyword.cloudcerts_long}} 並與其互動。
 {:shortdesc}
@@ -31,5 +44,5 @@ lastupdated: "2018-11-15"
 以 {{site.data.keyword.cloudcerts_long_notm}} 為特色的 {{site.data.keyword.IBM_notm}} 指導教學。  
 {: #shortdesc}
 
-* <a href="https://console.bluemix.net/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Apply end to end security to a cloud application <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>
-* <a href="https://console.bluemix.net/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Deploy serverless apps across multiple locations <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>
+* <a href="https://cloud.ibm.com/docs/tutorials/cloud-e2e-security.html#apply-end-to-end-security-to-a-cloud-application" target="_blank">Apply end to end security to a cloud application <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>
+* <a href="https://cloud.ibm.com/docs/tutorials/multi-region-serverless.html#deploy-serverless-apps-across-multiple-locations" target="_blank">Deploy serverless apps across multiple locations <img src="../../icons/launch-glyph.svg" alt="外部鏈結圖示"></a>

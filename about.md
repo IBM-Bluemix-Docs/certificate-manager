@@ -73,10 +73,10 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
 </table>
 
-## Locations availability
+## Availability
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt and Tokyo locations.
+{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt, and Tokyo locations.
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-01"
+lastupdated: "2019-04-02"
 
 keywords: certificates, SSL,
 
@@ -88,7 +88,7 @@ You can upload a maximum of 1000 certificates per instance.
 ## Compliance and standards
 {: #compliance-and-standards}
 
-{{site.data.keyword.cloudcerts_short}} has successfully completed several certifications, audits, and meets several important standards.
+{{site.data.keyword.cloudcerts_short}} has successfully completed several certifications and audits and meets several important standards.
 
 ### HIPAA
 {: #compliance-hippa}

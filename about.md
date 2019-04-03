@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-17"
+lastupdated: "2019-04-02"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -21,7 +21,6 @@ subcollection: certificate-manager
 {:important: .important}
 {:deprecated: .deprecated}
 {:download: .download}
-
 
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
@@ -61,7 +60,7 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index) centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index#index).</td>
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started) centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
@@ -74,10 +73,10 @@ When you import a certificate and the corresponding private key into {{site.data
   </tr>
 </table>
 
-## Locations
+## Availability
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt and Tokyo locations.
+{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt, and Tokyo locations.
 
 
 
@@ -85,3 +84,23 @@ When you import a certificate and the corresponding private key into {{site.data
 {: #limits}
 
 You can upload a maximum of 1000 certificates per instance.
+
+## Compliance and standards
+{: #compliance-and-standards}
+
+{{site.data.keyword.cloudcerts_short}} has successfully completed several certifications and audits and meets several important standards.
+
+### HIPAA
+{: #compliance-hippa}
+
+{{site.data.keyword.cloudcerts_short}} meets the required IBM controls that are commensurate with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) Security and Privacy Rule requirements.
+
+### International Organization for Standardization (ISO)
+{: #compliance-iso}
+
+* {{site.data.keyword.IBM_notm}} Services (PaaS and SaaS) certificate - ISO 27001
+
+### General Data Protection Regulation (GDPR)
+{: #compliance-gdpr}
+
+The GDPR seeks to create a harmonized data protection law framework across the EU and aims to give citizens back the control of their personal data, whilst imposing strict rules on those hosting and ‘processing’ this data, anywhere in the world. The Regulation also introduces rules relating to the free movement of personal data within and outside the EU. For more information, see the [IBM privacy statement](https://www.ibm.com/privacy/).

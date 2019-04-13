@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-10"
+lastupdated: "2019-04-13"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -37,6 +37,7 @@ You can use the following related links to learn more about and interact with {{
 * <a href="https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/" target="_blank">How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 1 <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/09/ibm-cloud-certificate-manager-is-now-ga/" target="_blank">{{site.data.keyword.cloudcerts_short}} is Now GA <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 * <a href="https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/" target="_blank">How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 2 <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* <a href="https://www.ibm.com/blogs/bluemix/2019/04/how-to-automate-tls-certificate-rotation-to-avoid-outages/" target="_blank">How to Automate TLS Certificate Rotation to Avoid Outages <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
 
 ## Tutorials
 {: #tutorials}

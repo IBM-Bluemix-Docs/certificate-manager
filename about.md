@@ -32,12 +32,12 @@ You can import SSL certificates that you obtain for your apps and services, stor
 
 You can manage your certificates in the following ways:
 
-•	Get notified before your certificates expire to ensure that you renew them on time
-•	Use notifications to trigger automated certificate renewal
-•	View the types of certificates across your deployments and ensure that they meet organization policies
-•	Find certificates that need replacing when new compliance or security requirements are issued
-•	Set controls on who can access and manage your certificates
-•	Order new public certificates
+•	Get notified before your certificates expire to ensure that you renew them on time  
+•	Use notifications to trigger automated certificate renewal  
+•	View the types of certificates across your deployments and ensure that they meet organization policies  
+•	Find certificates that need replacing when new compliance or security requirements are issued  
+•	Set controls on who can access and manage your certificates  
+•	Order new public certificates  
 
 ![High-level service architecture diagram](images/high-level-architecture.png)
 <caption>Figure 1. High-level service architecture.</caption>

@@ -149,7 +149,7 @@ To download the previous version of a certificate, complete the following steps:
 ## Ordering certificates
 {: #ordering-certificates}
 
-Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering).
 
 1. Provide a certificate name.
 2. Select a Certificate Authority.

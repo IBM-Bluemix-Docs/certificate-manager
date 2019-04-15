@@ -141,7 +141,7 @@ Reimporting certificates is limited to five actions per minute.
 ### Ordering certificates
 {: #ordering-certificates}
 
-To ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)).
+Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
 
 1. Provide a certificate name.
 2. Select a Certificate Authority.

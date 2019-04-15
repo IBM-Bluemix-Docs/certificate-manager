@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-17"
+lastupdated: "2019-04-15"
 
 keywords: certificates, SSL, 
 
@@ -43,9 +43,17 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Import a certificate.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>Order a certificate.</td>
+  </tr>  
+  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Reimport a certificate.</td>
   </tr>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>Get a certificate metadata.</td>
+  </tr>  
   <tr>
     <td>`cloudcerts.certificate.download`</td>
 	  <td>Download a certificate.</td>

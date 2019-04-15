@@ -138,7 +138,15 @@ To reimport a certificate, complete the following steps:
 Reimporting certificates is limited to five actions per minute.
 {: note}
 
-### Ordering certificates
+### Downloading a previous version of your certificate
+{: #downloading-certificate}
+
+To download the previous version of a certificate, complete the following steps:
+
+1. Expand the row for the certificate.
+2. Click the **Previous version** link.
+
+## Ordering certificates
 {: #ordering-certificates}
 
 Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
@@ -151,14 +159,6 @@ Before ordering a certificate, [first complete the required setup](/docs/service
 
 Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, and 100 orders/hour per IBM user account.
 {: note}
-
-### Downloading a previous version of your certificate
-{: #downloading-certificate}
-
-To download the previous version of a certificate, complete the following steps:
-
-1. Expand the row for the certificate.
-2. Click the **Previous version** link.
 
 ## Searching certificates
 {: #searching-certificates}

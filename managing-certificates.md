@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-04-16"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Managing certificates from the dashboard
 {: #managing-certificates-from-the-dashboard}
 
-You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services. After you import the certificates and keys, they're encrypted and stored by the service.
+You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services.
 {: shortdesc}
 
 ## Importing a certificate
@@ -54,7 +54,7 @@ Import your certificates so that you can manage them.
 
 To import a certificate, click **Import Certificate** and provide the following details:
 
-1. Enter a display name.
+1. Provide a certificate name.
 2. Select the certificate file in PEM format by clicking **Browse**.
 3. Optional: Select the certificate's private key in PEM format by clicking **Browse**.
 4. If applicable, provide the intermediate certificate file in PEM format.
@@ -141,6 +141,8 @@ To download the previous version of a certificate, complete the following steps:
 
 1. Expand the row for the certificate.
 2. Click the **Previous version** link.
+
+
 
 ## Searching certificates
 {: #searching-certificates}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-04-16"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -83,10 +83,14 @@ Only Callback and Slack notifications are supported.
 {: #certificate-versioning}
 {: faq}
 
-You can update a certificate by reimporting a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
+You can update a certificate by reimporting a new version of the certificate that has the same domain as the existing
+certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is
+retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 ## Can I make specific certificates visible only to specific users?
 {: #access-policies}
 {: faq}
 
 Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
+
+

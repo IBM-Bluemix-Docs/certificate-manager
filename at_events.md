@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-17"
+lastupdated: "2019-04-16"
 
 keywords: certificates, SSL, 
 
@@ -41,11 +41,11 @@ The following table lists the API methods that generate an event when they are c
   <tr>
     <td>`cloudcerts.certificate.import`</td>
 	  <td>Import a certificate.</td>
-  </tr>
+  </tr>  
   <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Reimport a certificate.</td>
-  </tr>
+  </tr>  
   <tr>
     <td>`cloudcerts.certificate.download`</td>
 	  <td>Download a certificate.</td>

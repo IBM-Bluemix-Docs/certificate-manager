@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-08"
+lastupdated: "2019-04-16"
 
 keywords: certificates, SSL,
 
@@ -25,16 +25,17 @@ subcollection: certificate-manager
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_long}} helps you to manage the SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps and services.
+{{site.data.keyword.cloudcerts_full}} helps you to store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.
 {: shortdesc}
 
 You can import SSL certificates that you obtain for your apps and services, store them securely, and get a central view of the certificates that you are using.
 
 You can manage your certificates in the following ways:
 
-* Get notified before your certificates expire to ensure that you renew them on time
-* View the types of certificates across your deployments and ensure that they meet organization policies
-* Find certificates that need replacing when new compliance or security requirements are issued
+* Get notified before your certificates expire to ensure that you renew them on time  
+* Use notifications to trigger automated certificate renewal  
+* View the types of certificates across your deployments and ensure that they meet organization policies  
+* Find certificates that need replacing when new compliance or security requirements are issued  
 * Set controls on who can access and manage your certificates
 
 ![High-level service architecture diagram](images/high-level-architecture.png)
@@ -43,7 +44,7 @@ You can manage your certificates in the following ways:
 ## Private key security
 {: #private-key-security}
 
-When you import a certificate and the corresponding private key into {{site.data.keyword.cloudcerts_short}}, the service uses an Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key. {{site.data.keyword.cloudcerts_short}} saves this unique encrypted key to use with your service instance.
+When you import a certificate into {{site.data.keyword.cloudcerts_short}}, the service uses an Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key. {{site.data.keyword.cloudcerts_short}} saves this unique encrypted key to use with your service instance.
 
 ## Integrations
 {: #integrations}

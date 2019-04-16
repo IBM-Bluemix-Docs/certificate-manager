@@ -30,7 +30,7 @@ subcollection: certificate-manager
 
 To get started, create a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps:
 
-1.	In the IBM Cloud catalog, select **{{site.data.keyword.cloudcerts_short}}**.
+1.	In the {{site.data.keyword.Bluemix_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
 2.	Give your service instance a name, or use the preset name.
 3.	Click **Create**.
 4.	To import your organization's certificates into **{{site.data.keyword.cloudcerts_short}}**, click **Import Certificate**.

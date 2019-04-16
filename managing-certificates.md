@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-16"
 
 keywords: certificates, SSL,
 
@@ -105,10 +105,6 @@ After you import a certificate, the following information is displayed in the Ce
     <td>Expires on</td>
     <td>The date on which the certificate is no longer valid (in UTC timezone). </td>
   </tr>
-    <tr>
-      <td>Status</td>
-      <td>The status of your certificate. </td>
-    </tr>
   <tr>
     <td>Certificate ID</td>
     <td>The generated ID given to the certificate upon import.</td>
@@ -146,19 +142,7 @@ To download the previous version of a certificate, complete the following steps:
 1. Expand the row for the certificate.
 2. Click the **Previous version** link.
 
-## Ordering certificates
-{: #order-certificates}
 
-Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
-
-1. Provide a certificate name.
-2. Select a Certificate Authority.
-3. Enter the primary domain and any alternative domains.
-4. Select the appropriate algorithm and key algorithm.
-5. Click **Order**.
-
-Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, and 100 orders/hour per IBM user account.
-{: note}
 
 ## Searching certificates
 {: #searching-certificates}

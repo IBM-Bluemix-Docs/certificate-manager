@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-15"
+lastupdated: "2019-04-16"
 
 keywords: certificates, SSL, 
 
@@ -71,10 +71,6 @@ You can use service access roles to enable users to complete tasks in {{site.dat
   <tr>
     <td>Download a certificate and private key </td>
     <td> Manager, Writer </td>
-  </tr>
-  <tr>
-     <td>Get certificate metadata </td>
-     <td> Manager, Writer, Reader </td>
   </tr>       
   <tr>
     <td>Update certificate's metadata</td>
@@ -82,10 +78,6 @@ You can use service access roles to enable users to complete tasks in {{site.dat
   </tr>
   <tr>
     <td>Import or reimport certificates, private keys, and intermediate certificates </td>
-    <td> Manager </td>
-  </tr>
-  <tr>
-    <td>Order a certificate </td>
     <td> Manager </td>
   </tr>  
   <tr>

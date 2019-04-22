@@ -7,7 +7,7 @@
 Certificate Manager
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     about.md
     ha-dr.md
     {: .navgroup-end}

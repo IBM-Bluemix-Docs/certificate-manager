@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-04-18"
 
 keywords: certificates, SSL, 
 
@@ -25,13 +25,13 @@ subcollection: certificate-manager
 # Managing service access roles
 {: #managing-service-access-roles}
 
-You can secure services within {{site.data.keyword.Bluemix_notm}} by allowing only users with specified access roles to complete certain actions.
+You can secure services within {{site.data.keyword.cloud_notm}} by allowing only users with specified access roles to complete certain actions.
 {: shortdesc}
 
 ## Platform access roles
 {: #platform-access-roles}
 
-You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your {{site.data.keyword.Bluemix_notm}} account.
+You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your {{site.data.keyword.cloud_notm}} account.
 
 <table>
 <caption> Table 1. Actions that are mapped to platform access roles</caption>
@@ -109,8 +109,8 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 
 To configure access policies, complete the following steps:
 
-1. Navigate to **Manage > Account > Users**. A list of the users with access to your {{site.data.keyword.Bluemix_notm}} account is shown.
-2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.Bluemix_notm}} account](/docs/iam?topic=iam-iamuserinv#iamuserinv).
+1. Navigate to **Manage > Account > Users**. A list of the users with access to your {{site.data.keyword.cloud_notm}} account is shown.
+2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Click **Assign access**.
 4. Click **Assign access to resources**.
 5. From the **Services** menu, select **Certificate Manager**.
@@ -134,7 +134,7 @@ To configure access policies, complete the following steps:
 
 To retrieve the ID of a certificate, complete the following steps:
 
-1. From the {{site.data.keyword.Bluemix_notm}} dashboard, select your {{site.data.keyword.cloudcerts_short}} instance.
+1. From the {{site.data.keyword.cloud_notm}} dashboard, select your {{site.data.keyword.cloudcerts_short}} instance.
 2. From the navigation on the service details page, select **Manage**.
 3. Select a certificate.
 4. In the certificate details, find the certificate CRN.

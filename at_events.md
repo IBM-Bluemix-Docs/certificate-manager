@@ -22,7 +22,7 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# {{site.data.keyword.at_full_notm}} events  
+# Activity Tracker events  
 {: #at_events}
 
 Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix_notm}}.

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-04-22"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, TLS, activity tracker,
 
 subcollection: certificate-manager
 
@@ -22,13 +22,13 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# {{site.data.keyword.cloudaccesstrailshort}} events  
+# {{site.data.keyword.at_full_notm}} events  
 {: #at_events}
 
-Use the {{site.data.keyword.cloudaccesstrailfull}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long_notm}} service in the {{site.data.keyword.Bluemix_notm}}.
+Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix_notm}}.
 {:shortdesc}
 
-The {{site.data.keyword.cloudaccesstrailfull_notm}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.Bluemix_notm}}. For more information, see the [{{site.data.keyword.cloudaccesstrailshort}} docs](/docs/services/cloud-activity-tracker/reference?topic=cloud-activity-tracker-getting-started-with-cla#getting-started-with-cla). For example, when you import a certificate, an {{site.data.keyword.cloudaccesstrailshort}} event is generated.
+The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.Bluemix_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 The following table lists the API methods that generate an event when they are called.
 
@@ -109,13 +109,17 @@ The following table lists the API methods that generate an event when they are c
 </table>
 
 ## Where to look for the events
-{: #ui}
+{: #at_ui}
 
-{{site.data.keyword.cloudaccesstrailshort}} events are available in the {{site.data.keyword.cloudaccesstrailshort}} **account domain** that is available in the {{site.data.keyword.Bluemix_notm}} location where the events are generated.
+Complete the following steps:
 
-{{site.data.keyword.cloudaccesstrailshort}} events are automatically forwarded to the {{site.data.keyword.cloudaccesstrailshort}} service in the same location where the {{site.data.keyword.cloudcerts_short}} service is provisioned.
+1. Navigate to [{{site.data.keyword.Bluemix_notm}} Observability](https://cloud.ibm.com/observe/)
+2. Provision an {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
+
+Events are automatically forwarded to the {{site.data.keyword.at_short}} service instance in the same location where the {{site.data.keyword.cloudcerts_short}} service is provisioned.
 
 ## Additional information
 {: #info}
 
-The field *requestData_str* includes the human readable name of the certificate.
+* The field *requestData_str* includes the human readable name of the certificate.
+* {{site.data.keyword.at_short}} support is currently available for the **Dallas** and **Frankfurt** locations.

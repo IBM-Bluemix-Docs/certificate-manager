@@ -119,4 +119,9 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 {: #info}
 
 * The field *requestData_str* includes the human readable name of the certificate.
+
+## Availability
+{: #availability}
+
 * {{site.data.keyword.at_short}} support is currently available for the **Dallas** and **Frankfurt** locations.
+* For other locations provision an instance of the deprecated Activity Tracker service until {{site.data.keyword.at_short}} is available.

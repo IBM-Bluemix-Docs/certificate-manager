@@ -111,10 +111,7 @@ The following table lists the API methods that generate an event when they are c
 ## Where to look for the events
 {: #at_ui}
 
-Complete the following steps:
-
-1. Navigate to [{{site.data.keyword.Bluemix_notm}} Observability](https://cloud.ibm.com/observe/)
-2. Provision an {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
+Provision an {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
 
 Events are automatically forwarded to the {{site.data.keyword.at_short}} service instance in the same location where the {{site.data.keyword.cloudcerts_short}} service is provisioned.
 

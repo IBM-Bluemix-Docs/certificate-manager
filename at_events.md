@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-04-23"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -25,10 +25,10 @@ subcollection: certificate-manager
 # Activity Tracker events  
 {: #at_events}
 
-Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.Bluemix_notm}}.
+Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.Bluemix_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 The following table lists the API methods that generate an event when they are called.
 

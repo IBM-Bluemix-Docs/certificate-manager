@@ -22,7 +22,7 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Getting started with {{site.data.keyword.cloudcerts_short}}
+# Getting started tutorial
 {: #getting-started}
 
 {{site.data.keyword.cloudcerts_full}} helps you to store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.

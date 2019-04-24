@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-23"
+lastupdated: "2019-04-24"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -121,7 +121,7 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 * The field *requestData_str* includes the human readable name of the certificate.
 
 ## Availability
-{: #availability}
+{: #at-availability}
 
 * {{site.data.keyword.at_short}} support is currently available for the **Dallas** and **Frankfurt** locations.
 * For other locations provision an instance of the deprecated Activity Tracker service until {{site.data.keyword.at_short}} is available.

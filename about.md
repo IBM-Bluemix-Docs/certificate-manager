@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-02"
 
 keywords: certificates, SSL,
 
@@ -38,8 +38,10 @@ You can manage your certificates in the following ways:
 * Find certificates that need replacing when new compliance or security requirements are issued  
 * Set controls on who can access and manage your certificates
 
+
 ![High-level service architecture diagram](images/high-level-architecture.png)
 <caption>Figure 1. High-level service architecture.</caption>
+
 
 ## Private key security
 {: #private-key-security}

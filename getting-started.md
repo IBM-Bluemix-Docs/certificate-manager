@@ -54,5 +54,6 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](https://cl
    - Replace **My Certificate Manager instance** with your choice of instance name.
    - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), or **jp-tok** (Tokyo).
 
+<br/>
 [Learn more](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's changed in the service, see [Release notes](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes).
 {: note}

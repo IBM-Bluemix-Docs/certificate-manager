@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-24"
+lastupdated: "2019-05-06"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -41,11 +41,19 @@ The following table lists the API methods that generate an event when they are c
   <tr>
     <td>`cloudcerts.certificate.import`</td>
 	  <td>Import a certificate.</td>
-  </tr>  
+  </tr><staging>
+  <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>Order a certificate.</td>
+  </tr>
   <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Reimport a certificate.</td>
-  </tr>  
+  </tr><staging>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>Get a certificate metadata.</td>
+  </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
 	  <td>Download a certificate.</td>

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-18"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -71,7 +71,11 @@ You can use service access roles to enable users to complete tasks in {{site.dat
   <tr>
     <td>Download a certificate and private key </td>
     <td> Manager, Writer </td>
-  </tr>       
+  </tr>
+  <tr>
+     <td>Get certificate metadata </td>
+     <td> Manager, Writer, Reader </td>
+  </tr>      
   <tr>
     <td>Update certificate's metadata</td>
     <td> Manager, Writer </td>
@@ -79,7 +83,11 @@ You can use service access roles to enable users to complete tasks in {{site.dat
   <tr>
     <td>Import or reimport certificates, private keys, and intermediate certificates </td>
     <td> Manager </td>
-  </tr>  
+  </tr>
+  <tr>
+    <td>Order a certificate </td>
+    <td> Manager </td>
+  </tr>
   <tr>
     <td>Delete a certificate and private key </td>
     <td> Manager </td>
@@ -96,7 +104,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
        <td>Test a notification channel </td>
        <td> Manager, Writer, Reader </td>
      </tr>
-     
+
 </table>
 
 For more information about user roles and permissions, see [User roles](/docs/iam?topic=iam-userroles#userroles).

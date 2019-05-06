@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,14 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 6 May 2019
+{: 6May2019}
+
+- **Order Let's Encrypt certificates**  
+  You can now order Let's Encrypt certificates. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
 ## 18 February 2019
-{: 18February2018}
+{: 18February2019}
 
 - **Live in Tokyo**  
   {{site.data.keyword.cloudcerts_long_notm}} is available in the Tokyo location.

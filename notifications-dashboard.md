@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-22"
+lastupdated: "2019-05-06"
 
 keywords: certificates, SSL,
 
@@ -28,7 +28,7 @@ subcollection: certificate-manager
 {{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, you can set up a notification channel. You can specify either a Slack Webhook, a Callback URL, or any combination of the two.
 {: shortdesc}
 
-
+The notifications feature is also used when you [order certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates) from {{site.data.keyword.cloudcerts_short}}. To prove that you own the domain for which you are requesting a certificate, {{site.data.keyword.cloudcerts_short}} sends a challenge as a notification to your Callback URL. The challenge is a text record, which you place in the Domain Name System (DNS) Service where your domain is registered. When the text record is in place, the challenge is considered complete. Because the challenge is sent as a notification to your Callback URL, you are able to automate the domain validation process by running code in response to the notification event.
 
 ## Notifications to monitor certificate expiration
 {: #notifications-monitoring-certificate-expiration}
@@ -46,7 +46,13 @@ You must renew your certificate and reimport this certificate in place of your o
 **What are my options to configure notifications?**  
 You can send notifications to Slack by using a Slack Webhook or use any Callback URL that you like.
 
+## Notifications related to ordering certificates
+{: #notifications-ordering-certificates}
 
+{{site.data.keyword.cloudcerts_short}} notifies you when a certificate that you order from {{site.data.keyword.cloudcerts_short}} is issued to you. You are also notified if your order fails.
+{: shortdesc}
+
+Setting up a Callback URL notification channel and having the ability to handle events that are related to domain validation are prerequisites for ordering certificates. When you order a certificate, {{site.data.keyword.cloudcerts_short}} sends a challenge txt record to your Callback URL that you use to prove that you own the domain for which you are requesting the certificate.
 
 ## Setting up a Slack Webhook
 {: #setup-callback}
@@ -63,7 +69,8 @@ To set up a Slack Webhook, complete the following steps:
 To trigger the renewal process for your team, you can use a Callback URL to post notifications to the tools that you use. For example, you can send notifications to report to PagerDuty, automatically open up an issue in GitHub, or trigger renewal scripts. You can also automatically trigger deployment of certificates in response to notifications when certificates are reimported or issued successfully.
 {: shortdesc}
 
-
+A Callback URL is a prerequisite for ordering certificates.
+{: note}
 
 **Important:** Your Callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 * The endpoint must use the HTTPS protocol.

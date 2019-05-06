@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-02"
+lastupdated: "2019-05-06"
 
 keywords: certificates, SSL,
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.  
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.  
 Get started by creating a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps.
 {: shortdesc}
 
@@ -35,6 +35,7 @@ To create an instance from the {{site.data.keyword.cloud_notm}} console:
 2.	Give your service instance a name, or use the preset name.
 3.	Click **Create**.
 4.	To import your organization's certificates into **{{site.data.keyword.cloudcerts_short}}**, click **Import Certificate**.
+5.	To order a new certificate, click **Order Certificate**.
 
 <br/>
 To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-ibmcloud-cli):

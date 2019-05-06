@@ -41,7 +41,7 @@ The following table lists the API methods that generate an event when they are c
   <tr>
     <td>`cloudcerts.certificate.import`</td>
 	  <td>Import a certificate.</td>
-  </tr><staging>
+  </tr>
   <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>Order a certificate.</td>
@@ -49,7 +49,7 @@ The following table lists the API methods that generate an event when they are c
   <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Reimport a certificate.</td>
-  </tr><staging>
+  </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
 	  <td>Get a certificate metadata.</td>

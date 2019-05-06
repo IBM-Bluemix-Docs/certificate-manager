@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-04-16"
+lastupdated: "2019-05-06"
 
 keywords: certificates, SSL,
 
@@ -93,4 +93,47 @@ retained as a backup, see [Reimporting a certificate](/docs/services/certificate
 
 Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
 
+## How do I revoke an issued certificate?
+{: #revoke-certificate}
+{: faq}
 
+{{site.data.keyword.cloudcerts_short}} currently has no revocation API you can use. However, you can use the Let's
+Encrypt API to revoke certificates by using the certificate private key. You can
+learn how to revoke Let's Encrypt certificates in the [Let's Encrypt documentation](https://letsencrypt.org/docs/revoking/)
+
+## My certificate order status is in pending state for a long time
+
+{: #certificate-order-status}
+{: faq}
+
+On slow DNS networks an order may take up to about 20 minutes to complete successfully.
+
+## For how long will Certificate Manager try to validate that you own  domains you requested in your certificate order?
+
+{: #certificate-order-validation}
+{: faq}
+
+After sending the domain validation challenge, {{site.data.keyword.cloudcerts_short}} will try to validate that you own the domains you requested for up to 10 minutes.
+If your dns is not updated with the TXT record challenge within 10 minutes, your order will fail.
+
+## How do I check the status of my certificate order using the {{site.data.keyword.cloudcerts_short}} public API?
+
+{: #certificate-order-status}
+{: faq}
+
+ Use the `Get certificate metadata` API to poll the certificate order status.
+
+## Can I be notified once my order is complete?
+
+{: #certificate-order-notification}
+{: faq}
+
+If you have a notification channel configured, you will be notified once your certificate is issued, or if your order failed.
+Note that the version of your notification channel should be v4 or higher.
+
+## My order failed. Why?
+
+{: #certificate-order-failure}
+{: faq}
+
+You can find an error code and message in the certificate metadata, UI, and in the notification you received when your order failed.

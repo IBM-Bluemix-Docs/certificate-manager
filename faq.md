@@ -137,3 +137,9 @@ Note that the version of your notification channel should be v4 or higher.
 {: faq}
 
 You can find an error code and message in the certificate metadata, UI, and in the notification you received when your order failed.
+
+## Why am I not receiving certificate order events in my existing Slack notification channel?
+{: #missing-notification-for-ordered-certificate}
+{: faq}
+
+Upgrade your Slack notification channel to the latest version in the Certificate Manager Settings tab.

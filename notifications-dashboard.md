@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-11"
 
 keywords: certificates, SSL,
 
@@ -207,3 +207,4 @@ For Channel versions check out the [API documentation](https://cloud.ibm.com/api
    Learn how to create GitHub issues for expiring certificate notifications.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/)  
    Learn how to create PagerDuty incidents issues for expiring certificate notifications.
+* [How to validate a domain using a Callback URL and a Cloud Function action] ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/blogs/bluemix/2019/05/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains/)

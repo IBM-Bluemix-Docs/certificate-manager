@@ -113,7 +113,17 @@ For more information about user roles and permissions, see [User roles](/docs/ia
 {: #configuring-access-policies}
 
 You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance (and therefore for all the certificates in that instance), or you can set policies for individual certificates (resources) within an instance.
+
+**Examples of role allocation**
+
+* Assign at least the Viewer role to every user so that every user can see service instances.
+* Assign the Administrator or Editor role to a user if you want that user to create and delete instances.
+* Assign at least the Reader role if you want a user to view certificates within an instance.
+
 {: shortdesc}
+
+### Configuring access policies
+{: #configuring-access-policies}
 
 To configure access policies, complete the following steps:
 
@@ -127,20 +137,17 @@ To configure access policies, complete the following steps:
 8. Assign a [service access role](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) to the user.
 9. Click **Assign** to assign the access policy to the user.
 
-To restrict access to a specific certificate, complete the following steps:
+### Allowing access to a specific certificate
+{: #allow-access-to-specific-certificate}
+
+To allow access to a specific certificate, complete the following steps:
 
 1. [Retrieve your certificate ID](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
 2. Create two access policies:
-   - The first policy: Assign **Viewer** platform access role for the service instance
+   - The first policy: Assign at least **Viewer** platform access role for the service instance
    - The second policy: Assign at least **Reader** service access role
      - Enter `certificate` in the **Resource Type** field.
      - Enter the certificate ID in the **Resource ID** field.
-
-**Examples of role allocation**
-
-* Assign at least the Viewer role to every user so that every user can see service instances.
-* Assign the Administrator or Editor role to a user if you want that user to create and delete instances.
-* Assign at least the Reader role if you want a user to view certificates within an instance.
 
 ### Retrieving the ID of a certificate
 {: #get-certificate-id}

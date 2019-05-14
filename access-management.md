@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-13"
+lastupdated: "2019-05-14"
 
 keywords: certificates, SSL,
 
@@ -130,7 +130,7 @@ To configure access policies, complete the following steps:
 To restrict access to a specific certificate, complete the following steps:
 
 1. [Retrieve your certificate ID](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
-2. Create *two access policies*:
+2. Create two access policies:
    - The first policy: Assign **Viewer** platform access role for the service instance
    - The second policy: Assign at least **Reader** service access role
      - Enter `certificate` in the **Resource Type** field.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-14"
+lastupdated: "2019-05-15"
 
 keywords: certificates, SSL,
 
@@ -123,7 +123,7 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 {: shortdesc}
 
 ### Configuring access policies
-{: #configuring-access-policies}
+{: #configuring-access}
 
 To configure access policies, complete the following steps:
 

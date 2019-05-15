@@ -117,7 +117,7 @@ On slow DNS networks, an order can take up to about 20 minutes to complete succe
 After sending the domain validation challenge, {{site.data.keyword.cloudcerts_short}} tries to validate that you own the domains that you requested for up to 10 minutes. If your DNS is not updated with the TXT record challenge within 10 minutes, your order fails.
 
 ## How do I check the status of my certificate order using the {{site.data.keyword.cloudcerts_short}} public API?
-{: #certificate-order-status}
+{: #certificate-order-status-api}
 {: faq}
 
 Use the `Get certificate metadata` API to poll the certificate order status.

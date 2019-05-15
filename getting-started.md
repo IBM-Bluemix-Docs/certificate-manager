@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-05-15"
 
 keywords: certificates, SSL,
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.  
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.  
 Get started by creating a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps.
 {: shortdesc}
 
@@ -40,13 +40,13 @@ To create an instance from the {{site.data.keyword.cloud_notm}} console:
 <br/>
 To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-ibmcloud-cli):
 
-1. Login to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions:
+1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 
    ```
    ibmcloud login
    ```
 
-2. Create an instance:
+2. Create an instance.
 
    ```
    ibmcloud resource service-instance-create "My Certificate Manager instance" cloudcerts free us-south
@@ -56,5 +56,5 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](https://cl
    - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), or **jp-tok** (Tokyo).
 
 <br/>
-[Learn more](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's changed in the service, see [Release notes](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes).
+[Learn more](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's new in the service, see [Release notes](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes).
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-05-30"
 
 keywords: certificates, SSL,
 
@@ -206,5 +206,5 @@ For Channel versions check out the [API documentation](https://cloud.ibm.com/api
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls)  
    Learn how to create GitHub issues for expiring certificate notifications.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
-   Learn how to create PagerDuty incidents issues for expiring certificate notifications.
-* [How to validate a domain using a Callback URL and a Cloud Function action] ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+   Learn how to create PagerDuty incidents for expiring certificate notifications.
+* [How to validate a domain using a Callback URL and a Cloud Function action ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

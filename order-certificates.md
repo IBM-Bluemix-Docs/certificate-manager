@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-05-30"
 
 keywords: certificates, SSL,
 
@@ -108,4 +108,4 @@ Your order is placed in a **Pending** state. Once you answer the domain validati
 ## Renewing certificates
 {: #renew-certificate}
 
-Renewing certificates in {{site.data.keyword.cloudcerts_short}} is not currently supported. You can order a new certificate for the same domains before your existing certificate expires. Let's Encrypt certificates are valid for 90 days. So, we recommend that you order a new one 30 days before your certificate expires to prevent any downtime. You can use {{site.data.keyword.cloudcerts_short}} notifications to be alerted 30 days before your certificate expires.
+Renewing certificates in {{site.data.keyword.cloudcerts_short}} is currently not supported. You can order a new certificate for the same domains before your existing certificate expires. Let's Encrypt certificates are valid for 90 days. So, we recommend that you order a new one 30 days before your certificate expires to prevent any downtime. You can use {{site.data.keyword.cloudcerts_short}} notifications to be alerted 30 days before your certificate expires.

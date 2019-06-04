@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-30"
+lastupdated: "2019-06-04"
 
 keywords: certificates, SSL,
 
@@ -159,6 +159,26 @@ Before ordering a certificate, [first complete the required setup](/docs/service
 
 Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 orders/hour per IBM user account, and five certificates for the same domains per week.
 {: note}
+
+## Renewing certificates
+{: #renew-certificates}
+
+To renew a certificate, complete the following steps:
+  1. Click on the menu in the row of the certificate you want to renew.
+  2. Click **Renew Certificate**.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.
+  
+  When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  {: note}
+    
+  4. Click **Renew**
+  
+  You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
+  {: note}
+
+Renewing a certificates is limited to  five renewal requests per certificate per minute, 100 renewal/hour per IBM user account.
+{: note}
+
 
 ## Searching certificates
 {: #searching-certificates}

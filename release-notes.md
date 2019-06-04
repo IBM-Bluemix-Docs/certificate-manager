@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-04"
 
 keywords: certificates, SSL,
 
@@ -26,6 +26,8 @@ subcollection: certificate-manager
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+
 
 ## 6 May 2019
 {: 6May2019}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-30"
+lastupdated: "2019-06-04"
 
 keywords: certificates, SSL,
 
@@ -108,4 +108,21 @@ Your order is placed in a **Pending** state. Once you answer the domain validati
 ## Renewing certificates
 {: #renew-certificate}
 
-Renewing certificates in {{site.data.keyword.cloudcerts_short}} is currently not supported. You can order a new certificate for the same domains before your existing certificate expires. Let's Encrypt certificates are valid for 90 days. So, we recommend that you order a new one 30 days before your certificate expires to prevent any downtime. You can use {{site.data.keyword.cloudcerts_short}} notifications to be alerted 30 days before your certificate expires.
+If your certificate is about to expire, you can request to renew your certificate through {{site.data.keyword.cloudcerts_short}}. When your certificate is renewed, the previous version of your certificate is retained in case you need it. 
+
+Renewals work similar to certificate ordering. When you request to renew a certificate, {{site.data.keyword.cloudcerts_short}} sends DNS txt challenges to your callback URL, so you can again prove that you own the domains for which you are renewing the certificate.
+
+To renew a certificate, complete the following steps:
+  1. Click on the menu in the row of the certificate you want to renew.
+  2. Click **Renew Certificate**.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.
+  
+  When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  {: note}
+    
+  4. Click **Renew**
+  
+  You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
+  {: note}
+
+Your renewal is placed in a **Renew Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you'll get a renewed certificate and its state will change to **Valid**. You'll be notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL channel.

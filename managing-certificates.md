@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-04"
 
 keywords: certificates, SSL,
 
@@ -28,12 +28,6 @@ subcollection: certificate-manager
 You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services.
 {: shortdesc}
 
-## Importing a certificate
-{: #importing-a-certificate}
-
-Import your certificates so that you can manage them.
-{: shortdesc}
-
 ## Supported certificate formats and public key algorithms
 {: supported-formats-and-algorithms}
 
@@ -45,6 +39,12 @@ Import your certificates so that you can manage them.
 * Digital Signature Algorithm (DSA)
 * Elliptic Curve Digital Signature Algorithm (ECDSA)
 * Elliptic Curve with Diffie-Hellman key agreement protocol (ECDH)
+
+## Importing a certificate
+{: #importing-a-certificate}
+
+Import your certificates so that you can manage them.
+{: shortdesc}
 
 **Before you begin**
 
@@ -160,6 +160,26 @@ Before ordering a certificate, [first complete the required setup](/docs/service
 Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 orders/hour per IBM user account, and five certificates for the same domains per week.
 {: note}
 
+## Renewing certificates
+{: #renew-certificates}
+
+To renew a certificate, complete the following steps:
+  1. Click on the menu in the row of the certificate you want to renew.
+  2. Click **Renew Certificate**.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.
+  
+  When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  {: note}
+    
+  4. Click **Renew**
+  
+  You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
+  {: note}
+
+Renewing a certificates is limited to  five renewal requests per certificate per minute, 100 renewal/hour per IBM user account.
+{: note}
+
+
 ## Searching certificates
 {: #searching-certificates}
 
@@ -179,6 +199,9 @@ To download a certificate, complete the following steps:
 
 1. Select the check box for the certificate that you want to download.
 2. Click **Download Certificate**. Depending on what you imported into the service, you receive a compressed file that contains PEM files for the certificate, an associated private key, and an associated intermediate certificate.
+
+You cannot download expired certificates.
+{: note}
 
 ## Deleting certificates
 {: #deleting-certificates}

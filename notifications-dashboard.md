@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-06-04"
 
 keywords: certificates, SSL,
 
@@ -49,10 +49,11 @@ You can send notifications to Slack by using a Slack Webhook or use any Callback
 ## Notifications related to ordering certificates
 {: #notifications-ordering-certificates}
 
-{{site.data.keyword.cloudcerts_short}} notifies you when a certificate that you order from {{site.data.keyword.cloudcerts_short}} is issued to you. You are also notified if your order fails.
+{{site.data.keyword.cloudcerts_short}} notifies you when a certificate that you order from {{site.data.keyword.cloudcerts_short}} is issued to you, or renewed successfully. You are also notified if your order fails, or a renewal fails.
 {: shortdesc}
 
-Setting up a Callback URL notification channel and having the ability to handle events that are related to domain validation are prerequisites for ordering certificates. When you order a certificate, {{site.data.keyword.cloudcerts_short}} sends a challenge txt record to your Callback URL that you use to prove that you own the domain for which you are requesting the certificate.
+Setting up a Callback URL notification channel and having the ability to handle events that are related to domain validation are prerequisites for ordering and renewing certificates. When you order a certificate, {{site.data.keyword.cloudcerts_short}} sends a challenge txt record to your Callback URL that you use to prove that you own the domain for which you are requesting the certificate. A challenge txt record is also sent when you request to renew a certificate. 
+
 
 ## Setting up a Slack Webhook
 {: #setup-callback}
@@ -206,5 +207,5 @@ For Channel versions check out the [API documentation](https://cloud.ibm.com/api
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls)  
    Learn how to create GitHub issues for expiring certificate notifications.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
-   Learn how to create PagerDuty incidents issues for expiring certificate notifications.
-* [How to validate a domain using a Callback URL and a Cloud Function action] ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+   Learn how to create PagerDuty incidents for expiring certificate notifications.
+* [How to validate a domain using a Callback URL and a Cloud Function action ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

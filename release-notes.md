@@ -27,8 +27,12 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 10 June 2019
+{: 10June2019}
 
-
+- **Renew ordered Let's Encrypt certificates**  
+  You can now renew Let's Encrypt certificates that you have ordered using {{site.data.keyword.cloudcerts_short}}. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+  
 ## 6 May 2019
 {: 6May2019}
 

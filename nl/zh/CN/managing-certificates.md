@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,7 @@ subcollection: certificate-manager
 # 从仪表板管理证书
 {: #managing-certificates-from-the-dashboard}
 
-您可以使用 {{site.data.keyword.cloudcerts_full}} 服务仪表板来管理从第三方签发者获取的证书，以使用基于 {{site.data.keyword.IBM_notm}} 云的应用程序或服务。在导入证书和密钥后，服务会对它们进行加密并加以存储。
-{: shortdesc}
-
-## 导入证书
-{: #importing-a-certificate}
-
-导入证书以便对它们进行管理。
+您可以使用 {{site.data.keyword.cloudcerts_full}} 服务仪表板来管理从第三方签发者获取的证书，以使用基于 {{site.data.keyword.IBM_notm}} 云的应用程序或服务。
 {: shortdesc}
 
 ## 支持的证书格式和公用密钥算法
@@ -46,6 +40,12 @@ subcollection: certificate-manager
 * 椭圆曲线数字签名算法 (ECDSA)
 * 使用 Diffie-Hellman 的椭圆曲线密钥协商协议 (ECDH)
 
+## 导入证书
+{: #importing-a-certificate}
+
+导入证书以便对它们进行管理。
+{: shortdesc}
+
 **开始之前**
 
 * 使用匹配的专用密钥（密钥为可选），创建有效的未到期证书。
@@ -54,7 +54,7 @@ subcollection: certificate-manager
 
 要导入证书，请单击**导入证书**并提供以下详细信息：
 
-1. 输入显示名称。
+1. 提供证书名称。
 2. 单击**浏览**，选择 PEM 格式的证书文件。
 3. 可选：单击**浏览**，选择 PEM 格式的证书专用密钥。
 4. 如果适用的话，以 PEM 格式提供中间证书文件。
@@ -106,6 +106,10 @@ subcollection: certificate-manager
     <td>证书不再有效的日期（采用 UTC 时区）。</td>
   </tr>
   <tr>
+    <td>状态</td>
+    <td>证书的状态。</td>
+  </tr>
+  <tr>
     <td>证书标识</td>
     <td>导入时为证书提供的生成标识。</td>
   </tr>
@@ -142,6 +146,40 @@ subcollection: certificate-manager
 1. 展开证书所在的行。
 2. 单击**先前版本**链接。
 
+## 订购证书
+{: #order-certificates}
+
+订购证书之前，请[首先完成必需的设置](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)。
+
+1. 提供证书名称。
+2. 选择认证中心。
+3. 输入主域和任何备用域。
+4. 选择适当的算法和密钥算法。
+5. 单击**订购**。
+
+订购证书限制为每个 {{site.data.keyword.cloudcerts_short}} 实例每分钟 5 个订购请求，每个 IBM 用户帐户每小时 100 个订购请求，每周对于相同域只能订购 5 个证书。
+{: note}
+
+## 更新证书
+{: #renew-certificates}
+
+要更新证书，请完成以下步骤：
+  1. 单击要更新的证书所在行中的菜单。
+  2. 单击**更新证书**。
+  3. 可选：可以通过选中**再加密证书**复选框来选择对证书再加密。这将使用新密钥对来更新证书。
+  
+  对证书再加密后，请确保将新的证书和密钥部署到使用它们的所有位置。
+  {: note}
+    
+  4. 单击**更新**。
+  
+  只能更新通过 {{site.data.keyword.cloudcerts_short}} 订购的证书。
+  {: note}
+
+更新证书限制为每分钟每个证书 5 个更新请求，每个 IBM 用户帐户每小时 100 个更新请求。
+{: note}
+
+
 ## 搜索证书
 {: #searching-certificates}
 
@@ -161,6 +199,9 @@ subcollection: certificate-manager
 
 1. 选择要下载的证书的复选框。
 2. 单击**下载证书**。根据导入到服务中的项目，您会收到压缩文件，其中包含证书的 PEM 文件、关联的专用密钥和关联的中间证书。
+
+无法下载到期的证书。
+{: note}
 
 ## 删除证书
 {: #deleting-certificates}

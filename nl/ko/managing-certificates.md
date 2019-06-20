@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,7 @@ subcollection: certificate-manager
 # 대시보드에서 인증서 관리
 {: #managing-certificates-from-the-dashboard}
 
-{{site.data.keyword.cloudcerts_full}} 서비스 대시보드를 사용하여 {{site.data.keyword.IBM_notm}} 클라우드 기반 앱 또는 서비스에 사용하기 위해 서드파티 발행자로부터 얻는 인증서를 관리할 수 있습니다. 인증서 및 키를 가져온 후 서비스에서 이를 암호화하고 저장합니다.
-{: shortdesc}
-
-## 인증서 가져오기
-{: #importing-a-certificate}
-
-인증서를 관리할 수 있도록 인증서를 가져오십시오.
+{{site.data.keyword.cloudcerts_full}} 서비스 대시보드를 사용하여 {{site.data.keyword.IBM_notm}} 클라우드 기반 앱 또는 서비스에 사용하기 위해 서드파티 발행자로부터 얻는 인증서를 관리할 수 있습니다.
 {: shortdesc}
 
 ## 지원 인증서 형식 및 공개 키 알고리즘
@@ -46,6 +40,12 @@ subcollection: certificate-manager
 * ECDSA(Elliptic Curve Digital Signature Algorithm)
 * ECDH(Elliptic Curve with Diffie-Hellman) 키 계약 프로토콜
 
+## 인증서 가져오기
+{: #importing-a-certificate}
+
+인증서를 관리할 수 있도록 인증서를 가져오십시오.
+{: shortdesc}
+
 **시작하기 전에**
 
 * 일치하는 개인 키와 함께 만료되지 않는 유효한 인증서를 작성하십시오(키는 선택사항).
@@ -54,7 +54,7 @@ subcollection: certificate-manager
 
 인증서를 가져오려면 **인증서 가져오기**를 클릭하고 다음 세부사항을 제공하십시오.
 
-1. 표시 이름을 입력하십시오.
+1. 인증서 이름을 제공하십시오.
 2. **찾아보기**를 클릭하여 PEM 형식의 인증서 파일을 선택하십시오.
 3. 선택사항: **찾아보기**를 클릭하여 PEM 형식의 인증서 개인 키를 선택하십시오.
 4. 해당되는 경우 PEM 형식의 중간 인증서 파일을 제공하십시오.
@@ -99,11 +99,15 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>유효 기간 시작</td>
-    <td>인증서가 유효하게 된 날짜입니다(UTC 시간대).</td>
+    <td>인증서가 유효하게 된 날짜입니다(UTC 시간대). </td>
   </tr>
   <tr>
     <td>만료 날짜</td>
-    <td>인증서가 더 이상 유효하지 않은 날짜입니다(UTC 시간대).</td>
+    <td>인증서가 더 이상 유효하지 않은 날짜입니다(UTC 시간대). </td>
+  </tr>
+  <tr>
+    <td>상태</td>
+    <td>인증서의 상태입니다.</td>
   </tr>
   <tr>
     <td>인증서 ID</td>
@@ -142,6 +146,40 @@ subcollection: certificate-manager
 1. 해당 인증서의 행을 펼치십시오.
 2. **이전 버전** 링크를 클릭하십시오.
 
+## 인증서 주문
+{: #order-certificates}
+
+인증서를 주문하기 전에 [먼저 필수 설정을 완료하십시오](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+
+1. 인증서 이름을 제공하십시오.
+2. 인증 기관을 선택하십시오.
+3. 기본 도메인 및 대체 도메인을 입력하십시오.
+4. 적절한 알고리즘 및 키 알고리즘을 선택하십시오.
+5. **주문**을 클릭하십시오.
+
+인증서 주문은 {{site.data.keyword.cloudcerts_short}} 인스턴스당 5개의 주문/분, IBM 사용자 계정당 100개의 주문/시간 및 동일한 도메인에 대해 주당 5개의 인증서로 제한됩니다.
+{: note}
+
+## 인증서 갱신
+{: #renew-certificates}
+
+인증서를 갱신하려면 다음 단계를 완료하십시오.
+  1. 갱신할 인증서의 행에서 메뉴를 클릭하십시오.
+  2. **인증서 갱신**을 클릭하십시오.
+  3. 선택사항: **인증서 키 다시 입력** 선택란을 선택하여 인증서 키를 다시 입력하도록 선택할 수 있습니다. 이렇게 하면 인증서가 새로운 키 쌍으로 갱신됩니다.
+  
+  인증서 키를 다시 입력할 때 새 인증서 및 키를 사용 중인 모든 위치에 배치해야 합니다.
+  {: note}
+    
+  4. **갱신**을 클릭하십시오.
+  
+  {{site.data.keyword.cloudcerts_short}}를 통해 주문한 인증서만 갱신할 수 있습니다.
+  {: note}
+
+인증서 갱신은 인증서별로 분당 5개의 갱신 요청, IBM 사용자 계정당 100개의 갱신/시간으로 제한됩니다.
+{: note}
+
+
 ## 인증서 검색
 {: #searching-certificates}
 
@@ -161,6 +199,9 @@ subcollection: certificate-manager
 
 1. 다운로드할 인증서에 대한 선택란을 선택하십시오.
 2. **인증서 다운로드**를 클릭하십시오. 서비스로 가져온 항목에 따라 인증서의 PEM 파일, 연관된 개인 키 및 연관된 중간 인증서를 포함하는 압축된 파일을 수신합니다.
+
+만료된 인증서는 다운로드할 수 없습니다.
+{: note}
 
 ## 인증서 삭제
 {: #deleting-certificates}

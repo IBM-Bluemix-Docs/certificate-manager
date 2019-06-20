@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 提供 {{site.data.keyword.cloudcerts_long}} 服务的下列功能和更改。
 
+
+## 2019 年 6 月 10 日
+{: 10June2019}
+
+- **更新订购的 Let's Encrypt 证书**  
+  现在，您可以更新使用 {{site.data.keyword.cloudcerts_short}} 订购的 Let's Encrypt 证书。[了解有关订购证书的更多信息](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)。
+
+
+## 2019 年 5 月 6 日
+{: 6May2019}
+
+- **订购 Let's Encrypt 证书**  
+  现在，您可以订购 Let's Encrypt 证书。[了解有关订购证书的更多信息](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)。
+
 ## 2019 年 2 月 18 日
-{: 18February2018}
+{: 18February2019}
 
 - **位于东京**  
   将在位置“东京”提供 {{site.data.keyword.cloudcerts_long_notm}}。

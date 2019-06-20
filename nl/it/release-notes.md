@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 Sono disponibili le seguenti funzioni e modifiche al servizio {{site.data.keyword.cloudcerts_long}}.
 
+
+## 10 giugno 2019
+{: 10June2019}
+
+- **Rinnova i certificati Let's Encrypt ordinati**  
+  Puoi ora rinnovare i certificati Let's Encrypt che hai ordinato utilizzando {{site.data.keyword.cloudcerts_short}}. [Ulteriori informazioni sull'ordinazione di certificati](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
+
+## 6 maggio 2019
+{: 6May2019}
+
+- **Ordina i certificati Let's Encrypt**  
+  Puoi ora ordinare i certificati Let's Encrypt. [Ulteriori informazioni sull'ordinazione di certificati](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
 ## 18 febbraio 2019
-{: 18February2018}
+{: 18February2019}
 
 - **Live a Tokyo**  
   {{site.data.keyword.cloudcerts_long_notm}} è disponibile nella località di Tokyo.
@@ -51,10 +65,10 @@ Sono disponibili le seguenti funzioni e modifiche al servizio {{site.data.keywor
 ## 5 dicembre 2018
 {: 5December2018}
 - **Notifica di reimportazione**    
-Quando reimporti un certificato rinnovato al posto di uno scaduto, puoi ricevere una notifica indicante che il certificato è stato reimportato. Questo messaggio ricorda a te e al tuo team di distribuire il certificato rinnovato nei punti di terminazione SSL/TLS. Questa notifica è disponibile solo per i canali di notifica appena creati. 
+Quando reimporti un certificato rinnovato al posto di uno scaduto, puoi ricevere una notifica indicante che il certificato è stato reimportato. Questo messaggio ricorda a te e al tuo team di distribuire il certificato rinnovato nei punti di terminazione SSL/TLS. Questa notifica è disponibile solo per i canali di notifica appena creati.
 
 - **{{site.data.keyword.cloudcerts_short}} è disponibile nella località di Francoforte.**     
-Il servizio è conforme ai requisiti UE. 
+Il servizio è conforme ai requisiti UE.
 
 ## 2 dicembre 2018
 {: 2December2018}

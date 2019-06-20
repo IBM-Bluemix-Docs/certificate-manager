@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,16 +25,34 @@ subcollection: certificate-manager
 # 配置通知
 {: #configuring-notifications}
 
-憑證通常只會在一段設定的時間量內有效。當您使用的憑證到期時，您可能會遇到應用程式的關閉時間。若要避免運作中斷，您可以配置 {{site.data.keyword.cloudcerts_full}}，以將即將過期的憑證相關通知傳送給您，以便提醒您及時更新憑證。
-
-當您將憑證的更新版本重新匯入至 {{site.data.keyword.cloudcerts_short}} 以取代到期的憑證時，您將會收到警示，以讓您記得同時也將其部署至 SSL/TLS 終止點。有關重新匯入憑證的此項通知將僅傳送至[頻道第 2 版](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions)的頻道。
+{{site.data.keyword.cloudcerts_full}} 可以向您傳送有關憑證生命週期事件的通知。這包括在憑證到期之前更新憑證的提醒，以及在憑證備妥時部署憑證的提醒。若要取得 {{site.data.keyword.cloudcerts_short}} 傳送的通知，可以設定通知頻道。可以指定 Slack Webhook、回呼 URL 或這兩者的任意組合。
 {: shortdesc}
 
-**我何時會收到通知？**   根據您上傳至 {{site.data.keyword.cloudcerts_full_notm}} 的憑證的到期日，您會在憑證到期之前 90、60、30、10 和 1 天收到通知。此外，您也會收到關於到期憑證的每日通知。每日通知會從您的憑證到期之後的第一天開始。
+向 {{site.data.keyword.cloudcerts_short}} [訂購憑證](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)時，也會使用通知特性。若要證明您擁有要為其要求憑證的網域，{{site.data.keyword.cloudcerts_short}} 會將盤查作為通知傳送到回呼 URL。盤查是一種文字記錄，應將其放入在其中登錄網域的網域名稱系統 (DNS) 服務中。文字記錄準備妥當後，盤查被視為是完整的。由於盤查是作為通知傳送到回呼 URL 的，因此您能夠透過執行程式碼來使網域驗證處理程序自動化，以回應通知事件。
 
-您必須更新憑證，並將此憑證重新匯入至 {{site.data.keyword.cloudcerts_full_notm}} 取代舊有憑證，才能停止傳送通知。重新匯入憑證時，會收到已重新匯入憑證的通知，提醒您重新部署該憑證。
+## 用於監視憑證到期的通知
+{: #notifications-monitoring-certificate-expiration}
 
-**我有哪些配置通知的選項？**   您可以使用 Slack Webhook 或使用您喜歡的任何回呼 URL 傳送通知給 Slack。
+憑證通常在設定的時間內有效。當您使用的憑證到期時，您可能會遇到應用程式的關閉時間。為避免產生關閉時間，您可以配置 {{site.data.keyword.cloudcerts_short}} 以傳送有關憑證即將到期的通知，以便提醒您按時更新憑證。
+
+在將更新版本的憑證重新匯入到 {{site.data.keyword.cloudcerts_short}} 以代替即將到期的憑證時，您也將收到警示。這是為了提醒您將其部署到 SSL/TLS 終止點。有關重新匯入憑證的此通知僅傳送到[頻道 V2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) 中的頻道。
+
+
+**何時會收到通知？**   
+根據您上傳至 {{site.data.keyword.cloudcerts_short}} 的憑證的到期日，您會在憑證到期之前 90、60、30、10 和 1 天收到通知。此外，您也會收到關於到期憑證的每日通知。每日通知會從您的憑證到期之後的第一天開始。
+
+您必須更新憑證，並將此憑證重新匯入至 {{site.data.keyword.cloudcerts_short}} 取代舊有憑證，才能停止傳送通知。在重新匯入憑證時，您將收到重新匯入憑證的通知以提醒您重新部署憑證。
+
+**我有哪些配置通知的選項？**   您可以使用 Slack Webhook 或使用您喜歡的任何回呼 URL 向 Slack 傳送通知。
+
+## 與訂購憑證相關的通知
+{: #notifications-ordering-certificates}
+
+{{site.data.keyword.cloudcerts_short}} 會在您向 {{site.data.keyword.cloudcerts_short}} 訂購的憑證簽發時或順利更新時通知您。如果訂購失敗或更新失敗，也會通知您。
+{: shortdesc}
+
+設定回呼 URL 通知頻道，並能夠處理與網域驗證相關的事件是訂購和更新憑證的必要條件。訂購憑證時，{{site.data.keyword.cloudcerts_short}} 會向回呼 URL 傳送盤查 TXT 記錄，用於證明您擁有要為其要求憑證的網域。要求更新憑證時，也會傳送盤查 TXT 記錄。 
+
 
 ## 設定 Slack Webhook
 {: #setup-callback}
@@ -43,15 +61,18 @@ subcollection: certificate-manager
 
 1. 註冊 [Slack](https://slack.com/) 並設定工作區。
 2. 建立 Slack 頻道，您可以在這裡張貼通知。
-3. 為 Slack 頻道[設定 Webhook](https://api.slack.com/incoming-webhooks)。
+3. [設定 Webhook](https://api.slack.com/incoming-webhooks) 以用於 Slack 頻道。
 
 ## 設定回呼 URL
 {: #callback}
 
-若要觸發您團隊的更新處理程序，您可以使用回呼 URL，將通知張貼至您使用的工具。例如，您可以傳送通知以便報告至 PagerDuty、自動在 GitHub 開啟問題，或是觸發更新 Script。  
+若要觸發團隊的更新處理程序，您可以使用回呼 URL 以將通知公佈到使用的工具。例如，您可以傳送通知以便報告至 PagerDuty、自動在 GitHub 開啟問題，或是觸發更新 Script。您還可以自動觸發憑證部署，以回應在成功重新匯入或簽發憑證時傳送的通知。
 {: shortdesc}
 
-**重要事項：**您的回呼 URL 端點必須符合下列需求，才能與 {{site.data.keyword.cloudcerts_short}} 搭配使用：
+回呼 URL 是訂購憑證的先決條件。
+{: note}
+
+**重要事項：**回呼 URL 端點必須符合下列需求才能用於 {{site.data.keyword.cloudcerts_short}}：
 * 端點必須使用 HTTPS 通訊協定。
 * 端點不得要求 HTTP 標頭。這項需求包含授權標頭。
 * 端點必須傳回 `200 OK` 狀態碼，以指出成功遞送通知。
@@ -59,7 +80,7 @@ subcollection: certificate-manager
 ### 通知格式
 {: #notification_format}
 
-傳送到回呼 URL 的通知，是使用下列格式的實例非對稱金鑰所簽署的 JSON 文件。
+傳送到回呼 URL 的通知是使用下列格式的實例非對稱金鑰簽署的 JSON 文件。
 
 ```
 { "data":"<JWT FORMAT STRING>" }
@@ -68,10 +89,11 @@ subcollection: certificate-manager
 
 在您解碼並驗證有效負載之後，內容是[根據頻道版本](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions)的 JSON 字串。
 
+
 ## 配置通知頻道
 {: #adding-channel}
 
-在建立 Slack Webhook 或回呼 URL 之後，請將它新增至 {{site.data.keyword.cloudcerts_short}} 以開始接收關於到期憑證和重新匯入之憑證的通知。{{site.data.keyword.cloudcerts_short}} 會加密端點並安全地儲存它。
+建立 Slack Webhook 或回呼 URL 後，可以將其新增到 {{site.data.keyword.cloudcerts_short}} 以開始接收有關憑證到期、已重新匯入憑證、已簽發憑證以及網域驗證盤查的通知。{{site.data.keyword.cloudcerts_short}} 會加密端點並安全地儲存它。
 {: shortdesc}
 
 若要新增通知頻道，請完成下列步驟：
@@ -80,7 +102,7 @@ subcollection: certificate-manager
 2. 開啟**通知**標籤。
 3. 按一下**新增通知頻道**。
 4. 選擇您要使用的通知頻道類型。
-5. 輸入您要傳送通知到該處的 Webhook 或回呼 URL。
+5. 輸入要向其傳送通知的 Webhook 或回呼 URL。
 6. 按一下**儲存**。會顯示配置的摘要。
 
    **輸出範例**
@@ -115,7 +137,7 @@ subcollection: certificate-manager
     </tbody>
     </table>
 
-    當您儲存 Slack Webhook 時，{{site.data.keyword.cloudcerts_short}} 會自動傳送確認通知到您配置的 Slack 頻道。請檢查您的 Slack 頻道，以驗證您已收到此通知。
+    儲存 Slack Webhook 時，{{site.data.keyword.cloudcerts_short}} 會自動向已配置的 Slack 頻道傳送確認通知。請檢查您的 Slack 頻道，以驗證您已收到此通知。
     {: tip}
 7. （選用）重複這些步驟以新增其他通知頻道。
 
@@ -153,7 +175,7 @@ subcollection: certificate-manager
 ## 驗證回呼 URL 的 HTTP 有效負載
 {: #verify-callback}
 
-從 {{site.data.keyword.cloudcerts_short}} 傳送到回呼 URL 的每個 HTTP 有效負載，會根據 JWT 標準，使用非對稱金鑰配對自動進行簽署。  
+從 {{site.data.keyword.cloudcerts_short}} 傳送到回呼 URL 的每個 HTTP 有效負載都會根據 JWT 標準使用非對稱金鑰組自動簽署。  
 {: shortdesc}
 
 對於每個 {{site.data.keyword.cloudcerts_short}} 實例，會產生私密和公開金鑰，不會在其他 {{site.data.keyword.cloudcerts_short}} 實例之間共用。私密金鑰用來簽署 HTTP 有效負載，而您可以使用公開金鑰驗證有效負載確實是由 {{site.data.keyword.cloudcerts_short}} 產生，且未遭到第三方變更。
@@ -167,20 +189,22 @@ subcollection: certificate-manager
 ## 頻道版本
 {: #channel-versions}
 
-隨著 Certificate Manager 的發展，我們可能會不定期修改通知有效負載結構的格式。為了確保舊版相容性，傳送至現有頻道的有效負載將不會改變。   
+隨著 Certificate Manager 的發展，我們可能會不定期修改通知有效負載結構的格式。為確保與更早版本的相容性，傳送到現有頻道的有效負載不會進行變更。   
 
 如果您有現有的通知頻道（Slack 或回呼 URL），若要開始取得新版本的有效負載，請：
+
 1. 確定您的實作可以接受回呼 URL 的新有效負載。
 2. 建立新的通知頻道（一律會使用最新的頻道版本建立新頻道）。
 3. 測試新頻道運作正確。
 4. 刪除舊頻道。
 
-針對「頻道版本」，請參閱 [API 文件](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions)。
+如需頻道版本的資訊，請參閱 [API 文件](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions)。
 
 ## 範例
 {: #examples}
 
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)  
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls)  
    了解如何為到期憑證通知建立 GitHub 問題。
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/)  
-   了解如何為到期憑證通知建立 PagerDuty 突發事件問題。
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
+   瞭解如何建立 PagerDuty 突發事件以獲取憑證到期通知。
+* [如何使用回呼 URL 和 Cloud Functions 動作驗證網域 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

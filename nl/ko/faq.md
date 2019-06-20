@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-05-15"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -39,7 +39,7 @@ subcollection: certificate-manager
 {: #supported-pk-algorithms}
 {: faq}
 
-{{site.data.keyword.cloudcerts_short}}는 다음 공개 키 알고리즘을 사용하여 생성된 공개 키로 인증서를 지원합니다.
+{{site.data.keyword.cloudcerts_short}}는 다음과 같은 공개 키 알고리즘을 사용하여 생성된 공개 키로 인증서를 지원합니다.
 
 * RSA(Rivest-Shamir-Adleman)
 * 디지털 서명 알고리즘(DSA)
@@ -79,14 +79,63 @@ subcollection: certificate-manager
 
 콜백 및 Slack 알림만 지원됩니다.
 
+
 ## 내 인증서의 버전을 제어할 수 있습니까?
 {: #certificate-versioning}
 {: faq}
 
 기존 인증서와 동일한 도메인을 포함하지만 새 만료 날짜가 있는 새 버전의 인증서를 다시 가져오기 하여 인증서를 업데이트할 수 있습니다. 인증서를 다시 가져오면 기존 인증서 버전은 백업으로 유지됩니다. [인증서 다시 가져오기](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate)를 참조하십시오.
 
+
+
 ## 특정 사용자에게만 특정 인증서가 표시되도록 할 수 있습니까?
 {: #access-policies}
 {: faq}
 
 세분화된 액세스 제어를 위해 IAM 액세스 정책을 사용하여 인증서를 보호할 수 있습니다. [서비스 액세스 역할 관리](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles)를 참조하십시오.
+
+
+
+## 발행된 인증서를 해지하는 방법은 무엇입니까?
+{: #revoke-certificate}
+{: faq}
+
+현재 {{site.data.keyword.cloudcerts_short}}에는 사용할 수 있는 해지 API가 없습니다. 그러나 Let's Encrypt API를 사용하여 인증서 개인 키를 통해 인증서를 해지할 수 있습니다. [Let's Encrypt 문서](https://letsencrypt.org/docs/revoking/)에서 Let's Encrypt 인증서를 해지하는 방법을 알아볼 수 있습니다.
+
+
+
+## 내 인증서 주문 상태가 오랫동안 보류 상태입니다.
+{: #certificate-order-status}
+{: faq}
+
+느린 DNS 네트워크에서는 주문을 완료하는 데 최대 20분 정도가 걸릴 수 있습니다.
+
+## 이 서비스에서 사용자가 내 주문에서 요청하는 도메인을 소유하고 있는지 유효성 검증하려고 시도하는 데 얼마나 걸립니까?
+{: #certificate-order-validation}
+{: faq}
+
+도메인 유효성 검증 인증 확인을 전송한 후 {{site.data.keyword.cloudcerts_short}}는 최대 10분 동안 사용자가 요청한 도메인을 소유하고 있는지 유효성 검증하려고 시도합니다. DNS가 10분 이내에 TXT 레코드 인증 확인으로 업데이트되지 않으면 주문이 실패합니다.
+
+## {{site.data.keyword.cloudcerts_short}} 공용 API를 사용하여 내 인증서 주문의 상태를 어떻게 확인합니까?
+{: #certificate-order-status-api}
+{: faq}
+
+`Get certificate metadata` API를 사용하여 인증서 주문 상태를 폴링할 수 있습니다.
+
+## 내 인증서가 완료되면 알림을 받을 수 있습니까?
+{: #certificate-order-notification}
+{: faq}
+
+알림 채널을 구성한 경우 인증서가 발행되거나 주문에 실패하면 사용자에게 알립니다. 알림 채널의 버전이 v4 이상이어야 합니다.
+
+## 내 주문이 실패했습니다. 이유는 무엇입니까?
+{: #certificate-order-failure}
+{: faq}
+
+인증서 메타데이터, UI 및 주문 실패 시 받은 알림에서 오류 코드 및 메시지를 찾을 수 있습니다.
+
+## 내 기존 Slack 알림 채널에서 인증서 주문 이벤트를 수신하지 않는 이유는 무엇입니까?
+{: #missing-notification-for-ordered-certificate}
+{: faq}
+
+Certificate Manager 설정 탭에서 Slack 알림 채널을 최신 버전으로 업그레이드하십시오.

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 Os recursos a seguir e as mudanças no serviço {{site.data.keyword.cloudcerts_long}} estão disponíveis.
 
+
+## 10 de junho de 2019
+{: 10June2019}
+
+- **Renovar certificados pedidos Let's Encrypt**  
+  Agora é possível renovar os certificados Let's Encrypt que você pediu usando o {{site.data.keyword.cloudcerts_short}}. [Saiba mais sobre como pedir certificados](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
+
+## 6 de maio de 2019
+{: 6May2019}
+
+- **Pedir certificados Let's Encrypt**  
+  Agora é possível pedir os certificados Let's Encrypt. [Saiba mais sobre como pedir certificados](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
 ## 18 de fevereiro de 2019
-{: 18February2018}
+{: 18February2019}
 
 - **Ativo em Tóquio**  
   O {{site.data.keyword.cloudcerts_long_notm}} está disponível no local de Tóquio.

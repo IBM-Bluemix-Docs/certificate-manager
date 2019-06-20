@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_long}} サービスには、以下のフィーチャーおよび変更があります。
 
+
+## 2019 年 6 月 10 日
+{: 10June2019}
+
+- **注文した Let's Encrypt 証明書の更新**  
+{{site.data.keyword.cloudcerts_short}} を使用して注文した Let's Encrypt 証明書を更新できるようになりました。[証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
+
+
+## 2019 年 5 月 6 日
+{: 6May2019}
+
+- **Let's Encrypt 証明書の注文**  
+Let's Encrypt 証明書を注文できるようになりました。[証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
+
 ## 2019 年 2 月 18 日
-{: 18February2018}
+{: 18February2019}
 
 - **東京で使用可能**  
   {{site.data.keyword.cloudcerts_long_notm}} は東京のロケーションで使用可能です。
@@ -41,7 +55,7 @@ subcollection: certificate-manager
 ## 2019 年 1 月 6 日
 {: 6January2019}
 - **非推奨 API**  
-  **証明書のリスト**と**検索証明書リポジトリー** v2 API は非推奨となり、 将来削除されます。v3 API にアップグレードする必要があります。 詳しくは、[API 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ](https://cloud.ibm.com/apidocs/certificate-manager)を参照してください。
+  **証明書のリスト**と**検索証明書リポジトリー** v2 API は非推奨となり、 将来削除されます。 v3 API にアップグレードする必要があります。 詳しくは、[API 資料 ![外部リンク・アイコン](../../icons/launch-glyph.svg "外部リンク・アイコン") ](https://cloud.ibm.com/apidocs/certificate-manager)を参照してください。
 
 ## 2018 年 12 月 9 日
 {: 9December2018}
@@ -51,7 +65,7 @@ subcollection: certificate-manager
 ## 2018 年 12 月 5 日
 {: 5December2018}
 - **再インポート通知**    
-有効期限が切れる証明書の代わりに更新された証明書を再インポートすると、証明書が再インポートされたことの通知を受け取ることがあります。この通知は、更新された証明書を SSL/TLS 終端ポイントにデプロイするよう自分とチームに思い出させるものとなります。この通知は、新しく作成された通知チャネルにのみ利用可能です。
+有効期限が切れる証明書の代わりに更新された証明書を再インポートすると、証明書が再インポートされたことの通知を受け取ることがあります。 この通知は、更新された証明書を SSL/TLS 終端ポイントにデプロイするよう自分とチームに思い出させるものとなります。 この通知は、新しく作成された通知チャネルにのみ利用可能です。
 
 - **{{site.data.keyword.cloudcerts_short}} はフランクフルトのロケーションで使用可能です。**     
 このサービスは EU の要件に準拠しています。

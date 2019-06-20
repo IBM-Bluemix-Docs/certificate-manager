@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,18 +25,35 @@ subcollection: certificate-manager
 # Configurazione delle notifiche
 {: #configuring-notifications}
 
-I certificati sono generalmente validi solo per un determinato periodo di tempo. Quando un certificato che utilizzi scade, potresti riscontrare tempi di inattività per la tua applicazione. Per evitare tempi di inattività, puoi configurare {{site.data.keyword.cloudcerts_full}} per farti inviare le notifiche per i certificati che stanno per scadere in modo da essere avvertito in tempo per rinnovarli. 
-
-Verrai avvertito anche quando una versione rinnovata del tuo certificato viene reimportata in {{site.data.keyword.cloudcerts_short}} al posto di quella scaduta in modo da ricordarti anche di distribuirla nei punti di terminazione SSL/TLS. Questa notifica dei certificati reimportati verrà inviata solo ai canali della [versione 2 del canale](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+{{site.data.keyword.cloudcerts_full}} può inviarti le notifiche sugli eventi del ciclo di vita del certificato. Queste notifiche includono dei promemoria per rinnovare i certificati prima che scadano e di distribuire i certificati quando sono pronti. Per ricevere le notifiche da {{site.data.keyword.cloudcerts_short}}, puoi configurare un canale di notifica. Puoi specificare un webhook Slack, un URL di callback o una qualsiasi combinazione dei due.
 {: shortdesc}
 
-**Quando ricevo la notifica?**  
-A seconda della data di scadenza del certificato che hai caricato in {{site.data.keyword.cloudcerts_full_notm}}, riceverai una notifica 90, 60, 30, 10 e 1 giorno prima della scadenza del certificato. Inoltre, ricevi notifiche giornaliere sui certificati scaduti. Le notifiche giornaliere iniziano il primo giorno dopo che il tuo certificato è scaduto.
+La funzione delle notifiche viene utilizzata anche quando [ordini i certificati](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates) da {{site.data.keyword.cloudcerts_short}}. Per provare che gestisci il dominio per cui stai richiedendo un certificato, {{site.data.keyword.cloudcerts_short}} invia una verifica come una notifica al tuo URL di callback. La verifica è un record di testo, che puoi inserire nel servizio DNS (Domain Name System) in cui viene registrato il tuo dominio. Quando il record di testo viene inserito, la verifica viene considerata completata. Poiché la verifica è inviata come una notifica al tuo URL di callback, puoi automatizzare il processo di convalida del dominio eseguendo del codice in risposta all'evento di notifica.
 
-Devi rinnovare il tuo certificato e reimportare questo certificato al posto di quello vecchio in {{site.data.keyword.cloudcerts_full_notm}} per arrestare l'invio delle notifiche. Quando reimporti il tuo certificato, ricevi una notifica indicante che il tuo certificato è stato importato per ricordarti di distribuirlo. 
+## Notifiche per monitorare la scadenza del certificato
+{: #notifications-monitoring-certificate-expiration}
+
+I certificati sono generalmente validi per un determinato periodo di tempo. Quando un certificato che utilizzi scade, potresti riscontrare tempi di inattività per la tua applicazione. Per evitare tempi di inattività puoi configurare {{site.data.keyword.cloudcerts_short}} per farti inviare le notifiche per i certificati che stanno per scadere in modo da essere avvertito in tempo per rinnovarli. 
+
+Vieni avvertito anche quando una versione rinnovata del tuo certificato viene reimportata in {{site.data.keyword.cloudcerts_short}} al posto di quella scaduta. Questo per ricordarti di distribuirla nei punti di terminazione SSL/TLS. Questa notifica dei certificati reimportati viene inviata solo ai canali dalla [versione 2 del canale](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+
+
+**Quando ricevo la notifica?**   
+A seconda della data di scadenza del certificato che hai caricato in {{site.data.keyword.cloudcerts_short}}, riceverai una notifica 90, 60, 30, 10 e 1 giorno prima della scadenza del certificato. Inoltre, ricevi notifiche giornaliere sui certificati scaduti. Le notifiche giornaliere iniziano il primo giorno dopo che il tuo certificato è scaduto.
+
+Devi rinnovare il tuo certificato e reimportare questo certificato al posto di quello vecchio in {{site.data.keyword.cloudcerts_short}} per arrestare l'invio delle notifiche. Quando reimporti il tuo certificato ricevi una notifica che indica che il tuo certificato è stato reimportato e ti ricorda di ridistribuirlo. 
 
 **Quali sono le mie opzioni per configurare le notifiche?**  
-Puoi inviare notifiche a Slack usando un webhook Slack o utilizzare qualsiasi URL di callback che preferisci.
+Puoi inviare notifiche a Slack usando un webhook Slack o utilizzare qualsiasi URL di callback preferisci.
+
+## Notifiche correlate all'ordinazione dei certificati
+{: #notifications-ordering-certificates}
+
+{{site.data.keyword.cloudcerts_short}} ti avverte quando un certificato che ordini da {{site.data.keyword.cloudcerts_short}} viene emesso o rinnovato correttamente. Ricevi una notifica anche se il tuo ordine o un rinnovo ha esito negativo.
+{: shortdesc}
+
+La configurazione di un canale di notifica URL di callback e la possibilità di gestire gli eventi correlati alla convalida del dominio, sono dei prerequisiti per l'ordinazione e il rinnovo dei certificati. Quando ordini un certificato, {{site.data.keyword.cloudcerts_short}} invia un record txt di verifica al tuo URL di callback che utilizzi per provare di gestire il dominio per cui stai richiedendo il certificato. Un record txt di verifica viene inviato anche quando richiedi di rinnovare un certificato. 
+
 
 ## Configurazione di un webhook Slack
 {: #setup-callback}
@@ -50,8 +67,11 @@ Per configurare un webhook Slack, completa la seguente procedura:
 ## Configurazione di un URL di callback
 {: #callback}
 
-Per attivare il processo di rinnovo per il tuo team, puoi utilizzare un URL di callback per inviare notifiche agli strumenti che utilizzi. Ad esempio, puoi inviare notifiche per le segnalazioni a PagerDuty, aprire automaticamente un problema in GitHub o attivare gli script di rinnovo.  
+Per attivare il processo di rinnovo per il tuo team, puoi utilizzare un URL di callback per inviare notifiche agli strumenti che utilizzi. Ad esempio, puoi inviare notifiche per le segnalazioni a PagerDuty, aprire automaticamente un problema in GitHub o attivare gli script di rinnovo. Puoi anche attivare automaticamente la distribuzione dei certificati nella risposta alle notifiche quando i certificati vengono reimportati o emessi correttamente.
 {: shortdesc}
+
+Un URL di callback è un prerequisito per l'ordinazione di certificati.
+{: note}
 
 **Importante:** l'endpoint del tuo URL di callback deve soddisfare i seguenti requisiti per poter essere utilizzato con {{site.data.keyword.cloudcerts_short}}:
 * L'endpoint deve utilizzare il protocollo HTTPS.
@@ -61,7 +81,7 @@ Per attivare il processo di rinnovo per il tuo team, puoi utilizzare un URL di c
 ### Formato della notifica
 {: #notification_format}
 
-La notifica che viene inviata al tuo URL di callback è un documento JSON firmato con la tua chiave asimmetrica dell'istanza nel formato riportato di seguito. 
+La notifica che viene inviata al tuo URL di callback è un documento JSON firmato con la tua chiave asimmetrica dell'istanza nel seguente formato. 
 
 ```
 { "data":"<JWT FORMAT STRING>" }
@@ -70,10 +90,11 @@ La notifica che viene inviata al tuo URL di callback è un documento JSON firmat
 
 Dopo che hai decodificato e verificato il payload, il contenuto è una stringa JSON [che si basa sulla versione del canale](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
+
 ## Configurazione di un canale di notifica
 {: #adding-channel}
 
-Dopo aver creato un webhook Slack o un URL di callback, lo aggiungi a {{site.data.keyword.cloudcerts_short}} per iniziare a ricevere notifiche sui certificati in scadenza e su quelli reimportati. {{site.data.keyword.cloudcerts_short}} crittografa l'endpoint e lo memorizza in modo sicuro.
+Dopo aver creato un webhook Slack o un URL di Callback, lo puoi aggiungere a {{site.data.keyword.cloudcerts_short}} per iniziare a ricevere notifiche sui certificati in scadenza, reimportati, emessi e sulle verifiche per la convalida del dominio. {{site.data.keyword.cloudcerts_short}} crittografa l'endpoint e lo memorizza in modo sicuro.
 {: shortdesc}
 
 Per aggiungere un canale di notifica, completa la seguente procedura:
@@ -172,17 +193,19 @@ Per scaricare la chiave pubblica, completa la seguente procedura:
 Man mano che Certificate Manager si evolve, potremmo modificare il formato della struttura del payload delle notifiche di volta in volta. Per garantire la compatibilità con le versioni precedenti, il payload inviato ai canali esistenti non cambierà.    
 
 Se hai canali di notifica esistenti (Slack o URL di callback), per iniziare a utilizzare la nuova versione del payload:
+
 1. Per l'URL di callback, assicurati che la tua implementazione possa accettare il nuovo payload.
 2. Crea un nuovo canale di notifica (i nuovi canali vengono sempre creati con la versione del canale più recente).
-3. Verifica che il nuovo canale funzioni correttamente. 
-4. Elimina il vecchio canale. 
+3. Verifica che il nuovo canale funzioni correttamente.
+4. Elimina il vecchio canale.
 
 Per le versioni dei canali, controlla la [documentazione API](https://cloud.ibm.com/apidocs/certificate-manager#notification-channel-versions).
 
 ## Esempi
 {: #examples}
 
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/08/use-certificate-manager-avoid-outages-using-callback-urls/)  
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls)  
    Impara come creare elementi di lavoro GitHub per le notifiche di certificato in scadenza.
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/blogs/bluemix/2018/10/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2/)  
-   Impara come creare elementi di lavoro di incidenti PagerDuty per le notifiche di certificato in scadenza.
+* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
+   Impara come creare incidenti PagerDuty per le notifiche di certificato in scadenza.
+* [How to validate a domain using a Callback URL and a Cloud Function action ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

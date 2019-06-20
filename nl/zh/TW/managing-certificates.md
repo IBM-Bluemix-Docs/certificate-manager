@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,7 @@ subcollection: certificate-manager
 # 從儀表板管理憑證
 {: #managing-certificates-from-the-dashboard}
 
-您可以使用 {{site.data.keyword.cloudcerts_full}} 服務儀表板，來管理您從協力廠商發證者取得以與 {{site.data.keyword.IBM_notm}} 雲端型應用程式或服務搭配使用的憑證。在您匯入憑證及金鑰之後，服務就會對其進行加密及儲存。
-{: shortdesc}
-
-## 匯入憑證
-{: #importing-a-certificate}
-
-匯入憑證以便可以進行管理。
+您可以使用 {{site.data.keyword.cloudcerts_full}} 服務儀表板，來管理您從協力廠商發證者取得以與 {{site.data.keyword.IBM_notm}} 雲端型應用程式或服務搭配使用的憑證。
 {: shortdesc}
 
 ## 支援的憑證格式及公開金鑰演算法
@@ -46,6 +40,12 @@ subcollection: certificate-manager
 * 橢圓曲線數位簽章演算法 (ECDSA)
 * 橢圓曲線及 Diffie-Hellman 金鑰協定通訊協定 (ECDH)
 
+## 匯入憑證
+{: #importing-a-certificate}
+
+匯入憑證以便可以進行管理。
+{: shortdesc}
+
 **開始之前**
 
 * 建立有效、使用相符私密金鑰（金鑰為選用的）的未到期憑證。
@@ -54,7 +54,7 @@ subcollection: certificate-manager
 
 若要匯入憑證，請按一下**匯入憑證**，並提供下列詳細資料：
 
-1. 輸入顯示名稱。
+1. 提供憑證名稱。
 2. 按一下**瀏覽**來選取 PEM 格式的憑證檔案。
 3. 選用項目：按一下**瀏覽**來選取 PEM 格式的憑證私密金鑰。
 4. 適用時，提供 PEM 格式的中繼憑證檔。
@@ -106,6 +106,10 @@ subcollection: certificate-manager
     <td>憑證不再有效的日期（UTC 時區）。</td>
   </tr>
   <tr>
+    <td>狀態</td>
+    <td>憑證的狀態。</td>
+  </tr>
+  <tr>
     <td>憑證 ID</td>
     <td>匯入時提供給憑證的已產生 ID。</td>
   </tr>
@@ -142,6 +146,40 @@ subcollection: certificate-manager
 1. 展開憑證的列。
 2. 按一下**舊版**鏈結。
 
+## 訂購憑證
+{: #order-certificates}
+
+訂購憑證之前，請[先完成必要的設定](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)。
+
+1. 提供憑證名稱。
+2. 選取憑證管理中心。
+3. 輸入主要網域及任何替代網域。
+4. 選取適當的演算法及金鑰演算法。
+5. 按一下**訂購**。
+
+訂購憑證限制為每個 {{site.data.keyword.cloudcerts_short}} 實例每分鐘 5 個訂購，每個 IBM 使用者帳戶每小時 100 個訂購，每週對於相同網域只能訂購 5 個憑證。
+{: note}
+
+## 更新憑證
+{: #renew-certificates}
+
+若要更新憑證，請完成下列步驟：
+  1. 在您要更新的憑證列上按一下功能表。
+  2. 按一下**更新憑證**。
+  3. 選用項目：您可以選擇重設憑證的金鑰，方法是勾選**重設憑證金鑰**勾選框。這會以新的金鑰組更新您的憑證。
+  
+  當您重設憑證金鑰時，請務必在使用憑證和金鑰的任何位置部署新的憑證和金鑰。
+  {: note}
+    
+  4. 按一下**更新**。
+  
+  您只能更新透過 {{site.data.keyword.cloudcerts_short}} 訂購的憑證。
+  {: note}
+
+更新憑證限制為每分鐘每個憑證 5 個更新要求，每個 IBM 使用者帳戶每小時 100 個更新要求。
+{: note}
+
+
 ## 搜尋憑證
 {: #searching-certificates}
 
@@ -161,6 +199,9 @@ subcollection: certificate-manager
 
 1. 選取您要下載之憑證的勾選框。
 2. 按一下**下載憑證**。根據匯入至服務的內容，您會收到包含憑證之 PEM 檔案的壓縮檔、相關聯私密金鑰及相關聯中繼憑證。
+
+無法下載到期的憑證。
+{: note}
 
 ## 刪除憑證
 {: #deleting-certificates}

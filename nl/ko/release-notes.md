@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_long}} 서비스에 대한 다음 기능 및 변경사항이 사용 가능합니다.
 
+
+## 2019년 6월 10일
+{: 10June2019}
+
+- **주문된 Let's Encrypt 인증서 갱신**  
+  이제 {{site.data.keyword.cloudcerts_short}}를 사용하여 주문한 Let's Encrypt 인증서를 갱신할 수 있습니다. [인증서 주문에 대해 자세히 알아보십시오](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
+
+## 2019년 5월 6일
+{: 6May2019}
+
+- **Let's Encrypt 인증서 주문**  
+  이제 Let's Encrypt 인증서를 주문할 수 있습니다. [인증서 주문에 대해 자세히 알아보십시오](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
 ## 2019년 2월 18일
-{: 18February2018}
+{: 18February2019}
 
 - **도쿄에서 사용**  
   {{site.data.keyword.cloudcerts_long_notm}}는 도쿄 위치에서 사용 가능합니다.
@@ -36,7 +50,7 @@ subcollection: certificate-manager
 ## 2019년 1월 13일
 {: 13January2019}
 - **콜백 페이로드 버전 3**  
-  [API 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/certificate-manager)를 참조하십시오. 
+  [API 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/certificate-manager)를 참조하십시오.
 
 ## 2019년 1월 6일
 {: 6January2019}
@@ -59,7 +73,7 @@ subcollection: certificate-manager
 ## 2018년 12월 5일
 {: 2December2018}
 - **콜백 및 Slack 페이로드 버전 2**  
-  [API 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/certificate-manager)를 참조하십시오. 
+  [API 문서 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://cloud.ibm.com/apidocs/certificate-manager)를 참조하십시오.
 
 ## 2018년 11월 14일
 {: 14November2018}

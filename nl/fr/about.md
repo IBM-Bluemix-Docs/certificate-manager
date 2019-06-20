@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -22,29 +22,32 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-
 # A propos de {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_long}} vous permet de gérer les certificats SSL pour vos applications et vos services cloud {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.cloudcerts_full}} vous aide à obtenir, stocker et gérer des certificats SSL pour vos applications basées cloud {{site.data.keyword.IBM_notm}}.
 {: shortdesc}
 
-Vous pouvez importer des certificats SSL que vous obtenez pour vos applications et vos services, les stocker en toute sécurité et centraliser l'affichage des certificats que vous utilisez.
+Vous pouvez importer des certificats SSL que vous obtenez pour vos applications et vos services, les stocker en toute sécurité et centraliser l'affichage des certificats que vous utilisez. Ou bien, vous pouvez commander des certificats publics via Certificate Manager auprès d'autorités de certification prises en charge.
 
 Vous pouvez gérer vos certificats en procédant comme suit :
 
-* Soyez averti avant l'expiration de vos certificats pour être sûr de pouvoir les renouveler à temps.
-* Affichez les types de certificats sur vos déploiements et assurez-vous qu'ils répondent aux politiques de l'organisation.
-* Recherchez les certificats que vous devez remplacer lorsque de nouvelles exigences de conformité ou de sécurité sont émises.
+* Soyez averti avant l'expiration de vos certificats pour être sûr de pouvoir les renouveler à temps.  
+* Utilisez des notifications pour déclencher le renouvellement automatique de certificat.  
+* Affichez les types de certificats sur vos déploiements et assurez-vous qu'ils répondent aux politiques de l'organisation.  
+* Recherchez les certificats que vous devez remplacer lorsque de nouvelles exigences de conformité ou de sécurité sont émises.  
 * Définissez les contrôles qui déterminent qui peut accéder à et gérer vos certificats.
+* Commandez de nouveaux certificats publics
+
 
 ![Diagramme d'architecture de haut niveau du service](images/high-level-architecture.png)
 <caption>Figure 1. Architecture de haut niveau du service.</caption>
 
+
 ## Sécurité de clé privée
 {: #private-key-security}
 
-Lorsque vous importez un certificat et la clé privée correspondante dans {{site.data.keyword.cloudcerts_short}}, le service utilise un algorithme AES (Advanced Encryption Standard) 256 pour chiffrer la clé privée. {{site.data.keyword.cloudcerts_short}} sauvegarde cette clé chiffrée unique à utiliser avec votre instance de service.
+Lorsque vous importez ou commandez un certificat dans {{site.data.keyword.cloudcerts_short}}, le service utilise un algorithme AES (Advanced Encryption Standard) 256 pour chiffrer la clé privée. {{site.data.keyword.cloudcerts_short}} sauvegarde cette clé chiffrée unique à utiliser avec votre instance de service.
 
 ## Intégrations
 {: #integrations}
@@ -61,20 +64,20 @@ Lorsque vous importez un certificat et la clé privée correspondante dans {{sit
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index) centralise les informations relatives aux services {{site.data.keyword.cloud_notm}}. Ces informations incluent notamment l'indication des certificats ayant expiré et des certificats sur le point d'expirer dans des instances de {{site.data.keyword.cloudcerts_short}} dans votre compte {{site.data.keyword.cloud_notm}}. [En savoir plus sur {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-index#index).</td>
+    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started) centralise les informations relatives aux services {{site.data.keyword.cloud_notm}}. Ces informations incluent notamment l'indication des certificats ayant expiré et des certificats sur le point d'expirer dans des instances de {{site.data.keyword.cloudcerts_short}} dans votre compte {{site.data.keyword.cloud_notm}}. [En savoir plus sur {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started).</td>
   </tr>
   <tr>
-    <td>{{site.data.keyword.cloudaccesstrailfull_notm}}</td>
-    <td>Vous pouvez utiliser [le service {{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started) pour suivre la façon dont les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long_notm}} dans {{site.data.keyword.cloud_notm}}. [En savoir plus sur {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started).
-    <p>Pour obtenir une liste des actions qui génère un événement, voir [Evénements {{site.data.keyword.cloudaccesstrailshort}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
+    <td>{{site.data.keyword.at_short}}</td>
+    <td>Vous pouvez utiliser [{{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started) pour suivre la façon dont utilisateurs et applications interagissent avec le service {{site.data.keyword.cloudcerts_long_notm}} dans {{site.data.keyword.cloud_notm}}.
+    <p>Pour obtenir la liste des actions qui génèrent un événement, voir [Evénements {{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>Stockez vos certificats de domaine personnalisé dans le service {{site.data.keyword.cloudcerts_short}}, puis utilisez des CRN de certificat à lier à des domaines personnalisés dans {{site.data.keyword.apiconnect_short}}. [En savoir plus sur {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index).</p></td>
+    <td>Stockez vos certificats de domaine personnalisé dans le service {{site.data.keyword.cloudcerts_short}}, puis utilisez des CRN de certificat à lier à des domaines personnalisés dans {{site.data.keyword.apiconnect_short}}. [En savoir plus sur {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index#index).</p></td>
   </tr>
 </table>
 
-## Emplacements
+## Disponibilité
 {: #availability}
 
 {{site.data.keyword.cloudcerts_short}} est disponible à Dallas, Londres, Francfort et Tokyo.
@@ -85,3 +88,23 @@ Lorsque vous importez un certificat et la clé privée correspondante dans {{sit
 {: #limits}
 
 Vous pouvez télécharger un maximum de 1 000 certificats par instance.
+
+## Conformité et normes
+{: #compliance-and-standards}
+
+{{site.data.keyword.cloudcerts_short}} terminé avec succès plusieurs certifications et audits, et satisfait plusieurs normes importantes.
+
+### Loi HIPAA
+{: #compliance-hippa}
+
+{{site.data.keyword.cloudcerts_short}} satisfait les contrôles IBM requis qui sont équivalents à la loi Health Insurance Portability and Accountability Act (HIPAA) de 1996 ainsi que les exigences Security and Privacy Rule.
+
+### Organisation internationale de normalisation (ISO)
+{: #compliance-iso}
+
+* Certificat {{site.data.keyword.IBM_notm}} Services (PaaS et SaaS) - ISO 27001
+
+### Règlement général sur la protection des données (RGPD)
+{: #compliance-gdpr}
+
+Le RGPD cherche à créer un cadre législatif harmonisé sur la protection des données dans l'Union européenne et vise à redonner aux citoyens le contrôle de leurs données personnelles, tout en imposant des règles strictes à ceux chargés d'héberger et de "traiter" ces données, partout dans le monde. Ce règlement introduit également des règles en matière de libre circulation des données personnelles au sein et en dehors de l'UE. Pour plus d'informations, voir la [déclaration de confidentialité d'IBM](https://www.ibm.com/privacy/).

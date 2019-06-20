@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,15 +27,29 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_long}} 服務的下列特性及變更已可使用。
 
+
+## 2019 年 6 月 10 日
+{: 10June2019}
+
+- **更新訂購的 Let's Encrypt 憑證**  
+  現在，您可以更新使用 {{site.data.keyword.cloudcerts_short}} 訂購的 Let's Encrypt 憑證。[進一步瞭解訂購憑證](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)。
+
+
+## 2019 年 5 月 6 日
+{: 6May2019}
+
+- **訂購 Let's Encrypt 憑證**  
+  現在，您可以訂購 Let's Encrypt 憑證。[進一步瞭解訂購憑證](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)。
+
 ## 2019 年 2 月 18 日
-{: 18February2018}
+{: 18February2019}
 
 - **在東京推出**  
   {{site.data.keyword.cloudcerts_long_notm}} 提供於東京位置。
 
 ## 2019 年 1 月 13 日
 {: 13January2019}
-- **Callback payload 第 3 版**  
+- **回呼有效負載第 3 版**  
   [請參閱 API 文件 ![外部鏈結圖示](../../icons/launch-glyph.svg "外部鏈結圖示")](https://cloud.ibm.com/apidocs/certificate-manager)。
 
 ## 2019 年 1 月 6 日

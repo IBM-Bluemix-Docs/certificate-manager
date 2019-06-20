@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,7 @@ subcollection: certificate-manager
 # ダッシュボードからの証明書の管理
 {: #managing-certificates-from-the-dashboard}
 
-{{site.data.keyword.cloudcerts_full}} サービス・ダッシュボードを使用して、サード・パーティー発行者から入手して {{site.data.keyword.IBM_notm}} Cloud ベースのアプリまたはサービスで使用する証明書を管理できます。 証明書と鍵は、インポート後にサービスによって暗号化されて保管されます。
-{: shortdesc}
-
-## 証明書のインポート
-{: #importing-a-certificate}
-
-証明書をインポートして、管理できるようにします。
+{{site.data.keyword.cloudcerts_full}} サービス・ダッシュボードを使用して、サード・パーティー発行者から入手して {{site.data.keyword.IBM_notm}} Cloud ベースのアプリまたはサービスで使用する証明書を管理できます。
 {: shortdesc}
 
 ## サポートされている証明書形式および公開鍵アルゴリズム
@@ -46,6 +40,12 @@ subcollection: certificate-manager
 * 楕円曲線デジタル署名アルゴリズム (ECDSA)
 * 楕円曲線 Diffie-Hellman 鍵合意プロトコル (ECDH)
 
+## 証明書のインポート
+{: #importing-a-certificate}
+
+証明書をインポートして、管理できるようにします。
+{: shortdesc}
+
 **始める前に**
 
 * 有効で、期限が切れていない証明書を、一致する秘密鍵とともに作成します (鍵は任意)。
@@ -54,7 +54,7 @@ subcollection: certificate-manager
 
 証明書をインポートするには、**「証明書のインポート (Import Certificate)」**をクリックし、以下の詳細を指定します。
 
-1. 表示名を入力します。
+1. 証明書名を指定します。
 2. **「参照」**をクリックし、PEM 形式の証明書ファイルを選択します。
 3. オプション: **「参照」**をクリックし、PEM 形式の証明書ファイルの秘密鍵を選択します。
 4. 該当する場合、PEM フォーマットの中間証明書ファイルを指定します。
@@ -99,15 +99,19 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>有効期限開始日 (Valid from)</td>
-    <td>証明書が有効になった日付 (UTC タイム・ゾーン)。</td>
+    <td>証明書が有効になった日付 (UTC タイム・ゾーン)。 </td>
   </tr>
   <tr>
     <td>有効期限終了日 (Expires on)</td>
-    <td>証明書が無効になる日付 (UTC タイム・ゾーン)。</td>
+    <td>証明書が無効になる日付 (UTC タイム・ゾーン)。 </td>
+  </tr>
+  <tr>
+    <td>状況</td>
+    <td>証明書の状況。</td>
   </tr>
   <tr>
     <td>証明書 ID (Certificate ID)</td>
-    <td>インポート時に証明書に指定された、生成された ID。 </td>
+    <td>インポート時に証明書に指定された、生成された ID。</td>
   </tr>
 </table>
 
@@ -142,6 +146,43 @@ subcollection: certificate-manager
 1. 証明書の行を展開します。
 2. **「以前のバージョン (Previous version)」**リンクをクリックします。
 
+## 証明書の注文
+{: #order-certificates}
+
+証明書を注文する前に、[
+必要なセットアップを完了しておく必要があります](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)。
+
+
+1. 証明書名を指定します。
+2. 認証局を選択します。
+3. 1 次ドメイン、および代替ドメインがあれば代替ドメインを入力します。
+4. 適切なアルゴリズムと鍵アルゴリズムを選択します。
+5. **「注文」**をクリックします。
+
+証明書の注文は、{{site.data.keyword.cloudcerts_short}} インスタンスにつき 5 件の注文/分、IBM ユーザー・アカウントにつき 100 件の注文/時間、週あたり同じドメインに対して 5 件の証明書に制限されています。
+{: note}
+
+## 証明書の更新
+{: #renew-certificates}
+
+証明書を更新するには、以下のステップを実行します。
+  1. 更新する証明書の行のメニューをクリックします。
+  2. **「証明書の更新 (Renew Certificate)」**をクリックします。
+  3. オプション:**「証明書の鍵の再設定 (Rekey certificate)」**チェック・ボックスをオンにすることで、
+証明書の鍵を再設定できます。この操作により、証明書が新しい鍵ペアで更新されます。
+  
+  証明書の鍵を再設定するときは、それが使用されているすべての場所に新しい証明書と鍵を配置してください。
+  {: note}
+    
+  4. **「更新 (Renew)」**をクリックします。
+  
+  更新できるのは、{{site.data.keyword.cloudcerts_short}} 経由で注文した証明書だけです。
+  {: note}
+
+証明書の更新は、1 つの証明書につき 1 分あたり 5 回の更新要求、1 つの IBM ユーザー・アカウントにつき 1 時間あたり 100 回の更新に制限されています。
+{: note}
+
+
 ## 証明書の検索
 {: #searching-certificates}
 
@@ -161,6 +202,9 @@ subcollection: certificate-manager
 
 1. ダウンロードする証明書のチェック・ボックスを選択します。
 2. **「証明書のダウンロード (Download Certificate)」**をクリックします。 サービスに何をインポートしたかに応じて、証明書、関連付けられた秘密鍵、および関連付けられた中間証明書の PEM ファイルを含む圧縮ファイルを受信します。
+
+期限切れの証明書をダウンロードすることはできません。
+{: note}
 
 ## 証明書の削除
 {: #deleting-certificates}

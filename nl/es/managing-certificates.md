@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,7 @@ subcollection: certificate-manager
 # Gestión de certificados desde el panel de control
 {: #managing-certificates-from-the-dashboard}
 
-Puede utilizar el panel de control del servicio {{site.data.keyword.cloudcerts_full}} para gestionar certificados que obtenga de emisores externos para utilizarlos con las apps o servicios basados en la nube de {{site.data.keyword.IBM_notm}}. Después de importar los certificados y las claves, el servicio los cifrará y los almacenará.
-{: shortdesc}
-
-## Importación de un certificado
-{: #importing-a-certificate}
-
-Importe sus certificados para poderlos gestionar.
+Puede utilizar el panel de control del servicio {{site.data.keyword.cloudcerts_full}} para gestionar certificados que obtenga de emisores externos para utilizarlos con las apps o servicios basados en la nube de {{site.data.keyword.IBM_notm}}.
 {: shortdesc}
 
 ## Formatos de certificado y algoritmos de claves públicas soportados
@@ -46,6 +40,12 @@ Importe sus certificados para poderlos gestionar.
 * Elliptic Curve Digital Signature Algorithm (ECDSA)
 * Protocolo de establecimiento de claves Elliptic Curve Diffie-Hellman (ECDH)
 
+## Importación de un certificado
+{: #importing-a-certificate}
+
+Importe sus certificados para poderlos gestionar.
+{: shortdesc}
+
 **Antes de empezar**
 
 * Cree un certificado válido no caducado con una clave privada coincidente (la clave es opcional).
@@ -54,7 +54,7 @@ Importe sus certificados para poderlos gestionar.
 
 Para importar un certificado, pulse **Importar certificado** y proporcione los detalles siguientes:
 
-1. Especifique un nombre de visualización.
+1. Especifique un nombre de certificado.
 2. Para seleccionar el archivo de certificado en formato PEM, pulse **Examinar**.
 3. Opcional: Para seleccionar la clave privada del certificado en formato PEM, pulse **Examinar**.
 4. Si es aplicable, proporcione el archivo de certificado intermedio en formato PEM.
@@ -106,6 +106,10 @@ Tras importar un certificado, se mostrará la información siguiente en la tabla
     <td>La fecha en la que el certificado ya no será válido (en huso horario UTC). </td>
   </tr>
   <tr>
+    <td>Estado</td>
+    <td>El estado del certificado. </td>
+  </tr>
+  <tr>
     <td>ID de certificado</td>
     <td>El ID generado que se da al certificado al importar.</td>
   </tr>
@@ -142,6 +146,40 @@ Para descargar la versión anterior de un certificado, siga los pasos siguientes
 1. Expanda la fila correspondiente al certificado.
 2. Pulse el enlace **Versión anterior**.
 
+## Solicitud de certificados
+{: #order-certificates}
+
+Antes de solicitar un certificado, [complete la configuración necesaria](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+
+1. Especifique un nombre de certificado.
+2. Seleccione una entidad emisora de certificados.
+3. Especifique el dominio primario y los dominios alternativos.
+4. Seleccione el algoritmo y el algoritmo de clave adecuados.
+5. Pulse **Solicitar**.
+
+La solicitud de certificado se limita a cinco solicitudes por minuto por instancia de {{site.data.keyword.cloudcerts_short}}, a 100 solicitudes por hora por cuenta de usuario de IBM y a cinco certificados para los mismos dominios por semana.
+{: note}
+
+## Renovación de certificados
+{: #renew-certificates}
+
+Para renovar un certificado, siga los pasos siguientes:
+  1. Pulse el menú de la fila del certificado que desea renovar.
+  2. Pulse **Renovar certificado**.
+  3. Opcional: puede optar por volver a obtener una clave para el certificado marcando el recuadro de selección **Volver a obtener clave de certificado**. Esto renovará el certificado con un nuevo par de claves.
+  
+  Si solicita una nueva clave para un certificado, asegúrese de desplegar los nuevos certificados y claves en todo lugar en el que se utilicen.
+  {: note}
+    
+  4. Pulse **Renovar**
+  
+  Solo puede renovar los certificados que haya solicitado mediante {{site.data.keyword.cloudcerts_short}}.
+  {: note}
+
+La renovación de certificados se limita a cinco solicitudes de renovación por certificado por minuto y a 100 renovaciones por hora por cuenta de usuario de IBM.
+{: note}
+
+
 ## Búsqueda de certificados
 {: #searching-certificates}
 
@@ -161,6 +199,9 @@ Para descargar un certificado, siga los pasos siguientes:
 
 1. Marque el recuadro de selección para el certificado que desea descargar.
 2. Pulse **Descargar certificado**. En función de lo que haya importado en el servicio, recibirá un archivo comprimido que contiene archivos PEM para el certificado, una clave privada asociada, y un certificado intermedio asociado.
+
+No puede descargar certificados caducados.
+{: note}
 
 ## Supresión de certificados
 {: #deleting-certificates}

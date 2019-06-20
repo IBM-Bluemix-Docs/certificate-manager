@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, TLS, activity tracker,
 
 subcollection: certificate-manager
 
@@ -22,13 +22,13 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# {{site.data.keyword.cloudaccesstrailshort}} イベント  
+# Activity Tracker イベント  
 {: #at_events}
 
-ユーザーおよびアプリケーションが {{site.data.keyword.Bluemix_notm}} 内の {{site.data.keyword.cloudcerts_long_notm}} サービスとどのように対話するのかを {{site.data.keyword.cloudaccesstrailfull}} サービスを使用してトラッキングします。
+ユーザーおよびアプリケーションが {{site.data.keyword.cloud_notm}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.at_full}} サービスを使用してトラッキングします。
 {:shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} サービスは、{{site.data.keyword.Bluemix_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 詳しくは、[{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)を参照してください。 例えば、証明書をインポートすると、{{site.data.keyword.cloudaccesstrailshort}} イベントが生成されます。
+{{site.data.keyword.at_short}} サービスは、{{site.data.keyword.cloud_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 例えば、証明書をインポートすると、イベントが生成されます。詳しくは、[{{site.data.keyword.at_short}} の資料](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)を参照してください。
 
 次の表に、呼び出されるとイベントを生成する API メソッドをリストします。
 
@@ -43,8 +43,16 @@ subcollection: certificate-manager
 	  <td>証明書をインポートします。</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>証明書を注文します。</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>証明書を再インポートします。</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>証明書メタデータを取得します。</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
@@ -109,13 +117,19 @@ subcollection: certificate-manager
 </table>
 
 ## イベントの検索先
-{: #ui}
+{: #at_ui}
 
-{{site.data.keyword.cloudaccesstrailshort}} イベントは、イベントが生成される {{site.data.keyword.Bluemix_notm}} ロケーション内にある {{site.data.keyword.cloudaccesstrailshort}} **アカウント・ドメイン**で使用可能です。
+ご使用の {{site.data.keyword.cloudcerts_short}} インスタンスと同じ場所に {{site.data.keyword.at_short}} インスタンスをプロビジョンします。
 
-{{site.data.keyword.cloudaccesstrailshort}} イベントは、{{site.data.keyword.cloudcerts_short}} サービスがプロビジョンされている同じロケーション内の {{site.data.keyword.cloudaccesstrailshort}} サービスに自動的に転送されます。
+イベントは、{{site.data.keyword.cloudcerts_short}} サービスがプロビジョンされているのと同じ場所にある {{site.data.keyword.at_short}} サービス・インスタンスに自動的に転送されます。
 
 ## 追加情報
 {: #info}
 
-「*requestData_str*」フィールドには、証明書の、人が判読できる名前が含まれます。
+* 「*requestData_str*」フィールドには、証明書の、人が判読できる名前が含まれます。
+
+## 可用性
+{: #at-availability}
+
+* {{site.data.keyword.at_short}} サポートは現在、**ダラス**と**フランクフルト**のロケーションで使用可能です。
+* 他の地域では、{{site.data.keyword.at_short}} が使用可能になるまで、非推奨の Activity Tracker サービスのインスタンスをプロビジョンします。

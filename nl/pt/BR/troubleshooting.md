@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-05-28"
 
 keywords: certificates, SSL, 
 
@@ -41,13 +41,12 @@ problemas e obtenção de ajuda.
 
 - Procurando informações neste site de documentação
 - Fazendo perguntas por meio de um fórum
-
-Também
+- Também
 será possível abrir um chamado de suporte.
 
 Ao usar os fóruns para fazer uma pergunta, certifique-se de identificar sua pergunta para que ela seja vista pela equipe de desenvolvimento do {{site.data.keyword.cloudcerts_full_notm}}.
 
-- Se você tiver perguntas técnicas sobre o serviço, poste a sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](http://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) e identifique-a com `ibm-cloud` e `ibm-certificate-manager`.  
-- Para perguntas sobre o serviço e instruções de introdução, poste a sua pergunta no [dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers/search.html?f=&type=question&q=ibm-certificate-manager&q=ibm-cloud). Inclua as tags `ibm-certificate-manager` e `ibm-cloud`.
+- Se você tiver perguntas técnicas sobre o serviço, poste a sua pergunta no [Stack Overflow ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud) e identifique-a com `ibm-cloud` e `ibm-certificate-manager`.  
+- Para perguntas sobre o serviço e instruções de introdução, poste a sua pergunta no [dW Answers ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://developer.ibm.com/answers). Inclua as tags `ibm-certificate-manager` e `ibm-cloud`.
 
-Para obter mais informações sobre a abertura de um chamado de suporte, níveis de suporte e severidades de chamados, consulte[Como obter o suporte necessário?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)
+Para obter mais informações sobre como abrir um chamado de suporte ou níveis de suporte e severidades de chamado, consulte [Como obtenho o suporte necessário?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support)

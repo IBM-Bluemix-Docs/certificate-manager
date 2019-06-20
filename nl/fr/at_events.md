@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, TLS, activity tracker,
 
 subcollection: certificate-manager
 
@@ -22,13 +22,13 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Evénements {{site.data.keyword.cloudaccesstrailshort}}  
+# Evénements d'Activity Tracker  
 {: #at_events}
 
-Utilisez le service {{site.data.keyword.cloudaccesstrailfull}} pour suivre comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long_notm}} dans {{site.data.keyword.Bluemix_notm}}.
+Utilisez le service {{site.data.keyword.at_full}} pour suivre comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long}} dans {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-Le service {{site.data.keyword.cloudaccesstrailfull_notm}} enregistre des activités initiées par l'utilisateur qui change l'état d'un service dans {{site.data.keyword.Bluemix_notm}}. Pour plus d'informations, voir [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started). Ainsi, quand vous importez un certificat, un événement {{site.data.keyword.cloudaccesstrailshort}} est généré.
+Le service {{site.data.keyword.at_short}} enregistre des activités initiées par l'utilisateur qui change l'état d'un service dans {{site.data.keyword.cloud_notm}}. Ainsi, quand vous importez un certificat, un événement est généré. pour plus d'informations, voir la [documentation {{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 Le tableau suivant répertorie les méthodes d'API qui génèrent un événement lorsqu'elles sont appelées.
 
@@ -43,8 +43,16 @@ Le tableau suivant répertorie les méthodes d'API qui génèrent un événement
 	  <td>Importe un certificat.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>Commande un certificat.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Réimporte un certificat.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>Obtient les métadonnées d'un certificat.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
@@ -72,7 +80,7 @@ Le tableau suivant répertorie les méthodes d'API qui génèrent un événement
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.update`</td>
-	  <td>Met à jour des métadonnées de certificat (en changeant, par exemple, la description d'un certificate).</td>
+	  <td>Met à jour des métadonnées de certificat (en changeant, par exemple, la description d'un certificat).</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channels.list`</td>
@@ -109,13 +117,19 @@ Le tableau suivant répertorie les méthodes d'API qui génèrent un événement
 </table>
 
 ## Où rechercher les événements ?
-{: #ui}
+{: #at_ui}
 
-Les événements {{site.data.keyword.cloudaccesstrailshort}} sont disponibles dans le **domaine de compte** {{site.data.keyword.cloudaccesstrailshort}} qui se trouve à l'endroit {{site.data.keyword.Bluemix_notm}} où les événements sont générés.
+Mettez à disposition une instance {{site.data.keyword.at_short}} au même emplacement que votre instance {{site.data.keyword.cloudcerts_short}}.
 
-Les événements {{site.data.keyword.cloudaccesstrailshort}} sont automatiquement transférés vers le service {{site.data.keyword.cloudaccesstrailshort}} au même endroit que celui où le service {{site.data.keyword.cloudcerts_short}} est mis à disposition.
+Les événements sont automatiquement transmis à l'instance de service {{site.data.keyword.at_short}} au même emplacement que celui où le service {{site.data.keyword.cloudcerts_short}} est mis à disposition.
 
 ## Informations complémentaires
 {: #info}
 
-La zone *requestData_str* inclut le nom lisible du certificat.
+* La zone *requestData_str* inclut le nom lisible du certificat.
+
+## Disponibilité
+{: #at-availability}
+
+* La prise en charge pour {{site.data.keyword.at_short}} est actuellement disponible pour les emplacements **Dallas** et **Francfort**.
+* Pour d'autres emplacements, mettez à disposition une instance du service Activity Tracker obsolète en attendant qu'{{site.data.keyword.at_short}} soit disponible.

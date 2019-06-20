@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-06-04"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,7 @@ subcollection: certificate-manager
 # Gestion des certificats depuis le tableau de bord
 {: #managing-certificates-from-the-dashboard}
 
-Vous pouvez utiliser le tableau de bord du service {{site.data.keyword.cloudcerts_full}} pour gérer des certificats que vous vous procurez auprès d'émetteurs tiers afin de les utiliser avec vos services ou applications cloud {{site.data.keyword.IBM_notm}}. Une fois importés, vos certificats et vos clés sont chiffrés et stockés par le service.
-{: shortdesc}
-
-## Importation d'un certificat
-{: #importing-a-certificate}
-
-Importez vos certificats afin de pouvoir les gérer.
+Vous pouvez utiliser le tableau de bord du service {{site.data.keyword.cloudcerts_full}} pour gérer des certificats que vous vous procurez auprès d'émetteurs tiers afin de les utiliser avec vos services ou applications cloud {{site.data.keyword.IBM_notm}}.
 {: shortdesc}
 
 ## Formats de certificat et algorithmes de clé publique pris en charge
@@ -46,6 +40,12 @@ Importez vos certificats afin de pouvoir les gérer.
 * Elliptic Curve Digital Signature Algorithm (ECDSA)
 * Protocole d'accord de clé Elliptic Curve with Diffie-Hellman
 
+## Importation d'un certificat
+{: #importing-a-certificate}
+
+Importez vos certificats afin de pouvoir les gérer.
+{: shortdesc}
+
 **Avant de commencer**
 
 * Créez un certificat valide non arrivé à expiration avec une clé privée correspondante (la clé est facultative).
@@ -54,7 +54,7 @@ Importez vos certificats afin de pouvoir les gérer.
 
 Pour importer un certificat, cliquez sur **Importer le certificat** et indiquez les détails suivants :
 
-1. Entrez un nom d'affichage.
+1. Indiquez un nom de certificat.
 2. Sélectionnez le fichier certificat au format PEM en cliquant sur **Parcourir**.
 3. Facultatif : sélectionnez la clé privée du nouveau certificat au format PEM en cliquant sur **Parcourir**.
 4. Si applicable, indiquez le fichier certificat intermédiaire au format PEM.
@@ -106,6 +106,10 @@ Une fois que vous avez importé un certificat, les informations ci-après sont a
     <td>Date à laquelle le certificat n'est plus valide (fuseau horaire UTC). </td>
   </tr>
   <tr>
+    <td>Statut</td>
+    <td>Statut de votre certificat. </td>
+  </tr>
+  <tr>
     <td>ID certificat</td>
     <td>ID généré pour le certificat lors de l'importation.</td>
   </tr>
@@ -142,6 +146,39 @@ Pour télécharger la version précédente d'un certificat, procédez comme suit
 1. Développez la ligne correspondant au certificat.
 2. Cliquez sur le lien **Version précédente**.
 
+## Commande de certificats
+{: #order-certificates}
+
+Avant de commander un certificat, [commencez par effectuer la configuration obligatoire](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+
+1. Indiquez un nom de certificat.
+2. Sélectionnez une autorité de certification.
+3. Indiquez le domaine principal ainsi que tout domaine de remplacement.
+4. Sélectionnez l'algorithme et l'algorithme de clé appropriés. 
+5. Cliquez sur **Commander**.
+
+La commande de certificats est limitée à cinq commandes/minute par instance {{site.data.keyword.cloudcerts_short}}, 100 commandes/heure par compte utilisateur IBM, et cinq certificats pour les mêmes domaines par semaine.
+{: note}
+
+## Renouvellement de certificats
+{: #renew-certificates}
+
+Pour renouveler un certificat, procédez comme suit :
+  1. Cliquez sur le menu sur la ligne du certificat à renouveler.
+  2. Cliquez sur **Renouveler le certificat**.
+  3. Facultatif : Vous pouvez choisir de recomposer votre certificat en cochant la case **Recomposer le certificat**. Le certificat sera alors renouvelé avec une nouvelle paire de clés. 
+  
+  Lorsque vous recomposez un certificat, veillez à déployer les nouveaux certificats et clés partout où ils sont utilisés. {: note}
+    
+  4. Cliquez sur **Renouveler**
+  
+  Vous pouvez uniquement renouveler des certificats commandés via {{site.data.keyword.cloudcerts_short}}.
+  {: note}
+
+Le renouvellement de certificat est limité à cinq demandes de renouvellement par certificat par minute, 100 renouvellements/heure par compte utilisateur IBM.
+{: note}
+
+
 ## Recherche de certificats
 {: #searching-certificates}
 
@@ -161,6 +198,9 @@ Pour télécharger un certificat, procédez comme suit :
 
 1. Cochez la case correspondant au certificat que vous souhaitez télécharger.
 2. Cliquez sur **Télécharger le certificat**. Selon ce que vous avez importé dans le service, vous recevez un fichier compressé contenant des fichiers PEM pour le certificat, une clé privée associée et un certificat intermédiaire associé.
+
+Vous ne pouvez pas télécharger des certificats arrivés à expiration.
+{: note}
 
 ## Suppression de certificats
 {: #deleting-certificates}

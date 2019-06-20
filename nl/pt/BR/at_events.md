@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, TLS, activity tracker,
 
 subcollection: certificate-manager
 
@@ -22,16 +22,15 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Eventos do {{site.data.keyword.cloudaccesstrailshort}}  
+# Eventos do Activity Tracker  
 {: #at_events}
 
-Use o serviço {{site.data.keyword.cloudaccesstrailfull}} para controlar como os usuários e os aplicativos interagem com
-o serviço {{site.data.keyword.cloudcerts_long_notm}} no {{site.data.keyword.Bluemix_notm}}.
+Use o serviço {{site.data.keyword.at_full}} para controlar como os usuários e os aplicativos interagem com
+o serviço {{site.data.keyword.cloudcerts_long}} no {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-O serviço {{site.data.keyword.cloudaccesstrailfull_notm}} registra as atividades iniciadas pelo usuário que mudam
-o estado de um serviço no {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started). Por
-exemplo, ao importar um certificado, um evento do {{site.data.keyword.cloudaccesstrailshort}} é gerado.
+O serviço {{site.data.keyword.at_short}} registra as atividades iniciadas pelo usuário que mudam
+o estado de um serviço no {{site.data.keyword.cloud_notm}}. Por exemplo, quando você importar um certificado, um evento será gerado. Para obter mais informações, consulte os [docs do {{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 A tabela a seguir lista os métodos de API que geram um evento quando eles são chamados.
 
@@ -46,8 +45,16 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 	  <td>Importe um certificado.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>Peça um certificado.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Reimporte um certificado.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>Obtenha os metadados de um certificado.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
@@ -112,13 +119,19 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 </table>
 
 ## Onde procurar os eventos
-{: #ui}
+{: #at_ui}
 
-Os eventos do {{site.data.keyword.cloudaccesstrailshort}} estão disponíveis na **conta de domínio** do {{site.data.keyword.cloudaccesstrailshort}} que está disponível na localização do {{site.data.keyword.Bluemix_notm}} em que os eventos são gerados.
+Provisione uma instância do {{site.data.keyword.at_short}} no mesmo local que a sua instância do {{site.data.keyword.cloudcerts_short}}.
 
-Os eventos do {{site.data.keyword.cloudaccesstrailshort}} são automaticamente encaminhados para o serviço do {{site.data.keyword.cloudaccesstrailshort}} na mesma localização em que o serviço do {{site.data.keyword.cloudcerts_short}} é provisionado.
+Os eventos são encaminhados automaticamente para a instância de serviço do {{site.data.keyword.at_short}} no mesmo local em que o serviço do {{site.data.keyword.cloudcerts_short}} é provisionado.
 
 ## Informações Adicionais
 {: #info}
 
-O campo *requestData_str* inclui o nome legível do certificado.
+* O campo *requestData_str* inclui o nome legível do certificado.
+
+## Disponibilidade
+{: #at-availability}
+
+* O suporte do {{site.data.keyword.at_short}} está atualmente disponível para os locais **Dallas** e **Frankfurt**.
+* Para outros locais, provisione uma instância do serviço Activity Tracker descontinuado até que o {{site.data.keyword.at_short}} esteja disponível.

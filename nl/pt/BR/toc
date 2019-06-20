@@ -3,24 +3,26 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="certificate-manager" audience="service" arm="3663406" href="/docs/services/certificate-manager/index.html" path="services/certificate-manager"}
+{: .toc subcollection="certificate-manager" audience="service" category="security" arm="3663406" href="/docs/services/certificate-manager?topic=certificate-manager-getting-started#getting-started" path="services/certificate-manager"}
 Certificate Manager
 
     {: .navgroup id="learn"}
-    index.md
+    getting-started.md
     about.md
     ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
     managing-certificates.md
+    order-certificates.md
     notifications-dashboard.md
     access-management.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Documentação da API](https://console.bluemix.net/apidocs/certificate-manager)
+    [Documentação da API](https://cloud.ibm.com/apidocs/certificate-manager)
     at_events.md
+    
     rellinks.md
     {: .navgroup-end}
 

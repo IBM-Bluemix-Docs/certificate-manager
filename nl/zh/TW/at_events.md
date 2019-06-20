@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, TLS, activity tracker,
 
 subcollection: certificate-manager
 
@@ -22,13 +22,13 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# {{site.data.keyword.cloudaccesstrailshort}} 事件  
+# Activity Tracker 事件  
 {: #at_events}
 
-使用 {{site.data.keyword.cloudaccesstrailfull}} 服務可追蹤使用者及應用程式與 {{site.data.keyword.Bluemix_notm}} 中的 {{site.data.keyword.cloudcerts_long_notm}} 服務互動的情形。
+使用 {{site.data.keyword.at_full}} 服務可追蹤使用者及應用程式與 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.cloudcerts_long}} 服務互動的情形。
 {:shortdesc}
 
-{{site.data.keyword.cloudaccesstrailfull_notm}} 服務記錄了由使用者起始且變更 {{site.data.keyword.Bluemix_notm}} 中服務狀態的活動。如需相關資訊，請參閱 [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started)。例如，當您匯入憑證時，會產生 {{site.data.keyword.cloudaccesstrailshort}} 事件。
+{{site.data.keyword.at_short}} 服務記錄了由使用者起始且變更 {{site.data.keyword.cloud_notm}} 中服務狀態的活動。例如，匯入憑證時，會產生事件。如需相關資訊，請參閱 [{{site.data.keyword.at_short}} 文件](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)。
 
 下表列出在呼叫時會產生事件的 API 方法。
 
@@ -43,8 +43,16 @@ subcollection: certificate-manager
 	  <td>匯入憑證。</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>訂購憑證。</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>重新匯入憑證。</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>取得憑證 meta 資料。</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
@@ -109,13 +117,19 @@ subcollection: certificate-manager
 </table>
 
 ## 尋找事件的位置
-{: #ui}
+{: #at_ui}
 
-{{site.data.keyword.cloudaccesstrailshort}} 事件提供於 {{site.data.keyword.cloudaccesstrailshort}} **帳戶網域**中，後者提供於產生事件的 {{site.data.keyword.Bluemix_notm}} 位置。
+在 {{site.data.keyword.cloudcerts_short}} 實例所在位置佈建 {{site.data.keyword.at_short}} 實例。
 
-{{site.data.keyword.cloudaccesstrailshort}} 事件會自動轉遞給佈建 {{site.data.keyword.cloudcerts_short}} 服務之相同位置的 {{site.data.keyword.cloudaccesstrailshort}} 服務。
+系統會自動將事件轉遞給佈建 {{site.data.keyword.cloudcerts_short}} 服務的相同位置中的 {{site.data.keyword.at_short}} 服務實例。
 
 ## 相關資訊
 {: #info}
 
-*requestData_str* 欄位包含人類可讀的憑證名稱。
+* *requestData_str* 欄位包含人類可讀的憑證名稱。
+
+## 可用性
+{: #at-availability}
+
+* 目前，在**達拉斯**和**法蘭克福**位置有提供 {{site.data.keyword.at_short}} 支援。
+* 對於其他位置，請佈建已淘汰之 Activity Tracker 服務的實例，直到 {{site.data.keyword.at_short}} 可用為止。

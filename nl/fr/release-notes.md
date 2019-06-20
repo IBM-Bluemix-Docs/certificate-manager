@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 Les fonctions et modifications suivantes sont disponibles pour le service {{site.data.keyword.cloudcerts_long}}.
 
+
+## 10 juin 2019
+{: 10June2019}
+
+- **Renouveler les certificats Let's Encrypt commandés**  
+  Vous pouvez désormais renouveler les certificats Let's Encrypt que vous avez commandés via {{site.data.keyword.cloudcerts_short}}. [En savoir plus sur la commande de certificats](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
+
+## 6 mai 2019
+{: 6May2019}
+
+- **Commander des certificats Let's Encrypt**  
+  Vous pouvez désormais commander des certificats Let's Encrypt. [En savoir plus sur la commande de certificats](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
 ## 18 février 2019
-{: 18February2018}
+{: 18February2019}
 
 - **Opérationnel à Tokyo**  
   {{site.data.keyword.cloudcerts_long_notm}} est disponible à Tokyo.
@@ -51,10 +65,10 @@ Les fonctions et modifications suivantes sont disponibles pour le service {{site
 ## 5 décembre 2018
 {: 5December2018}
 - **Notification de réimportation**    
-Lorsque vous réimportez un certificat renouvelé à la place de celui qui est sur le point d'expirer, vous pouvez recevoir une notification vous indiquant que le certificat a été réimporté. Cela a pour but de vous rappeler et de rappeler à votre équipe que le certificat renouvelé doit être déployé sur les points de terminaison SSL/TLS. Cette notification est disponible uniquement pour les canaux de notification nouvellement créés. 
+Lorsque vous réimportez un certificat renouvelé à la place de celui qui est sur le point d'expirer, vous pouvez recevoir une notification vous indiquant que le certificat a été réimporté. Cela a pour but de vous rappeler et de rappeler à votre équipe que le certificat renouvelé doit être déployé sur les points de terminaison SSL/TLS. Cette notification est disponible uniquement pour les canaux de notification nouvellement créés.
 
 - **{{site.data.keyword.cloudcerts_short}} est disponible à Francfort.**     
-Le service est conforme aux exigences de l'Union Européenne. 
+Le service est conforme aux exigences de l'Union Européenne.
 
 ## 2 décembre 2018
 {: 2December2018}

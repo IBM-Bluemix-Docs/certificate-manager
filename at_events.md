@@ -43,12 +43,16 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Import a certificate.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Reimport a certificate.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>Order a certificate.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Reimport a certificate.</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>Renew an issued certificate.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>

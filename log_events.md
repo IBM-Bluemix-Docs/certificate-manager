@@ -22,7 +22,7 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# {{site.data.keyword.la_full_notm}}
+# Log Analysis events
 {: #log_events}
 
 Use the {{site.data.keyword.la_full}} service to view {{site.data.keyword.cloudcerts_long}} service logs for your instance in {{site.data.keyword.cloud_notm}}.

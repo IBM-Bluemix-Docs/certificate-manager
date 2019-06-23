@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-06-23"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -25,10 +25,10 @@ subcollection: certificate-manager
 # Activity Tracker events  
 {: #at_events}
 
-Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in the {{site.data.keyword.cloud_notm}}.
+Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in the {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 The following table lists the API methods that generate an event when they are called.
 
@@ -121,6 +121,11 @@ The following table lists the API methods that generate an event when they are c
 
 Provision an {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
 
+Complete the following steps:
+
+1. Navigate to [{{site.data.keyword.cloud_notm}} Observability](https://cloud.ibm.com/observe/)
+2. Provision a {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance
+
 Events are automatically forwarded to the {{site.data.keyword.at_short}} service instance in the same location where the {{site.data.keyword.cloudcerts_short}} service is provisioned.
 
 ## Additional information
@@ -131,5 +136,4 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 ## Availability
 {: #at-availability}
 
-* {{site.data.keyword.at_short}} support is currently available for the **Dallas** and **Frankfurt** locations.
-* For other locations provision an instance of the deprecated Activity Tracker service until {{site.data.keyword.at_short}} is available.
+{{site.data.keyword.at_short}} support is currently available for the **Dallas**, **Frankfurt** and **Tokyo** locations.

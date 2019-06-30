@@ -96,7 +96,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete these in
   - **domainId** - Find the value in the {{site.data.keyword.cis_short_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
   If you would like to manage multiple domains, modify the the `resources` array.  
 
-You can now proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
+You can now proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate).
 
 ### Another DNS Provider
 {: #other_provider}

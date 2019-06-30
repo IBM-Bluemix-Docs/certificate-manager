@@ -71,7 +71,7 @@ If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete thes
 
 1. Assign **Reader** service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM).
 
-   For testing purposes you can assign **Manager** service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. When assigning service access role, step 2 below is not required. This setting is not recommended for use in production environment.
+   For testing purposes you can assign **Manager** service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. When assigning this service access role, step 2 below is not required. This setting is not recommended for use in production environment.
    {: note}
 
 2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your {{site.data.keyword.cis_full_notm}} instance.
@@ -153,14 +153,14 @@ To order a certificate, complete the following steps:
    5. Select the certificate type you need
    6. Select the domain
    7. Select the appropriate algorithm and key algorithm
-   8. Click **Order**.
+   8. Click **Order**
 5. If you've selected **Another DNS Provider**, provide the following details:
    1. Complete the required setup instructions
    2. Provide a certificate name and optionally a description
    3. Select a Certificate Authority.
    4. Enter the primary domain and any alternative domains
    5. Select the appropriate algorithm and key algorithm
-   6. Click **Order**.
+   6. Click **Order**
 
 Your order is placed in a **Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 
@@ -172,9 +172,9 @@ If your certificate is about to expire, you can request to renew your certificat
 Renewals work similar to certificate ordering. When you request to renew a certificate, {{site.data.keyword.cloudcerts_short}} sends DNS txt challenges to your callback URL, so you can again prove that you own the domains for which you are renewing the certificate.
 
 To renew a certificate, complete the following steps:
-  1. Click on the menu in the row of the certificate you want to renew.
-  2. Click **Renew Certificate**.
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  1. Click on the menu in the row of the certificate you want to renew
+  2. Click **Renew Certificate**
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use
   4. Click **Renew**
 
 

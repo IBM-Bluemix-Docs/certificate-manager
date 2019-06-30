@@ -67,14 +67,14 @@ How you verify domain ownership depends on which DNS provider you are using:
 ### {{site.data.keyword.cis_full_notm}}
 {: #cis}
 
-If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete these instructions:
+If you manage your domains in {{site.data.keyword.cis_short}}, complete these instructions:
 
-1. Assign **Reader** service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM).
+1. Assign your {{site.data.keyword.cloudcerts_short}} instance a **Reader** service access role for your instance of {{site.data.keyword.cis_short_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM)  > Authorizations.
 
    For testing purposes you can assign **Manager** service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. When assigning this service access role, step 2 below is not required. This setting is not recommended for use in production environment.
    {: note}
 
-2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your {{site.data.keyword.cis_full_notm}} instance.
+2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your {{site.data.keyword.cis_short_notm}} instance.
 
   From command-line, execute the following `cURL` request:
    
@@ -90,10 +90,10 @@ If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete thes
   Replace the following placeholders: 
 
   - **User token** - A valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
-  - **accountId** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_full_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
+  - **accountId** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
   - **{{site.data.keyword.cloudcerts_short}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-  - **{{site.data.keyword.cis_full_notm}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-  - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
+  - **{{site.data.keyword.cis_short_notm}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+  - **domainId** - Find the value in the {{site.data.keyword.cis_short_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
   If you would like to manage multiple domains, modify the the `resources` array.  
 
 You can now proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)

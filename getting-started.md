@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-06-30"
 
 keywords: certificates, SSL,
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL certificates for your {{site.data.keyword.IBM_notm}} cloud-based apps.  
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL certificates for your {{site.data.keyword.cloud_notm}}-based apps.  
 Get started by creating a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps.
 {: shortdesc}
 

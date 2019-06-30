@@ -69,16 +69,14 @@ How you verify domain ownership depends on which DNS provider you are using:
 
 If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete these instructions:
 
-1. Assign *Reader* service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.IBM_notm}} > Manage (IAM)
+1. Assign **Reader** service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM)
 
    For testing purposes, you can assign *Manager* service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. This setting is not recommended for use in production environment.
    {: note}
 
-2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your
+2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your {{site.data.keyword.cis_full_notm}} instance.
 
- {{site.data.keyword.cis_full_notm}} instance.
-
-   * From command-line, execute the following `cURL` request:
+   From command-line, execute the following `cURL` request:
    
    
    
@@ -86,25 +84,28 @@ If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete thes
    ```
    curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json' -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": <Replace-with-account-ID }, { "name": "serviceInstance", "value": Replace-with-Certificate-Manager-GUID-based-instance ID } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": <accountId>  }, { "name": "serviceInstance", "value": Replace-with-Cloud-Internet-Services-GUID-based-instance-ID}, { "name": "domainId", "value": <domainId> }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
    ```
+   {: pre} 
    
    
-   - **User token** - a valid IAM token. Find the value using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud iam oauth-tokens`.
-   - **accountId** - the account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_full_notm}} instances were created at. Find the value either in **{{site.data.keyword.IBM_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
-   - **{{site.data.keyword.cloudcerts_short}} GUID-based instance ID** - find the value using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-   - **{{site.data.keyword.cis_full_notm}} GUID-based instance ID** - find the value using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-   - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud cis domains`.
+   Replace the following placeholders: 
+   - **User token** - a valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
+   - **accountId** - the account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_full_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
+   - **{{site.data.keyword.cloudcerts_short}} GUID-based instance ID** - find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+   - **{{site.data.keyword.cis_full_notm}} GUID-based instance ID** - find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+   - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.
    
    If you would like to manage multiple domains, modify the the `resources` array.  
    {: note}
 
-2. Proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
+3. Proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
 
 ### Another DNS Provider
 {: #other_provider}
 
 To verify your control over a domain when using a 3rd party DNS provider, {{site.data.keyword.cloudcerts_short}} sends the TXT record to a Callback URL notifications channel that you provide, which allows you to automate the domain validation process.
 
-First implement an IBM Cloud Function action, and provide its endpoint to a Callback URL Notification channel in {{site.data.keyword.cloudcerts_short}}. [Learn how to set up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+First implement an IBM Cloud Function action, and provide its endpoint to a Callback URL Notification channel in {{site.data.keyword.cloudcerts_short}}.  
+[Learn how to set up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
 You can follow the instructions provided in [this blog post ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains) to setup this type of domain validation.
 {: tip}

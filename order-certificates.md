@@ -69,7 +69,7 @@ How you verify domain ownership depends on which DNS provider you are using:
 
 If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete these instructions:
 
-1. Assign **Reader** service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM)
+1. Assign **Reader** service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM).
 
    For testing purposes you can assign **Manager** service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. This setting is not recommended for use in production environment.
    {: note}
@@ -162,7 +162,7 @@ To order a certificate, complete the following steps:
    5. Select the appropriate algorithm and key algorithm
    6. Click **Order**.
 
-Your order is placed in a **Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL channel.
+Your order is placed in a **Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 
 ## Renewing certificates
 {: #renew-certificate}
@@ -180,4 +180,4 @@ To renew a certificate, complete the following steps:
 You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 {: note}
 
-Your renewal is placed in a **Renew Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you'll get a renewed certificate and its state will change to **Valid**. You'll be notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL channel.
+Your renewal is placed in a **Renew pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you'll get a renewed certificate and its state will change to **Valid**. You'll be notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.

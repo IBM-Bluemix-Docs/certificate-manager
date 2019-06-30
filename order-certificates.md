@@ -71,7 +71,7 @@ If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete thes
 
 1. Assign **Reader** service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM).
 
-   For testing purposes you can assign **Manager** service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. This setting is not recommended for use in production environment.
+   For testing purposes you can assign **Manager** service access role instead, to manage all domains in your {{site.data.keyword.cis_full_notm}} instance. When assigning service access role, step 2 below is not required. This setting is not recommended for use in production environment.
    {: note}
 
 2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your {{site.data.keyword.cis_full_notm}} instance.
@@ -96,7 +96,7 @@ If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete thes
   - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
   If you would like to manage multiple domains, modify the the `resources` array.  
 
-3. Proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
+You can now proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
 
 ### Another DNS Provider
 {: #other_provider}

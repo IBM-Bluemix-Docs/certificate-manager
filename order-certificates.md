@@ -76,25 +76,25 @@ If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete thes
 
 2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage select domains in your {{site.data.keyword.cis_full_notm}} instance.
 
-      From command-line, execute the following `cURL` request:
+  From command-line, execute the following `cURL` request:
    
-      
+  
+
+  
+  ```
+  curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json' -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": <Replace-with-account-ID }, { "name": "serviceInstance", "value": Replace-with-Certificate-Manager-GUID-based-instance ID } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": <accountId>  }, { "name": "serviceInstance", "value": Replace-with-Cloud-Internet-Services-GUID-based-instance-ID}, { "name": "domainId", "value": <domainId> }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
+  ```
+  {: pre} 
+  
    
-      
-      ```
-      curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json' -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": <Replace-with-account-ID }, { "name": "serviceInstance", "value": Replace-with-Certificate-Manager-GUID-based-instance ID } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": <accountId>  }, { "name": "serviceInstance", "value": Replace-with-Cloud-Internet-Services-GUID-based-instance-ID}, { "name": "domainId", "value": <domainId> }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
-      ```
-      {: pre} 
-      
-   
-      Replace the following placeholders: 
-   
-      - **User token** - A valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
-      - **accountId** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_full_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
-      - **{{site.data.keyword.cloudcerts_short}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-      - **{{site.data.keyword.cis_full_notm}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-      - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
-      If you would like to manage multiple domains, modify the the `resources` array.  
+  Replace the following placeholders: 
+
+  - **User token** - A valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
+  - **accountId** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_full_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
+  - **{{site.data.keyword.cloudcerts_short}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+  - **{{site.data.keyword.cis_full_notm}} GUID-based instance ID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+  - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
+  If you would like to manage multiple domains, modify the the `resources` array.  
 
 3. Proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
 
@@ -176,7 +176,8 @@ To renew a certificate, complete the following steps:
   2. Click **Renew Certificate**.
   3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
   4. Click **Renew**
-  
+
+
 You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 {: note}
 

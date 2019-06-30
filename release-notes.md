@@ -30,8 +30,8 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## XX July 2019
 {: XXJuly2019}
 
-- **IBM Cloud Internet Services as DNS provider**  
-  You can now use IBM Cloud Internet Services as DNS provider, simplying to certificate ordering exeprience. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+- **IBM Cloud Internet Services as a DNS provider**  
+  You can now use IBM Cloud Internet Services as a DNS provider, simplifying the certificate ordering experience. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 10 June 2019
 {: 10June2019}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-30"
 
-keywords: certificates, SSL,
+keywords: certificates, SSL, dns,
 
 subcollection: certificate-manager
 
@@ -57,13 +57,54 @@ A Certificate Authority (CA) is an entity that issues digital certificates. The 
 Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you listed in your request. {{site.data.keyword.cloudcerts_short}} uses DNS validation to verify your control.
 {: shortdesc}
 
-{{site.data.keyword.cloudcerts_short}} sends a challenge in the form of a Domain Name System (DNS) TXT record for you to add in your DNS service. For each domain that you request in your certificate, you get a separate DNS TXT record. After you add the DNS TXT record, {{site.data.keyword.cloudcerts_short}} and Let’s Encrypt checks to see whether it's in your DNS service. If you successfully complete the challenge, you are issued a Let’s Encrypt certificate that is available in your {{site.data.keyword.cloudcerts_short}} instance.
+{{site.data.keyword.cloudcerts_short}} sends a challenge in the form of a Domain Name System (DNS) TXT record for you to add in your DNS service. For each domain that you request in your certificate, you get a separate DNS TXT record. After you add the DNS TXT record, {{site.data.keyword.cloudcerts_short}} and Let’s Encrypt check whether it's in your DNS service. If you successfully complete the challenge, you are issued a Let’s Encrypt certificate that is available in your {{site.data.keyword.cloudcerts_short}} instance.
 
-{{site.data.keyword.cloudcerts_short}} sends the TXT record to a Callback URL that you provide in the Notifications settings, which allows you to easily automate the domain validation process.
+How you verify domain ownership depends on which DNS provider you are using:
 
-To start ordering certificates, register your Callback URL as a Notification channel in {{site.data.keyword.cloudcerts_short}}. Then, update your code to handle the notification events that include the TXT challenge. [Learn how to set up a Callback URL notification channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+- {{site.data.keyword.cis_full_notm}}
+- Another DNS Provider
 
-## Responding to challenge
+### {{site.data.keyword.cis_full_notm}}
+{: #cis}
+
+If you manage your domains in {{site.data.keyword.cis_full_notm}}, complete these instructions:
+
+1. Assign *Reader* service access role for your instance of {{site.data.keyword.cis_full_notm}} from {{site.data.keyword.IBM_notm}} > Manage (IAM)
+
+2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage domains in your {{site.data.keyword.cis_full_notm}} instance.
+
+   * From command-line, execute the following `cURL` request:
+   
+   
+   
+   
+   ```
+   curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json'  -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": <accountId> }, { "name": "serviceInstance", "value": Replace-with-Certificate-Manager-GUID-based-instance ID } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": <accountId>  }, { "name": "serviceInstance", "value": Replace-with-Cloud-Internet-Services-GUID-based-instance-ID}, { "name": "domainId", "value": <domainId> }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
+   ```
+   
+   
+   - **User token** - ind the value using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud iam oauth-tokens`.
+   - **accountId** - the account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_full_notm}} instances were created at. Find the value either in **{{site.data.keyword.IBM_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
+   - **{{site.data.keyword.cloudcerts_short}} GUID-based instance ID** - find the value using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+   - **{{site.data.keyword.cis_full_notm}} GUID-based instance ID** - find the value using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+   - **domainId** - Find the value in the {{site.data.keyword.cis_full_notm}} UI, or using the {{site.data.keyword.IBM_notm}} CLI: `ibmcloud cis domains`.
+   
+   If you would like to manage multiple domains, modify the the `resources` array.  
+   {: note}
+
+2. Proceed to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)
+
+### Another DNS Provider
+{: #another-dns-provider}
+
+To verify your control over a domain when using a 3rd party DNS provider, {{site.data.keyword.cloudcerts_short}} sends the TXT record to a Callback URL notifications channel that you provide, which allows you to automate the domain validation process.
+
+First implement an IBM Cloud Function action, and provide its endpoint to a Callback URL Notification channel in {{site.data.keyword.cloudcerts_short}}. [Learn how to set up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+
+You can follow the instructions provided in [this blog post ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains) to setup this type of domain validation.
+{: tip}
+
+#### Responding to challenge
 {: #responding-to-challenge}
 
 The notification channel receives a notification with the following structure:
@@ -94,14 +135,28 @@ Once the DNS TXT challenge is sent to your callback URL, you have to answer the 
 ## Ordering certificates
 {: #ordering-certificate}
 
-1. Navigate to the Manage tab of the {{site.data.keyword.cloudcerts_short}}.
-2. Click **Order Certificate** and provide the following details:
+To order a certificate, complete the following steps:
 
-    1. Provide a certificate name.
-    2. Select a Certificate Authority.
-    3. Enter the primary domain and any alternative domains.
-    4. Select the appropriate algorithm and key algorithm.
-    5. Click **Order**.
+1. Navigate to the Manage tab of the {{site.data.keyword.cloudcerts_short}}.
+2. Click **Order Certificate** 
+3. Select your DNS provider - either {{site.data.keyword.cis_full_notm}}, or Another DNS Provider
+3.1 If you've selected **{{site.data.keyword.cis_full_notm}}**, provide the following details:
+   1. Complete the required setup instructions
+   2. Provide a certificate name and optionally a description
+   3. Select a Certificate Authority
+   4. Select the {{site.data.keyword.cis_full_notm}} instance you've assigned **Manager** service access role for
+   5. Select the certificate type you need
+   6. Select the domain
+   7. Select the appropriate algorithm and key algorithm
+   8. Click **Order**.
+
+3.2 If you've selected **Another DNS Provider**, provide the following details:
+   1. Complete the required setup instructions
+   2. Provide a certificate name and optionally a description
+   3. Select a Certificate Authority.
+   4. Enter the primary domain and any alternative domains
+   5. Select the appropriate algorithm and key algorithm
+   6. Click **Order**.
 
 Your order is placed in a **Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL channel.
 

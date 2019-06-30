@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-06-30"
 
 keywords: certificates, SSL,
 
@@ -149,12 +149,13 @@ To download the previous version of a certificate, complete the following steps:
 ## Ordering certificates
 {: #order-certificates}
 
-Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+To order a certificate, click **Order Certificate**, select either **{{site.data.keyword.cis_full_notm}}** or **Another DNS Provider** and provide the following details:
 
-1. Provide a certificate name.
-2. Select a Certificate Authority.
-3. Enter the primary domain and any alternative domains.
-4. Select the appropriate algorithm and key algorithm.
+1. Certificate name.
+2. Certificate Authority.
+3. Required domains.
+4. Appropriate algorithm and key algorithm.
 5. Click **Order**.
 
 Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 orders/hour per IBM user account, and five certificates for the same domains per week.

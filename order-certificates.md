@@ -69,16 +69,14 @@ How you verify domain ownership depends on which DNS provider you are using:
 
 If you manage your domains in {{site.data.keyword.cis_short}}, complete these instructions:
 
-f you manage your domains in {{site.data.keyword.cis_short}}, complete these instructions:
-
 1. Assign your {{site.data.keyword.cloudcerts_short}} instance a **Manger** service access role for your instance of {{site.data.keyword.cis_short_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM) > Authorizations.
 
 2. Continue to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate).
 
-In a production environment it is recommended that you will provide **Reader** service access role instead, and specify a list of domains to manage.
+In a production environment it is recommended that you will provide **Reader** service access role instead, and specify a list of domains.
 {: important}
 
-To manage a specific set of domains, complete these instructions: 
+To manage one or more domains, complete these instructions: 
 
 1. Assign your {{site.data.keyword.cloudcerts_short}} instance a **Reader** service access role for your instance of {{site.data.keyword.cis_short_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM) > Authorizations.
 

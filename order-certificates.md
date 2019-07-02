@@ -90,7 +90,7 @@ From command-line, edit accordingly and execute the following `cURL` request:
   Replace the following placeholders: 
 
   - **User token** - A valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
-  - **accountID** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`. The value must be prefixed with `a/<the accountId>`. 
+  - **accountID** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`.
   - **{{site.data.keyword.cloudcerts_short}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
   - **{{site.data.keyword.cis_short_notm}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
   - **domainID** - Find the value in the {{site.data.keyword.cis_short_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  

@@ -82,7 +82,7 @@ From command-line, edit accordingly and execute the following `cURL` request:
 
   
   ```
-  curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json' -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": Replace-with-accountID }, { "name": "serviceInstance", "value": Replace-with-Certificate-Manager-GUID-based-instanceID } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": Replace-with-account-ID  }, { "name": "serviceInstance", "value": Replace-with-Cloud-Internet-Services-GUID-based-instanceID}, { "name": "domainId", "value": Replace-with-domainID }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
+  curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json' -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": "Replace-with-accountID" }, { "name": "serviceInstance", "value": "Replace-with-Certificate-Manager-GUID-based-instanceID" } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": "Replace-with-account-ID" }, { "name": "serviceInstance", "value": "Replace-with-Cloud-Internet-Services-GUID-based-instanceID" }, { "name": "domainId", "value": "Replace-with-domainID" }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
   ```
   {: pre} 
   
@@ -91,8 +91,8 @@ From command-line, edit accordingly and execute the following `cURL` request:
 
   - **User token** - A valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
   - **accountID** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`.
-  - **{{site.data.keyword.cloudcerts_short}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
-  - **{{site.data.keyword.cis_short_notm}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID**.
+  - **{{site.data.keyword.cloudcerts_short}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID** into the two placeholders.
+  - **{{site.data.keyword.cis_short_notm}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID** into the two placeholders.
   - **domainID** - Find the value in the {{site.data.keyword.cis_short_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
   If you would like to manage multiple domains, modify the the `resources` array.  
 

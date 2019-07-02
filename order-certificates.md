@@ -69,7 +69,7 @@ How you verify domain ownership depends on which DNS provider you are using:
 
 If you manage your domains in {{site.data.keyword.cis_short}}, complete these instructions:
 
-1. Assign your {{site.data.keyword.cloudcerts_short}} instance a **Reader** service access role for your instance of {{site.data.keyword.cis_short_notm}} from {{site.data.keyword.cloud_notm}} > Manage (IAM) > Authorizations, so that {{site.data.keyword.cloudcerts_short}} can view the {{site.data.keyword.cis_short_notm}} instance and its domains.
+1. Assign your {{site.data.keyword.cloudcerts_short}} instance a **Reader** service access role for your instance of {{site.data.keyword.cis_short_notm}} from **{{site.data.keyword.cloud_notm}} > Manage (IAM) > Authorizations**, so that {{site.data.keyword.cloudcerts_short}} can view the {{site.data.keyword.cis_short_notm}} instance and its domains.
 
    For testing purposes you can assign **Manager** service access role instead, to manage all domains. When assigning this service access role, step 2 below is not required. This setting is not recommended for use in production environment.
    {: note}	

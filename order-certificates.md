@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-02"
+lastupdated: "2019-07-07"
 
 keywords: certificates, SSL, dns,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -28,86 +28,119 @@ subcollection: certificate-manager
 You can use {{site.data.keyword.cloudcerts_long}} to order public SSL/TLS certificates for your apps and services that are signed by supported external Certificate Authorities. {{site.data.keyword.cloudcerts_short}} makes it easy for you to order public certificates in addition to extra security for your SSL/TLS private keys. After your certificate is issued, you can deploy it to integrated services, or download it to use it elsewhere.  
 {: shortdesc}
 
-When you order a certificate, your private key for SSL/TLS is generated directly in {{site.data.keyword.cloudcerts_short}} and stored securely. All requests and access to issued certificates can be managed through [access control](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles) and automatically audited by using [{{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).  
+When you order a certificate, your private key for SSL/TLS is generated directly in {{site.data.keyword.cloudcerts_short}} and stored securely. All requests and access to issued certificates can be managed through [access control](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles) and automatically audited by using [{{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events).  
 
 {{site.data.keyword.cloudcerts_short}} implements the Automatic Certificate Management Environment (ACME) v2 Protocol as an ACME client. The ACME protocol makes it possible to automatically obtain browser trusted certificates without human intervention.
 
 ## Certificate characteristics
-Certificates that are ordered through {{site.data.keyword.cloudcerts_short}} have the following characteristics:
+{: #certificate-characteristics}
 
-- Free
-- Validity Period - 90 days
-- Single domain, Multi-Domain (SAN), or Wildcard certificate
-- Domain Validated - before issuing a certificate to you, the Certificate Authority checks that you own the domain for which you are requesting a certificate.
+When you order certificates through {{site.data.keyword.cloudcerts_short}}:
 
-If you need Extended Validation (EV) or Organization Validated (OV) certificates, you can obtain them elsewhere and import them to {{site.data.keyword.cloudcerts_short}} to manage their lifecycle.
+- They are free
+- They are valid for 90 days
+- They can be Single Domain, Multi-Domain (SAN), or a Wildcard
+- They are domain validated
+
+Domain validation includes the verification that you own the domain for which you are requesting a certificate. If you need Extended Validation (EV) or Organization Validated (OV) certificates, you can obtain them elsewhere and import them to {{site.data.keyword.cloudcerts_short}} to manage their lifecycle.
+
 
 ## Supported Certificate Authorities
 {: #supported-certificate-authorities}
 
-A Certificate Authority (CA) is an entity that issues digital certificates. The CA acts as a trusted 3rd party for both the requester of the certificate and the client that relies on the certificate.
+A Certificate Authority (CA) is an entity that issues digital certificates. The CA acts as a trusted third party for both the requester of the certificate and the client that relies on the certificate.
 {: shortdesc}
 
 ### Let's Encrypt
+{: #lets-encrypt}
 [Let’s Encrypt](https://letsencrypt.org) is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service provided by the Internet Security Research Group (ISRG).
 
 ## Setting up certificate ordering
 {: #setup}
 
-Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you listed in your request. {{site.data.keyword.cloudcerts_short}} uses DNS validation to verify your control.
+Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you list in your request. To do so,{{site.data.keyword.cloudcerts_short}} uses DNS validation.
 {: shortdesc}
 
 {{site.data.keyword.cloudcerts_short}} sends a challenge in the form of a Domain Name System (DNS) TXT record for you to add in your DNS service. For each domain that you request in your certificate, you get a separate DNS TXT record. After you add the DNS TXT record, {{site.data.keyword.cloudcerts_short}} and Let’s Encrypt check whether it's in your DNS service. If you successfully complete the challenge, you are issued a Let’s Encrypt certificate that is available in your {{site.data.keyword.cloudcerts_short}} instance.
 
-How you verify domain ownership depends on which DNS provider you are using:
+How you verify domain ownership depends on whether you use {{site.data.keyword.cis_full_notm}} or another DNS provider.
 
-- {{site.data.keyword.cis_full_notm}}
-- Another DNS Provider
 
 ### {{site.data.keyword.cis_full_notm}}
 {: #cis}
 
-If you manage your domains in {{site.data.keyword.cis_short}}, complete these instructions:
+If you manage your domains in {{site.data.keyword.cis_short}}, complete the following steps to verify ownership:
 
-1. Assign your {{site.data.keyword.cloudcerts_short}} instance a **Reader** service access role for your instance of {{site.data.keyword.cis_short_notm}} from **{{site.data.keyword.cloud_notm}} > Manage (IAM) > Authorizations**, so that {{site.data.keyword.cloudcerts_short}} can view the {{site.data.keyword.cis_short_notm}} instance and its domains.
+1. Navigate to **{{site.data.keyword.cloud_notm}} > Manage > Access (IAM) > Authorizations**.
 
-   For testing purposes you can assign **Manager** service access role instead, to manage all domains. When assigning this service access role, step 2 below is not required. This setting is not recommended for use in production environment.
-   {: note}	
+2. Click **Create** and assign a source and target service. The source service is granted access to the target service based on the roles that you set in the next step.
+
+  * Source: {{site.data.keyword.cloudcerts_short}}
+
+  * Target: {{site.data.keyword.cis_short_notm}}
+
+3. Specify a service instance for both the source and the target.
+
+4. Assign the **Reader** role to allow {{site.data.keyword.cloudcerts_short}} to view the {{site.data.keyword.cis_short_notm}} instance and its domains. Then, click **Authorize**.
+
+  For testing purposes, you can assign the **Manager** service access role through the UI to manage all of your domains.  If you do so, then you do not need to complete step 5. For production environments its recommended that you assign the **Reader** service access role to control specific domains by using the API as shown in step 5.
+  {: note}
    
-2. Assign a **Manager** service access role for your instance of {{site.data.keyword.cloudcerts_short}} so that it can manage the DNS records for provided domains in your {{site.data.keyword.cis_short_notm}} instance.
-
-From command-line, edit accordingly and execute the following `cURL` request:
+5. To control specific domains, assign the **Manager** role by using the API so that {{site.data.keyword.cloudcerts_short}} can manage the DNS records for the individual domains that exist in your {{site.data.keyword.cis_short_notm}} instance. You might want to copy the command to a text file to make it easy to edit the required parameters.
    
   
 
   
   ```
-  curl -X POST https://iam.cloud.ibm.com/acms/v1/policies -H 'Accept: application/json' -H 'Content-Type: application/json'  -H 'Authorization: Bearer Replace-with-User-token' -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": "Replace-with-accountID" }, { "name": "serviceInstance", "value": "Replace-with-Certificate-Manager-GUID-based-instanceID" } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": "Replace-with-account-ID" }, { "name": "serviceInstance", "value": "Replace-with-Cloud-Internet-Services-GUID-based-instanceID" }, { "name": "domainId", "value": "Replace-with-domainID" }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
+  curl -X POST https://iam.cloud.ibm.com/acms/v1/policies \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer <token>' \
+  -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": "<accountID>" }, { "name": "serviceInstance", "value": "<Certificate-Manager-GUID-based-instanceID>" } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": "<accountID>" }, { "name": "serviceInstance", "value": "<Cloud-Internet-Services-GUID-based-instanceID>" }, { "name": "domainId", "value": "<domainID>" }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
   ```
-  {: pre} 
+  {: codeblock} 
   
-   
-  Replace the following placeholders: 
 
-  - **User token** - A valid IAM token. Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud iam oauth-tokens`.
-  - **accountID** - The account ID where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances were created at. Find the value either in **{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings**, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud account show`.
-  - **{{site.data.keyword.cloudcerts_short}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID** into the two placeholders.
-  - **{{site.data.keyword.cis_short_notm}} GUID-based instanceID** - Find the value using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud resource service-instance "Instance name"` and copy the returned **GUID** into the two placeholders.
-  - **domainID** - Find the value in the {{site.data.keyword.cis_short_notm}} UI, or using the {{site.data.keyword.cloud_notm}} CLI: `ibmcloud cis domains`.  
-  If you would like to manage multiple domains, modify the the `resources` array.  
+  <table>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>token</code></td>
+      <td>A valid IAM token. You can find the value by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud iam oauth-tokens</code>.</td>
+    </tr>
+    <tr>
+      <td><code>accountID</code></td>
+      <td>The ID for the account where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances exist. You can find the value by navigating to <b>{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings</b> or by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud account show</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Certificate-Manager-GUID-based-instanceID</code></td>
+      <td>The GUID-based ID for your instance of {{site.data.keyword.cloudcerts_short}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>Cloud-Internet-Services-GUID-based-instanceID</code></td>
+      <td>The GUID-based ID for your instance of {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
+    </tr>
+    <tr>
+      <td><code>domainID</code></td>
+      <td>The ID of your domain as it is found in {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI to run <code>ibmcloud cis domains</code>. To manage multiple domains, modify the <code>resources</code> array.</td>
+    </tr>
+  </table>
 
-Continue to [Ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate).
+Now you're ready to [order a certificate](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)!
+
 
 ### Another DNS Provider
 {: #other_provider}
 
-To verify your control over a domain when using a 3rd party DNS provider, {{site.data.keyword.cloudcerts_short}} sends the TXT record to a Callback URL notifications channel that you provide, which allows you to automate the domain validation process.
+To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends the TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
 
-First implement an IBM Cloud Function action for domain validation, and provide its endpoint to a Callback URL notifications channel in {{site.data.keyword.cloudcerts_short}}.  
-[Learn how to set up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
-You can follow the instructions provided in [this blog post ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains) to setup domain validation using a Callback URL notification channel.
+For more information about setting up domain validation by using a Callback URL notification channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}.
 {: tip}
+
 
 #### Responding to challenge
 {: #responding-to-challenge}
@@ -134,7 +167,7 @@ The notification channel receives a notification with the following structure:
 
 Once the DNS TXT challenge is sent to your callback URL, you have to answer the challenge within 10 minutes. {{site.data.keyword.cloudcerts_short}} checks to see whether the challenge is complete. Once {{site.data.keyword.cloudcerts_short}} verifies that you answered the challenge, you are sent a second notification to let you know you can remove the TXT record.
 
-[Review the FAQ page](/docs/services/certificate-manager?topic=certificate-manager-faq#faq) for frequently asked questions about ordering certificates.
+To see frequently asked questions about ordering certificates, [review the FAQ page](/docs/services/certificate-manager?topic=certificate-manager-faq).
 {: tip}
 
 ## Ordering certificates
@@ -144,7 +177,7 @@ To order a certificate, complete the following steps:
 
 1. Navigate to the Manage tab of the {{site.data.keyword.cloudcerts_short}}.
 2. Click **Order Certificate** 
-3. Select your DNS provider - either {{site.data.keyword.cis_full_notm}}, or Another DNS Provider
+3. Select your DNS provider - either {{site.data.keyword.cis_full_notm}}, or another DNS Provider.
 4. If you've selected **{{site.data.keyword.cis_full_notm}}**, provide the following details:
    1. Complete the required setup instructions
    2. Provide a certificate name and optionally a description
@@ -162,7 +195,7 @@ To order a certificate, complete the following steps:
    5. Select the appropriate algorithm and key algorithm
    6. Click **Order**
 
-Your order is placed in a **Pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
+Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 
 ## Renewing certificates
 {: #renew-certificate}
@@ -172,10 +205,10 @@ If your certificate is about to expire, you can request to renew your certificat
 Renewals work similar to certificate ordering. When you request to renew a certificate, {{site.data.keyword.cloudcerts_short}} sends DNS txt challenges to your callback URL, so you can again prove that you own the domains for which you are renewing the certificate.
 
 To renew a certificate, complete the following steps:
-  1. Click on the menu in the row of the certificate you want to renew
-  2. Click **Renew Certificate**
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use
-  4. Click **Renew**
+  1. Click on the menu in the row of the certificate you want to renew.
+  2. Click **Renew Certificate**.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  4. Click **Renew**.
 
 
 You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-07"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL, dns,
 
@@ -177,7 +177,7 @@ To order a certificate, complete the following steps:
    1. Complete the required setup instructions
    2. Provide a certificate name and optionally a description
    3. Select a Certificate Authority
-   4. Select the {{site.data.keyword.cis_full_notm}} instance you've assigned **Manager** service access role for
+   4. Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
    5. Select the certificate type you need
    6. Select the domain
    7. Select the appropriate algorithm and key algorithm

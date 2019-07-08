@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-12"
+lastupdated: "2019-06-10"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -27,8 +27,22 @@ subcollection: certificate-manager
 
 Für den {{site.data.keyword.cloudcerts_long}}-Service stehen die folgenden Features und Änderungen zur Verfügung.
 
+
+## 10. Juni 2019
+{: 10June2019}
+
+- **Bestellte "Let's Encrypt"-Zertifikate verlängern**  
+  Jetzt können Sie "Let's Encrypt"-Zertifikate verlängern, die Sie mit {{site.data.keyword.cloudcerts_short}} bestellt haben. [Weitere Informationen zum Bestellen von Zertifikaten](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
+
+## 6. Mai 2019
+{: 6May2019}
+
+- **"Let's Encrypt"-Zertifikate bestellen**  
+  Sie können jetzt "Let's Encrypt"-Zertifikat bestellen. [Weitere Informationen zum Bestellen von Zertifikaten](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+
 ## 18. Februar 2019
-{: 18February2018}
+{: 18February2019}
 
 - **Live-Unterstützung am Standort Tokio**  
   {{site.data.keyword.cloudcerts_long_notm}} ist am Standort Tokio verfügbar.

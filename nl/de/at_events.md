@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-13"
+lastupdated: "2019-05-06"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, TLS, activity tracker,
 
 subcollection: certificate-manager
 
@@ -22,13 +22,13 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# {{site.data.keyword.cloudaccesstrailshort}}-Ereignisse  
+# Activity Tracker-Ereignisse  
 {: #at_events}
 
-Mit dem {{site.data.keyword.cloudaccesstrailfull}}-Service können Sie die Interaktionen von Benutzern und Anwendungen mit dem {{site.data.keyword.cloudcerts_long_notm}}-Service in {{site.data.keyword.Bluemix_notm}} verfolgen.
+Mit dem {{site.data.keyword.at_full}}-Service können Sie die Interaktionen von Benutzern und Anwendungen mit dem {{site.data.keyword.cloudcerts_long}}-Service in {{site.data.keyword.cloud_notm}} verfolgen.
 {:shortdesc}
 
-Der {{site.data.keyword.cloudaccesstrailfull_notm}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.Bluemix_notm}} ändern. Weitere Informationen finden Sie in [{{site.data.keyword.cloudaccesstrailfull_notm}}](/docs/services/cloud-activity-tracker?topic=cloud-activity-tracker-getting-started#getting-started). Beispiel: Beim Importieren eines Zertifikats wird ein {{site.data.keyword.cloudaccesstrailshort}}-Ereignis generiert.
+Der {{site.data.keyword.at_short}}-Service zeichnet vom Benutzer initiierte Aktivitäten auf, die den Status eines Service in {{site.data.keyword.cloud_notm}} ändern. Beispiel: Beim Importieren eines Zertifikats wird ein Ereignis generiert. Weitere Informationen finden Sie in den [{{site.data.keyword.at_short}}-Dokumentationen](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein Ereignis generiert wird.
 
@@ -43,8 +43,16 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 	  <td>Zertifikat importieren.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>Zertifikat bestellen.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Zertifikat erneut importieren.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate-metadata.read`</td>
+	  <td>Zertifikatsmetadaten abrufen.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
@@ -109,13 +117,19 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 </table>
 
 ## Position der Ereignisse
-{: #ui}
+{: #at_ui}
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse befinden sich in der {{site.data.keyword.cloudaccesstrailshort}}-**Kontodomäne** an dem {{site.data.keyword.Bluemix_notm}}-Standort, an dem die Ereignisse generiert werden.
+Geben Sie eine {{site.data.keyword.at_short}}-Instanz an derselben Position wie Ihre {{site.data.keyword.cloudcerts_short}}-Instanz an.
 
-{{site.data.keyword.cloudaccesstrailshort}}-Ereignisse werden automatisch an den {{site.data.keyword.cloudaccesstrailshort}}-Service am selben Standort weitergeleitet, an dem der {{site.data.keyword.cloudcerts_short}}-Service bereitgestellt wird.
+Ereignisse werden automatisch an die {{site.data.keyword.at_short}}-Serviceinstanz an derselben Position weitergeleitet, an der der {{site.data.keyword.cloudcerts_short}}-Service bereitgestellt wird.
 
 ## Zusätzliche Informationen
 {: #info}
 
-Das Feld *requestData_str* enthält den lesbaren Namen des Zertifikats.
+* Das Feld *requestData_str* enthält den lesbaren Namen des Zertifikats.
+
+## Verfügbarkeit
+{: #at-availability}
+
+* {{site.data.keyword.at_short}}-Support ist zurzeit für die Standorte **Dallas** und **Frankfurt** verfügbar.
+* Für andere Standorte wird eine Instanz des veralteten Activity Tracker-Service bereitgestellt, bis {{site.data.keyword.at_short}} verfügbar ist.

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-03-07"
+lastupdated: "2019-05-15"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL,
 
 subcollection: certificate-manager
 
@@ -25,13 +25,13 @@ subcollection: certificate-manager
 # Zugriffsrollen für den Service verwalten
 {: #managing-service-access-roles}
 
-Sie können Services in {{site.data.keyword.Bluemix_notm}} dadurch schützen, dass bestimmten Aktionen nur von Benutzern ausgeführt werden können, die bestimmte Zugriffsrollen haben.
+Sie können Services in {{site.data.keyword.cloud_notm}} dadurch schützen, dass bestimmten Aktionen nur von Benutzern ausgeführt werden können, die bestimmte Zugriffsrollen haben.
 {: shortdesc}
 
 ## Zugriffsrollen für die Plattform
 {: #platform-access-roles}
 
-Mithilfe von Plattformzugriffsrollen können Sie es Benutzern ermöglichen, Aufgaben für Plattformressourcen durchzuführen, wie z. B. das Erstellen und Löschen von Instanzen in Ihrem {{site.data.keyword.Bluemix_notm}}-Konto.
+Mithilfe von Plattformzugriffsrollen können Sie es Benutzern ermöglichen, Aufgaben für Plattformressourcen durchzuführen, wie z. B. das Erstellen und Löschen von Instanzen in Ihrem {{site.data.keyword.cloud_notm}}-Konto.
 
 <table>
 <caption> Tabelle 1. Aktionen, die Plattformzugriffsrollen zugeordnet werden</caption>
@@ -73,11 +73,19 @@ Mithilfe von Servicezugriffsrollen können Sie es Benutzern ermöglichen, Aufgab
     <td> Manager, Schreibberechtigter </td>
   </tr>
   <tr>
+     <td>Zertifikatmetadaten abrufen </td>
+     <td> Manager, Schreibberechtigter, Leseberechtigter </td>
+  </tr>      
+  <tr>
     <td>Metadaten des Zertifikats aktualisieren</td>
     <td> Manager, Schreibberechtigter </td>
   </tr>
   <tr>
     <td>Zertifikate, private Schlüssel und Zwischenzertifikate importieren oder erneut importieren </td>
+    <td> Manager </td>
+  </tr>
+  <tr>
+    <td>Zertifikat bestellen </td>
     <td> Manager </td>
   </tr>
   <tr>
@@ -96,6 +104,7 @@ Mithilfe von Servicezugriffsrollen können Sie es Benutzern ermöglichen, Aufgab
        <td>Benachrichtigungskanal testen </td>
        <td> Manager, Schreibberechtigter, Leseberechtigter </td>
      </tr>
+
 </table>
 
 Weitere Informationen zu Benutzerrollen und Berechtigungen finden Sie unter [Benutzerrollen](/docs/iam?topic=iam-userroles#userroles).
@@ -104,23 +113,6 @@ Weitere Informationen zu Benutzerrollen und Berechtigungen finden Sie unter [Ben
 {: #configuring-access-policies}
 
 Sie können Zugriffsrichtlinien für eine {{site.data.keyword.cloudcerts_short}}-Instanz (und damit für alle Zertifikate in dieser Instanz) konfigurieren oder Richtlinien für einzelne Zertifikate (Ressourcen) innerhalb einer Instanz festlegen.
-{: shortdesc}
-
-Führen Sie die folgenden Schritte aus, um Zugriffsrichtlinien zu konfigurieren:
-
-1. Navigieren Sie zu **Verwalten > Konto > Benutzer**. Eine Liste der Benutzer, die über Zugriff auf Ihr {{site.data.keyword.Bluemix_notm}}-Konto verfügen, wird angezeigt.
-2. Klicken Sie auf den Namen des Benutzers, dem Sie eine Zugriffsrichtlinie zuweisen möchten. Wenn der Benutzer nicht angezeigt wird, klicken Sie auf **Benutzer einladen**, um [den Benutzer zu Ihrem {{site.data.keyword.Bluemix_notm}}-Konto hinzuzufügen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
-3. Klicken Sie auf **Zugriff zuweisen**.
-4. Klicken Sie auf **Zugriff auf Ressourcen zuweisen**.
-5. Wählen Sie im Menü **Services** die Option **Zertifikatmanager** aus.
-6. Wählen Sie im Menü **Serviceinstanz** eine {{site.data.keyword.cloudcerts_short}}-Instanz aus oder verwenden Sie den Standardwert `Alle Instanzen`.
-7. (Optional) Konfigurieren Sie den Zugriff auf ein bestimmtes Zertifikat:
-    1. [Rufen Sie die Zertifikats-ID ab](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
-    2. Geben Sie `certificate` im Feld **Ressourcentyp** ein.
-    3. Geben Sie die Zertifikats-ID im Feld **Ressourcen-ID** ein.
-8. Weisen Sie dem Benutzer eine [Plattformzugriffsrolle](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) zu.
-9. Weisen Sie dem Benutzer eine [Servicezugriffsrolle](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) zu.
-10. Klicken Sie auf **Zuweisen**, um dem Benutzer die Zugriffsrichtlinie zuzuweisen.
 
 **Beispiele für die Rollenzuordnung**
 
@@ -128,12 +120,41 @@ Führen Sie die folgenden Schritte aus, um Zugriffsrichtlinien zu konfigurieren:
 * Einem Benutzer die Rolle eines Administrators oder Bearbeiters zuweisen, falls dieser Benutzer Instanzen erstellen und löschen soll.
 * Einem Benutzer mindestens die Rolle eines Leseberechtigten zuweisen, falls dieser Benutzer Zertifikate innerhalb einer Instanz anzeigen soll.
 
+{: shortdesc}
+
+### Zugriffsrichtlinien konfigurieren
+{: #configuring-access}
+
+Führen Sie die folgenden Schritte aus, um Zugriffsrichtlinien zu konfigurieren:
+
+1. Navigieren Sie zu **Verwalten > Zugriff (IAM) > Benutzer**. Eine Liste der Benutzer, die über Zugriff auf Ihr {{site.data.keyword.cloud_notm}}-Konto verfügen, wird angezeigt.
+2. Klicken Sie auf den Namen des Benutzers, dem Sie eine Zugriffsrichtlinie zuweisen möchten. Wenn der Benutzer nicht angezeigt wird, klicken Sie auf **Benutzer einladen**, um [den Benutzer zu Ihrem {{site.data.keyword.cloud_notm}}-Konto hinzuzufügen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
+3. Klicken Sie auf **Zugriffsrichtlinien** und dann auf **Zugriff zuweisen**.
+4. Klicken Sie auf **Zugriff auf Ressourcen zuweisen**.
+5. Wählen Sie im Menü **Services** die Option **Zertifikatmanager** aus.
+6. Wählen Sie im Menü **Serviceinstanz** eine {{site.data.keyword.cloudcerts_short}}-Instanz aus oder verwenden Sie den Standardwert `Alle Instanzen`.
+7. Weisen Sie dem Benutzer eine [Plattformzugriffsrolle](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) zu.
+8. Weisen Sie dem Benutzer eine [Servicezugriffsrolle](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) zu.
+9. Klicken Sie auf **Zuweisen**, um dem Benutzer die Zugriffsrichtlinie zuzuweisen.
+
+### Zugriff auf ein bestimmtes Zertifikat zulassen
+{: #allow-access-to-specific-certificate}
+
+Führen Sie die folgenden Schritte aus, um den Zugriff auf ein bestimmtes Zertifikat zuzulassen:
+
+1. [Rufen Sie die Zertifikats-ID ab](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
+2. Erstellen Sie zwei Zugriffsrichtlinien:
+   - Erste Richtlinie: Ordnen Sie der Serviceinstanz mindestens die Plattformzugriffsrolle **Anzeigeberechtigter** zu.
+   - Zweite Richtlinie: Ordnen Sie mindestens die Servicezugriffsrolle **Leseberechtigter** zu.
+     - Geben Sie `certificate` im Feld **Ressourcentyp** ein.
+     - Geben Sie die Zertifikats-ID im Feld **Ressourcen-ID** ein.
+
 ### ID eines Zertifikats abrufen
 {: #get-certificate-id}
 
 Führen Sie die folgenden Schritte aus, um die ID eines Zertifikats abzurufen:
 
-1. Wählen Sie im {{site.data.keyword.Bluemix_notm}}-Dashboard Ihre {{site.data.keyword.cloudcerts_short}}-Instanz aus.
+1. Wählen Sie im {{site.data.keyword.cloud_notm}}-Dashboard Ihre {{site.data.keyword.cloudcerts_short}}-Instanz aus.
 2. Wählen Sie im Navigationsbereich der Servicedetailseite **Verwalten** aus.
 3. Wählen Sie ein Zertifikat aus.
 4. Suchen Sie in den Zertifikatsdetails den Zertifikats-CRN.

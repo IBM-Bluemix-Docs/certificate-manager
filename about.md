@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-30"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -60,7 +60,7 @@ When you import or order a certificate into {{site.data.keyword.cloudcerts_short
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>You can easily and securely deploy custom domain TLS certificates from {{site.data.keyword.cloudcerts_short}} to your Kubernetes cluster. Cluster admins can use the [Kubernetes Service plug-in commands](/docs/containers?topic=containers-cs_cli_reference) to update TLS certificates as Kubernetes secrets with a new certificate without causing downtime. To get started, check out the [Ingress annotations in the documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>You can easily and securely deploy custom domain TLS certificates from {{site.data.keyword.cloudcerts_short}} to your Kubernetes cluster. Cluster admins can use the [Kubernetes Service plug-in commands](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) to update TLS certificates as Kubernetes secrets with a new certificate without causing downtime. To get started, check out the [Ingress annotations in the documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

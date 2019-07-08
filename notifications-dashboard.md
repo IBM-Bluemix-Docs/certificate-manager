@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-04"
 
 keywords: certificates, SSL,
 
@@ -94,8 +94,11 @@ After you decode and verify the payload, the content is a JSON string [according
 ## Configuring a notification channel
 {: #adding-channel}
 
-After you create a Slack Webhook or a Callback URL, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, and challenges for domain validation. {{site.data.keyword.cloudcerts_short}} encrypts the endpoint and stores it securely.
+After you create a Slack Webhook or a Callback URL, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, and challenges for domain validation.
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}} will encrypt the endpoints you configure to store them securely.
+{: important}
 
 To add a notification channel, complete the following steps:
 

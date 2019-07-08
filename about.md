@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store and manage SSL certificates for your {{site.data.keyword.cloud_notm}}-based apps.
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL certificates for your {{site.data.keyword.cloud_notm}}-based apps.
 {: shortdesc}
 
 You can import SSL certificates that you obtain for your apps and services, store them securely, and get a central view of the certificates that you are using. Or, you can order public certificates through Certificate Manager from supported CAs.

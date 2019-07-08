@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-30"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,11 +99,11 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Valid from</td>
-    <td>The date on which the certificate became valid (in UTC timezone). </td>
+    <td>The date on which the certificate became valid (in Coordinated Universal Time timezone). </td>
   </tr>
   <tr>
     <td>Expires on</td>
-    <td>The date on which the certificate is no longer valid (in UTC timezone). </td>
+    <td>The date on which the certificate is no longer valid (in Coordinated Universal Time timezone). </td>
   </tr>
   <tr>
     <td>Status</td>
@@ -120,7 +120,7 @@ After you import a certificate, the following information is displayed in the Ce
 ## Reimporting a certificate
 {: #reimport-certificate}
 
-If your certificate is about to expire, you can update the certificate by importing a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup that can be downloaded if required.
+If your certificate is about to expire, you can update it by importing a new version that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup that can be downloaded if required.
 {: shortdesc}
 
 ### Reimporting your certificate
@@ -149,7 +149,7 @@ To download the previous version of a certificate, complete the following steps:
 ## Ordering certificates
 {: #order-certificates}
 
-Before ordering a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Before you order a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
 To order a certificate, click **Order Certificate**, select either **{{site.data.keyword.cis_full_notm}}** or **Another DNS Provider** and provide the following details:
 
 1. Certificate name.
@@ -158,26 +158,26 @@ To order a certificate, click **Order Certificate**, select either **{{site.data
 4. Appropriate algorithm and key algorithm.
 5. Click **Order**.
 
-Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 orders/hour per IBM user account, and five certificates for the same domains per week.
+Ordering certificates is limited to five orders/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 orders per hour per IBM user account, and five certificates for the same domains per week.
 {: note}
 
 ## Renewing certificates
 {: #renew-certificates}
 
 To renew a certificate, complete the following steps:
-  1. Click on the menu in the row of the certificate you want to renew.
+  1. Click the menu in the row of the certificate you want to renew.
   2. Click **Renew Certificate**.
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair.
   
-  When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
-  {: note}
+    When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+    {: note}
     
-  4. Click **Renew**
+  4. Click **Renew**.
   
   You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
   {: note}
 
-Renewing a certificates is limited to  five renewal requests per certificate per minute, 100 renewal/hour per IBM user account.
+Renewing a certificate is limited to five renewal requests per certificate per minute, 100 renewal per hour per IBM user account.
 {: note}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -112,7 +112,7 @@ For more information about user roles and permissions, see [User roles](/docs/ia
 ## Configuring access policies for users
 {: #configuring-access-policies}
 
-You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance (and therefore for all the certificates in that instance), or you can set policies for individual certificates (resources) within an instance.
+You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance and therefore, all of the certificates in that instance, or you can set policies for individual certificates (resources) within an instance.
 
 **Examples of role allocation**
 
@@ -127,9 +127,9 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 
 To configure access policies, complete the following steps:
 
-1. Navigate to **Manage > Access (IAM) > Users**. A list of the users with access to your {{site.data.keyword.cloud_notm}} account is shown.
+1. Go to **Manage > Access (IAM) > Users**. A list of the users with access to your {{site.data.keyword.cloud_notm}} account is shown.
 2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv#iamuserinv).
-3. Click on **Access policies** and then on **Assign access**.
+3. Click **Access policies** and then on **Assign access**.
 4. Click **Assign access to resources**.
 5. From the **Services** menu, select **Certificate Manager**.
 6. From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.

@@ -74,11 +74,11 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
 1. Navigate to **{{site.data.keyword.cloud_notm}} > Manage > Access (IAM) > Authorizations**.
 2. Click **Create** and assign a source and target service. The source service is granted access to the target service based on the roles that you set in the next step.
   * Source: {{site.data.keyword.cloudcerts_short}}
-  * Target: {{site.data.keyword.cis_short_notm}}
+  * Target: Internet Services
 3. Specify a service instance for both the source and the target.
 4. Assign the **Reader** role to allow {{site.data.keyword.cloudcerts_short}} to view the {{site.data.keyword.cis_short_notm}} instance and its domains. Then, click **Authorize**.
 
-  For testing purposes, you can assign the **Manager** service access role through the UI to manage all of your domains. If you do so, then you do not need to complete step 5. For production environments it is recommended that you assign the **Reader** service access role to control specific domains by using the API as shown in step 5.
+  For testing purposes, you can assign the **Manager** service access role through the UI to manage all of your domains. If you do so, then you do not need to complete step 5. For production environments it is recommended that you assign the **Reader** service access role, and use the API as shown in step 5 to control specific domains.
   {: note}
    
 5. To control specific domains, assign the **Manager** role by using the API so that {{site.data.keyword.cloudcerts_short}} can manage the DNS records for the individual domains that exist in your {{site.data.keyword.cis_short_notm}} instance. You might want to copy the command to a text file to make it easy to edit the required parameters.

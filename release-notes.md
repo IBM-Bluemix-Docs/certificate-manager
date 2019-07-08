@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-30"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -27,8 +27,8 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
-## XX July 2019
-{: XXJuly2019}
+## 8 July 2019
+{: 8July2019}
 
 - **IBM Cloud Internet Services as a DNS provider**  
   You can now use IBM Cloud Internet Services as a DNS provider, simplifying the certificate ordering experience. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).

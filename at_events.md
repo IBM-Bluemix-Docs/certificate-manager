@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -140,4 +140,4 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 ## Availability
 {: #at-availability}
 
-{{site.data.keyword.at_short}} support is available for the **Dallas**, **Frankfurt**, and **Tokyo** locations.
+{{site.data.keyword.at_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo**, and **London** locations.

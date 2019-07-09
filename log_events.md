@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, log analysis,
 
@@ -45,4 +45,4 @@ Complete the following steps:
 ## Availability
 {: #la-availability}
 
-{{site.data.keyword.la_short}} support is available for the **Dallas**, **Frankfurt**, and **Tokyo** locations.
+{{site.data.keyword.la_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo**, and **London** locations.

@@ -140,4 +140,4 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 ## Availability
 {: #at-availability}
 
-{{site.data.keyword.at_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo** and **London** locations.
+{{site.data.keyword.at_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo**, and **London** locations.

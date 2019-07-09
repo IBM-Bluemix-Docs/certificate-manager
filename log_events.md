@@ -45,4 +45,4 @@ Complete the following steps:
 ## Availability
 {: #la-availability}
 
-{{site.data.keyword.la_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo** and **London** locations.
+{{site.data.keyword.la_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo**, and **London** locations.

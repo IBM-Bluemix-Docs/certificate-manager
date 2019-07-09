@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-23"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL, TLS, log analysis,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -37,12 +37,12 @@ Provision an {{site.data.keyword.at_short}} instance in the same location as you
 
 Complete the following steps:
 
-1. Navigate to [{{site.data.keyword.cloud_notm}} Observability](https://cloud.ibm.com/observe/)
-2. Provision a {{site.data.keyword.la_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance
-3. Click on **Configure platform service logs**, select the region and the instance you have just provisioned
+1. Go to [{{site.data.keyword.cloud_notm}} Observability](https://cloud.ibm.com/observe/).
+2. Provision a {{site.data.keyword.la_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
+3. Click **Configure platform service logs**, select the region and the instance that you provisioned in step 2.
 
 
 ## Availability
 {: #la-availability}
 
-{{site.data.keyword.la_short}} support is currently available for the **Dallas**, **Frankfurt** and **Tokyo** locations.
+{{site.data.keyword.la_short}} support is available for the **Dallas**, **Frankfurt**, and **Tokyo** locations.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -97,7 +97,7 @@ After you decode and verify the payload, the content is a JSON string [according
 After you create a Slack Webhook or a Callback URL, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, and challenges for domain validation.
 {: shortdesc}
 
-{{site.data.keyword.cloudcerts_short}} will encrypt the endpoints you configure to store them securely.
+{{site.data.keyword.cloudcerts_short}} will encrypt the endpoints that you configure to store them securely.
 {: important}
 
 To add a notification channel, complete the following steps:
@@ -211,4 +211,4 @@ For Channel versions check out the [API documentation](https://cloud.ibm.com/api
    Learn how to create GitHub issues for expiring certificate notifications.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    Learn how to create PagerDuty incidents for expiring certificate notifications.
-* [How to validate a domain using a Callback URL and a Cloud Function action ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+* [How to validate a domain by using a Callback URL and a Cloud Function action ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

@@ -53,7 +53,7 @@ A Certificate Authority (CA) is an entity that issues digital certificates. The 
 
 ### Let's Encrypt
 {: #lets-encrypt}
-[Let’s Encrypt](https://letsencrypt.org) is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service provided by the Internet Security Research Group (ISRG).
+[Let’s Encrypt](https://letsencrypt.org) is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service that is provided by the Internet Security Research Group (ISRG).
 
 ## Setting up certificate ordering
 {: #setup}
@@ -190,7 +190,7 @@ To order a certificate, complete the following steps:
    5. Select the appropriate algorithm and key algorithm
    6. Click **Order**
 
-Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
+Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain, you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 
 ## Renewing certificates
 {: #renew-certificate}
@@ -200,13 +200,13 @@ If your certificate is about to expire, you can request to renew your certificat
 Renewals work similar to certificate ordering. When you request to renew a certificate, {{site.data.keyword.cloudcerts_short}} sends DNS txt challenges to your callback URL, so you can again prove that you own the domains for which you are renewing the certificate.
 
 To renew a certificate, complete the following steps:
-  1. Click on the menu in the row of the certificate you want to renew.
+  1. Click the menu in the row of the certificate you want to renew.
   2. Click **Renew Certificate**.
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
   4. Click **Renew**.
 
 
 You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 {: note}
 
-Your renewal is placed in a **Renew pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain(s), you'll get a renewed certificate and its state will change to **Valid**. You'll be notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
+Your renewal is placed in a **Renew pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.

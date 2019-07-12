@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-09"
+lastupdated: "2019-07-12"
 
 keywords: certificates, SSL,
 
@@ -73,7 +73,7 @@ When you import or order a certificate into {{site.data.keyword.cloudcerts_short
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>Store your custom domain certificates in the {{site.data.keyword.cloudcerts_short}} service, then use certificate CRNs to bind with custom domains in {{site.data.keyword.apiconnect_short}}. [Learn more about {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-index#index).</p></td>
+    <td>Store your custom domain certificates in the {{site.data.keyword.cloudcerts_short}} service, then use certificate CRNs to bind with custom domains in {{site.data.keyword.apiconnect_short}}. [Learn more about {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-getting-started#getting-started).</p></td>
   </tr>
 </table>
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-12"
 
 keywords: certificates, SSL,
 
@@ -38,7 +38,7 @@ To create an instance from the {{site.data.keyword.cloud_notm}} console:
 5.	To order a new certificate, click **Order Certificate**.
 
 <br/>
-To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](https://cloud.ibm.com/docs/cli?topic=cloud-cli-ibmcloud-cli):
+To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-ibmcloud-cli):
 
 1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 

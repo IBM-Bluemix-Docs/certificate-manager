@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -128,7 +128,7 @@ subcollection: certificate-manager
 
 要配置访问策略，请完成以下步骤：
 
-1. 导航至**管理 > 访问权 (IAM) > 用户**。这将显示有权访问 {{site.data.keyword.cloud_notm}} 帐户的用户的列表。
+1. 转至**管理 > 访问权 (IAM) > 用户**。这将显示有权访问 {{site.data.keyword.cloud_notm}} 帐户的用户的列表。
 2. 单击要向其分配访问策略的用户的名称。如果未显示用户，请单击**邀请用户**以[将用户添加到 {{site.data.keyword.cloud_notm}} 帐户](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 3. 单击**访问策略**，然后单击**分配访问权**。
 4. 单击**分配对资源的访问权**。

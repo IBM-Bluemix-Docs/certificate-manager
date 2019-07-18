@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -114,7 +114,7 @@ subcollection: certificate-manager
 {: #certificate-order-validation}
 {: faq}
 
-发送域验证质询后，{{site.data.keyword.cloudcerts_short}} 会尝试验证您是否拥有所请求的域，验证时间最长为 10 分钟。如果 DNS 在 10 分钟内未使用 TXT 记录质询进行更新，订购将失败。
+服务发送域验证质询后，{{site.data.keyword.cloudcerts_short}} 会尝试验证您是否拥有所请求的域，验证时间最长为 10 分钟。如果 DNS 在 10 分钟内未使用 TXT 记录质询进行更新，订购将失败。
 
 ## 如何使用 {{site.data.keyword.cloudcerts_short}} 公共 API 来检查证书订购的状态？
 {: #certificate-order-status-api}
@@ -126,7 +126,7 @@ subcollection: certificate-manager
 {: #certificate-order-notification}
 {: faq}
 
-如果您配置了通知通道，那么在签发了证书之后或订购失败时会通知您。请注意，通知通道的版本应该为 V4 或更高版本。
+如果您配置了通知通道，那么在签发了证书之后或订购失败时会通知您。请注意，通知通道的版本必须为 V4 或更高版本。
 
 ## 我的订购失败了。为什么？
 {: #certificate-order-failure}

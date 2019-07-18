@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -112,7 +112,7 @@ Pour plus d'informations sur les rôles et les droits utilisateur, voir [Rôles 
 ## Configuration des politiques d'accès pour les utilisateurs
 {: #configuring-access-policies}
 
-Vous pouvez configurer des politiques d'accès pour une instance {{site.data.keyword.cloudcerts_short}} (et, de ce fait, pour tous les certificats de cette instance), ou vous pouvez définir des politiques pour les certificats individuels (ressources) dans une instance.
+Vous pouvez configurer des politiques d'accès pour une instance {{site.data.keyword.cloudcerts_short}} (et, de ce fait, pour tous les certificats de cette instance), ou vous pouvez définir des politiques pour des certificats individuels (ressources) dans une instance.
 
 **Exemples d'affectation de rôles**
 
@@ -122,7 +122,7 @@ Vous pouvez configurer des politiques d'accès pour une instance {{site.data.key
 
 {: shortdesc}
 
-### Configuration de politiques d'accès 
+### Configuration de politiques d'accès
 {: #configuring-access}
 
 Pour configurer des politiques d'accès, procédez comme suit :
@@ -144,7 +144,7 @@ Pour accéder à un certificat particulier, exécutez la procédure suivante :
 
 1. [Extrayez votre ID certificat](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
 2. Créez deux politiques d'accès :
-   - Première politique : Affectez au moins le rôle d'accès plateforme **Afficheur** pour l'instance de service. 
+   - Première politique : Affectez au moins le rôle d'accès plateforme **Afficheur** pour l'instance de service.
    - Seconde politique : Affectez au moins le rôle d'accès service **Lecteur**.
      - Entrez `certificate` dans la zone **Type de ressource**.
      - Entrez l'ID certificat dans la zone **ID de ressource**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,10 +25,9 @@ subcollection: certificate-manager
 # Activity Tracker イベント  
 {: #at_events}
 
-ユーザーおよびアプリケーションが {{site.data.keyword.cloud_notm}} 内の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するのかを {{site.data.keyword.at_full}} サービスを使用してトラッキングします。
-{:shortdesc}
+{{site.data.keyword.at_full}} サービスを使用して、ユーザーおよびアプリケーションが {{site.data.keyword.cloud_notm}} の {{site.data.keyword.cloudcerts_long}} サービスとどのように対話するかをトラッキングします。{:shortdesc}
 
-{{site.data.keyword.at_short}} サービスは、{{site.data.keyword.cloud_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。 例えば、証明書をインポートすると、イベントが生成されます。詳しくは、[{{site.data.keyword.at_short}} の資料](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)を参照してください。
+{{site.data.keyword.at_short}} サービスは、{{site.data.keyword.cloud_notm}} 内のサービスの状態を変更するユーザー開始アクティビティーを記録します。例えば、証明書をインポートすると、イベントが生成されます。 詳しくは、[{{site.data.keyword.at_short}} の資料](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)を参照してください。
 
 次の表に、呼び出されるとイベントを生成する API メソッドをリストします。
 
@@ -43,12 +42,16 @@ subcollection: certificate-manager
 	  <td>証明書をインポートします。</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>証明書を再インポートします。</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>証明書を注文します。</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>証明書を再インポートします。</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>発行された証明書を更新します。</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -121,6 +124,11 @@ subcollection: certificate-manager
 
 ご使用の {{site.data.keyword.cloudcerts_short}} インスタンスと同じ場所に {{site.data.keyword.at_short}} インスタンスをプロビジョンします。
 
+以下の手順を実行してください。
+
+1. [「{{site.data.keyword.cloud_notm}} プログラム識別情報」](https://cloud.ibm.com/observe/){: external}に移動します。
+2. ご使用の {{site.data.keyword.cloudcerts_short}} インスタンスと同じ場所に {{site.data.keyword.at_short}} インスタンスをプロビジョンします。
+
 イベントは、{{site.data.keyword.cloudcerts_short}} サービスがプロビジョンされているのと同じ場所にある {{site.data.keyword.at_short}} サービス・インスタンスに自動的に転送されます。
 
 ## 追加情報
@@ -131,5 +139,4 @@ subcollection: certificate-manager
 ## 可用性
 {: #at-availability}
 
-* {{site.data.keyword.at_short}} サポートは現在、**ダラス**と**フランクフルト**のロケーションで使用可能です。
-* 他の地域では、{{site.data.keyword.at_short}} が使用可能になるまで、非推奨の Activity Tracker サービスのインスタンスをプロビジョンします。
+{{site.data.keyword.at_short}} サポートは、**ダラス**、**フランクフルト**、**東京**、および**ロンドン**で利用できます。

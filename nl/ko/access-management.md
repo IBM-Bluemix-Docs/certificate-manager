@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -73,7 +73,7 @@ subcollection: certificate-manager
     <td> 관리자, 작성자 </td>
   </tr>
   <tr>
-     <td>인증서 메타데이터 가져오기</td>
+     <td>인증서 메타데이터 가져오기 </td>
      <td> 관리자, 작성자, 독자 </td>
   </tr>      
   <tr>
@@ -112,7 +112,7 @@ subcollection: certificate-manager
 ## 사용자에 대한 액세스 정책 구성
 {: #configuring-access-policies}
 
-{{site.data.keyword.cloudcerts_short}} 인스턴스에 대한 액세스 정책을 구성할 수 있거나(즉, 해당 인스턴스의 모든 인증서용) 인스턴스 내의 개별 인증서(리소스)에 대한 정책을 설정할 수 있습니다.
+{{site.data.keyword.cloudcerts_short}} 인스턴스 및 이 인스턴스의 모든 인증서에 대한 액세스 정책을 구성하거나 인스턴스 내 개별 인증서(리소스)에 대한 정책을 설정할 수 있습니다.
 
 **역할 할당의 예**
 

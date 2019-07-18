@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -114,7 +114,7 @@ Sur les réseaux DNS lents, une commande peut prendre jusqu'à environ 20 minute
 {: #certificate-order-validation}
 {: faq}
 
-après l'envoi de la demande d'authentification de la validation de domaine, {{site.data.keyword.cloudcerts_short}} tente de valider que vous possédez les domaines demandés pendant 10 minutes maximum. Si votre DNS n'est pas mis à jour avec la demande d'authentification de l'enregistrement TXT record sous 10 minutes, votre commande échoue.
+Après que je service a envoyé la demande d'authentification de la validation de domaine, {{site.data.keyword.cloudcerts_short}} tente de valider le fait que vous possédez les domaines demandés (pendant 10 minutes maximum). Si votre DNS n'est pas mis à jour avec la demande d'authentification de l'enregistrement TXT record sous 10 minutes, votre commande échoue.
 
 ## Comment vérifier le statut de ma commande de certificat via l'API publique {{site.data.keyword.cloudcerts_short}} ?
 {: #certificate-order-status-api}

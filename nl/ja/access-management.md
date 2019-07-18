@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -73,7 +73,7 @@ subcollection: certificate-manager
     <td> 管理者、ライター </td>
   </tr>
   <tr>
-     <td>証明書メタデータの取得</td>
+     <td>証明書メタデータの取得 </td>
      <td> 管理者、ライター、リーダー </td>
   </tr>      
   <tr>
@@ -85,7 +85,7 @@ subcollection: certificate-manager
     <td> 管理者 </td>
   </tr>
   <tr>
-    <td>証明書の注文</td>
+    <td>証明書の注文 </td>
     <td> 管理者 </td>
   </tr>
   <tr>
@@ -112,7 +112,7 @@ subcollection: certificate-manager
 ## ユーザーのアクセス・ポリシーの構成
 {: #configuring-access-policies}
 
-{{site.data.keyword.cloudcerts_short}} インスタンス (および、結果的にそのインスタンス内のすべての証明書) のアクセス・ポリシーを構成したり、インスタンス内の個々の証明書 (リソース) のポリシーを設定したりできます。
+{{site.data.keyword.cloudcerts_short}} インスタンスと、結果的にそのインスタンス内のすべての証明書のアクセス・ポリシーを構成したり、インスタンス内の個々の証明書 (リソース) のポリシーを設定したりできます。
 
 **役割の割り振りの例**
 

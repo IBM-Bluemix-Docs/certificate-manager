@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -94,8 +94,11 @@ Slack 웹훅을 설정하려면 다음 단계를 완료하십시오.
 ## 알림 채널 구성
 {: #adding-channel}
 
-Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_short}}에 이를 추가하여 만료되는 인증서, 다시 가져온 인증서, 발행된 인증서 및 도메인 유효성 검증을 위한 인증 확인에 대한 알림 수신을 시작할 수 있습니다. {{site.data.keyword.cloudcerts_short}}는 엔드포인트를 암호화하고 안전하게 보관합니다.
+Slack 웹훅 또는 콜백 URL을 작성한 후 {{site.data.keyword.cloudcerts_short}}에 이를 추가하여 만료되는 인증서, 다시 가져온 인증서, 발행된 인증서 및 도메인 유효성 검증을 위한 인증 확인에 대한 알림 수신을 시작할 수 있습니다.
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}}는 안전하게 저장하도록 구성하는 엔드포인트를 암호화합니다.
+{: important}
 
 알림 채널을 추가하려면 다음 단계를 완료하십시오.
 
@@ -208,4 +211,4 @@ Certificate Manager가 향상됨에 따라 수시로 알림 페이로드 구조�
    인증서 만료 알림을 위해 GitHub 문제를 작성하는 방법에 대해 알아봅니다.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    인증서 만료 알림을 위해 PagerDuty 인시던트를 작성하는 방법에 대해 알아봅니다.
-* [How to validate a domain using a Callback URL and a Cloud Function action ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+* [콜백 URL 및 Cloud Functions 조치를 사용하여 도메인을 유효성 검증하는 방법 ![외부 링크 아이콘](../../icons/launch-glyph.svg "외부 링크 아이콘")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

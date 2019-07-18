@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -27,13 +27,17 @@ subcollection: certificate-manager
 
 Les fonctions et modifications suivantes sont disponibles pour le service {{site.data.keyword.cloudcerts_long}}.
 
+## 8 juillet 2019
+{: 8July2019}
+
+- **IBM Cloud Internet Services en tant que fournisseur DNS**  
+  Vous pouvez utiliser IBM Cloud Internet Services en tant que fournisseur DNS, ce qui simplifie l'expérience de commande de certificat. [En savoir plus sur la commande de certificats](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 10 juin 2019
 {: 10June2019}
 
 - **Renouveler les certificats Let's Encrypt commandés**  
   Vous pouvez désormais renouveler les certificats Let's Encrypt que vous avez commandés via {{site.data.keyword.cloudcerts_short}}. [En savoir plus sur la commande de certificats](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
-
 
 ## 6 mai 2019
 {: 6May2019}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -149,12 +149,13 @@ Führen Sie die folgenden Schritte aus, um die vorhergehende Version eines Zerti
 ## Zertifikate bestellen
 {: #order-certificates}
 
-Bevor Sie ein Zertifikat bestellen, [müssen Sie zuerst die erforderliche Konfiguration durchführen](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Bevor Sie ein Zertifikat bestellen, [müssen Sie zuerst die erforderliche Konfiguration durchführen](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Klicken Sie zum Bestellen eines Zertifikats auf **Zertifikat bestellen**, wählen Sie entweder **{{site.data.keyword.cis_full_notm}}** oder **Anderer DNS-Provider** aus und geben Sie die folgenden Details an: 
 
-1. Geben Sie einen Zertifikatsnamen an.
-2. Wählen Sie eine Zertifizierungsstelle aus.
-3. Geben Sie die primäre Domäne und alle alternativen Domänen ein.
-4. Wählen Sie den entsprechenden Algorithmus und den Schlüsselalgorithmus aus.
+1. Zertifikatsname. 
+2. Zertifizierungsstelle (CA). 
+3. Erforderliche Domänen. 
+4. Entsprechender Algorithmus und Schlüsselalgorithmus. 
 5. Klicken Sie auf **Bestellen**.
 
 Das Bestellen von Zertifikaten ist auf fünf Bestellungen/Minute pro {{site.data.keyword.cloudcerts_short}}-Instanz, 100 Bestellungen/Stunde pro IBM Benutzerkonto und fünf Zertifikate für dieselben Domänen pro Woche beschränkt.
@@ -168,15 +169,15 @@ Führen Sie die folgenden Schritte aus, um ein Zertifikat zu verlängern:
   2. Klicken Sie auf **Renew Certificate** (Zertifikat verlängern).
   3. Optional: Sie können wählen, ob Sie für Ihr Zertifikat einen neuen Schlüssel erstellen möchten, indem Sie das Kontrollkästchen **Neuen Schlüssel für Zertifikat erstellen** aktivieren. Dadurch wird Ihr Zertifikat mit einem neuen Schlüsselpaar verlängert.
   
-  Wenn Sie für Ihr Zertifikat einen neuen Schlüssel erstellen, stellen Sie sicher, dass die neuen Zertifikate und Schlüssel überall dort implementiert werden, wo sie verwendet werden.
-  {: note}
+    Wenn Sie für Ihr Zertifikat einen neuen Schlüssel erstellen, stellen Sie sicher, dass die neuen Zertifikate und Schlüssel überall dort implementiert werden, wo sie verwendet werden.
+    {: note}
     
-  4. Klicken Sie auf **Renew** (Verlängern).
+  4. Klicken Sie auf **Verlängern**.
   
   Sie können nur Zertifikate verlängern, die Sie über {{site.data.keyword.cloudcerts_short}} bestellt haben.
   {: note}
 
-Die Verlängerung von Zertifikaten ist auf fünf Verlängerungsanforderungen pro Zertifikat pro Minute und 100 Verlängerungen/Stunde pro IBM Benutzerkonto beschränkt.
+Die Verlängerung eines Zertifikats ist auf fünf Verlängerungsanforderungen pro Zertifikat pro Minute und 100 Verlängerungen/Stunde pro IBM Benutzerkonto beschränkt.
 {: note}
 
 

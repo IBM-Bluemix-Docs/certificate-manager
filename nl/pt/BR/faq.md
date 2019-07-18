@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -39,7 +39,7 @@ O {{site.data.keyword.cloudcerts_short}} suporta somente certificados formatados
 {: #supported-pk-algorithms}
 {: faq}
 
-O {{site.data.keyword.cloudcerts_short}} suporta certificados com chaves públicas geradas usando os algoritmos de chave pública a seguir:
+O {{site.data.keyword.cloudcerts_short}} suporta certificados com chaves públicas que são geradas usando os algoritmos de chave pública a seguir:
 
 * Rivest-Shamir-Adleman (RSA)
 * Algoritmo de Assinatura Digital (DSA)
@@ -114,9 +114,10 @@ Em redes de DNS lentas, um pedido pode levar até cerca de 20 minutos para ser c
 {: #certificate-order-validation}
 {: faq}
 
-Após enviar o desafio de validação de domínio, o {{site.data.keyword.cloudcerts_short}} tenta validar que você possui os domínios que solicitou por até 10 minutos. Se o seu DNS não for atualizado com o desafio do registro do TXT dentro de 10 minutos, o seu pedido falhará.
+Depois que o serviço envia o desafio de validação de domínio, o {{site.data.keyword.cloudcerts_short}} tenta validar que você possui os domínios que solicitou por até 10 minutos. Se o seu DNS não for atualizado com o desafio do registro do TXT dentro de 10 minutos, o seu pedido falhará.
 
-## Como eu verifico o status de meu pedido de certificado usando a API pública do {{site.data.keyword.cloudcerts_short}}?
+## Como eu verifico o status do meu pedido de certificado usando a API pública do
+{{site.data.keyword.cloudcerts_short}}?
 {: #certificate-order-status-api}
 {: faq}
 
@@ -126,7 +127,7 @@ Use a API `Get certificate metadata` para pesquisar o status do pedido do certif
 {: #certificate-order-notification}
 {: faq}
 
-Se você configurou um canal de notificação, será notificado quando o seu certificado for emitido ou se o seu pedido tiver falhado. Observe que a versão de seu canal de notificação deve ser v4 ou superior.
+Se você configurou um canal de notificação, será notificado quando o seu certificado for emitido ou se o seu pedido tiver falhado. Observe que a versão do seu canal de notificação deve ser v4 ou superior.
 
 ## Meu pedido falhou. Por que?
 {: #certificate-order-failure}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,11 +99,11 @@ Tras importar un certificado, se mostrará la información siguiente en la tabla
   </tr>
   <tr>
     <td>Válido a partir de</td>
-    <td>La fecha en la que el certificado pasará a ser válido (en huso horario UTC). </td>
+    <td>La fecha en la que el certificado pasará a ser válido (en huso horario de Hora Universal Coordinada). </td>
   </tr>
   <tr>
     <td>Caduca en</td>
-    <td>La fecha en la que el certificado ya no será válido (en huso horario UTC). </td>
+    <td>La fecha en la que el certificado ya no será válido (en huso horario de Hora Universal Coordinada). </td>
   </tr>
   <tr>
     <td>Estado</td>
@@ -120,7 +120,7 @@ Tras importar un certificado, se mostrará la información siguiente en la tabla
 ## Reimportación de un certificado
 {: #reimport-certificate}
 
-Si el certificado está a punto de caducar, puede actualizar un certificado importando una nueva versión del certificado que tenga el mismo dominio que el certificado existente, pero una nueva fecha de caducidad. Cuando se vuelve a importar un certificado, la versión existente del certificado se conserva como copia de seguridad que se puede descargar si hace falta.
+Si el certificado está a punto de caducar, puede actualizarlo importando una nueva versión que tenga el mismo dominio que el certificado existente, pero una nueva fecha de caducidad. Cuando se vuelve a importar un certificado, la versión existente del certificado se conserva como copia de seguridad que se puede descargar si hace falta.
 {: shortdesc}
 
 ### Reimportación de su certificado
@@ -149,12 +149,13 @@ Para descargar la versión anterior de un certificado, siga los pasos siguientes
 ## Solicitud de certificados
 {: #order-certificates}
 
-Antes de solicitar un certificado, [complete la configuración necesaria](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Antes de solicitar un certificado, [complete la configuración necesaria](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Para solicitar un certificado, pulse **Solicitar certificado**, seleccione **{{site.data.keyword.cis_full_notm}}** u **Otro proveedor de DNS** y proporcione los detalles siguientes:
 
-1. Especifique un nombre de certificado.
-2. Seleccione una entidad emisora de certificados.
-3. Especifique el dominio primario y los dominios alternativos.
-4. Seleccione el algoritmo y el algoritmo de clave adecuados.
+1. Nombre de certificado.
+2. Entidad emisora de certificados.
+3. Dominios necesarios.
+4. Algoritmo y algoritmo de clave adecuados.
 5. Pulse **Solicitar**.
 
 La solicitud de certificado se limita a cinco solicitudes por minuto por instancia de {{site.data.keyword.cloudcerts_short}}, a 100 solicitudes por hora por cuenta de usuario de IBM y a cinco certificados para los mismos dominios por semana.
@@ -166,12 +167,12 @@ La solicitud de certificado se limita a cinco solicitudes por minuto por instanc
 Para renovar un certificado, siga los pasos siguientes:
   1. Pulse el menú de la fila del certificado que desea renovar.
   2. Pulse **Renovar certificado**.
-  3. Opcional: puede optar por volver a obtener una clave para el certificado marcando el recuadro de selección **Volver a obtener clave de certificado**. Esto renovará el certificado con un nuevo par de claves.
+  3. Opcional: puede optar por volver a obtener una clave para el certificado marcando el recuadro de selección **Volver a obtener clave de certificado**. Esto renueva el certificado con un nuevo par de claves.
   
-  Si solicita una nueva clave para un certificado, asegúrese de desplegar los nuevos certificados y claves en todo lugar en el que se utilicen.
-  {: note}
+    Si solicita una nueva clave para un certificado, asegúrese de desplegar los nuevos certificados y claves en todo lugar en el que se utilicen.
+    {: note}
     
-  4. Pulse **Renovar**
+  4. Pulse **Renovar**.
   
   Solo puede renovar los certificados que haya solicitado mediante {{site.data.keyword.cloudcerts_short}}.
   {: note}

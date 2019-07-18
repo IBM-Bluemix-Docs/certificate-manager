@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -43,12 +43,16 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 	  <td>Zertifikat importieren.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Zertifikat erneut importieren.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>Zertifikat bestellen.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Zertifikat erneut importieren.</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>Ausgestelltes Zertifikat verlängern. </td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -121,6 +125,11 @@ In der folgenden Tabelle sind die API-Methoden aufgeführt, bei deren Aufruf ein
 
 Geben Sie eine {{site.data.keyword.at_short}}-Instanz an derselben Position wie Ihre {{site.data.keyword.cloudcerts_short}}-Instanz an.
 
+Führen Sie die folgenden Schritte aus:
+
+1. Rufen Sie [{{site.data.keyword.cloud_notm}} Beobachtbarkeit](https://cloud.ibm.com/observe/){: external} auf.
+2. Geben Sie eine {{site.data.keyword.at_short}}-Instanz an derselben Position wie Ihre {{site.data.keyword.cloudcerts_short}}-Instanz an.
+
 Ereignisse werden automatisch an die {{site.data.keyword.at_short}}-Serviceinstanz an derselben Position weitergeleitet, an der der {{site.data.keyword.cloudcerts_short}}-Service bereitgestellt wird.
 
 ## Zusätzliche Informationen
@@ -131,5 +140,4 @@ Ereignisse werden automatisch an die {{site.data.keyword.at_short}}-Serviceinsta
 ## Verfügbarkeit
 {: #at-availability}
 
-* {{site.data.keyword.at_short}}-Support ist zurzeit für die Standorte **Dallas** und **Frankfurt** verfügbar.
-* Für andere Standorte wird eine Instanz des veralteten Activity Tracker-Service bereitgestellt, bis {{site.data.keyword.at_short}} verfügbar ist.
+{{site.data.keyword.at_short}}-Unterstützung ist für die Standorte **Dallas**, **Frankfurt**, **Tokio** und **London** verfügbar. 

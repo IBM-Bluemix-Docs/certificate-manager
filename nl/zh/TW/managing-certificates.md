@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,11 +99,11 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>有效起始時間</td>
-    <td>憑證生效的日期（UTC 時區）。</td>
+    <td>憑證生效的日期（世界標準時間時區）。</td>
   </tr>
   <tr>
     <td>到期日期</td>
-    <td>憑證不再有效的日期（UTC 時區）。</td>
+    <td>憑證不再有效的日期（世界標準時間時區）。</td>
   </tr>
   <tr>
     <td>狀態</td>
@@ -120,7 +120,7 @@ subcollection: certificate-manager
 ## 重新匯入憑證
 {: #reimport-certificate}
 
-如果您的憑證即將到期，您可以藉由匯入新版憑證來更新憑證，此新版憑證具有與現有憑證相同的網域，但具有新的到期日。重新匯入憑證時，憑證的現有版本會保留作為備份，必要時可以下載該備份。
+如果您的憑證即將到期，您可以藉由匯入新版來更新憑證，此新版憑證具有與現有憑證相同的網域，但具有新的到期日。重新匯入憑證時，憑證的現有版本會保留作為備份，必要時可以下載該備份。
 {: shortdesc}
 
 ### 重新匯入憑證
@@ -149,12 +149,13 @@ subcollection: certificate-manager
 ## 訂購憑證
 {: #order-certificates}
 
-訂購憑證之前，請[先完成必要的設定](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)。
+訂購憑證之前，請[先完成必要的設定](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates)。  
+若要訂購憑證，請按一下**訂購憑證**、選取 **{{site.data.keyword.cis_full_notm}}** 或**另一個 DNS 提供者**並提供下列詳細資料：
 
-1. 提供憑證名稱。
-2. 選取憑證管理中心。
-3. 輸入主要網域及任何替代網域。
-4. 選取適當的演算法及金鑰演算法。
+1. 憑證名稱。
+2. 憑證管理中心。
+3. 必要的網域。
+4. 適當的演算法及金鑰演算法。
 5. 按一下**訂購**。
 
 訂購憑證限制為每個 {{site.data.keyword.cloudcerts_short}} 實例每分鐘 5 個訂購，每個 IBM 使用者帳戶每小時 100 個訂購，每週對於相同網域只能訂購 5 個憑證。
@@ -168,7 +169,7 @@ subcollection: certificate-manager
   2. 按一下**更新憑證**。
   3. 選用項目：您可以選擇重設憑證的金鑰，方法是勾選**重設憑證金鑰**勾選框。這會以新的金鑰組更新您的憑證。
   
-  當您重設憑證金鑰時，請務必在使用憑證和金鑰的任何位置部署新的憑證和金鑰。
+    當您重設憑證金鑰時，請務必在使用憑證和金鑰的任何位置部署新的憑證和金鑰。
   {: note}
     
   4. 按一下**更新**。

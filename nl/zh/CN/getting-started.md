@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # 入门教程
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} 可帮助您为 {{site.data.keyword.IBM_notm}} 基于云的应用程序获取、存储和管理 SSL 证书。
+{{site.data.keyword.cloudcerts_full}} 可帮助您为基于 {{site.data.keyword.cloud_notm}} 的应用程序获取、存储和管理 SSL 证书。
   
 首先，完成以下步骤来创建新的 {{site.data.keyword.cloudcerts_short}} 服务实例。
 {: shortdesc}

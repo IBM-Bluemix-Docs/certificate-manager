@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,11 +99,11 @@ Une fois que vous avez importé un certificat, les informations ci-après sont a
   </tr>
   <tr>
     <td>Valide à partir du</td>
-    <td>Date à laquelle le certificat est devenu valide (fuseau horaire UTC). </td>
+    <td>Date à laquelle le certificat est devenu valide (fuseau horaire Temps Universel Coordonné). </td>
   </tr>
   <tr>
     <td>Expire le</td>
-    <td>Date à laquelle le certificat n'est plus valide (fuseau horaire UTC). </td>
+    <td>Date à laquelle le certificat n'est plus valide (fuseau horaire Temps Universel Coordonné). </td>
   </tr>
   <tr>
     <td>Statut</td>
@@ -149,12 +149,13 @@ Pour télécharger la version précédente d'un certificat, procédez comme suit
 ## Commande de certificats
 {: #order-certificates}
 
-Avant de commander un certificat, [commencez par effectuer la configuration obligatoire](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Avant de commander un certificat, [commencez par effectuer la configuration obligatoire](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Pour commander un certificat, cliquez sur **Demander un certificat**, sélectionnez **{{site.data.keyword.cis_full_notm}}** ou **Autre fournisseur DNS** et indiquez les informations suivantes :
 
-1. Indiquez un nom de certificat.
-2. Sélectionnez une autorité de certification.
-3. Indiquez le domaine principal ainsi que tout domaine de remplacement.
-4. Sélectionnez l'algorithme et l'algorithme de clé appropriés. 
+1. Nom du certificat.
+2. Autorité de certification. 
+3. Domaines requis.
+4. Algorithme et algorithme de clé appropriés.
 5. Cliquez sur **Commander**.
 
 La commande de certificats est limitée à cinq commandes/minute par instance {{site.data.keyword.cloudcerts_short}}, 100 commandes/heure par compte utilisateur IBM, et cinq certificats pour les mêmes domaines par semaine.
@@ -166,11 +167,12 @@ La commande de certificats est limitée à cinq commandes/minute par instance {{
 Pour renouveler un certificat, procédez comme suit :
   1. Cliquez sur le menu sur la ligne du certificat à renouveler.
   2. Cliquez sur **Renouveler le certificat**.
-  3. Facultatif : Vous pouvez choisir de recomposer votre certificat en cochant la case **Recomposer le certificat**. Le certificat sera alors renouvelé avec une nouvelle paire de clés. 
+  3. Facultatif : Vous pouvez choisir de recomposer votre certificat en cochant la case **Recomposer le certificat**. Le certificat est alors renouvelé avec une nouvelle paire de clés. 
   
-  Lorsque vous recomposez un certificat, veillez à déployer les nouveaux certificats et clés partout où ils sont utilisés. {: note}
+    Lorsque vous recomposez un certificat, veillez à déployer les nouveaux certificats et clés partout où ils sont utilisés.
+    {: note}
     
-  4. Cliquez sur **Renouveler**
+  4. Cliquez sur **Renouveler**.
   
   Vous pouvez uniquement renouveler des certificats commandés via {{site.data.keyword.cloudcerts_short}}.
   {: note}

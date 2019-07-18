@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -114,7 +114,7 @@ Bei langsamen DNS-Netzen kann eine Bestellung bis zu 20 Minuten dauern, bis sie 
 {: #certificate-order-validation}
 {: faq}
 
-Nach dem Senden der Anforderung zur Domänenüberprüfung versucht {{site.data.keyword.cloudcerts_short}} in 10 Minuten zu prüfen, ob Ihnen die Domänen gehören, die Sie angefordert haben. Wenn Ihr DNS nicht innerhalb von 10 Minuten mit der TXT-Datensatzanforderung aktualisiert wird, schlägt Ihre Bestellung fehl.
+Nach dem Senden der Abfrage zur Domänenüberprüfung durch den Service versucht {{site.data.keyword.cloudcerts_short}} in 10 Minuten zu prüfen, ob Ihnen die Domänen gehören, die Sie angefordert haben. Wenn Ihr DNS nicht innerhalb von 10 Minuten mit der TXT-Datensatzabfrage aktualisiert wird, schlägt Ihre Bestellung fehl.
 
 ## Wie überprüfe ich den Status meiner Zertifikatsbestellung mit der öffentlichen {{site.data.keyword.cloudcerts_short}}-API?
 {: #certificate-order-status-api}

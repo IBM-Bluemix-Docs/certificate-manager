@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -27,13 +27,17 @@ subcollection: certificate-manager
 
 Für den {{site.data.keyword.cloudcerts_long}}-Service stehen die folgenden Features und Änderungen zur Verfügung.
 
+## 08. Juli 2019
+{: 8July2019}
+
+- **IBM Cloud Internet Services als DNS-Provider**  
+  IBM Cloud Internet Services kann nun als DNS-Provider verwendet werden und vereinfacht das Bestellen von Zertifikaten. [Weitere Informationen zum Bestellen von Zertifikaten](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 10. Juni 2019
 {: 10June2019}
 
 - **Bestellte "Let's Encrypt"-Zertifikate verlängern**  
   Jetzt können Sie "Let's Encrypt"-Zertifikate verlängern, die Sie mit {{site.data.keyword.cloudcerts_short}} bestellt haben. [Weitere Informationen zum Bestellen von Zertifikaten](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
-
 
 ## 6. Mai 2019
 {: 6May2019}

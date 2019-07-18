@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -100,7 +100,7 @@ subcollection: certificate-manager
 {: #revoke-certificate}
 {: faq}
 
-{{site.data.keyword.cloudcerts_short}} には現在、使用可能な失効 API がありません。ただし、Let's Encrypt API を使用して、証明書の秘密鍵を使用することにより、証明書を失効させることができます。Let's Encrypt 証明書を失効させる方法は、[Let's Encrypt の資料](https://letsencrypt.org/docs/revoking/)で確認できます。
+{{site.data.keyword.cloudcerts_short}} には現在、使用可能な失効 API がありません。 ただし、Let's Encrypt API を使用して、証明書の秘密鍵を使用することにより、証明書を失効させることができます。 Let's Encrypt 証明書を失効させる方法は、[Let's Encrypt の資料](https://letsencrypt.org/docs/revoking/)で確認できます。
 
 
 
@@ -114,7 +114,7 @@ DNS ネットワークが低速の場合、注文が正常に完了するまで�
 {: #certificate-order-validation}
 {: faq}
 
-ドメイン検証チャレンジが送信された後、{{site.data.keyword.cloudcerts_short}} は、要求されたドメインがユーザーの所有になっていることの検証を最大 10 分間試行します。10 分以内に DNS が TXT レコード・チャレンジで更新されない場合、注文は失敗します。
+サービスによってドメイン検証チャレンジが送信された後、{{site.data.keyword.cloudcerts_short}} は、要求されたドメインがユーザーの所有になっていることの検証を最大 10 分間試行します。10 分以内に DNS が TXT レコード・チャレンジで更新されない場合、注文は失敗します。
 
 ## {{site.data.keyword.cloudcerts_short}} パブリック API を使用して証明書の注文状況を確認するにはどうすればよいですか?
 {: #certificate-order-status-api}
@@ -126,9 +126,9 @@ DNS ネットワークが低速の場合、注文が正常に完了するまで�
 {: #certificate-order-notification}
 {: faq}
 
-通知チャネルを構成した場合は、証明書が発行されたとき、または注文に失敗したときに通知されます。通知チャネルのバージョンは v4 以上でなければなりません。
+通知チャネルを構成した場合は、証明書が発行されたとき、または注文に失敗したときに通知されます。 通知チャネルのバージョンは v4 以上でなければなりません。
 
-## 注文に失敗しました。なぜでしょうか?
+## 注文に失敗しました。 なぜでしょうか?
 {: #certificate-order-failure}
 {: faq}
 

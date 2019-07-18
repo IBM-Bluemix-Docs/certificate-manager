@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -93,8 +93,11 @@ subcollection: certificate-manager
 ## 配置通知通道
 {: #adding-channel}
 
-创建 Slack Webhook 或回调 URL 后，可以将其添加到 {{site.data.keyword.cloudcerts_short}} 以开始接收有关证书到期、已重新导入证书、已签发证书以及域验证质询的通知。{{site.data.keyword.cloudcerts_short}} 会加密端点并对其进行安全存储。
+创建 Slack Webhook 或回调 URL 后，可以将其添加到 {{site.data.keyword.cloudcerts_short}} 以开始接收有关证书到期、已重新导入证书、已签发证书以及域验证质询的通知。
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}} 将加密您配置为以安全方式存储的端点。
+{: important}
 
 要添加通知通道，请完成以下步骤：
 
@@ -207,4 +210,4 @@ subcollection: certificate-manager
    了解如何创建 GitHub 问题以获取证书到期通知。
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    了解如何创建 PagerDuty 事件以获取证书到期通知。
-* [如何使用回调 URL 和 Cloud Functions 操作验证域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+* [如何使用回调 URL 和 Cloud Function 操作验证域 ![外部链接图标](../../icons/launch-glyph.svg "外部链接图标")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

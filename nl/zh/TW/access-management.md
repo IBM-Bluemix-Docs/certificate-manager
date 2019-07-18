@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -112,7 +112,7 @@ subcollection: certificate-manager
 ## 配置使用者的存取原則
 {: #configuring-access-policies}
 
-您可以配置 {{site.data.keyword.cloudcerts_short}} 實例（以及該實例中所有憑證）的存取原則，也可以為實例內的個別憑證（資源）設定原則。
+您可以配置 {{site.data.keyword.cloudcerts_short}} 實例及該實例中所有憑證的存取原則，也可以為實例內的個別憑證（資源）設定原則。
 
 
 **角色配置的範例**
@@ -128,7 +128,7 @@ subcollection: certificate-manager
 
 若要配置存取原則，請完成下列步驟：
 
-1. 導覽至**管理 > 存取權 (IAM) > 使用者**。會顯示能存取您 {{site.data.keyword.cloud_notm}} 帳戶的使用者清單。
+1. 移至**管理 > 存取權 (IAM) > 使用者**。會顯示能存取您 {{site.data.keyword.cloud_notm}} 帳戶的使用者清單。
 2. 按一下要獲指派存取原則的使用者名稱。如果未顯示使用者，請按一下**邀請使用者**，以[將使用者新增至 {{site.data.keyword.cloud_notm}} 帳戶](/docs/iam?topic=iam-iamuserinv#iamuserinv)。
 3. 按一下**存取原則**，然後按一下**指派存取權**。
 4. 按一下**指派對資源的存取權**。

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Acerca de {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} le ayuda a obtener, almacenar y gestionar certificados SSL para las apps basadas en nube de {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.cloudcerts_full}} le ayuda a obtener, almacenar y gestionar certificados SSL que utiliza para despliegues de {{site.data.keyword.cloud_notm}} u otros despliegues locales o en la nube.
 {: shortdesc}
 
 Puede importar certificados SSL que obtenga para las apps y los servicios, almacenarlos de forma segura, y obtener una vista central de los certificados que está utilizando. O bien puede solicitar certificados públicos de entidades emisoras de certificados mediante el gestor de certificados.
@@ -60,7 +60,7 @@ Cuando importe o solicite un certificado en {{site.data.keyword.cloudcerts_short
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Puede desplegar de forma fácil y segura certificados TLS de dominio personalizado desde {{site.data.keyword.cloudcerts_short}} al clúster de Kubernetes. Los administradores del clúster pueden utilizar los [mandatos de plugin del servicio Kubernetes](/docs/containers?topic=containers-cs_cli_reference) para actualizar los certificados TLS como secretos de Kubernetes con un nuevo certificado sin causar tiempo de inactividad. Para empezar, consulte las [anotaciones de Ingress en la documentación](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>Puede desplegar de forma fácil y segura certificados TLS de dominio personalizado desde {{site.data.keyword.cloudcerts_short}} al clúster de Kubernetes. Los administradores del clúster pueden utilizar los [mandatos de plugin del servicio Kubernetes](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) para actualizar los certificados TLS como secretos de Kubernetes con un nuevo certificado sin causar tiempo de inactividad. Para empezar, consulte las [anotaciones de Ingress en la documentación](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
@@ -104,7 +104,7 @@ Puede cargar un máximo de 1000 certificados por instancia.
 
 * Certificado de servicios de {{site.data.keyword.IBM_notm}} (PaaS y SaaS) - ISO 27001
 
-### Reglamento General de Protección de Datos (RGPD)
+### Reglamento General de Protección de Datos (GDPR)
 {: #compliance-gdpr}
 
-La GDPR busca crear un marco de ley de protección de datos unificado en la Unión Europea y trata de devolver a los ciudadanos el control de sus datos personales mientras impone reglas estrictas a quienes alojan y 'procesan' los datos, en cualquier parte del mundo. El reglamento también presenta reglas referentes a la libre circulación de datos personales dentro y fuera de la Unión Europea. Para obtener más información, consulte la [Declaración de privacidad de IBM](https://www.ibm.com/privacy/).
+El GDPR busca crear un marco de ley de protección de datos unificado en la Unión Europea y trata de devolver a los ciudadanos el control de sus datos personales mientras impone reglas estrictas a quienes alojan y 'procesan' los datos, en cualquier parte del mundo. El reglamento también presenta reglas referentes a la libre circulación de datos personales dentro y fuera de la Unión Europea. Para obtener más información, consulte la [Declaración de privacidad de IBM](https://www.ibm.com/privacy/).

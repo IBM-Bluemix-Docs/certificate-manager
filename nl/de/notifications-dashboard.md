@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -28,7 +28,7 @@ subcollection: certificate-manager
 Mit {{site.data.keyword.cloudcerts_full}} können Sie Benachrichtigungen zu Zertifikatslebenszyklusereignissen senden. Dazu gehören Erinnerungen, um Zertifikate zu verlängern, bevor sie ablaufen, und um Zertifikate bereitzustellen, wenn sie fertig sind. Um Benachrichtigungen von {{site.data.keyword.cloudcerts_short}} zu erhalten, können Sie einen Benachrichtigungskanal einrichten. Sie können entweder einen Slack Webhook, eine Callback-URL oder eine beliebige Kombination aus beiden angeben.
 {: shortdesc}
 
-Die Benachrichtigungsfunktion wird auch verwendet, wenn Sie von {{site.data.keyword.cloudcerts_short}} [Zertifikate bestellen](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates). Um zu beweisen, dass Sie Eigner der Domäne sind, für die Sie ein Zertifikat anfordern, sendet {{site.data.keyword.cloudcerts_short}} eine Anforderung als Benachrichtigung an Ihre Callback-URL. Die Anforderung ist ein Textdatensatz, den Sie in den DNS-Service (Domain Name System) stellen, in dem Ihre Domäne registriert ist. Wenn der Textdatensatz vorhanden ist, wird die Anforderung als abgeschlossen betrachtet. Da die Anforderung als Benachrichtigung an Ihre Callback-URL gesendet wird, können Sie den Prozess der Domänenvalidierung automatisieren, indem Sie den Code als Antwort auf das Benachrichtigungsereignis ausführen.
+Die Benachrichtigungsfunktion wird auch verwendet, wenn Sie von {{site.data.keyword.cloudcerts_short}} [Zertifikate bestellen](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates). Um zu beweisen, dass Sie Eigner der Domäne sind, für die Sie ein Zertifikat anfordern, sendet {{site.data.keyword.cloudcerts_short}} eine Abfrage als Benachrichtigung an Ihre Callback-URL. Die Abfrage ist ein Textdatensatz, den Sie in den DNS-Service (Domain Name System) stellen, in dem Ihre Domäne registriert ist. Wenn der Textdatensatz vorhanden ist, wird die Abfrage als abgeschlossen betrachtet. Da die Abfrage als Benachrichtigung an Ihre Callback-URL gesendet wird, können Sie den Prozess der Domänenvalidierung automatisieren, indem Sie den Code als Antwort auf das Benachrichtigungsereignis ausführen.
 
 ## Benachrichtigungen zur Überwachung des Zertifikatsablaufs
 {: #notifications-monitoring-certificate-expiration}
@@ -52,7 +52,7 @@ Sie können Benachrichtigungen an Slack senden, indem Sie einen Slack-Webhook ve
 {{site.data.keyword.cloudcerts_short}} benachrichtigt Sie, wenn ein Zertifikat, das Sie von {{site.data.keyword.cloudcerts_short}} bestellt haben, an Sie ausgestellt oder erfolgreich verlängert wurde. Sie werden auch benachrichtigt, falls Ihre Bestellung fehlschlägt oder eine Verlängerung fehlschlägt.
 {: shortdesc}
 
-Die Einrichtung eines Callback-URL-Benachrichtigungskanals mit der Möglichkeit, Ereignisse zu verarbeiten, die sich auf die Domänenvalidierung beziehen, ist die Voraussetzung für das Bestellen und Verlängern von Zertifikaten. Wenn Sie ein Zertifikat bestellen, sendet {{site.data.keyword.cloudcerts_short}} einen Challenge-TXT-Datensatz an Ihre Callback-URL, die Sie verwenden, um zu beweisen, dass Sie Eigner der Domäne sind, für die Sie das Zertifikat anfordern. Wenn Sie ein Zertifikat verlängern möchten, wird auch ein TXT-Datensatz gesendet.  
+Die Einrichtung eines Callback-URL-Benachrichtigungskanals mit der Möglichkeit, Ereignisse zu verarbeiten, die sich auf die Domänenvalidierung beziehen, ist die Voraussetzung für das Bestellen und Verlängern von Zertifikaten. Wenn Sie ein Zertifikat bestellen, sendet {{site.data.keyword.cloudcerts_short}} einen TXT-Abfragedatensatz an Ihre Callback-URL, die Sie verwenden, um zu beweisen, dass Sie Eigner der Domäne sind, für die Sie das Zertifikat anfordern. Wenn Sie ein Zertifikat verlängern möchten, wird ebenfalls ein TXT-Abfragedatensatz gesendet. 
 
 
 ## Slack-Webhook einrichten
@@ -62,7 +62,7 @@ Führen Sie die folgenden Schritte aus, um einen Slack-Webhook einzurichten:
 
 1. Melden Sie sich bei [Slack](https://slack.com/) an und richten Sie einen Arbeitsbereich ein.
 2. Erstellen Sie einen Slack-Kanal, an den Ihre Benachrichtigungen gesendet werden sollen.
-3. [Richten Sie einen Webhook für den Slack-Kanal ein.](https://api.slack.com/incoming-webhooks) 
+3. [Richten Sie einen Webhook für den Slack-Kanal ein.](https://api.slack.com/incoming-webhooks)
 
 ## Callback-URL einrichten
 {: #callback}
@@ -94,8 +94,11 @@ Nach dem Decodieren und Verifizieren der Nutzdaten ist der Inhalt eine JSON-Zeic
 ## Benachrichtigungskanal konfigurieren
 {: #adding-channel}
 
-Nach dem Erstellen eines Slack-Webhooks oder einer Callback-URL fügen Sie diesen bzw. diese zu {{site.data.keyword.cloudcerts_short}} hinzu, damit Sie Benachrichtigungen zu ablaufenden, erneut importierten und ausgestellten Zertifikaten sowie zu Anforderungen zur Domänenvalidierung erhalten. {{site.data.keyword.cloudcerts_short}} verschlüsselt den Endpunkt und speichert ihn sicher.
+Nach dem Erstellen eines Slack-Webhooks oder einer Callback-URL fügen Sie diesen bzw. diese zu {{site.data.keyword.cloudcerts_short}} hinzu, damit Sie Benachrichtigungen zu ablaufenden, erneut importierten und ausgestellten Zertifikaten sowie zu Abfragen zur Domänenvalidierung erhalten.
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}} verschlüsselt die von Ihnen konfigurierten Endpunkte, um diese sicher zu speichern.
+{: important}
 
 Führen Sie die folgenden Schritte aus, um einen Benachrichtigungskanal hinzuzufügen:
 

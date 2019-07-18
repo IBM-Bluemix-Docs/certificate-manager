@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -94,8 +94,11 @@ Tras descodificar y verificar la carga útil, el contenido es una serie JSON [se
 ## Configuración de un canal de notificación
 {: #adding-channel}
 
-Después de crear un webhook de Slack o un URL de devolución de llamada, debe añadirlo a {{site.data.keyword.cloudcerts_short}} para empezar a recibir notificaciones sobre la caducidad de certificados, certificados reimportados, certificados emitidos y desafíos para la validación del dominio. {{site.data.keyword.cloudcerts_short}} cifra el punto final y lo almacena de forma segura.
+Después de crear un webhook de Slack o un URL de devolución de llamada, debe añadirlo a {{site.data.keyword.cloudcerts_short}} para empezar a recibir notificaciones sobre la caducidad de certificados, certificados reimportados, certificados emitidos y desafíos para la validación del dominio.
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}} cifrará los puntos finales que configure para almacenarlos de forma segura.
+{: important}
 
 Para añadir un canal de notificación, siga los pasos siguientes:
 

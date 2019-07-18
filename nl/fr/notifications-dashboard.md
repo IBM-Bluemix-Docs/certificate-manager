@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -28,7 +28,7 @@ subcollection: certificate-manager
 {{site.data.keyword.cloudcerts_full}} peut vous envoyer des notifications concernant les événements de cycle de vie de certificats. Ces notifications incluent des rappels de renouvellement de certificats avant leur arrivée à expiration, ainsi que des rappels de déploiement de certificats quand ceux-ci sont prêts. Pour obtenir des notifications depuis {{site.data.keyword.cloudcerts_short}}, vous pouvez configurer un canal de notification. Vous pouvez, au choix, spécifier un webhook Slack, une URL de rappel, ou toute combinaison des deux.
 {: shortdesc}
 
-La fonction de notification est également utilisée lorsque vous [commandez des certificats](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates) depuis {{site.data.keyword.cloudcerts_short}}. Pour prouver que vous possédez le domaine pour lequel vous demandez un certificat, {{site.data.keyword.cloudcerts_short}} envoie une demande d'authentification sous forme de notification à votre URL de rappel. Il s'agit d'un enregistrement texte que vous placez dans le service Domain Name System (DNS) où votre domaine est enregistré. Quand l'enregistrement texte est en place, la demande d'authentification est considérée comme terminée. Parce que la demande est envoyée sous forme de notification à votre URL de rappel, vous avez la possibilité d'automatiser le processus de validation de domaine en exécutant du code en réponse à l'événement de notification. 
+La fonction de notification est également utilisée lorsque vous [commandez des certificats](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates) depuis {{site.data.keyword.cloudcerts_short}}. Pour prouver que vous possédez le domaine pour lequel vous demandez un certificat, {{site.data.keyword.cloudcerts_short}} envoie une demande d'authentification sous forme de notification à votre URL de rappel. Il s'agit d'un enregistrement texte que vous placez dans le service Domain Name System (DNS) où votre domaine est enregistré. Quand l'enregistrement texte est en place, la demande d'authentification est considérée comme terminée. Parce que la demande est envoyée sous forme de notification à votre URL de rappel, vous avez la possibilité d'automatiser le processus de validation de domaine en exécutant du code en réponse à l'événement de notification.
 
 ## Notifications pour la surveillance de l'expiration de certificat
 {: #notifications-monitoring-certificate-expiration}
@@ -41,7 +41,7 @@ Vous êtes également alerté quand une version renouvelée de votre certificat 
 **Quand suis-je notifié ?**  
 Selon la date d'expiration du certificat que vous avez téléchargé dans {{site.data.keyword.cloudcerts_short}}, vous êtes notifié 90, 60, 30, 10 jours ou 1 jour avant l'expiration du certificat. En plus, vous recevez des notifications quotidiennes relatives aux certificats expirés. Les notifications quotidiennes commencent le premier jour qui suit l'expiration de votre certificat.
 
-Vous devez renouveler votre certificat et le réimporter à la place de votre ancien certificat sur {{site.data.keyword.cloudcerts_short}} de manière à cesser l'envoi des notifications. Lorsque vous réimportez votre certificat, vous recevez une notification indiquant que votre certificat a été réimporté, ce afin de vous rappeler que vous devez le redéployer. 
+Vous devez renouveler votre certificat et le réimporter à la place de votre ancien certificat sur {{site.data.keyword.cloudcerts_short}} de manière à cesser l'envoi des notifications. Lorsque vous réimportez votre certificat, vous recevez une notification indiquant que votre certificat a été réimporté, ce afin de vous rappeler que vous devez le redéployer.
 
 **Quelles sont les options dont je dispose pour configurer les notifications ?**  
 Vous pouvez envoyer des notifications à Slack en utilisant un webhook Slack ou vous servir de l'URL de rappel de votre choix.
@@ -52,7 +52,7 @@ Vous pouvez envoyer des notifications à Slack en utilisant un webhook Slack ou 
 {{site.data.keyword.cloudcerts_short}} vous notifie lorsqu'un certificat que vous aviez commandé auprès de {{site.data.keyword.cloudcerts_short}} a été émis ou renouvelé. Vous recevez également une notification en cas d'échec d'une commande ou d'un renouvellement.
 {: shortdesc}
 
-La configuration d'un canal de notification d'URL de rappel et la possibilité de gérer les événements liés à la validation de domaine constituent des prérequis à la commande et au renouvellement de certificats. Lorsque vous commandez un certificat, {{site.data.keyword.cloudcerts_short}} envoie un enregistrement TXT de demande d'authentification à votre URL de rappel. Vous devrez utiliser cet enregistrement pour prouver que vous possédez le domaine pour lequel vous demandez le certificat. Un enregistrement TXT de demande d'authentification est également envoyer lorsque vous demandez à renouveler un certificat.  
+La configuration d'un canal de notification d'URL de rappel et la possibilité de gérer les événements liés à la validation de domaine constituent des prérequis à la commande et au renouvellement de certificats. Lorsque vous commandez un certificat, {{site.data.keyword.cloudcerts_short}} envoie un enregistrement TXT de demande d'authentification à votre URL de rappel. Vous devrez utiliser cet enregistrement pour prouver que vous possédez le domaine pour lequel vous demandez le certificat. Un enregistrement TXT de demande d'authentification est également envoyer lorsque vous demandez à renouveler un certificat. 
 
 
 ## Configuration d'un webhook Slack
@@ -94,8 +94,11 @@ Après que vous avez décodé et vérifié le contenu, celui-ci est une chaîne 
 ## Configuration d'un canal de notification
 {: #adding-channel}
 
-Une fois que vous avez créé un webhook Slack ou une URL de rappel, vous pouvez l'ajouter à {{site.data.keyword.cloudcerts_short}} pour commencer à recevoir des notifications concernant les certificats arrivant à expiration, les certificats réimportés, les certificats émis, ainsi que les demandes d'authentification pour la validation de domaine. {{site.data.keyword.cloudcerts_short}} chiffre le noeud final et le stocke en toute sécurité.
+Une fois que vous avez créé un webhook Slack ou une URL de rappel, vous pouvez l'ajouter à {{site.data.keyword.cloudcerts_short}} pour commencer à recevoir des notifications concernant les certificats arrivant à expiration, les certificats réimportés, les certificats émis, ainsi que les demandes d'authentification pour la validation de domaine.
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}} chiffrera les noeuds finaux que vous configurer afin de les stocker de manière sécurisée.
+{: important}
 
 Pour ajouter un canal de notification, procédez comme suit :
 
@@ -103,7 +106,7 @@ Pour ajouter un canal de notification, procédez comme suit :
 2. Ouvrez l'onglet **Notifications**.
 3. Cliquez sur **Ajouter une entrée de notification**.
 4. Choisissez le type de canal de notification que vous voulez utiliser.
-5. Entrez le webhook ou l'URL de rappel spécifiant où vous souhaitez envoyer des notifications. 
+5. Entrez le webhook ou l'URL de rappel spécifiant où vous souhaitez envoyer des notifications.
 6. Cliquez sur **Sauvegarder**. Un récapitulatif de votre configuration s'affiche.
 
    **Exemple de sortie**
@@ -190,7 +193,7 @@ Pour télécharger la clé publique, procédez comme suit :
 ## Versions de canal
 {: #channel-versions}
 
-A mesure que Certificate Manager évolue, nous pouvons être amenés à modifier le format de la structure de contenu des notifications de temps à autre. Afin de garantir la compatibilité avec les versions antérieures, le contenu envoyé à vos canaux existants n'est pas modifié.    
+A mesure que Certificate Manager évolue, nous pouvons être amenés à modifier le format de la structure de contenu des notifications de temps à autre. Afin de garantir la compatibilité avec les versions antérieures, le contenu envoyé à vos canaux existants n'est pas modifié.   
 
 Si vous possédez déjà des canaux de notification (Slack ou URL de rappel), pour commencer à utiliser la nouvelle version du contenu :
 
@@ -208,4 +211,4 @@ Pour connaître les versions de canal, consultez la [documentation d'API](https:
    Apprenez comment créer des anomalies GitHub pour des notifications relatives à des certificats qui arrivent à expiration.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    Apprenez comment créer des incidents PagerDuty pour des notifications relatives à des certificats qui arrivent à expiration.
-* [How to validate a domain using a Callback URL and a Cloud Function action ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+* [How to validate a domain by using a Callback URL and a Cloud Function action ![Icône de lien externe](../../icons/launch-glyph.svg "Icône de lien externe")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

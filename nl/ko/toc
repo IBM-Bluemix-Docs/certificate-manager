@@ -22,7 +22,7 @@ Certificate Manager
     {: .navgroup id="reference"}
     [API 문서](https://cloud.ibm.com/apidocs/certificate-manager)
     at_events.md
-    
+    log_events.md
     rellinks.md
     {: .navgroup-end}
 

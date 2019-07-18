@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -28,7 +28,7 @@ subcollection: certificate-manager
 使用 {{site.data.keyword.at_full}} 服务可跟踪用户和应用程序如何与 {{site.data.keyword.cloud_notm}} 中的 {{site.data.keyword.cloudcerts_long}} 服务进行交互。
 {:shortdesc}
 
-{{site.data.keyword.at_short}} 服务会记录更改 {{site.data.keyword.cloud_notm}} 中服务状态的由用户启动的活动。例如，导入证书时，会生成事件。有关更多信息，请参阅 [{{site.data.keyword.at_short}} 文档](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)。
+{{site.data.keyword.at_short}} 服务记录由用户启动的会更改 {{site.data.keyword.cloud_notm}} 中服务状态的活动。例如，导入证书时，会生成事件。有关更多信息，请参阅 [{{site.data.keyword.at_short}} 文档](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started)。
 
 下表列出了在调用时会生成事件的 API 方法。
 
@@ -43,12 +43,16 @@ subcollection: certificate-manager
 	  <td>导入证书。</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>重新导入证书。</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>订购证书。</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>重新导入证书。</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>更新签发的证书。</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -121,6 +125,11 @@ subcollection: certificate-manager
 
 在 {{site.data.keyword.cloudcerts_short}} 实例所在位置供应 {{site.data.keyword.at_short}} 实例。
 
+完成以下步骤：
+
+1. 转至 [{{site.data.keyword.cloud_notm}} 可观察性](https://cloud.ibm.com/observe/){: external}。
+2. 在 {{site.data.keyword.cloudcerts_short}} 实例所在位置供应 {{site.data.keyword.at_short}} 实例。
+
 系统会自动将事件转发给供应 {{site.data.keyword.cloudcerts_short}} 服务的相同位置中的 {{site.data.keyword.at_short}} 服务实例。
 
 ## 其他信息
@@ -131,5 +140,4 @@ subcollection: certificate-manager
 ## 可用性
 {: #at-availability}
 
-* 目前，{{site.data.keyword.at_short}} 支持在**达拉斯**和**法兰克福**位置可用。
-* 对于其他位置，供应不推荐使用的 Activity Tracker 服务的实例，直到 {{site.data.keyword.at_short}} 可用为止。
+{{site.data.keyword.at_short}} 支持可用于**达拉斯**、**法兰克福**、**东京**和**伦敦**位置。

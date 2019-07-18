@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -39,7 +39,7 @@ subcollection: certificate-manager
 {: #supported-pk-algorithms}
 {: faq}
 
-{{site.data.keyword.cloudcerts_short}}는 다음과 같은 공개 키 알고리즘을 사용하여 생성된 공개 키로 인증서를 지원합니다.
+{{site.data.keyword.cloudcerts_short}}는 다음 공개 키 알고리즘을 사용하여 생성된 공개 키가 있는 인증서를 지원합니다.
 
 * RSA(Rivest-Shamir-Adleman)
 * 디지털 서명 알고리즘(DSA)
@@ -114,7 +114,7 @@ subcollection: certificate-manager
 {: #certificate-order-validation}
 {: faq}
 
-도메인 유효성 검증 인증 확인을 전송한 후 {{site.data.keyword.cloudcerts_short}}는 최대 10분 동안 사용자가 요청한 도메인을 소유하고 있는지 유효성 검증하려고 시도합니다. DNS가 10분 이내에 TXT 레코드 인증 확인으로 업데이트되지 않으면 주문이 실패합니다.
+서비스가 도메인 유효성 검증 인증 확인을 전송한 후 {{site.data.keyword.cloudcerts_short}}는 최대 10분 동안 사용자가 요청한 도메인을 소유하고 있는지 유효성 검증하려고 시도합니다. DNS가 10분 이내에 TXT 레코드 인증 확인으로 업데이트되지 않으면 주문이 실패합니다.
 
 ## {{site.data.keyword.cloudcerts_short}} 공용 API를 사용하여 내 인증서 주문의 상태를 어떻게 확인합니까?
 {: #certificate-order-status-api}

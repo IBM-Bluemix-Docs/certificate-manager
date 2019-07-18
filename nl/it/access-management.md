@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -112,7 +112,7 @@ Per ulteriori informazioni sui ruoli e le autorizzazioni utente, consulta [Ruoli
 ## Configurazione delle politiche di accesso per gli utenti
 {: #configuring-access-policies}
 
-Puoi configurare le politiche di accesso per un'istanza di {{site.data.keyword.cloudcerts_short}} (e quindi per tutti i certificati in tale istanza) oppure puoi impostare le politiche per i singoli certificati (risorse) all'interno di un'istanza.
+Puoi configurare le politiche di accesso per un'istanza di {{site.data.keyword.cloudcerts_short}}, tutti i certificati in tale istanza oppure puoi impostare le politiche per i singoli certificati (risorse) all'interno di un'istanza.
 
 **Esempi di assegnazione del ruolo**
 
@@ -145,7 +145,7 @@ Per consentire l'accesso a uno specifico certificato, completa la seguente proce
 1. [Richiama l'ID del tuo certificato](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
 2. Crea due politiche di accesso:
    - La prima politica: assegna almeno un ruolo di accesso alla piattaforma **Visualizzatore** all'istanza del servizio.
-   - La seconda politica: assegna almeno un ruolo di accesso al servizio **Lettore** 
+   - La seconda politica: assegna almeno un ruolo di accesso al servizio **Lettore**
      - Immetti `certificate` nel campo **Tipo di risorsa**.
      - Immetti l'ID del certificato nel campo **ID risorsa**.
 

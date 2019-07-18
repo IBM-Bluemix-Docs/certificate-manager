@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -22,7 +22,7 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Eventi del programma di traccia dell'attività   
+# Eventi del programma di traccia dell'attività  
 {: #at_events}
 
 Utilizza il servizio {{site.data.keyword.at_full}} per tracciare il modo in cui gli utenti e le applicazioni interagiscono con il servizio {{site.data.keyword.cloudcerts_long}} in {{site.data.keyword.cloud_notm}}.
@@ -43,16 +43,20 @@ La seguente tabella elenca i metodi API che generano un evento quando vengono ri
 	  <td>Importa un certificato.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.order`</td>
-	  <td>Ordina un certificato. </td>
-  </tr>
-  <tr>
     <td>`cloudcerts.certificate.reimport`</td>
 	  <td>Reimporta un certificato.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.order`</td>
+	  <td>Ordina un certificato.</td>
+  </tr>
+  <tr>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>Rinnova un certificato emesso.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
-	  <td>Ottieni i metadati del certificato. </td>
+	  <td>Ottieni i metadati del certificato.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate.download`</td>
@@ -88,27 +92,27 @@ La seguente tabella elenca i metodi API che generano un evento quando vengono ri
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.create`</td>
-	  <td>Crea un canale di notifiche.</td>
+	  <td>Crea un canale di notifica.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.state`</td>
-	  <td>Disabilita o abilita un canale di notifiche.</td>
+	  <td>Disabilita o abilita un canale di notifica.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.update`</td>
-	  <td>Aggiorna l'endpoint di un canale di notifiche.</td>
+	  <td>Aggiorna l'endpoint di un canale di notifica.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.delete`</td>
-	  <td>Elimina un canale di notifiche.</td>
+	  <td>Elimina un canale di notifica.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.test`</td>
-	  <td>Verifica un canale di notifiche.</td>
+	  <td>Verifica un canale di notifica.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification.sent`</td>
-	  <td>Una notifica è stata inviata a un endpoint di canale di notifiche.</td>
+	  <td>Una notifica è stata inviata a un endpoint di canale di notifica.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channels-publickey.read`</td>
@@ -121,6 +125,11 @@ La seguente tabella elenca i metodi API che generano un evento quando vengono ri
 
 Esegui il provisioning di un'istanza {{site.data.keyword.at_short}} nella stessa ubicazione della tua istanza {{site.data.keyword.cloudcerts_short}}.
 
+Completa la seguente procedura:
+
+1. Vai a [{{site.data.keyword.cloud_notm}} Observability](https://cloud.ibm.com/observe/){: external}.
+2. Esegui il provisioning di un'istanza {{site.data.keyword.at_short}} nella stessa ubicazione della tua istanza {{site.data.keyword.cloudcerts_short}}.
+
 Gli eventi vengono inoltrati automaticamente all'istanza del servizio {{site.data.keyword.at_short}} nella stessa ubicazione in cui hai eseguito il provisioning del servizio {{site.data.keyword.cloudcerts_short}}.
 
 ## Informazioni aggiuntive
@@ -131,5 +140,4 @@ Gli eventi vengono inoltrati automaticamente all'istanza del servizio {{site.dat
 ## Disponibilità
 {: #at-availability}
 
-* Il supporto {{site.data.keyword.at_short}} è al momento disponibile per le ubicazioni **Dallas** e **Francoforte**.
-* Per le altre ubicazioni, esegui il provisioning di un'istanza del programma di traccia dell'attività obsoleto finché è disponibile {{site.data.keyword.at_short}}.
+Il supporto {{site.data.keyword.at_short}} è disponibile per le ubicazioni **Dallas**, **Francoforte**, **Tokyo** e **Londra**.

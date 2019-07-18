@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,12 +25,10 @@ subcollection: certificate-manager
 # Eventos do Activity Tracker  
 {: #at_events}
 
-Use o serviço {{site.data.keyword.at_full}} para controlar como os usuários e os aplicativos interagem com
-o serviço {{site.data.keyword.cloudcerts_long}} no {{site.data.keyword.cloud_notm}}.
+Use o serviço {{site.data.keyword.at_full}} para controlar como os usuários e aplicativos interagem com o serviço {{site.data.keyword.cloudcerts_long}} no {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-O serviço {{site.data.keyword.at_short}} registra as atividades iniciadas pelo usuário que mudam
-o estado de um serviço no {{site.data.keyword.cloud_notm}}. Por exemplo, quando você importar um certificado, um evento será gerado. Para obter mais informações, consulte os [docs do {{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+O serviço {{site.data.keyword.at_short}} registra atividades iniciadas pelo usuário que mudam o estado de um serviço no {{site.data.keyword.cloud_notm}}. Por exemplo, quando você importar um certificado, um evento será gerado. Para obter mais informações, consulte os [docs do {{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 A tabela a seguir lista os métodos de API que geram um evento quando eles são chamados.
 
@@ -45,12 +43,16 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 	  <td>Importe um certificado.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Reimporte um certificado.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>Peça um certificado.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Reimporte um certificado.</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>Renovar um certificado emitido.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -123,6 +125,12 @@ A tabela a seguir lista os métodos de API que geram um evento quando eles são 
 
 Provisione uma instância do {{site.data.keyword.at_short}} no mesmo local que a sua instância do {{site.data.keyword.cloudcerts_short}}.
 
+Execute as seguintes etapas:
+
+1. Acesse [{{site.data.keyword.cloud_notm}} Observability](https://cloud.ibm.com/observe/){: external}.
+2. Provisione uma instância do {{site.data.keyword.at_short}} no mesmo local que o de
+sua instância do {{site.data.keyword.cloudcerts_short}}.
+
 Os eventos são encaminhados automaticamente para a instância de serviço do {{site.data.keyword.at_short}} no mesmo local em que o serviço do {{site.data.keyword.cloudcerts_short}} é provisionado.
 
 ## Informações Adicionais
@@ -133,5 +141,5 @@ Os eventos são encaminhados automaticamente para a instância de serviço do {{
 ## Disponibilidade
 {: #at-availability}
 
-* O suporte do {{site.data.keyword.at_short}} está atualmente disponível para os locais **Dallas** e **Frankfurt**.
-* Para outros locais, provisione uma instância do serviço Activity Tracker descontinuado até que o {{site.data.keyword.at_short}} esteja disponível.
+O suporte do {{site.data.keyword.at_short}} está disponível para os locais **Dallas**, **Frankfurt**, **Tóquio**
+e **Londres**.

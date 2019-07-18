@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # 入門チュートリアル
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} は、{{site.data.keyword.IBM_notm}} Cloud ベース・アプリ用の SSL 証明書の取得、保管、および管理を支援します。  
+{{site.data.keyword.cloudcerts_full}} は、{{site.data.keyword.cloud_notm}} ベース・アプリ用の SSL 証明書の取得、保管、管理を支援します。  
 最初に、以下のステップを実行して、新しい {{site.data.keyword.cloudcerts_short}} サービス・インスタンスを作成します。
 {: shortdesc}
 
@@ -56,5 +56,5 @@ subcollection: certificate-manager
    - **us-south** を **us-south** (ダラス)、**eu-gb** (ロンドン)、**eu-de** (フランクフルト)、または **jp-tok** (東京) で置き換えます。
 
 <br/>
-{{site.data.keyword.cloudcerts_short}} によって可能な内容についての[詳細を確認したり](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager)、開発段階にある {{site.data.keyword.cloudcerts_short}} を強化するために、[{{site.data.keyword.IBM_notm}} Developer でユーザー・フィードバックを提供したり](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support)します。サービスの新しい内容を確認するには、[リリース・ノート](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes)を参照してください。
+{{site.data.keyword.cloudcerts_short}} によって可能な内容についての[詳細を確認したり](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager)、開発段階にある {{site.data.keyword.cloudcerts_short}} を強化するために、[{{site.data.keyword.IBM_notm}} Developer でユーザー・フィードバックを提供したり](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support)します。 サービスの新しい内容を確認するには、[リリース・ノート](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes)を参照してください。
 {: note}

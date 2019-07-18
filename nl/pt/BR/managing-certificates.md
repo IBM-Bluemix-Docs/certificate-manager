@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,14 +99,14 @@ Depois de importar um certificado, as seguintes informações serão exibidas na
   </tr>
   <tr>
     <td>Válido de</td>
-    <td>A data na qual o certificado se tornou válido (em fuso horário UTC). </td>
+    <td>A data na qual o certificado se tornou válido (no fuso horário de Hora Universal Coordenada). </td>
   </tr>
   <tr>
     <td>Expira em</td>
-    <td>A data na qual o certificado não será mais válido (em fuso horário UTC). </td>
+    <td>A data na qual o certificado não é mais válido (no fuso horário de Hora Universal Coordenada). </td>
   </tr>
   <tr>
-    <td>Status do</td>
+    <td>Status</td>
     <td>O status de seu certificado. </td>
   </tr>
   <tr>
@@ -120,7 +120,8 @@ Depois de importar um certificado, as seguintes informações serão exibidas na
 ## Reimportando um certificado
 {: #reimport-certificate}
 
-Se o seu certificado estiver prestes a expirar, será possível atualizá-lo importando uma nova versão do certificado que tenha o mesmo domínio que o certificado existente, mas com uma nova data de validade. Quando um certificado é reimportado, a versão existente dele é retida como um backup que pode ser transferido por download, se necessário.
+Se o seu certificado estiver prestes a expirar, será possível atualizá-lo importando uma nova
+versão que tenha o mesmo domínio que o do certificado existente, mas que tenha uma nova data de validade. Quando um certificado é reimportado, a versão existente dele é retida como um backup que pode ser transferido por download, se necessário.
 {: shortdesc}
 
 ### Reimportando o certificado
@@ -149,34 +150,36 @@ Para fazer download da versão anterior de um certificado, conclua as etapas a s
 ## Pedindo certificados
 {: #order-certificates}
 
-Antes de pedir um certificado, [primeiro conclua a configuração necessária](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Antes de pedir um certificado, [primeiro, conclua a configuração requerida](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Para pedir um certificado, clique em **Pedir certificado**, selecione **{{site.data.keyword.cis_full_notm}}** ou **Outro Provedor DNS** e forneça os detalhes a seguir:
 
-1. Forneça um nome do certificado.
-2. Selecione uma Autoridade de certificação.
-3. Insira o domínio primário e quaisquer domínios alternativos.
-4. Selecione o algoritmo apropriado e o algoritmo de chave.
+1. Nome do certificado.
+2. Autoridade de certificação.
+3. Domínios requeridos.
+4. Algoritmo apropriado e algoritmo de chave.
 5. Clique em **Pedir**.
 
-O pedido de certificados é limitado a cinco pedidos/minuto por instância do {{site.data.keyword.cloudcerts_short}}, 100 pedidos/hora por conta do usuário IBM e cinco certificados para os mesmos domínios por semana.
+Os pedidos de certificados estão limitados a cinco pedidos/minuto por instância do {{site.data.keyword.cloudcerts_short}}, 100 pedidos por hora por conta do
+usuário IBM e cinco certificados para os mesmos domínios por semana.
 {: note}
 
 ## Renovando certificados
 {: #renew-certificates}
 
 Para renovar um certificado, conclua as etapas a seguir:
-  1. Clique no menu na linha do certificado que você deseja renovar.
+  1. Clique no menu na linha de certificados que você deseja renovar.
   2. Clique em **Renovar certificado**.
-  3. Opcional: é possível escolher rechavear o seu certificado verificando a caixa de seleção **Rechavear certificado**. Isso renovará o seu certificado com um novo par de chaves.
+  3. Opcional: é possível escolher rechavear o seu certificado verificando a caixa de seleção **Rechavear certificado**. Isso renova seu certificado com um novo par de chaves.
   
-  Quando você rechavear um certificado, certifique-se de implementar os novos certificados e chaves em todos os lugares em que eles estiverem em uso.
-  {: note}
+    Quando você rechavear um certificado, certifique-se de implementar os novos certificados e chaves em todos os lugares em que eles estiverem em uso.
+    {: note}
     
-  4. Clique em **Renovar**
+  4. Clique em **Renovar**.
   
   É possível renovar apenas os certificados que você pediu por meio do {{site.data.keyword.cloudcerts_short}}.
   {: note}
 
-A renovação de um certificado é limitada a cinco solicitações de renovação por certificado por minuto, 100 renovações/hora por conta do usuário IBM.
+A renovação de um certificado está limitada a cinco solicitações de renovação por certificado por minuto, 100 renovações por hora por conta do usuário IBM.
 {: note}
 
 

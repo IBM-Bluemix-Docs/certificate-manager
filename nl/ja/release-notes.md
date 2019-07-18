@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -27,19 +27,23 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_long}} サービスには、以下のフィーチャーおよび変更があります。
 
+## 2019 年 7 月 8 日
+{: 8July2019}
+
+- **DNS プロバイダーとしての IBM Cloud Internet Services**  
+  IBM Cloud Internet Services を DNS プロバイダーとして使用できるようになりました。これにより、証明書の注文が簡単になります。[証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
 
 ## 2019 年 6 月 10 日
 {: 10June2019}
 
 - **注文した Let's Encrypt 証明書の更新**  
-{{site.data.keyword.cloudcerts_short}} を使用して注文した Let's Encrypt 証明書を更新できるようになりました。[証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
-
+  {{site.data.keyword.cloudcerts_short}} を使用して注文した Let's Encrypt 証明書を更新できるようになりました。 [証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
 
 ## 2019 年 5 月 6 日
 {: 6May2019}
 
 - **Let's Encrypt 証明書の注文**  
-Let's Encrypt 証明書を注文できるようになりました。[証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
+  Let's Encrypt 証明書を注文できるようになりました。 [証明書の注文の詳細はこちら](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)を参照してください。
 
 ## 2019 年 2 月 18 日
 {: 18February2019}

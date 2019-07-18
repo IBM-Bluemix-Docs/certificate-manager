@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # 关于 {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} 可帮助您为 {{site.data.keyword.IBM_notm}} 基于云的应用程序获取、存储和管理 SSL 证书。
+{{site.data.keyword.cloudcerts_full}} 可帮助您获取、存储和管理 SSL 证书以用于 {{site.data.keyword.cloud_notm}} 部署或其他云部署和内部部署。
 {: shortdesc}
 
 您可以导入为应用程序和服务获取的 SSL 证书，安全地存储它们并集中查看正在使用的证书。或者，您可以通过 Certificate Manager 向支持的 CA 订购公用证书。
@@ -60,7 +60,7 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>您可以轻松且安全地将定制域证书 TLS 证书从 {{site.data.keyword.cloudcerts_short}} 部署到 Kubernetes 集群。集群管理员可使用 [Kubernetes Service 插件命令](/docs/containers?topic=containers-cs_cli_reference)以用新证书将 TLS 证书更新为 Kubernetes 密钥，而不会导致停机时间。要开始，请查看[文档中的 Ingress 注释](/docs/containers?topic=containers-ingress_annotation#https-auth)。</td>
+    <td>您可以轻松且安全地将定制域证书 TLS 证书从 {{site.data.keyword.cloudcerts_short}} 部署到 Kubernetes 集群。集群管理员可使用 [Kubernetes Service 插件命令](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli)以用新证书将 TLS 证书更新为 Kubernetes 密钥，而不会导致停机时间。要开始，请查看[文档中的 Ingress 注释](/docs/containers?topic=containers-ingress_annotation#https-auth)。</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

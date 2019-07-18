@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,10 +25,10 @@ subcollection: certificate-manager
 # Evénements d'Activity Tracker  
 {: #at_events}
 
-Utilisez le service {{site.data.keyword.at_full}} pour suivre comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long}} dans {{site.data.keyword.cloud_notm}}.
+Utilisez le service {{site.data.keyword.at_full}} pour savoir comment les utilisateurs et les applications interagissent avec le service {{site.data.keyword.cloudcerts_long}} dans {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-Le service {{site.data.keyword.at_short}} enregistre des activités initiées par l'utilisateur qui change l'état d'un service dans {{site.data.keyword.cloud_notm}}. Ainsi, quand vous importez un certificat, un événement est généré. pour plus d'informations, voir la [documentation {{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+Le service {{site.data.keyword.at_short}} enregistre les activités initiées par l'utilisateur qui changent l'état d'un service dans {{site.data.keyword.cloud_notm}}. Ainsi, quand vous importez un certificat, un événement est généré. pour plus d'informations, voir la [documentation {{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 Le tableau suivant répertorie les méthodes d'API qui génèrent un événement lorsqu'elles sont appelées.
 
@@ -43,12 +43,16 @@ Le tableau suivant répertorie les méthodes d'API qui génèrent un événement
 	  <td>Importe un certificat.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Réimporte un certificat.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>Commande un certificat.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Réimporte un certificat.</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>Renouvelle un certificat émis.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -121,6 +125,11 @@ Le tableau suivant répertorie les méthodes d'API qui génèrent un événement
 
 Mettez à disposition une instance {{site.data.keyword.at_short}} au même emplacement que votre instance {{site.data.keyword.cloudcerts_short}}.
 
+Exécutez la procédure suivante :
+
+1. Accédez à [{{site.data.keyword.cloud_notm}} - Observabilité](https://cloud.ibm.com/observe/){: external}.
+2. Mettez à disposition une instance {{site.data.keyword.at_short}} au même emplacement que votre instance {{site.data.keyword.cloudcerts_short}}.
+
 Les événements sont automatiquement transmis à l'instance de service {{site.data.keyword.at_short}} au même emplacement que celui où le service {{site.data.keyword.cloudcerts_short}} est mis à disposition.
 
 ## Informations complémentaires
@@ -131,5 +140,4 @@ Les événements sont automatiquement transmis à l'instance de service {{site.d
 ## Disponibilité
 {: #at-availability}
 
-* La prise en charge pour {{site.data.keyword.at_short}} est actuellement disponible pour les emplacements **Dallas** et **Francfort**.
-* Pour d'autres emplacements, mettez à disposition une instance du service Activity Tracker obsolète en attendant qu'{{site.data.keyword.at_short}} soit disponible.
+Le support {{site.data.keyword.at_short}} est disponible pour les emplacements de **Dallas**, **Francfort**, **Tokyo** et **Londres**.

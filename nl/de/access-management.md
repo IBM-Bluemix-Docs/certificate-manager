@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -112,7 +112,7 @@ Weitere Informationen zu Benutzerrollen und Berechtigungen finden Sie unter [Ben
 ## Zugriffsrichtlinien für Benutzer konfigurieren
 {: #configuring-access-policies}
 
-Sie können Zugriffsrichtlinien für eine {{site.data.keyword.cloudcerts_short}}-Instanz (und damit für alle Zertifikate in dieser Instanz) konfigurieren oder Richtlinien für einzelne Zertifikate (Ressourcen) innerhalb einer Instanz festlegen.
+Sie können Zugriffsrichtlinien für eine {{site.data.keyword.cloudcerts_short}}-Instanz und damit für alle Zertifikate in dieser Instanz konfigurieren oder Richtlinien für einzelne Zertifikate (Ressourcen) innerhalb einer Instanz festlegen. 
 
 **Beispiele für die Rollenzuordnung**
 
@@ -127,7 +127,7 @@ Sie können Zugriffsrichtlinien für eine {{site.data.keyword.cloudcerts_short}}
 
 Führen Sie die folgenden Schritte aus, um Zugriffsrichtlinien zu konfigurieren:
 
-1. Navigieren Sie zu **Verwalten > Zugriff (IAM) > Benutzer**. Eine Liste der Benutzer, die über Zugriff auf Ihr {{site.data.keyword.cloud_notm}}-Konto verfügen, wird angezeigt.
+1. Rufen Sie **Verwalten > Zugriff (IAM) > Benutzer** auf. Eine Liste der Benutzer, die über Zugriff auf Ihr {{site.data.keyword.cloud_notm}}-Konto verfügen, wird angezeigt.
 2. Klicken Sie auf den Namen des Benutzers, dem Sie eine Zugriffsrichtlinie zuweisen möchten. Wenn der Benutzer nicht angezeigt wird, klicken Sie auf **Benutzer einladen**, um [den Benutzer zu Ihrem {{site.data.keyword.cloud_notm}}-Konto hinzuzufügen](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Klicken Sie auf **Zugriffsrichtlinien** und dann auf **Zugriff zuweisen**.
 4. Klicken Sie auf **Zugriff auf Ressourcen zuweisen**.

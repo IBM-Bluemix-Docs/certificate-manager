@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -43,12 +43,16 @@ En la tabla siguiente se muestran los métodos de API que generan un suceso cuan
 	  <td>Importar un certificado.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>Volver a importar un certificado.</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>Solicitar un certificado.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Volver a importar un certificado.</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>Renovar un certificado emitido.</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -121,6 +125,11 @@ En la tabla siguiente se muestran los métodos de API que generan un suceso cuan
 
 Suministre una instancia de {{site.data.keyword.at_short}} en la misma ubicación que su instancia de {{site.data.keyword.cloudcerts_short}}.
 
+Realice los pasos siguientes:
+
+1. Vaya a [Observabilidad de {{site.data.keyword.cloud_notm}}](https://cloud.ibm.com/observe/){: external}.
+2. Suministre una instancia de {{site.data.keyword.at_short}} en la misma ubicación que su instancia de {{site.data.keyword.cloudcerts_short}}.
+
 Los sucesos se reenvían automáticamente a la instancia de servicio de {{site.data.keyword.at_short}} en la misma ubicación en la que se suministra el servicio {{site.data.keyword.cloudcerts_short}}.
 
 ## Información adicional
@@ -131,5 +140,4 @@ Los sucesos se reenvían automáticamente a la instancia de servicio de {{site.d
 ## Disponibilidad
 {: #at-availability}
 
-* El soporte de {{site.data.keyword.at_short}} está disponible actualmente en las ubicaciones **Dallas** y **Frankfurt**.
-* Para las demás ubicaciones, se puede suministrar una instancia del servicio Activity Tracker en desuso hasta {{site.data.keyword.at_short}}.
+El soporte de {{site.data.keyword.at_short}} está disponible para las ubicaciones **Dallas**, **Frankfurt**, **Tokio** y **Londres**.

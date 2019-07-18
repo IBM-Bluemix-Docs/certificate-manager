@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -93,8 +93,11 @@ subcollection: certificate-manager
 ## 配置通知頻道
 {: #adding-channel}
 
-建立 Slack Webhook 或回呼 URL 後，可以將其新增到 {{site.data.keyword.cloudcerts_short}} 以開始接收有關憑證到期、已重新匯入憑證、已簽發憑證以及網域驗證盤查的通知。{{site.data.keyword.cloudcerts_short}} 會加密端點並安全地儲存它。
+建立 Slack Webhook 或回呼 URL 後，可以將其新增到 {{site.data.keyword.cloudcerts_short}} 以開始接收有關憑證到期、已重新匯入憑證、已簽發憑證以及網域驗證盤查的通知。
 {: shortdesc}
+
+{{site.data.keyword.cloudcerts_short}} 會將您配置的端點加密，以便安全地儲存它們。
+{: important}
 
 若要新增通知頻道，請完成下列步驟：
 

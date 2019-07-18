@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,15 +99,15 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>유효 기간 시작</td>
-    <td>인증서가 유효하게 된 날짜입니다(UTC 시간대). </td>
+    <td>인증서가 유효하게 된 날짜입니다(협정 세계시(UTC) 시간대).</td>
   </tr>
   <tr>
     <td>만료 날짜</td>
-    <td>인증서가 더 이상 유효하지 않은 날짜입니다(UTC 시간대). </td>
+    <td>인증서가 더 이상 유효하지 않은 날짜입니다(협정 세계시(UTC) 시간대).</td>
   </tr>
   <tr>
     <td>상태</td>
-    <td>인증서의 상태입니다.</td>
+    <td>인증서의 상태입니다. </td>
   </tr>
   <tr>
     <td>인증서 ID</td>
@@ -120,7 +120,7 @@ subcollection: certificate-manager
 ## 인증서 다시 가져오기
 {: #reimport-certificate}
 
-인증서가 곧 만료되는 경우, 기존 인증서와 동일한 도메인을 포함하지만 새 만료 날짜가 있는 새 버전의 인증서를 가져오기하여 인증서를 업데이트할 수 있습니다. 인증서를 다시 가져오면, 필요한 경우 다운로드할 수 있도록 기존 인증서 버전은 백업으로 유지됩니다.
+인증서가 곧 만료되는 경우, 기존 인증서와 동일한 도메인을 포함하지만 새 만료 날짜가 있는 새 버전을 가져와 인증서를 업데이트할 수 있습니다. 인증서를 다시 가져오면, 필요한 경우 다운로드할 수 있도록 기존 인증서 버전은 백업으로 유지됩니다.
 {: shortdesc}
 
 ### 인증서 다시 가져오기
@@ -149,12 +149,13 @@ subcollection: certificate-manager
 ## 인증서 주문
 {: #order-certificates}
 
-인증서를 주문하기 전에 [먼저 필수 설정을 완료하십시오](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+인증서를 주문하기 전에 [먼저 필수 설정을 완료하십시오](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+인증서를 주문하려면 **인증서 주문**을 클릭하거나 **{{site.data.keyword.cis_full_notm}}** 또는 **다른 DNS 제공자**를 선택하고 다음 세부사항을 제공하십시오.
 
-1. 인증서 이름을 제공하십시오.
-2. 인증 기관을 선택하십시오.
-3. 기본 도메인 및 대체 도메인을 입력하십시오.
-4. 적절한 알고리즘 및 키 알고리즘을 선택하십시오.
+1. 인증서 이름.
+2. 인증 기관.
+3. 필수 도메인.
+4. 적절한 알고리즘 및 키 알고리즘.
 5. **주문**을 클릭하십시오.
 
 인증서 주문은 {{site.data.keyword.cloudcerts_short}} 인스턴스당 5개의 주문/분, IBM 사용자 계정당 100개의 주문/시간 및 동일한 도메인에 대해 주당 5개의 인증서로 제한됩니다.
@@ -168,15 +169,15 @@ subcollection: certificate-manager
   2. **인증서 갱신**을 클릭하십시오.
   3. 선택사항: **인증서 키 다시 입력** 선택란을 선택하여 인증서 키를 다시 입력하도록 선택할 수 있습니다. 이렇게 하면 인증서가 새로운 키 쌍으로 갱신됩니다.
   
-  인증서 키를 다시 입력할 때 새 인증서 및 키를 사용 중인 모든 위치에 배치해야 합니다.
-  {: note}
+    인증서 키를 다시 입력할 때 새 인증서 및 키를 사용 중인 모든 위치에 배치해야 합니다.
+    {: note}
     
   4. **갱신**을 클릭하십시오.
   
   {{site.data.keyword.cloudcerts_short}}를 통해 주문한 인증서만 갱신할 수 있습니다.
   {: note}
 
-인증서 갱신은 인증서별로 분당 5개의 갱신 요청, IBM 사용자 계정당 100개의 갱신/시간으로 제한됩니다.
+인증서 갱신은 인증서당 5개의 갱신 요청/분, IBM 사용자 계정당 100개의 갱신/시간으로 제한됩니다.
 {: note}
 
 

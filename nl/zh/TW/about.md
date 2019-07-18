@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # 關於 {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} 可協助您為 {{site.data.keyword.IBM_notm}} 雲端型應用程式取得、儲存和管理 SSL 憑證。
+{{site.data.keyword.cloudcerts_full}} 可協助您為 {{site.data.keyword.cloud_notm}} 部署或其他 Cloud 及內部部署，取得、儲存和管理 SSL 憑證。
 {: shortdesc}
 
 您可以匯入針對應用程式及服務取得的 SSL 憑證、安全地儲存它們，以及取得所要使用憑證的中央視圖。或者，您可以透過 Certificate Manager 向支援的 CA 訂購公用憑證。
@@ -60,7 +60,7 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>您可以輕鬆又安全地將 {{site.data.keyword.cloudcerts_short}} 的自訂網域 TLS 憑證部署至您的 Kubernetes 叢集。叢集管理者可以使用 [Kubernetes 服務外掛程式指令](/docs/containers?topic=containers-cs_cli_reference)以新憑證將 TLS 憑證更新為 Kubernetes 密碼，而不會造成運作中斷。若要開始使用，請查閱[文件中的 Ingress 註釋](/docs/containers?topic=containers-ingress_annotation#https-auth)。</td>
+    <td>您可以輕鬆又安全地將 {{site.data.keyword.cloudcerts_short}} 的自訂網域 TLS 憑證部署至您的 Kubernetes 叢集。叢集管理者可以使用 [Kubernetes 服務外掛程式指令](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli)以新憑證將 TLS 憑證更新為 Kubernetes 密碼，而不會造成運作中斷。若要開始使用，請查閱[文件中的 Ingress 註釋](/docs/containers?topic=containers-ingress_annotation#https-auth)。</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

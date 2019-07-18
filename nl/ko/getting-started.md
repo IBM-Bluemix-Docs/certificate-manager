@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # 시작하기 튜토리얼
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}}는 {{site.data.keyword.IBM_notm}} 클라우드 기반 앱에 대한 SSL 인증서를 얻고, 저장하고, 관리하는 데 도움을 줍니다.  
+{{site.data.keyword.cloudcerts_full}}는 {{site.data.keyword.cloud_notm}} 기반 앱에 대한 SSL 인증서를 얻고, 저장하고, 관리하는 데 도움이 됩니다.  
 다음 단계를 완료하여 새 {{site.data.keyword.cloudcerts_short}} 서비스 인스턴스를 작성하여 시작하십시오.
 {: shortdesc}
 

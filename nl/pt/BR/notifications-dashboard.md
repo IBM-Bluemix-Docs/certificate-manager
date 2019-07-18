@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -95,9 +95,11 @@ Após a decodificação e verificação da carga útil, o conteúdo será uma se
 ## Configurando um canal de notificação
 {: #adding-channel}
 
-Após você criar um Webhook do Slack ou uma URL de Retorno de chamada, será possível incluí-lo no {{site.data.keyword.cloudcerts_short}} para começar a receber notificações sobre certificados expirados, certificados reimportados, certificados emitidos e desafios para validação de domínio. O {{site.data.keyword.cloudcerts_short}} criptografa o
-terminal e armazena-o com segurança.
+Após você criar um Webhook do Slack ou uma URL de Retorno de chamada, será possível incluí-lo no {{site.data.keyword.cloudcerts_short}} para começar a receber notificações sobre certificados expirados, certificados reimportados, certificados emitidos e desafios para validação de domínio.
 {: shortdesc}
+
+O {{site.data.keyword.cloudcerts_short}} criptografará os terminais que você configura para armazená-los com segurança.
+{: important}
 
 Para incluir um canal de notificação, conclua as etapas a seguir:
 
@@ -215,4 +217,4 @@ Para versões de canal, confira a [Documentação da API](https://cloud.ibm.com/
    Saiba como criar emissões do GitHub para notificações sobre um certificado que está expirando.
 * [Como usar o gerenciador de certificados para evitar interrupções usando as URLs de retorno de chamada - Parte 2 ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    Saiba como criar incidentes do PagerDuty para notificações de certificado expiradas.
-* [Como validar um domínio usando uma URL de Retorno de chamada e uma ação do Cloud Function ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+* [Como validar um domínio usando uma URL de retorno de chamada e uma ação do Cloud Function ![Ícone de link externo](../../icons/launch-glyph.svg "Ícone de link externo")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)

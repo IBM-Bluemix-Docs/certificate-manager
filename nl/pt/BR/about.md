@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Sobre {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-O {{site.data.keyword.cloudcerts_full}} ajuda você a obter, armazenar e gerenciar certificados SSL para os seus apps baseados em nuvem do {{site.data.keyword.IBM_notm}}.
+O {{site.data.keyword.cloudcerts_full}} o ajuda a obter, armazenar e gerenciar certificados SSL usados para implementações do {{site.data.keyword.cloud_notm}} ou outras implementações em nuvem e no local.
 {: shortdesc}
 
 É possível importar certificados SSL que você obtém para seus aplicativos e serviços, armazená-los de forma segura e obter
@@ -61,7 +61,7 @@ Ao importar ou pedir um certificado para o {{site.data.keyword.cloudcerts_short}
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>É possível implementar certificados TLS de domínio customizado de maneira fácil e segura por meio do {{site.data.keyword.cloudcerts_short}} em seu cluster Kubernetes. Os administradores de cluster podem usar os [comandos de plug-in do Serviço Kubernetes](/docs/containers?topic=containers-cs_cli_reference) para atualizar certificados TLS como segredos do Kubernetes com um novo certificado, sem causar tempo de inatividade. Para começar, consulte as [Anotações de ingresso na documentação](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>É possível implementar certificados TLS de domínio customizado de maneira fácil e segura por meio do {{site.data.keyword.cloudcerts_short}} em seu cluster Kubernetes. Os administradores de cluster podem usar os [comandos de plug-in do Serviço Kubernetes](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) para atualizar certificados TLS como segredos do Kubernetes com um novo certificado, sem causar tempo de inatividade. Para começar, consulte as [Anotações de ingresso na documentação](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
@@ -70,7 +70,7 @@ Ao importar ou pedir um certificado para o {{site.data.keyword.cloudcerts_short}
   <tr>
     <td>{{site.data.keyword.at_short}}</td>
     <td>É possível usar o [{{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started) para rastrear como os usuários e os aplicativos interagem com o serviço {{site.data.keyword.cloudcerts_long_notm}} no {{site.data.keyword.cloud_notm}}.
-    <p>Para obter a lista de ações que geram um evento, consulte [Eventos do {{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
+    <p>Para obter a lista de ações que geram um evento, veja [eventos do {{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>

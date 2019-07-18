@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -114,7 +114,7 @@ Sulle reti DNS lente, un ordine può richiedere fino a 20 minuti per essere comp
 {: #certificate-order-validation}
 {: faq}
 
-Dopo aver inviato la verifica di convalida del dominio, {{site.data.keyword.cloudcerts_short}} tenta di convalidare che gestisci i domini che hai richiesto per un massimo di 10 minuti. Se il tuo DNS non viene aggiornato con una verifica di record TXT entro 10 minuti, il tuo ordine ha esito negativo.
+Dopo che il servizio invia la verifica di convalida del dominio, {{site.data.keyword.cloudcerts_short}} tenta di convalidare che gestisci i domini che hai richiesto per un massimo di 10 minuti. Se il tuo DNS non viene aggiornato con una verifica di record TXT entro 10 minuti, il tuo ordine ha esito negativo.
 
 ## Come controllo lo stato del mio ordine del certificato utilizzando l'API pubblica {{site.data.keyword.cloudcerts_short}}?
 {: #certificate-order-status-api}

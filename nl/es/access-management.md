@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -112,7 +112,7 @@ Para obtener más información sobre los roles y los permisos de usuario, consul
 ## Configuración de políticas de acceso para los usuarios
 {: #configuring-access-policies}
 
-Es posible configurar políticas de acceso para una instancia de {{site.data.keyword.cloudcerts_short}} (y por lo tanto de todos los certificados en dicha instancia), o establecer políticas para certificados individuales (recursos) dentro de una instancia.
+Es posible configurar políticas de acceso para una instancia de {{site.data.keyword.cloudcerts_short}} y, por lo tanto, para todos los certificados de dicha instancia, o establecer políticas para certificados individuales (recursos) dentro de una instancia.
 
 **Ejemplos de asignación de roles**
 

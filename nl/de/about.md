@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Informationen zu {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} unterstützt Sie beim Abrufen, Speichern und Verwalten von SSL-Zertifikaten für Ihre cloudbasierten {{site.data.keyword.IBM_notm}}-Apps.
+{{site.data.keyword.cloudcerts_full}} unterstützt Sie beim Abrufen, Speichern und Verwalten von SSL-Zertifikaten, die Sie für {{site.data.keyword.cloud_notm}}-Bereitstellungen oder andere Cloudbereitstellungen und lokale Bereitstellungen verwenden.
 {: shortdesc}
 
 Sie können SSL-Zertifikate, die Sie von Ihren Apps und Services empfangen, importieren und sicher speichern und Sie erhalten eine zentrale Übersicht über die Zertifikate, die Sie verwenden. Oder Sie können öffentliche Zertifikate über Certificate Manager von unterstützten CAs bestellen.
@@ -60,7 +60,7 @@ Wenn Sie ein Zertifikat in {{site.data.keyword.cloudcerts_short}} importieren od
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Sie können TLS-Zertifikate für angepasste Domänen sicher und ohne großen Aufwand von {{site.data.keyword.cloudcerts_short}} aus in Ihrem Kubernetes-Cluster bereitstellen. Clusteradministratoren können mithilfe der [Befehle für das Kubernetes-Service-Plug-in](/docs/containers?topic=containers-cs_cli_reference) TLS-Zertifikate als geheime Kubernetes-Schlüssel mit einem neuen Zertifikat aktualisieren, ohne dass es zu Ausfallzeiten kommt. Einen Einstieg in dieses Thema vermittelt der Abschnitt zu den [Ingress-Annotationen in der Dokumentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>Sie können TLS-Zertifikate für angepasste Domänen sicher und ohne großen Aufwand von {{site.data.keyword.cloudcerts_short}} aus in Ihrem Kubernetes-Cluster bereitstellen. Clusteradministratoren können mithilfe der [Befehle für das Kubernetes-Service-Plug-in](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) TLS-Zertifikate als geheime Kubernetes-Schlüssel mit einem neuen Zertifikat aktualisieren, ohne dass es zu Ausfallzeiten kommt. Einen Einstieg in dieses Thema vermittelt der Abschnitt zu den [Ingress-Annotationen in der Dokumentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

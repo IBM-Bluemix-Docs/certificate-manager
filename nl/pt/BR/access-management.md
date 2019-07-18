@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -115,9 +115,8 @@ Para obter mais informações sobre funções de usuário e permissões, consult
 ## Configurando políticas de acesso para usuários
 {: #configuring-access-policies}
 
-É possível configurar as políticas de acesso para uma instância do {{site.data.keyword.cloudcerts_short}} (e, portanto,
-para todos os certificados nessa instância) ou configurar políticas para certificados individuais (recursos) dentro de uma
-instância.
+É possível configurar políticas de acesso para uma instância do {{site.data.keyword.cloudcerts_short}} e, portanto, todos os certificados nessa instância
+ou é possível configurar políticas para certificados individuais (recursos) dentro de uma instância.
 
 **Exemplos de alocação de função**
 
@@ -132,8 +131,9 @@ instância.
 
 Para configurar as políticas de acesso, conclua as etapas a seguir:
 
-1. Navegue para **Gerenciar > Acesso (IAM) > Usuários**. Uma lista dos usuários com acesso à sua conta do {{site.data.keyword.cloud_notm}} é mostrada.
-2. Clique no nome do usuário ao qual você deseja designar uma política de acesso. Se o usuário não for mostrado, clique em **Convidar usuários** para [incluir o usuário em sua conta do {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-iamuserinv#iamuserinv).
+1. Acesse **Gerenciar > Acesso (IAM) > Usuários**. Uma lista dos usuários com acesso à sua conta do {{site.data.keyword.cloud_notm}} é mostrada.
+2. Clique no nome do usuário ao qual você deseja designar uma política de acesso. Se o usuário
+não for mostrado, clique em **Convidar usuários** para [incluir o usuário em sua conta {{site.data.keyword.cloud_notm}}](/docs/iam?topic=iam-iamuserinv#iamuserinv).
 3. Clique em **Políticas de acesso** e, em seguida, em **Designar acesso**.
 4. Clique em  ** Designar acesso a recursos **.
 5. No menu **Serviços**, selecione **Gerenciador de certificados**.

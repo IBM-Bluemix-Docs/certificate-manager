@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -27,13 +27,17 @@ subcollection: certificate-manager
 
 提供 {{site.data.keyword.cloudcerts_long}} 服务的下列功能和更改。
 
+## 2019 年 7 月 8 日
+{: 8July2019}
+
+- **IBM Cloud Internet Services 作为 DNS 提供者**  
+  现在您可以使用 IBM Cloud Internet Services 作为 DNS 提供者，从而简化证书订购体验。[了解有关订购证书的更多信息](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)。
 
 ## 2019 年 6 月 10 日
 {: 10June2019}
 
 - **更新订购的 Let's Encrypt 证书**  
   现在，您可以更新使用 {{site.data.keyword.cloudcerts_short}} 订购的 Let's Encrypt 证书。[了解有关订购证书的更多信息](/docs/services/certificate-manager?topic=certificate-manager-order-certificates)。
-
 
 ## 2019 年 5 月 6 日
 {: 6May2019}

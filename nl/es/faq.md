@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -39,7 +39,7 @@ Preguntas frecuentes sobre {{site.data.keyword.cloudcerts_long}}.
 {: #supported-pk-algorithms}
 {: faq}
 
-{{site.data.keyword.cloudcerts_short}} da soporte a certificados con claves públicas generadas utilizando los siguientes algoritmos de claves públicas:
+{{site.data.keyword.cloudcerts_short}} da soporte a certificados con claves públicas que se generan utilizando los siguientes algoritmos de claves públicas:
 
 * Rivest-Shamir-Adleman (RSA)
 * Digital Signature Algorithm (DSA)
@@ -114,7 +114,7 @@ En redes DNS lentas, una solicitud puede tardar hasta 20 minutos en completarse 
 {: #certificate-order-validation}
 {: faq}
 
-Después de enviar el desafío de validación de dominio, {{site.data.keyword.cloudcerts_short}} intenta validar que posee los dominios que ha solicitado durante un máximo de 10 minutos. Si el DNS no se actualiza con el desafío del registro TXT en un plazo de 10 minutos, la solicitud falla.
+Una vez que el servicio envía el desafío de validación de dominio, {{site.data.keyword.cloudcerts_short}} intenta validar que posee los dominios que ha solicitado durante un máximo de 10 minutos. Si el DNS no se actualiza con el desafío del registro TXT en un plazo de 10 minutos, la solicitud falla.
 
 ## ¿Cómo puedo comprobar el estado de mi solicitud de certificado mediante la API pública de {{site.data.keyword.cloudcerts_short}}?
 {: #certificate-order-status-api}

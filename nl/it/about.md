@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Informazioni su {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} ti aiuta ad ottenere, archiviare e gestire i certificati SSL per le tue applicazioni basate sul cloud {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.cloudcerts_full}} ti aiuta ad ottenere, archiviare e gestire i certificati SSL che utilizzi per le distribuzioni {{site.data.keyword.cloud_notm}} o altre distribuzioni in loco e cloud.
 {: shortdesc}
 
 Puoi importare i certificati SSL che ottieni per i tuoi servizi e applicazioni, archiviarli in modo sicuro e ottenere una vista centrale dei certificati che stai utilizzando. Oppure puoi ordinare i certificati pubblici tramite il gestore certificato dalle CA supportate.
@@ -60,7 +60,7 @@ Quando importi o ordini un certificato in {{site.data.keyword.cloudcerts_short}}
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Puoi distribuire in modo facile e sicuro i certificati TLS del dominio personalizzati da {{site.data.keyword.cloudcerts_short}} nel tuo cluster Kubernetes. Gli amministratori del cluster possono utilizzare i [comandi del plug-in del servizio IBM Cloud Kubernetes](/docs/containers?topic=containers-cs_cli_reference) per aggiornare i certificati TLS come segreti Kubernetes con un nuovo certificato senza provocare tempi di inattività. Per iniziare, consulta le [annotazioni Ingress nella documentazione](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>Puoi distribuire in modo facile e sicuro i certificati TLS del dominio personalizzati da {{site.data.keyword.cloudcerts_short}} nel tuo cluster Kubernetes. Gli amministratori del cluster possono utilizzare i [comandi del plug-in del servizio IBM Cloud Kubernetes](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) per aggiornare i certificati TLS come segreti Kubernetes con un nuovo certificato senza provocare tempi di inattività. Per iniziare, consulta le [annotazioni Ingress nella documentazione](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
@@ -80,7 +80,7 @@ Quando importi o ordini un certificato in {{site.data.keyword.cloudcerts_short}}
 ## Disponibilità
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} è disponibile nelle località di Dallas, Londra, Francoforte e Tokyo. 
+{{site.data.keyword.cloudcerts_short}} è disponibile nelle località di Dallas, Londra, Francoforte e Tokyo.
 
 
 
@@ -89,7 +89,7 @@ Quando importi o ordini un certificato in {{site.data.keyword.cloudcerts_short}}
 
 Puoi caricare un massimo di 1000 certificati per istanza.
 
-## Conformità e standard 
+## Conformità e standard
 {: #compliance-and-standards}
 
 {{site.data.keyword.cloudcerts_short}} ha completato con esito positivo diverse certificazioni e controlli e soddisfa diversi standard importanti.

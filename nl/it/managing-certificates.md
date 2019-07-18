@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,11 +99,11 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
   </tr>
   <tr>
     <td>Valido da</td>
-    <td>La data in cui il certificato diventa valido (nel fuso orario UTC). </td>
+    <td>La data in cui il certificato diventa valido (nel fuso orario Coordinated Universal Time). </td>
   </tr>
   <tr>
     <td>Scade il</td>
-    <td>La data da cui il certificato non è più valido (nel fuso orario UTC). </td>
+    <td>La data da cui il certificato non è più valido (nel fuso orario Coordinated Universal Time). </td>
   </tr>
   <tr>
     <td>Stato</td>
@@ -120,7 +120,7 @@ Dopo aver importato un certificato, vengono visualizzate le seguenti informazion
 ## Reimportazione di un certificato
 {: #reimport-certificate}
 
-Se il tuo certificato sta per scadere, puoi aggiornare il certificato importando una nuova versione del certificato che ha lo stesso dominio del certificato esistente ma che ha una nuova data di scadenza. Quando un certificato viene reimportato, la versione esistente del certificato viene conservata come un backup che può essere scaricato, se necessario.
+Se il tuo certificato sta per scadere, puoi aggiornarlo importando una nuova versione che ha lo stesso dominio del certificato esistente ma che ha una nuova data di scadenza. Quando un certificato viene reimportato, la versione esistente del certificato viene conservata come un backup che può essere scaricato, se necessario.
 {: shortdesc}
 
 ### Reimportazione del tuo certificato
@@ -149,12 +149,13 @@ Per scaricare la versione precedente di un certificato, completa la seguente pro
 ## Ordinazione di certificati
 {: #order-certificates}
 
-Prima di ordinare un certificato, [completa la procedura richiesta](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates).
+Prima di ordinare un certificato, [completa la procedura richiesta](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Per ordinare un certificato, fai clic su **Order Certificate**, seleziona **{{site.data.keyword.cis_full_notm}}** o **Another DNS Provider** e fornisci i seguenti dettagli:
 
-1. Fornisci un nome certificato.
-2. Seleziona un'autorità di certificazione (CA).
-3. Immetti il dominio primario e tutti i domini alternativi.
-4. Seleziona l'algoritmo appropriato e l'algoritmo chiave.
+1. Nome certificato.
+2. Acronimo di Certificate Authority, ossia Autorità di certificazione. 
+3. Domini richiesti.
+4. Algoritmo appropriato e algoritmo chiave.
 5. Fai clic su **Order**.
 
 L'ordinazione di certificati è limitata a cinque ordini al minuto per istanza {{site.data.keyword.cloudcerts_short}}, 100 ordini all'ora per account utente IBM e cinque certificati per gli stessi domini alla settimana.
@@ -166,17 +167,17 @@ L'ordinazione di certificati è limitata a cinque ordini al minuto per istanza {
 Per rinnovare un certificato, completa la seguente procedura:
   1. Fai clic sul menu nella riga del certificato che vuoi rinnovare.
   2. Fai clic su **Renew Certificate**.
-  3. Facoltativo: puoi scegliere di reimpostare le chiavi del tuo certificato selezionando la casella di spunta **Rekey certificate**. Questa azione rinnoverà il tuo certificato con una nuova coppia di chiavi.
+  3. Facoltativo: puoi scegliere di reimpostare le chiavi del tuo certificato selezionando la casella di spunta **Rekey certificate**. Questa azione rinnova il tuo certificato con una nuova coppia di chiavi.
   
-  Quando reimposti le chiavi di un certificato, assicurati di distribuire i nuovi certificati e chiavi ovunque vengano utilizzati.
-  {: note}
+    Quando reimposti le chiavi di un certificato, assicurati di distribuire i nuovi certificati e chiavi ovunque vengano utilizzati.
+    {: note}
     
-  4. Fai clic su **Renew**
+  4. Fai clic su **Renew**.
   
   Puoi rinnovare solo i certificati che hai ordinato tramite {{site.data.keyword.cloudcerts_short}}.
   {: note}
 
-Il rinnovo dei certificati è limitato a cinque richieste di rinnovo per certificato al minuto, 100 rinnovi all'ora per account utente IBM.
+Il rinnovo di un certificato è limitato a cinque richieste di rinnovo per certificato al minuto, 100 rinnovi all'ora per account utente IBM.
 {: note}
 
 

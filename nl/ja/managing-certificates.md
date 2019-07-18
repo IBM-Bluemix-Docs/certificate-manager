@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,15 +99,15 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>有効期限開始日 (Valid from)</td>
-    <td>証明書が有効になった日付 (UTC タイム・ゾーン)。 </td>
+    <td>証明書が有効になった日付 (協定世界時タイム・ゾーン)。</td>
   </tr>
   <tr>
     <td>有効期限終了日 (Expires on)</td>
-    <td>証明書が無効になる日付 (UTC タイム・ゾーン)。 </td>
+    <td>証明書が無効になる日付 (協定世界時タイム・ゾーン)。</td>
   </tr>
   <tr>
     <td>状況</td>
-    <td>証明書の状況。</td>
+    <td>証明書の状況。 </td>
   </tr>
   <tr>
     <td>証明書 ID (Certificate ID)</td>
@@ -120,7 +120,7 @@ subcollection: certificate-manager
 ## 証明書の再インポート
 {: #reimport-certificate}
 
-証明書の有効期限がまもなく切れる場合は、既存の証明書と同じドメインの、新たな有効期限日付を持つ新しいバージョンの証明書をインポートすることで証明書を更新できます。 証明書が再インポートされると、証明書の既存のバージョンはバックアップとして保存され、必要であればダウンロードできます。
+証明書の有効期限がまもなく切れる場合は、既存の証明書と同じドメインの、新たな有効期限日付を持つ新しいバージョンをインポートすることで証明書を更新できます。証明書が再インポートされると、証明書の既存のバージョンはバックアップとして保存され、必要であればダウンロードできます。
 {: shortdesc}
 
 ### 証明書の再インポート
@@ -149,15 +149,15 @@ subcollection: certificate-manager
 ## 証明書の注文
 {: #order-certificates}
 
-証明書を注文する前に、[
-必要なセットアップを完了しておく必要があります](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)。
+証明書を注文する前に、[必要なセットアップを完了しておく必要があります](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates)。
+  
+証明書を注文するには、**「証明書の注文 (Order Certificate)」**をクリックし、**{{site.data.keyword.cis_full_notm}}** または**別の DNS プロバイダー**を選択して、以下の詳細を提供します。
 
-
-1. 証明書名を指定します。
-2. 認証局を選択します。
-3. 1 次ドメイン、および代替ドメインがあれば代替ドメインを入力します。
-4. 適切なアルゴリズムと鍵アルゴリズムを選択します。
-5. **「注文」**をクリックします。
+1. 証明書の名前。
+2. 認証局。
+3. 必須ドメイン。
+4. 適切なアルゴリズムと鍵アルゴリズム。
+5. **「オーダー」**をクリックします。
 
 証明書の注文は、{{site.data.keyword.cloudcerts_short}} インスタンスにつき 5 件の注文/分、IBM ユーザー・アカウントにつき 100 件の注文/時間、週あたり同じドメインに対して 5 件の証明書に制限されています。
 {: note}
@@ -169,12 +169,12 @@ subcollection: certificate-manager
   1. 更新する証明書の行のメニューをクリックします。
   2. **「証明書の更新 (Renew Certificate)」**をクリックします。
   3. オプション:**「証明書の鍵の再設定 (Rekey certificate)」**チェック・ボックスをオンにすることで、
-証明書の鍵を再設定できます。この操作により、証明書が新しい鍵ペアで更新されます。
+証明書の鍵を再設定できます。 この操作により、証明書が新しい鍵ペアで更新されます。
   
-  証明書の鍵を再設定するときは、それが使用されているすべての場所に新しい証明書と鍵を配置してください。
+    証明書を鍵再設定するときは、それが使用されているすべての場所に新しい証明書と鍵を配置してください。
   {: note}
     
-  4. **「更新 (Renew)」**をクリックします。
+  4. **「更新」**をクリックします。
   
   更新できるのは、{{site.data.keyword.cloudcerts_short}} 経由で注文した証明書だけです。
   {: note}

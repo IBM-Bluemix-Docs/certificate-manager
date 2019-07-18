@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-10"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -27,13 +27,17 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_long}} 서비스에 대한 다음 기능 및 변경사항이 사용 가능합니다.
 
+## 2019년 7월 8일
+{: 8July2019}
+
+- **DNS 제공자로서의 IBM Cloud Internet Services**  
+  이제 IBM Cloud Internet Services를 DNS 제공자로 사용할 수 있으며, 이로 인해 인증서 주문 경험이 단순화됩니다. [인증서 주문에 대해 자세히 알아보십시오](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 2019년 6월 10일
 {: 10June2019}
 
 - **주문된 Let's Encrypt 인증서 갱신**  
   이제 {{site.data.keyword.cloudcerts_short}}를 사용하여 주문한 Let's Encrypt 인증서를 갱신할 수 있습니다. [인증서 주문에 대해 자세히 알아보십시오](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
-
 
 ## 2019년 5월 6일
 {: 6May2019}

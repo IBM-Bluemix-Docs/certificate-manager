@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # A propos de {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}} vous aide à obtenir, stocker et gérer des certificats SSL pour vos applications basées cloud {{site.data.keyword.IBM_notm}}.
+{{site.data.keyword.cloudcerts_full}} vous aide à obtenir, stocker et gérer les certificats SSL que vous utilisez pour des déploiements {{site.data.keyword.cloud_notm}} ou d'autres déploiements cloud ou sur site.
 {: shortdesc}
 
 Vous pouvez importer des certificats SSL que vous obtenez pour vos applications et vos services, les stocker en toute sécurité et centraliser l'affichage des certificats que vous utilisez. Ou bien, vous pouvez commander des certificats publics via Certificate Manager auprès d'autorités de certification prises en charge.
@@ -60,7 +60,7 @@ Lorsque vous importez ou commandez un certificat dans {{site.data.keyword.cloudc
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Vous pouvez facilement déployer des certificats TLS de domaine personnalisé en toute sécurité depuis {{site.data.keyword.cloudcerts_short}} vers votre cluster Kubernetes. Les administrateurs de cluster peuvent utiliser les [commandes de plug-in Kubernetes Service](/docs/containers?topic=containers-cs_cli_reference) pour mettre à jour des certificats TLS en tant que secrets Kubernetes avec un nouveau certificat sans provoquer d'interruption. Pour commencer, vérifiez les [annotations Ingress dans la documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>Vous pouvez facilement déployer des certificats TLS de domaine personnalisé en toute sécurité depuis {{site.data.keyword.cloudcerts_short}} vers votre cluster Kubernetes. Les administrateurs de cluster peuvent utiliser les [commandes de plug-in Kubernetes Service](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) pour mettre à jour des certificats TLS en tant que secrets Kubernetes avec un nouveau certificat sans provoquer d'interruption. Pour commencer, vérifiez les [annotations Ingress dans la documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

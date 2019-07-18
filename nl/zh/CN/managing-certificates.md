@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-06-04"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -99,11 +99,11 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>有效开始日期</td>
-    <td>证书开始有效的日期（采用 UTC 时区）。</td>
+    <td>证书开始有效的日期（采用全球标准时间时区）。</td>
   </tr>
   <tr>
     <td>到期日期</td>
-    <td>证书不再有效的日期（采用 UTC 时区）。</td>
+    <td>证书不再有效的日期（采用全球标准时间时区）。</td>
   </tr>
   <tr>
     <td>状态</td>
@@ -149,12 +149,13 @@ subcollection: certificate-manager
 ## 订购证书
 {: #order-certificates}
 
-订购证书之前，请[首先完成必需的设置](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificates)。
+订购证书之前，请[首先完成必需的设置](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates)。  
+要订购证书，请单击**订购证书**，选择 **{{site.data.keyword.cis_full_notm}}** 或**其他 DNS 提供者**，然后提供以下详细信息：
 
-1. 提供证书名称。
-2. 选择认证中心。
-3. 输入主域和任何备用域。
-4. 选择适当的算法和密钥算法。
+1. 证书名称。
+2. 认证中心。
+3. 必需的域。
+4. 适当的算法和密钥算法。
 5. 单击**订购**。
 
 订购证书限制为每个 {{site.data.keyword.cloudcerts_short}} 实例每分钟 5 个订购请求，每个 IBM 用户帐户每小时 100 个订购请求，每周对于相同域只能订购 5 个证书。
@@ -168,7 +169,7 @@ subcollection: certificate-manager
   2. 单击**更新证书**。
   3. 可选：可以通过选中**再加密证书**复选框来选择对证书再加密。这将使用新密钥对来更新证书。
   
-  对证书再加密后，请确保将新的证书和密钥部署到使用它们的所有位置。
+    对证书再加密后，请确保将新的证书和密钥部署到使用它们的所有位置。
   {: note}
     
   4. 单击**更新**。

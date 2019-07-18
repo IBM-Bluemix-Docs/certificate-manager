@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL, TLS, activity tracker,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -43,12 +43,16 @@ subcollection: certificate-manager
 	  <td>匯入憑證。</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate.reimport`</td>
+	  <td>重新匯入憑證。</td>
+  </tr>
+  <tr>
     <td>`cloudcerts.certificate.order`</td>
 	  <td>訂購憑證。</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>重新匯入憑證。</td>
+    <td>`cloudcerts.certificate.renew`</td>
+	  <td>更新已發出的憑證。</td>
   </tr>
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
@@ -121,6 +125,11 @@ subcollection: certificate-manager
 
 在 {{site.data.keyword.cloudcerts_short}} 實例所在位置佈建 {{site.data.keyword.at_short}} 實例。
 
+請完成下列步驟：
+
+1. 移至 [{{site.data.keyword.cloud_notm}} 觀察](https://cloud.ibm.com/observe/){: external}。
+2. 在 {{site.data.keyword.cloudcerts_short}} 實例所在位置佈建 {{site.data.keyword.at_short}} 實例。
+
 系統會自動將事件轉遞給佈建 {{site.data.keyword.cloudcerts_short}} 服務的相同位置中的 {{site.data.keyword.at_short}} 服務實例。
 
 ## 相關資訊
@@ -131,5 +140,4 @@ subcollection: certificate-manager
 ## 可用性
 {: #at-availability}
 
-* 目前，在**達拉斯**和**法蘭克福**位置有提供 {{site.data.keyword.at_short}} 支援。
-* 對於其他位置，請佈建已淘汰之 Activity Tracker 服務的實例，直到 {{site.data.keyword.at_short}} 可用為止。
+{{site.data.keyword.at_short}} 支援提供於**達拉斯**、**法蘭克福**、**東京**及**倫敦**等位置。

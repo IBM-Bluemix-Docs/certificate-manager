@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-06"
+lastupdated: "2019-07-09"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # {{site.data.keyword.cloudcerts_short}} 정보
 {: #about-certificate-manager}
 
-{{site.data.keyword.cloudcerts_full}}는 {{site.data.keyword.IBM_notm}} 클라우드 기반 앱에 대한 SSL 인증서를 얻고, 저장하고, 관리하는 데 도움을 줍니다.
+{{site.data.keyword.cloudcerts_full}}는 {{site.data.keyword.cloud_notm}} 배치 또는 기타 클라우드 및 온프레미스 배치에 사용하는 SSL 인증서를 얻고 저장하고 관리하는 데 도움이 됩니다.
 {: shortdesc}
 
 앱 및 서비스에 대해 얻은 SSL 인증서를 가져와서 안전하게 저장하고 사용 중인 인증서를 중앙에서 볼 수 있습니다. 또는 지원되는 CA의 Certificate Manager를 통해 공용 인증서를 주문할 수 있습니다.
@@ -60,7 +60,7 @@ subcollection: certificate-manager
   </tr>
   <tr>
     <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>사용자 정의 도메인 TLS 인증서를 {{site.data.keyword.cloudcerts_short}}에서 Kubernetes 클러스터로 쉽고 안전하게 배치할 수 있습니다. 클러스터 관리자는 작동 중지 시간을 발생시키지 않고 [Kubernetes Service 플러그인 명령](/docs/containers?topic=containers-cs_cli_reference)을 사용하여 TLS 인증서를 Kubernetes 시크릿으로서 새 인증서로 업데이트할 수 있습니다. 시작하려면 [문서의 Ingress 어노테이션](/docs/containers?topic=containers-ingress_annotation#https-auth)을 참조하십시오.</td>
+    <td>사용자 정의 도메인 TLS 인증서를 {{site.data.keyword.cloudcerts_short}}에서 Kubernetes 클러스터로 쉽고 안전하게 배치할 수 있습니다. 클러스터 관리자는 작동 중지 시간을 발생시키지 않고 [Kubernetes Service 플러그인 명령](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli)을 사용하여 TLS 인증서를 Kubernetes 시크릿으로서 새 인증서로 업데이트할 수 있습니다. 시작하려면 [문서의 Ingress 어노테이션](/docs/containers?topic=containers-ingress_annotation#https-auth)을 참조하십시오.</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-05-15"
+lastupdated: "2019-07-08"
 
 keywords: certificates, SSL,
 
@@ -10,7 +10,7 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
+{:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}
 {:pre: .pre}
@@ -114,7 +114,7 @@ subcollection: certificate-manager
 {: #certificate-order-validation}
 {: faq}
 
-傳送網域驗證盤查後，{{site.data.keyword.cloudcerts_short}} 會嘗試驗證您是否擁有所要求的網域，驗證時間最長為 10 分鐘。如果 DNS 在 10 分鐘內未使用 TXT 記錄盤查進行更新，您的訂單將會失敗。
+服務傳送網域驗證盤查後，{{site.data.keyword.cloudcerts_short}} 會嘗試驗證您是否擁有所要求的網域，驗證時間最長為 10 分鐘。如果 DNS 在 10 分鐘內未使用 TXT 記錄盤查進行更新，您的訂單將會失敗。
 
 ## 如何使用 {{site.data.keyword.cloudcerts_short}} 公用 API 來檢查憑證訂單的狀態？
 {: #certificate-order-status-api}
@@ -126,7 +126,7 @@ subcollection: certificate-manager
 {: #certificate-order-notification}
 {: faq}
 
-如果您配置了通知頻道，在發出憑證之後或訂單失敗時會通知您。請注意，通知頻道的版本應該為 V4 或更高版本。
+如果您配置了通知頻道，在發出憑證之後或訂單失敗時會通知您。請注意，通知頻道的版本必須為第 4 版或更高版本。
 
 ## 我的訂單失敗了。為什麼？
 {: #certificate-order-failure}

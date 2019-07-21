@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-21"
 
 keywords: certificates, SSL,
 
@@ -109,7 +109,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
 
 For more information about user roles and permissions, see [User roles](/docs/iam?topic=iam-userroles#userroles).
 
-## Configuring access policies for users
+## Configuring access policies
 {: #configuring-access-policies}
 
 You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance and therefore, all of the certificates in that instance, or you can set policies for individual certificates (resources) within an instance.
@@ -122,13 +122,10 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 
 {: shortdesc}
 
-### Configuring access policies
-{: #configuring-access}
-
 To configure access policies, complete the following steps:
 
-1. Go to **Manage > Access (IAM) > Users**. A list of the users with access to your {{site.data.keyword.cloud_notm}} account is shown.
-2. Click the name of the user that you want to assign an access policy to. If the user is not shown, click **Invite users** to [add the user to your {{site.data.keyword.cloud_notm}} account](/docs/iam?topic=iam-iamuserinv#iamuserinv).
+1. Go to **Manage > Access (IAM)**. 
+2. Select a single user from the Users list, or an Access group.
 3. Click **Access policies** and then on **Assign access**.
 4. Click **Assign access to resources**.
 5. From the **Services** menu, select **Certificate Manager**.

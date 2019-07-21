@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-21"
 
 keywords: certificates, SSL,
 
@@ -138,4 +138,4 @@ You can find an error code and message in the certificate metadata, UI, and in t
 {: #missing-notification-for-ordered-certificate}
 {: faq}
 
-Upgrade your Slack notification channel to the latest version in the Certificate Manager Settings tab.
+Upgrade your Slack notification channel to the latest version in the Certificate Manager Notifications tab.

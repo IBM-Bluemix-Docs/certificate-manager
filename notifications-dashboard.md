@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-21"
 
 keywords: certificates, SSL,
 
@@ -102,12 +102,11 @@ After you create a Slack Webhook or a Callback URL, you can add it to {{site.dat
 
 To add a notification channel, complete the following steps:
 
-1. In the navigation on the service details page, click **Settings**.
-2. Open the **Notifications** tab.
-3. Click **Add Notification Channel**.
-4. Choose the type of notification channel that you want to use.
-5. Enter the Webhook or Callback URL where you want to send notifications to.
-6. Click **Save**. A summary of your configuration is displayed.
+1. In the navigation on the service details page, click **Notifications**.
+2. Click **Add Notification Channel**.
+3. Choose the type of notification channel that you want to use.
+4. Enter the Webhook or Callback URL where you want to send notifications to.
+5. Click **Save**. A summary of your configuration is displayed.
 
    **Example output**
 
@@ -130,13 +129,9 @@ To add a notification channel, complete the following steps:
     <td>Enablement toggle</td>
     <td>The notification channel state. If set to disabled, no notifications are sent.</td>
    </tr>
-   <tr>
-    <td>Test Connection button</td>
-    <td>Sends a test notification to the channel that you configured. </td>
-   </tr>
     <tr>
       <td>Dots menu</td>
-      <td>Available actions that you can perform on the channel: <i>edit</i> or <i>delete</i></td>
+      <td>Available actions that you can perform on the channel: <i>edit</i>, <i>test</i> or <i>delete</i></td>
     </tr>
     </tbody>
     </table>
@@ -155,8 +150,8 @@ Before you begin, [configure a notification channel](/docs/services/certificate-
 
 To test a notification channel, complete the following steps:
 
-1. In the navigation on the service details page, click **Settings**.
-2. Find your notification channel and click **Test Connection**.
+1. In the navigation on the service details page, click **Notifications**.
+2. Find your notification channel, click the dots menu and select **Test Connection**.
 3. Verify that you received a notification in the channel that you configured.
 
 ## Updating a notification channel
@@ -169,10 +164,9 @@ Before you begin, [configure a notification channel](/docs/services/certificate-
 
 To update your notification channel, complete the following steps:
 
-1. In the navigation on the service details page, click **Settings**.
-2. Select the **Notifications** tab.
-3. Choose from the following options:
-   * To disable or enable notifications for a channel, set the switch to **Disable** or **Enable**.
+1. In the navigation on the service details page, click **Notifications**.
+2. Choose from the following options:
+   * To disable or enable notifications for a channel, set the switch to **Off** or **On**.
    * To update settings for a channel, select **Edit** from the actions menu.
    * To delete a notification channel, select **Delete** from the actions menu.
 
@@ -186,9 +180,8 @@ For every {{site.data.keyword.cloudcerts_short}} instance, a private and a publi
 
 To download the public key, complete the following steps:
 
-1. From the navigation on the service details page, click **Settings**.
-2. Open the **Notifications** tab.
-3. Click the **Download Key** button. The key is downloaded as a PEM file.
+1. From the navigation on the service details page, click **Notifications**.
+2. Click the **Download Key** button. The key is downloaded as a PEM file.
 
 ## Channel versions
 {: #channel-versions}

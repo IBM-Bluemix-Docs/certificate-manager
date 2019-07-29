@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-07-29"
 
 keywords: certificates, SSL, dns,
 
@@ -136,6 +136,8 @@ First, you implement an IBM Cloud Function action for domain validation, and the
 For more information about setting up domain validation by using a Callback URL notification channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}.
 {: tip}
 
+Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample) using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare SoftLayer.
+{: tip}
 
 #### Responding to challenge
 {: #responding-to-challenge}

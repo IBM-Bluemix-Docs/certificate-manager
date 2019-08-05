@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-08-05"
 
 keywords: certificates, SSL,
 
@@ -187,8 +187,9 @@ Renewing a certificate is limited to five renewal requests per certificate per m
 If you manage many certificates, you can use the search bar to locate the required certificate.
 {: shortdesc}
 
-* To search for certificate name, certificate domain, or certificate issuer, type your search term into the Search bar and press Enter.
-* To view all of your certificates, click the **X** icon in the Search bar.
+* To search for a certificate name, domain, or issuer, by start of any word type your search term into the search bar and press **Enter**.
+* To search for an exact value, enclose your search term with double-quotes.
+* To view all of your certificates, click the **X** icon in the search bar.
 
 ## Downloading certificates
 {: #downloading-certificates}

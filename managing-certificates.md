@@ -187,8 +187,7 @@ Renewing a certificate is limited to five renewal requests per certificate per m
 If you manage many certificates, you can use the search bar to locate the required certificate.
 {: shortdesc}
 
-* To search for a certificate name, domain, or issuer, by start of any word type your search term into the search bar and press **Enter**.
-* To search for an exact value, enclose your search term with double-quotes.
+* To search for a certificate name, domain, or issuer, start to type your term into the search bar and press **Enter**.
 * To view all of your certificates, click the **X** icon in the search bar.
 
 ## Downloading certificates

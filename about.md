@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-12"
+lastupdated: "2019-08-20"
 
 keywords: certificates, SSL,
 
@@ -47,7 +47,9 @@ You can manage your certificates in the following ways:
 ## Private key security
 {: #private-key-security}
 
-When you import or order a certificate into {{site.data.keyword.cloudcerts_short}}, the service uses an Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key. {{site.data.keyword.cloudcerts_short}} saves this unique encrypted key to use with your service instance.
+{{site.data.keyword.cloudcerts_short}} uses the [envelope encryption methodology](/docs/services/key-protect/concepts?topic=key-protect-envelope-encryption), where a root certificate is stored in, and never leaves, {{site.data.keyword.keymanagementservicelong_notm}}, which is also backed by HSM.
+
+In addition, a per tenant managed encryption key is used to encrypt the certificates and private keys before they are stored to the database. As part of the encryption chain, {{site.data.keyword.cloudcerts_short}} uses the Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key.
 
 ## Integrations
 {: #integrations}

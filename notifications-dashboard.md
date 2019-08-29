@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-21"
+lastupdated: "2019-08-29"
 
 keywords: certificates, SSL,
 
@@ -41,7 +41,10 @@ You are also alerted when a renewed version of your certificate is reimported to
 **When am I notified?**  
 Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_short}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
 
-You must renew your certificate and reimport this certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you reimport your certificate you receive a notification that your certificate was reimported to remind you to redeploy it.
+Notifications for expiring certificates are sent based on the timezone used to check whether a certificate has expired, which is UTC at midnight.
+{: note}
+
+You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.
 
 **What are my options to configure notifications?**  
 You can send notifications to Slack by using a Slack Webhook or use any Callback URL that you like.

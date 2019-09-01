@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-01"
 
 keywords: certificates, SSL,
 
@@ -188,6 +188,7 @@ If you manage many certificates, you can use the search bar to locate the requir
 {: shortdesc}
 
 * To search for a certificate name, domain, or issuer, start to type your term into the search bar and press **Enter**.
+* To search for an exact value, enclose your search term with double-quotes.
 * To view all of your certificates, click the **X** icon in the search bar.
 
 ## Downloading certificates

@@ -28,8 +28,6 @@ subcollection: certificate-manager
 {{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, you can set up a notification channel. You can specify either a Slack Webhook, a Callback URL, or any combination of the two.
 {: shortdesc}
 
-
-
 ## Notifications to monitor certificate expiration
 {: #notifications-monitoring-certificate-expiration}
 
@@ -56,8 +54,6 @@ You can send notifications to Slack by using a Slack Webhook or use any Callback
 
 {{site.data.keyword.cloudcerts_short}} notifies you when a certificate that you order from {{site.data.keyword.cloudcerts_short}} is issued to you, or renewed successfully. You are also notified if your order fails, or a renewal fails.
 {: shortdesc}
-
-
 
 ## Setting up a Slack Webhook
 {: #setup-webhook}

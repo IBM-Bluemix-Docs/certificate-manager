@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-21"
+lastupdated: "2019-09-01"
 
 keywords: certificates, SSL, dns,
 
@@ -83,9 +83,6 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
    
 5. To control specific domains, assign the **Manager** role by using the API so that {{site.data.keyword.cloudcerts_short}} can manage the DNS records for the individual domains that exist in your {{site.data.keyword.cis_short_notm}} instance. You might want to copy the command to a text file to make it easy to edit the required parameters.
    
-  
-
-  
   ```
   curl -X POST https://iam.cloud.ibm.com/acms/v1/policies \
   -H 'Accept: application/json' \
@@ -94,7 +91,6 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
   -d '{ "type": "authorization", "subjects": [ { "attributes": [ { "name": "serviceName", "value": "cloudcerts" }, { "name": "accountId", "value": "<accountID>" }, { "name": "serviceInstance", "value": "<Certificate-Manager-GUID-based-instanceID>" } ] } ], "roles": [ { "role_id": "crn:v1:bluemix:public:iam::::serviceRole:Manager" } ], "resources": [ { "attributes": [ { "name": "serviceName", "value": "internet-svcs" }, { "name": "accountId", "value": "<accountID>" }, { "name": "serviceInstance", "value": "<Cloud-Internet-Services-GUID-based-instanceID>" }, { "name": "domainId", "value": "<domainID>" }, { "name": "cfgType", "value": "reliability" }, { "name": "subScope", "value": "dnsRecord" } ] } ] }'
   ```
   {: codeblock} 
-  
 
   <table>
     <tr>
@@ -123,15 +119,15 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
     </tr>
   </table>
 
-Now you're ready to [order a certificate](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)!
+You're now ready to [order a certificate](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)!
 
 
 ### Another DNS Provider
 {: #other_provider}
 
-To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends the TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
+To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends a TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
 
-First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#callback).
 
 For more information about setting up domain validation by using a Callback URL notification channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}.
 {: tip}
@@ -162,7 +158,7 @@ The notification channel receives a notification with the following structure:
 ```
 {: screen}
 
-Once the DNS TXT challenge is sent to your callback URL, you have to answer the challenge within 10 minutes. {{site.data.keyword.cloudcerts_short}} checks to see whether the challenge is complete. Once {{site.data.keyword.cloudcerts_short}} verifies that you answered the challenge, you are sent a second notification to let you know you can remove the TXT record.
+Once the DNS TXT challenge is sent to your Callback URL, you have to answer the challenge within 10 minutes. {{site.data.keyword.cloudcerts_short}} checks to see whether the challenge is complete. Once it is verified that you answered the challenge, you are sent a second notification to let you know you can remove the TXT record.
 
 To see frequently asked questions about ordering certificates, [review the FAQ page](/docs/services/certificate-manager?topic=certificate-manager-faq).
 {: tip}
@@ -211,4 +207,4 @@ To renew a certificate, complete the following steps:
 You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 {: note}
 
-Your renewal is placed in a **Renew pending** state. Once you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
+Your renewal is placed in a **Renew pending** state. Once the domain validation challenge completes  and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notification channels.

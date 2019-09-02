@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-22"
+lastupdated: "2019-09-02"
 
 keywords: certificates, SSL,
 
@@ -82,7 +82,7 @@ In addition, a per tenant managed encryption key is used to encrypt the certific
 ## Availability
 {: #availability}
 
-{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt, and Tokyo locations.
+{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt, Tokyo and Sydney locations.
 
 
 

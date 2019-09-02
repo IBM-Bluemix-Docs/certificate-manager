@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-08"
+lastupdated: "2019-09-02"
 
 keywords: certificates, SSL,
 
@@ -27,6 +27,15 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 2 September 2019
+{: 2September2019}
+
+- **Live in Sydney**  
+  {{site.data.keyword.cloudcerts_long_notm}} is available in the Sydney location.
+
+- **Exact search**
+  Enclose your search term with double-quotes to search for an exact value.
+  
 ## 8 July 2019
 {: 8July2019}
 

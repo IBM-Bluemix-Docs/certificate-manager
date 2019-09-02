@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-08-05"
+lastupdated: "2019-09-02"
 
 keywords: certificates, SSL,
 
@@ -164,22 +164,19 @@ Ordering certificates is limited to five orders/minute per {{site.data.keyword.c
 ## Renewing certificates
 {: #renew-certificates}
 
+You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.  
 To renew a certificate, complete the following steps:
-  1. Click the menu in the row of the certificate you want to renew.
-  2. Click **Renew Certificate**.
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair.
-  
-    When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
-    {: note}
-    
-  4. Click **Renew**.
-  
-  You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
-  {: note}
 
-Renewing a certificate is limited to five renewal requests per certificate per minute, 100 renewal per hour per IBM user account.
+  1. Click on the menu in the row of the certificate you want to renew.
+  2. Click **Renew Certificate**.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.    
+  4. Click **Renew**
+
+Renewing a certificates is limited to five renewal requests per certificate per minute, 100 renewal/hour per IBM user account.  
 {: note}
 
+When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+{: important}
 
 ## Searching certificates
 {: #searching-certificates}
@@ -188,6 +185,7 @@ If you manage many certificates, you can use the search bar to locate the requir
 {: shortdesc}
 
 * To search for a certificate name, domain, or issuer, start to type your term into the search bar and press **Enter**.
+* To search for an exact value, enclose your search term with double-quotes.
 * To view all of your certificates, click the **X** icon in the search bar.
 
 ## Downloading certificates

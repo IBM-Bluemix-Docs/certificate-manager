@@ -9,6 +9,7 @@ Certificate Manager
     {: .navgroup id="learn"}
     getting-started.md
     about.md
+    integrations.md
     ha-dr.md
     {: .navgroup-end}
 
@@ -17,7 +18,6 @@ Certificate Manager
     order-certificates.md
     notifications-dashboard.md
     access-management.md
-    integrations.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

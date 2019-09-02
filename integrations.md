@@ -27,7 +27,7 @@ subcollection: certificate-manager
 
 The following lists available integration supported by {{site.data.keyword.cloudcerts_full}}.
 
-## Services that integrated with {{site.data.keyword.cloudcerts_short}} 
+## Services that are integrated with {{site.data.keyword.cloudcerts_short}} 
 {: #service-integrations-1}
 
 <table>
@@ -50,7 +50,7 @@ The following lists available integration supported by {{site.data.keyword.cloud
   </tr>
 </table>
 
-## Services that {{site.data.keyword.cloudcerts_short}} integrated with
+## Services that {{site.data.keyword.cloudcerts_short}} is integrated with
 {: #servuce-integrations-2}
 
 <table>

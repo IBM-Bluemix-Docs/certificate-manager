@@ -17,6 +17,7 @@ Certificate Manager
     order-certificates.md
     notifications-dashboard.md
     access-management.md
+    integrations.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

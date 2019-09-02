@@ -51,34 +51,6 @@ You can manage your certificates in the following ways:
 
 In addition, a per tenant managed encryption key is used to encrypt the certificates and private keys before they are stored to the database. As part of the encryption chain, {{site.data.keyword.cloudcerts_short}} uses the Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key.
 
-## Integrations
-{: #integrations}
-
-<table>
-<caption>Table 1. {{site.data.keyword.cloud_notm}} services that use {{site.data.keyword.cloudcerts_short}}</caption>
-  <tr>
-    <th> Service </th>
-    <th> Description </th>
-  </tr>
-  <tr>
-    <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>You can easily and securely deploy custom domain TLS certificates from {{site.data.keyword.cloudcerts_short}} to your Kubernetes cluster. Cluster administrators can use the [Kubernetes Service plug-in commands](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) to update TLS certificates as Kubernetes secrets with a new certificate without causing downtime. To get started, check out the [Ingress annotations in the documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
-  </tr>
-  <tr>
-    <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>[{{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started) centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about {{site.data.keyword.security-advisor_short}}](/docs/services/security-advisor?topic=security-advisor-getting-started#getting-started).</td>
-  </tr>
-  <tr>
-    <td>{{site.data.keyword.at_short}}</td>
-    <td>You can use [{{site.data.keyword.at_short}}](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started) to track how users and applications interact with the {{site.data.keyword.cloudcerts_long_notm}} service in the {{site.data.keyword.cloud_notm}}.
-    <p>To get the list of actions that generate an event, see [{{site.data.keyword.at_short}} events](/docs/services/certificate-manager?topic=certificate-manager-at_events#at_events).</p></td>
-  </tr>
-  <tr>
-    <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>Store your custom domain certificates in the {{site.data.keyword.cloudcerts_short}} service, then use certificate CRNs to bind with custom domains in {{site.data.keyword.apiconnect_short}}. [Learn more about {{site.data.keyword.apiconnect_short}}](/docs/services/apiconnect?topic=apiconnect-getting-started#getting-started).</p></td>
-  </tr>
-</table>
-
 ## Availability
 {: #availability}
 

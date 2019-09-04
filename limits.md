@@ -34,7 +34,7 @@ Rate limiting is used to control the amount of traffic that is incoming to your 
 ### Free
 {: free-plan-limits}
 
-Limits in instances of the Free plan of {{site.data.keyword.cloudcerts_short}}.
+The following tables lists the limits in instances of the Free plan of {{site.data.keyword.cloudcerts_short}}.
 
 <table>
   <tr>
@@ -49,6 +49,8 @@ Limits in instances of the Free plan of {{site.data.keyword.cloudcerts_short}}.
 
 ## API limits
 {: api-limits}
+
+The following tables lists the various rate limits for {{site.data.keyword.cloudcerts_short}} APIs.
 
 <table>
   <tr>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-09-04"
 
 keywords: certificates, SSL,
 
@@ -33,7 +33,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 - **Live in Sydney**  
   {{site.data.keyword.cloudcerts_long_notm}} is available in the Sydney location.
 
-- **Exact search**
+- **Exact search**  
   Enclose your search term with double-quotes to search for an exact value.
   
 ## 8 July 2019

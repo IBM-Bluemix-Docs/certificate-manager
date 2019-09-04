@@ -34,6 +34,8 @@ Rate limiting is used to control the amount of traffic that is incoming to your 
 ### Free
 {: free-plan-limits}
 
+Limits in instances of the Free plan of {{site.data.keyword.cloudcerts_short}}.
+
 <table>
   <tr>
     <th> Resource </th>
@@ -62,11 +64,11 @@ Rate limiting is used to control the amount of traffic that is incoming to your 
     <td>5 action per minute</td>
   </tr>
   <tr>
-    <td>Testing notifications channels</td>
+    <td>Test notifications channels</td>
     <td>1 action per second</td>
   </tr>
   <tr>
-    <td>Re/importing certificates</td>
+    <td>Re/import certificates</td>
     <td>5 actions per minute</td>
   </tr>
   <tr>
@@ -74,11 +76,11 @@ Rate limiting is used to control the amount of traffic that is incoming to your 
     <td>5 actions per minute</td>
   </tr>
   <tr>
-    <td>Ordering certificates</td>
+    <td>Order certificates</td>
     <td>5 orders/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 orders/hour per IBM user account, and 5 certificates for the same domains per week.</td>
   </tr>
   <tr>
-    <td>Renewing certificates</td>
+    <td>Renew certificates</td>
     <td>5 renews/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 renews/hour per IBM user account, and 5 certificates for the same domains per week.</td>
   </tr>
 </table>

@@ -56,30 +56,30 @@ Review the following table to see the limits that are in place for free instance
     <th> Limit </th>
   </tr>
   <tr>
-    <td>Re/importing certificates</td>
-    <td>5 actions per minute</td>
-  </tr>
-  <tr>
-    <td>Update operations on certificates</td>
-    <td>5 actions per minute</td>
-  </tr>
-    <td>Ordering certificates</td>
-    <td>5 orders/minute per Certificate Manager instance, 100 orders/hour per IBM user account, and 5 certificates for the same domains per week.</td>
-  </tr>
-  </tr>
-    <td>Renewing certificates</td>
-    <td>5 orders/minute per Certificate Manager instance, 100 orders/hour per IBM user account, and 5 certificates for the same domains per week.</td>
-  </tr>
-  <tr>
-    <td>Testing notifications channels</td>
-    <td>1 action per second</td>
-  </tr>
-  <tr>
     <td>Create notifications channels</td>
     <td>5 action per minute</td>
   </tr>
   <tr>
     <td>Update notifications channels</td>
     <td>5 action per minute</td>
+  </tr>
+  <tr>
+    <td>Testing notifications channels</td>
+    <td>1 action per second</td>
+  </tr>
+  <tr>
+    <td>Re/importing certificates</td>
+    <td>5 actions per minute</td>
+  </tr>
+  </tr>
+    <td>Ordering certificates</td>
+    <td>5 orders/minute per Certificate Manager instance, 100 orders/hour per IBM user account, and 5 certificates for the same domains per week.</td>
+  </tr>
+  <tr>
+    <td>Update operations on certificates</td>
+    <td>5 actions per minute</td>
+  </tr>
+    <td>Renewing certificates</td>
+    <td>5 orders/minute per Certificate Manager instance, 100 orders/hour per IBM user account, and 5 certificates for the same domains per week.</td>
   </tr>
 </table>

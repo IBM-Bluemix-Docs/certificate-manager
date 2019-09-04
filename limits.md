@@ -31,7 +31,7 @@ subcollection: certificate-manager
 ### Free
 {: free-plan-limits}
 
-The following tables lists the limits in instances of the Free plan of {{site.data.keyword.cloudcerts_short}}.
+The following table lists the limits in instances of the Free plan of {{site.data.keyword.cloudcerts_short}}.
 
 <table>
   <tr>
@@ -47,7 +47,7 @@ The following tables lists the limits in instances of the Free plan of {{site.da
 ## API limits
 {: api-limits}
 
-The following tables lists the various rate limits for {{site.data.keyword.cloudcerts_short}} APIs.
+The following table lists the various rate limits for {{site.data.keyword.cloudcerts_short}} APIs.
 
 <table>
   <tr>

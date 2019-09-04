@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-03"
+lastupdated: "2019-09-04"
 
 keywords: certificates, SSL,
 
@@ -61,10 +61,6 @@ In addition, a per tenant managed encryption key is used to encrypt the certific
 
 
 
-## Limits
-{: #limits}
-
-You can upload a maximum of 1000 certificates per instance.
 
 
 

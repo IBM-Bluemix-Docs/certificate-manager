@@ -25,16 +25,14 @@ subcollection: certificate-manager
 # Limits
 {: #limits}
 
-Rate limiting is used to control the amount of traffic that is coming and going through your instance of {{site.data.keyword.cloudcerts_full}}. By limiting requests or resources, you can protect your applications.
+Rate limiting is used to control the amount of traffic that is incoming to your instance of {{site.data.keyword.cloudcerts_full}}.
 {: shortdesc}
 
-## plans
+## Plan limits
 {: plan-limits}
 
 ### Free
 {: free-plan-limits}
-
-Review the following table to see the limits that are in place for free instances of {{site.data.keyword.cloudcerts_short}}.
 
 <table>
   <tr>

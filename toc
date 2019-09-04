@@ -22,6 +22,7 @@ Certificate Manager
 
     {: .navgroup id="reference"}
     [API documentation](https://cloud.ibm.com/apidocs/certificate-manager)
+    limits.md
     at_events.md
     log_events.md
     rellinks.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-09-05"
 
 keywords: certificates, SSL,
 
@@ -33,6 +33,12 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 
 ### Certificate formats
 * PEM
+
+To convert other certificates (such as P12 and CRT) to PEM, run this command: 
+```
+openssl x509 -in mycert.extension -out mycert.pem -outform PEM
+```
+{: tip} 
 
 ### Public key algorithms
 * Rivest-Shamir-Adleman (RSA)

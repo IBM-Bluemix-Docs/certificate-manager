@@ -34,7 +34,7 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 ### Certificate formats
 * PEM
 
-To convert your certificate to PEM, run this command: 
+To convert other certificates (such as P12 and CRT) to PEM, run this command: 
 ```
 openssl x509 -in mycert.extension -out mycert.pem -outform PEM
 ```

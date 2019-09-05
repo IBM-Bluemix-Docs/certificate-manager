@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-04"
+lastupdated: "2019-09-05"
 
 keywords: certificates, SSL,
 
@@ -140,7 +140,7 @@ The service is compliant with the EU requirements.
 {: 12July2018}
 
 - **Callback notifications**  
-  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#callback).
+  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 ## 12 June 2018
 {: 12June2018}

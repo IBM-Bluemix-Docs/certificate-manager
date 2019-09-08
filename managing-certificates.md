@@ -34,7 +34,7 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 ### Certificate formats
 * PEM
 
-Review the OpenSSL documentation how to convert other certificates (such as P12 and CRT) to PEM.command: 
+Review the OpenSSL documentationTo learn how to convert other certificate formats (such as P12 and CRT) to PEM.
 {: tip} 
 
 ### Public key algorithms

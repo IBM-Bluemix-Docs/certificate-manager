@@ -8,9 +8,14 @@ Certificate Manager
 
     {: .navgroup id="learn"}
     getting-started.md
-    about.md
-    integrations.md
-    ha-dr.md
+
+    {: .topicgroup}
+    About
+        about.md
+        integrations.md
+        ha-dr.md
+    
+    rellinks.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -25,7 +30,6 @@ Certificate Manager
     limits.md
     at_events.md
     log_events.md
-    rellinks.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

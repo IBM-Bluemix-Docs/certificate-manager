@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-10"
+lastupdated: "2019-09-11"
 
 keywords: certificates, SSL,
 
@@ -40,8 +40,7 @@ You can manage your certificates in the following ways:
 * Order new public certificates
 
 
-![High-level service architecture diagram](images/high-level-architecture.png)
-<caption>Figure 1. High-level service architecture.</caption>
+![High-level service architecture diagram](images/high-level-architecture.png){: caption="Figure 1. High-level service architecture" caption-side="bottom"}
 
 
 

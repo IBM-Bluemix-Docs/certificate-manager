@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-08"
+lastupdated: "2019-09-11"
 
 keywords: certificates, SSL,
 
@@ -49,7 +49,8 @@ Review the OpenSSL documentation to learn how to convert other certificate forma
 Import your certificates so that you can manage them.
 {: shortdesc}
 
-**Before you begin**
+### Before you begin
+{: #importing-before}
 
 * Create a valid, unexpired certificate with a matching private key (key is optional).
 * Convert the files into Privacy-enhanced Electronic Mail (PEM) format.
@@ -102,7 +103,7 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Valid from</td>
-    <td>The date on which the certificate became valid (in Coordinated Universal Time timezone). </td>
+    <td>The date on which the certificate became valid, in Coordinated Universal Time timezone. </td>
   </tr>
   <tr>
     <td>Expires on</td>

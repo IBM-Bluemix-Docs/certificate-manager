@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-03"
+lastupdated: "2019-09-11"
 
 keywords: certificates, SSL, dns,
 
@@ -93,6 +93,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
   {: codeblock} 
 
   <table>
+    <caption>Table 1. The variables for the previous command explained</caption>
     <tr>
       <th>Variable</th>
       <th>Description</th>
@@ -127,15 +128,15 @@ You're now ready to [order a certificate](/docs/services/certificate-manager?top
 
 To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends a TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
 
+A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-notifications-dashboard#setup-callback).
+{: note}
+
 First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
-For more information about setting up domain validation by using a Callback URL notification channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}.
+For more information about setting up domain validation by using a Callback URL notification channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample) using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.
 {: tip}
 
-Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample) using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.
-{: tip}
-
-#### Responding to challenge
+#### Responding to a challenge
 {: #responding-to-challenge}
 
 The notification channel receives a notification with the following structure:
@@ -153,7 +154,7 @@ The notification channel receives a notification with the following structure:
         "txt_record_name": "<TXT_REC_NAME>", // TXT record name - usually used with conjunction with the domain.
         "txt_record_val": "<TXT_REC_VALUE>" // TXT record value
     },
-    "version": "<CHANNEL_VERSION>" // notification channel version that supports order related notifications - 4 and above
+    "version": "<CHANNEL_VERSION>" // notification channel version that supports order related notifications - 4 and greater
 }
 ```
 {: screen}

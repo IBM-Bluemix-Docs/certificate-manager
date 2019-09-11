@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-21"
+lastupdated: "2019-09-11"
 
 keywords: certificates, SSL,
 
@@ -104,7 +104,6 @@ You can use service access roles to enable users to complete tasks in {{site.dat
        <td>Test a notification channel </td>
        <td> Manager, Writer, Reader </td>
      </tr>
-
 </table>
 
 For more information about user roles and permissions, see [User roles](/docs/iam?topic=iam-userroles#userroles).
@@ -113,6 +112,7 @@ For more information about user roles and permissions, see [User roles](/docs/ia
 {: #configuring-access-policies}
 
 You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance and therefore, all of the certificates in that instance, or you can set policies for individual certificates (resources) within an instance.
+{: shortdesc}
 
 **Examples of role allocation**
 
@@ -120,7 +120,7 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 * Assign the Administrator or Editor role to a user if you want that user to create and delete instances.
 * Assign at least the Reader role if you want a user to view certificates within an instance.
 
-{: shortdesc}
+
 
 To configure access policies, complete the following steps:
 

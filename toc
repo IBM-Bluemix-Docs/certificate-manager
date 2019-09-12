@@ -16,6 +16,7 @@ Certificate Manager
         ha-dr.md
     
     rellinks.md
+    release-notes.md
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
@@ -35,5 +36,4 @@ Certificate Manager
     {: .navgroup id="help"}
     faq.md
     troubleshooting.md
-    release-notes.md
     {: .navgroup-end}

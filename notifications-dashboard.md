@@ -204,7 +204,7 @@ For Channel versions check out the [API documentation](https://cloud.ibm.com/api
    Learn how to create GitHub issues for expiring certificate notifications.
 * [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    Learn how to create PagerDuty incidents for expiring certificate notifications.
-* [How to Automate TLS Certificate Rotation to Avoid Outages ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-automate-tls-certificate-rotation-to-avoid-outages)
-   Learn how to automate certificate rotation for expiring certificates.
-* [How to validate a domain by using a Callback URL and a Cloud Function action ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)
+* [How to Automate TLS Certificate Rotation to Avoid Outages ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-automate-tls-certificate-rotation-to-avoid-outages)  
+   Learn how to automate certificate rotation for expiring certificates.  
+* [How to validate a domain by using a Callback URL and a Cloud Function action ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains)  
    Learn how to validate your domain ownership when ordering certificates.

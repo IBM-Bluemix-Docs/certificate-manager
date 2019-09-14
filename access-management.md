@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-09-14"
 
 keywords: certificates, SSL,
 
@@ -85,7 +85,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
     <td> Manager </td>
   </tr>
   <tr>
-    <td>Order a certificate </td>
+    <td>Order or renew a certificate </td>
     <td> Manager </td>
   </tr>
   <tr>

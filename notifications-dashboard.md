@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-12"
+lastupdated: "2019-09-14"
 
-keywords: certificates, SSL,
+keywords: certificates, SSL, notifications, Slack, Callback URL
 
 subcollection: certificate-manager
 
@@ -25,22 +25,23 @@ subcollection: certificate-manager
 # Configuring notifications
 {: #configuring-notifications}
 
-{{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, you can set up a notification channel. You can specify either a Slack Webhook, a Callback URL, or any combination of the two.
+{{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, you can set up a notifications channel. You can specify either a Slack Webhook, a Callback URL, or any combination of the two.
 {: shortdesc}
 
 ## Notifications to monitor certificate expiration
 {: #notifications-monitoring-certificate-expiration}
 
-Certificates are typically valid for a set amount of time. When a certificate that you use expires, you might experience downtime for your app. To avoid downtime you can configure {{site.data.keyword.cloudcerts_short}} to send you notifications about certificates that are about to expire, so that you are reminded to renew them on time.
+Certificates are typically valid for a set amount of time. When a certificate that you use expires, you might experience downtime. To avoid downtime you can configure {{site.data.keyword.cloudcerts_short}} to send you notifications about certificates that are about to expire, so that you are reminded to renew them on time.
 
-You are also alerted after renewing an ordered certificate or reimporting a renewed version of your certificate  in place of the expiring one. This is to remind you to deploy it to SSL/TLS termination points. 
+You are also alerted after renewing an ordered certificate or reimporting a renewed version of your certificate in place of the expiring one. This is to remind you to deploy it to SSL/TLS termination points. 
 
 Notifications about reimported certificates are sent only to channels from [channel version 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) and higher.
 {: note}
 
 ### When am I notified?
 {: #notifications-notifified} 
-Depending on the expiration date of the certificate that you uploaded to {{site.data.keyword.cloudcerts_short}}, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
+
+Depending on the expiration date of the certificate, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
 
 You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.
 
@@ -65,24 +66,32 @@ To set up a Slack Webhook, complete the following steps:
 
 1. Sign up for [Slack](https://slack.com/) and set up your workspace.
 2. Create a Slack channel where you want to post your notifications to.
-3. [Set up a Webhook](https://api.slack.com/incoming-webhooks) for the Slack channel.
+3. [Set up a Webhook](https://api.slack.com/incoming-webhooks) for the Slack channel
 
-## Setting up a Callback URL
+If you are already a member of a Slack workspace, skip to step 2.
+{: tip}
+
+## Setting up a Callback URL endpoint
 {: #setup-callback}
 
-Using a Callback URL you can send notifications to report to PagerDuty, automatically open up an issue in GitHub, or validate domain ownership before ordering or renewing certificates. You can also automatically trigger deployment of certificates in response to notifications when certificates are reimported or issued successfully.
+A Callback URL endpoint can be used for a variety of tasks. For example, to send notifications to report about expiring notifications to PagerDuty, automatically open up an ticket in GitHub or elsewhere, or validate domain ownership before ordering or renewing certificates. You can also automatically trigger deployment of certificates in response to notifications when certificates are reimported or renewed successfully.
 {: shortdesc}
 
-You can find sample implementations in the [Examples section](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
+You can find sample implementations in the [Examples section below](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
 
-<p>Your Callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}<ul><li>The endpoint must use the HTTPS protocol.</li><li>The endpoint must not require HTTP headers. This requirement includes authorization headers.</li><li>The endpoint must return a `200 OK` status code to indicate a successful notification delivery.</li></ul></p>
+### Callback URL requirements
+{: #callback-url-requirements}
 
+Your Callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}
 
+- The endpoint must use the HTTPS protocol.
+- The endpoint must not require HTTP headers. This requirement includes authorization headers.
+- The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
 
 ### Notification format
 {: #notification_format}
 
-The notification that is sent to your Callback URL is a JSON document that is signed with your instance asymmetric key in the following format.
+The notification that is sent to your Callback URL is a JSON document that is signed with your instance's asymmetric key in the following format.
 
 ```
 { "data":"<JWT FORMAT STRING>" }
@@ -92,25 +101,25 @@ The notification that is sent to your Callback URL is a JSON document that is si
 After you decode and verify the payload, the content is a JSON string [according to the channel version](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
 
-## Configuring a notification channel
+## Configuring a notifications channel
 {: #adding-channel}
 
-After you create a Slack Webhook or a Callback URL, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, renwed certificates, and challenges for domain validation.
+After you create a Slack Webhook or a Callback URL endpoint, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, renwed certificates, and challenges for domain validation.
 {: shortdesc}
 
 {{site.data.keyword.cloudcerts_short}} will encrypt the endpoints that you configure to store them securely.
 {: important}
 
-To add a notification channel, complete the following steps:
+To add a notifications channel, complete the following steps:
 
 1. In the navigation on the service details page, click **Notifications**.
 2. Click **Add Notification Channel**.
-3. Choose the type of notification channel that you want to use.
+3. Choose the type of notifications channel that you want to use.
 4. Enter the Webhook or Callback URL where you want to send notifications to.
 5. Click **Save**. A summary of your configuration is displayed.
 
    <table>
-   <caption>Table 1. Information about the notification channel </caption>
+   <caption>Table 1. Information about the notifications channel </caption>
    <thead>
     <th> Component </th>
     <th> Description </th>
@@ -118,15 +127,15 @@ To add a notification channel, complete the following steps:
    <tbody>
    <tr>
     <td>Type</td>
-    <td>Notification channel type: <i>Slack</i> or <i>Callback URL</i></td>
+    <td>Notifications channel type: <i>Slack</i> or <i>Callback URL</i></td>
    </tr>
    <tr>
     <td>Endpoint</td>
-    <td>The notification channel endpoint where the notifications are sent to.</td>
+    <td>The notifications channel endpoint where the notifications are sent to.</td>
    </tr>
    <tr>
     <td>Enablement toggle</td>
-    <td>The notification channel state. If set to disabled, no notifications are sent.</td>
+    <td>The notifications channel state. If set to disabled, no notifications are sent.</td>
    </tr>
     <tr>
       <td>Dots menu</td>
@@ -138,37 +147,40 @@ To add a notification channel, complete the following steps:
     When you save a Slack Webhook, {{site.data.keyword.cloudcerts_short}} automatically sends a confirmation notification to the Slack channel that you configured. Check your Slack channel to verify that you received this notification.
     {: tip}
 
-7. Optional: Repeat these steps to add more notification channels.
+7. Optional: Repeat these steps to add more notifications channels.
 
-## Testing a notification channel
+You can implement a Callback URL to handle a variety of tasks, or create several Callback URL, each handling a different task.
+{: tip}
+
+## Testing a notifications channel
 {: #testing-channel}
 
-You can test a notification channel to ensure that your notification channel is configured correctly.
+You can test a notifications channel to ensure that your notifications channel is configured correctly.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
+Before you begin, [configure a notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
-To test a notification channel, complete the following steps:
+To test a notifications channel, complete the following steps:
 
 1. In the navigation on the service details page, click **Notifications**.
-2. Find your notification channel, click the dots menu and select **Test Connection**.
+2. Find your notifications channel, click the dots menu and select **Test Connection**.
 3. Verify that you received a notification in the channel that you configured.
 
-## Updating a notification channel
+## Updating a notifications channel
 {: #updating-channel}
 
-You can update your notification channel configuration, disable or enable notifications, or delete notification channels from {{site.data.keyword.cloudcerts_short}}.
+You can update your notifications channel configuration, disable or enable notifications, or delete notifications channels from {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
+Before you begin, [configure a notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
-To update your notification channel, complete the following steps:
+To update your notifications channel, complete the following steps:
 
 1. In the navigation on the service details page, click **Notifications**.
 2. Choose from the following options:
    * To disable or enable notifications for a channel, set the switch to **Off** or **On**.
    * To update settings for a channel, select **Edit** from the actions menu.
-   * To delete a notification channel, select **Delete** from the actions menu.
+   * To delete a notifications channel, select **Delete** from the actions menu.
 
 ## Verifying the HTTP payload for a Callback URL
 {: #verify-callback}
@@ -188,10 +200,10 @@ To download the public key, complete the following steps:
 
 As {{site.data.keyword.cloudcerts_short}} evolves, we might modify the format of the notifications payload structure from time to time. To ensure compatibility with earlier versions, the payload that is sent to your existing channels won’t change.   
 
-If you have existing notification channels (Slack or Callback URL), to start getting the new version of the payload:
+If you have existing notifications channels (Slack or Callback URL), to start getting the new version of the payload:
 
 1. For Callback URL, make sure your implementation can accept the new payload.
-2. Create a new notification channel (new channels are always created with the latest channel version).
+2. Create a new notifications channel (new channels are always created with the latest channel version).
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 

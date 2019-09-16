@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-14"
+lastupdated: "2019-09-16"
 
 keywords: certificates, SSL, dns,
 
@@ -128,7 +128,7 @@ You're now ready to [order a certificate](/docs/services/certificate-manager?top
 
 To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends a TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
 
-A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-notifications-dashboard#setup-callback).
+A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 {: note}
 
 First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).

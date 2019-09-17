@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-16"
+lastupdated: "2019-09-17"
 
 keywords: certificates, SSL, dns,
 
@@ -133,7 +133,7 @@ A Callback URL is a prerequisite for ordering certificates when using a DNS Prov
 
 First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
-For more information about setting up domain validation by using a Callback URL notifications channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample) using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.
+For more information about setting up domain validation by using a Callback URL notifications channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample){: external} using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.
 {: tip}
 
 #### Responding to a challenge

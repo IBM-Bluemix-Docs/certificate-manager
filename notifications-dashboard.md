@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-16"
+lastupdated: "2019-09-17"
 
 keywords: certificates, SSL, notifications, Slack, Callback URL
 
@@ -64,9 +64,9 @@ You can send notifications to Slack by using a Slack Webhook or use any Callback
 
 To set up a Slack Webhook, complete the following steps:
 
-1. Sign up for [Slack](https://slack.com/) and set up your workspace.
+1. Sign up for [Slack](https://slack.com/){: external} and set up your workspace.
 2. Create a Slack channel where you want to post your notifications to.
-3. [Set up a Webhook](https://api.slack.com/incoming-webhooks) for the Slack channel
+3. [Set up a Webhook](https://api.slack.com/incoming-webhooks){: external} for the Slack channel
 
 If you are already a member of a Slack workspace, skip to step 2.
 {: tip}

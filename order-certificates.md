@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-09-17"
 
 keywords: certificates, SSL, dns,
 
@@ -99,23 +99,23 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
       <th>Description</th>
     </tr>
     <tr>
-      <td><code>token</code></td>
+      <td><b>token</b></td>
       <td>A valid IAM token. You can find the value by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud iam oauth-tokens</code>.</td>
     </tr>
     <tr>
-      <td><code>accountID</code></td>
+      <td><b>accountID</b></td>
       <td>The ID for the account where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances exist. You can find the value by navigating to <b>{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings</b> or by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud account show</code>.</td>
     </tr>
     <tr>
-      <td><code>Certificate-Manager-GUID-based-instanceID</code></td>
+      <td><b>Certificate-Manager-GUID-based-instanceID</b></td>
       <td>The GUID-based ID for your instance of {{site.data.keyword.cloudcerts_short}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
     </tr>
     <tr>
-      <td><code>Cloud-Internet-Services-GUID-based-instanceID</code></td>
+      <td><b>Cloud-Internet-Services-GUID-based-instanceID</b></td>
       <td>The GUID-based ID for your instance of {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
     </tr>
     <tr>
-      <td><code>domainID</code></td>
+      <td><b>domainID</b></td>
       <td>The ID of your domain as it is found in {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI to run <code>ibmcloud cis domains</code>. To manage multiple domains, modify the <code>resources</code> array.</td>
     </tr>
   </table>
@@ -128,18 +128,18 @@ You're now ready to [order a certificate](/docs/services/certificate-manager?top
 
 To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends a TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
 
-A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-notifications-dashboard#setup-callback).
+A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 {: note}
 
 First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
-For more information about setting up domain validation by using a Callback URL notification channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample) using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.
+For more information about setting up domain validation by using a Callback URL notifications channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample){: external} using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.
 {: tip}
 
 #### Responding to a challenge
 {: #responding-to-challenge}
 
-The notification channel receives a notification with the following structure:
+The notifications channel receives a notification with the following structure:
 
 ```javascript
 {
@@ -154,7 +154,7 @@ The notification channel receives a notification with the following structure:
         "txt_record_name": "<TXT_REC_NAME>", // TXT record name - usually used with conjunction with the domain.
         "txt_record_val": "<TXT_REC_VALUE>" // TXT record value
     },
-    "version": "<CHANNEL_VERSION>" // notification channel version that supports order related notifications - 4 and greater
+    "version": "<CHANNEL_VERSION>" // notifications channel version that supports order related notifications - 4 and greater
 }
 ```
 {: screen}
@@ -208,4 +208,4 @@ To renew a certificate, complete the following steps:
 You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 {: note}
 
-Your renewal is placed in a **Renew pending** state. Once the domain validation challenge completes  and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notification channels.
+Your renewal is placed in a **Renew pending** state. Once the domain validation challenge completes  and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channels.

@@ -12,6 +12,7 @@ Certificate Manager
     {: .topicgroup}
     About
         about.md
+        key-concepts.md
         integrations.md
         ha-dr.md
     

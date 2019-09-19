@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-09-15"
 
 keywords: certificates, SSL,
 
@@ -54,6 +54,8 @@ Import your certificates so that you can manage them.
 
 * Create a valid, unexpired certificate with a matching private key (key is optional).
 * Convert the files into Privacy-enhanced Electronic Mail (PEM) format.
+* The certificate must be a X.509 compliant certificate.
+* The `Subject` field in the certificate must not be empty.
 * Keep the private key unencrypted to ensure that it can be imported.
 
 To import a certificate, click **Import Certificate** and provide the following details:

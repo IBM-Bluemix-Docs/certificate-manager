@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2019
 lastupdated: "2019-09-19"
 
-keywords: certificates, SSL, life cycle, certificate, cert,
+keywords: certificates, SSL, lifecycle, certificate, cert,
 
 subcollection: certificate-manager
 
@@ -29,19 +29,19 @@ Learn about the concepts that are associate with certificates and how {{site.dat
 {: shortdesc}
 
 
-## Certificate life cycle
+## Certificate lifecycle
 {: #life-cycle}
 
-Check out the following image and descriptions to see how {{site.data.keyword.cloudcerts_short}} can help you manage the life cycle of your certificates.
+Check out the following image and descriptions to see how {{site.data.keyword.cloudcerts_short}} can help you manage the lifecycle of your certificates.
 
-![How {{site.data.keyword.cloudcerts_short}} helps you to manage the certificate life cycle.](images/cert-lifecycle.png){: caption="Figure 1. How {{site.data.keyword.cloudcerts_short}} helps you to manage the life cycle of your certificates" caption-side="bottom"}
+![How {{site.data.keyword.cloudcerts_short}} helps you to manage the certificate lifecycle.](images/cert-lifecycle.png){: caption="Figure 1. How {{site.data.keyword.cloudcerts_short}} helps you to manage the lifecycle of your certificates" caption-side="bottom"}
 
 
 <dl>
   <dt>Order</dt>
     <dd>With {{site.data.keyword.cloudcerts_short}}, you can order free SSL and TLS certificates through Let's Encrypt. If you already have a certificate authority that you prefer, you can bring your own certificate to the service.</dd>
   <dt>Store</dt>
-    <dd>When you order a certificate through {{site.data.keyword.cloudcerts_short}}, it is automatically stored for you. If you bring your own certificate, you can easily import it into the service. You can track both internal and external certificates in one place. You can also securely store both your certifcates and keys.</dd>
+    <dd>When you order a certificate through {{site.data.keyword.cloudcerts_short}}, it is automatically stored for you. If you bring your own certificate, you can easily import it into the service. You can track both internal and external certificates in one place. You can also securely store both your certificates and keys.</dd>
   <dt>Deploy</dt>
     <dd>When you need to use your certificate, you can automate the deployment to SSL or TLS termination points by integrating {{site.data.keyword.cloudcerts_short}} with  DevOps processes in cloud native environments. You can also use the <a href="/docs/services/containers?topic=containers-getting-started">IBM Cloud Kubernetes Service</a>. CLI to easily deploy certificates from {{site.data.keyword.cloudcerts_short}}.</dd>
   <dt>Monitor and Alert</dt>
@@ -67,4 +67,4 @@ Check out the following image and descriptions to see how {{site.data.keyword.cl
 
 * [How to validate a domain by using a Callback URL and a Cloud Function action)](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}
 
-   Learn how to validate your domain ownership when ordering certificates.
+   Learn how to validate your domain ownership when you order certificates.

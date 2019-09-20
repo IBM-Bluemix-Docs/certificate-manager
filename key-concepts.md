@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-19"
+lastupdated: "2019-09-20"
 
-keywords: certificates, SSL, lifecycle, certificate, cert,
+keywords: certificates, SSL, TLS, lifecycle, certificate, cert, 
 
 subcollection: certificate-manager
 
@@ -39,11 +39,11 @@ Check out the following image and descriptions to see how {{site.data.keyword.cl
 
 <dl>
   <dt>Order</dt>
-    <dd>With {{site.data.keyword.cloudcerts_short}}, you can order free SSL and TLS certificates through Let's Encrypt. If you already have a certificate authority that you prefer, you can bring your own certificate to the service.</dd>
+    <dd>With {{site.data.keyword.cloudcerts_short}}, you can order free TLS (SSL) certificates through Let's Encrypt. If you already have a certificate authority that you prefer, you can bring your own certificate to the service.</dd>
   <dt>Store</dt>
-    <dd>When you order a certificate through {{site.data.keyword.cloudcerts_short}}, it is automatically stored for you. If you bring your own certificate, you can easily import it into the service. You can track both internal and external certificates in one place. You can also securely store both your certificates and keys.</dd>
+    <dd>When you order a certificate through {{site.data.keyword.cloudcerts_short}}, it is automatically stored for you. If you bring your own certificate, you can easily import it into the service. You can also securely store the private key of a certificate alongside it.</dd>
   <dt>Deploy</dt>
-    <dd>When you need to use your certificate, you can automate the deployment to SSL or TLS termination points by integrating {{site.data.keyword.cloudcerts_short}} with  DevOps processes in cloud native environments. You can also use the <a href="/docs/services/containers?topic=containers-getting-started">IBM Cloud Kubernetes Service</a>. CLI to easily deploy certificates from {{site.data.keyword.cloudcerts_short}}.</dd>
+    <dd>When you need to use your certificate, you can automate the deployment to TLS (SSL) termination points by integrating {{site.data.keyword.cloudcerts_short}} with DevOps processes. You can also use the <a href="/docs/services/containers?topic=containers-getting-started">IBM Cloud Kubernetes Service</a> CLI to easily deploy certificates from {{site.data.keyword.cloudcerts_short}}.</dd>
   <dt>Monitor and Alert</dt>
     <dd>The service continuously monitors your certificates for their expiration dates to notify you of upcoming expiring certificates and other lifecycle events such as reimports, orders, or renews through Slack or Callback URLs. If you have alerts that come from more than one service, it can be helpful to integrate with <a href="/docs/services/security-advisor?topic=security-advisor-getting-started">IBM Cloud Security Advisor</a> to manage all of your alerts in one place.</dd>
   <dt>Renew</dt>

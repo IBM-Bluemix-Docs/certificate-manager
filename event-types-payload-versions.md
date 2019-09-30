@@ -22,13 +22,19 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:download: .download}
 
-# Notification event types and payload versions
-{: event-types-payloa-versions}
+# Available event types
+{: event-types-payload-versions}
 
-The following tables list the various available notification event types, and the payload changes in each channel version.
+When you're working with Certificate Manager, you can configure notifications that alert you to common lifecycle management activities. Notifications are devlivered through channels that you configure. The type of event and payload that is delivered might be different depending on the version of the channel that you're using.
+{: shortdesc}
+
+
 
 ## Notification event types
 {: notification-event-types}
+
+Check out the following table to see which event types are available for each channel version.
+{: shortdesc}
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
@@ -43,42 +49,43 @@ The following tables list the various available notification event types, and th
 | Issued certificate expired | cert_expired_renew_required | v4 or higher |    v3 or higher |
 | Certificate domain validation required | cert_domain_validation_required | v4 or higher |    N/A |
 | Certificate domain validation completed | cert_domain_validation_completed | v4 or higher    | N/A | 
-
-## Notification channel versions
-{: notification-channel-versions}
+{: caption="Table 1. Notification event types and the version on which they're available" caption-side="top"}
 
 Newly created notification channels are always created with the latest version release.
 {: tip}
 
-### Slack channel versions
+
+## Slack channel versions
 {: slack-channel-versions}
 
-#### Version 3 (May 6th, 2019)
-* Added new event types:
-   * Ordered certificate issued
-   * Ordered certificate renewed
-   * Certificate order failed
-   * Issued certificate about to expire
-   * Issued certificate expired
+When new capabilities are available to the Slack notifications channel, the version number increases.
 
-#### Version 2 (December 2nd, 2018)
-* Added new notification for reimported certificates.
+<dl>
+   <dt>Version 3</dt>
+      <dd>New event types:<ul><li>Ordered certificate issued</li> <li>Ordered certificate renewed</li> <li>Certificate order failed</li> <li>Issued certificate about to expire</li> <li>Issued certificate expired</li></ul>Version 2</dd>
+   <dt>Version 2</dt>
+      <dd>New notification for reimported certificates.</dd>
+   <dt>Version 1</dt>
+      <dd>Notifications are sent only for expiring certificates.</dd>
+</dl>
 
-#### Version 1
-* Notifications are sent only for expiring certificates.
 
-### Callback URL payload versions
+
+## Callback URL payload versions
 {: callback-url-payload-versions}
 
-#### Version 4 (May 6th, 2019)
+
+
+### Version 4 (May 6th, 2019)
 * Added new event types:
-   * **cert_issued**
-   * **cert_renewed**
-   * **cert_order_failed**
-   * **cert_renew_failed**
-   * **cert_about_to_expire_renew_required**
-   * **cert_expired_renew_required**
-* Field `expiry_date` exists only in messages with event type **cert_about_to_expire_reimport_required** or **cert_about_to_expire_renew_required** and doesn't exist in messages with other event types.    
+   * cert_issued
+   * cert_renewed
+   * cert_order_failed
+   * cert_renew_failed
+   * cert_about_to_expire_renew_required
+   * cert_expired_renew_required
+
+* Field `expiry_date` exists only in messages with event type `cert_about_to_expire_reimport_required` or `cert_about_to_expire_renew_required` and doesn't exist in messages with other event types.    
 
 Payload structure (no change from v3):       
 ```

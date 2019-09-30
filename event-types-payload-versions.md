@@ -56,6 +56,8 @@ Newly created notification channels are always created with the latest version r
 ## Slack channel versions
 {: #slack-channel-versions}
 
+For more information about the differences between the versions, see the following updates.
+
 <dl>
    <dt>Version 3</dt>
       <dd>New event types:<ul><li>Ordered certificate issued</li> <li>Ordered certificate renewed</li> <li>Certificate order failed</li> <li>Issued certificate about to expire</li> <li>Issued certificate expired</li></ul></dd>
@@ -68,12 +70,13 @@ Newly created notification channels are always created with the latest version r
 ## Callback URL payload versions
 {: #callback-url-payload-versions}
 
-<<<<<<< HEAD
+For more information about the differences between the versions, see the following updates.
+
 <dl>
    <dt>Version 4</dt>
       <dd>New event types:<ul><li><code>cert_issued</code></li> <li><code>cert_renewed</code></li> <li><code>cert_renew_failed</code></li> <li><code>cert_about_to_expire_renew_required</code></li> <li><code>cert_expired_renew_required</code></li></ul></dd>
-      <dd>The <code>expiry_date</code> field is present in event types <code>cert_about_to_expire_reimport_required</code> and <code>cert_about_to_expire_renew_required</code>. The payload structure remains the same as version 3.</dd>
-      <dd>Added notifications for the new event types, <code>cert_domain_validation_required</code><code>cert_domain_validation_completed</code>, which updated the payload structure. New payload structure: <pre><codeblock> {
+      <dd>The <code>expiry_date</code> field is present in event types <code>cert_about_to_expire_reimport_required</code> and <code>cert_about_to_expire_renew_required</code>. The payload structure remains the same as version 3.</dd><br>
+      <dd>Added notifications for the new event types, <code>cert_domain_validation_required</code><code>cert_domain_validation_completed</code>, which updated the payload structure. New payload structure: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",
          "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
          "event_type": "<EVENT_TYPE>",
@@ -88,129 +91,58 @@ Newly created notification channels are always created with the latest version r
             "txt_record_val": "<TXT_RECORD_VALUE>"
          }
       }
-   </codeblock></pre></dd>
+   </code></pre></dd>
+
    <dt>Version 3</dt>
-      <dd>New notification for reimported certificates.</dd>
+      <dd>The <code>expiry_date</code> field is present in event type <code>cert_about_to_expire_reimport_required</code>.</dd>
+      <dd>The field <code>expires_on</code> is added to each certificate in an array. For example: <pre class="screen"><code> {
+         "instance_crn": "<INSTANCE_CRN>",
+         "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
+         "event_type": "<EVENT_TYPE>",
+         "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
+         "certificates":[
+               {
+                  "cert_crn":"<CERTIFICATE_CRN>",
+                  "name":"<CERTIFICATE_NAME>",
+                  "domains":"<CERTIFICATE_DOMAIN>",
+                  "expires_on": <EXPIRY_DAY_TIMESTAMP>,
+               },
+               ...
+         ]     
+      }
+   </code></pre>
    <dt>Version 2</dt>
-      <dd>Notifications are sent only for expiring certificates.</dd>
+      <dd>A new notificate for reimported certificates.</dd><br>
+      <dd>The field name <code>certificates</code> is changed to <code>expiring_certificates</code>.</dd><br>
+      <dd>The field name <code>event_type</code> is new. Possible options include: <ul><li><code>cert_about_to_expire_reimport_required</code></li> <li><code>cert_expired_reimport_required</code></li> <li><code>cert_reimported</code></li></ul></dd> The updated payload would look similar to the following example: <pre class="screen"><code> {
+         "instance_crn": "<INSTANCE_CRN>",
+         "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
+         "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
+         "event_type": "<EVENT_TYPE>",
+         "certificates":[
+               {
+                  "cert_crn":"<CERTIFICATE_CRN>",
+                  "name":"<CERTIFICATE_NAME>",
+                  "domains":"<CERTIFICATE_DOMAIN>"
+               },
+               ...
+         ]      
+      }
+   </code></pre>
    <dt>Version 1</dt>
-      <dd>Notifications are sent only for expiring certificates.</dd>
+      <dd>Your notification is returned as a payload. For example: <pre class="screen"><code> {
+         "instance_crn": "<INSTANCE_CRN>",
+         "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
+         "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
+         "expiring_certificates":[
+               {
+                  "cert_crn":"<CERTIFICATE_CRN>",
+                  "name":"<CERTIFICATE_NAME>",
+                  "domains":"<CERTIFICATE_DOMAIN>"
+               },
+               ...
+         ]     
+      }
+   </code></pre></dd>
 </dl>
 
-
-### Version 4 (May 6th, 2019)
-* Added new event types:
-   * cert_issued
-   * cert_renewed
-   * cert_order_failed
-   * cert_renew_failed
-   * cert_about_to_expire_renew_required
-   * cert_expired_renew_required
-
-* Field `expiry_date` exists only in messages with event type `cert_about_to_expire_reimport_required` or `cert_about_to_expire_renew_required` and doesn't exist in messages with other event types.    
-
-Payload structure (no change from v3):       
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "event_type": "<EVENT_TYPE>",
-
-    // event data
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>",
-             "expires_on": <EXPIRY_DAY_TIMESTAMP>,
-          },
-          ...
-     ]     
-}
-```
-
-
-
- New payload structure:  
- ```
- {
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "event_type": "<EVENT_TYPE>",
-
-    //event data
-    "userToken": "<TOKEN_OF_USER_ORDERED_CERTIFICATE>",
-    "certificateCRN": "<CERTIFICATE_CRN>",
-    "domain_validation_method": "<DOMAIN_VALIDATION_TYPE>", // dns-01
-    "domain": "<DOMAIN_TO_VALIDATE>",
-    "challenge": {
-        "txt_record_name": "<TXT_RECORD_NAME>" ,
-        "txt_record_val": "<TXT_RECORD_VALUE>"
-    }
- }   
- ```
-
-### Version 3
-* Field `expiry_date` exists only in messages with event type **cert_about_to_expire_reimport_required** and doesn't exist in  messages with other event types.
-* Field `expires_on` was added to each certificate in array.
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "event_type": "<EVENT_TYPE>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>",
-             "expires_on": <EXPIRY_DAY_TIMESTAMP>,
-          },
-          ...
-     ]     
-}
-```
-
-### Version 2
-* New notification for reimported certificates.
-* Field name was changed from `expiring_certificates` to `certificates`.  
-* New field `event_type` was added. Possible values:
-  * **cert_about_to_expire_reimport_required** - for certificates that are about to expire in 1,10,30,60,90 days
-  * **cert_expired_reimport_required** - for certificates that expired today or earlier
-  * **cert_reimported** - for certificates that were reimported
-
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "event_type": "<EVENT_TYPE>",
-    "certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-    ]      
-}
-```
-
-#### Version 1  
-```
-{
-    "instance_crn": "<INSTANCE_CRN>",
-    "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
-    "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
-    "expiring_certificates":[
-          {
-             "cert_crn":"<CERTIFICATE_CRN>",
-             "name":"<CERTIFICATE_NAME>",
-             "domains":"<CERTIFICATE_DOMAIN>"
-          },
-          ...
-     ]     
-}
-```

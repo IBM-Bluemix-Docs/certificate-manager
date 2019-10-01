@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-17"
+lastupdated: "2019-10-01"
 
 keywords: certificates, SSL, dns,
 
@@ -58,7 +58,7 @@ A Certificate Authority (CA) is an entity that issues digital certificates. The 
 ## Setting up certificate ordering
 {: #setup}
 
-Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you list in your request. To do so,{{site.data.keyword.cloudcerts_short}} uses DNS validation.
+Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you list in your request. To do so, {{site.data.keyword.cloudcerts_short}} uses DNS validation.
 {: shortdesc}
 
 {{site.data.keyword.cloudcerts_short}} sends a challenge in the form of a Domain Name System (DNS) TXT record for you to add in your DNS service. For each domain that you request in your certificate, you get a separate DNS TXT record. After you add the DNS TXT record, {{site.data.keyword.cloudcerts_short}} and Let’s Encrypt check whether it's in your DNS service. If you successfully complete the challenge, you are issued a Let’s Encrypt certificate that is available in your {{site.data.keyword.cloudcerts_short}} instance.
@@ -177,7 +177,7 @@ To order a certificate, complete the following steps:
    2. Provide a certificate name and optionally a description
    3. Select a Certificate Authority
    4. Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
-   5. Select the certificate type you need
+   5. Select the certificate type that you need
    6. Select the domain
    7. Select the appropriate algorithm and key algorithm
    8. Click **Order**
@@ -189,7 +189,7 @@ To order a certificate, complete the following steps:
    5. Select the appropriate algorithm and key algorithm
    6. Click **Order**
 
-Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain, you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
+Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 
 ## Renewing certificates
 {: #renew-certificate}

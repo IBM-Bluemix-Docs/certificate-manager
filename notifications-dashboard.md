@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-30"
+lastupdated: "2019-10-01"
 
 keywords: certificates, SSL, notifications, Slack, Callback URL
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Configuring notifications
 {: #configuring-notifications}
 
-{{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, you can set up a notification channel. You can specify either a Slack Webhook, a Callback URL, or any combination of the two.
+{{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, set up a Slack or Callback URL notification channel, or both.
 {: shortdesc}
 
 ## Notifications to monitor certificate expiration
@@ -43,7 +43,7 @@ Notifications about reimported certificates are sent only to channels from [chan
 
 Depending on the expiration date of the certificate, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
 
-You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.
+You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate, you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.
 
 Notifications for expiring certificates are sent based on the timezone used to check whether a certificate has expired, which is UTC at midnight.
 {: note}
@@ -74,7 +74,7 @@ If you are already a member of a Slack workspace, skip to step 2.
 ## Setting up a Callback URL endpoint
 {: #setup-callback}
 
-A Callback URL endpoint can be used for a variety of tasks. For example, to send notifications to report about expiring notifications to PagerDuty, automatically open up an ticket in GitHub or elsewhere, or validate domain ownership before ordering or renewing certificates. You can also automatically trigger deployment of certificates in response to notifications when certificates are reimported or renewed successfully.
+A Callback URL endpoint can be used for various tasks. For example, to send notifications to report about expiring notifications to PagerDuty, automatically open up a ticket in GitHub or elsewhere, or validate domain ownership before ordering or renewing certificates. You can also automatically trigger deployment of certificates in response to notifications when certificates are reimported or renewed successfully.
 {: shortdesc}
 
 You can find sample implementations in the [Examples section below](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
@@ -104,10 +104,10 @@ After you decode and verify the payload, the content is a JSON string [according
 ## Configuring a notification channel
 {: #adding-channel}
 
-After you create a Slack Webhook or a Callback URL endpoint, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, renwed certificates, and challenges for domain validation.
+After you create a Slack Webhook or a Callback URL endpoint, you can add it to {{site.data.keyword.cloudcerts_short}} to start receiving notifications about expiring certificates, reimported certificates, issued certificates, renewed certificates, and challenges for domain validation.
 {: shortdesc}
 
-{{site.data.keyword.cloudcerts_short}} will encrypt the endpoints that you configure to store them securely.
+{{site.data.keyword.cloudcerts_short}} encrypts the endpoints that you configure to store them securely.
 {: important}
 
 To add a notification channel, complete the following steps:
@@ -139,7 +139,7 @@ To add a notification channel, complete the following steps:
    </tr>
     <tr>
       <td>Dots menu</td>
-      <td>Available actions that you can perform on the channel: <i>edit</i>, <i>test</i> or <i>delete</i></td>
+      <td>Available actions that you can perform on the channel: <i>edit</i>, <i>test</i>, or <i>delete</i></td>
     </tr>
     </tbody>
     </table>
@@ -149,7 +149,7 @@ To add a notification channel, complete the following steps:
 
 7. Optional: Repeat these steps to add more channels.
 
-You can implement a Callback URL to handle a variety of tasks, or create several Callback URL, each handling a different task.
+You can implement a Callback URL to handle a variety of tasks, or create several Callback URLs, each handling a different task.
 {: tip}
 
 ## Testing a notification channel
@@ -202,12 +202,12 @@ As {{site.data.keyword.cloudcerts_short}} evolves, we might modify the format of
 
 If you have existing notification channels (Slack or Callback URL), to start getting the new version of the payload:
 
-1. For Callback URL, make sure your implementation can accept the new payload.
+1. For Callback URL, make sure that your implementation can accept the new payload.
 2. Create a new notification channel (new channels are always created with the latest channel version).
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 
-For channel versions see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-notification-event-types-and-payload-versions).
+For channel versions see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-event-types-and-payload-versions).
 
 ## Examples
 {: #examples}

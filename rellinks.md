@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-07-30"
+lastupdated: "2019-10-01"
 
 keywords: certificates, SSL,
 
@@ -47,5 +47,6 @@ You can use the following related links to learn more about and interact with {{
 {{site.data.keyword.IBM_notm}} tutorials that feature {{site.data.keyword.cloudcerts_long_notm}}.  
 {: #shortdesc}
 
-* <a href="/docs/tutorials?topic=solution-tutorials-cloud-e2e-security#apply-end-to-end-security-to-a-cloud-application" target="_blank">Apply end to end security to a cloud application <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
-* <a href="/docs/tutorials?topic=solution-tutorials-multi-region-serverless#deploy-serverless-apps-across-multiple-locations" target="_blank">Deploy serverless apps across multiple locations <img src="../../icons/launch-glyph.svg" alt="External link icon"></a>
+* [Deploy serverless apps across multiple regions](/docs/infrastructure/cis?topic=solution-tutorials-multi-region-serverless){: external}
+* [Deploy isolated workloads across multiple locations and zones](/docs/vpc-on-classic?topic=solution-tutorials-vpc-multi-region){: external}
+* [Apply end to end security to a cloud application](/docs/tutorials?topic=solution-tutorials-cloud-e2e-security){: external}

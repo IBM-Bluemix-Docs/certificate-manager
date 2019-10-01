@@ -64,7 +64,7 @@ For more information about the differences between the Slack channel versions, s
 
    <dt>Version 2</dt>
       <dd>New notification for reimported certificates.</dd>
-      
+
    <dt>Version 1</dt>
       <dd>Notifications are sent only for expiring certificates.</dd>
 </dl>
@@ -76,7 +76,7 @@ For more information about the differences between the Callback URL payload vers
 
 <dl>
    <dt>Version 4</dt>
-      <dd>New event types:<ul><li><code>cert_issued</code></li> <li><code>cert_renewed</code></li> <li><code>cert_renew_failed</code></li> <li><code>cert_about_to_expire_renew_required</code></li> <li><code>cert_expired_renew_required</code></li></ul></dd>
+      <dd>New event types:<ul><li><code>cert_issued</code></li> <li><code>cert_renewed</code></li> <li><code>cert_renew_failed</code></li> <li><code>cert_about_to_expire_renew_required</code></li> <li><code>cert_expired_renew_required</code></li></ul></dd><br>
       <dd>The <code>expiry_date</code> field is present in event types <code>cert_about_to_expire_reimport_required</code> and <code>cert_about_to_expire_renew_required</code>. The payload structure remains the same as version 3.</dd><br>
       <dd>Added notifications for the new event types <code>cert_domain_validation_required</code> and <code>cert_domain_validation_completed</code>, which updated the payload structure. New payload structure: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",
@@ -117,7 +117,7 @@ For more information about the differences between the Callback URL payload vers
    <dt>Version 2</dt>
       <dd>A new notification for reimported certificates.</dd><br>
       <dd>The field name <code>certificates</code> is changed to <code>expiring_certificates</code>.</dd><br>
-      <dd>The field name <code>event_type</code> is new. Possible options include: <ul><li><code>cert_about_to_expire_reimport_required</code></li> <li><code>cert_expired_reimport_required</code></li> <li><code>cert_reimported</code></li></ul>The updated payload would look similar to the following example: <pre class="screen"><code> {
+      <dd>The field name <code>event_type</code> is new. Possible options include: <ul><li><code>cert_about_to_expire_reimport_required</code></li> <li><code>cert_expired_reimport_required</code></li> <li><code>cert_reimported</code></li></ul><br>The updated payload looks similar to the following example: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",
          "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
          "expiry_date": <EXPIRY_DAY_TIMESTAMP>,

@@ -72,7 +72,7 @@ For more information about the differences between the Slack channel versions, s
 ## Callback URL payload versions
 {: #callback-url-payload-versions}
 
-For more information about the differences between the callback URL payload versions, see the following updates.
+For more information about the differences between the Callback URL payload versions, see the following updates.
 
 <dl>
    <dt>Version 4</dt>

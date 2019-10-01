@@ -56,13 +56,15 @@ Newly created notification channels are always created with the latest version r
 ## Slack channel versions
 {: #slack-channel-versions}
 
-For more information about the differences between the versions, see the following updates.
+For more information about the differences between the Slack channel versions, see the following updates.
 
 <dl>
    <dt>Version 3</dt>
       <dd>New event types:<ul><li>Ordered certificate issued</li> <li>Ordered certificate renewed</li> <li>Certificate order failed</li> <li>Issued certificate about to expire</li> <li>Issued certificate expired</li></ul></dd>
+
    <dt>Version 2</dt>
       <dd>New notification for reimported certificates.</dd>
+      
    <dt>Version 1</dt>
       <dd>Notifications are sent only for expiring certificates.</dd>
 </dl>
@@ -70,7 +72,7 @@ For more information about the differences between the versions, see the followi
 ## Callback URL payload versions
 {: #callback-url-payload-versions}
 
-For more information about the differences between the versions, see the following updates.
+For more information about the differences between the callback URL payload versions, see the following updates.
 
 <dl>
    <dt>Version 4</dt>
@@ -94,7 +96,7 @@ For more information about the differences between the versions, see the followi
    </code></pre></dd>
 
    <dt>Version 3</dt>
-      <dd>The <code>expiry_date</code> field is present in event type <code>cert_about_to_expire_reimport_required</code>.</dd>
+      <dd>The <code>expiry_date</code> field is present in event type <code>cert_about_to_expire_reimport_required</code>.</dd><br>
       <dd>The field <code>expires_on</code> is added to each certificate in an array. For example: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",
          "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
@@ -110,11 +112,12 @@ For more information about the differences between the versions, see the followi
                ...
          ]     
       }
-   </code></pre>
+   </code></pre></dd>
+
    <dt>Version 2</dt>
       <dd>A new notification for reimported certificates.</dd><br>
       <dd>The field name <code>certificates</code> is changed to <code>expiring_certificates</code>.</dd><br>
-      <dd>The field name <code>event_type</code> is new. Possible options include: <ul><li><code>cert_about_to_expire_reimport_required</code></li> <li><code>cert_expired_reimport_required</code></li> <li><code>cert_reimported</code></li></ul></dd> The updated payload would look similar to the following example: <pre class="screen"><code> {
+      <dd>The field name <code>event_type</code> is new. Possible options include: <ul><li><code>cert_about_to_expire_reimport_required</code></li> <li><code>cert_expired_reimport_required</code></li> <li><code>cert_reimported</code></li></ul>The updated payload would look similar to the following example: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",
          "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
          "expiry_date": <EXPIRY_DAY_TIMESTAMP>,
@@ -128,7 +131,8 @@ For more information about the differences between the versions, see the followi
                ...
          ]      
       }
-   </code></pre>
+   </code></pre></dd>
+
    <dt>Version 1</dt>
       <dd>Your notification is returned as a payload. For example: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",

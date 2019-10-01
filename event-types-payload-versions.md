@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-30"
+lastupdated: "2019-10-01"
 
 keywords: certificates, SSL,
 
@@ -76,7 +76,7 @@ For more information about the differences between the versions, see the followi
    <dt>Version 4</dt>
       <dd>New event types:<ul><li><code>cert_issued</code></li> <li><code>cert_renewed</code></li> <li><code>cert_renew_failed</code></li> <li><code>cert_about_to_expire_renew_required</code></li> <li><code>cert_expired_renew_required</code></li></ul></dd>
       <dd>The <code>expiry_date</code> field is present in event types <code>cert_about_to_expire_reimport_required</code> and <code>cert_about_to_expire_renew_required</code>. The payload structure remains the same as version 3.</dd><br>
-      <dd>Added notifications for the new event types, <code>cert_domain_validation_required</code><code>cert_domain_validation_completed</code>, which updated the payload structure. New payload structure: <pre class="screen"><code> {
+      <dd>Added notifications for the new event types <code>cert_domain_validation_required</code> and <code>cert_domain_validation_completed</code>, which updated the payload structure. New payload structure: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",
          "certificate_manager_url":"<INSTANCE_DASHBOARD_URL>",
          "event_type": "<EVENT_TYPE>",
@@ -112,7 +112,7 @@ For more information about the differences between the versions, see the followi
       }
    </code></pre>
    <dt>Version 2</dt>
-      <dd>A new notificate for reimported certificates.</dd><br>
+      <dd>A new notification for reimported certificates.</dd><br>
       <dd>The field name <code>certificates</code> is changed to <code>expiring_certificates</code>.</dd><br>
       <dd>The field name <code>event_type</code> is new. Possible options include: <ul><li><code>cert_about_to_expire_reimport_required</code></li> <li><code>cert_expired_reimport_required</code></li> <li><code>cert_reimported</code></li></ul></dd> The updated payload would look similar to the following example: <pre class="screen"><code> {
          "instance_crn": "<INSTANCE_CRN>",

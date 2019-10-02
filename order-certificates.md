@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-10-02"
 
 keywords: certificates, SSL, dns,
 
@@ -44,8 +44,13 @@ When you order certificates through {{site.data.keyword.cloudcerts_short}}:
 
 Domain validation includes the verification that you own the domain for which you are requesting a certificate. If you need Extended Validation (EV) or Organization Validated (OV) certificates, you can obtain them elsewhere and import them to {{site.data.keyword.cloudcerts_short}} to manage their lifecycle.
 
+## Certificate ordering limitations
+{: certificate-ordering-limitations}
 
-## Supported Certificate Authorities
+* You cannot order a SAN certificate with a wildcard domain.
+* To order a certificate with SAN entries for your domain and all sub-domains, you must first make sure to have your domain and all sub-domains registered.
+
+# Supported Certificate Authorities
 {: #supported-certificate-authorities}
 
 A Certificate Authority (CA) is an entity that issues digital certificates. The CA acts as a trusted third party for both the requester of the certificate and the client that relies on the certificate.

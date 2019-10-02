@@ -45,7 +45,7 @@ When you order certificates through {{site.data.keyword.cloudcerts_short}}:
 Domain validation includes the verification that you own the domain for which you are requesting a certificate. If you need Extended Validation (EV) or Organization Validated (OV) certificates, you can obtain them elsewhere and import them to {{site.data.keyword.cloudcerts_short}} to manage their lifecycle.
 
 ## Certificate ordering limitations
-{: certificate-ordering-limitations}
+{: #certificate-ordering-limitations}
 
 * You cannot order a SAN certificate with a wildcard domain.
 * To order a certificate with SAN entries for your domain and all sub-domains, you must first make sure to have your domain and all sub-domains registered.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-10-02"
 
 keywords: certificates, SSL, notifications, Slack, Callback URL
 
@@ -207,7 +207,7 @@ If you have existing notification channels (Slack or Callback URL), to start get
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 
-For channel versions see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-event-types-and-payload-versions).
+For channel versions see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-event-types-payload-versions).
 
 ## Examples
 {: #examples}

@@ -24,12 +24,10 @@ Certificate Manager
     managing-certificates.md
     order-certificates.md
     notifications-dashboard.md
-    
     access-management.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    
     [API documentation](https://cloud.ibm.com/apidocs/certificate-manager)
     event-types-payload-versions.md
     limits.md

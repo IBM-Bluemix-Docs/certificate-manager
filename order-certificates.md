@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-02"
+lastupdated: "2019-10-04"
 
 keywords: certificates, SSL, dns,
 
@@ -108,7 +108,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
       <td>A valid IAM token. You can find the value by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud iam oauth-tokens</code>.</td>
     </tr>
     <tr>
-      <td><b>accountID</b></td>
+      <td><b>account ID</b></td>
       <td>The ID for the account where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances exist. You can find the value by navigating to <b>{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings</b> or by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud account show</code>.</td>
     </tr>
     <tr>
@@ -120,7 +120,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
       <td>The GUID-based ID for your instance of {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
     </tr>
     <tr>
-      <td><b>domainID</b></td>
+      <td><b>domain ID</b></td>
       <td>The ID of your domain as it is found in {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI to run <code>ibmcloud cis domains</code>. To manage multiple domains, modify the <code>resources</code> array.</td>
     </tr>
   </table>

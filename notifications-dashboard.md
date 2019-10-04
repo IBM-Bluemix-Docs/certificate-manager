@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-02"
+lastupdated: "2019-10-04"
 
 keywords: certificates, SSL, notifications, Slack, Callback URL
 
@@ -120,29 +120,27 @@ To add a notification channel, complete the following steps:
 
    <table>
    <caption>Table 1. Information about the notification channel </caption>
-   <thead>
-    <th> Component </th>
-    <th> Description </th>
-   </thead>
-   <tbody>
-   <tr>
-    <td>Type</td>
-    <td>Notification channel type: <i>Slack</i> or <i>Callback URL</i></td>
-   </tr>
-   <tr>
-    <td>Endpoint</td>
-    <td>The notification channel endpoint where the notifications are sent to.</td>
-   </tr>
-   <tr>
-    <td>Enablement toggle</td>
-    <td>The notification channel state. If set to disabled, no notifications are sent.</td>
-   </tr>
-    <tr>
-      <td>Dots menu</td>
-      <td>Available actions that you can perform on the channel: <i>edit</i>, <i>test</i>, or <i>delete</i></td>
-    </tr>
-    </tbody>
-    </table>
+      <tr>
+         <th> Component </th>
+         <th> Description </th>
+      </tr>
+      <tr>
+         <td>Type</td>
+         <td>Notification channel type: <i>Slack</i> or <i>Callback URL</i></td>
+      </tr>
+      <tr>
+         <td>Endpoint</td>
+         <td>The notification channel endpoint where the notifications are sent to.</td>
+      </tr>
+      <tr>
+         <td>Enablement toggle</td>
+         <td>The notification channel state. If set to disabled, no notifications are sent.</td>
+      </tr>
+      <tr>
+         <td>Dots menu</td>
+         <td>Available actions that you can perform on the channel: <i>edit</i>, <i>test</i>, or <i>delete</i>.</td>
+      </tr>
+   </table>
 
     When you save a Slack Webhook, {{site.data.keyword.cloudcerts_short}} automatically sends a confirmation notification to the Slack channel that you configured. Check your Slack channel to verify that you received this notification.
     {: tip}

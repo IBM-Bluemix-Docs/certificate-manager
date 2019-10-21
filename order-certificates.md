@@ -2,13 +2,14 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-04"
+lastupdated: "2019-10-21"
 
 keywords: certificates, SSL, dns,
 
 subcollection: certificate-manager
 
 ---
+
 
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
@@ -204,7 +205,6 @@ If your certificate is about to expire, you can request to renew your certificat
 Renewals work similar to certificate ordering. When you request to renew a certificate, {{site.data.keyword.cloudcerts_short}} sends DNS txt challenges to your callback URL, so you can again prove that you own the domains for which you are renewing the certificate.
 
 To renew a certificate, complete the following steps:
-
   1. Click the menu in the row of the certificate you want to renew.
   2. Click **Renew Certificate**.
   3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.

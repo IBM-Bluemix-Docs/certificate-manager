@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-17"
+lastupdated: "2019-10-04"
 
-keywords: certificates, SSL, dns, order, certs, tls, 
+keywords: certificates, SSL, dns,
 
 subcollection: certificate-manager
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Ordering certificates
 {: #ordering-certificates}
 
-You can use {{site.data.keyword.cloudcerts_long}} to order public SSL/TLS certificates for your apps and services that are signed by supported external Certificate Authorities. {{site.data.keyword.cloudcerts_short}} makes it easy for you to order public certificates in addition to providing extra security for your SSL/TLS private keys. After your certificate is issued, you can deploy it to integrated services, or download it to use it elsewhere.  
+You can use {{site.data.keyword.cloudcerts_long}} to order public SSL/TLS certificates for your apps and services that are signed by supported external Certificate Authorities. {{site.data.keyword.cloudcerts_short}} makes it easy for you to order public certificates in addition to extra security for your SSL/TLS private keys. After your certificate is issued, you can deploy it to integrated services, or download it to use it elsewhere.  
 {: shortdesc}
 
 When you order a certificate, your private key for SSL/TLS is generated directly in {{site.data.keyword.cloudcerts_short}} and stored securely. All requests and access to issued certificates can be managed through [access control](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles) and automatically audited by using [{{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events).  
@@ -44,6 +44,11 @@ When you order certificates through {{site.data.keyword.cloudcerts_short}}:
 
 Domain validation includes the verification that you own the domain for which you are requesting a certificate. If you need Extended Validation (EV) or Organization Validated (OV) certificates, you can obtain them elsewhere and import them to {{site.data.keyword.cloudcerts_short}} to manage their lifecycle.
 
+## Certificate ordering limitations
+{: #certificate-ordering-limitations}
+
+* You cannot order a SAN certificate with a wildcard domain.
+* To order a certificate with SAN entries for your domain and all sub-domains, you must first make sure to have your domain and all sub-domains registered.
 
 ## Supported Certificate Authorities
 {: #supported-certificate-authorities}
@@ -58,7 +63,7 @@ A Certificate Authority (CA) is an entity that issues digital certificates. The 
 ## Setting up certificate ordering
 {: #setup}
 
-Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you list in your request. To do so, {{site.data.keyword.cloudcerts_short}} uses DNS validation. Note that certificate ordering is an asynchronous operation.
+Before a certificate can be issued to you, {{site.data.keyword.cloudcerts_short}} must verify that you control all of the domains that you list in your request. To do so, {{site.data.keyword.cloudcerts_short}} uses DNS validation.
 {: shortdesc}
 
 {{site.data.keyword.cloudcerts_short}} sends a challenge in the form of a Domain Name System (DNS) TXT record for you to add in your DNS service. For each domain that you request in your certificate, you get a separate DNS TXT record. After you add the DNS TXT record, {{site.data.keyword.cloudcerts_short}} and Let’s Encrypt check whether it's in your DNS service. If you successfully complete the challenge, you are issued a Let’s Encrypt certificate that is available in your {{site.data.keyword.cloudcerts_short}} instance.
@@ -103,7 +108,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
       <td>A valid IAM token. You can find the value by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud iam oauth-tokens</code>.</td>
     </tr>
     <tr>
-      <td><b>accountID</b></td>
+      <td><b>account ID</b></td>
       <td>The ID for the account where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances exist. You can find the value by navigating to <b>{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings</b> or by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud account show</code>.</td>
     </tr>
     <tr>
@@ -115,7 +120,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
       <td>The GUID-based ID for your instance of {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
     </tr>
     <tr>
-      <td><b>domainID</b></td>
+      <td><b>domain ID</b></td>
       <td>The ID of your domain as it is found in {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI to run <code>ibmcloud cis domains</code>. To manage multiple domains, modify the <code>resources</code> array.</td>
     </tr>
   </table>
@@ -147,6 +152,7 @@ The notifications channel receives a notification with the following structure:
 "certificate_manager_url": "certificate_manager_url",
     "event_type": "cert_domain_validation_required" | "cert_domain_validation_completed", // The first event is for adding the required challenge TXT record and the second is for clearing that same TXT record once the challenge has finished.
     "certificateCRN": "<CERTIFICATE_CRN>", // The ordered certificate CRN
+    "userToken": "<USER_TOKEN>", /// The IAM token holding the identity of user who ordered the certificate
     "domain_validation_method": "dns-01", // Specifies the domain validation method, currently only DNS validation is available.
     "domain": "<ORDERED_DOMAIN>", // The requested domain, a different challenge is sent for each domain in the order (primary and each of the alternative domains).
     "challenge": {
@@ -166,68 +172,46 @@ To see frequently asked questions about ordering certificates, [review the FAQ p
 ## Ordering certificates
 {: #ordering-certificate}
 
-To order a certificate, use the {{site.data.keyword.cloudcerts_short}} dashboard.
+To order a certificate, complete the following steps:
 
 1. Navigate to the Manage tab of the {{site.data.keyword.cloudcerts_short}}.
 2. Click **Order Certificate** 
 3. Select your DNS provider - either {{site.data.keyword.cis_full_notm}}, or another DNS Provider.
 4. If you've selected **{{site.data.keyword.cis_full_notm}}**, provide the following details:
-   1. Complete the required setup instructions.
-   2. Provide a certificate name and optionally a description.
-   3. Select a Certificate Authority.
-   4. Select the {{site.data.keyword.cis_full_notm}} instance for which you assigned a service access role.
-   5. Select the certificate type that you need.
-   6. Select the domain.
-   7. Select the appropriate algorithm and key algorithm.
-   8. Click **Order**.
+   1. Complete the required setup instructions
+   2. Provide a certificate name and optionally a description
+   3. Select a Certificate Authority
+   4. Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
+   5. Select the certificate type that you need
+   6. Select the domain
+   7. Select the appropriate algorithm and key algorithm
+   8. Click **Order**
 5. If you've selected **Another DNS Provider**, provide the following details:
-   1. Complete the required setup instructions.
-   2. Provide a certificate name and optionally a description.
+   1. Complete the required setup instructions
+   2. Provide a certificate name and optionally a description
    3. Select a Certificate Authority.
-   4. Enter the primary domain and any alternative domains.
-   5. Select the appropriate algorithm and key algorithm.
-   6. Click **Order**.
+   4. Enter the primary domain and any alternative domains
+   5. Select the appropriate algorithm and key algorithm
+   6. Click **Order**
 
-Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies you own the requested domain, you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
+Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 
 ## Renewing certificates
 {: #renew-certificate}
 
-When you order certificates from {{site.data.keyword.cloudcerts_short}}, you can choose to enable renewal. Renewels work similar to certificate ordering. When you request that your certificate is reviewed, {{site.data.keyword.cloudcerts_short}} sends a DNS txt challenge to your callback URL, so that you can prove that you still own the domains for which you are attempting to renew certificates.
+If your certificate is about to expire, you can request to renew your certificate through {{site.data.keyword.cloudcerts_short}}. When your certificate is renewed, the previous version of your certificate is retained in case you need it. 
 
-There are a few things to keep in mind:
+Renewals work similar to certificate ordering. When you request to renew a certificate, {{site.data.keyword.cloudcerts_short}} sends DNS txt challenges to your callback URL, so you can again prove that you own the domains for which you are renewing the certificate.
 
-  * When your certificate is renewed, the previous version of your certificate is retained in case you need it.
-  * By default, {{site.data.keyword.cloudcerts_short}} does not automatically renew ordered certificates.
-  * You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
+To renew a certificate, complete the following steps:
 
-When you start the renewal process, your renewal is placed in a **Renew pending** state. When the domain validation challenge completes and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your autorenewed certificate is ready or if there was a problem, in your notification channels.
+  1. Click the menu in the row of the certificate you want to renew.
+  2. Click **Renew Certificate**.
+  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  4. Click **Renew**.
 
-After renewing a certificate either manually or automatically you must deploy it. [Learn how to automate deployments](/docs/services/certificate-manager?topic=certificate-manager-automating-deployments).
-{: important}
 
-### Enabling automatic renewal of certificates 
-{: #enable-autorenew}
-To select a certificate to automatically renew:
+You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
+{: note}
 
-1. While ordering the certificate, set the auto-renewal toggle to **On**.
-2. After ordering a certificate, select **Enable Auto-renewal** from a certificate's side menu.
-
-Auto-renewed certificate will be renewed 30 days before they expire.
-{: tip}
-
-### Disabling automatic renewal of certificates
-{: #disable-autorenew}
-
-To disable a certificate from automatically renewing:
-
-1. Select **Disable Auto-renewal** from a certificate's side menu.
-
-### Manually renewing certificates
-{: #manual-renew}
-
-You can also request to renew your certificate through {{site.data.keyword.cloudcerts_short}} manually.  
-
-1. Select **Renew Certificate** from a certificate's side menu.
-2. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair. When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
-3. Click **Renew**.
+Your renewal is placed in a **Renew pending** state. Once the domain validation challenge completes  and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your renewed certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channels.

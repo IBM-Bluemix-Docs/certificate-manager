@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-10"
+lastupdated: "2019-10-29"
 
-keywords: certificates, SSL, 
+keywords: certificates, SSL, private key security, encryption, TLS, GDPR, HA, DR, high-availability, disaster recovery
 
 subcollection: certificate-manager
 
@@ -34,7 +34,7 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_short}} uses the [envelope encryption methodology](/docs/services/key-protect/concepts?topic=key-protect-envelope-encryption), where a root certificate is stored in, and never leaves, {{site.data.keyword.keymanagementservicelong_notm}}, which is also backed by HSM.
 
-In addition, a per tenant managed encryption key is used to encrypt the certificates and private keys before they are stored to the database. As part of the encryption chain, {{site.data.keyword.cloudcerts_short}} uses the Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key.
+In addition, a per tenant-managed encryption key is used to encrypt the certificates and private keys before they are stored in the database. As part of the encryption chain, {{site.data.keyword.cloudcerts_short}} uses the Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key.
 
 ## HIPAA
 {: #compliance-hippa}
@@ -49,7 +49,8 @@ In addition, a per tenant managed encryption key is used to encrypt the certific
 ## General Data Protection Regulation (GDPR)
 {: #compliance-gdpr}
 
-The GDPR seeks to create a harmonized data protection law framework across the EU and aims to give citizens back the control of their personal data, while imposing strict rules on those hosting and ‘processing’ this data, anywhere in the world. The Regulation also introduces rules relating to the free movement of personal data within and outside the EU. For more information, see the [IBM privacy statement](https://www.ibm.com/privacy/).
+The EU seeks to give their citizens control over their personal data by creating harmonized data protection. To do so, they use a law framework, which is known as the GDPR, to impose strict rules on those who host and process data; regardless of where they're located. The regulation also introduces rules that relate to the free movement of personal data within and outside the EU. For more information, see [IBM privacy statement](https://www.ibm.com/privacy/).
+
 
 ## High availability and disaster recovery
 {: #ha-dr}
@@ -58,4 +59,4 @@ High availability and disaster recovery for {{site.data.keyword.cloudcerts_long}
 {: shortdesc}
 
 * The {{site.data.keyword.cloudcerts_short}} service is a highly available, regional, service. In each supported location, the service exists in multiple availability zones with no single point of failure.
-* Data that is stored in the {{site.data.keyword.cloudcerts_short}} database is backed-up daily. If a recovery of a location is required, the data is available to be restored. Note, however, that {{site.data.keyword.cloudcerts_short}} does not provide cross regional failover. In cases of regional disaster data might not be recoverable. You are advised to create backup instances in alternate regions.
+* Data that is stored in the {{site.data.keyword.cloudcerts_short}} database is backed-up daily. If a recovery of a location is required, the data is available to be restored. However, {{site.data.keyword.cloudcerts_short}} does not provide cross-regional failover. If a regional disaster occurs, data might not be recoverable. It is recommended that you create and maintain backup instances in other regions.

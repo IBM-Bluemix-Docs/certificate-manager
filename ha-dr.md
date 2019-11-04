@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-29"
+lastupdated: "2019-11-04"
 
 keywords: certificates, SSL, private key security, encryption, TLS, GDPR, HA, DR, high-availability, disaster recovery
 
@@ -59,4 +59,25 @@ High availability and disaster recovery for {{site.data.keyword.cloudcerts_long}
 {: shortdesc}
 
 * The {{site.data.keyword.cloudcerts_short}} service is a highly available, regional, service. In each supported location, the service exists in multiple availability zones with no single point of failure.
-* Data that is stored in the {{site.data.keyword.cloudcerts_short}} database is backed-up daily. If a recovery of a location is required, the data is available to be restored. However, {{site.data.keyword.cloudcerts_short}} does not provide cross-regional failover. If a regional disaster occurs, data might not be recoverable. It is recommended that you create and maintain backup instances in other regions.
+* Data that is stored in the {{site.data.keyword.cloudcerts_short}} database is backed-up daily in same region. If a recovery of a location is necessary, the data is available to be restored. However, {{site.data.keyword.cloudcerts_short}} does not provide cross-regional failover. If a regional disaster occurs, data might not be recoverable. It is recommended that you create and maintain backup instances in other regions.
+
+
+### Manually backing up
+{: #manual-backup}
+
+To manually back up your certificates across regions, you must first have an instance of {{site.data.keyword.cloudcerts_short}} in another region. Then, use the following steps to ensure cross-region availability.
+
+1. From the {{site.data.keyword.cloudcerts_short}} service UI, select **All certificates**.
+2. Click **Download**.
+3. Import your downloaded certificates to the newly created instance.
+
+### Automatically backing up
+{: #auto-backup}
+
+Creating an automatic backup of your certificates is possible by automating the manual flow, which can be done in various ways. Check out some of the following examples to see whether one of them might work for you.
+
+* Create a script that periodically downloads all of your certificates and then reimports them into your backup instance.
+* Create a Callback URL notifications channel in {{site.data.keyword.cloudcerts_short}} that points to an IBM Cloud Functions action. Configure the action to listen for certificate lifecycle events such as reimport, order, or renewal. Then, when the action receives the event it downloads the certificate from one instance and imports it to the backup in a continuous fashion.
+
+To learn about the various available certificate lifecycle event types see [Configuring notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications). 
+{: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-21"
+lastupdated: "2019-11-04"
 
 keywords: certificates, SSL, dns,
 
@@ -48,8 +48,9 @@ Domain validation includes the verification that you own the domain for which yo
 ## Certificate ordering limitations
 {: #certificate-ordering-limitations}
 
+* You cannot order a certificate for a domain that cannot resolve the Authoritative Name Server. On Linux or Mac it can be checked using the command: `host -t ns <your_domain>`. On Windows it can be checked using `nslookup`.
+* You cannot order a certificate for a subdomain where only the domain in registered in the DNS.
 * You cannot order a SAN certificate with a wildcard domain.
-* To order a certificate with SAN entries for your domain and all sub-domains, you must first make sure to have your domain and all sub-domains registered.
 
 ## Supported Certificate Authorities
 {: #supported-certificate-authorities}

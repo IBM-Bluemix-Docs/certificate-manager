@@ -4,7 +4,7 @@ copyright:
   years: 2017, 2019
 lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: certificates, ssl, tls, responsabilities, ibm, terms, conditions, managing service roles, regulation compliance, pci, dss, ha, backup, industry standard
 
 subcollection: certificate-manager
 

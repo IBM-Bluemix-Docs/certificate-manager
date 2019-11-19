@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-01"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL, TLS, log analysis,
+keywords: certificates, ssl, tls, logging, activity, monitor app, monitor certificates
 
 subcollection: certificate-manager
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-20"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL, TLS, lifecycle, certificate, cert, 
+keywords: certificates,ssl, tls, lifecycle, certificate, cert, devops process, domain ownership, certificate authority, free certificates, lets encrypt
 
 subcollection: certificate-manager
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
 subcollection: certificate-manager
 

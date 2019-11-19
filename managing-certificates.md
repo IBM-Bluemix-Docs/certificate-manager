@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-22"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
 subcollection: certificate-manager
 

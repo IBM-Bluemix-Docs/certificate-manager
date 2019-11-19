@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-04"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL, dns,
+keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
 subcollection: certificate-manager
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-12"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
 subcollection: certificate-manager
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-10-04"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL, notifications, Slack, Callback URL
+keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
 subcollection: certificate-manager
 

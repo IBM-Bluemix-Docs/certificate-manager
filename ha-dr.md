@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-04"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL, private key security, encryption, TLS, GDPR, HA, DR, high-availability, disaster recovery
+keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
 subcollection: certificate-manager
 

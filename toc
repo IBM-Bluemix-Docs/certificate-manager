@@ -33,6 +33,7 @@ Certificate Manager
     limits.md
     at_events.md
     log_events.md
+    understanding-your-responsibilities.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

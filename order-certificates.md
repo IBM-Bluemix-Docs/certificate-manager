@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-11-21"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -49,7 +49,7 @@ Domain validation includes the verification that you own the domain for which yo
 {: #certificate-ordering-limitations}
 
 * You cannot order a certificate for a domain that cannot resolve the Authoritative Name Server. On Linux or Mac it can be checked using the command: `host -t ns <your_domain>`. On Windows it can be checked using `nslookup`.
-* You cannot order a certificate for a subdomain where only the domain in registered in the DNS.
+* You cannot order a certificate for a subdomain where only the domain is registered in the DNS. Instead, order a wildcard certificate for the domain.
 * You cannot order a SAN certificate with a wildcard domain.
 
 ## Supported Certificate Authorities

@@ -38,8 +38,8 @@ Tasks that pertain to any logs or activity in your {{site.data.keyword.cloudcert
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
 | Data | Provide integrations with select third-party partnership technologies, such as {{site.data.keyword.la_full}} and {{site.data.keyword.at_full}} | Use the provided tools to review instance logs and activities. For more information, see [Available Integrations](/docs/services/certificate-manager?topic=certificate-manager-available-integrations).  |
-| | {{site.data.keyword.cloudcerts_short}} does not deploy certificates to your TLS termination points. You can use the Kubernetes Service CLI to deploy certificates managed in Certificate Manager to your cluster. For more information, see [Available Integrations](/docs/services/certificate-manager?topic=certificate-manager-available-integrations). |
-| | Avoid outages because of expired certificates by configuring notification channels and handle expiring certificates notifications. |
+| | | {{site.data.keyword.cloudcerts_short}} does not deploy certificates to your TLS termination points. You can use the Kubernetes Service CLI to deploy certificates managed in Certificate Manager to your cluster. For more information, see [Available Integrations](/docs/services/certificate-manager?topic=certificate-manager-available-integrations). |
+| | | Avoid outages because of expired certificates by configuring notification channels and handle expiring certificates notifications. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
 ## Identity and access management

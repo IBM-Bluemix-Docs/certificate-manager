@@ -32,7 +32,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 
 {{site.data.keyword.cloudcerts_short}} is available in the following regions:
 
-![Visual representation of the availability of the service. The image is a map with pin points in the locations in which the service is available. If you are unable to view this image, see the table in the service endpoints section for a complete list.](images/locations.png){: caption="Figure 1. {{site.data.keyword.cloudcerts_short}} avilability" caption-side="bottom"}
+![Visual representation of the availability of the service. The image is a map with pin points in the locations in which the service is available. If you are unable to view this image, see the table in the service endpoints section for a complete list.](images/locations.png){: caption="Figure 1. {{site.data.keyword.cloudcerts_short}} availability" caption-side="bottom"}
 
 ## Connectivity options
 {: #connectivity}

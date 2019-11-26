@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-11"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: certificates, pem format, algorithms, public key, private keys, version control, pending order
 
 subcollection: certificate-manager
 

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-04"
+lastupdated: "2019-11-26"
 
-keywords: certificates, SSL, dns,
+keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
 subcollection: certificate-manager
 
@@ -40,7 +40,7 @@ When you order certificates through {{site.data.keyword.cloudcerts_short}}:
 
 - They are free
 - They are valid for 90 days
-- They can be Single Domain, Multi-Domain (SAN), or a Wildcard
+- They can be Single Domain, Multi-Domain (SAN), or a wildcard
 - They are domain validated
 
 Domain validation includes the verification that you own the domain for which you are requesting a certificate. If you need Extended Validation (EV) or Organization Validated (OV) certificates, you can obtain them elsewhere and import them to {{site.data.keyword.cloudcerts_short}} to manage their lifecycle.
@@ -48,8 +48,8 @@ Domain validation includes the verification that you own the domain for which yo
 ## Certificate ordering limitations
 {: #certificate-ordering-limitations}
 
-* You cannot order a certificate for a domain that cannot resolve the Authoritative Name Server. On Linux or Mac it can be checked using the command: `host -t ns <your_domain>`. On Windows it can be checked using `nslookup`.
-* You cannot order a certificate for a subdomain where only the domain in registered in the DNS.
+* You cannot order a certificate for a domain that cannot resolve the Authoritative Name Server. On Linux or macOS it can be checked using the command: `host -t ns <your_domain>`. On Windows it can be checked using `nslookup`.
+* You cannot order a certificate for a subdomain where only the domain is registered in the DNS. Instead, order a wildcard certificate for the domain.
 * You cannot order a SAN certificate with a wildcard domain.
 
 ## Supported Certificate Authorities

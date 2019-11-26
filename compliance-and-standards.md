@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-11-26"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -32,7 +32,7 @@ subcollection: certificate-manager
 ## Private key security
 {: #private-key-security}
 
-{{site.data.keyword.cloudcerts_short}} uses the [envelope encryption methodology](/docs/services/key-protect/concepts?topic=key-protect-envelope-encryption), where a root certificate is stored in, and never leaves, {{site.data.keyword.keymanagementservicelong_notm}}, which is also backed by HSM.
+{{site.data.keyword.cloudcerts_short}} uses the [envelope encryption methodology](/docs/services/key-protect/concepts?topic=key-protect-envelope-encryption), where a root key is stored in, and never leaves, {{site.data.keyword.keymanagementservicelong_notm}}, which is also backed by HSM.
 
 In addition, a per tenant-managed encryption key is used to encrypt the certificates and private keys before they are stored in the database. As part of the encryption chain, {{site.data.keyword.cloudcerts_short}} uses the Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key.
 
@@ -40,6 +40,10 @@ In addition, a per tenant-managed encryption key is used to encrypt the certific
 {: #compliance-hippa}
 
 {{site.data.keyword.cloudcerts_short}} meets the required IBM controls that are commensurate with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) Security and Privacy Rule requirements.
+
+## Payment Card Industry (PCI)
+{: #compliance-pci}
+{{site.data.keyword.cloudcerts_short}} is compliant with the PCI data security standards.
 
 ## International Organization for Standardization (ISO)
 {: #compliance-iso}

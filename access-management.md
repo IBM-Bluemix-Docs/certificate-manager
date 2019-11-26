@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-14"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
 subcollection: certificate-manager
 

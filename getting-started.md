@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-09-02"
+lastupdated: "2019-11-19"
 
-keywords: certificates, SSL,
+keywords: certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
 subcollection: certificate-manager
 
@@ -25,8 +25,7 @@ subcollection: certificate-manager
 # Getting started tutorial
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL certificates for your {{site.data.keyword.cloud_notm}}-based apps.  
-Get started by creating a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps.
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates for your {{site.data.keyword.cloud_notm}}-based apps. Get started by creating a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps.
 {: shortdesc}
 
 To create an instance from the {{site.data.keyword.cloud_notm}} console:
@@ -56,5 +55,6 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?
    - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), or **au-syd** (Sydney).
 
 <br/>
+
 [Learn more](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's new in the service, see [Release notes](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes).
 {: note}

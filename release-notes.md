@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-11-26"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -27,11 +27,17 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 21 November 2019
+{: 21November2019}
+
+- **PCI certification**  
+  {{site.data.keyword.cloudcerts_short}} is PCI compliant.
+
 ## 2 September 2019
 {: 2September2019}
 
 - **Live in Sydney**  
-  {{site.data.keyword.cloudcerts_long_notm}} is available in the Sydney location.
+  {{site.data.keyword.cloudcerts_short}} is available in the Sydney location.
 
 - **Exact search**  
   Enclose your search term with double-quotes to search for an exact value.

@@ -59,7 +59,7 @@ Tasks that pertain to the optional access restrictions that you can place on cer
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-| Data| Maintain controls commensurate to [various industry compliance standards](/docs/services/certificate-manager?topic=certificate-manager-compliance-and-standards), such as PCI DSS.  | |
+| Data | Maintain controls commensurate to [various industry compliance standards](/docs/services/certificate-manager?topic=certificate-manager-compliance-and-standards), such as PCI DSS.  | |
 {: caption="Table 3. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery

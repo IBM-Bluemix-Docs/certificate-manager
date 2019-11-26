@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-11-26"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -45,7 +45,7 @@ Depending on the expiration date of the certificate, you are notified 90, 60, 30
 
 You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate, you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.
 
-Notifications for expiring certificates are sent based on the timezone used to check whether a certificate has expired, which is UTC at midnight.
+Notifications for expiring certificates are sent based on the time zone used to check whether a certificate has expired, which is UTC at midnight.
 {: note}
 
 ### What are my options to configure notifications?

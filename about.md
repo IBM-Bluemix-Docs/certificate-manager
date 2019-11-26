@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-11-26"
 
 keywords: certificates, ssl, tls, ssl certificates, tls certificates, public certificates, security requirements, import certificate, cert, notified, manage certificates, automated renewal, availability
 
@@ -41,12 +41,3 @@ You can manage your certificates in the following ways:
 
 
 ![High-level service architecture diagram](images/high-level-architecture.png){: caption="Figure 1. High-level service architecture" caption-side="bottom"}
-
-
-
-## Availability
-{: #availability}
-
-{{site.data.keyword.cloudcerts_short}} is available in the Dallas, London, Frankfurt, Tokyo and Sydney locations.
-
-

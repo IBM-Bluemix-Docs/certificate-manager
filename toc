@@ -14,7 +14,7 @@ Certificate Manager
         about.md
         key-concepts.md
         integrations.md
-        ha-dr.md
+        compliance-and-standards.md
     
     rellinks.md
     release-notes.md
@@ -31,9 +31,10 @@ Certificate Manager
     [API documentation](https://cloud.ibm.com/apidocs/certificate-manager)
     event-types-payload-versions.md
     limits.md
+    regions-and-endpoints.md
     at_events.md
     log_events.md
-    understanding-your-responsibilities.md
+    
     {: .navgroup-end}
 
     {: .navgroup id="help"}

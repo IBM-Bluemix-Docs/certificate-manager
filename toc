@@ -34,7 +34,6 @@ Certificate Manager
     regions-and-endpoints.md
     at_events.md
     log_events.md
-    
     {: .navgroup-end}
 
     {: .navgroup id="help"}

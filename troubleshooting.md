@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-11-19"
+lastupdated: "2019-12-09"
 
 keywords: certificates, ssl, tls, private key, support, help, error
 
@@ -24,6 +24,8 @@ subcollection: certificate-manager
 {:tsSymptoms: .tsSymptoms}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
+{:troubleshoot: data-hd-content-type='troubleshoot'} 
+{:support: data-reuse='support'}
 
 # Troubleshooting
 {: #troubleshooting}
@@ -54,6 +56,8 @@ For more information about opening a support ticket or support levels and ticket
 
 ## I receive an error when I try to upload a certificate and private key 
 {: #import-cert-private-key}
+{: troubleshoot} 
+{: support}
 
 {: tsSymptoms}
 You're trying to upload a certificate and private key but receive the following error message.

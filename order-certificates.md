@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2019
-lastupdated: "2019-12-02"
+lastupdated: "2019-12-09"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -22,6 +22,8 @@ subcollection: certificate-manager
 {:important: .important}
 {:deprecated: .deprecated}
 {:download: .download}
+{:help: data-hd-content-type='help'} 
+{:support: data-reuse='support'}
 
 # Ordering certificates
 {: #ordering-certificates}
@@ -174,6 +176,8 @@ To see frequently asked questions about ordering certificates, [review the FAQ p
 
 ## Ordering certificates
 {: #ordering-certificate}
+{: help} 
+{: support}
 
 To order a certificate, complete the following steps:
 
@@ -201,6 +205,8 @@ Your order is placed in a **Pending** state. After you answer the domain validat
 
 ## Renewing certificates
 {: #renew-certificate}
+{: help} 
+{: support}
 
 If your certificate is about to expire, you can request to renew your certificate through {{site.data.keyword.cloudcerts_short}}. When your certificate is renewed, the previous version of your certificate is retained in case you need it. 
 

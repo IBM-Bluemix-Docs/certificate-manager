@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-01-14"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -140,4 +140,4 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 ## Availability
 {: #at-availability}
 
-{{site.data.keyword.at_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo** and **London** locations.
+{{site.data.keyword.at_short}} support is available for the **Dallas**, **London**, **Frankfurt**, **Tokyo** and **Sydney** locations.

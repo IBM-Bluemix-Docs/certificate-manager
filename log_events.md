@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-01-14"
 
 keywords: certificates, ssl, tls, logging, activity, monitor app, monitor certificates
 
@@ -45,4 +45,4 @@ Complete the following steps:
 ## Availability
 {: #la-availability}
 
-{{site.data.keyword.la_short}} support is available for the **Dallas**, **Frankfurt**, **Tokyo**, **London**, and **Sydney** locations.
+{{site.data.keyword.la_short}} support is available for the **Dallas**, **London**, **Frankfurt**, **Tokyo**, and **Sydney** locations.

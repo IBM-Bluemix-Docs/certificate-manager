@@ -38,11 +38,6 @@ You are also alerted after renewing an ordered certificate or reimporting a rene
 Notifications about reimported certificates are sent only to channels from [channel version 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) and higher.
 {: note}
 
-### When am I notified?
-{: #notifications-notifified} 
-
-
-
 Depending on the expiration date of the certificate, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
 
 You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate, you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.

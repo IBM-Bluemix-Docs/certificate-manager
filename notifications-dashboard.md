@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-26"
+  years: 2017, 2020
+lastupdated: "2020-01-20"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -38,8 +38,8 @@ You are also alerted after renewing an ordered certificate or reimporting a rene
 Notifications about reimported certificates are sent only to channels from [channel version 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) and higher.
 {: note}
 
-### When am I notified?
-{: #notifications-notifified} 
+### When am I notified?	
+{: #notifications-notified} 
 
 Depending on the expiration date of the certificate, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-09"
+  years: 2017, 2020
+lastupdated: "2020-01-20"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -54,6 +54,7 @@ Domain validation includes the verification that you own the domain for which yo
 * You cannot order a certificate for a subdomain where only the domain is registered in the DNS. Instead, order a wildcard certificate for the domain.
 * You cannot order a SAN certificate with a wildcard domain.
 * You cannot order a certificate with a primary domain length that is longer than 64 characters.
+* The {{site.data.keyword.cloudcerts_short}} console is limited to display up to 100 domains to select from, when using {{site.data.keyword.cis_short}} as the DNS provider. If you don't see the domain(s) you need to make the order - use the {{site.data.keyword.cloudcerts_short}} [`order` API](/apidocs/certificate-manager#order-a-certificate) and specify the domain(s).
 
 ## Supported Certificate Authorities
 {: #supported-certificate-authorities}

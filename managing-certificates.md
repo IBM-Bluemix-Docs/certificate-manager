@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-01-23"
 
 keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
@@ -169,19 +169,32 @@ Ordering certificates is limited to five orders/minute per {{site.data.keyword.c
 ## Renewing certificates
 {: #renew-certificates}
 
-You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.  
-To renew a certificate, complete the following steps:
+Ordered certificates can be either manually renewed or automatically renewed.
 
-  1. Click on the menu in the row of the certificate you want to renew.
-  2. Click **Renew Certificate**.
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.    
-  4. Click **Renew**
-
-Renewing a certificates is limited to five renewal requests per certificate per minute, 100 renewal/hour per IBM user account.  
+You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 {: note}
 
-When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
-{: important}
+To select a certificate to automatically renew:
+
+1. While ordering the certificate, set the auto-renewal toggle to **On**.
+2. After ordering a certificate, select **Enable Auto-renewal** from a certificate's side menu.
+
+To disable a certificate from automatically renewing:
+
+1. Select **Disable Auto-renewal** from a certificate's side menu.
+
+If a manual renew is needed, complete the following steps:
+1. Click the menu in the row of the certificate you want to renew.
+2. Click **Renew Certificate**.
+3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This renews your certificate with a new key pair.
+
+  When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  {: note}
+  
+4. Click **Renew**.
+
+Renewing a certificate is limited to five renewal requests per certificate per minute, 100 renewal per hour per IBM user account.
+{: note}
 
 ## Searching certificates
 {: #searching-certificates}

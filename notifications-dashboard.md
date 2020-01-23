@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-20"
+lastupdated: "2020-01-23"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -25,25 +25,32 @@ subcollection: certificate-manager
 # Configuring notifications
 {: #configuring-notifications}
 
-{{site.data.keyword.cloudcerts_full}} can send you notifications about certificate lifecycle events. These include reminders to renew certificates before they expire, and to deploy certificates when they are ready. To get notifications from {{site.data.keyword.cloudcerts_short}}, set up a Slack or Callback URL notification channel, or both.
+Certificates have an expiration date. When a certificate that you use expires, you might experience downtime. To avoid downtime you can configure {{site.data.keyword.cloudcerts_long}} to send you notifications about certificates that are about to expire, so that you are reminded to renew them on time.
+
+{{site.data.keyword.cloudcerts_short}} also sends lifecycle events such as when a certificate is reimported, issued or renewed. You can use those events to automate the renewal of your certificates deployed to your TLS termination points.
+
+To receive notifications from {{site.data.keyword.cloudcerts_short}}, set up a Slack or Callback URL notification channel, or both. 
 {: shortdesc}
 
-## Notifications to monitor certificate expiration
-{: #notifications-monitoring-certificate-expiration}
-
-Certificates are typically valid for a set amount of time. When a certificate that you use expires, you might experience downtime. To avoid downtime you can configure {{site.data.keyword.cloudcerts_short}} to send you notifications about certificates that are about to expire, so that you are reminded to renew them on time.
-
-You are also alerted after renewing an ordered certificate or reimporting a renewed version of your certificate in place of the expiring one. This is to remind you to deploy it to SSL/TLS termination points. 
-
-Notifications about reimported certificates are sent only to channels from [channel version 2](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions) and higher.
-{: note}
-
-### When am I notified?	
+### When am I notified?
 {: #notifications-notified} 
 
-Depending on the expiration date of the certificate, you are notified 90, 60, 30, 10, and 1 day before your certificate expires. In addition, you receive daily notifications about expired certificates. The daily notifications start on the first day after your certificate expired.
+You will be notified based on the origin of your certificates, their renewal setting, and the operations you perform during the lifespan of your certificates.   
+The following table provides an overview of when you will be notified:
 
-You must renew your ordered certificate, or reimport a renewed certificate in place of your old one to {{site.data.keyword.cloudcerts_short}} to stop notifications from being sent. When you renew or reimport a certificate, you receive a notification that your certificate was renewed or reimported to remind you to redeploy it.
+| Operation | Lifecycle events | Expiration events |
+|-----------|------------------|-------------------|
+| Certificate re/imported | <ul><li>`cert_reimported` - When a certificate is re-imported. Notifies you to deploy the certificate [1].</li></ul> | <ul><li>`cert_about_to_expire_reimport_required` - 90, 60, 30, 10, and 1 days before your certificate expires. Reminds you to: obtain a renewed certificate, deploy it [1], and reimport it to {{site.data.keyword.cloudcerts_short}}.</li><li>`cert_expired_reimport_required` - Daily notifications[2]. Alerts you to obtain a renewed certificate, deploy it [1], and reimport it to {{site.data.keyword.cloudcerts_short}}.</li><ul> |
+| Certificate ordered | <ul><li>`cert_issued` - When an ordered certificate is issued. Notifies you to download the certificate and to deploy it [1].</li><li>`cert_order_failed` - When a certificate order fails. Notifies you about the failure.</li></ul> | <ul><li>`cert_about_to_expire_renew_required` - 30, 10, and 1 days before your certificate expires. Reminds you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li><li>`cert_expired_renew_required` - Daily notifications [2]. Alerts you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li></ul> |
+| Certificate ordered and not downloaded | <ul><li>`cert_issued_not_downloaded` - 30 days after certificate was issued. Reminds you to download the certificate and to deploy[1].</li></ul> | <ul><li>`cert_about_to_expire_renew_required` - 30, 10, and 1 days before your certificate expires. Reminds you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li><li>`cert_expired_renew_required` - Daily notifications [2]. Alerts you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li></ul> |
+| Certificate renewed | <ul><li>`cert_renewed` - When a certificate is renewed. Notifies you to download the certificate and to deploy it [1], [4].</li><li>`cert_renew_failed` - When certificate renewal fails. Notifies you about the failure.</li></ul> | <ul><li>`cert_about_to_expire_renew_required` - 30, 10, and 1 days before your certificate expires. Reminds you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li><li>`cert_expired_renew_required` - Daily notifications [2]. Alerts you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li></ul> |
+| Certificate renewed and not downloaded | <ul><li>`cert_renewed_not_downloaded` - 30, 10, 1, 0 days before your previous issued certificate [3] expires. Reminds you that your renewed certificate was not downloaded to replace the previously deployed certificate about to expire.</li></ul> | <ul><li>`cert_about_to_expire_renew_required` - 30, 10, and 1 days before your certificate expires. Reminds you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li><li>`cert_expired_renew_required` - Daily notifications [2]. Alerts you to renew the certificate in {{site.data.keyword.cloudcerts_short}} and deploy it [1].</li></ul> |  
+{: caption="Table 1. Notifications overview" caption-side="top"}
+
+[1] Deploy the certificate to its TLS termination point.  
+[2] The daily expiration notifications start on the day your certificate expires. You must reimport a renewed certificate in place of your old one, or renew your {{site.data.keyword.cloudcerts_short}} issued certificate to stop expiration notifications from being sent.  
+[3] The previous version of your issued certificate stored in {{site.data.keyword.cloudcerts_short}}.  
+[4] When certificate auto-renew is enabled, automatic renewal will occur 31 days before expiration.  
 
 Notifications for expiring certificates are sent based on the time zone used to check whether a certificate has expired, which is UTC at midnight.
 {: note}
@@ -51,13 +58,7 @@ Notifications for expiring certificates are sent based on the time zone used to 
 ### What are my options to configure notifications?
 {: #notifications-options}
 
-You can send notifications to Slack by using a Slack Webhook or use any Callback URL that you like.
-
-## Notifications related to ordering certificates
-{: #notifications-ordering-certificates}
-
-{{site.data.keyword.cloudcerts_short}} notifies you when a certificate that you order from {{site.data.keyword.cloudcerts_short}} is issued to you, or renewed successfully. You are also notified if your order fails, or a renewal fails.
-{: shortdesc}
+You can send notifications to Slack by configuring a Webhook in your Slack account, or send notifications to any public Callback URL you own.
 
 ## Setting up a Slack Webhook
 {: #setup-webhook}
@@ -74,19 +75,24 @@ If you are already a member of a Slack workspace, skip to step 2.
 ## Setting up a Callback URL endpoint
 {: #setup-callback}
 
-A Callback URL endpoint can be used for various tasks. For example, to send notifications to report about expiring notifications to PagerDuty, automatically open up a ticket in GitHub or elsewhere, or validate domain ownership before ordering or renewing certificates. You can also automatically trigger deployment of certificates in response to notifications when certificates are reimported or renewed successfully.
-{: shortdesc}
+A Callback URL endpoint can be used to automate various tasks such as:
+
+* Sending notifications to report about expiring notifications to PagerDuty.
+* Opening a ticket in GitHub or any other task management service.
+* Deploy certificates obtained from {{site.data.keyword.cloudcerts_short}} to your TLS terminiation endpoints.
+* Validate domain ownership when ordering or renewing certificates, in the case your domain is not managed in {{site.data.keyword.cis_full_notm}}.
 
 You can find sample implementations in the [Examples section below](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
 
 ### Callback URL requirements
 {: #callback-url-requirements}
 
-Your Callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}
+Your Callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 
-- The endpoint must use the HTTPS protocol.
-- The endpoint must not require HTTP headers. This requirement includes authorization headers.
-- The endpoint must return a `200 OK` status code to indicate a successful notification delivery.
+* The endpoint must be publically accessible.
+* The endpoint must be protected with a valid CA TLS certificate.
+* The endpoint must not require an authorization header, or any application headers.
+* The endpoint must reply immediately to {{site.data.keyword.cloudcerts_short}} with  a `200 OK` status code to indicate a successful notification delivery. Potential long tasks should be performed asynchronously after the notificaton is delivered.
 
 ### Notification format
 {: #notification_format}
@@ -210,9 +216,9 @@ For channel versions see [Notification event types and payload versions](/docs/s
 ## Examples
 {: #examples}
 
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls)  
+* [How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 1 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls)  
    Learn how to create GitHub issues for expiring certificate notifications.
-* [How to Use Certificate Manager to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
+* [How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 2 ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2)  
    Learn how to create PagerDuty incidents for expiring certificate notifications.
 * [How to Automate TLS Certificate Rotation to Avoid Outages ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://www.ibm.com/cloud/blog/how-to-automate-tls-certificate-rotation-to-avoid-outages)  
    Learn how to automate certificate rotation for expiring certificates.  

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-23"
+  years: 2017, 2020
+lastupdated: "2020-01-23"
 
 keywords: certificates, pem format, algorithms, public key, private keys, version control, pending order
 

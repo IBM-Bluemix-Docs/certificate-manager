@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-14"
+lastupdated: "2020-01-23"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -54,6 +54,10 @@ The following table lists the API methods that generate an event when they are c
     <td>`cloudcerts.certificate.renew`</td>
 	  <td>Renew an issued certificate.</td>
   </tr>
+    <tr>
+      <td>`cloudcerts.certificate.issued`</td>
+  	  <td>Whether a certificate order/renew completed successfully or failed.</td>
+    </tr>  
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
 	  <td>Get a certificate metadata.</td>

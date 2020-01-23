@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-26"
+  years: 2017, 2020
+lastupdated: "2020-01-23"
 
 keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
@@ -46,7 +46,7 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
   </tr>
   <tr>
     <td>IBM Cloud Load Balancer for VPC</td>
-    <td>A TLS certificate is required for load balancers to perform TLS offloading tasks. You may manage the TLS certificates through IBM Certificate Manager. Enable service-to-service authorization to give a load balancer access to your certificate. [Learn more about this integration](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc#ssl-offloading-and-required-authorizations)</td>
+    <td>A TLS certificate is required for load balancers to perform TLS offloading tasks. You may manage the TLS certificates through {{site.data.keyword.cloudcerts_short}}. Enable service-to-service authorization to give a load balancer access to your certificate. [Learn more about this integration](/docs/vpc-on-classic-network?topic=vpc-on-classic-network---using-load-balancers-in-ibm-cloud-vpc#ssl-offloading-and-required-authorizations)</td>
   </tr>
 </table>
 

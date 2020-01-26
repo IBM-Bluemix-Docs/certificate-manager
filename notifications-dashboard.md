@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-23"
+lastupdated: "2020-01-26"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -211,7 +211,7 @@ If you have existing notification channels (Slack or Callback URL), to start get
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 
-For channel versions see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-event-types-payload-versions).
+For channel versions see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-notifications-event-types).
 
 ## Examples
 {: #examples}

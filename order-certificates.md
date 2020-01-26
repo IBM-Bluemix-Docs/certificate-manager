@@ -185,21 +185,21 @@ To order a certificate, use the {{site.data.keyword.cloudcerts_short}} dashboard
 2. Click **Order Certificate** 
 3. Select your DNS provider - either {{site.data.keyword.cis_full_notm}}, or another DNS Provider.
 4. If you've selected **{{site.data.keyword.cis_full_notm}}**, provide the following details:
-   1. Complete the required setup instructions
-   2. Provide a certificate name and optionally a description
-   3. Select a Certificate Authority
-   4. Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
-   5. Select the certificate type that you need
-   6. Select the domain
-   7. Select the appropriate algorithm and key algorithm
-   8. Click **Order**
+   - Complete the required setup instructions
+   - Provide a certificate name and optionally a description
+   - Select a Certificate Authority
+   - Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
+   - Select the certificate type that you need
+   - Select the domain
+   - Select the appropriate algorithm and key algorithm
+   - Click **Order**
 5. If you've selected **Another DNS Provider**, provide the following details:
-   1. Complete the required setup instructions.
-   2. Provide a certificate name and optionally a description.
-   3. Select a Certificate Authority.
-   4. Enter the primary domain and any alternative domains.
-   5. Select the appropriate algorithm and key algorithm.
-   6. Click **Order**.
+   - Complete the required setup instructions.
+   - Provide a certificate name and optionally a description.
+   - Select a Certificate Authority.
+   - Enter the primary domain and any alternative domains.
+   - Select the appropriate algorithm and key algorithm.
+   - Click **Order**.
 
 Your order is placed in a **Pending** state. After you answer the domain validation challenge and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you are issued the certificate and its state will change to **Valid**. You're notified when your certificate is ready or if there was a problem, in your Slack and/or Callback URL notifications channel.
 

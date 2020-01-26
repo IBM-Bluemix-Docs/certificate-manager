@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-23"
+lastupdated: "2020-01-26"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -59,7 +59,7 @@ For more information about the differences between the Slack channel versions, s
 ## Slack channel versions
 {: #slack-channel-versions}
 
-#### Version 3 (updated) (November 3rd, 2019)
+#### Version 3 (updated) (February 9th, 2020)
 - Added new event types:
   - Issued certificate was not downloaded
   - Renewed certificate was not downloaded
@@ -120,7 +120,7 @@ For more information about the differences between the Slack channel versions, s
 }
 ```
 
-#### Version 4 (updated) (February 3rd, 2020)
+#### Version 4 (updated) (February 9th, 2020)
 - Added new event types
    - `cert_issued_not_downloaded`
    - `cert_renewed_not_downloaded`

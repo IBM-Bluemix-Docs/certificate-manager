@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-23"
+lastupdated: "2020-01-26"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -142,7 +142,7 @@ To verify your control over a domain when you're using a third-party DNS provide
 A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).  
 {: note}
 
-First, you implement an IBM Cloud Function action for domain validation, and then you provide its endpoint to a Callback URL notifications channel. To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
+First, you implement a callback server for domain validation, and then you provide its endpoint to a Callback URL notifications channel.  To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 For more information about setting up domain validation by using a Callback URL notifications channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample){: external} using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.  
 {: tip}
@@ -208,7 +208,7 @@ Your order is placed in a **Pending** state. After you answer the domain validat
 {: help} 
 {: support}
 
-When you order certificates from {{site.data.keyword.cloudcerts_short}}, you can choose to enable renewal. Renewels work similar to certificate ordering. When you request that your certificate is renewed, {{site.data.keyword.cloudcerts_short}} sends a DNS txt challenge to your callback URL, so that you can prove that you still own the domains for which you are attempting to renew certificates.
+When you order certificates from {{site.data.keyword.cloudcerts_short}}, you can choose to enable auto-renewal. Renewels work similar to certificate ordering. When you request that your certificate is renewed, {{site.data.keyword.cloudcerts_short}} sends a DNS txt challenge to your callback URL, so that you can prove that you still own the domains for which you are attempting to renew certificates.
 
 There are a few things to keep in mind:
 
@@ -226,12 +226,12 @@ After renewing a certificate either manually or automatically you must deploy it
 To select a certificate to automatically renew:
 
 1. While ordering the certificate, set the auto-renewal toggle to **On**.
-2. After ordering a certificate, select **Enable Auto-renewal** from a certificate's side menu.
+2. After ordering a certificate, select **Enable Auto-renew** from a certificate's side menu.
 
 Auto-renewed certificate will be renewed 31 days before they expire.  
 {: tip}
 
-Ordered certificates that that expire in less than 31 days, and auto-renew is then enabled for them **will not be auto-renewed in this cycle and must be manually renewed. They will be auto-renewed on the next cycle.  
+If you enable Auto-renew for a certificate that expire in less than 31 days, it must be manually renewed before expiration.  Only then, following renewal cycles will become automatic.  
 {: important}
 
 ### Disabling automatic renewal of certificates
@@ -239,7 +239,7 @@ Ordered certificates that that expire in less than 31 days, and auto-renew is th
 
 To disable a certificate from automatically renewing:
 
-1. Select **Disable Auto-renewal** from a certificate's side menu.
+1. Select **Disable Auto-renew** from a certificate's side menu.
 
 ### Manually renewing certificates
 {: #manual-renew}

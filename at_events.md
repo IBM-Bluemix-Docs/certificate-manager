@@ -52,7 +52,7 @@ The following table lists the API methods that generate an event when they are c
   </tr>
   <tr>
     <td>`cloudcerts.certificate.order.policy`</td>
-    <td>nable or disable certificate auto-renew.</td>
+    <td>Enable or disable certificate auto-renew.</td>
   <tr>
     <td>`cloudcerts.certificate.renew`</td>
 	  <td>Renew an issued certificate.</td>
@@ -103,7 +103,7 @@ The following table lists the API methods that generate an event when they are c
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.state`</td>
-	  <td>Disable or enable a notifications channel.</td>
+	  <td>Enable or disable a notifications channel.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.update`</td>

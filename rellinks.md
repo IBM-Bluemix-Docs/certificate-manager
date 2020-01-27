@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-01-27"
 
 keywords: certificates, ssl, tls, callback urls, public domain, custom domain
 
@@ -37,7 +37,7 @@ You can use the following related links to learn more about and interact with {{
 * [How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 1](https://www.ibm.com/cloud/blog/use-certificate-manager-avoid-outages-using-callback-urls){: external}
 * [How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 2](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2){: external}
 * [How to Automate TLS Certificate Rotation to Avoid Outages](https://www.ibm.com/cloud/blog/how-to-automate-tls-certificate-rotation-to-avoid-outages){: external}
-* [Use IBM Cloud Certificate Manager to Obtain Let’s Encrypt TLS Certificates for Your Public Domains](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}
+* [Use IBM Cloud {{site.data.keyword.cloudcerts_short}} to Obtain Let’s Encrypt TLS Certificates for Your Public Domains](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}
 
 ## Tutorials
 {: #tutorials}

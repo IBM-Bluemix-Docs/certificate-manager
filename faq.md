@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-23"
+lastupdated: "2020-01-27"
 
 keywords: certificates, pem format, algorithms, public key, private keys, version control, pending order
 
@@ -124,7 +124,7 @@ You can find an error code and message in the certificate metadata, UI, and in t
 {: #missing-notification-for-ordered-certificate}
 {: faq}
 
-Upgrade your Slack notification channel to the latest version in the Certificate Manager Notifications tab.
+Upgrade your Slack notification channel to the latest version in the {{site.data.keyword.cloudcerts_short}} Notifications tab.
 
 ## I receive an error when I try to upload a certificate and private key 
 {: #import-cert-private-key}

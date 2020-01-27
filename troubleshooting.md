@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-12-23"
+  years: 2017, 2020
+lastupdated: "2020-01-27"
 
 keywords: certificates, ssl, tls, private key, support, help, error
 
@@ -49,6 +49,6 @@ When you are using the forums to ask a question, be sure to tag your question so
 - If you have technical questions about the service, post your question on [Stack Overflow](https://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud){: external} and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
 - For questions about the service and getting started instructions, post your question on [IBM Developer Answers](https://developer.ibm.com/answers){: external}. Include the `ibm-certificate-manager` and `ibm-cloud` tags.
 
-For more information about opening a support ticket or support levels and ticket severities, see [how do I get the support that I need?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support). When opening the ticket, select the offering "Security and Identity: Certificate Manager".
+For more information about opening a support ticket or support levels and ticket severities, see [how do I get the support that I need?](/docs/get-support?topic=get-support-getting-customer-support#getting-customer-support). When opening the ticket, select the offering "Security and Identity: {{site.data.keyword.cloudcerts_short}}".
 
 

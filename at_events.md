@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-26"
+lastupdated: "2020-01-29"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -51,7 +51,7 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Order a certificate.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.certificate.order.policy`</td>
+    <td>`cloudcerts.certificate-order-policy.update`</td>
     <td>Enable or disable certificate auto-renew.</td>
   <tr>
     <td>`cloudcerts.certificate.renew`</td>
@@ -102,7 +102,7 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Create a notifications channel.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.notification-channel.state`</td>
+    <td>`cloudcerts.notification-channel-state.update`</td>
 	  <td>Enable or disable a notifications channel.</td>
   </tr>
   <tr>

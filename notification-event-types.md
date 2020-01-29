@@ -31,14 +31,17 @@ Check out the following tables to see which event types are available for each n
 {: shortdesc}
 
 #### For imported certificates  
+{: #imported-certificates}
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
 | Imported certificate about to expire | `cert_about_to_expire_reimport_required`    | v1 or higher | v1 or higher |
 | Imported certificate expired | `cert_expired_reimport_required` | v1 or higher | v1 or higher |
 | Certificate reimported | `cert_reimported` | v2 or higher |    v2 or higher |
+{: caption="Table 1. Notification event types for imported certificates  and the version on which they're available" caption-side="top"}
 
 #### For ordered certificates   
+{: #ordered-certificates}
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
@@ -50,7 +53,7 @@ Check out the following tables to see which event types are available for each n
 | Issued certificate expired | `cert_expired_renew_required` | v4 or higher | v3 or higher |
 | Certificate domain validation required | `cert_domain_validation_required` | v4 or higher |  N/A |
 | Certificate domain validation completed | `cert_domain_validation_completed` | v4 or higher  | N/A | 
-{: caption="Table 1. Notification event types and the version on which they're available" caption-side="top"}
+{: caption="Table 2. Notification event types for ordered certificates and the version on which they're available" caption-side="top"}
 
 Newly created notification channels are always created with the latest version release.
 {: tip}

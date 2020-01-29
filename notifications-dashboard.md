@@ -67,8 +67,8 @@ Daily notifications begin the day that your certificate expires. To stop the not
 
 | Event             | Description      | Notified          |
 |-------------------|------------------|-------------------|
-| `cert_renewed` | An ordered certificate is issued. | Single alert that it's time to download the certificate and deploy it.
-| `cert_renew_failed` | A certificate order failed. | Single alert upon a failed order. |
+| `cert_renewed` | A renewed certificate is issued. | Single alert that it's time to download the certificate and deploy it.
+| `cert_renew_failed` | A certificate renewal has failed. | Single alert upon a failed order. |
 | `cert_about_to_expire_renew_required` | Reminders to renew a certificate and then deploy it. | You are notified every 30, 10, and up to 1 day before your certificate expires. |
 | `cert_expired_renew_required` | Reminders that alert you to renew your certificate and deploy it because it is expired. | You are notified daily. |
 | `cert_renewed_not_downloaded` | Reminder to download the certificate that you ordered and deploy it. | You are notified 30 days after the certificate is issued. |

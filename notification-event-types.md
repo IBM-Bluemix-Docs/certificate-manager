@@ -30,7 +30,7 @@ When you're working with {{site.data.keyword.cloudcerts_short}}, you can configu
 Check out the following tables to see which event types are available for each notification channel version.
 {: shortdesc}
 
-#### For imported certificates  
+### For imported certificates  
 {: #imported-certificates}
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
@@ -40,7 +40,7 @@ Check out the following tables to see which event types are available for each n
 | Certificate reimported | `cert_reimported` | v2 or higher |    v2 or higher |
 {: caption="Table 1. Notification event types for imported certificates  and the version on which they're available" caption-side="top"}
 
-#### For ordered certificates   
+### For ordered certificates   
 {: #ordered-certificates}
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |

@@ -49,7 +49,7 @@ Daily notifications begin the day that your certificate expires. To stop the not
 {: class="simple-tab-table"}
 {: caption="Table 1a. Understanding the types of reimport notifications" caption-side="top"}
 {: #reimport-table}
-{: tab-title="Re/import"}
+{: tab-title="Imported/Reimported"}
 {: tab-group="Notifications"}
 
 | Event             | Description      | Notified          |

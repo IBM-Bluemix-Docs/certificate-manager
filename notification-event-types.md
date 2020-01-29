@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-26"
+lastupdated: "2020-01-29"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -27,16 +27,21 @@ subcollection: certificate-manager
 
 When you're working with {{site.data.keyword.cloudcerts_short}}, you can configure notification channels that alert you to various lifecycle events. The type of event and the payload that is delivered might be different depending on the version of the notification channel that you're using.
 
-Check out the following table to see which event types are available for each notification channel version.
+Check out the following tables to see which event types are available for each notification channel version.
 {: shortdesc}
 
-### For imported certificates  
+#### For imported certificates  
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
 | Imported certificate about to expire | `cert_about_to_expire_reimport_required`    | v1 or higher | v1 or higher |
 | Imported certificate expired | `cert_expired_reimport_required` | v1 or higher | v1 or higher |
 | Certificate reimported | `cert_reimported` | v2 or higher |    v2 or higher |
+
+#### For ordered certificates   
+
+| Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
+|--------------------------|------------|----------------------------------------|---------------------------------|
 | Ordered certificate issued | `cert_issued` | v4 or higher | v3 or higher |
 | Ordered certificate renewed | `cert_renewed` | v4 or higher | v3 or higher |
 | Certificate order failed | `cert_order_failed` | v4 or higher | v3 or higher |

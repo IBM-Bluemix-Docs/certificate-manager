@@ -44,8 +44,8 @@ Daily notifications begin the day that your certificate expires. To stop the not
 | Event             | Description      | Notified          |
 |-------------------|------------------|-------------------|
 | `cert_reimported` | A certificate is reimported to the service and it's time to deploy the certificate to its TLS termination point. | Single notification |
-| `cert_about_to_expire_reimport_required` | Reminders to obtain a new certificate, deploy it, and then import it. | You are notified every 90, 60, 30, 10, and 1 day before your certificate expires. |
-| `cert_expired_reimport_required` | It is time to obtain a new certificate, deploy it, and then import it. | Daily notifications. |
+| `cert_about_to_expire_reimport_required` | Reminders to obtain a new certificate, deploy it, and then reimport it. | You are notified every 90, 60, 30, 10, and 1 day before your certificate expires. |
+| `cert_expired_reimport_required` | It is time to obtain a new certificate, deploy it, and then reimport it. | Daily notifications. |
 {: class="simple-tab-table"}
 {: caption="Table 1a. Understanding the types of reimport notifications" caption-side="top"}
 {: #reimport-table}

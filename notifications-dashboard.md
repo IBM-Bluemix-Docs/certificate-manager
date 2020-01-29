@@ -43,8 +43,8 @@ Daily notifications begin the day that your certificate expires. To stop the not
 
 | Event             | Description      | Notified          |
 |-------------------|------------------|-------------------|
-| `cert_reimported` | A certificate is imported or reimported to the service and it's time to deploy the certificate to its TLS termination point. | Daily notifications |
-| `cert_about_to_expire_reimport_required` | Reminders to obtain a new certificate, deploy it, and then import it. | You are notified every 90, 60, 30, 10, and up to 1 day before your certificate expires. |
+| `cert_reimported` | A certificate is imported or reimported to the service and it's time to deploy the certificate to its TLS termination point. | Single notification |
+| `cert_about_to_expire_reimport_required` | Reminders to obtain a new certificate, deploy it, and then import it. | You are notified every 90, 60, 30, 10, and 1 day before your certificate expires. |
 | `cert_expired_reimport_required` | It is time to obtain a new certificate, deploy it, and then import it. | Daily notifications. |
 {: class="simple-tab-table"}
 {: caption="Table 1a. Understanding the types of reimport notifications" caption-side="top"}
@@ -56,7 +56,7 @@ Daily notifications begin the day that your certificate expires. To stop the not
 |-------------------|------------------|-------------------|
 | `cert_issued` | An ordered certificate is issued. | Single alert that it's time to download the certificate and deploy it.
 | `cert_order_failed` | A certificate order failed. | Single alert upon a failed order. |
-| `cert_about_to_expire_renew_required` | Reminders to renew a certificate and then deploy it. | You are notified every 30, 10, and up to 1 day before your certificate expires. |
+| `cert_about_to_expire_renew_required` | Reminders to renew a certificate and then deploy it. | You are notified every 30, 10, and 1 day before your certificate expires. |
 | `cert_expired_renew_required` | Reminders that alert you to renew your certificate and deploy it because it is expired. | You are notified daily. |
 | `cert_issued_not_downloaded` | Reminder to download the certificate that you ordered and deploy it. | You are notified 30 days after the certificate is issued. |
 {: class="simple-tab-table"}
@@ -68,10 +68,10 @@ Daily notifications begin the day that your certificate expires. To stop the not
 | Event             | Description      | Notified          |
 |-------------------|------------------|-------------------|
 | `cert_renewed` | A renewed certificate is issued. | Single alert that it's time to download the certificate and deploy it.
-| `cert_renew_failed` | A certificate renewal has failed. | Single alert upon a failed order. |
-| `cert_about_to_expire_renew_required` | Reminders to renew a certificate and then deploy it. | You are notified every 30, 10, and up to 1 day before your certificate expires. |
+| `cert_renew_failed` | A certificate renewal has failed. | Single alert upon a failed renewal. |
+| `cert_about_to_expire_renew_required` | Reminders to renew a certificate and then deploy it. | You are notified every 30, 10, and 1 day before your certificate expires. |
 | `cert_expired_renew_required` | Reminders that alert you to renew your certificate and deploy it because it is expired. | You are notified daily. |
-| `cert_renewed_not_downloaded` | Reminder to download the certificate that you ordered and deploy it. | You are notified 30 days after the certificate is issued. |
+| `cert_renewed_not_downloaded` | Reminder to download the certificate that was renewed and deploy it. | You are notified 30, 10, 1 days before and the day your previous issued certificate expires. |
 {: class="simple-tab-table"}
 {: caption="Table 1c. Understanding the types of renew notifications" caption-side="top"}
 {: #renewed-table}

@@ -33,15 +33,19 @@ Check out the following tables to see which event types are available for each n
 ### For imported certificates  
 {: #imported-certificates}
 
+Notification event types for imported certificates
+
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
 | Imported certificate about to expire | `cert_about_to_expire_reimport_required`    | v1 or higher | v1 or higher |
 | Imported certificate expired | `cert_expired_reimport_required` | v1 or higher | v1 or higher |
 | Certificate reimported | `cert_reimported` | v2 or higher |    v2 or higher |
-{: caption="Table 1. Notification event types for imported certificates  and the version on which they're available" caption-side="top"}
+{: caption="Table 1. Notification event types for imported certificates and the version on which they're available" caption-side="top"}
 
 ### For ordered certificates   
 {: #ordered-certificates}
+
+Notification event types for ordered certificates
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|

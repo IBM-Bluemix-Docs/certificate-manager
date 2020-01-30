@@ -57,8 +57,8 @@ Notification event types for ordered certificates.
 | Issued certificate expired | `cert_expired_renew_required` | v4 or higher | v3 or higher |
 | Certificate domain validation required | `cert_domain_validation_required` | v4 or higher |  N/A |
 | Certificate domain validation completed | `cert_domain_validation_completed` | v4 or higher  | N/A | 
-| Certificate issued but not download | `cert_issued_not_downloaded` | v4 or higher  | v4 or higher | 
-| Certificate renewed but not download | `cert_renewed_not_downloaded` | v4 or higher  | v4 or higher | 
+| Certificate issued but not download | `cert_issued_not_downloaded` | v4 or higher  | v3 or higher | 
+| Certificate renewed but not download | `cert_renewed_not_downloaded` | v4 or higher  | v3 or higher | 
 {: caption="Table 2. Notification event types for ordered certificates and the version on which they're available" caption-side="top"}
 
 Newly created notification channels are always created with the latest version release.

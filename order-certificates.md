@@ -10,7 +10,6 @@ subcollection: certificate-manager
 
 ---
 
-
 {:external: target="_blank" .external}
 {:shortdesc: .shortdesc}
 {:screen: .screen}

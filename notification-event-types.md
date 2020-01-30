@@ -70,11 +70,15 @@ For more information about the differences between the Slack channel versions, s
 {: #slack-channel-versions}
 
 #### Version 3 (updated) (February 9th, 2020)
+{: #slack-v3-update}
+
 - Added new event types:
   - Issued certificate was not downloaded
   - Renewed certificate was not downloaded
 
 #### Version 3
+{: #slack-v3}
+
 - New event types:
    - Ordered certificate issued
    - Ordered certificate renewed
@@ -83,16 +87,24 @@ For more information about the differences between the Slack channel versions, s
    - Issued certificate expired
 
 #### Version 2
+{: #slack-v2}
+
 - New notification for reimported certificates
 
 #### Version 1
+{: #slack-v1}
+
 - Notifications are sent only for expiring certificates.
 
 ## Callback URL payload versions
 {: #callback-url-payload-versions}
 
 ### Latest available version of notifications payload structure
-#### Certificates lifecycle notification   
+{: #callback-url-latest}
+
+
+#### Certificates lifecycle notification
+{: #callback-lifecycle}   
 ```
 {
    "instance_crn": <instance crn>,
@@ -115,6 +127,8 @@ For more information about the differences between the Slack channel versions, s
 ```
 
 #### Domain validation notification
+{: #callback-domain-validation}
+
 ```
 {
    "instance_crn": <instance crn>,
@@ -131,6 +145,8 @@ For more information about the differences between the Slack channel versions, s
 ```
 
 #### Version 4 (updated) (February 9th, 2020)
+{: #callback-v4-update}
+
 - Added new event types
    - `cert_issued_not_downloaded`
    - `cert_renewed_not_downloaded`
@@ -138,6 +154,8 @@ For more information about the differences between the Slack channel versions, s
 - Field `previous_expires_on` added to renewed certificates in the event `cert_renewed_not_downloaded`. It contains expiration for the previous version of renewed certificate
 
 #### Version 4 (May 6th, 2019)
+{: #callback-v4}
+
 - New event types:
   - `cert_issued`
   - `cert_renewed`
@@ -163,6 +181,8 @@ For more information about the differences between the Slack channel versions, s
    ```
 
 #### Version 3
+{: #callback-v3}
+
 - The `expiry_date` field is present in event type `cert_about_to_expire_reimport_required`.
 - The field `expires_on` is added to each certificate in an array. For example:
 
@@ -185,6 +205,8 @@ For more information about the differences between the Slack channel versions, s
    ```
 
 #### Version 2
+{: #callback v2}
+
 - A new notification for reimported certificates.
 - The field name `expiring_certificates` is changed to `certificates`.
 - The field name `event_type` is new. Possible options include: 
@@ -211,6 +233,8 @@ For more information about the differences between the Slack channel versions, s
    ```
 
 #### Version 1
+{: #callback-v1}
+
 - Your notification is returned as a payload. For example:
 
    ```

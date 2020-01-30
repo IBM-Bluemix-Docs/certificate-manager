@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-01-30"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -33,7 +33,7 @@ Check out the following tables to see which event types are available for each n
 ### For imported certificates  
 {: #imported-certificates}
 
-Notification event types for imported certificates
+Notification event types for imported certificates.
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
@@ -45,7 +45,7 @@ Notification event types for imported certificates
 ### For ordered certificates   
 {: #ordered-certificates}
 
-Notification event types for ordered certificates
+Notification event types for ordered certificates.
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
@@ -57,6 +57,8 @@ Notification event types for ordered certificates
 | Issued certificate expired | `cert_expired_renew_required` | v4 or higher | v3 or higher |
 | Certificate domain validation required | `cert_domain_validation_required` | v4 or higher |  N/A |
 | Certificate domain validation completed | `cert_domain_validation_completed` | v4 or higher  | N/A | 
+| Certificate issued but not download | `cert_issued_not_downloaded` | v4 or higher  | v4 or higher | 
+| Certificate renewed but not download | `cert_renewed_not_downloaded` | v4 or higher  | v4 or higher | 
 {: caption="Table 2. Notification event types for ordered certificates and the version on which they're available" caption-side="top"}
 
 Newly created notification channels are always created with the latest version release.

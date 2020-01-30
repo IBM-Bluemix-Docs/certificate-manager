@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-26"
+lastupdated: "2020-01-30"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -208,7 +208,7 @@ Your order is placed in a **Pending** state. After you answer the domain validat
 {: help} 
 {: support}
 
-When you order certificates from {{site.data.keyword.cloudcerts_short}}, you can choose to enable auto-renewal. Renewels work similar to certificate ordering. When you request that your certificate is renewed, {{site.data.keyword.cloudcerts_short}} sends a DNS txt challenge to your callback URL, so that you can prove that you still own the domains for which you are attempting to renew certificates.
+When you order certificates from {{site.data.keyword.cloudcerts_short}}, you can choose to enable auto-renewal. When you set up auto-renewal, requests are handled in the same way as they are when you order a certificate. Like when you order, {{site.data.keyword.cloudcerts_short}} sends a DNS txt challenge to your callback URL, so that you can prove that you own the domains that correlate to the certificates that you're trying to renew.
 
 There are a few things to keep in mind:
 
@@ -216,7 +216,7 @@ There are a few things to keep in mind:
   * By default, {{site.data.keyword.cloudcerts_short}} does not automatically renew ordered certificates.
   * You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.
 
-When you start the renewal process, your renewal is placed in a **Renew pending** state. When the domain validation challenge completes and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your autorenewed certificate is ready or if there was a problem, in your notification channels.
+When you start the renewal process, your renewal is placed in a **Renew pending** state. When the domain validation challenge completes and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your automatically renewed certificate is ready or if there was a problem, in your notification channels.
 
 After renewing a certificate either manually or automatically you must deploy it. [Learn how to automate deployments](/docs/services/certificate-manager?topic=certificate-manager-automating-deployments).
 {: important}

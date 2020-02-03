@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-02-03"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -29,6 +29,12 @@ When you're working with {{site.data.keyword.cloudcerts_short}}, you can configu
 
 Check out the following tables to see which event types are available for each notification channel version.
 {: shortdesc}
+
+### Test notification channel
+
+| Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
+|--------------------------|------------|----------------------------------------|---------------------------------|
+| Test channel | `test_notification_channel`    | v1 or higher | v1 or higher |
 
 ### For imported certificates  
 {: #imported-certificates}
@@ -64,7 +70,7 @@ Notification event types for ordered certificates.
 Newly created notification channels are always created with the latest version release.
 {: tip}
 
-For more information about the differences between the Slack channel versions, see the following updates.
+For more information about the differences between the channel versions, see the following updates.
 
 ## Slack channel versions
 {: #slack-channel-versions}
@@ -83,6 +89,7 @@ For more information about the differences between the Slack channel versions, s
    - Ordered certificate issued
    - Ordered certificate renewed
    - Certificate order failed
+   - Certificate renew failed
    - Issued certificate about to expire
    - Issued certificate expired
 
@@ -159,11 +166,12 @@ For more information about the differences between the Slack channel versions, s
 - New event types:
   - `cert_issued`
   - `cert_renewed`
+  - `cert_order_failed`
   - `cert_renew_failed`
   - `cert_about_to_expire_renew_required`
-  `cert_expired_renew_required`
-- `expiry_date` field is present in event types `cert_about_to_expire_reimport_required` and `cert_about_to_expire_renew_required`. The payload structure remains the same as version 3.
-- Added notifications for the new event types `cert_domain_validation_required` and `cert_domain_validation_completed`, which updated the payload structure. New payload structure: 
+  - `cert_expired_renew_required`
+- `expiry_date` field is present only in event types `cert_about_to_expire_reimport_required` and `cert_about_to_expire_renew_required`. The payload structure remains the same as version 3.
+- Added notifications for the new event types `cert_domain_validation_required` and `cert_domain_validation_completed`, with a new payload structure: 
 
    ```
    {
@@ -183,7 +191,7 @@ For more information about the differences between the Slack channel versions, s
 #### Version 3
 {: #callback-v3}
 
-- The `expiry_date` field is present in event type `cert_about_to_expire_reimport_required`.
+- The `expiry_date` field is present only in event type `cert_about_to_expire_reimport_required`.
 - The field `expires_on` is added to each certificate in an array. For example:
 
    ```
@@ -213,6 +221,7 @@ For more information about the differences between the Slack channel versions, s
    - `cert_about_to_expire_reimport_required`
    - `cert_expired_reimport_required`
    - `cert_reimported`
+   - `test_notification_channel`
 - The updated payload looks similar to the following example:
 
    ```

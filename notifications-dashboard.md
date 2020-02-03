@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-03"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -195,7 +195,9 @@ To test a notification channel, complete the following steps:
 
 1. In the navigation on the service details page, click **Notifications**.
 2. Find your notification channel, click the dots menu, and select **Test Connection**.
-3. Verify that you received a notification in the channel that you configured.
+3. Verify that you received a notification in the channel that you configured:
+    * in Slack channel you will see test message
+    * in Callback URL channel you will get notification with event type `test_notification_channel`
 
 ## Updating a notification channel
 {: #updating-channel}

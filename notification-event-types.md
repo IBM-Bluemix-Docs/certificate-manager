@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-03"
+lastupdated: "2020-02-04"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -129,7 +129,9 @@ For more information about the differences between the channel versions, see the
          "previous_expires_on": <expiration of certificate before renew, for events of type cert_renewed_not_downloaded>
       },
       ...
-   ]     
+   ],
+   "version": 4,
+   "latestVersion": <latest available channel version>
 } 
 ```
 
@@ -147,7 +149,9 @@ For more information about the differences between the channel versions, see the
    "challenge": {
       "txt_record_name": <txt record name>,
       "txt_record_val": <txt record value>
-   }
+   },
+   "version": 4,
+   "latestVersion": <latest available channel version>
 }
 ```
 
@@ -184,7 +188,9 @@ For more information about the differences between the channel versions, see the
       "challenge": {
          "txt_record_name": "<TXT_RECORD_NAME>" ,
          "txt_record_val": "<TXT_RECORD_VALUE>"
-      }
+      },
+      "version": 4,
+      "latestVersion": <latest available channel version>
    }
    ```
 
@@ -208,7 +214,9 @@ For more information about the differences between the channel versions, see the
                "expires_on": <EXPIRY_DAY_TIMESTAMP>,
             },
             ...
-      ]     
+      ],
+      "version": 3,
+      "latestVersion": <latest available channel version>     
    }
    ```
 
@@ -237,7 +245,9 @@ For more information about the differences between the channel versions, see the
                "domains":"<CERTIFICATE_DOMAIN>"
             },
             ...
-      ]      
+      ],
+      "version": 2,
+      "latestVersion": <latest available channel version>     
    }
    ```
 
@@ -258,6 +268,8 @@ For more information about the differences between the channel versions, see the
                "domains":"<CERTIFICATE_DOMAIN>"
             },
             ...
-      ]     
+      ],
+      "version": 1,
+      "latestVersion": <latest available channel version>        
    }
    ```

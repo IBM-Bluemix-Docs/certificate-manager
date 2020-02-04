@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-29"
+lastupdated: "2020-02-04"
 
 keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
@@ -154,7 +154,7 @@ To download the previous version of a certificate, complete the following steps:
 ## Ordering certificates
 {: #order-certificates}
 
-Before you order a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Before you order a certificate, [first complete the required setup](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).  
 To order a certificate, click **Order Certificate**, select either **{{site.data.keyword.cis_full_notm}}** or **Another DNS Provider** and provide the following details:
 
 1. Certificate name.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-03"
+lastupdated: "2020-02-04"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -32,7 +32,7 @@ With {{site.data.keyword.cloudcerts_long}}, you can receive notifications about 
 ## When am I notified?
 {: #notifications-notified} 
 
-When you work with {{site.data.keyword.cloudcerts_short}}, you are notified about your lifecycle events based on the origin of your certificates, their renewal settings, and the operations that you perform during their lifespan. To avoid any downtime and limit your notifications, configure [automatic certificate renewal](/docs/services/certificate-manger?topic=certificate-manager#renew-certificates).
+When you work with {{site.data.keyword.cloudcerts_short}}, you are notified about your lifecycle events based on the origin of your certificates, their renewal settings, and the operations that you perform during their lifespan. To avoid any downtime and limit your notifications, configure [automatic certificate renewal](/docs/certificate-manger?topic=certificate-manager#renew-certificates).
 
 
 For an overview of when and why you are notified, check out the following table. 
@@ -109,7 +109,7 @@ A Callback URL endpoint can be used to automate various tasks such as:
 * Deploy certificates that are obtained from {{site.data.keyword.cloudcerts_short}} to your TLS termination endpoints.
 * Validate domain ownership when you order or renew certificates, in the case your domain is not managed in {{site.data.keyword.cis_full_notm}}.
 
-You can find sample implementations in[Examples](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
+You can find sample implementations in[Examples](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
 
 ### Callback URL requirements
 {: #callback-url-requirements}
@@ -131,7 +131,7 @@ The notification that is sent to your Callback URL is a JSON document that is si
 ```
 {: screen}
 
-After you decode and verify the payload, the content is a JSON string [according to the channel version](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
+After you decode and verify the payload, the content is a JSON string [according to the channel version](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#channel-versions).
 
 
 ## Configuring a notification channel
@@ -189,7 +189,7 @@ You can implement a Callback URL to handle various tasks, or create several Call
 You can test a notification channel to ensure that your notification channel is configured correctly.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
+Before you begin, [configure a notification channel](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 To test a notification channel, complete the following steps:
 
@@ -205,7 +205,7 @@ To test a notification channel, complete the following steps:
 You can update your notification channel configuration, disable or enable notifications, or delete channels from {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
-Before you begin, [configure a notification channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
+Before you begin, [configure a notification channel](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).
 
 To update your notification channel, complete the following steps:
 
@@ -240,7 +240,7 @@ If you have existing notification channels (Slack or Callback URL), to start get
 3. Test that the new channel works correctly.
 4. Delete the old channel.
 
-For channel versions, see [Notification event types and payload versions](/docs/services/certificate-manager?topic=certificate-manager-notifications-event-types).
+For channel versions, see [Notification event types and payload versions](/docs/certificate-manager?topic=certificate-manager-notifications-event-types).
 
 ## Examples
 {: #examples}

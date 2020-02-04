@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-30"
+lastupdated: "2020-02-04"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -30,7 +30,7 @@ subcollection: certificate-manager
 You can use {{site.data.keyword.cloudcerts_long}} to order public SSL/TLS certificates for your apps and services that are signed by supported external Certificate Authorities. {{site.data.keyword.cloudcerts_short}} makes it easy for you to order public certificates in addition to providing extra security for your SSL/TLS private keys. After your certificate is issued, you can deploy it to integrated services, or download it for use elsewhere.  
 {: shortdesc}
 
-When you order a certificate, your private key for SSL/TLS is generated directly in {{site.data.keyword.cloudcerts_short}} and stored securely. All requests and access to issued certificates can be managed through [access control](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles) and automatically audited by using [{{site.data.keyword.at_short}}](/docs/services/certificate-manager?topic=certificate-manager-at_events).  
+When you order a certificate, your private key for SSL/TLS is generated directly in {{site.data.keyword.cloudcerts_short}} and stored securely. All requests and access to issued certificates can be managed through [access control](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles) and automatically audited by using [{{site.data.keyword.at_short}}](/docs/certificate-manager?topic=certificate-manager-at_events).  
 
 {{site.data.keyword.cloudcerts_short}} implements the Automatic Certificate Management Environment (ACME) v2 Protocol as an ACME client. The ACME protocol makes it possible to automatically obtain browser trusted certificates without human intervention.
 
@@ -130,7 +130,7 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
     </tr>
   </table>
 
-You're now ready to [order a certificate](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)!
+You're now ready to [order a certificate](/docs/certificate-manager?topic=certificate-manager-ordering-certificates#ordering-certificate)!
 
 
 ### Another DNS Provider
@@ -138,10 +138,10 @@ You're now ready to [order a certificate](/docs/services/certificate-manager?top
 
 To verify your control over a domain when you're using a third-party DNS provider, {{site.data.keyword.cloudcerts_short}} sends a TXT record to a Callback URL notifications channel that you provide, which allows for you to automate the domain validation process.
 
-A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).  
+A Callback URL is a prerequisite for ordering certificates when using a DNS Provider that is not {{site.data.keyword.cis_full_notm}}. [Learn more about configuring a callback URL](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).  
 {: note}
 
-First, you implement a callback server for domain validation, and then you provide its endpoint to a Callback URL notifications channel.  To get started, see [setting up a Callback URL notifications channel](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
+First, you implement a callback server for domain validation, and then you provide its endpoint to a Callback URL notifications channel.  To get started, see [setting up a Callback URL notifications channel](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 For more information about setting up domain validation by using a Callback URL notifications channel, see [this blog post](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}. Also provided are [these sample implementations of domain validation](https://github.com/ibm-cloud-security/certificate-manager-domain-validation-cloud-function-sample){: external} using Cloud Function actions for {{site.data.keyword.cis_short_notm}}, Cloudflare, and SoftLayer.  
 {: tip}
@@ -170,7 +170,7 @@ The notifications channel receives a notification with the following structure:
 
 Once the DNS TXT challenge is sent to your Callback URL, you have to answer the challenge within 10 minutes. {{site.data.keyword.cloudcerts_short}} checks to see whether the challenge is complete. Once it is verified that you answered the challenge, you are sent a second notification to let you know you can remove the TXT record.
 
-To see frequently asked questions about ordering certificates, [review the FAQ page](/docs/services/certificate-manager?topic=certificate-manager-faq).  
+To see frequently asked questions about ordering certificates, [review the FAQ page](/docs/certificate-manager?topic=certificate-manager-faq).  
 {: tip}
 
 ## Ordering certificates
@@ -217,7 +217,7 @@ There are a few things to keep in mind:
 
 When you start the renewal process, your renewal is placed in a **Renew pending** state. When the domain validation challenge completes and {{site.data.keyword.cloudcerts_short}} verifies that you own the requested domain, you get a renewed certificate and its state changes to **Valid**. You are notified when your automatically renewed certificate is ready or if there was a problem, in your notification channels.
 
-After renewing a certificate either manually or automatically you must deploy it. [Learn how to automate deployments](/docs/services/certificate-manager?topic=certificate-manager-automating-deployments).
+After renewing a certificate either manually or automatically you must deploy it. [Learn how to automate deployments](/docs/certificate-manager?topic=certificate-manager-automating-deployments).
 {: important}
 
 ### Enabling automatic renewal of certificates 

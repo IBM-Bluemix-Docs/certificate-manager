@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-27"
+lastupdated: "2020-02-04"
 
 keywords: certificates, pem format, algorithms, public key, private keys, version control, pending order
 
@@ -67,7 +67,7 @@ Only Callback and Slack notifications are supported.
 {: #certificate-versioning}
 {: faq}
 
-You can update a certificate by reimporting a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
+You can update a certificate by reimporting a new version of the certificate that has the same domain as the existing certificate, but has a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 
 
@@ -75,7 +75,7 @@ You can update a certificate by reimporting a new version of the certificate tha
 {: #access-policies}
 {: faq}
 
-Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
+Certificates can be protected by using IAM access policies to achieve granular access control, see [Managing service access roles](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-05"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -31,6 +31,7 @@ Check out the following tables to see which event types are available for each n
 {: shortdesc}
 
 ### Test notification channel
+{: #test-notification-channel}
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|
@@ -75,14 +76,14 @@ For more information about the differences between the channel versions, see the
 ## Slack channel versions
 {: #slack-channel-versions}
 
-#### Version 3 (updated) (February 9th, 2020)
+### Version 3 (updated) (February 9th, 2020)
 {: #slack-v3-update}
 
 - Added new event types:
   - Issued certificate was not downloaded
   - Renewed certificate was not downloaded
 
-#### Version 3
+### Version 3
 {: #slack-v3}
 
 - New event types:
@@ -93,12 +94,12 @@ For more information about the differences between the channel versions, see the
    - Issued certificate about to expire
    - Issued certificate expired
 
-#### Version 2
+### Version 2
 {: #slack-v2}
 
 - New notification for reimported certificates
 
-#### Version 1
+### Version 1
 {: #slack-v1}
 
 - Notifications are sent only for expiring certificates.
@@ -111,7 +112,8 @@ For more information about the differences between the channel versions, see the
 
 
 #### Certificates lifecycle notification
-{: #callback-lifecycle}   
+{: #callback-lifecycle} 
+
 ```
 {
    "instance_crn": <instance crn>,

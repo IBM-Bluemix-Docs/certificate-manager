@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-02-09"
 
 keywords: certificates, limites, ssl, tls, free, renew certificate, order certificate, update operations, reimport, import certificates
 
@@ -68,11 +68,11 @@ The following table lists the various rate limits for {{site.data.keyword.cloudc
   </tr>
   <tr>
     <td>Re/import certificates</td>
-    <td>5 actions per minute</td>
+    <td>5 actions per minute for the same certificate</td>
   </tr>
   <tr>
     <td>Update operations on certificates</td>
-    <td>5 actions per minute</td>
+    <td>5 actions per minute for the same certificate</td>
   </tr>
   <tr>
     <td>Order certificates</td>
@@ -82,4 +82,7 @@ The following table lists the various rate limits for {{site.data.keyword.cloudc
     <td>Renew certificates</td>
     <td>5 renews/minute per {{site.data.keyword.cloudcerts_short}} instance, 100 renews/hour per IBM user account, and 5 certificates for the same domains per week.</td>
   </tr>
+  <tr>
+    <td>Update order policy</td>
+    <td>5 actions per minute for the same certificate</td>
 </table>

@@ -67,7 +67,7 @@ The following table lists the various rate limits for {{site.data.keyword.cloudc
     <td>1 action per second</td>
   </tr>
   <tr>
-    <td>Re/import certificates</td>
+    <td>Reimport certificates</td>
     <td>5 actions per minute for the same certificate</td>
   </tr>
   <tr>

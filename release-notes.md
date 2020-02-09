@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-09"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -26,6 +26,15 @@ subcollection: certificate-manager
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 9 February 2020
+{: 9February2020}
+
+- **Certificate auto-renewal**  
+  Ordered certificates can be enabled to be auto-renewed 31 days before expiration. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
+
+- **Latest channel version**  
+  The payload received by a Callback URL contains the current channel version and the latest channel version available. See [Notification event types and payload versions](/docs/certificate-manager?topic=certificate-manager-notifications-event-types).
 
 ## 21 November 2019
 {: 21November2019}

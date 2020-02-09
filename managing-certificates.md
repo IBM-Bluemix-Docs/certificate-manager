@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-02-09"
 
 keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
@@ -66,7 +66,7 @@ To import a certificate, click **Import Certificate** and provide the following 
 5. Optional: Enter a description.
 6. Click **Import**.
 
-After you import a certificate, the following information is displayed in the Certificates table. To view more information about the certificate, you can expand the certificate's row in the Certificates table.
+After you import a certificate, the following information is displayed in the Certificates table. To view more information about the certificate, you can click on the certificate row in the Certificates table.
 
 <table>
 <caption> Table 1. Information about the imported certificate </caption>
@@ -133,7 +133,7 @@ If your certificate is about to expire, you can update it by importing a new ver
 
 To reimport a certificate, complete the following steps:
 
-1. Expand the row for the certificate.
+1. Click on the side menu for the requested certificate.
 2. Click **Reimport Certificate**.
 3. Select the new certificate file in PEM format by clicking **Browse**.
 4. (Optional) Select the new certificate's private key in PEM format by clicking **Browse**.
@@ -148,8 +148,8 @@ You can attempt to reimport a certificate up to five times per minute.
 
 To download the previous version of a certificate, complete the following steps:
 
-1. Expand the row for the certificate.
-2. Click the **Previous version** link.
+1. Click on the row side menu for the requested certificate.
+2. Click the **Previous version** button.
 
 ## Ordering certificates
 {: #order-certificates}

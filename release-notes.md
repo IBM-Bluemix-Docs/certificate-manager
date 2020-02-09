@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-26"
+  years: 2017, 2020
+lastupdated: "2020-02-09"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -27,6 +27,21 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 9 February 2020
+{: 9February2020}
+
+- **Certificate auto-renewal**  
+  Ordered certificates can be enabled to be auto-renewed 31 days before expiration. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
+
+- **Latest channel version**  
+  The payload received by a Callback URL contains the current channel version and the latest channel version available. See [Notification event types and payload versions](/docs/certificate-manager?topic=certificate-manager-notifications-event-types).
+
+- **Changes to life-cycle events**  
+  - Ordered/Renewed Let's Encrypt certificates will no longer trigger the `cert_about_to_expire_renew_required` notification once issued and 60 days before expiration. 
+  - `cert_issued_not_downloaded` notification will be triggered if the certificate is not downloaded 30 days after it was issued. 
+  - `cert_renewed_not_downloaded` notification will be triggered if the renewed certificate is not downloaded, 30, 10, 1 days before and the day your previous issued certificate expires.
+  - Test notification channel triggers new event type: `test_notification_channel`
+
 ## 21 November 2019
 {: 21November2019}
 
@@ -46,19 +61,19 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: 8July2019}
 
 - **IBM Cloud Internet Services as a DNS provider**  
-  You can now use IBM Cloud Internet Services as a DNS provider, simplifying the certificate ordering experience. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+  You can now use IBM Cloud Internet Services as a DNS provider, simplifying the certificate ordering experience. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 10 June 2019
 {: 10June2019}
 
 - **Renew ordered Let's Encrypt certificates**  
-  You can now renew Let's Encrypt certificates that you have ordered using {{site.data.keyword.cloudcerts_short}}. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+  You can now renew Let's Encrypt certificates that you have ordered using {{site.data.keyword.cloudcerts_short}}. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 6 May 2019
 {: 6May2019}
 
 - **Order Let's Encrypt certificates**  
-  You can now order Let's Encrypt certificates. [Learn more about ordering certificates](/docs/services/certificate-manager?topic=certificate-manager-order-certificates).
+  You can now order Let's Encrypt certificates. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
 
 ## 18 February 2019
 {: 18February2019}
@@ -98,7 +113,7 @@ The service is compliant with the EU requirements.
 {: 14November2018}
 
 - **Reimport**  
-  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/services/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
+  You can update a certificate by reimporting a new version that has the same domain as the existing certificate, but with a new expiry date. When a certificate is reimported, the existing version of the certificate is retained as a backup, see [Reimporting a certificate](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#reimport-certificate).
 
 - **1000 certificates per instance**  
   You can import up to 1000 certificates per instance.
@@ -140,19 +155,19 @@ The service is compliant with the EU requirements.
   Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/).
 
 - **Platform roles replaced with Service roles**  
-  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
+  You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
 
 ## 12 July 2018
 {: 12July2018}
 
 - **Callback notifications**  
-  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
+  Added callback support for notifications. You can choose to either send notifications to Slack or use any callback URL to post notifications. For example, you can send notifications to PagerDuty, automatically open an issue in GitHub, or trigger renewal scripts. [Learn more about notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 ## 12 June 2018
 {: 12June2018}
 
 - **Slack notifications**  
-  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
+  Added Slack notifications so that you never miss an expiring certificate. [Learn more about notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#setup-callback).
 
 ## 8 January 2018
 {: 8January2018}

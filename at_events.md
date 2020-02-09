@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-01-14"
+lastupdated: "2020-02-04"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -28,7 +28,7 @@ subcollection: certificate-manager
 Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/services/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
+The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
 The following table lists the API methods that generate an event when they are called.
 
@@ -51,9 +51,16 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Order a certificate.</td>
   </tr>
   <tr>
+    <td>`cloudcerts.certificate-order-policy.update`</td>
+    <td>Enable or disable certificate auto-renew.</td>
+  <tr>
     <td>`cloudcerts.certificate.renew`</td>
 	  <td>Renew an issued certificate.</td>
   </tr>
+    <tr>
+      <td>`cloudcerts.certificate.issued`</td>
+  	  <td>Whether a certificate order/renew completed successfully or failed.</td>
+    </tr>  
   <tr>
     <td>`cloudcerts.certificate-metadata.read`</td>
 	  <td>Get a certificate metadata.</td>
@@ -95,8 +102,8 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Create a notifications channel.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.notification-channel.state`</td>
-	  <td>Disable or enable a notifications channel.</td>
+    <td>`cloudcerts.notification-channel-state.update`</td>
+	  <td>Enable or disable a notifications channel.</td>
   </tr>
   <tr>
     <td>`cloudcerts.notification-channel.update`</td>

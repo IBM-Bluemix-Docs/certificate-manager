@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
@@ -25,7 +25,7 @@ subcollection: certificate-manager
 # Managing certificates from the dashboard
 {: #managing-certificates-from-the-dashboard}
 
-You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services.
+You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manage certificates that you obtain from third-party issuers, or order from {{site.data.keyword.cloudcerts_short}}, to use with your {{site.data.keyword.IBM_notm}} cloud-based apps or services.
 {: shortdesc}
 
 ## Supported certificate formats and public key algorithms
@@ -34,7 +34,7 @@ You can use the {{site.data.keyword.cloudcerts_full}} service dashboard to manag
 ### Certificate formats
 * PEM
 
-Review the OpenSSL documentation to learn how to convert other certificate formats (such as P12 and CRT) to PEM.
+Review the OpenSSL documentation to learn how to convert other certificate formats, such as P12 and CRT, to PEM.
 {: note} 
 
 ### Public key algorithms
@@ -46,7 +46,7 @@ Review the OpenSSL documentation to learn how to convert other certificate forma
 ## Importing a certificate
 {: #importing-a-certificate}
 
-Import your certificates so that you can manage them.
+To start managing your certificates, import them into {{site.data.keyword.cloudcerts_short}}.
 {: shortdesc}
 
 ### Before you begin
@@ -54,7 +54,7 @@ Import your certificates so that you can manage them.
 
 * Create a valid, unexpired certificate with a matching private key (key is optional).
 * Convert the files into Privacy-enhanced Electronic Mail (PEM) format.
-* The certificate must be a X.509 compliant certificate.
+* The certificate must be an X.509 compliant certificate.
 * Keep the private key unencrypted to ensure that it can be imported.
 
 To import a certificate, click **Import Certificate** and provide the following details:
@@ -140,7 +140,7 @@ To reimport a certificate, complete the following steps:
 5. (Optional) Provide a new intermediate certificate file in PEM format by clicking **Browse**.
 6. Click **Reimport** and then **Done**.
 
-Reimporting certificates is limited to five actions per minute.
+You can attempt to reimport a certificate up to five times per minute.
 {: note}
 
 ### Downloading a previous version of your certificate
@@ -154,11 +154,11 @@ To download the previous version of a certificate, complete the following steps:
 ## Ordering certificates
 {: #order-certificates}
 
-Before you order a certificate, [first complete the required setup](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates).  
+Before you order a certificate, [first complete the required setup](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).  
 To order a certificate, click **Order Certificate**, select either **{{site.data.keyword.cis_full_notm}}** or **Another DNS Provider** and provide the following details:
 
 1. Certificate name.
-2. Certificate Authority.
+2. Certificate authority.
 3. Required domains.
 4. Appropriate algorithm and key algorithm.
 5. Click **Order**.
@@ -169,19 +169,41 @@ Ordering certificates is limited to five orders/minute per {{site.data.keyword.c
 ## Renewing certificates
 {: #renew-certificates}
 
-You can only renew certificates that you ordered through {{site.data.keyword.cloudcerts_short}}.  
-To renew a certificate, complete the following steps:
+You can manually or automatically renew certificates that you order through {{site.data.keyword.cloudcerts_short}}. You can also disable the auto-renewal feature after you enable it.
 
-  1. Click on the menu in the row of the certificate you want to renew.
-  2. Click **Renew Certificate**.
-  3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** check box. This will renew your certificate with a new key pair.    
-  4. Click **Renew**
+Renewing a certificate has the following limitations: 
 
-Renewing a certificates is limited to five renewal requests per certificate per minute, 100 renewal/hour per IBM user account.  
-{: note}
+* Five renewal requests per certificate, per minute.
+* One 100 renewal requests per hour, within each IBM user account.
 
-When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
-{: important}
+### Automatically renewing certificates
+{: #renew-auto}
+
+You can set a certificate to automatically renew while you're ordering. Or, you can enable auto-renewal after it's configured. 
+
+* To enable auto-renewal while ordering a certificate, toggle **Auto-renewal** to **On**.
+* To enable auto-renewal for a certificate that you already own, select **Enable auto-renewal** from a certificates side menu.
+
+### Manually renewing certificates
+{: #renew-manual}
+
+If you need to manually renew your certificates, complete the following steps.
+
+1. Click the menu in the row of the certificate you want to renew.
+2. Click **Renew Certificate**.
+3. Optional: You can choose to rekey your certificate by checking the **Rekey certificate** checkbox. This renews your certificate with a new key pair.
+
+  When you rekey a certificate, make sure to deploy the new certificates and keys everywhere they are in use.
+  {: note}
+  
+4. Click **Renew**.
+
+
+### Stopping automatic renewal
+{: #renew-stop}
+
+To disable automatic renewal, select **Disable auto-renewal** from the certificates menu.
+
 
 ## Searching certificates
 {: #searching-certificates}
@@ -190,7 +212,7 @@ If you manage many certificates, you can use the search bar to locate the requir
 {: shortdesc}
 
 * To search for a certificate name, domain, or issuer, start to type your term into the search bar and press **Enter**.
-* To search for an exact value, enclose your search term with double-quotes.
+* To search for an exact value, enclose your search term with double quotation marks.
 * To view all of your certificates, click the **X** icon in the search bar.
 
 ## Downloading certificates
@@ -201,7 +223,7 @@ When you are ready to deploy your certificate to your app or service, you can do
 
 To download a certificate, complete the following steps:
 
-1. Select the check box for the certificate that you want to download.
+1. Select the checkbox for the certificate that you want to download.
 2. Click **Download Certificate**. Depending on what you imported into the service, you receive a compressed file that contains PEM files for the certificate, an associated private key, and an associated intermediate certificate.
 
 You cannot download expired certificates.
@@ -215,10 +237,10 @@ If you want to stop tracking a certificate, you can delete it.
 
 To delete a certificate, complete the following steps:
 
-1. Select the check box for the certificate that you want to delete.
+1. Select the checkbox for the certificate that you want to delete.
 2. Click the **Trash** icon.
 
-## Updating certificates metadata
+## Updating certificate metadata
 {: #updating-certificates-metadata}
 
 You can also update the name and description of a certificate.

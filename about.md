@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-26"
+  years: 2017, 2020
+lastupdated: "2020-01-23"
 
 keywords: certificates, ssl, tls, ssl certificates, tls certificates, public certificates, security requirements, import certificate, cert, notified, manage certificates, automated renewal, availability
 
@@ -28,7 +28,7 @@ subcollection: certificate-manager
 {{site.data.keyword.cloudcerts_full}} helps you to obtain, store and manage SSL/TLS certificates that you use for {{site.data.keyword.cloud_notm}} deployments, or other Cloud and on-prem deployments.
 {: shortdesc}
 
-You can import SSL/TLS certificates that you obtain for your apps and services, store them securely, and get a central view of the certificates that you are using. Or, you can order public certificates through Certificate Manager from supported CAs.
+You can import SSL/TLS certificates that you obtain for your apps and services, store them securely, and get a central view of the certificates that you are using. Or, you can order public certificates through {{site.data.keyword.cloudcerts_short}} from supported CAs.
 
 You can manage your certificates in the following ways:
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -128,10 +128,10 @@ To configure access policies, complete the following steps:
 2. Select a single user from the Users list, or an Access group.
 3. Click **Access policies** and then on **Assign access**.
 4. Click **Assign access to resources**.
-5. From the **Services** menu, select **Certificate Manager**.
+5. From the **Services** menu, select **{{site.data.keyword.cloudcerts_short}}**.
 6. From the **Service instance** menu, select a {{site.data.keyword.cloudcerts_short}} instance, or use the default value `All instances`.
-7. Assign a [platform access role](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) to the user.
-8. Assign a [service access role](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) to the user.
+7. Assign a [platform access role](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles#platform-access-roles) to the user.
+8. Assign a [service access role](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles#service-access-roles) to the user.
 9. Click **Assign** to assign the access policy to the user.
 
 ### Allowing access to a specific certificate
@@ -139,7 +139,7 @@ To configure access policies, complete the following steps:
 
 To allow access to a specific certificate, complete the following steps:
 
-1. [Retrieve your certificate ID](/docs/services/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
+1. [Retrieve your certificate ID](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles#get-certificate-id).
 2. Create two access policies:
    - The first policy: Assign at least **Viewer** platform access role for the service instance
    - The second policy: Assign at least **Reader** service access role

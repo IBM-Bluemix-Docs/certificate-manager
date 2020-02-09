@@ -3,7 +3,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="certificate-manager" audience="service" category="security" arm="3663406" href="/docs/services/certificate-manager?topic=certificate-manager-getting-started#getting-started" path="services/certificate-manager"}
+{: .toc subcollection="certificate-manager" audience="service" category="security" href="/docs/certificate-manager?topic=certificate-manager-getting-started" path="certificate-manager"}
 Certificate Manager
 
     {: .navgroup id="learn"}
@@ -29,7 +29,7 @@ Certificate Manager
 
     {: .navgroup id="reference"}
     [API documentation](https://cloud.ibm.com/apidocs/certificate-manager)
-    event-types-payload-versions.md
+    notification-event-types.md
     limits.md
     regions-and-endpoints.md
     at_events.md

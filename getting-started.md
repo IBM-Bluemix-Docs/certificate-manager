@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -48,13 +48,13 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?
 2. Create an instance.
 
    ```
-   ibmcloud resource service-instance-create "My Certificate Manager instance" cloudcerts free us-south
+   ibmcloud resource service-instance-create "My {{site.data.keyword.cloudcerts_short}} instance" cloudcerts free us-south
    ```
 
-   - Replace **My Certificate Manager instance** with your choice of instance name.
+   - Replace **My {{site.data.keyword.cloudcerts_short}} instance** with your choice of instance name.
    - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), or **au-syd** (Sydney).
 
 <br/>
 
-[Learn more](/docs/services/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/services/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's new in the service, see [Release notes](/docs/services/certificate-manager?topic=certificate-manager-release-notes#release-notes).
+[Learn more](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's new in the service, see [Release notes](/docs/certificate-manager?topic=certificate-manager-release-notes#release-notes).
 {: note}

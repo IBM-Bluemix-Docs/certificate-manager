@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2019
-lastupdated: "2019-11-19"
+  years: 2017, 2020
+lastupdated: "2020-02-04"
 
 keywords: certificates,ssl, tls, lifecycle, certificate, cert, devops process, domain ownership, certificate authority, free certificates, lets encrypt
 
@@ -43,9 +43,9 @@ Check out the following image and descriptions to see how {{site.data.keyword.cl
   <dt>Store</dt>
     <dd>When you order a certificate through {{site.data.keyword.cloudcerts_short}}, it is automatically stored for you. If you bring your own certificate, you can easily import it into the service. You can also securely store the private key of a certificate alongside it.</dd>
   <dt>Deploy</dt>
-    <dd>When you need to use your certificate, you can automate the deployment to TLS (SSL) termination points by integrating {{site.data.keyword.cloudcerts_short}} with DevOps processes. You can also use the <a href="/docs/services/containers?topic=containers-getting-started">IBM Cloud Kubernetes Service</a> CLI to easily deploy certificates from {{site.data.keyword.cloudcerts_short}}.</dd>
+    <dd>When you need to use your certificate, you can automate the deployment to TLS (SSL) termination points by integrating {{site.data.keyword.cloudcerts_short}} with DevOps processes. You can also use the <a href="/docs/containers?topic=containers-getting-started">IBM Cloud Kubernetes Service</a> CLI to easily deploy certificates from {{site.data.keyword.cloudcerts_short}}.</dd>
   <dt>Monitor and Alert</dt>
-    <dd>The service continuously monitors your certificates for their expiration dates to notify you of upcoming expiring certificates and other lifecycle events such as reimports, orders, or renews through Slack or Callback URLs. If you have alerts that come from more than one service, it can be helpful to integrate with <a href="/docs/services/security-advisor?topic=security-advisor-getting-started">IBM Cloud Security Advisor</a> to manage all of your alerts in one place.</dd>
+    <dd>The service continuously monitors your certificates for their expiration dates to notify you of upcoming expiring certificates and other lifecycle events such as reimports, orders, or renews through Slack or Callback URLs. If you have alerts that come from more than one service, it can be helpful to integrate with <a href="/docs/security-advisor?topic=security-advisor-getting-started">IBM Cloud Security Advisor</a> to manage all of your alerts in one place.</dd>
   <dt>Renew</dt>
     <dd>With {{site.data.keyword.cloudcerts_short}}, you can configure your certificates to be automatically renewed. When your certificate is renewed, the cycle begins again.</dd>
 </dl>

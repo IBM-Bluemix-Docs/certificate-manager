@@ -36,6 +36,12 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 - **Latest channel version**  
   The payload received by a Callback URL contains the current channel version and the latest channel version available. See [Notification event types and payload versions](/docs/certificate-manager?topic=certificate-manager-notifications-event-types).
 
+- **Changes to life-cycle events**  
+  - Ordered/Renewed Let's Encrypt certificates will no longer trigger the `cert_about_to_expire_renew_required` notification once issued and 60 days before expiration. 
+  - `cert_issued_not_downloaded` notification will be triggered if the certificate is not downloaded 30 days after it was issued. 
+  - `cert_renewed_not_downloaded` notification will be triggered if the renewed certificate is not downloaded, 30, 10, 1 days before and the day your previous issued certificate expires.
+  - Test notification channel triggers new event type: `test_notification_channel`
+
 ## 21 November 2019
 {: 21November2019}
 

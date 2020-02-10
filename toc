@@ -21,6 +21,7 @@ Certificate Manager
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    automating-deployments.md
     managing-certificates.md
     order-certificates.md
     notifications-dashboard.md

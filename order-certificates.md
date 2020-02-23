@@ -53,7 +53,7 @@ Domain validation includes the verification that you own the domain for which yo
 * You can order a certificate for a CNAME subdomain which spans up to 3 levels to your host domain. Example: you can order a certificate for CNAME _c3.c2.c1_ in the domain _mydomain.org_. 
 * You can order a SAN certificate with a wildcard domain and additional domains not including direct subdomains. Example: You can order a certificate for the domains _*.mydomain.org_ and _*.www.mydomain.org_, but not for the domains _*.mydomain.org_ and _www.mydomain.org_.
 * You can order a certificate with a primary domain length that is no longer than 64 characters.
-* The {{site.data.keyword.cloudcerts_short}} console is limited to display up to 100 domains to select from, when using {{site.data.keyword.cis_short}} (CIS) as the DNS provider. If you don't see the domain(s) you need to make the order use the {{site.data.keyword.cloudcerts_short}} order API and specify the domain(s).
+* The {{site.data.keyword.cloudcerts_short}} console is limited to display up to 100 domains to select from, when using {{site.data.keyword.cis_short}} as the DNS provider. If you don't see the domain(s) you need to make the order use the {{site.data.keyword.cloudcerts_short}} order API and specify the domain(s).
 
 ## Supported Certificate Authorities
 {: #supported-certificate-authorities}

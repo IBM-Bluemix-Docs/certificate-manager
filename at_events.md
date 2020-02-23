@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-22"
+lastupdated: "2020-02-23"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -127,7 +127,7 @@ The following table lists the API methods that generate an event when they are c
 	  <td>Test a notifications channel.</td>
   </tr>
   <tr>
-    <td>`cloudcerts.notification.sent`</td>
+    <td>`cloudcerts.notification.send`</td>
 	  <td>A notification was sent to a notifications channel endpoint.</td>
   </tr>
   <tr>

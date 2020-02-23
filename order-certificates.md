@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-22"
+lastupdated: "2020-02-23"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -50,10 +50,10 @@ Domain validation includes the verification that you own the domain for which yo
 {: #certificate-ordering-limitations}
 
 * You can order a certificate only for domains that can resolve the Authoritative Name Server. On Linux or macOS it can be checked using the command: `host -t ns <your_domain>`. On Windows it can be checked using `nslookup <your_domain>`.
-•	You can order a certificate with for a CNAME sub domain which spans up to 3 levels to your host domain. Example: you can order certificate for CNAME "c3.c2.c1" in the domain "mydomain.org". 
-•	You can order a SAN certificate with a wildcard domain and additional domains not including direct subdomains. Example: You can order a certificate for the domains "*.mydomain.org" and "*.www.mydomain.org", but not for the domains "*.mydomain.org" the "www.mydomain.org"
-•	You can order a certificate with a primary domain length that no longer than 64 characters.
-•	The {{site.data.keyword.cloudcerts_short}} console is limited to display up to 100 domains to select from, when using {{site.data.keyword.cis_short}} (CIS) as the DNS provider. If you don't see the domain(s) you need to make the order - use the {{site.data.keyword.cloudcerts_short}} order API and specify the domain(s).
+* You can order a certificate for a CNAME subdomain which spans up to 3 levels to your host domain. Example: you can order a certificate for CNAME "c3.c2.c1" in the domain "mydomain.org". 
+* You can order a SAN certificate with a wildcard domain and additional domains not including direct subdomains. Example: You can order a certificate for the domains "*.mydomain.org" and "*.www.mydomain.org", but not for the domains "*.mydomain.org" and "www.mydomain.org".
+* You can order a certificate with a primary domain length that is no longer than 64 characters.
+* The {{site.data.keyword.cloudcerts_short}} console is limited to display up to 100 domains to select from, when using {{site.data.keyword.cis_short}} (CIS) as the DNS provider. If you don't see the domain(s) you need to make the order use the {{site.data.keyword.cloudcerts_short}} order API and specify the domain(s).
 
 ## Supported Certificate Authorities
 {: #supported-certificate-authorities}

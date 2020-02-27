@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-05"
+lastupdated: "2020-02-27"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -32,6 +32,8 @@ Check out the following tables to see which event types are available for each n
 
 ### Test notification channel
 {: #test-notification-channel}
+
+Notification event type for testing a channel.
 
 | Notification description | Event type | Supported Callback URL channel version | Supported Slack channel version |
 |--------------------------|------------|----------------------------------------|---------------------------------|

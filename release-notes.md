@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-09"
+lastupdated: "2020-03-09"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -26,6 +26,18 @@ subcollection: certificate-manager
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 8 March 2020
+{: 8March2020}
+
+- **Support for any subdomain**  
+  Certificate ordering now extends to any subdomain.
+
+## 25 February 2020
+{: 25February2020}
+
+- **Certificate ordering for subdomains and for wildcard multi-domain (SAN)**  
+  Certificate ordering now extends to subdomains, and for wildcard multi-domains.
 
 ## 9 February 2020
 {: 9February2020}

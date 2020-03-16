@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-27"
+lastupdated: "2020-03-16"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -26,11 +26,14 @@ subcollection: certificate-manager
 {: #notifications-event-types}
 
 When you're working with {{site.data.keyword.cloudcerts_short}}, you can configure notification channels that alert you to various lifecycle events. The type of event and the payload that is delivered might be different depending on the version of the notification channel that you're using.
-
-Check out the following tables to see which event types are available for each notification channel version.
 {: shortdesc}
 
-### Test notification channel
+## Event types
+{: #notification-types}
+
+Check out the following tables to see which event types are available for each notification channel version.
+
+## Test notification channel
 {: #test-notification-channel}
 
 Notification event type for testing a channel.

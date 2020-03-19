@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-19"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -25,12 +25,14 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:shortdesc: .shortdesc}
 {:support: data-reuse='support'}
+{:script: data-hd-video='script'}
 {:table: .aria-labeledby="caption"}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:help: data-hd-content-type='help'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+
 
 
 # Managing service access roles

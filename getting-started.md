@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-16"
+lastupdated: "2020-03-19"
 
 keywords: certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -25,12 +25,14 @@ subcollection: certificate-manager
 {:deprecated: .deprecated}
 {:shortdesc: .shortdesc}
 {:support: data-reuse='support'}
+{:script: data-hd-video='script'}
 {:table: .aria-labeledby="caption"}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:help: data-hd-content-type='help'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+
 
 
 # Getting started tutorial

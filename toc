@@ -3,7 +3,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="certificate-manager" audience="service" category="security" href="/docs/certificate-manager?topic=certificate-manager-getting-started" path="certificate-manager"}
+{: .toc subcollection="certificate-manager" audience="service" category="security" href="/docs/certificate-manager?topic=certificate-manager-getting-started" console-page="/catalog/services/certificate-manager" product-page="https://www.ibm.com/cloud/certificate-manager" path="certificate-manager"}
 Certificate Manager
 
     {: .navgroup id="learn"}

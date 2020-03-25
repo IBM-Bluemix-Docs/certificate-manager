@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-10"
+lastupdated: "2020-03-19"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
@@ -10,17 +10,30 @@ subcollection: certificate-manager
 
 ---
 
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
-{:table: .aria-labeledby="caption"}
 {:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{:screen: .screen}
 {:download: .download}
+{:external: target="_blank" .external}
+{:new_window: target="_blank"}
+{:faq: data-hd-content-type='faq'}
+{:gif: data-image-type='gif'}
+{:important: .important}
+{:note: .note}
+{:pre: .pre}
+{:tip: .tip}
+{:preview: .preview}
+{:deprecated: .deprecated}
+{:shortdesc: .shortdesc}
+{:support: data-reuse='support'}
+{:script: data-hd-video='script'}
+{:table: .aria-labeledby="caption"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:help: data-hd-content-type='help'}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms}
+
+
 
 # Tutorial: Automating deployments
 {: #automating-deployments}
@@ -126,7 +139,7 @@ To learn more about ALB commands, see [the ALB documentation](/docs/containers-c
 
 1. Be sure that your Kubernetes cluster and your {{site.data.keyword.cloudcerts_short}} service instance are located in the same {{site.data.keyword.cloud_notm}} account.
 
-2. Be sure that you have the latest version of the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli#install_use) and the [{{site.data.keyword.containershort}} CLI plug-in](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli).
+2. Be sure that you have the latest version of the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli/reference/ibmcloud?topic=cloud-cli-install-ibmcloud-cli) and the [{{site.data.keyword.containershort}} CLI plug-in](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli).
 
 3. Assign the deploying entity the `Writer` service access policy for the {{site.data.keyword.cloudcerts_short}} service and the `Administrator` platform policy for the cluster that you're working with.
 

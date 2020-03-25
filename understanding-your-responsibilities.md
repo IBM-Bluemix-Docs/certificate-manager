@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-02-04"
+lastupdated: "2020-03-19"
 
 keywords: certificates, ssl, tls, responsabilities, ibm, terms, conditions, managing service roles, regulation compliance, pci, dss, ha, backup, industry standard
 
@@ -10,17 +10,30 @@ subcollection: certificate-manager
 
 ---
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:screen: .screen}
-{:pre: .pre}
 {:codeblock: .codeblock}
-{:tip: .tip}
-{:note: .note}
-{:important: .important}
-{:deprecated: .deprecated}
+{:screen: .screen}
 {:download: .download}
+{:external: target="_blank" .external}
+{:new_window: target="_blank"}
+{:faq: data-hd-content-type='faq'}
+{:gif: data-image-type='gif'}
+{:important: .important}
+{:note: .note}
+{:pre: .pre}
+{:tip: .tip}
 {:preview: .preview}
+{:deprecated: .deprecated}
+{:shortdesc: .shortdesc}
+{:support: data-reuse='support'}
+{:script: data-hd-video='script'}
+{:table: .aria-labeledby="caption"}
+{:troubleshoot: data-hd-content-type='troubleshoot'}
+{:help: data-hd-content-type='help'}
+{:tsCauses: .tsCauses}
+{:tsResolve: .tsResolve}
+{:tsSymptoms: .tsSymptoms}
+
+
 
 # Understanding your responsibilities with using {{site.data.keyword.cloudcerts_short}}
 {: #understanding-your-responsibilities-using-certificate-manager}

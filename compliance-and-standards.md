@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-03-31"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -32,7 +32,6 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
-
 
 
 
@@ -98,3 +97,5 @@ Creating an automatic backup of your certificates is possible by automating the 
 
 To learn about the various available certificate lifecycle event types see [Configuring notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications). 
 {: note}
+
+

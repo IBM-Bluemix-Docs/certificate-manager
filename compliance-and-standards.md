@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-31"
+lastupdated: "2020-04-02"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -66,6 +66,7 @@ In addition, a per tenant-managed encryption key is used to encrypt the certific
 {: #compliance-gdpr}
 
 The EU seeks to give their citizens control over their personal data by creating harmonized data protection. To do so, they use a law framework, which is known as the GDPR, to impose strict rules on those who host and process data; regardless of where they're located. The regulation also introduces rules that relate to the free movement of personal data within and outside the EU. For more information, see [IBM privacy statement](https://www.ibm.com/privacy/).
+
 
 
 ## High availability and disaster recovery

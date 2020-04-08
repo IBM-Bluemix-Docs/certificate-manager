@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-08"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -35,7 +35,7 @@ subcollection: certificate-manager
 
 
 
-# Managing service access roles
+# Managing access for {{site.data.keyword.cloudcerts_short}}
 {: #managing-service-access-roles}
 
 You can secure services within {{site.data.keyword.cloud_notm}} by allowing only users with specified access roles to complete certain actions.
@@ -132,8 +132,6 @@ You can configure access policies for a {{site.data.keyword.cloudcerts_short}} i
 * Assign at least the Viewer role to every user so that every user can see service instances.
 * Assign the Administrator or Editor role to a user if you want that user to create and delete instances.
 * Assign at least the Reader role if you want a user to view certificates within an instance.
-
-
 
 To configure access policies, complete the following steps:
 

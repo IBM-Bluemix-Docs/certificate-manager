@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-08"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -32,6 +32,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+
 
 
 
@@ -170,3 +171,5 @@ Events are automatically forwarded to the {{site.data.keyword.at_short}} service
 {: #at-availability}
 
 {{site.data.keyword.at_short}} support is available for the **Dallas**, **London**, **Frankfurt**, **Tokyo** and **Sydney** locations.
+
+

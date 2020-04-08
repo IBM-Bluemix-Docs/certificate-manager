@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-08"
 
 keywords: certificates, ssl, tls, logging, activity, monitor app, monitor certificates
 
@@ -35,6 +35,7 @@ subcollection: certificate-manager
 
 
 
+
 # Log Analysis events
 {: #log_events}
 
@@ -59,3 +60,5 @@ Complete the following steps:
 {: #la-availability}
 
 {{site.data.keyword.la_short}} support is available for the **Dallas**, **London**, **Frankfurt**, **Tokyo**, and **Sydney** locations.
+
+

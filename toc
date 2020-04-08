@@ -30,7 +30,7 @@ Certificate Manager
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API documentation](https://cloud.ibm.com/apidocs/certificate-manager)
+    [API documentation](https://{DomainName}/apidocs/certificate-manager)
     notification-event-types.md
     limits.md
     regions-and-endpoints.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-08"
+lastupdated: "2020-04-09"
 
 keywords: certificates, ssl, tls, logging, activity, monitor app, monitor certificates
 
@@ -35,6 +35,7 @@ subcollection: certificate-manager
 
 
 
+
 # Log Analysis events
 {: #log_events}
 
@@ -42,7 +43,6 @@ Use the {{site.data.keyword.la_full}} service to view {{site.data.keyword.cloudc
 {:shortdesc}
 
 {{site.data.keyword.la_full_notm}} offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs. For more information, see the [{{site.data.keyword.la_short}} docs](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started).
-
 
 ## Where to look for the logs
 {: #log_ui}

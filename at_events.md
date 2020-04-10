@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-08"
+lastupdated: "2020-04-10"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
 
@@ -35,141 +35,73 @@ subcollection: certificate-manager
 
 
 
-
-# Activity Tracker events  
+# Auditing events for {{site.data.keyword.cloudcerts_short}} 
 {: #at_events}
 
-Use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in {{site.data.keyword.cloud_notm}}.
+As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
 The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started#getting-started).
 
-The following table lists the API methods that generate an event when they are called.
+## Certificate events
+{: #at-cert-events}
 
-<table>
-  <caption>Table 1. Actions that generate events</caption>
-  <tr>
-    <th>Action</th>
-	  <th>Description</th>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate.import`</td>
-	  <td>Import a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate.reimport`</td>
-	  <td>Reimport a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate.order`</td>
-	  <td>Order a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate-order-autorenew.set-on`</td>
-    <td>Enable certificate auto-renew.</td>
-  </tr>
-    <tr>
-      <td>`cloudcerts.certificate-order-autorenew.set-off`</td>
-      <td>Disable certificate auto-renew.</td>
-    </tr>
-  <tr>
-    <td>`cloudcerts.certificate.renew`</td>
-	  <td>Renew an issued certificate.</td>
-  </tr>
-    <tr>
-      <td>`cloudcerts.certificate.issued`</td>
-  	  <td>Whether a certificate order/renew completed successfully or failed.</td>
-    </tr>  
-  <tr>
-    <td>`cloudcerts.certificate-metadata.read`</td>
-	  <td>Get a certificate metadata.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate.download`</td>
-	  <td>Download a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificates.read`</td>
-	  <td>List certificates.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificates-metadata.read`</td>
-	  <td>List certificates metadata. Show details of a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificates.search`</td>
-	  <td>Search certificates.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificates-metadata.search`</td>
-	  <td>Search certificates metadata.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate.delete`</td>
-	  <td>Delete a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.certificate-metadata.update`</td>
-	  <td>Update certificate metadata, for example, change the description of a certificate.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification-channels.list`</td>
-	  <td>List notifications channels.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification-channel.create`</td>
-	  <td>Create a notifications channel.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification-channel.set-on`</td>
-	  <td>Enable notifications channel.</td>
-  </tr>
-   <tr>
-     <td>`cloudcerts.notification-channel.set-off`</td>
- 	  <td>Disable notifications channel.</td>
-   </tr>
-  <tr>
-    <td>`cloudcerts.notification-channel.update`</td>
-	  <td>Update a notifications channel's endpoint.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification-channel.delete`</td>
-	  <td>Delete a notifications channel.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification-channel.test`</td>
-	  <td>Test a notifications channel.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification.send`</td>
-	  <td>A notification was sent to a notifications channel endpoint.</td>
-  </tr>
-  <tr>
-    <td>`cloudcerts.notification-channels-publickey.read`</td>
-	  <td>The public key was requested.</td>
-  </tr>
-</table>
+The following table lists the certificate actions that generate an event:
 
-## Where to look for the events
-{: #at_ui}
+| Action                                           | Description                                                    |
+| ------------------------------------------------ | -------------------------------------------------------------- |
+| `cloudcerts.certificate.import`                  | Import a certificate.                                          |
+| `cloudcerts.certificate.reimport`                | Reimport a certificate.                                        |
+| `cloudcerts.certificate.order`                   | Order a certificate.                                           |
+| `cloudcerts.certificate-order-autorenew.set-on`  | Enable auto-renewal for a certificate.                         |
+| `cloudcerts.certificate-order-autorenew.set-off` | Disable auto-renewal for a certificate.                        |
+| `cloudcerts.certificate.renew`                   | Renew a certificate.                                           |
+| `cloudcerts.certificate.issued`                  | Request to import, order, or renew a certificate is processed. |
+| `cloudcerts.certificates.read`                   | List certificates.                                             |
+| `cloudcerts.certificates.search`                 | Search certificates.                                           |
+| `cloudcerts.certificate-metadata.read`           | Get certificate metadata.                                      |
+| `cloudcerts.certificates-metadata.search`        | Search certificate metadata.                                   |
+| `cloudcerts.certificate-metadata.update`         | Update certificate metadata.                                   |
+| `cloudcerts.certificate.download`                | Download a certificate.                                        |
+| `cloudcerts.certificate.delete`                  | Delete a certificate.                                          |
+{: caption="Table 1. {{site.data.keyword.cloudcerts_short}} actions that generate Activity Tracker events" caption-side="top"}
 
-Provision an {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
+## Notification channel events
+{: #at-notification-events} 
 
-Complete the following steps:
+The following table lists the notification channel actions that generate an event:
 
-1. Go to [{{site.data.keyword.cloud_notm}} Observability](https://cloud.ibm.com/observe/){: external}.
-2. Provision a {{site.data.keyword.at_short}} instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance.
+| Action                                            | Description                                      |
+| ------------------------------------------------- | ------------------------------------------------ |
+| `cloudcerts.notification-channel.create`          | Create a notification channel.                   |
+| `cloudcerts.notification-channels.list`           | List notification channels.                      |
+| `cloudcerts.notification-channel.test`            | Test a notification channel.                     |
+| `cloudcerts.notification-channel.set-on`          | Enable a notification channel.                   |
+| `cloudcerts.notification-channel.set-off`         | Disable a notification channel.                  |
+| `cloudcerts.notification-channel.update`          | Update a notification channel.                   |
+| `cloudcerts.notification-channel.delete`          | Delete a notification channel.                   |
+| `cloudcerts.notification.send`                    | Notification is sent to a channel.               |
+| `cloudcerts.notification-channels-publickey.read` | Request a public key for a notification channel. |
+{: caption="Table 2. {{site.data.keyword.cloudcerts_short}} actions that generate Activity Tracker events" caption-side="top"}
 
-Events are automatically forwarded to the {{site.data.keyword.at_short}} service instance in the same location where the {{site.data.keyword.cloudcerts_short}} service is provisioned.
+## Viewing events
+{: #at-ui}
 
-## Additional information
-{: #info}
+Events that are generated by a {{site.data.keyword.cloudcerts_short}} service instance are forwarded automatically to the {{site.data.keyword.at_full_notm}} instance that is available in the same location. 
 
-* The field *requestData_str* includes the human readable name of the certificate.
+{{site.data.keyword.at_short}} support is available in the Dallas, London, Frankfurt, Tokyo, and Sydney locations.
+{: preview} 
 
-## Availability
-{: #at-availability}
+To view {{site.data.keyword.cloudcerts_short}} events:
 
-{{site.data.keyword.at_short}} support is available for the **Dallas**, **London**, **Frankfurt**, **Tokyo** and **Sydney** locations.
+1. Log in to the {{site.data.keyword.cloud_notm}} console.
+2. Go to &#x2630; **IBM Cloud** &gt; **Observability** to access your [Observability dashboard](https://{DomainName}/observe){: external}.
+3. From the left navigation menu, click **Activity Tracker**.
+4. Select an {{site.data.keyword.at_short}} instance, and click **View LogDNA** to launch the web UI.
 
+   Don't have an {{site.data.keyword.at_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance so that service events are forwarded automatically to your account. To learn more, check out the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=logdnaat-getting-started).
 
+## Analyzing events
+{: #at-analyze-events}
+
+The `requestData` and `responseData` objects in each {{site.data.keyword.at_short}} event show identifying information about your certificate, such as its corresponding domains, certificate ID, and expiration time. If an initiator updates, renews, or downloads a specific certificate, the {{site.data.keyword.at_short}} also shows the human-readable name of the certificate in the `target.name` field of the event log.

@@ -26,7 +26,12 @@ Certificate Manager
     managing-certificates.md
     order-certificates.md
     notifications-dashboard.md
-    access-management.md
+
+    {: topicgroup}
+    Enhancing security for Certificate Manager
+        access-management.md
+        at_events.md
+        log_events.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -34,8 +39,6 @@ Certificate Manager
     notification-event-types.md
     limits.md
     regions-and-endpoints.md
-    at_events.md
-    log_events.md
     understanding-your-responsibilities.md
     {: .navgroup-end}
 

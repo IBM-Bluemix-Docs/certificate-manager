@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-16"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -197,10 +197,10 @@ To order a certificate, use the {{site.data.keyword.cloudcerts_short}} dashboard
    - Complete the required setup instructions
    - Provide a certificate name and optionally a description
    - Select a Certificate Authority
-   - Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
-   - Select the certificate type that you need
-   - Select the domain
    - Select the appropriate algorithm and key algorithm
+   - Select the {{site.data.keyword.cis_full_notm}} instance you've assigned a service access role for
+   - Select the domain(s) and/or subdomain(s)
+   - Select the certificate Common Name in the Order summary
    - Click **Order**
 5. If you've selected **Another DNS Provider**, provide the following details:
    - Complete the required setup instructions.

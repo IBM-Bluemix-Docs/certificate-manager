@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-16"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -32,6 +32,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+
 
 
 
@@ -65,3 +66,4 @@ If you are managing your certificates programmatically, see the following table 
 | Frankfurt | `eu-de.certificate-manager.cloud.ibm.com`    |
 | Tokyo     | `jp-tok.certificate-manager.cloud.ibm.com`   |
 | Sydney    | `au-syd.certificate-manager.cloud.ibm.com`   |
+

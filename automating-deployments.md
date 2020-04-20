@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-20"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
@@ -160,14 +160,10 @@ To learn more about ALB commands, see [the ALB documentation](/docs/containers-c
 
 5. Set the context for your cluster.
 
-  1. Get the command to set the environment variable and download the Kubernetes configuration files.
-
     ```
-    ibmcloud ks cluster-config <cluster_name_or_ID>
+    ibmcloud ks cluster config --cluster <cluster_name_or_ID>
     ```
     {: codeblock}
-
-  2. Copy the output beginning with `export` and paste it into your console to set the `KUBECONFIG` environment variable.
 
 6. Download and deploy your certificate.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-04-27"
 
 keywords: certificates, ssl, tls, responsabilities, ibm, terms, conditions, managing service roles, regulation compliance, pci, dss, ha, backup, industry standard
 
@@ -83,5 +83,5 @@ Tasks pertaining to recovery of the {{site.data.keyword.cloudcerts_short}} servi
 | Task | {{site.data.keyword.IBM_notm}} Responsibilities | Your Responsibilities |
 |----------|-----------------------|--------|
 | Application | Continuously monitor to ensure the reliability and availability of the service environment by site reliability engineers. | |
-| Data | Back up and recover data in the region that the service operates in. | To recover data in case of a regional failure we recommend for the customer to implement cross-region backup strategy. For more information see [High availability and disaster recovery](/docs/certificate-manager?topic=certificate-manager-compliance-and-standards#ha-dr). |
+| Data | Back up and recover data in the region that the service operates in. | To recover data in case of a regional failure we recommend for the customer to implement cross-region backup strategy. For more information see [High availability and disaster recovery](/docs/certificate-manager?topic=certificate-manager-ha-dr). |
 {: caption="Table 4. Responsibilities for disaster recovery" caption-side="top"}

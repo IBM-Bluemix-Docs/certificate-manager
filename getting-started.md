@@ -35,10 +35,10 @@ subcollection: certificate-manager
 
 
 
-# Getting started tutorial
+# Getting started with {{site.data.keyword.cloudcerts_short}}
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates for your {{site.data.keyword.cloud_notm}}-based apps. Get started by creating a new {{site.data.keyword.cloudcerts_short}} service instance by completing the following steps.
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates for your {{site.data.keyword.cloud_notm}}-based apps. Get started by creating a new service instance by completing the following steps.
 {: shortdesc}
 
 To create an instance from the {{site.data.keyword.cloud_notm}} console:

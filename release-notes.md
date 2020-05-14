@@ -48,7 +48,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
     - `https://us-south.certificate-manager.bluemix.net`
     - `https://eu-gb.certificate-manager.bluemix.net` 
   
-  If you're these endpoints to target {{site.data.keyword.cloudcerts_short}} operations, update your apps to use the following supported URLs to avoid service interruptions:
+  If you're these endpoints to target {{site.data.keyword.cloudcerts_short}} operations, search for the deprecated endpoints in your scripts, {{site.data.keyword.openwhisk_short}} actions, and other apps that manage {{site.data.keyword.cloudcerts_short}} resources. Then, replace the endpoints with the following supported URLs:
     - `https://us-south.certificate-manager.cloud.ibm.com`
     - `https://eu-gb.certificate-manager.cloud.ibm.com` 
   

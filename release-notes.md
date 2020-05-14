@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-12"
+lastupdated: "2020-05-14"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -40,7 +40,19 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 14 May 2020
+{: #14May2020}
 
+- **Deprecated endpoint URLs that end in `bluemix.net`**  
+  {{site.data.keyword.cloudcerts_short}} API endpoints that end in `bluemix.net` are now deprecated with end of support scheduled for 12 September 2020. After 12 September 2020, the following API endpoints for {{site.data.keyword.cloudcerts_short}} will no longer be accessible:
+    - `https://us-south.certificate-manager.bluemix.net`
+    - `https://eu-gb.certificate-manager.bluemix.net` 
+  
+  If you're these endpoints to target {{site.data.keyword.cloudcerts_short}} operations, update your apps to use the following supported URLs to avoid service interruptions:
+    - `https://us-south.certificate-manager.cloud.ibm.com`
+    - `https://eu-gb.certificate-manager.cloud.ibm.com` 
+  
+  To view a list of supported API endpoints for {{site.data.keyword.cloudcerts_short}}, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
 
 ## 8 March 2020
 {: #8March2020}

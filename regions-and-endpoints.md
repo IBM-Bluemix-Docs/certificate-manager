@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-24"
+lastupdated: "2020-05-25"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -75,18 +75,21 @@ If you are managing your certificates programmatically, see the following table 
 | Tokyo      | `jp-tok.certificate-manager.cloud.ibm.com`   |
 | Sydney     | `au-syd.certificate-manager.cloud.ibm.com`   |
 | Washington | `us-east.certificate-manager.cloud.ibm.com`  |
+{: class="simple-tab-table"}
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's public network" caption-side="top"}
-{: #table-1}
+{: #public-endpoints-table}
 {: tab-title="Public"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="endpoints"}
+
 
 | Region     | Endpoint                                             |
 |------------|------------------------------------------------------|
 | Dallas     | `private.us-south.certificate-manager.cloud.ibm.com` |
 | Washington | `private.us-east.certificate-manager.cloud.ibm.com`  |
-{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's private network" caption-side="top"}
-{: #table-2}
+{: class="simple-tab-table"}
+{: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's private network" caption-side="top"}
+{: #private-endpoints-table}
 {: tab-title="Private"}
-{: class="comparison-tab-table"}
-{: row-headers}
+{: tab-group="endpoints"}
+
+

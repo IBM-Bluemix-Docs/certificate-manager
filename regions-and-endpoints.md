@@ -82,7 +82,7 @@ If you are managing your certificates programmatically, see the following table 
 |------------|------------------------------------------------------|
 | Dallas     | `private.us-south.certificate-manager.cloud.ibm.com` |
 | Washington | `private.us-east.certificate-manager.cloud.ibm.com`  |
-{: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's private network" caption-side="top"}
+{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's private network" caption-side="top"}
 
 
 

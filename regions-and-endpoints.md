@@ -67,7 +67,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 
 If you are managing your certificates programmatically, see the following table to determine the API endpoints to use when you connect to the {{site.data.keyword.cloudcerts_short}} API.
 
-| Public endpoints                                          |
+| Public endpoints       |                                  |
 |------------|----------------------------------------------|
 | Dallas     | `us-south.certificate-manager.cloud.ibm.com` |
 | London     | `eu-gb.certificate-manager.cloud.ibm.com`    |
@@ -77,8 +77,10 @@ If you are managing your certificates programmatically, see the following table 
 | Washington | `us-east.certificate-manager.cloud.ibm.com`  |
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's public network" caption-side="top"}
 
+</br>
 
-| Private endpoints                                                 |
+
+| Private endpoints          |                                      |
 |------------|------------------------------------------------------|
 | Dallas     | `private.us-south.certificate-manager.cloud.ibm.com` |
 | Washington | `private.us-east.certificate-manager.cloud.ibm.com`  |

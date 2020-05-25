@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-05-24"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -46,24 +46,47 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 
 {{site.data.keyword.cloudcerts_short}} is available in the following regions:
 
-![Visual representation of the availability of the service. The image is a map with pin points in the locations in which the service is available. If you are unable to view this image, see the table in the service endpoints section for a complete list.](images/locations.png){: caption="Figure 1. {{site.data.keyword.cloudcerts_short}} availability" caption-side="bottom"}
+![Visual representation of the availability of the service. The image is a map with pin points in the locations in which the service is available. If you are unable to view this image, see the table in the service endpoints section for a complete list.](images/world-map.svg){: caption="Figure 1. {{site.data.keyword.cloudcerts_short}} availability" caption-side="bottom"}
 
 ## Connectivity options
 {: #connectivity}
 
-By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
+{{site.data.keyword.cloudcerts_short}} offers two connectivity options for interacting with its service APIs.
 
+<dl>
+  <dt>Public endpoints</dt>
+    <dd>By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
+    </dd>
+  <dt>Private endpoints</dt>
+    <dd>For added benefits, you can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint) for your IBM Cloud account. When you enable VRF for your account, you can connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about VRF, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/resources?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+    </dd>
+</dl>
 
 ## Service endpoints
 {: #endpoints}
 
 If you are managing your certificates programmatically, see the following table to determine the API endpoints to use when you connect to the {{site.data.keyword.cloudcerts_short}} API.
 
-| Region    | Public endpoints                             |
-|-----------|----------------------------------------------|
-| Dallas    | `us-south.certificate-manager.cloud.ibm.com` |
-| London    | `eu-gb.certificate-manager.cloud.ibm.com`    |
-| Frankfurt | `eu-de.certificate-manager.cloud.ibm.com`    |
-| Tokyo     | `jp-tok.certificate-manager.cloud.ibm.com`   |
-| Sydney    | `au-syd.certificate-manager.cloud.ibm.com`   |
+| Region     | Endpoint                                     |
+|------------|----------------------------------------------|
+| Dallas     | `us-south.certificate-manager.cloud.ibm.com` |
+| London     | `eu-gb.certificate-manager.cloud.ibm.com`    |
+| Frankfurt  | `eu-de.certificate-manager.cloud.ibm.com`    |
+| Tokyo      | `jp-tok.certificate-manager.cloud.ibm.com`   |
+| Sydney     | `au-syd.certificate-manager.cloud.ibm.com`   |
+| Washington | `us-east.certificate-manager.cloud.ibm.com`  |
+{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's public network" caption-side="top"}
+{: #table-1}
+{: tab-title="Public"}
+{: class="comparison-tab-table"}
+{: row-headers}
 
+| Region     | Endpoint                                             |
+|------------|------------------------------------------------------|
+| Dallas     | `private.us-south.certificate-manager.cloud.ibm.com` |
+| Washington | `private.us-east.certificate-manager.cloud.ibm.com`  |
+{: caption="Table 2. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's private network" caption-side="top"}
+{: #table-2}
+{: tab-title="Private"}
+{: class="comparison-tab-table"}
+{: row-headers}

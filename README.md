@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2019
-lastupdated: "2019-04-22"
+  years: 2020
+lastupdated: "2020-05-26"
 
 ---
 
@@ -20,7 +20,7 @@ To suggest changes:
 3. Shawna and Idan will review your suggestions with the Certificate Manager development team and make any necessary adjustments.
 4. Shawna or Idan will merge the suggested content into the repo.
 
-Customer-facing documentation: https://cloud.ibm.com/docs/services/certificate-manager?topic=certificate-manager-getting-started#getting-started
+Customer-facing documentation: https://cloud.ibm.com/docs/certificate-manager?topic=certificate-manager-getting-started#getting-started
 
 
 

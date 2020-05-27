@@ -87,7 +87,7 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
   </tr>
   <tr>
     <td>{{site.data.keyword.la_full_notm}}</td>
-    <td>You can use [{{site.data.keyword.la_short}}](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started) offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs related to {{site.data.keyword.cloudcerts_short}}.
+    <td>You can use [{{site.data.keyword.la_short}}](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started#getting-started) offers administrators, DevOps teams, and developers advanced features to filter, search, and tail log data, define alerts, and design custom views to monitor application and system logs related to {{site.data.keyword.cloudcerts_short}}.
     <p>To get started, see [{{site.data.keyword.at_short}} events](/docs/certificate-manager?topic=certificate-manager-log_events#log_events).</p></td>
   </tr>
 </table>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-06"
+lastupdated: "2020-05-26"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -50,7 +50,7 @@ To create an instance from the {{site.data.keyword.cloud_notm}} console:
 5.	To order a new certificate, click **Order Certificate**.
 
 <br/>
-To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cloud-cli-getting-started):
+To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started):
 
 1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 

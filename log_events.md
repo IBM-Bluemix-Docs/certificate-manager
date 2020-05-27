@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-04-16"
+lastupdated: "2020-05-26"
 
 keywords: certificates, ssl, tls, logging, activity, monitor app, monitor certificates
 
@@ -41,7 +41,7 @@ subcollection: certificate-manager
 Use the {{site.data.keyword.la_full}} service to view {{site.data.keyword.cloudcerts_long}} service logs for your instance in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-With {{site.data.keyword.la_full_notm}}, administrators, DevOps teams, and developers can review log data, define alerts, and design custom views to monitor application and system logs. For more information, see the [{{site.data.keyword.la_short}} docs](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-getting-started).
+With {{site.data.keyword.la_full_notm}}, administrators, DevOps teams, and developers can review log data, define alerts, and design custom views to monitor application and system logs. For more information, see the [{{site.data.keyword.la_short}} docs](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-getting-started).
 
 ## Viewing service logs
 {: #log-ui}
@@ -58,4 +58,4 @@ To view {{site.data.keyword.cloudcerts_short}} service logs:
 3. From the left navigation menu, click **Logging**.
 4. Select a {{site.data.keyword.la_short}} instance, and click **View LogDNA** to launch the web UI.
 
-   Don't have a {{site.data.keyword.la_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance. Then, click **Configure platform logs** to receive logs from supported services in your account. To learn more, see [Configuring {{site.data.keyword.cloud_notm}} service logs](/docs/Log-Analysis-with-LogDNA?topic=LogDNA-config_svc_logs#config_svc_logs_ui).
+   Don't have a {{site.data.keyword.la_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance. Then, click **Configure platform logs** to receive logs from supported services in your account. To learn more, see [Configuring {{site.data.keyword.cloud_notm}} service logs](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-config_svc_logs#config_svc_logs_ui).

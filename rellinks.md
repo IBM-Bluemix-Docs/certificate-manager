@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-27"
+lastupdated: "2020-05-28"
 
 keywords: certificates, ssl, tls, callback urls, public domain, custom domain
 
@@ -58,6 +58,7 @@ You can use the following related links to learn more about and interact with {{
 {{site.data.keyword.IBM_notm}} tutorials that feature {{site.data.keyword.cloudcerts_long_notm}}.  
 {: #shortdesc}
 
-* [Deploy serverless apps across multiple regions](/docs/cis?topic=solution-tutorials-multi-region-serverless#multi-region-serverless)
-* [Deploy isolated workloads across multiple locations and zones](/docs/vpc-on-classic?topic=solution-tutorials-vpc-multi-region#vpc-multi-region)
-* [Apply end to end security to a cloud application](/docs/tutorials?topic=solution-tutorials-cloud-e2e-security)
+* [Deploy serverless apps across multiple regions](/docs/solution-tutorials?topic=solution-tutorials-multi-region-serverless)
+* [Deploy isolated workloads across multiple locations and zones](/docs/solution-tutorials?topic=solution-tutorials-vpc-multi-region)
+* [Apply end to end security to a cloud application](/docs/solution-tutorials?topic=solution-tutorials-cloud-e2e-security)
+* [Enhance security of your deployed application](/docs/solution-tutorials?topic=solution-tutorials-extended-app-security)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-06-01"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -38,7 +38,7 @@ subcollection: certificate-manager
 # Getting started with {{site.data.keyword.cloudcerts_short}}
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates for your {{site.data.keyword.cloud_notm}}-based apps. Get started by creating a new service instance by completing the following steps.
+{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. Get started by creating a new service instance by completing the following steps.
 {: shortdesc}
 
 To create an instance from the {{site.data.keyword.cloud_notm}} console:
@@ -65,7 +65,7 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?
    ```
 
    - Replace **My {{site.data.keyword.cloudcerts_short}} instance** with your choice of instance name.
-   - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), or **au-syd** (Sydney).
+   - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), **au-syd** (Sydney), or **us-east** (Washington DC).
 
 <br/>
 

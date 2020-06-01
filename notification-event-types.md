@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-05-29"
 
 keywords: certificate lifecycle, ssl, tls, notifications, notification channels, events, event types, slack, payload, callback url
 
@@ -175,7 +175,7 @@ For more information about the differences between the channel versions, see the
 }
 ```
 
-#### Version 4 (updated) (February 9th, 2020)
+### Version 4 (updated) (February 9th, 2020)
 {: #callback-v4-update}
 
 - Added new event types
@@ -184,7 +184,7 @@ For more information about the differences between the channel versions, see the
 - Field `auto_renewed = true` added to auto renewed certificates in the events `cert_renewed` and `cert_renewed_not_downloaded`
 - Field `previous_expires_on` added to renewed certificates in the event `cert_renewed_not_downloaded`. It contains expiration for the previous version of renewed certificate
 
-#### Version 4 (May 6th, 2019)
+### Version 4 (May 6th, 2019)
 {: #callback-v4}
 
 - New event types:
@@ -214,7 +214,7 @@ For more information about the differences between the channel versions, see the
    }
    ```
 
-#### Version 3
+### Version 3
 {: #callback-v3}
 
 - The `expiry_date` field is present only in event type `cert_about_to_expire_reimport_required`.
@@ -240,7 +240,7 @@ For more information about the differences between the channel versions, see the
    }
    ```
 
-#### Version 2
+### Version 2
 {: #callback v2}
 
 - A new notification for reimported certificates.
@@ -271,7 +271,7 @@ For more information about the differences between the channel versions, see the
    }
    ```
 
-#### Version 1
+### Version 1
 {: #callback-v1}
 
 - Your notification is returned as a payload. For example:

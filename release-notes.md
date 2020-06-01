@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-14"
+lastupdated: "2020-06-01"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -39,6 +39,15 @@ subcollection: certificate-manager
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 25 May 2020
+{: #25may2020}
+
+- **Live in Washington DC**  
+  {{site.data.keyword.cloudcerts_short}} is available in the Washington DC location.
+
+- **{{site.data.keyword.cloud_notm}} service endpoints support in Dallas and Washington DC**
+  Connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
 
 ## 14 May 2020
 {: #14May2020}

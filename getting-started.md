@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-06-01"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -65,7 +65,7 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?
    ```
 
    - Replace **My {{site.data.keyword.cloudcerts_short}} instance** with your choice of instance name.
-   - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), or **au-syd** (Sydney).
+   - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), **au-syd** (Sydney), or **us-east** (Washington DC).
 
 <br/>
 

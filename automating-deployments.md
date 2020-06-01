@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-05-26"
+lastupdated: "2020-06-01"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
@@ -109,7 +109,7 @@ To get the certificate from from {{site.data.keyword.cloudcerts_short}}:
     </tr>
     <tr>
       <td><code>region</code></td>
-      <td>The region in which your {{site.data.keyword.cloudcerts_short}} service instance exists. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>.</td>
+      <td>The region in which your {{site.data.keyword.cloudcerts_short}} service instance exists. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, <code>us-east</code>.</td>
     </tr>
     <tr>
       <td><code>certificate ID</code></td>

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-02"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
@@ -122,7 +122,7 @@ To get the certificate from from {{site.data.keyword.cloudcerts_short}}:
   If the termination endpoint is a Kubernetes cluster you can use either of:
 
   - [`kubectl` CLI](https://kubernetes.io/docs/concepts/configuration/secret/){: external}.
-  - [Kubernetes Secret API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/#secret-v1-core){: external} directly.
+  - [Kubernetes Secret API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#secret-v1-core){: external} directly.
   - {{site.data.keyword.containershort}}'s CLI plug-in or [API](https://containers.cloud.ibm.com/global/swagger-global-api/#/alb-beta/UpdateALBSecret){: external} 
 
   If you're deploying to a different type of termination  endpoint, you might need to [convert](https://www.sslshopper.com/ssl-converter.html){: external} the certificate to a format other than PEM. Your endpoint might also offer an API with which you can integrate.

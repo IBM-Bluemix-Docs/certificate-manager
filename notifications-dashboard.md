@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-03-19"
+lastupdated: "2020-06-05"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -122,7 +122,7 @@ A Callback URL endpoint can be used to automate various tasks such as:
 * Deploy certificates that are obtained from {{site.data.keyword.cloudcerts_short}} to your TLS termination endpoints.
 * Validate domain ownership when you order or renew certificates, in the case your domain is not managed in {{site.data.keyword.cis_full_notm}}.
 
-You can find sample implementations in[Examples](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
+You can find sample implementations in [Examples](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#examples).
 
 ### Callback URL requirements
 {: #callback-url-requirements}

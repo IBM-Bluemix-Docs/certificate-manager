@@ -75,18 +75,18 @@ If you are managing your certificates programmatically, see the following table 
 | Tokyo         | `jp-tok.certificate-manager.cloud.ibm.com`   |
 | Sydney        | `au-syd.certificate-manager.cloud.ibm.com`   |
 | Washington DC | `us-east.certificate-manager.cloud.ibm.com`  |
-{: class="simple-tab-table"}
-{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's public network" caption-side="top"}
-{: #public-endpoints-table}
+{: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s public network" caption-side="top"}
+{: #private-endpoints}
 {: tab-title="Public"}
-{: tab-group="endpoints"}
+{: tab-group="service-endpoints"}
+{: class="simple-tab-table"}
 
 | Region        | Endpoint                                             |
 | ------------- | ---------------------------------------------------- |
 | Dallas        | `private.us-south.certificate-manager.cloud.ibm.com` |
 | Washington DC | `private.us-east.certificate-manager.cloud.ibm.com`  |
-{: class="simple-tab-table"}
-{: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over IBM Cloud's private network" caption-side="top"}
-{: #private-endpoints-table}
+{: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s private network" caption-side="top"}
+{: #public-endpoints}
 {: tab-title="Private"}
-{: tab-group="endpoints"}
+{: tab-group="service-endpoints"}
+{: class="simple-tab-table"}

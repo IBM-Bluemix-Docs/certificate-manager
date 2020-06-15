@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-15"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -40,13 +40,19 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 15 June 2020
+{: #15june2020}
+
+- **{{site.data.keyword.cloud_notm}} service endpoints support in London, Frankfurt, Tokyo and Sydney**  
+  You can now connect to {{site.data.keyword.cloudcerts_short}} in the London, Frankfurt, Tokyo, and Sydney locations by using the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
+
 ## 25 May 2020
 {: #25may2020}
 
 - **Live in Washington DC**  
   {{site.data.keyword.cloudcerts_short}} is available in the Washington DC location.
 
-- **{{site.data.keyword.cloud_notm}} service endpoints support in Dallas and Washington DC**
+- **{{site.data.keyword.cloud_notm}} service endpoints support in Dallas and Washington DC**   
   Connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
 
 ## 14 May 2020
@@ -146,7 +152,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 
 ## 5 December 2018
 {: #5December2018}
-- **Reimport Notification**    
+- **Reimport notification**    
 When you reimport a renewed certificate in place of an expiring one, you can get a notification that the certificate was reimported. This will remind you and your team to deploy the renewed certificate to SSL/TLS termination points. This notification is available only for newly created notification channels.
 
 - **{{site.data.keyword.cloudcerts_short}} is available in the Frankfurt location.**     

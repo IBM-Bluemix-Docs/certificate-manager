@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-11"
+lastupdated: "2020-06-15"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -70,11 +70,11 @@ If you are managing your certificates programmatically, see the following table 
 | Region        | Endpoint                                     |
 | ------------- | -------------------------------------------- |
 | Dallas        | `us-south.certificate-manager.cloud.ibm.com` |
+| Washington DC | `us-east.certificate-manager.cloud.ibm.com`  |
 | London        | `eu-gb.certificate-manager.cloud.ibm.com`    |
 | Frankfurt     | `eu-de.certificate-manager.cloud.ibm.com`    |
 | Tokyo         | `jp-tok.certificate-manager.cloud.ibm.com`   |
 | Sydney        | `au-syd.certificate-manager.cloud.ibm.com`   |
-| Washington DC | `us-east.certificate-manager.cloud.ibm.com`  |
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s public network" caption-side="top"}
 {: #private-endpoints}
 {: tab-title="Public"}
@@ -85,9 +85,15 @@ If you are managing your certificates programmatically, see the following table 
 | ------------- | ---------------------------------------------------- |
 | Dallas        | `private.us-south.certificate-manager.cloud.ibm.com` |
 | Washington DC | `private.us-east.certificate-manager.cloud.ibm.com`  |
+| London        | `private.eu-gb.certificate-manager.cloud.ibm.com`    |
+| Frankfurt     | `private.eu-de.certificate-manager.cloud.ibm.com`    |
+| Tokyo         | `private.jp-tok.certificate-manager.cloud.ibm.com`   |
+| Sydney        | `private.au-syd.certificate-manager.cloud.ibm.com`   |
 {: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s private network" caption-side="top"}
 {: #public-endpoints}
 {: tab-title="Private"}
 {: tab-group="service-endpoints"}
 {: class="simple-tab-table"}
 
+In the Frankfurt region only, certificates are maintained in the service database over the public network.
+{: note} 

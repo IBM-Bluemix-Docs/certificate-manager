@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-01"
+lastupdated: "2020-06-15"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -39,6 +39,12 @@ subcollection: certificate-manager
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
+
+## 15 June 2020
+{: #15june2020}
+
+- **{{site.data.keyword.cloud_notm}} service endpoints support in London, Frankfurt, Tokyo and Sydney**
+  You can now connect to {{site.data.keyword.cloudcerts_short}} in the London, Frankfurt, Tokyo, and Sydney locations by using the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
 
 ## 25 May 2020
 {: #25may2020}

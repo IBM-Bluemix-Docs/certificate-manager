@@ -95,5 +95,5 @@ If you are managing your certificates programmatically, see the following table 
 {: tab-group="service-endpoints"}
 {: class="simple-tab-table"}
 
-In the Frankfurt region only, certificates are maintained in the service database over public network.
+In the Frankfurt region only, certificates are maintained in the service database over the public network.
 {: note} 

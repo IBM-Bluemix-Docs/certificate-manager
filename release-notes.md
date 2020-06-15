@@ -43,7 +43,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 15 June 2020
 {: #15june2020}
 
-- **{{site.data.keyword.cloud_notm}} service endpoints support in London, Frankfurt, Tokyo and Sydney**
+- **{{site.data.keyword.cloud_notm}} service endpoints support in London, Frankfurt, Tokyo and Sydney**  
   You can now connect to {{site.data.keyword.cloudcerts_short}} in the London, Frankfurt, Tokyo, and Sydney locations by using the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
 
 ## 25 May 2020
@@ -52,7 +52,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 - **Live in Washington DC**  
   {{site.data.keyword.cloudcerts_short}} is available in the Washington DC location.
 
-- **{{site.data.keyword.cloud_notm}} service endpoints support in Dallas and Washington DC**
+- **{{site.data.keyword.cloud_notm}} service endpoints support in Dallas and Washington DC**   
   Connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints). 
 
 ## 14 May 2020

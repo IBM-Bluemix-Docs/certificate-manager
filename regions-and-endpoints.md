@@ -58,7 +58,7 @@ Review region and connectivity options for interacting with {{site.data.keyword.
     <dd>By default, you can connect to resources in your account over the {{site.data.keyword.cloud_notm}} public network. Your data is encrypted in transit by using the Transport Security Layer (TLS) 1.2 protocol.
     </dd>
   <dt>Private endpoints</dt>
-    <dd>For added benefits, you can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint) for your IBM Cloud account. When you enable VRF for your account, you can connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about VRF, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
+    <dd>For added benefits, you can also enable [virtual routing and forwarding (VRF) and service endpoints](/docs/account?topic=account-vrf-service-endpoint) for your {{site.data.keyword.cloud_notm}}account. When you enable VRF for your account, you can connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more about VRF, see [Virtual routing and forwarding on {{site.data.keyword.cloud_notm}}](/docs/direct-link?topic=direct-link-overview-of-virtual-routing-and-forwarding-vrf-on-ibm-cloud).
     </dd>
 </dl>
 
@@ -96,6 +96,8 @@ If you are managing your certificates programmatically, see the following table 
 {: class="simple-tab-table"}
 
 #### Notes
-- In the Frankfurt region only, certificates are maintained in the service database over the public network.
-- Using IBM Cloud Functions as Callback URL servers is not recommended for users who are looking for using private-only endpoints, since Cloud Functions do not yet support private endpoints.
-- Ordering Let’s Encrypt certificates involves calling Let’s Encrypt over public network as it is a 3rd party service running outside of the IBM Cloud network.
+{: #endpoints-notes}
+
+- In the Frankfurt region only, your certificates are maintained in the service database over the public network.
+- If you need to manage resources on {{site.data.keyword.cloud_notm}}'s private network, using {{site.data.keyword.openwhisk}} as Callback URL servers is not recommended. {{site.data.keyword.openwhisk_short}} does not yet support private endpoints. To learn more, check out the [{{site.data.keyword.openwhisk_short}} docs](/docs/openwhisk?topic=openwhisk-getting-started).
+- Let's Encrypt is a third-party service that runs outside of {{site.data.keyword.cloud_notm}}. When you order certificates through Let’s Encrypt, {{site.data.keyword.cloudcerts_short}} interacts with Let's Encrypt over the public network. 

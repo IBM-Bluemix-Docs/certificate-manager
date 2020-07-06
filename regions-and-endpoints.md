@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-15"
+lastupdated: "2020-07-06"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -95,5 +95,7 @@ If you are managing your certificates programmatically, see the following table 
 {: tab-group="service-endpoints"}
 {: class="simple-tab-table"}
 
-In the Frankfurt region only, certificates are maintained in the service database over the public network.
-{: note} 
+#### Notes
+- In the Frankfurt region only, certificates are maintained in the service database over the public network.
+- Using IBM Cloud Functions as Callback URL servers is not recommended for users who are looking for using private-only endpoints, since Cloud Functions do not yet support private endpoints.
+- Ordering Let’s Encrypt certificates involves calling Let’s Encrypt over public network as it is a 3rd party service running outside of the IBM Cloud network.

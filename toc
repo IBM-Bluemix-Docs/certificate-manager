@@ -28,7 +28,7 @@ Certificate Manager
     notifications-dashboard.md
 
     {: topicgroup}
-    Enhancing security for Certificate Manager
+    Enhancing security
         access-management.md
         at_events.md
         log_events.md

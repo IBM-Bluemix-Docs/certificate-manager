@@ -37,7 +37,7 @@ subcollection: certificate-manager
 # Key concepts
 {: #key-concepts}
 
-Learn about the concepts that are associate with certificates and how {{site.data.keyword.cloudcerts_full}} can help.
+Learn about the concepts that are associated with certificates and how {{site.data.keyword.cloudcerts_full}} can help.
 {: shortdesc}
 
 

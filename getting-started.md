@@ -48,7 +48,6 @@ To create an instance from the {{site.data.keyword.cloud_notm}} console:
 4.	To import your organization's certificates into **{{site.data.keyword.cloudcerts_short}}**, click **Import Certificate**.
 5.	To order a new certificate, click **Order Certificate**.
 
-<br/>
 To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started):
 
 1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
@@ -66,7 +65,9 @@ To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?
    - Replace **My {{site.data.keyword.cloudcerts_short}} instance** with your choice of instance name.
    - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), **au-syd** (Sydney), or **us-east** (Washington DC).
 
-<br/>
+## Next steps
+{: #next-steps}
 
-[Learn more](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's new in the service, see [Release notes](/docs/certificate-manager?topic=certificate-manager-release-notes#release-notes).
-{: note}
+- To find out more about what you can do with {{site.data.keyword.cloudcerts_short}}, check out [About {{site.data.keyword.cloudcerts_short}}](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager).
+- Stay up-to-date with the latest features and enhancements by checking out the [release notes](/docs/certificate-manager?topic=certificate-manager-release-notes#release-notes).
+

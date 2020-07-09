@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-21"
+lastupdated: "2020-07-09"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -14,7 +14,6 @@ subcollection: certificate-manager
 {:screen: .screen}
 {:download: .download}
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
 {:gif: data-image-type='gif'}
 {:important: .important}
@@ -73,7 +72,7 @@ A Certificate Authority (CA) is an entity that issues digital certificates. The 
 
 ### Let's Encrypt
 {: #lets-encrypt}
-[Let’s Encrypt](https://letsencrypt.org) is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service that is provided by the Internet Security Research Group (ISRG).
+[Let’s Encrypt](https://letsencrypt.org){: external} is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service that is provided by the Internet Security Research Group (ISRG).
 
 ## Setting up certificate ordering
 {: #setup}

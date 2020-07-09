@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-06-15"
+lastupdated: "2020-07-09"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -14,7 +14,6 @@ subcollection: certificate-manager
 {:screen: .screen}
 {:download: .download}
 {:external: target="_blank" .external}
-{:new_window: target="_blank"}
 {:faq: data-hd-content-type='faq'}
 {:gif: data-image-type='gif'}
 {:important: .important}
@@ -138,12 +137,12 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 13 January 2019
 {: #13January2019}
 - **Callback payload version 3**  
-  [See the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
+  [See the API documentation](/apidocs/certificate-manager){: external}.
 
 ## 6 January 2019
 {: #6January2019}
 - **Deprecated APIs**  
-  The **List certificates** and **Search certificates repository** v2 APIs are deprecated and will be removed at a future date. You must upgrade to v3 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
+  The **List certificates** and **Search certificates repository** v2 APIs are deprecated and will be removed at a future date. You must upgrade to v3 APIs. For more information, [see the API documentation](/apidocs/certificate-manager){: external}.
 
 ## 9 December 2018
 {: #9December2018}
@@ -161,7 +160,7 @@ The service is compliant with the EU requirements.
 ## 2 December 2018
 {: #2December2018}
 - **Callback and Slack payload version 2**  
-  [See the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
+  [See the API documentation](/apidocs/certificate-manager){: external}.
 
 ## 14 November 2018
 {: #14November2018}
@@ -185,7 +184,7 @@ The service is compliant with the EU requirements.
   It is mandatory to supply a value for the certificate's name when you import a certificate.  
 
 - **Deprecated APIs**  
-  The **Import a certificate** and **Update a certificate's metadata** v2 APIs are deprecated and will be removed on 1 December 2018. You must upgrade to v3 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
+  The **Import a certificate** and **Update a certificate's metadata** v2 APIs are deprecated and will be removed on 1 December 2018. You must upgrade to v3 APIs. For more information, [see the API documentation](/apidocs/certificate-manager){: external}.
 
 - **Grouped Slack notifications**  
   Notifications in Slack are grouped by expiration date.
@@ -206,7 +205,7 @@ The service is compliant with the EU requirements.
 {: #15August2018}
 
 - **Remove deprecated v1 APIs**  
-  Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/).
+  Version 1 APIs are no longer available. If you haven't updated your API yet, you must do it as soon as possible. For more information, [see the API documentation](/apidocs/certificate-manager){: external}.
 
 - **Platform roles replaced with Service roles**  
   You can control access to {{site.data.keyword.cloudcerts_short}} instances by using Service roles. [Learn more about access management](/docs/certificate-manager?topic=certificate-manager-managing-service-access-roles#managing-service-access-roles).
@@ -227,7 +226,7 @@ The service is compliant with the EU requirements.
 {: #8January2018}
 
 - **Deprecated APIs**  
-  Version 1 APIs are deprecated and will be removed on 8 September 2018. You must upgrade to v2 APIs. For more information, [see the API documentation ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com/apidocs/certificate-manager).
+  Version 1 APIs are deprecated and will be removed on 8 September 2018. You must upgrade to v2 APIs. For more information, [see the API documentation](/apidocs/certificate-manager){: external}.
 
 ## 19 December 2017
 {: #19December2017}

@@ -37,7 +37,7 @@ subcollection: certificate-manager
 # Tutorial: Automating deployments
 {: #automating-deployments}
 
-With {{site.data.keyword.cloudcerts_short}}, you can ensure that your certificates never expire by configuring automatic [renewal](/docs/certificate-manager?topic=certificate-manager-ordering-certificates) and deployment. By receiving notifications for incoming certificate lifecycle events - specifically the `cert_about_to_expire_renew_required` and `cert_renewed` event types, you can create a script that can deploy a recently renewed certificate before your current certificate expires. Your deployment can be accomplished in a number of ways depending on your SSL/TLS termination endpoint.
+With {{site.data.keyword.cloudcerts_short}}, you can ensure that your certificates never expire by configuring [automatic renewal](/docs/certificate-manager?topic=certificate-manager-ordering-certificates) and deployment. By receiving notifications for incoming certificate lifecycle events - specifically the `cert_about_to_expire_renew_required` and `cert_renewed` event types, you can create a script that can deploy a recently renewed certificate before your current certificate expires. Your deployment can be accomplished in a number of ways depending on your SSL/TLS termination endpoint.
 {: shortdesc}
 
 This tutorial focuses on deploying renewed ordered certificates. [Refer to the API documentation](/apidocs/certificate-manager#renew-a-certificate){: external} to learn more about the `renew` API.

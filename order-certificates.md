@@ -72,7 +72,7 @@ A Certificate Authority (CA) is an entity that issues digital certificates. The 
 
 ### Let's Encrypt
 {: #lets-encrypt}
-[Let’s Encrypt](https://letsencrypt.org) is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service that is provided by the Internet Security Research Group (ISRG).
+[Let’s Encrypt](https://letsencrypt.org){: external} is a free, automated, ACME-based CA that provides domain validated certificates valid for 90 days. It is a service that is provided by the Internet Security Research Group (ISRG).
 
 ## Setting up certificate ordering
 {: #setup}

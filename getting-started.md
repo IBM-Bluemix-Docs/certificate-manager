@@ -37,7 +37,7 @@ subcollection: certificate-manager
 # Getting started with {{site.data.keyword.cloudcerts_short}}
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. Get started by creating a new service instance by completing the following steps.
+With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. To get started, create a new service instance by completing the following steps.
 {: shortdesc}
 
 ## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the console

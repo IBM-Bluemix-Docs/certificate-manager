@@ -59,39 +59,38 @@ You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the
 
 1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 
-   ```
-   ibmcloud login
-   ```
-   {: codeblock}
+  ```
+  ibmcloud login
+  ```
+  {: codeblock}
 
-   If you're using a federated ID, be sure to append `--sso` to your command.
-   {: tip}
+  If you're using a federated ID, be sure to append `--sso` to your command.
+  {: tip}
 
 2. Create an instance.
 
-   ```
-   ibmcloud resource service-instance-create "<instance_name>" cloudcerts free <region>
-   ```
-   {: codeblock}
+  ```
+  ibmcloud resource service-instance-create "<instance_name>" cloudcerts free <region>
+  ```
+  {: codeblock}
 
-   To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command. [Learn more](/docs/certificate-manager?topic=certificate-manager-regions-endpoints#connectivity).
-   {: note}
+  To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command. [Learn more](/docs/certificate-manager?topic=certificate-manager-regions-endpoints#connectivity).
+  {: note}
 
-   <table>
-      <tr>
-         <th>Parameter</th>
-         <th>Description</th>
-      </tr>
-      <tr>
-         <td><code>instance_name</code></td>
-         <td>The name that you want to give your instance of the service.</td>
-      </tr>
-      <tr>
-         <td><code>region</code></td>
-         <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, and <code>us-east</code></td>
-      </tr>
-   </table>
-
+  <table>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>instance_name</code></td>
+      <td>The name that you want to give your instance of the service.</td>
+    </tr>
+    <tr>
+      <td><code>region</code></td>
+      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, and <code>us-east</code></td>
+    </tr>
+  </table>
 
 
 

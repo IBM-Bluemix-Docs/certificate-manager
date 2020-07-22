@@ -74,7 +74,7 @@ You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the
    ```
    {: codeblock}
 
-   To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command.
+   To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command. [Learn more](/docs/certificate-manager?topic=certificate-manager-regions-endpoints#connectivity).
    {: note}
 
    <table>

@@ -55,7 +55,7 @@ You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the
 ## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the CLI
 {: #provision-cli}
 
-You can provision a public instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
+You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
 
 1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 

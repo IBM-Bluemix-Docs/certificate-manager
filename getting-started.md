@@ -41,9 +41,9 @@ With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SS
 {: shortdesc}
 
 ## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the console
-{: #provision-certificate-manager-console}
+{: #provision-console}
 
-You can provision a public instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} console by completing the following steps.
+You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} console by completing the following steps.
 
 1.	In the {{site.data.keyword.cloud_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
 2.	Give your service instance a name, or use the preset name.
@@ -52,8 +52,8 @@ You can provision a public instance of {{site.data.keyword.cloudcerts_short}} wi
 5.	Click **Create**.
 
 
-## Provisioning a public {{site.data.keyword.cloudcerts_short}} instance with the CLI
-{: #provision-certificate-manager-public}
+## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the CLI
+{: #provision-cli}
 
 You can provision a public instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
 
@@ -74,43 +74,8 @@ You can provision a public instance of {{site.data.keyword.cloudcerts_short}} wi
    ```
    {: codeblock}
 
-   <table>
-      <tr>
-         <th>Parameter</th>
-         <th>Description</th>
-      </tr>
-      <tr>
-         <td><code>instance_name</code></td>
-         <td>The name that you want to give your instance of the service.</td>
-      </tr>
-      <tr>
-         <td><code>region</code></td>
-         <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, and <code>us-east</code></td>
-      </tr>
-   </table>
-
-
-## Provisioning a private {{site.data.keyword.cloudcerts_short}} instance with the CLI
-{: #provision-certificate-manager-private}
-
-You can provision a private instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
-
-1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
-
-   ```
-   ibmcloud login
-   ```
-   {: codeblock}
-
-   If you're using a federated ID, be sure to append `--sso` to your command.
-   {: tip}
-
-2. Create an instance.
-
-   ```
-   ibmcloud resource service-instance-create "<instance_name>" cloudcerts free <region> -p '{"allowed_network": "private-only"}'
-   ```
-   {: codeblock}
+   To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command.
+   {: note}
 
    <table>
       <tr>
@@ -126,6 +91,8 @@ You can provision a private instance of {{site.data.keyword.cloudcerts_short}} w
          <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, and <code>us-east</code></td>
       </tr>
    </table>
+
+
 
 
 ## Next steps

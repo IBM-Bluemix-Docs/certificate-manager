@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-22"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -37,36 +37,67 @@ subcollection: certificate-manager
 # Getting started with {{site.data.keyword.cloudcerts_short}}
 {: #getting-started}
 
-{{site.data.keyword.cloudcerts_full}} helps you to obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. Get started by creating a new service instance by completing the following steps.
+With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. To get started, create a new service instance by completing the following steps.
 {: shortdesc}
 
-To create an instance from the {{site.data.keyword.cloud_notm}} console:
+## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the console
+{: #provision-console}
+
+You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} console by completing the following steps.
 
 1.	In the {{site.data.keyword.cloud_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
 2.	Give your service instance a name, or use the preset name.
-3.	Click **Create**.
-4.	To import your organization's certificates into **{{site.data.keyword.cloudcerts_short}}**, click **Import Certificate**.
-5.	To order a new certificate, click **Order Certificate**.
+3. Add any tags that you might use to help organize your service instances.
+4. Select the type of endpoints that you want to use. Options include `public and private endpoints` and `private only`.
+5.	Click **Create**.
 
-<br/>
-To create an instance from the [{{site.data.keyword.cloud_notm}} CLI](/docs/cli?topic=cli-getting-started):
+
+## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the CLI
+{: #provision-cli}
+
+You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
 
 1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 
-   ```
-   ibmcloud login
-   ```
+  ```
+  ibmcloud login
+  ```
+  {: codeblock}
+
+  If you're using a federated ID, be sure to append `--sso` to your command.
+  {: tip}
 
 2. Create an instance.
 
-   ```
-   ibmcloud resource service-instance-create "My {{site.data.keyword.cloudcerts_short}} instance" cloudcerts free us-south
-   ```
+  ```
+  ibmcloud resource service-instance-create "<instance_name>" cloudcerts free <region>
+  ```
+  {: codeblock}
 
-   - Replace **My {{site.data.keyword.cloudcerts_short}} instance** with your choice of instance name.
-   - Replace **us-south** with either **us-south** (Dallas), **eu-gb** (London), **eu-de** (Frankfurt), **jp-tok** (Tokyo), **au-syd** (Sydney), or **us-east** (Washington DC).
+  To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command. [Learn more](/docs/certificate-manager?topic=certificate-manager-regions-endpoints#connectivity).
+  {: note}
 
-<br/>
+  <table>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>instance_name</code></td>
+      <td>The name that you want to give your instance of the service.</td>
+    </tr>
+    <tr>
+      <td><code>region</code></td>
+      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, and <code>us-east</code></td>
+    </tr>
+  </table>
 
-[Learn more](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager#about-certificate-manager) about what you get from {{site.data.keyword.cloudcerts_short}}, and [provide user feedback in {{site.data.keyword.IBM_notm}} Developer](/docs/certificate-manager?topic=certificate-manager-troubleshooting#getting-help-and-support) to enhance {{site.data.keyword.cloudcerts_short}} as it develops. To find out about what's new in the service, see [Release notes](/docs/certificate-manager?topic=certificate-manager-release-notes#release-notes).
-{: note}
+
+
+## Next steps
+{: #next-steps}
+
+With your instance provisioned, you can choose whether to import your own certificate or order a new one to start working with the service.
+
+[![This image is a visual link to the instructions for importing a certificate.](images/getting-started-import.svg)](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate)     [![This image is a visual link to the instructions for ordering a certificate.](images/getting-started-order.svg)](/docs/certificate-manager?topic=certificate-manager-ordering-certificates)
+

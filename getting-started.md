@@ -98,7 +98,7 @@ You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the
 ## Next steps
 {: #next-steps}
 
-With your instance provisioned, you can choose whether to import a certificate that you already have or order a new one.
+With your instance provisioned, you can start working with the service by either importing your own certificate or ordering a new one.
 
 [![This image is a visual link to the instructions for importing a certificate.](images/getting-started-import.svg)](/docs/certificate-manager?topic=certificate-manager-managing-certificates-from-the-dashboard#importing-a-certificate)     [![This image is a visual link to the instructions for ordering a certificate.](images/getting-started-order.svg)](/docs/certificate-manager?topic=certificate-manager-ordering-certificates)
 

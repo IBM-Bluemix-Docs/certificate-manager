@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-22"
+lastupdated: "2020-07-23"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -45,9 +45,9 @@ With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SS
 
 You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} console by completing the following steps.
 
-1.	In the {{site.data.keyword.cloud_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
-2.	Give your service instance a name, or use the preset name.
-3. Add any tags that you might use to help organize your service instances.
+1. In the {{site.data.keyword.cloud_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
+2. Give your service instance a name, or use the preset name.
+3. Organize your service instances by adding tags.
 4. Select the type of endpoints that you want to use. Options include `public and private endpoints` and `private only`.
 5.	Click **Create**.
 

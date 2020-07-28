@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-28"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -62,7 +62,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
     - `https://us-south.certificate-manager.bluemix.net`
     - `https://eu-gb.certificate-manager.bluemix.net` 
   
-  If you're these endpoints to target {{site.data.keyword.cloudcerts_short}} operations, search for the deprecated endpoints in your scripts, {{site.data.keyword.openwhisk_short}} actions, and other apps that manage {{site.data.keyword.cloudcerts_short}} resources. Then, replace the endpoints with the following supported URLs:
+  If you're using these endpoints to target {{site.data.keyword.cloudcerts_short}} operations, search for the deprecated endpoints in your scripts, {{site.data.keyword.openwhisk_short}} actions, and other apps that manage {{site.data.keyword.cloudcerts_short}} resources. Then, replace the endpoints with the following supported URLs:
     - `https://us-south.certificate-manager.cloud.ibm.com`
     - `https://eu-gb.certificate-manager.cloud.ibm.com` 
   
@@ -84,7 +84,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: #9February2020}
 
 - **Certificate auto-renewal**  
-  Ordered certificates can be enabled to be auto-renewed 31 days before expiration. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
+  Ordered certificates can be enabled to be auto-renewed 31 days before expiration. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates#ordering-certificates).
 
 - **Latest channel version**  
   The payload received by a Callback URL contains the current channel version and the latest channel version available. See [Notification event types and payload versions](/docs/certificate-manager?topic=certificate-manager-notifications-event-types).

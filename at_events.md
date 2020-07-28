@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-07-28"
 
-keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issued, search certificates, certificates, certificate metadata
+keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issue certificates, search certificates, certificates, certificate metadata
 
 subcollection: certificate-manager
 

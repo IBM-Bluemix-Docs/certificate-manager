@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-08-12"
 
 keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
@@ -53,8 +53,8 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
     <td>Easily and securely deploy custom domain TLS certificates from {{site.data.keyword.cloudcerts_short}} to your Kubernetes cluster. Cluster administrators can use the [Kubernetes Service plug-in commands](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) to update TLS certificates as Kubernetes secrets with a new certificate without causing downtime. To get started, check out the [Ingress annotations in the documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
   </tr>
   <tr>
-    <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apiconnect_short}}</td>
-    <td>Store your custom domain certificates in the {{site.data.keyword.cloudcerts_short}} service, then use certificate CRNs to bind with custom domains in {{site.data.keyword.apiconnect_short}}. [Learn more about {{site.data.keyword.apiconnect_short}}](/docs/apiconnect?topic=apiconnect-getting-started#getting-started).</p></td>
+    <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apigw_short}}</td>
+    <td>Store your custom domain certificates in the {{site.data.keyword.cloudcerts_short}} service, then use certificate CRNs to bind with custom domains in {{site.data.keyword.apigw_short}}. [Learn more about custom endpoints in {{site.data.keyword.apigw_short}}](/docs/api-gateway?topic=api-gateway-custom_endpoint).</p></td>
   </tr>
   <tr>
     <td>IBM Cloud Load Balancer for VPC</td>

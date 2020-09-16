@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-08-12"
+lastupdated: "2020-09-16"
 
 keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
@@ -31,6 +31,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 
@@ -73,7 +74,7 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
   </tr>
   <tr>
     <td>{{site.data.keyword.cis_full_notm}}</td>
-    <td>Order Let's Encrypt certificates with ease by leveraging {{site.data.keyword.cis_full_notm}} as your DNS provider. To get started, see the [Ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates) documentation.</td>
+    <td>Order Let's Encrypt certificates with ease by leveraging {{site.data.keyword.cis_full_notm}} as your DNS provider. To get started, see the [Ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates) documentation.</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>

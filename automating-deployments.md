@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-13"
+lastupdated: "2020-09-16"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
@@ -31,6 +31,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 
@@ -133,7 +134,7 @@ To get the certificate from from {{site.data.keyword.cloudcerts_short}}:
 
 If your application runs on IBM Cloud Kubernetes service, you can use the {{site.data.keyword.containershort}} ALB commands to download and deploy your certificate at the same time. When you use an ALB command to deploy a certificate that is stored in a {{site.data.keyword.cloudcerts_short}} service instance, the certificate is downloaded and also creates a Kubernetes secret in your specified cluster.
 
-To learn more about ALB commands, see [the ALB documentation](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli#cs_alb_cert_deploy).  
+To learn more about ALB commands, see [the ALB documentation](/docs/containers-cli-plugin?topic=containers-cli-plugin-kubernetes-service-cli).  
 {: note}
 
 

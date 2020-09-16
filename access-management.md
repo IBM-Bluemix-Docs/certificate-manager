@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-09-16"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -31,6 +31,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 

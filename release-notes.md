@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-28"
+lastupdated: "2020-09-16"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -31,6 +31,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 
@@ -84,7 +85,7 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: #9February2020}
 
 - **Certificate auto-renewal**  
-  Ordered certificates can be enabled to be auto-renewed 31 days before expiration. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates#ordering-certificates).
+  Ordered certificates can be enabled to be auto-renewed 31 days before expiration. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
 
 - **Latest channel version**  
   The payload received by a Callback URL contains the current channel version and the latest channel version available. See [Notification event types and payload versions](/docs/certificate-manager?topic=certificate-manager-notifications-event-types).
@@ -114,19 +115,19 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 {: #8July2019}
 
 - **IBM Cloud Internet Services as a DNS provider**  
-  You can now use IBM Cloud Internet Services as a DNS provider, simplifying the certificate ordering experience. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
+  You can now use IBM Cloud Internet Services as a DNS provider, simplifying the certificate ordering experience. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
 
 ## 10 June 2019
 {: 10June2019}
 
 - **Renew ordered Let's Encrypt certificates**  
-  You can now renew Let's Encrypt certificates that you have ordered using {{site.data.keyword.cloudcerts_short}}. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
+  You can now renew Let's Encrypt certificates that you have ordered using {{site.data.keyword.cloudcerts_short}}. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
 
 ## 6 May 2019
 {: #6May2019}
 
 - **Order Let's Encrypt certificates**  
-  You can now order Let's Encrypt certificates. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-order-certificates).
+  You can now order Let's Encrypt certificates. [Learn more about ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates).
 
 ## 18 February 2019
 {: #18February2019}

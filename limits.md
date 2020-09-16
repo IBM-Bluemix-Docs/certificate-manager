@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-09"
+lastupdated: "2020-09-16"
 
 keywords: certificates, limites, ssl, tls, free, renew certificate, order certificate, update operations, reimport, import certificates
 
@@ -31,6 +31,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 

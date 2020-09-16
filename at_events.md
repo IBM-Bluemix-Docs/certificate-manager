@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-07-28"
+lastupdated: "2020-09-16"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issue certificates, search certificates, certificates, certificate metadata
 
@@ -31,6 +31,7 @@ subcollection: certificate-manager
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:video: .video}
 
 
 

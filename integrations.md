@@ -77,6 +77,10 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
     <td>Order Let's Encrypt certificates with ease by leveraging {{site.data.keyword.cis_full_notm}} as your DNS provider. To get started, see the [Ordering certificates](/docs/certificate-manager?topic=certificate-manager-ordering-certificates) documentation.</td>
   </tr>
   <tr>
+    <td>IBM Cloud Identity and Access Management</td>
+    <td>Access to the service and the resources that it contains are managed by using [Identity and Access Management](/docs/account?topic=account-iamoverview).</td>
+  </tr>
+  <tr>
     <td>{{site.data.keyword.security-advisor_full_notm}}</td>
     <td>[{{site.data.keyword.security-advisor_short}}](/docs/security-advisor?topic=security-advisor-getting-started#getting-started) centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about {{site.data.keyword.security-advisor_short}}](/docs/security-advisor?topic=security-advisor-getting-started#getting-started).</td>
   </tr>

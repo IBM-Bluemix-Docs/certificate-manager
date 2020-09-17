@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-09-17"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -119,7 +119,7 @@ You can use service access roles to enable users to complete tasks in {{site.dat
      </tr>
 </table>
 
-For more information about user roles and permissions, see [User roles](/docs/iam?topic=iam-userroles#userroles).
+For more information about user roles and permissions, see [User roles](/docs/account?topic=account-userroles#userroles).
 
 ## Configuring access policies
 {: #configuring-access-policies}

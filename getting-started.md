@@ -2,11 +2,15 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-09-21"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
 subcollection: certificate-manager
+
+content-type: tutorial
+account-plan: lite
+completion-time: 10m
 
 ---
 
@@ -34,31 +38,23 @@ subcollection: certificate-manager
 {:video: .video}
 
 
+{:step: data-tutorial-type='step'}
 
 # Getting started with {{site.data.keyword.cloudcerts_short}}
 {: #getting-started}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="10m"}
 
-With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. To get started, create a new service instance by completing the following steps.
+With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. 
 {: shortdesc}
-
-## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the console
-{: #provision-console}
-
-You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} console by completing the following steps.
-
-1. In the {{site.data.keyword.cloud_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
-2. Give your service instance a name, or use the preset name.
-3. Organize your service instances by adding tags.
-4. Select the type of endpoints that you want to use. Options include `public and private endpoints` and `private only`.
-5.	Click **Create**.
-
-
-## Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the CLI
-{: #provision-cli}
 
 You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
 
-1. Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
+## Log in
+{: #getting-started-step1}
+{: step}
+
+Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions.
 
   ```
   ibmcloud login
@@ -68,7 +64,9 @@ You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the
   If you're using a federated ID, be sure to append `--sso` to your command.
   {: tip}
 
-2. Create an instance.
+## Create an instance
+{: #getting-started-step2}
+{: step}
 
   ```
   ibmcloud resource service-instance-create "<instance_name>" cloudcerts free <region>
@@ -93,7 +91,16 @@ You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the
     </tr>
   </table>
 
+### Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the console
+{: #provision-console}
 
+Alternatively, you can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} console by completing the following steps.
+
+1. In the {{site.data.keyword.cloud_notm}} catalog, select **{{site.data.keyword.cloudcerts_short}}**.
+2. Give your service instance a name, or use the preset name.
+3. Organize your service instances by adding tags.
+4. Select the type of endpoints that you want to use. Options include `public and private endpoints` and `private only`.
+5. Click **Create**.
 
 ## Next steps
 {: #next-steps}

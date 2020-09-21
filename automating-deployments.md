@@ -2,11 +2,15 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-16"
+lastupdated: "2020-09-21"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
 subcollection: certificate-manager
+
+content-type: tutorial
+account-plan: lite
+completion-time: 30m
 
 ---
 
@@ -32,12 +36,17 @@ subcollection: certificate-manager
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
 {:video: .video}
+{:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
 
 
+{:step: data-tutorial-type='step'}
 
 
-# Tutorial: Automating deployments
+# Automating deployments
 {: #automating-deployments}
+{: toc-content-type="tutorial"}
+{: toc-completion-time="30m"}
 
 With {{site.data.keyword.cloudcerts_short}}, you can ensure that your certificates never expire by configuring [automatic renewal](/docs/certificate-manager?topic=certificate-manager-ordering-certificates) and deployment. By receiving notifications for incoming certificate lifecycle events - specifically the `cert_about_to_expire_renew_required` and `cert_renewed` event types, you can create a script that can deploy a recently renewed certificate before your current certificate expires. Your deployment can be accomplished in a number of ways depending on your SSL/TLS termination endpoint.
 {: shortdesc}
@@ -47,6 +56,7 @@ This tutorial focuses on deploying renewed ordered certificates. [Refer to the A
 
 ## Create a Callback URL notification channel 
 {: #auto-deploy-create-url}
+{: step}
 
 In order to automate deployments, you must use a Callback URL notification channel to listen for lifecycle events. The endpoint Callback URL can point to any server that can receive and respond to requests. For example: 
 
@@ -58,8 +68,9 @@ In order to automate deployments, you must use a Callback URL notification chann
 To learn about creating notification channels, see [Configuring notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications#adding-channel).  
 {: note}
 
-## Listening for lifecycle events
+## Listen for lifecycle events
 {: #auto-deploy-listen}
+{: step}
 
 In order to automate your deployment process, you need to know where in the certificate lifecycle that you are. So, in order to keep track, be sure to listen for the events that are listed in the following table. Then, you need to decrypt the information to obtain the certificate data.
 
@@ -75,6 +86,7 @@ To learn about the various available certificate lifecycle event types see [Conf
 
 ## Deploy to SSL/TLS termination endpoints 
 {: #auto-deploy-endpoints}
+{: step}
 
 The way in which you download and deploy your renewed certificates is different depending on the termination endpoint that you use.
 {: shortdesc}

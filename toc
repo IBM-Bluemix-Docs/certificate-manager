@@ -21,8 +21,11 @@ Certificate Manager
     release-notes.md
     {: .navgroup-end}
 
-    {: .navgroup id="howto"}
+    {: .navgroup id="tutorial"}
     automating-deployments.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
     managing-certificates.md
     order-certificates.md
     notifications-dashboard.md
@@ -30,6 +33,7 @@ Certificate Manager
     {: topicgroup}
     Enhancing security
         access-management.md
+        manage-scc.md
         at_events.md
         log_events.md
     {: .navgroup-end}

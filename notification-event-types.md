@@ -22,15 +22,21 @@ subcollection: certificate-manager
 {:tip: .tip}
 {:preview: .preview}
 {:deprecated: .deprecated}
+{:beta: .beta}
+{:term: .term}
 {:shortdesc: .shortdesc}
-{:support: data-reuse='support'}
 {:script: data-hd-video='script'}
+{:support: data-reuse='support'}
 {:table: .aria-labeledby="caption"}
 {:troubleshoot: data-hd-content-type='troubleshoot'}
 {:help: data-hd-content-type='help'}
 {:tsCauses: .tsCauses}
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
+{:java: .ph data-hd-programlang='java'}
+{:javascript: .ph data-hd-programlang='javascript'}
+{:swift: .ph data-hd-programlang='swift'}
+{:curl: .ph data-hd-programlang='curl'}
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}

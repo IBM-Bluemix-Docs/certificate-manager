@@ -36,9 +36,10 @@ completion-time: 10m
 {:tsResolve: .tsResolve}
 {:tsSymptoms: .tsSymptoms}
 {:video: .video}
-
-
 {:step: data-tutorial-type='step'}
+{:tutorial: data-hd-content-type='tutorial'}
+
+
 
 # Getting started with {{site.data.keyword.cloudcerts_short}}
 {: #getting-started}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-07"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -44,14 +44,22 @@ subcollection: certificate-manager
 
 
 
-# High availability and disaster recovery
+# Understanding high availability and disaster recovery for {{site.data.keyword.cloudcerts_short}}
 {: #ha-dr}
 
-High availability and disaster recovery for {{site.data.keyword.cloudcerts_long}}.
-{: shortdesc}
+{{site.data.keyword.cloudcerts_long}} is a highly available, regional service that runs in the following regions:
 
-* The {{site.data.keyword.cloudcerts_short}} service is a highly available, regional, service. In each supported location, the service exists in multiple availability zones with no single point of failure.
-* Data that is stored in the {{site.data.keyword.cloudcerts_short}} database is backed-up daily in same region. If a recovery of a location is necessary, the data is available to be restored. However, {{site.data.keyword.cloudcerts_short}} does not provide cross-regional failover. If a regional disaster occurs, data might not be recoverable. It is recommended that you create and maintain backup instances in other regions.
+* Dallas (`us-south`)
+* Frankfurt (`eu-de`)
+* London (`eu-gb`)
+* Sydney (`au-syd`)
+* Tokyo (`jp-tok`)
+* Washington (`us-east`)
+
+In each supported region, the service exists in multiple availability zones with no single point of failure. Data is backed-up daily in the same region. However, because {{site.data.keyword.cloudcerts_short}} is a regional service, there is no automatic cross-regional failover or cross-regional disaster recovery. If all of the availability zones in a region fail, {{site.data.keyword.cloudcerts_short}} becomes unavailable in that location. To establish cross-region high availability and implement a recovery plan, you need to create and maintain backup instances in multiple regions.
+
+To learn more about the high availability and disaster recovery standards in {{site.data.keyword.cloud_notm}}, see [How do I ensure zero downtime?](/docs/overview?topic=overview-zero-downtime) or [Service Level Agreements](/docs/overview?topic=overview-slas).
+
 
 
 ## Manually backing up

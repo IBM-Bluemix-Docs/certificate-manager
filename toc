@@ -15,7 +15,6 @@ Certificate Manager
         key-concepts.md
         integrations.md
         compliance-and-standards.md
-        ha-dr.md
     
     rellinks.md
     release-notes.md
@@ -29,6 +28,8 @@ Certificate Manager
     managing-certificates.md
     order-certificates.md
     notifications-dashboard.md
+
+    ha-dr.md
 
     {: topicgroup}
     Enhancing security

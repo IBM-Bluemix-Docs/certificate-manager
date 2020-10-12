@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-07"
+lastupdated: "2020-10-12"
 
 keywords: security for {{site.data.keyword.cloudcerts_short}}, compliance for {{site.data.keyword.cloudcerts_short}}, security and compliance for {{site.data.keyword.cloudcerts_short}}, rules for {{site.data.keyword.cloudcerts_short}}, 
 
@@ -50,11 +50,10 @@ subcollection: certificate-manager
 The {{site.data.keyword.compliance_short}} is built directly into the platform and integrated with {{site.data.keyword.cloudcerts_short}} to help you manage security and compliance for your organization.
 {: shortdesc}
 
-With {{site.data.keyword.compliance_short}}, you can use {{site.data.keyword.cloudcerts_short}} to:
+With the {{site.data.keyword.compliance_short}}, you can:
 
-- Implement controls and goals that continuously evaluate your current posture
-- Define rules to standardize resource configuration
-- Gain insight into suspicious activity across your apps and accounts.
+* Monitor for controls and goals that pertain to {{site.data.keyword.cloudcerts_short}}
+* Define rules for {{site.data.keyword.cloudcerts_short}} that can help to standardize resource configuration
 
 ## Monitoring security and compliance posture with {{site.data.keyword.cloudcerts_short}}
 {: #monitor-certificate-manager}
@@ -74,9 +73,9 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 ## Governing {{site.data.keyword.cloudcerts_short}} resource configuration
 {: #govern-certificate-manager}
 
-As a security focal, you can use the {{site.data.keyword.compliance_short}} to define rules for the instances of {{site.data.keyword.cloudcerts_short}} that you create.
+As a security or compliance focal, you can use the {{site.data.keyword.compliance_short}} to define config rules for the instances of {{site.data.keyword.cloudcerts_short}} that you create.
 
-Config rules are defined as a JSON object with two sections: a target and a required config. The target details information about the {{site.data.keyword.cloud_notm}} service and resource kind that you want to create a rule for. The required config details the specific property within the target that you want to check to ensure it is configured to your standards.
+Config rules are defined as a JSON object and are used to enforce the configuration standards that you want to implement across your accounts. Each rule is comprised of a target and required configuration that detail the the specific properties within a target service that you want to define a rule for. To learn more about governing the configuration of resources in your accounts, check out [Working with config rules](/docs/security-compliance?topic=security-compliance-rules).
 
 This service only supports the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}.
 {: note}
@@ -86,9 +85,9 @@ The following table details the information that you need to create a config rul
 | Resource kind | Property | Operator type | Value | Description |
 |:--------------|:---------|:--------------|:------|:------------|
 | `instance` | `private_network_only` | Boolean | - | Indicates whether access to an instance of the service is allowed only through a private network. |
-{: caption="Table 2. Available rule configurations" caption-side="top"}
+{: caption="Table 1. Available rule configurations" caption-side="top"}
 
-To learn more about governing the configuration of resources, check out [Working with config rules](/docs/security-compliance?topic=security-compliance-rules).
+
 
 
 ## Gaining security insight with {{site.data.keyword.cloudcerts_short}}

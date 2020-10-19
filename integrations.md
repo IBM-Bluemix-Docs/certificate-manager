@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-19"
 
 keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
@@ -48,7 +48,7 @@ subcollection: certificate-manager
 
 The following tables lists supported integrations by {{site.data.keyword.cloudcerts_full}}.
 
-## Services that are integrated with {{site.data.keyword.cloudcerts_short}} 
+## Services that are integrated with {{site.data.keyword.cloudcerts_short}}
 {: #service-integrations-1}
 
 <table>
@@ -58,8 +58,8 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
     <th> Description </th>
   </tr>
   <tr>
-    <td>{{site.data.keyword.containerlong_notm}}</td>
-    <td>Easily and securely deploy custom domain TLS certificates from {{site.data.keyword.cloudcerts_short}} to your Kubernetes cluster. Cluster administrators can use the [Kubernetes Service plug-in commands](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli) to update TLS certificates as Kubernetes secrets with a new certificate without causing downtime. To get started, check out the [Ingress annotations in the documentation](/docs/containers?topic=containers-ingress_annotation#https-auth).</td>
+    <td>{{site.data.keyword.containerlong_notm}} and {{site.data.keyword.openshiftlong_notm}}</td>
+    <td>By default, a {{site.data.keyword.cloudcerts_short}} instance in the format `kube-<cluster_ID>` is automatically created for each cluster that you can use to store and manage the cluster's TLS certificates. Cluster administrators can use the [{{site.data.keyword.containerlong_notm}} plug-in commands](/docs/containers?topic=containers-cli-plugin-kubernetes-service-cli#cs_ingress_secret_create) to import TLS certificates as Kubernetes secrets and to update secrets with a new certificate without causing downtime. To get started, check out the [Ingress TLS documentation](/docs/containers?topic=containers-ingress-types#manage_certs). Do not delete your cluster's default {{site.data.keyword.cloudcerts_short}} instance.</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.cloud_notm}} {{site.data.keyword.apigw_short}}</td>

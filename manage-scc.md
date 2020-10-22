@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-12"
+lastupdated: "2020-10-22"
 
 keywords: security for {{site.data.keyword.cloudcerts_short}}, compliance for {{site.data.keyword.cloudcerts_short}}, security and compliance for {{site.data.keyword.cloudcerts_short}}, rules for {{site.data.keyword.cloudcerts_short}}, 
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 
@@ -82,9 +81,10 @@ This service only supports the ability to view the results of your configuration
 
 The following table details the information that you need to create a config rule for the {{site.data.keyword.cloudcerts_short}} service.
 
-| Resource kind | Property | Operator type | Value | Description |
+| Resource kind | Property | Operator| Value | Description |
 |:--------------|:---------|:--------------|:------|:------------|
-| `instance` | `private_network_only` | Boolean | - | Indicates whether access to an instance of the service is allowed only through a private network. |
+| `instance` | `private_network_only` | `is_true`<br>`is_false` | - | Indicates whether access to an instance of the service is allowed only through a private network. |
+| `certificate` | `days_to_expiration` | `num_greater_than`| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
 {: caption="Table 1. Available rule configurations" caption-side="top"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-23"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 
@@ -103,7 +102,7 @@ If you are managing your certificates programmatically, see the following table 
 {: tab-group="service-endpoints"}
 {: class="simple-tab-table"}
 
-#### Notes
+### Notes
 {: #endpoints-notes}
 
 - In the Frankfurt region only, your certificates are maintained in the service database over the public network.

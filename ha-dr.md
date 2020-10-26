@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-07"
+lastupdated: "2020-10-26"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 
@@ -83,12 +82,3 @@ To learn about the various available certificate lifecycle event types see [Conf
 {: note}
 
 
-## Restoring a deleted service instance
-{: #restore-instance}
-
-After you delete an instance of the {{site.data.keyword.cloudcerts_short}} service, you can restore the deleted service instance within the data retention period of seven days. After the seven-day period expires, the service instance is permanently deleted.
-
-To view which service instances are available for restoration, use the `ibmcloud resource reclamations` command. To restore a deleted service, use the `ibmcloud resource reclamation-restore` command.
-
-Learn more about [managing resources](/docs/resources?topic=resources-manage_resource).
-{: note}

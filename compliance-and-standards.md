@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-26"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -43,18 +43,10 @@ subcollection: certificate-manager
 
 
 
-
 # Compliance and standards
 {: #compliance-and-standards}
 
 {{site.data.keyword.cloudcerts_short}} has successfully completed several certifications and audits and meets several important standards.
-
-## Private key security
-{: #private-key-security}
-
-{{site.data.keyword.cloudcerts_short}} uses the [envelope encryption methodology](/docs/key-protect/concepts?topic=key-protect-envelope-encryption), where a root key is stored in, and never leaves, {{site.data.keyword.keymanagementservicelong_notm}}, which is also backed by HSM.
-
-In addition, a per tenant-managed encryption key is used to encrypt the certificates and private keys before they are stored in the database. As part of the encryption chain, {{site.data.keyword.cloudcerts_short}} uses the Advanced Encryption Standard (AES) 256 algorithm to encrypt the private key.
 
 ## HIPAA
 {: #compliance-hippa}

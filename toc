@@ -32,11 +32,15 @@ Certificate Manager
     ha-dr.md
 
     {: topicgroup}
-    Enhancing security
-        access-management.md
-        manage-scc.md
+    Logging and monitoring
         at_events.md
         log_events.md
+
+    {: topicgroup}
+    Enhancing security
+        access-management.md
+        data-security.md
+        manage-scc.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}

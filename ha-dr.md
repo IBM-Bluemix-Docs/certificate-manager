@@ -78,7 +78,7 @@ Creating an automatic backup of your certificates is possible by automating the 
 * Create a script that periodically downloads all of your certificates and then reimports them into your backup instance.
 * Create a Callback URL notifications channel in {{site.data.keyword.cloudcerts_short}} that points to an IBM Cloud Functions action. Configure the action to listen for certificate lifecycle events such as reimport, order, or renewal. Then, when the action receives the event it downloads the certificate from one instance and imports it to the backup in a continuous fashion.
 
-To learn about the various available certificate lifecycle event types see [Configuring notifications](/docs/services/certificate-manager?topic=certificate-manager-configuring-notifications). 
+To learn about the various available certificate lifecycle event types see [Configuring notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications). 
 {: note}
 
 

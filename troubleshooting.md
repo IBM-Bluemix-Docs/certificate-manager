@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-26"
 
 keywords: certificates, ssl, tls, private key, support, help, error
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Troubleshooting
 {: #troubleshooting}
 
@@ -62,7 +61,7 @@ You can get help in the following ways:
 
 When you are using the forums to ask a question, be sure to tag your question so that it is seen by the {{site.data.keyword.cloudcerts_full_notm}} development team.
 
-If you have technical questions about the service, post your question on [Stack Overflow](https://stackoverflow.com/search?q=ibm-certificate-manager+ibm-cloud){: external} and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
+If you have technical questions about the service, post your question on [Stack Overflow](https://stackoverflow.com/nocaptcha?s=08cf70db-2f91-4119-a14e-08b3793f6c9f){: external} and tag your question with `ibm-cloud` and `ibm-certificate-manager`.  
 
 For more information about opening a support ticket or support levels and ticket severities, see [how do I get the support that I need?](/docs/get-support?topic=get-support-using-avatar). When opening the ticket, select the offering "Security and Identity: {{site.data.keyword.cloudcerts_short}}".
 

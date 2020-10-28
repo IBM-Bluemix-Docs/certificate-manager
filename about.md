@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-28"
 
 keywords: certificates, ssl, tls, ssl certificates, tls certificates, public certificates, security requirements, import certificate, cert, notified, manage certificates, automated renewal, availability
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # About {{site.data.keyword.cloudcerts_short}}
 {: #about-certificate-manager}
 
@@ -62,3 +61,8 @@ You can manage your certificates in the following ways:
 
 
 ![High-level service architecture diagram](images/high-level-architecture.png){: caption="Figure 1. High-level service architecture" caption-side="bottom"}
+
+## Standards and certifications
+{: #standards-and-certifications}
+
+{{site.data.keyword.cloudcerts_short}} has successfully completed several certifications and audits and meets several important standards. To view a complete list of certifications, see section 5.4 of the [{{site.data.keyword.cloudcerts_short}} software product compatibility report](https://www.ibm.com/software/reports/compatibility/clarity-reports/report/html/softwareReqsForProduct?deliverableId=1602B560414311E7B5C65CA8AF91E79A){: external}.

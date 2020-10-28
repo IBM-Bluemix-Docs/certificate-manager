@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-22"
+lastupdated: "2020-10-27"
 
 keywords: security for {{site.data.keyword.cloudcerts_short}}, compliance for {{site.data.keyword.cloudcerts_short}}, security and compliance for {{site.data.keyword.cloudcerts_short}}, rules for {{site.data.keyword.cloudcerts_short}}, 
 
@@ -74,12 +74,11 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 
 As a security or compliance focal, you can use the {{site.data.keyword.compliance_short}} to define config rules for the instances of {{site.data.keyword.cloudcerts_short}} that you create.
 
-Config rules are defined as a JSON object and are used to enforce the configuration standards that you want to implement across your accounts. Each rule is comprised of a target and required configuration that detail the the specific properties within a target service that you want to define a rule for. To learn more about governing the configuration of resources in your accounts, check out [Working with config rules](/docs/security-compliance?topic=security-compliance-rules).
-
 This service only supports the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}.
 {: note}
 
-The following table details the information that you need to create a config rule for the {{site.data.keyword.cloudcerts_short}} service.
+[Config rules](x3084914){: term} are used to enforce the configuration standards that you want to implement across your accounts. To learn more about the about the data that you can use to create a rule for {{site.data.keyword.cloudcerts_short}}, review the following table.
+
 
 | Resource kind | Property | Operator| Value | Description |
 |:--------------|:---------|:--------------|:------|:------------|
@@ -87,7 +86,7 @@ The following table details the information that you need to create a config rul
 | `certificate` | `days_to_expiration` | `num_greater_than`| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
 {: caption="Table 1. Available rule configurations" caption-side="top"}
 
-
+To learn more about config rules, check out [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule).
 
 
 ## Gaining security insight with {{site.data.keyword.cloudcerts_short}}

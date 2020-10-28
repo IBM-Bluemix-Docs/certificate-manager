@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-26"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Ordering certificates
 {: #ordering-certificates}
 
@@ -69,7 +68,7 @@ Domain validation includes the verification that you own the domain for which yo
 {: #certificate-ordering-limitations}
 
 * You can order a certificate only for domains that can resolve the Authoritative Name Server. On Linux or macOS it can be checked using the command: `host -t ns <your_domain>`. On Windows it can be checked using `nslookup <your_domain>`.
-* You can order a SAN certificate with a wildcard domain and additional domains not including direct subdomains. Example: You can order a certificate for the domains _*.mydomain.org_ and _*.www.mydomain.org_, but not for the domains _*.mydomain.org_ and _www.mydomain.org_.
+* You can order a SAN certificate with a wildcard domain and additional domains not including direct subdomains. Example: You can order a certificate for the domains _*.domain.org_ and _*.www.domain.org_, but not for the domains _*.domain.org_ and _www.domain.org_.
 * You can order a certificate with a primary domain length that is no longer than 64 characters.
 * The {{site.data.keyword.cloudcerts_short}} console is limited to display up to 100 domains to select from, when using {{site.data.keyword.cis_short}} as the DNS provider. If you don't see the domain(s) you need to make the order use the {{site.data.keyword.cloudcerts_short}} order API and specify the domain(s).
 
@@ -127,23 +126,23 @@ If you manage your domains in {{site.data.keyword.cis_short}}, complete the foll
       <th>Description</th>
     </tr>
     <tr>
-      <td><b>token</b></td>
+      <td><code>token</code></td>
       <td>A valid IAM token. You can find the value by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud iam oauth-tokens</code>.</td>
     </tr>
     <tr>
-      <td><b>account ID</b></td>
+      <td><code>account ID</code></td>
       <td>The ID for the account where the {{site.data.keyword.cloudcerts_short}} and {{site.data.keyword.cis_short_notm}} instances exist. You can find the value by navigating to <b>{{site.data.keyword.cloud_notm}} > Manage > Account > Account Settings</b> or by using the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud account show</code>.</td>
     </tr>
     <tr>
-      <td><b>Certificate-Manager-GUID-based-instanceID</b></td>
+      <td><code>Certificate-Manager-GUID-based-instanceID</code></td>
       <td>The GUID-based ID for your instance of {{site.data.keyword.cloudcerts_short}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
     </tr>
     <tr>
-      <td><b>Cloud-Internet-Services-GUID-based-instanceID</b></td>
+      <td><code>Cloud-Internet-Services-GUID-based-instanceID</code></td>
       <td>The GUID-based ID for your instance of {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI: <code>ibmcloud resource service-instance "Instance name"</code>.</td>
     </tr>
     <tr>
-      <td><b>domain ID</b></td>
+      <td><code>domain ID</code></td>
       <td>The ID of your domain as it is found in {{site.data.keyword.cis_short_notm}}. To find the value, use the {{site.data.keyword.cloud_notm}} CLI to run <code>ibmcloud cis domains</code>. To manage multiple domains, modify the <code>resources</code> array.</td>
     </tr>
   </table>

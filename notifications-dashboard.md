@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-26"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Configuring notifications
 {: #configuring-notifications}
 
@@ -53,7 +52,7 @@ With {{site.data.keyword.cloudcerts_long}}, you can receive notifications about 
 ## When am I notified?
 {: #notifications-notified} 
 
-When you work with {{site.data.keyword.cloudcerts_short}}, you are notified about your lifecycle events based on the origin of your certificates, their renewal settings, and the operations that you perform during their lifespan. To avoid any downtime and limit your notifications, configure [automatic certificate renewal](/docs/services/certificate-manager?topic=certificate-manager-ordering-certificates#renew-certificate).
+When you work with {{site.data.keyword.cloudcerts_short}}, you are notified about your lifecycle events based on the origin of your certificates, their renewal settings, and the operations that you perform during their lifespan. To avoid any downtime and limit your notifications, configure [automatic certificate renewal](/docs/certificate-manager?topic=certificate-manager-ordering-certificates#renew-certificate).
 
 
 For an overview of when and why you are notified, check out the following table. 

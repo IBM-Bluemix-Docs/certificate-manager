@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-28"
 
 keywords: certificates, ssl, tls, private key, support, help, error
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Troubleshooting

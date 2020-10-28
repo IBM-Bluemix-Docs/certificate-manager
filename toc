@@ -14,7 +14,6 @@ Certificate Manager
         about.md
         key-concepts.md
         integrations.md
-        compliance-and-standards.md
     
     rellinks.md
     release-notes.md
@@ -29,14 +28,16 @@ Certificate Manager
     order-certificates.md
     notifications-dashboard.md
 
-    ha-dr.md
+    {: topicgroup}
+    Logging and monitoring
+        at_events.md
+        log_events.md
 
     {: topicgroup}
     Enhancing security
         access-management.md
+        data-security.md
         manage-scc.md
-        at_events.md
-        log_events.md
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
@@ -45,6 +46,7 @@ Certificate Manager
     limits.md
     regions-and-endpoints.md
     understanding-your-responsibilities.md
+    ha-dr.md
     {: .navgroup-end}
 
     {: .navgroup id="help"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-10-26"
 
 keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Managing certificates from the dashboard
@@ -125,11 +124,11 @@ After you import a certificate, the following information is displayed in the Ce
   </tr>
   <tr>
     <td>Valid from</td>
-    <td>The date on which the certificate became valid, in Coordinated Universal Time timezone. </td>
+    <td>The date on which the certificate became valid, in Coordinated Universal Time time zone. </td>
   </tr>
   <tr>
     <td>Expires on</td>
-    <td>The date on which the certificate is no longer valid (in Coordinated Universal Time timezone). </td>
+    <td>The date on which the certificate is no longer valid (in Coordinated Universal Time time zone). </td>
   </tr>
   <tr>
     <td>Status</td>

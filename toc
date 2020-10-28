@@ -14,7 +14,6 @@ Certificate Manager
         about.md
         key-concepts.md
         integrations.md
-        compliance-and-standards.md
     
     rellinks.md
     release-notes.md

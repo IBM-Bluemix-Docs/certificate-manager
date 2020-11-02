@@ -2,7 +2,7 @@
 
 copyright:
   years: 2020
-lastupdated: "2020-10-27"
+lastupdated: "2020-11-02"
 
 keywords: security for {{site.data.keyword.cloudcerts_short}}, compliance for {{site.data.keyword.cloudcerts_short}}, security and compliance for {{site.data.keyword.cloudcerts_short}}, rules for {{site.data.keyword.cloudcerts_short}}, 
 
@@ -46,7 +46,7 @@ subcollection: certificate-manager
 # Managing security and compliance with {{site.data.keyword.cloudcerts_short}}
 {: #manage-security-compliance}
 
-The {{site.data.keyword.compliance_short}} is built directly into the platform and integrated with {{site.data.keyword.cloudcerts_short}} to help you manage security and compliance for your organization.
+{{site.data.keyword.cloudcerts_short}} is integrated with the {{site.data.keyword.compliance_short}} to help you manage security and compliance for your organization.
 {: shortdesc}
 
 With the {{site.data.keyword.compliance_short}}, you can:
@@ -57,16 +57,18 @@ With the {{site.data.keyword.compliance_short}}, you can:
 ## Monitoring security and compliance posture with {{site.data.keyword.cloudcerts_short}}
 {: #monitor-certificate-manager}
 
-As a security or compliance focal, you need to ensure that your organization is adhering to the external and internal standards for your industry. By scanning the configurations in your accounts against a profile, the {{site.data.keyword.compliance_short}} can help you to identify potential issues as they arise.
+As a security or compliance focal, you can use the {{site.data.keyword.cloudcerts_short}} [goals](#x2117978){: term} to help ensure that your organization is adhering to the external and internal standards for your industry. By using the {{site.data.keyword.compliance_short}} to validate the resource configurations in your account against a [profile](#x2034950){: term}, you can identity potential issues as they arise.
 
-Each goal is automatically added to the {{site.data.keyword.cloud_notm}} Best Practices Controls 1.0 profile but can also be mapped to other profiles.
+All of the goals for {{site.data.keyword.cloudcerts_short}} are added to the {{site.data.keyword.cloud_notm}} Best Practices Controls 1.0 profile but can also be mapped to other profiles.
 {: note}
 
-**Available goals for {{site.data.keyword.cloudcerts_short}}**
+To start monitoring your resources, check out [Getting started with {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-getting-started).
+
+### Available goals for {{site.data.keyword.cloudcerts_short}}
+{: #certificate-manager-available-goals}
 
 * Check whether certificates are automatically renewed before expiration.
 
-To start monitoring your resources, check out [Getting started with {{site.data.keyword.compliance_short}}](/docs/security-compliance?topic=security-compliance-getting-started).
 
 
 ## Governing {{site.data.keyword.cloudcerts_short}} resource configuration
@@ -77,7 +79,7 @@ As a security or compliance focal, you can use the {{site.data.keyword.complianc
 This service only supports the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}.
 {: note}
 
-[Config rules](x3084914){: term} are used to enforce the configuration standards that you want to implement across your accounts. To learn more about the about the data that you can use to create a rule for {{site.data.keyword.cloudcerts_short}}, review the following table.
+[Config rules](#x3084914){: term} are used to enforce the configuration standards that you want to implement across your accounts. To learn more about the about the data that you can use to create a rule for {{site.data.keyword.cloudcerts_short}}, review the following table.
 
 
 | Resource kind | Property | Operator| Value | Description |

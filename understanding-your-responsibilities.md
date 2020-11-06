@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-09-21"
+lastupdated: "2020-11-06"
 
 keywords: certificates, ssl, tls, responsabilities, ibm, terms, conditions, managing service roles, regulation compliance, pci, dss, ha, backup, industry standard
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Understanding your responsibilities with using {{site.data.keyword.cloudcerts_short}}
 {: #understanding-your-responsibilities-using-certificate-manager}
 
@@ -58,8 +57,8 @@ Tasks that pertain to any logs or activity in your {{site.data.keyword.cloudcert
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-| Data | Provide integrations with select third-party partnership technologies, such as {{site.data.keyword.la_full}} and {{site.data.keyword.at_full}} | Use the provided tools to review instance logs and activities. For more information, see [Available Integrations](/docs/certificate-manager?topic=certificate-manager-available-integrations).  |
-| | | {{site.data.keyword.cloudcerts_short}} does not deploy certificates to your TLS termination points. You can use the Kubernetes Service CLI to deploy certificates managed in {{site.data.keyword.cloudcerts_short}} to your cluster. For more information, see [Available Integrations](/docs/certificate-manager?topic=certificate-manager-available-integrations). |
+| Data | Provide integrations with select third-party partnership technologies, such as {{site.data.keyword.la_full}} and {{site.data.keyword.at_full}} | Use the provided tools to review instance logs and activities. For more information, see [Available integrations](/docs/certificate-manager?topic=certificate-manager-available-integrations).  |
+| | | {{site.data.keyword.cloudcerts_short}} does not deploy certificates to your TLS termination points. You can use the Kubernetes Service CLI to deploy certificates managed in {{site.data.keyword.cloudcerts_short}} to your cluster. For more information, see [Available integrations](/docs/certificate-manager?topic=certificate-manager-available-integrations). |
 | | | Avoid outages because of expired certificates by configuring notification channels and handle expiring certificates notifications. |
 {: caption="Table 1. Responsibilities for incident and operations" caption-side="top"}
 
@@ -80,7 +79,7 @@ Tasks that pertain to the optional access restrictions that you can place on cer
 
 | Task | {{site.data.keyword.IBM_notm}} responsibilities | Your responsibilities |
 |----------|-----------------------|--------|
-| Data | Maintain controls commensurate to [various industry compliance standards](/docs/certificate-manager?topic=certificate-manager-compliance-and-standards), such as PCI DSS.  | |
+| Data | Maintain controls commensurate to [various industry compliance standards](/docs/certificate-manager?topic=certificate-manager-about-certificate-manager#standards-and-certifications), such as PCI DSS.  | |
 {: caption="Table 3. Responsibilities for security and regulation compliance" caption-side="top"}
 
 ## Disaster recovery

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-10-28"
+lastupdated: "2020-11-19"
 
 keywords: data encryption in Certificate Manager, data storage for Certificate Manager, bring your own keys for Certificate Manager, BYOK for Certificate Manager, key management for Certificate Manager, key encryption for Certificate Manager, personal data in Certificate Manager, data deletion for Certificate Manager, data in Certificate Manager, data security in Certificate Manager
 
@@ -60,8 +60,6 @@ When you work with the {{site.data.keyword.cloudcerts_short}} service, your data
 - TLS 1.2+ for end to end communications
 - HTTPS for internal communications
 - Web App Firewall and DDoS protection
-
-
 
 ## Deleting your data in {{site.data.keyword.cloudcerts_short}}
 {: #data-delete}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2020
-lastupdated: "2020-11-19"
+lastupdated: "2020-12-15"
 
 keywords: data encryption in Certificate Manager, data storage for Certificate Manager, bring your own keys for Certificate Manager, BYOK for Certificate Manager, key management for Certificate Manager, key encryption for Certificate Manager, personal data in Certificate Manager, data deletion for Certificate Manager, data in Certificate Manager, data security in Certificate Manager
 
@@ -53,7 +53,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## How your data is stored and encrypted in {{site.data.keyword.cloudcerts_short}}
 {: #data-storage}
 
-When you work with the {{site.data.keyword.cloudcerts_short}} service, your data is encrypted at rest with provider-managed encryption. The service generates 256-bit data encryption keys for your instance that are used to encrypt your certificates, private keys, and intermediate certificate chains before they are stored in the service database. To protect the data keys, the service uses an [envelope encryption](#x9860393){: term} process, with a service root key that is managed in {{site.data.keyword.keymanagementservicelong_notm}} as its root of trust, and per-tenant instance keys. {{site.data.keyword.keymanagementserviceshort}} keys are secured by FIPS 140-2 Level 3 certified cloud-based [hardware security modules (HSMs)](#x6704988){: term}.
+When you work with the {{site.data.keyword.cloudcerts_short}} service, your data is encrypted at rest with [envelope encryption](#x9860393){: term}. The service generates 256-bit data encryption keys for your instance that are used to encrypt your certificates, private keys, and intermediate certificate chains before they are stored in the service database. To protect the data keys, the service encrypts them with a root key that is managed in a key management service and backed by FIPS-valided, cryptographic hardware. At no time are your certificates available in clear text while they are stored in the service.
 
 {{site.data.keyword.cloudcerts_short}} also uses the following security mechanisms to protect your data in transit.
 

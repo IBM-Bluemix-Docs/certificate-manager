@@ -53,7 +53,7 @@ To ensure that you can securely manage your data when you use {{site.data.keywor
 ## How your data is stored and encrypted in {{site.data.keyword.cloudcerts_short}}
 {: #data-storage}
 
-When you work with the {{site.data.keyword.cloudcerts_short}} service, your data is encrypted at rest with [envelope encryption](#x9860393){: term}. The service generates 256-bit data encryption keys for your instance that are used to encrypt your certificates, private keys, and intermediate certificate chains before they are stored in the service database. To protect the data keys, the service encrypts them with a root key that is managed in a key management service and backed by FIPS-valided, cryptographic hardware. At no time are your certificates available in clear text while they are stored in the service.
+When you work with the {{site.data.keyword.cloudcerts_short}} service, your data is encrypted at rest with [envelope encryption](#x9860393){: term}. The service generates 256-bit data encryption keys for your instance that are used to encrypt your certificates, private keys, and intermediate certificate chains before they are stored in the service database. To protect the data keys, the service encrypts them with a root key that is managed in a key management service and backed by FIPS-validated, cryptographic hardware. At no time are your certificates available in clear text while they are stored in the service.
 
 {{site.data.keyword.cloudcerts_short}} also uses the following security mechanisms to protect your data in transit.
 

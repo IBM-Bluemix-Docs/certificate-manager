@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-19"
 
 keywords: certificates, ssl, tls, callback urls, public domain, custom domain
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Related links
 {: #links}
 
@@ -59,11 +58,12 @@ You can use the following related links to learn more about and interact with {{
 * [How to Use {{site.data.keyword.cloudcerts_short}} to Avoid Outages Using Callback URLs - Part 2](https://www.ibm.com/cloud/blog/how-to-use-certificate-manager-to-avoid-outages-using-callback-urls-part-2){: external}
 * [How to Automate TLS Certificate Rotation to Avoid Outages](https://www.ibm.com/cloud/blog/how-to-automate-tls-certificate-rotation-to-avoid-outages){: external}
 * [Use IBM Cloud {{site.data.keyword.cloudcerts_short}} to Obtain Let’s Encrypt TLS Certificates for Your Public Domains](https://www.ibm.com/cloud/blog/use-ibm-cloud-certificate-manager-to-obtain-lets-encrypt-tls-certificates-for-your-public-domains){: external}
+* [Serving Cached Content Using {{site.data.keyword.cis_full_notm}}, Cloud Object Storage, and {{site.data.keyword.cloudcerts_short}}](https://www.ibm.com/cloud/blog/serving-cached-content-using-cloud-internet-services-cloud-object-storage-and-certificate-manager){: external}
 
 ## Tutorials
 {: #tutorials}
 
-{{site.data.keyword.IBM_notm}} tutorials that feature {{site.data.keyword.cloudcerts_long_notm}}.  
+{{site.data.keyword.cloud_notm}} tutorials that feature {{site.data.keyword.cloudcerts_short}}.  
 {: #shortdesc}
 
 * [Deploy serverless apps across multiple regions](/docs/solution-tutorials?topic=solution-tutorials-multi-region-serverless)

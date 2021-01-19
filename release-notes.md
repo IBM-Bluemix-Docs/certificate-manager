@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-11"
+lastupdated: "2021-01-19"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -48,6 +48,11 @@ subcollection: certificate-manager
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
 
+## 18 January 2021
+{: #18january2021}
+
+- **Bring your own key (BYOK) support**  
+  You can now integrate with {{site.data.keyword.keymanagementserviceshort}} and {{site.data.keyword.hscrypto}} to encrypt your certificates by using a root key that you own and manage. For more information, see [Protecting your sensitive data in {{site.data.keyword.cloudcerts_short}}](/docs/certificate-manager?topic=certificate-manager-mng-data#data-encryption).
 
 ## 15 June 2020
 {: #15june2020}

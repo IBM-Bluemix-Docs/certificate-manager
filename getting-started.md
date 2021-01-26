@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -44,7 +44,6 @@ completion-time: 10m
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Getting started with {{site.data.keyword.cloudcerts_short}}

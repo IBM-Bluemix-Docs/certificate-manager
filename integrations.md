@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-19"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Available integrations

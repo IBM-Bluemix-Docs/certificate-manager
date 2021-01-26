@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -40,7 +40,6 @@ subcollection: certificate-manager
 {:video: .video}
 {:step: data-tutorial-type='step'}
 {:tutorial: data-hd-content-type='tutorial'}
-
 
 
 # Managing access for {{site.data.keyword.cloudcerts_short}}
@@ -135,7 +134,8 @@ For more information about user roles and permissions, see [User roles](/docs/ac
 You can configure access policies for a {{site.data.keyword.cloudcerts_short}} instance and therefore, all of the certificates in that instance, or you can set policies for individual certificates (resources) within an instance.
 {: shortdesc}
 
-**Examples of role allocation**
+### Examples of role allocation
+{: #configuring-roles-examples}
 
 * Assign at least the Viewer role to every user so that every user can see service instances.
 * Assign the Administrator or Editor role to a user if you want that user to create and delete instances.
@@ -170,7 +170,7 @@ To allow access to a specific certificate, complete the following steps:
 
 To retrieve the ID of a certificate, complete the following steps:
 
-1. From the {{site.data.keyword.cloud_notm}} dashboard, select your {{site.data.keyword.cloudcerts_short}} instance.
+1. From the {{site.data.keyword.cloud_notm}} console, select your {{site.data.keyword.cloudcerts_short}} instance.
 2. From the navigation on the service details page, select **Manage**.
 3. Select a certificate.
 4. In the certificate details, find the certificate CRN.

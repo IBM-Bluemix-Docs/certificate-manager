@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-26"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: certificates, ssl, tls, dns, renewal, renew certificate, order certificate, private key, certificate authority, secure, public cert, lets encrypt, pending state
 

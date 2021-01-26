@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-11-06"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: certificates, ssl, tls, responsabilities, ibm, terms, conditions, managing service roles, regulation compliance, pci, dss, ha, backup, industry standard
 

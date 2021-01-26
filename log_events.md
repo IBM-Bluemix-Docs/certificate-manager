@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-09-21"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: certificates, ssl, tls, logging, activity, monitor app, monitor certificates
 
@@ -42,7 +42,6 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-
 # Viewing service logs for {{site.data.keyword.cloudcerts_short}}
 {: #log_events}
 
@@ -63,7 +62,7 @@ To view {{site.data.keyword.cloudcerts_short}} service logs:
 
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
 2. Go to **IBM Cloud > Observability** to access your [Observability dashboard](https://{DomainName}/observe){: external}.
-3. From the left navigation menu, click **Logging**.
+3. From the navigation menu, click **Logging**.
 4. Select a {{site.data.keyword.la_short}} instance, and click **View LogDNA** to launch the web UI.
 
    Don't have a {{site.data.keyword.la_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance. Then, click **Configure platform logs** to receive logs from supported services in your account. To learn more, see [Configuring {{site.data.keyword.cloud_notm}} service logs](/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-config_svc_logs#config_svc_logs_ui).

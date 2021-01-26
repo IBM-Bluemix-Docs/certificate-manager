@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2020
-lastupdated: "2020-10-26"
+  years: 2017, 2021
+lastupdated: "2021-01-26"
 
 keywords: certificates, SSL, automation, deployments, cert, notification
 
@@ -103,7 +103,7 @@ To get the certificate from from {{site.data.keyword.cloudcerts_short}}:
 
 1. Assign the deploying entity the `Writer` service access policy for the {{site.data.keyword.cloudcerts_short}} service.
 
-  1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM) > Service IDs**.
+  1. In the {{site.data.keyword.cloud_notm}} console, click **Manage > Access (IAM) > Service IDs**.
   2. Select a service ID or create a new one. Click the set of credentials to open the management screen.
   3. Click **Access Policies > Assign access > Assign access to resources**.
   4. Select {{site.data.keyword.cloudcerts_short}} from the list of services. Provide the needed information and click the **Writer** check box. Be sure to save your changes.
@@ -161,7 +161,7 @@ To learn more about ALB commands, see [the ALB documentation](/docs/containers-c
 
 3. Assign the deploying entity the `Writer` service access policy for the {{site.data.keyword.cloudcerts_short}} service and the `Administrator` platform policy for the cluster that you're working with.
 
-  1. In the {{site.data.keyword.cloud_notm}} dashboard, click **Manage > Access (IAM) > Service IDs**.
+  1. In the {{site.data.keyword.cloud_notm}} console, click **Manage > Access (IAM) > Service IDs**.
   2. Select a service ID or create a new one. Click the set of credentials to open the management screen.
   3. Click **Access Policies > Assign access > Assign access to resources**.
   4. Select {{site.data.keyword.cloudcerts_short}} from the list of services. Provide the needed information and click the **Writer** check box. 

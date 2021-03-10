@@ -76,7 +76,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 
 As a security or compliance focal, you can use the {{site.data.keyword.compliance_short}} to define config rules for the instances of {{site.data.keyword.cloudcerts_short}} that you create.
 
-This service supports only the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}. [Resource templates](/docs/security-compliance?topic=security-compliance-what-is-template) are not compatible with {{site.data.keyword.cloudcerts_short}} at this time.
+This service supports only the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}. {{site.data.keyword.cloudcerts_short}} does not support [resource templates](/docs/security-compliance?topic=security-compliance-what-is-template) at this time.
 {: note}
 
 [Config rules](#x3084914){: term} are used to enforce the configuration standards that you want to implement across your accounts. To learn more about the about the data that you can use to create a rule for {{site.data.keyword.cloudcerts_short}}, review the following table.
@@ -88,7 +88,7 @@ This service supports only the ability to view the results of your configuration
 | certificate | `days_to_expiration`* | `num_greater_than`| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
 {: caption="Table 1. Configuration properties for {{site.data.keyword.cloudcerts_short}}" caption-side="top"}
 
-_*Properties not compatible with [templates](/docs/security-compliance?topic=security-compliance-what-is-template)._
+_*Properties not compatible with templates._
 
 To learn more about using rules to define guardrails for your resources, check out [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule).
 

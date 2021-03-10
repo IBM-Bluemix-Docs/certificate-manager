@@ -84,8 +84,8 @@ This service supports only the ability to view the results of your configuration
 
 | Resource kind | Property | Operator| Value | Description |
 |:--------------|:---------|:--------------|:------|:------------|
-| instance | `private_network_only`* | `is_true`<br>`is_false` | - | Indicates whether access to an instance of the service is allowed only through a private network. |
-| certificate | `days_to_expiration`* | `num_greater_than`| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
+| *instance* | *private_network_only** | *is_true*<br>*is_false* | - | Indicates whether access to an instance of the service is allowed only through a private network. |
+| *certificate* | *days_to_expiration** | *num_greater_than*| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
 {: caption="Table 1. Configuration properties for {{site.data.keyword.cloudcerts_short}}" caption-side="top"}
 
 _*Properties not compatible with templates._

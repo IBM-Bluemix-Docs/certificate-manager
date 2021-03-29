@@ -2,9 +2,9 @@
 
 copyright:
   years: 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-03-11"
 
-keywords: security for {{site.data.keyword.cloudcerts_short}}, compliance for {{site.data.keyword.cloudcerts_short}}, security and compliance for {{site.data.keyword.cloudcerts_short}}, rules for {{site.data.keyword.cloudcerts_short}}, 
+keywords: security for {{site.data.keyword.cloudcerts_short}}, compliance for {{site.data.keyword.cloudcerts_short}}, security and compliance for {{site.data.keyword.cloudcerts_short}}, rules for {{site.data.keyword.cloudcerts_short}},
 
 subcollection: certificate-manager
 
@@ -76,7 +76,7 @@ To start monitoring your resources, check out [Getting started with {{site.data.
 
 As a security or compliance focal, you can use the {{site.data.keyword.compliance_short}} to define config rules for the instances of {{site.data.keyword.cloudcerts_short}} that you create.
 
-This service only supports the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}.
+This service supports only the ability to view the results of your configuration scans in the {{site.data.keyword.compliance_short}}.
 {: note}
 
 [Config rules](#x3084914){: term} are used to enforce the configuration standards that you want to implement across your accounts. To learn more about the about the data that you can use to create a rule for {{site.data.keyword.cloudcerts_short}}, review the following table.
@@ -84,11 +84,11 @@ This service only supports the ability to view the results of your configuration
 
 | Resource kind | Property | Operator| Value | Description |
 |:--------------|:---------|:--------------|:------|:------------|
-| `instance` | `private_network_only` | `is_true`<br>`is_false` | - | Indicates whether access to an instance of the service is allowed only through a private network. |
-| `certificate` | `days_to_expiration` | `num_greater_than`| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
-{: caption="Table 1. Available rule configurations" caption-side="top"}
+| *instance* | *private_network_only* | *is_true*<br>*is_false* | - | Indicates whether access to an instance of the service is allowed only through a private network. |
+| *certificate* | *days_to_expiration* | *num_greater_than*| Number of days | Checks whether the number of days before a certificate expires is greater than the specified value. |
+{: caption="Table 1. Configuration properties for {{site.data.keyword.cloudcerts_short}}" caption-side="top"}
 
-To learn more about config rules, check out [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule).
+To learn more about using rules to define guardrails for your resources, check out [What is a config rule?](/docs/security-compliance?topic=security-compliance-what-is-rule).
 
 
 ## Gaining security insight with {{site.data.keyword.cloudcerts_short}}

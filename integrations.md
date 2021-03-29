@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-03-29"
 
 keywords: certificates, ssl, tls, integrations, kube, kubernetes, custom domain
 
@@ -88,8 +88,8 @@ The following tables lists supported integrations by {{site.data.keyword.cloudce
     <td>Access to the service and the resources that it contains are managed by using [Identity and Access Management](/docs/account?topic=account-iamoverview).</td>
   </tr>
   <tr>
-    <td>{{site.data.keyword.security-advisor_full_notm}}</td>
-    <td>[{{site.data.keyword.security-advisor_short}}](/docs/security-advisor?topic=security-advisor-getting-started#getting-started) centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about {{site.data.keyword.security-advisor_short}}](/docs/security-advisor?topic=security-advisor-getting-started#getting-started).</td>
+    <td>Security Insights</td>
+    <td>[Security Insights](/docs/security-advisor?topic=security-advisor-getting-started#getting-started) (formerly known as {{site.data.keyword.security-advisor_short}}) centralizes the information about {{site.data.keyword.cloud_notm}} services. The information includes the indication of expired certificates and certificates that are about to expire in instances of {{site.data.keyword.cloudcerts_short}} in your {{site.data.keyword.cloud_notm}} account. [Learn more about Security Insights](/docs/security-advisor?topic=security-advisor-getting-started#getting-started).</td>
   </tr>
   <tr>
     <td>{{site.data.keyword.at_full_notm}}</td>

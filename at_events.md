@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-29"
+lastupdated: "2021-03-30"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issue certificates, search certificates, certificates, certificate metadata
 
@@ -101,7 +101,7 @@ To view {{site.data.keyword.cloudcerts_short}} events, complete the following st
 1. Log in to the {{site.data.keyword.cloud_notm}} console.
 2. Go to **IBM Cloud > Observability** to access your [Observability dashboard](https://{DomainName}/observe){: external}.
 3. From the navigation menu, click **Activity Tracker**.
-4. Select an {{site.data.keyword.at_short}} instance, and click **View LogDNA** to launch the web UI.
+4. Select an {{site.data.keyword.at_short}} instance, and click **Open Dashboard**.
 
    Don't have an {{site.data.keyword.at_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance so that service events are forwarded automatically to your account. To learn more, check out the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-03-30"
+lastupdated: "2021-04-01"
 
 keywords: activity, events, order certificates, import certificates, renew certificates, list certificates, issue certificates, search certificates, certificates, certificate metadata
 
@@ -48,7 +48,7 @@ subcollection: certificate-manager
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.cloudcerts_long}} service in {{site.data.keyword.cloud_notm}}.
 {:shortdesc}
 
-The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
+The {{site.data.keyword.at_short}} service records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. For example, when you import a certificate, an event is generated. For more information, see the [{{site.data.keyword.at_short}} docs](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 ## Certificate events
 {: #at-cert-events}
@@ -103,7 +103,7 @@ To view {{site.data.keyword.cloudcerts_short}} events, complete the following st
 3. From the navigation menu, click **Activity Tracker**.
 4. Select an {{site.data.keyword.at_short}} instance, and click **Open Dashboard**.
 
-   Don't have an {{site.data.keyword.at_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance so that service events are forwarded automatically to your account. To learn more, check out the [{{site.data.keyword.at_short}} docs](/docs/Activity-Tracker-with-LogDNA?topic=Activity-Tracker-with-LogDNA-getting-started).
+   Don't have an {{site.data.keyword.at_short}} instance? Create an instance in the same location as your {{site.data.keyword.cloudcerts_short}} instance so that service events are forwarded automatically to your account. To learn more, check out the [{{site.data.keyword.at_short}} docs](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
 ## Analyzing events
 {: #at-analyze-events}

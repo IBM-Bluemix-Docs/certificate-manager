@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-04-07"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -51,9 +51,17 @@ Review region and connectivity options for interacting with {{site.data.keyword.
 ## Available regions
 {: #regions}
 
-{{site.data.keyword.cloudcerts_short}} is available in the following regions:
+You can create {{site.data.keyword.cloudcerts_short}} resources in one of the supported {{site.data.keyword.cloud_notm}} regions, which represent the geographic areas where your {{site.data.keyword.cloudcerts_short}} requests are handled and processed.
 
-![Visual representation of the availability of the service. The image is a map with pin points in the locations in which the service is available. If you are unable to view this image, see the table in the service endpoints section for a complete list.](images/world-map.svg){: caption="Figure 1. {{site.data.keyword.cloudcerts_short}} availability" caption-side="bottom"}
+- Dallas (`us-south`)
+- Frankfurt (`eu-de`)
+- London (`eu-gb`)
+- Osaka (`jp-osa`)
+- Sydney (`au-syd`)
+- Tokyo (`jp-tok`)
+- Washington DC (`us-east`)
+
+
 
 ## Connectivity options
 {: #connectivity}
@@ -77,11 +85,12 @@ If you are managing your certificates programmatically, see the following table 
 | Region        | Endpoint                                     |
 | ------------- | -------------------------------------------- |
 | Dallas        | `us-south.certificate-manager.cloud.ibm.com` |
-| Washington DC | `us-east.certificate-manager.cloud.ibm.com`  |
-| London        | `eu-gb.certificate-manager.cloud.ibm.com`    |
 | Frankfurt     | `eu-de.certificate-manager.cloud.ibm.com`    |
-| Tokyo         | `jp-tok.certificate-manager.cloud.ibm.com`   |
+| London        | `eu-gb.certificate-manager.cloud.ibm.com`    |
+| Osaka         | `jp-osa.certificate-manager.cloud.ibm.com`   |
 | Sydney        | `au-syd.certificate-manager.cloud.ibm.com`   |
+| Tokyo         | `jp-tok.certificate-manager.cloud.ibm.com`   |
+| Washington DC | `us-east.certificate-manager.cloud.ibm.com`  |
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s public network" caption-side="top"}
 {: #private-endpoints}
 {: tab-title="Public"}
@@ -91,11 +100,12 @@ If you are managing your certificates programmatically, see the following table 
 | Region        | Endpoint                                             |
 | ------------- | ---------------------------------------------------- |
 | Dallas        | `private.us-south.certificate-manager.cloud.ibm.com` |
-| Washington DC | `private.us-east.certificate-manager.cloud.ibm.com`  |
-| London        | `private.eu-gb.certificate-manager.cloud.ibm.com`    |
 | Frankfurt     | `private.eu-de.certificate-manager.cloud.ibm.com`    |
-| Tokyo         | `private.jp-tok.certificate-manager.cloud.ibm.com`   |
+| London        | `private.eu-gb.certificate-manager.cloud.ibm.com`    |
+| Osaka         | `private.jp-osa.certificate-manager.cloud.ibm.com`   |
 | Sydney        | `private.au-syd.certificate-manager.cloud.ibm.com`   |
+| Tokyo         | `private.jp-tok.certificate-manager.cloud.ibm.com`   |
+| Washington DC | `private.us-east.certificate-manager.cloud.ibm.com`  |
 {: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s private network" caption-side="top"}
 {: #public-endpoints}
 {: tab-title="Private"}
@@ -107,4 +117,4 @@ If you are managing your certificates programmatically, see the following table 
 
 - In the Frankfurt region only, your certificates are maintained in the service database over the public network.
 - If you need to manage resources on {{site.data.keyword.cloud_notm}}'s private network, using {{site.data.keyword.openwhisk}} as Callback URL servers is not recommended. {{site.data.keyword.openwhisk_short}} does not yet support private endpoints. To learn more, check out the [{{site.data.keyword.openwhisk_short}} docs](/docs/openwhisk?topic=openwhisk-getting-started).
-- Let's Encrypt is a third-party service that runs outside of {{site.data.keyword.cloud_notm}}. When you order certificates through Let’s Encrypt, {{site.data.keyword.cloudcerts_short}} interacts with Let's Encrypt over the public network. 
+- Let's Encrypt is a third-party service that runs outside of {{site.data.keyword.cloud_notm}}. When you order certificates through Let’s Encrypt, {{site.data.keyword.cloudcerts_short}} interacts with Let's Encrypt over the public network.

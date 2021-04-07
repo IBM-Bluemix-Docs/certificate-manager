@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-04-07"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -51,9 +51,10 @@ subcollection: certificate-manager
 * Dallas (`us-south`)
 * Frankfurt (`eu-de`)
 * London (`eu-gb`)
+* Osaka (`jp-osa`)
 * Sydney (`au-syd`)
 * Tokyo (`jp-tok`)
-* Washington (`us-east`)
+* Washington DC (`us-east`)
 
 In each supported region, the service exists in multiple availability zones with no single point of failure. Data is backed-up daily in the same region. However, because {{site.data.keyword.cloudcerts_short}} is a regional service, there is no automatic cross-regional failover or cross-regional disaster recovery. If all of the availability zones in a region fail, {{site.data.keyword.cloudcerts_short}} becomes unavailable in that location. To establish cross-region high availability and implement a recovery plan, you need to create and maintain backup instances in multiple regions.
 
@@ -78,7 +79,7 @@ Creating an automatic backup of your certificates is possible by automating the 
 * Create a script that periodically downloads all of your certificates and then reimports them into your backup instance.
 * Create a Callback URL notifications channel in {{site.data.keyword.cloudcerts_short}} that points to an IBM Cloud Functions action. Configure the action to listen for certificate lifecycle events such as reimport, order, or renewal. Then, when the action receives the event it downloads the certificate from one instance and imports it to the backup in a continuous fashion.
 
-To learn about the various available certificate lifecycle event types see [Configuring notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications). 
+To learn about the various available certificate lifecycle event types see [Configuring notifications](/docs/certificate-manager?topic=certificate-manager-configuring-notifications).
 {: note}
 
 

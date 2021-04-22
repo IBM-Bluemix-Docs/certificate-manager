@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-04-22"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -51,7 +51,7 @@ completion-time: 10m
 {: toc-content-type="tutorial"}
 {: toc-completion-time="10m"}
 
-With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments. 
+With {{site.data.keyword.cloudcerts_full}}, you can obtain, store, and manage SSL/TLS certificates that you use for cloud or on-premises deployments.
 {: shortdesc}
 
 You can provision an instance of {{site.data.keyword.cloudcerts_short}} with the {{site.data.keyword.cloud_notm}} CLI by completing the following steps.
@@ -93,7 +93,7 @@ Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions
     </tr>
     <tr>
       <td><code>region</code></td>
-      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-gb</code>, <code>eu-de</code>, <code>jp-tok</code>, <code>au-syd</code>, and <code>us-east</code></td>
+      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-de</code>, <code>eu-gb</code>, <code>jp-osa</code>, <code>au-syd</code>, <code>jp-tok</code>, and <code>us-east</code></td>
     </tr>
   </table>
 

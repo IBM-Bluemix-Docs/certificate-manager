@@ -1,0 +1,64 @@
+{
+  "title": "Certificate Manager docs",
+  "lastupdated": "2021-04-28",
+  "introduction": "Explore recommended content and resources to help you get started with IBM Cloud Certificate Manager.",
+  "section_devtools": {
+    "api": "/apidocs/certificate-manager",
+    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/data-sources/certificate_manager_certificate"
+  },
+  "section_recommended": [
+    {
+      "title": "Ordering certificates",
+      "description": "Order public SSL/TLS certificates for your apps and services that are signed by supported external Certificate Authorities",
+      "href": "/docs/certificate-manager?topic=certificate-manager-ordering-certificates"
+    },
+    {
+      "title": "Configuring notifications",
+      "description": "Set up notifications about various events that can help you to better manage your certificates.",
+      "href": "/docs/certificate-manager?topic=certificate-manager-configuring-notifications"
+    },
+    {
+      "title": "Automating deployments",
+      "description": "Ensure that your certificates never expire by configuring automatic renewal and deployment.",
+      "href": "/docs/certificate-manager?topic=certificate-manager-automating-deployments"
+    }
+  ],
+  "section_videos": [
+    {
+      "title": "Title",
+      "href": "/docs/certificate-manager?topic=certificate-manager-about-certificate-manager",
+      "thumbnail": "/images/link-to-image.png"
+    },
+    {
+      "title": "Title",
+      "href": "/docs/certificate-manager?topic=certificate-manager-about-certificate-manager",
+      "thumbnail": "/images/link-to-image.png"
+    }
+  ],
+  "section_learn": {
+    "developer": "https://developer.ibm.com/depmodels/cloud/",
+    "architecture": "https://www.ibm.com/cloud/architecture/architectures/securityArchitecture/overview",
+    "training": "https://www.ibm.com/training/cloud",
+    "community": "https://community.ibm.com/community/user/publiccloud/home"
+  },
+  "section_updates": {
+    "view_more": "/docs/certificate-manager?topic=certificate-manager-release-notes",
+    "tiles": [
+      {
+        "date": "7 April 2021",
+        "title": "Certificate Manager now available in Osaka",
+        "description": "You can now provision the service in the Osaka region."
+      },
+      {
+        "date": "18 January 2021",
+        "title": "Now available: Bring your own key (BYOK) support",
+        "description": "You can now integrate with a key management service to encrypt your certificates with a root key that you own and manage."
+      },
+      {
+        "date": "27 January 2021",
+        "title": "Now available: IBM Cloud service endpoints support",
+        "description": "You can now connect to Certificate Manager by using the IBM Cloud private network."
+      }
+    ]
+  }
+}

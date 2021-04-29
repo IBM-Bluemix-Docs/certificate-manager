@@ -1,6 +1,6 @@
 {
   "title": "Certificate Manager docs",
-  "lastupdated": "2021-04-28",
+  "lastupdated": "2021-04-29",
   "introduction": "Explore recommended content and resources to help you get started with IBM Cloud Certificate Manager.",
   "section_devtools": {
     "api": "/apidocs/certificate-manager",
@@ -27,12 +27,12 @@
     {
       "title": "Title",
       "href": "/docs/certificate-manager?topic=certificate-manager-about-certificate-manager",
-      "thumbnail": "/images/link-to-image.png"
+      "thumbnail": "/images/filename.png"
     },
     {
       "title": "Title",
       "href": "/docs/certificate-manager?topic=certificate-manager-about-certificate-manager",
-      "thumbnail": "/images/link-to-image.png"
+      "thumbnail": "/images/filename.png"
     }
   ],
   "section_learn": {

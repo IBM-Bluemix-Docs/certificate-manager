@@ -41,10 +41,11 @@ Certificate Manager
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API documentation](https://{DomainName}/apidocs/certificate-manager)
+    [API reference](https://{DomainName}/apidocs/certificate-manager)
+    regions-and-endpoints.md
     notification-event-types.md
     limits.md
-    regions-and-endpoints.md
+
     understanding-your-responsibilities.md
     ha-dr.md
     {: .navgroup-end}

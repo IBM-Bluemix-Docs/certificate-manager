@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-05-17"
 
 keywords: certificates, pem format, algorithms, public key, private keys, version control, pending order
 
@@ -42,7 +42,7 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-# Frequently asked questions (FAQs)
+# FAQs for {{site.data.keyword.cloudcerts_short}}
 {: #faq}
 
 Frequently asked questions about {{site.data.keyword.cloudcerts_long}}.
@@ -144,7 +144,7 @@ You can find an error code and message in the certificate metadata, UI, and in t
 
 Upgrade your Slack notification channel to the latest version in the {{site.data.keyword.cloudcerts_short}} Notifications tab.
 
-## I receive an error when I try to upload a certificate and private key 
+## I receive an error when I try to upload a certificate and private key
 {: #import-cert-private-key}
 {: faq
 
@@ -155,7 +155,7 @@ The private key doesn't match the certificate that you're trying to import. Ensu
 ```
 {: screen}
 
-The private key might be encrypted or the certificate and key might not be a match.  
+The private key might be encrypted or the certificate and key might not be a match.
 Depending on whether your private key is encrypted, choose one of the following options:
 
 * The private key is encrypted. Make sure that you decrypt the private key before you upload it.

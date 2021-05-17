@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-22"
+lastupdated: "2021-05-17"
 
 keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -93,7 +93,7 @@ Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions
     </tr>
     <tr>
       <td><code>region</code></td>
-      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-de</code>, <code>eu-gb</code>, <code>jp-osa</code>, <code>au-syd</code>, <code>jp-tok</code>, and <code>us-east</code></td>
+      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-de</code>, <code>eu-gb</code>, <code>jp-osa</code>, <code>au-syd</code>, <code>jp-tok</code>, <code>ca-tor</code> and <code>us-east</code></td>
     </tr>
   </table>
 

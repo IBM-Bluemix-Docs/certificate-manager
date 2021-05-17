@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-05-17"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -59,6 +59,7 @@ You can create {{site.data.keyword.cloudcerts_short}} resources in one of the su
 - Osaka (`jp-osa`)
 - Sydney (`au-syd`)
 - Tokyo (`jp-tok`)
+- Toronto (`ca-tor`)
 - Washington DC (`us-east`)
 
 
@@ -90,6 +91,7 @@ If you are managing your certificates programmatically, see the following table 
 | Osaka         | `jp-osa.certificate-manager.cloud.ibm.com`   |
 | Sydney        | `au-syd.certificate-manager.cloud.ibm.com`   |
 | Tokyo         | `jp-tok.certificate-manager.cloud.ibm.com`   |
+| Toronto       | `ca-tor.certificate-manager.cloud.ibm.com`   |
 | Washington DC | `us-east.certificate-manager.cloud.ibm.com`  |
 {: caption="Table 1. Lists public endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s public network" caption-side="top"}
 {: #private-endpoints}
@@ -105,6 +107,7 @@ If you are managing your certificates programmatically, see the following table 
 | Osaka         | `private.jp-osa.certificate-manager.cloud.ibm.com`   |
 | Sydney        | `private.au-syd.certificate-manager.cloud.ibm.com`   |
 | Tokyo         | `private.jp-tok.certificate-manager.cloud.ibm.com`   |
+| Toronto       | `ca-tor.certificate-manager.cloud.ibm.com`           |
 | Washington DC | `private.us-east.certificate-manager.cloud.ibm.com`  |
 {: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s private network" caption-side="top"}
 {: #public-endpoints}

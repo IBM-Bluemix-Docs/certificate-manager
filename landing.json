@@ -1,6 +1,6 @@
 {
   "title": "Certificate Manager docs",
-  "lastupdated": "2021-05-17",
+  "lastupdated": "2021-05-18",
   "introduction": "Explore recommended content and resources to help you get started with IBM Cloud Certificate Manager.",
   "section_devtools": {
     "api": "/apidocs/certificate-manager",
@@ -27,7 +27,7 @@
     "view_more": "/docs/certificate-manager?topic=certificate-manager-release-notes",
     "tiles": [
       {
-        "date": "17 May 2021",
+        "date": "18 May 2021",
         "title": "Certificate Manager now available in Toronto",
         "description": "You can now provision the service in the Toronto location."
       },

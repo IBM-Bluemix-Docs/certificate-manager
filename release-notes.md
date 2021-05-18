@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-05-18"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -47,8 +47,8 @@ subcollection: certificate-manager
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
-## 17 May 2021
-{: #17may2021}
+## 18 May 2021
+{: #18may2021}
 
 - **Now available in the Toronto location.**
   You can now provision {{site.data.keyword.cloudcerts_short}} in the Toronto location.

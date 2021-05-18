@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-05-18"
 
-keywords: getting started tutorial, getting started, Certificate Manager, certificates, ssl, tls, import certificate, tutorial, order certificate, cert
+keywords: Certificate Manager, certificates, getting started, ssl, tls, import certificate, tutorial, order certificate, cert
 
 subcollection: certificate-manager
 

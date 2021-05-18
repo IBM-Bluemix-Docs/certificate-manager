@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-17"
+lastupdated: "2021-05-18"
 
-keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
+keywords: Certificate Manager, endpoints, service endpoints, regions, available regions
 
 subcollection: certificate-manager
 

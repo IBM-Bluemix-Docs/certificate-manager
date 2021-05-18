@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-05-18"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -136,7 +136,7 @@ You can find sample implementations in [Examples](/docs/certificate-manager?topi
 
 Your Callback URL endpoint must meet the following requirements to be used with {{site.data.keyword.cloudcerts_short}}:
 
-* The endpoint must be publically accessible.
+* The endpoint must be publicly accessible.
 * The endpoint must be protected with a valid CA TLS certificate.
 * The endpoint must not require an authorization header, or any application headers.
 * The endpoint must reply immediately to {{site.data.keyword.cloudcerts_short}} with a 2xx HTTP status code to indicate a successful notification delivery. Potential long tasks can be performed asynchronously after the notification is delivered.

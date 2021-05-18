@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-05-18"
 
 keywords: certificates, ssl, tls, new, sydney, exact search, dns provider, lets encrypt, renew certificate, order certificates
 
@@ -42,16 +42,22 @@ subcollection: certificate-manager
 {:tutorial: data-hd-content-type='tutorial'}
 
 
-# What's new
+# Release notes
 {: #release-notes}
 
 The following features and changes to the {{site.data.keyword.cloudcerts_long}} service are available.
 
+## 18 May 2021
+{: #18may2021}
+
+- **Now available in the Toronto location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the Toronto location.
+
 ## 7 April 2021
 {: #7april2021}
 
-- **Live in Osaka.**
-  {{site.data.keyword.cloudcerts_short}} is available in the Osaka location.
+- **Now available in the Osaka location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the Osaka location.
 
 ## 18 January 2021
 {: #18january2021}
@@ -68,8 +74,8 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 25 May 2020
 {: #25may2020}
 
-- **Live in Washington DC.**
-  {{site.data.keyword.cloudcerts_short}} is available in the Washington DC location.
+- **Now available in the Washington DC location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the Washington DC location.
 
 - **{{site.data.keyword.cloud_notm}} service endpoints support in Dallas and Washington DC.**
   Connect to {{site.data.keyword.cloudcerts_short}} by using a private IP that is accessible only through the {{site.data.keyword.cloud_notm}} private network. To learn more, see [Regions and endpoints](/docs/certificate-manager?topic=certificate-manager-regions-endpoints).
@@ -124,8 +130,8 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 2 September 2019
 {: #2September2019}
 
-- **Live in Sydney.**
-  {{site.data.keyword.cloudcerts_short}} is available in the Sydney location.
+- **Now available in the Sydney location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the Sydney location.
 
 - **Exact search.**
   Enclose your search term with double-quotes to search for an exact value.
@@ -151,34 +157,39 @@ The following features and changes to the {{site.data.keyword.cloudcerts_long}} 
 ## 18 February 2019
 {: #18February2019}
 
-- **Live in Tokyo.**
-  {{site.data.keyword.cloudcerts_long_notm}} is available in the Tokyo location.
+- **Now available in the Tokyo location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the Tokyo location.
 
 ## 13 January 2019
 {: #13January2019}
+
 - **Callback payload version 3.**
   [See the API documentation](/apidocs/certificate-manager){: external}.
 
 ## 6 January 2019
 {: #6January2019}
+
 - **Deprecated APIs.**
   The **List certificates** and **Search certificates repository** v2 APIs are deprecated and will be removed at a future date. You must upgrade to v3 APIs. For more information, [see the API documentation](/apidocs/certificate-manager){: external}.
 
 ## 9 December 2018
 {: #9December2018}
+
 - **Additional certificate formats.**
 {{site.data.keyword.cloudcerts_short}} supports the following certificate formats: RSA, DSA, ECDSA, ECDH.
 
 ## 5 December 2018
 {: #5December2018}
+
 - **Reimport notification.**
 When you reimport a renewed certificate in place of an expiring one, you can get a notification that the certificate was reimported. This will remind you and your team to deploy the renewed certificate to SSL/TLS termination points. This notification is available only for newly created notification channels.
 
-- **{{site.data.keyword.cloudcerts_short}} is available in the Frankfurt location.**
-The service is compliant with the EU requirements.
+- **Now available in the Frankfurt location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the Frankfurt location.
 
 ## 2 December 2018
 {: #2December2018}
+
 - **Callback and Slack payload version 2.**
   [See the API documentation](/apidocs/certificate-manager){: external}.
 
@@ -218,8 +229,8 @@ The service is compliant with the EU requirements.
 ## 22 August 2018
 {: #22August2018}
 
-- **Live in London.**
-  {{site.data.keyword.cloudcerts_long_notm}} Beta is available in the London location.
+- **Now available in the London location.**
+  You can now provision {{site.data.keyword.cloudcerts_short}} in the London location.
 
 ## 15 August 2018
 {: #15August2018}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-04-07"
+lastupdated: "2021-05-18"
 
 keywords: certificates, SSL, private key security, encryption, tls, gdpr, ha, dr, high-availability, disaster recovery
 
@@ -48,13 +48,14 @@ subcollection: certificate-manager
 
 {{site.data.keyword.cloudcerts_long}} is a highly available, regional service that runs in the following regions:
 
-* Dallas (`us-south`)
-* Frankfurt (`eu-de`)
-* London (`eu-gb`)
-* Osaka (`jp-osa`)
-* Sydney (`au-syd`)
-* Tokyo (`jp-tok`)
-* Washington DC (`us-east`)
+- Dallas (`us-south`)
+- Frankfurt (`eu-de`)
+- London (`eu-gb`)
+- Osaka (`jp-osa`)
+- Sydney (`au-syd`)
+- Tokyo (`jp-tok`)
+- Toronto (`ca-tor`)
+- Washington DC (`us-east`)
 
 In each supported region, the service exists in multiple availability zones with no single point of failure. Data is backed-up daily in the same region. However, because {{site.data.keyword.cloudcerts_short}} is a regional service, there is no automatic cross-regional failover or cross-regional disaster recovery. If all of the availability zones in a region fail, {{site.data.keyword.cloudcerts_short}} becomes unavailable in that location. To establish cross-region high availability and implement a recovery plan, you need to create and maintain backup instances in multiple regions.
 

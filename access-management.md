@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-06-02"
 
 keywords: access roles, access control, permissions, platform roles, service roles, certificates, notifications, access policies
 
@@ -53,78 +53,31 @@ You can secure services within {{site.data.keyword.cloud_notm}} by allowing only
 
 You can use platform access roles to enable users to complete tasks on platform resources, such as creating or deleting instances in your {{site.data.keyword.cloud_notm}} account.
 
-<table>
-<caption> Table 1. Actions that are mapped to platform access roles</caption>
-  <tr>
-    <th> Action </th>
-    <th> Role </th>
-  </tr>
-  <tr>
-    <td>View instances of {{site.data.keyword.cloudcerts_short}}</td>
-    <td> Administrator, Operator, Editor, Viewer </td>
-  </tr>
-  <tr>
-    <td>Create an instance of {{site.data.keyword.cloudcerts_short}}</td>
-    <td> Administrator, Editor </td>
-  </tr>
-  <tr>
-    <td>Delete an instance of {{site.data.keyword.cloudcerts_short}}</td>
-    <td> Administrator, Editor </td>
-  </tr>
-</table>
+| Action | Role | 
+|-----|----| 
+| View instances of {{site.data.keyword.cloudcerts_short}} | Administrator, Operator, Editor, Viewer |
+| Create an instance of {{site.data.keyword.cloudcerts_short}} | Administrator, Editor |
+| Delete an instance of {{site.data.keyword.cloudcerts_short}} | Administrator, Editor |
+{: caption="Table 1. Actions that are mapped to platform access roles" caption-side="top"}
 
 ## Service access roles
 {: #service-access-roles}
 
 You can use service access roles to enable users to complete tasks in {{site.data.keyword.cloudcerts_short}} instances, such as importing, downloading, editing, or deleting certificates.
 
-<table>
-<caption> Table 2. Actions that are mapped to service access roles</caption>
-  <tr>
-    <th> Action </th>
-    <th> Role </th>
-  </tr>
-  <tr>
-    <td>List certificates</td>
-    <td> Manager, Writer, Reader </td>
-  </tr>
-  <tr>
-    <td>Download a certificate and private key </td>
-    <td> Manager, Writer </td>
-  </tr>
-  <tr>
-     <td>Get certificate metadata </td>
-     <td> Manager, Writer, Reader </td>
-  </tr>      
-  <tr>
-    <td>Update certificate's metadata</td>
-    <td> Manager, Writer </td>
-  </tr>
-  <tr>
-    <td>Import or reimport certificates, private keys, and intermediate certificates </td>
-    <td> Manager </td>
-  </tr>
-  <tr>
-    <td>Order or renew a certificate </td>
-    <td> Manager </td>
-  </tr>
-  <tr>
-    <td>Delete a certificate and private key </td>
-    <td> Manager </td>
-  </tr>
-      <tr>
-        <td>List all notification channels </td>
-        <td> Manager, Writer, Reader </td>
-      </tr>
-   <tr>
-     <td>Add, update, or delete a notification channel </td>
-     <td> Manager </td>
-   </tr>
-     <tr>
-       <td>Test a notification channel </td>
-       <td> Manager, Writer, Reader </td>
-     </tr>
-</table>
+| Action | Role | 
+|-----|----| 
+| List certificates | Manager, Writer, Reader |
+| Download a certificate and private key | Manager, Writer |
+| Get certificate metadata | Manager, Writer, Reader |
+| Update certificate's metadata | Manager, Writer |
+| Import or reimport certificates, private keys, and intermediate certificates | Manager |
+| Order or renew a certificate | Manager |
+| Delete a certificate and private key | Manager |
+| List all notification channels | Manager, Writer, Reader |
+| Add, update, or delete a notification channel | Manager |
+| Test a notification channel | Manager, Writer, Reader 
+{: caption="Table 2. Actions that are mapped to service access roles" caption-side="top"}
 
 For more information about user roles and permissions, see [User roles](/docs/account?topic=account-userroles#userroles).
 

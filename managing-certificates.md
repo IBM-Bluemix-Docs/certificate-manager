@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-01-26"
+lastupdated: "2021-06-02"
 
 keywords: certificates, ssl, tls, manage certificates, cert ui, third-party issuer, pem format, openssl, import certificate, download certificate, renew certificates
 
@@ -88,57 +88,20 @@ To import a certificate, click **Import Certificate** and provide the following 
 
 After you import a certificate, the following information is displayed in the Certificates table. To view more information about the certificate, you can click on the certificate row in the Certificates table.
 
-<table>
-<caption> Table 1. Information about the imported certificate </caption>
-  <tr>
-    <th> Component </th>
-    <th> Description </th>
-  </tr>
-  <tr>
-    <td>Name</td>
-    <td>A meaningful display name. The maximum length is 256 characters. </td>
-  </tr>
-  <tr>
-    <td>Description</td>
-    <td>(Optional) Descriptive text for the certificate. The maximum length is 1024 characters.</td>
-  </tr>
-  <tr>
-    <td>Domain</td>
-    <td>The domain or domains for which the certificate is valid. </td>
-  </tr>
-  <tr>
-    <td>Issuer</td>
-    <td>The certificate authority (CA) that issued the certificate.</td>
-  </tr>
-  <tr>
-    <td>Algorithm</td>
-    <td>The certificate signature algorithm.</td>
-  </tr>
-  <tr>
-    <td>Key algorithm</td>
-    <td>The public key algorithm</td>
-  </tr>
-  <tr>
-    <td>Expires in</td>
-    <td>The number of remaining days before the certificate is no longer valid. </td>
-  </tr>
-  <tr>
-    <td>Valid from</td>
-    <td>The date on which the certificate became valid, in Coordinated Universal Time time zone. </td>
-  </tr>
-  <tr>
-    <td>Expires on</td>
-    <td>The date on which the certificate is no longer valid (in Coordinated Universal Time time zone). </td>
-  </tr>
-  <tr>
-    <td>Status</td>
-    <td>The status of your certificate. </td>
-  </tr>
-  <tr>
-    <td>Certificate ID</td>
-    <td>The generated ID given to the certificate upon import.</td>
-  </tr>
-</table>
+| Component | Description | 
+|-----|----| 
+| Name | A meaningful display name. The maximum length is 256 characters. |
+| Description | (Optional) Descriptive text for the certificate. The maximum length is 1024 characters. |
+| Domain | The domain or domains for which the certificate is valid. |
+| Issuer | The certificate authority (CA) that issued the certificate. |
+| Algorithm | The certificate signature algorithm. |
+| Key algorithm | The public key algorithm |
+| Expires in | The number of remaining days before the certificate is no longer valid. |
+| Valid from | The date on which the certificate became valid, in Coordinated Universal Time time zone. |
+| Expires on | The date on which the certificate is no longer valid (in Coordinated Universal Time time zone). |
+| Status | The status of your certificate. |
+| Certificate ID | The generated ID given to the certificate upon import. |
+{: caption="Table 1. Information about the imported certificate" caption-side="top"}
 
 </br>
 

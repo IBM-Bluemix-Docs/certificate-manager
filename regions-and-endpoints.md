@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-18"
+lastupdated: "2021-06-02"
 
 keywords: Certificate Manager, endpoints, service endpoints, regions, available regions
 
@@ -109,7 +109,7 @@ If you are managing your certificates programmatically, see the following table 
 | Tokyo         | `private.jp-tok.certificate-manager.cloud.ibm.com`   |
 | Toronto       | `ca-tor.certificate-manager.cloud.ibm.com`           |
 | Washington DC | `private.us-east.certificate-manager.cloud.ibm.com`  |
-{: caption="Table 1a. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s private network" caption-side="top"}
+{: caption="Table 1. Lists private endpoints for interacting with {{site.data.keyword.cloudcerts_short}} APIs over {{site.data.keyword.cloud_notm}}'s private network" caption-side="top"}
 {: #public-endpoints}
 {: tab-title="Private"}
 {: tab-group="service-endpoints"}

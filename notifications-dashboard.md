@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-18"
+lastupdated: "2021-06-02"
 
 keywords: certificates, ssl, tls, notifications, lifecycle events, expired certificate, deploy cert, callback url, slack, notification channel, renew certificate, notification format
 
@@ -67,7 +67,7 @@ Daily notifications begin the day that your certificate expires. To stop the not
 | `cert_about_to_expire_reimport_required` | Reminders to obtain a new certificate, deploy it, and then reimport it. | You are notified every 90, 60, 30, 10, and 1 day before your certificate expires. |
 | `cert_expired_reimport_required` | It is time to obtain a new certificate, deploy it, and then reimport it. | Daily notifications. |
 {: class="simple-tab-table"}
-{: caption="Table 1a. Understanding the types of reimport notifications" caption-side="top"}
+{: caption="Table 1. Understanding the types of reimport notifications" caption-side="top"}
 {: #reimport-table}
 {: tab-title="Imported/Reimported"}
 {: tab-group="Notifications"}
@@ -80,7 +80,7 @@ Daily notifications begin the day that your certificate expires. To stop the not
 | `cert_expired_renew_required` | Reminders that alert you to renew your certificate and deploy it because it is expired. | You are notified daily. |
 | `cert_issued_not_downloaded` | Reminder to download the certificate that you ordered and deploy it. | You are notified 30 days after the certificate is issued. |
 {: class="simple-tab-table"}
-{: caption="Table 1b. Understanding the types of order notifications" caption-side="top"}
+{: caption="Table 1. Understanding the types of order notifications" caption-side="top"}
 {: #ordered-table}
 {: tab-title="Ordered"}
 {: tab-group="Notifications"}
@@ -93,7 +93,7 @@ Daily notifications begin the day that your certificate expires. To stop the not
 | `cert_expired_renew_required` | Reminders that alert you to renew your certificate and deploy it because it is expired. | You are notified daily. |
 | `cert_renewed_not_downloaded` | Reminder to download the certificate that was renewed and deploy it. | You are notified 30, 10, 1 days before and the day your previous issued certificate expires. |
 {: class="simple-tab-table"}
-{: caption="Table 1c. Understanding the types of renew notifications" caption-side="top"}
+{: caption="Table 1. Understanding the types of renew notifications" caption-side="top"}
 {: #renewed-table}
 {: tab-title="Renewed"}
 {: tab-group="Notifications"}

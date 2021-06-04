@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2021-05-18"
+lastupdated: "2021-06-02"
 
 keywords: Certificate Manager, certificates, getting started, ssl, tls, import certificate, tutorial, order certificate, cert
 
@@ -82,20 +82,11 @@ Log in to {{site.data.keyword.cloud_notm}} and follow the on-screen instructions
   To provision an instance of {{site.data.keyword.cloudcerts_short}} that uses private endpoints only, append `-p '{"allowed_network": "private-only"}'` to your command. [Learn more](/docs/certificate-manager?topic=certificate-manager-regions-endpoints#connectivity).
   {: note}
 
-  <table>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>instance_name</code></td>
-      <td>The name that you want to give your instance of the service.</td>
-    </tr>
-    <tr>
-      <td><code>region</code></td>
-      <td>The region in which you want to provision the service. Options include: <code>us-south</code>, <code>eu-de</code>, <code>eu-gb</code>, <code>jp-osa</code>, <code>au-syd</code>, <code>jp-tok</code>, <code>ca-tor</code> and <code>us-east</code></td>
-    </tr>
-  </table>
+| Parameter | Description | 
+|-----|----| 
+| `instance_name` | The name that you want to give your instance of the service. |
+| `region` | The region in which you want to provision the service. Options include: `us-south`, `eu-de`, `eu-gb`, `jp-osa`, `au-syd`, `jp-tok`, `ca-tor` and `us-east`.
+{: caption="Table 2. Actions that are mapped to service access roles" caption-side="top"}
 
 ### Provisioning an instance of {{site.data.keyword.cloudcerts_short}} with the console
 {: #provision-console}

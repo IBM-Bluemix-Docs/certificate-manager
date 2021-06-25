@@ -36,6 +36,7 @@ Certificate Manager
     {: topicgroup}
     Enhancing security
         access-management.md
+        secure-connection.md
         data-security.md
         manage-scc.md
     {: .navgroup-end}
